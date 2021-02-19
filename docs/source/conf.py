@@ -33,7 +33,7 @@ def _parse_release_as_version(rls):
 
 # -- Project information -----------------------------------------------------
 
-project = 'GA4GH VRS Added Types for Interoperable Loquacious Exchange'
+project = 'GA4GH VRS Added Types for Interoperable Loquacious Exchange (VRSATILE)'
 copyright = '2021, GA4GH VRSATILE Contributors'
 author = 'Committers'
 master_doc = 'index'

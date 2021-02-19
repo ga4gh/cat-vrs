@@ -3,7 +3,7 @@ GA4GH VRSATILE
 
 **VRS Added Types for Interoperable Loquacious Exchange (VRSATILE;
 prounounced "versatile")** is a set of proposed extensions for |vrs| to
-enable interoperable exchange of common descriptive metadata alongside
+enable interoperable exchange of common descriptive data alongside
 variation concepts. Common examples of this are reference sequence ids,
 `HGVS`_ descriptors, associated concept ids, and community aliases such
 as *EGFR vIII*.
