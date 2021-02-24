@@ -138,3 +138,38 @@ used for pre-negotiated exchange of message attributes when needed.
       - any[]
       - 0..*
       - Any primitive or structured object
+
+Expression
+##########
+
+The Expression class is designed to enable descriptions based on a
+specified nomenclature or syntax for representing an object. Common
+examples of expressions for the description of molecular variation
+include the HGVS and ISCN nomenclatures.
+
+.. list-table::
+   :class: clean-wrap
+   :header-rows: 1
+   :align: left
+   :widths: auto
+
+   *  - Field
+      - Type
+      - Limits
+      - Description
+   *  - type
+      - string
+      - 1..1
+      - MUST be "Expression"
+   *  - syntax
+      - CURIE_
+      - 1..1
+      - CURIE referencing the expression syntax
+   *  - value
+      - string
+      - 1..1
+      - The concept expression as a string
+   *  - version
+      - string
+      - 0..1
+      - An optional version of the expression syntax
