@@ -1,13 +1,13 @@
 /* override table width restrictions */
 @media screen and (min-width: 767px) {
 
-   table.reece-wrap td {
+   table.clean-wrap td {
       /* !important prevents the common CSS stylesheets from overriding
          this as on RTD they are loaded after this stylesheet */
       white-space: normal !important;
    }
 
-   table.reece-wrap {
+   table.clean-wrap {
       overflow: visible !important;
    }
 }
