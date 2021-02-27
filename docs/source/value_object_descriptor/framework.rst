@@ -1,11 +1,11 @@
-Value Object Descriptor Framework
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Value Object Descriptor Specification
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 This draft standard proposal, under development by Driver Projects of the
 GKS Work Stream, specifies standard data classes for the exchange of common
 information useful for the description of variation but superfluous to the
 salient elements necessary for specifying a value object. We describe these
-classes as Value Object Descriptors (VODs). The VOD framework introduced
+classes as Value Object Descriptors (VODs). The VOD specification introduced
 here is version-controlled and extensible, and envisioned to seed a larger
 collection of VODs used with other GA4GH standards beyond VRSATILE.
 
@@ -17,12 +17,12 @@ sequence type, gene, transcript) in a standard format. This additional
 structure is necessary due to the nature of value objects and |vrs|.
 
 The GA4GH Variation Representation Specification (|vrs|) is a terminology,
-schema, and expressive framework for the computational representation of
-variation, and contains useful conventions for the normalization of
+information model, and schema for the computational representation of
+variation. VRS also describes useful conventions for the normalization of
 variation forms for message passing between systems. Objects compliant
-with VRS are value objects, which are compared by structure and value,
-in contrast to entities which are compared by registered identifiers. For
-example, the variants represented by the *NM_004415.2:c.8472_8483del* and
+with VRS are value objects: data objects that are compared by structure and
+value, in contrast to entities which are compared by registered identifiers.
+For example, the variants represented by the *NM_004415.2:c.8472_8483del* and
 *LRG_423t1:c.8472_8483del* HGVS_ descriptions are not found equivalent by
 comparing these strings, but by comparing the structure of the reference
 sequence and indicated change underlying the descriptors. Conversely, the
@@ -93,15 +93,19 @@ class from the VRS standard, and this is explicitly represented
 in the VOD type. The following classes from VRS 1.2 are supported by
 VRSATILE VODs:
 
-- Allele (VA)
-- Text (VT)
-- CopyNumber (CN)
-- VariationSet (VS)
-- Haplotype (VH)
-- SequenceLocation (VSL)
-- ChromosomeLocation (VCL)
-- Sequence (SQ)
-- Gene
+- `Molecular Variation <https://vrs.ga4gh.org/en/latest/terms_and_model.html#molecular-variation>`_
+   - Allele (VA)
+   - Haplotype (VH)
+- `Systemic Variation <https://vrs.ga4gh.org/en/latest/terms_and_model.html#systemic-variation>`_
+   - CopyNumber (CN)
+- `Utility Variation <https://vrs.ga4gh.org/en/latest/terms_and_model.html#utility-variation>`_
+   - Text (VT)
+   - VariationSet (VS)
+- `Location <https://vrs.ga4gh.org/en/latest/terms_and_model.html#location>`_
+   - SequenceLocation (VSL)
+   - ChromosomeLocation (VCL)
+- `Sequence (SQ) <https://vrs.ga4gh.org/en/latest/terms_and_model.html#sequence>`_
+- `Gene <https://vrs.ga4gh.org/en/latest/terms_and_model.html#gene>`_
 
 .. include:: vrs_descriptors.rst
 
@@ -138,6 +142,8 @@ used for pre-negotiated exchange of message attributes when needed.
       - any[]
       - 0..*
       - Any primitive or structured object
+
+.. _expression:
 
 Expression
 ##########
