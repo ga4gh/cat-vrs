@@ -1,7 +1,7 @@
 Value Object Descriptor Specification
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-This draft standard proposal, under development by Driver Projects of the
+This draft specification, under development by Driver Projects of the
 GKS Work Stream, specifies standard data classes for the exchange of common
 information useful for the description of variation but superfluous to the
 salient elements necessary for specifying a value object. We describe these
