@@ -31,4 +31,5 @@ Reference SNP IDs.
    :maxdepth: 2
    :includehidden:
 
-   value_object_descriptor/framework
+   value_object_descriptor/vod_index
+   origination_policy/op_index
