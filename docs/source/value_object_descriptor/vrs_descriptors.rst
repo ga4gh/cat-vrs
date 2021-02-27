@@ -37,7 +37,7 @@ parent class, the *Allele Descriptor* has the following attributes:
    *  - ref_allele_seq
       - `Sequence`_
       - 0..1
-      - A `Sequence`_ corresponding to "ref allele", as used in HGVS,
+      - A `Sequence`_ corresponding to a "ref allele", as used in HGVS,
         SPDI, and VCF variation formats. Useful for validation.
    *  - gene_context
       - CURIE | :ref:`GeneDescriptor`
