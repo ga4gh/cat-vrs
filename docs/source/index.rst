@@ -4,9 +4,10 @@ GA4GH VRSATILE
 .. note::
 
    VRSATILE is as Driver Project initiative to guide extending VRS in practical,
-   real-world data exchange. **The contents of this resource are not a GA4GH standard**.
-   As the demonstrated utility of VRSATILE components become clear through Driver
-   Project feedback and adoption, we will advance those components as proposed standards.
+   real-world data exchange. **The contents of this resource are not a GA4GH
+   standard**. As the demonstrated utility of VRSATILE specification components
+   become clear through Driver Project feedback and adoption, we will advance those
+   components as proposed standards.
 
 **VRS Added Types for Interoperable Loquacious Exchange (VRSATILE;
 prounounced "versatile")** is a set of proposed extensions for
