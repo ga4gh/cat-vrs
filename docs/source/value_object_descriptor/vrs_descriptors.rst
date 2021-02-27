@@ -222,8 +222,15 @@ parent class, the *Sequence Descriptor* has the following attributes:
       - string
       - 1..1
       - MUST be "SequenceDescriptor"
+   *  - residue_type
+      - `CURIE`_
+      - 0..1
+      - CURIE MUST be `SO:0000348 (nucleic acid)`_, `SO:0001407 (peptidyl)`_,
+        or a descendent of one of these concepts.
 
 .. _Sequence: https://vrs.ga4gh.org/en/latest/terms_and_model.html#sequence
+.. _SO:0000348: http://www.sequenceontology.org/browser/current_release/term/SO:0000348
+.. _SO:0001407: http://www.sequenceontology.org/browser/current_release/term/SO:0001407
 
 .. _GeneDescriptor:
 
