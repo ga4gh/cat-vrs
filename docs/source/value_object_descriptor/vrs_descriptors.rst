@@ -47,12 +47,12 @@ parent class, the *Allele Descriptor* has the following attributes:
 .. _Allele: https://vrs.ga4gh.org/en/latest/terms_and_model.html#allele
 .. _SO:0001537: http://www.sequenceontology.org/browser/current_release/term/SO:0001537
 
-Text Descriptor
-###############
+Haplotype Descriptor
+####################
 
-This descriptor is intended to reference `Text`_ variation value objects.
+This descriptor is intended to reference `Haplotype`_ variation value objects.
 In addition to the attributes inherited from its :ref:`value_object_descriptor`
-parent class, the *Text Descriptor* has the following attributes:
+parent class, the *Haplotype Descriptor* has the following attributes:
 
 .. list-table::
    :class: clean-wrap
@@ -67,9 +67,9 @@ parent class, the *Text Descriptor* has the following attributes:
    *  - type
       - string
       - 1..1
-      - MUST be "TextDescriptor"
+      - MUST be "HaplotypeDescriptor"
 
-.. _Text: https://vrs.ga4gh.org/en/latest/terms_and_model.html#text
+.. _Haplotype: https://vrs.ga4gh.org/en/latest/terms_and_model.html#haplotype
 
 CopyNumber Descriptor
 #####################
@@ -95,6 +95,30 @@ parent class, the *CopyNumber Descriptor* has the following attributes:
 
 .. _CopyNumber: https://vrs.ga4gh.org/en/latest/terms_and_model.html#copynumber
 
+Text Descriptor
+###############
+
+This descriptor is intended to reference `Text`_ variation value objects.
+In addition to the attributes inherited from its :ref:`value_object_descriptor`
+parent class, the *Text Descriptor* has the following attributes:
+
+.. list-table::
+   :class: clean-wrap
+   :header-rows: 1
+   :align: left
+   :widths: auto
+
+   *  - Field
+      - Type
+      - Limits
+      - Description
+   *  - type
+      - string
+      - 1..1
+      - MUST be "TextDescriptor"
+
+.. _Text: https://vrs.ga4gh.org/en/latest/terms_and_model.html#text
+
 Variation Set Descriptor
 ########################
 
@@ -118,30 +142,6 @@ parent class, the *Variation Set Descriptor* has the following attributes:
       - MUST be "VariationSetDescriptor"
 
 .. _VariationSet: https://vrs.ga4gh.org/en/latest/terms_and_model.html#variationset
-
-Haplotype Descriptor
-####################
-
-This descriptor is intended to reference `Haplotype`_ variation value objects.
-In addition to the attributes inherited from its :ref:`value_object_descriptor`
-parent class, the *Haplotype Descriptor* has the following attributes:
-
-.. list-table::
-   :class: clean-wrap
-   :header-rows: 1
-   :align: left
-   :widths: auto
-
-   *  - Field
-      - Type
-      - Limits
-      - Description
-   *  - type
-      - string
-      - 1..1
-      - MUST be "HaplotypeDescriptor"
-
-.. _Haplotype: https://vrs.ga4gh.org/en/latest/terms_and_model.html#haplotype
 
 Sequence Location Descriptor
 ############################
