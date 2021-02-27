@@ -68,6 +68,11 @@ parent class, the *Haplotype Descriptor* has the following attributes:
       - string
       - 1..1
       - MUST be "HaplotypeDescriptor"
+   *  - expressions
+      - :ref:`Expression`
+      - 0..m
+      - Typically HGVS or ISCN nomenclature expressions. Other systems
+        relevant to the description of variation MAY be used.
 
 .. _Haplotype: https://vrs.ga4gh.org/en/latest/terms_and_model.html#haplotype
 
@@ -92,6 +97,11 @@ parent class, the *CopyNumber Descriptor* has the following attributes:
       - string
       - 1..1
       - MUST be "CopyNumberDescriptor"
+   *  - expressions
+      - :ref:`Expression`
+      - 0..m
+      - Typically HGVS or ISCN nomenclature expressions. Other systems
+        relevant to the description of variation MAY be used.
 
 .. _CopyNumber: https://vrs.ga4gh.org/en/latest/terms_and_model.html#copynumber
 
