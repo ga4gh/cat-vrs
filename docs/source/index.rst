@@ -32,4 +32,4 @@ Reference SNP IDs.
    :includehidden:
 
    value_object_descriptor/vod_index
-   origination_policy/op_index
+   v_cops/vcops_index
