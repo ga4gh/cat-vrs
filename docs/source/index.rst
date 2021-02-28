@@ -33,3 +33,4 @@ Reference SNP IDs.
 
    value_object_descriptor/vod_index
    vcops/index
+   examples/index
