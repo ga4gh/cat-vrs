@@ -1,9 +1,8 @@
-Allele Descriptor
-#################
-
-This descriptor is intended to reference `Allele`_ value objects.
+Variation Descriptor
+####################
+This descriptor is intended as an abstract class for `Variation`_ value objects.
 In addition to the attributes inherited from its :ref:`value_object_descriptor`
-parent class, the *Allele Descriptor* has the following attributes:
+parent class, the *Variation Descriptor* has the following attributes:
 
 .. list-table::
    :class: clean-wrap
@@ -18,7 +17,7 @@ parent class, the *Allele Descriptor* has the following attributes:
    *  - type
       - string
       - 1..1
-      - MUST be "AlleleDescriptor"
+      - MUST be "VariationDescriptor"
    *  - molecule_context
       - enum
       - 0..1
@@ -34,129 +33,40 @@ parent class, the *Allele Descriptor* has the following attributes:
       - 0..m
       - Typically HGVS or ISCN nomenclature expressions. Other systems
         relevant to the description of variation MAY be used.
+   *  - gene_context
+      - CURIE | :ref:`GeneDescriptor`
+      - 0..*
+      - A specific gene context that applies to this variant.
    *  - ref_allele_seq
       - `Sequence`_
       - 0..1
       - A `Sequence`_ corresponding to a "ref allele", as used in HGVS,
         SPDI, and VCF variation formats. Useful for validation.
-   *  - gene_context
-      - CURIE | :ref:`GeneDescriptor`
+   *  - location_descriptor
+      - :ref:`LocationDescriptor`
+      - 0..*
+      -
+   *  - sequence_descriptor
+      - :ref:`SequenceDescriptor`
+      - 0..*
+      -
+   *  - allelic_state
+      - `CURIE`_
       - 0..1
-      - A specific gene context that applies to this variant.
+      - We RECOMMEND that the allelic_state of variant be described by terms from
+        the Genotype Ontology (GENO). These SHOULD descend from concept `GENO:0000875`_.
 
-.. _Allele: https://vrs.ga4gh.org/en/latest/terms_and_model.html#allele
+
+
 .. _SO:0001537: http://www.sequenceontology.org/browser/current_release/term/SO:0001537
+.. _GENO:0000875: http://purl.obolibrary.org/obo/GENO_0000875
 
-Haplotype Descriptor
-####################
+.. _location_descriptor:
 
-This descriptor is intended to reference `Haplotype`_ variation value objects.
-In addition to the attributes inherited from its :ref:`value_object_descriptor`
-parent class, the *Haplotype Descriptor* has the following attributes:
+Location Descriptor
+###################
 
-.. list-table::
-   :class: clean-wrap
-   :header-rows: 1
-   :align: left
-   :widths: auto
-
-   *  - Field
-      - Type
-      - Limits
-      - Description
-   *  - type
-      - string
-      - 1..1
-      - MUST be "HaplotypeDescriptor"
-   *  - expressions
-      - :ref:`Expression`
-      - 0..m
-      - Typically HGVS or ISCN nomenclature expressions. Other systems
-        relevant to the description of variation MAY be used.
-
-.. _Haplotype: https://vrs.ga4gh.org/en/latest/terms_and_model.html#haplotype
-
-CopyNumber Descriptor
-#####################
-
-This descriptor is intended to reference `CopyNumber`_ variation value objects.
-In addition to the attributes inherited from its :ref:`value_object_descriptor`
-parent class, the *CopyNumber Descriptor* has the following attributes:
-
-.. list-table::
-   :class: clean-wrap
-   :header-rows: 1
-   :align: left
-   :widths: auto
-
-   *  - Field
-      - Type
-      - Limits
-      - Description
-   *  - type
-      - string
-      - 1..1
-      - MUST be "CopyNumberDescriptor"
-   *  - expressions
-      - :ref:`Expression`
-      - 0..m
-      - Typically HGVS or ISCN nomenclature expressions. Other systems
-        relevant to the description of variation MAY be used.
-
-.. _CopyNumber: https://vrs.ga4gh.org/en/latest/terms_and_model.html#copynumber
-
-Text Descriptor
-###############
-
-This descriptor is intended to reference `Text`_ variation value objects.
-In addition to the attributes inherited from its :ref:`value_object_descriptor`
-parent class, the *Text Descriptor* has the following attributes:
-
-.. list-table::
-   :class: clean-wrap
-   :header-rows: 1
-   :align: left
-   :widths: auto
-
-   *  - Field
-      - Type
-      - Limits
-      - Description
-   *  - type
-      - string
-      - 1..1
-      - MUST be "TextDescriptor"
-
-.. _Text: https://vrs.ga4gh.org/en/latest/terms_and_model.html#text
-
-Variation Set Descriptor
-########################
-
-This descriptor is intended to reference `VariationSet`_ value objects.
-In addition to the attributes inherited from its :ref:`value_object_descriptor`
-parent class, the *Variation Set Descriptor* has the following attributes:
-
-.. list-table::
-   :class: clean-wrap
-   :header-rows: 1
-   :align: left
-   :widths: auto
-
-   *  - Field
-      - Type
-      - Limits
-      - Description
-   *  - type
-      - string
-      - 1..1
-      - MUST be "VariationSetDescriptor"
-
-.. _VariationSet: https://vrs.ga4gh.org/en/latest/terms_and_model.html#variationset
-
-Sequence Location Descriptor
-############################
-
-This descriptor is intended to reference `SequenceLocation`_ value objects.
+This descriptor is intended to reference `Location`_ value objects.
 In addition to the attributes inherited from its :ref:`value_object_descriptor`
 parent class, the *Sequence Location Descriptor* has the following attributes:
 
@@ -173,33 +83,13 @@ parent class, the *Sequence Location Descriptor* has the following attributes:
    *  - type
       - string
       - 1..1
-      - MUST be "SequenceLocationDescriptor"
+      - MUST be "LocationDescriptor"
+   *  - sequence_descriptor
+      - :ref:`SequenceDescriptor`
+      - 0..*
+      -
 
-.. _SequenceLocation: https://vrs.ga4gh.org/en/latest/terms_and_model.html#sequencelocation
-
-Chromosome Location Descriptor
-##############################
-
-This descriptor is intended to reference `ChromosomeLocation`_ value objects.
-In addition to the attributes inherited from its :ref:`value_object_descriptor`
-parent class, the *Chromosome Location Descriptor* has the following attributes:
-
-.. list-table::
-   :class: clean-wrap
-   :header-rows: 1
-   :align: left
-   :widths: auto
-
-   *  - Field
-      - Type
-      - Limits
-      - Description
-   *  - type
-      - string
-      - 1..1
-      - MUST be "ChromosomeLocationDescriptor"
-
-.. _ChromosomeLocation: https://vrs.ga4gh.org/en/latest/terms_and_model.html#chromosomelocation
+.. _SequenceLocation: https://vrs.ga4gh.org/en/latest/terms_and_model.html#location
 
 Sequence Descriptor
 ###################
