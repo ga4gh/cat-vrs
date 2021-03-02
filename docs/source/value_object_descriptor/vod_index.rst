@@ -93,7 +93,7 @@ class from the VRS standard, and this is explicitly represented
 in the VOD type. The following classes from VRS 1.2 are supported by
 VRSATILE VODs:
 
-- `Variation <https://vrs.ga4gh.org/en/latest/terms_and_model.html#variation>`_
+- `Variation`_
    - Allele (VA)
    - Haplotype (VH)
    - CopyNumber (CN)

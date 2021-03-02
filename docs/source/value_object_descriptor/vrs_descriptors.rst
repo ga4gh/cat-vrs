@@ -56,12 +56,10 @@ parent class, the *Variation Descriptor* has the following attributes:
       - We RECOMMEND that the allelic_state of variant be described by terms from
         the Genotype Ontology (GENO). These SHOULD descend from concept `GENO:0000875`_.
 
-
-
 .. _SO:0001537: http://www.sequenceontology.org/browser/current_release/term/SO:0001537
 .. _GENO:0000875: http://purl.obolibrary.org/obo/GENO_0000875
 
-.. _location_descriptor:
+.. _LocationDescriptor:
 
 Location Descriptor
 ###################
@@ -89,7 +87,7 @@ parent class, the *Sequence Location Descriptor* has the following attributes:
       - 0..*
       -
 
-.. _SequenceLocation: https://vrs.ga4gh.org/en/latest/terms_and_model.html#location
+.. _SequenceDescriptor:
 
 Sequence Descriptor
 ###################
