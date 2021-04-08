@@ -10,6 +10,6 @@ Additional complexity is introduced by genomic data providers representing multi
 As a result of this multi-faceted landscape of variation contexts and variation groups, harmonizing genomic variation data from multiple resources is a significant challenge. This draft specification provides a framework for specifying and publishing a *variation concept origination policy (VCOP)*. A VCOP enables genomic data providers to tightly constrain the reference sequences and selection rules used to reproducibly construct an *originating variation context*: a specific variation context that serves as the unique normalized representation of any input variation or variation group.
 
 .. note:: If you are interested in helping to draft the specification for
-          creating and publishing *VCOPs*, join us on the [VRSATILE GitHub
-          repo](https://github.com/ga4gh/vrsatile/issues/1) to engage in this
+          creating and publishing *VCOPs*, join us on the `VRSATILE GitHub
+          repo <https://github.com/ga4gh/vrsatile/issues/1>`_ to engage in this
           effort.
