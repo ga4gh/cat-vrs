@@ -37,11 +37,11 @@ parent class, the *Variation Descriptor* has the following attributes:
       - CURIE | :ref:`GeneDescriptor`
       - 0..*
       - A specific gene context that applies to this variant.
-   *  - ref_allele_seq
+   *  - vrs_ref_allele_seq
       - `Sequence`_
       - 0..1
-      - A `Sequence`_ corresponding to a "ref allele", as used in HGVS,
-        SPDI, and VCF variation formats. Useful for validation.
+      - A `Sequence`_ corresponding to a "ref allele", describing the
+        sequence expected at a `SequenceLocation` reference.
    *  - location_descriptor
       - :ref:`LocationDescriptor`
       - 0..*
