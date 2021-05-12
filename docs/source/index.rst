@@ -9,7 +9,7 @@ GA4GH VRSATILE
    become clear through Driver Project feedback and adoption, we will advance those
    components as proposed standards.
 
-**VRS Added Types for Interoperable Loquacious Exchange (VRSATILE;
+**VRS Added Tools for Interoperable Loquacious Exchange (VRSATILE;
 prounounced "versatile")** is a set of proposed extensions for
 |vrs| to enable interoperable exchange of common descriptive data alongside
 variation concepts. Common examples of this are reference sequence ids,
