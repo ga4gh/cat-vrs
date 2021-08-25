@@ -57,14 +57,6 @@ All attributes of this parent class are inherited by child classes.
       - string
       - 1..1
       - MUST be VOD class name
-   *  - value_id
-      - CURIE_
-      - 0..1
-      - This MUST be provided if `value` is omitted
-   *  - value
-      - <Value Object>
-      - 0..1
-      - This MUST be provided if `value_id` is omitted
    *  - label
       - string
       - 0..1
