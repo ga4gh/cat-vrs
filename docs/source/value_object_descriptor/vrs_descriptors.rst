@@ -21,11 +21,11 @@ parent class, the *Variation Descriptor* has the following attributes:
    *  - variation_id
       - CURIE_
       - 0..1
-      - This MUST be provided if `variation` is omitted
+      - This SHOULD be provided if `variation` is omitted
    *  - variation
       - `VRS Variation`_
       - 0..1
-      - This MUST be provided if `variation_id` is omitted
+      - This SHOULD be provided if `variation_id` is omitted
    *  - molecule_context
       - enum
       - 0..1
