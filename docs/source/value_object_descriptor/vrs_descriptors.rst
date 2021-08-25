@@ -159,10 +159,6 @@ parent class, the *Sequence Location Descriptor* has the following attributes:
       - `VRS Location`_
       - 0..1
       - This MUST be provided if `location_id` is omitted
-   *  - sequence_descriptor
-      - :ref:`SequenceDescriptor`
-      - 0..*
-      -
 
 .. _SequenceDescriptor:
 
