@@ -58,14 +58,6 @@ parent class, the *Variation Descriptor* has the following attributes:
       - 0..1
       - A `VRS Sequence`_ corresponding to a "ref allele", describing the
         sequence expected at a `SequenceLocation` reference.
-   *  - location_descriptor
-      - :ref:`LocationDescriptor`
-      - 0..*
-      -
-   *  - sequence_descriptor
-      - :ref:`SequenceDescriptor`
-      - 0..*
-      -
    *  - allelic_state
       - `CURIE`_
       - 0..1
