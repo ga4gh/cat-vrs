@@ -1,6 +1,6 @@
 Variation Descriptor
 ####################
-This descriptor is intended as an abstract class for `Variation`_ value objects.
+This descriptor is intended as an abstract class for `VRS Variation`_ value objects.
 In addition to the attributes inherited from its :ref:`value_object_descriptor`
 parent class, the *Variation Descriptor* has the following attributes:
 
@@ -64,7 +64,7 @@ parent class, the *Variation Descriptor* has the following attributes:
 Location Descriptor
 ###################
 
-This descriptor is intended to reference `Location`_ value objects.
+This descriptor is intended to reference `VRS Location`_ value objects.
 In addition to the attributes inherited from its :ref:`value_object_descriptor`
 parent class, the *Sequence Location Descriptor* has the following attributes:
 
@@ -125,7 +125,7 @@ parent class, the *Sequence Descriptor* has the following attributes:
 Gene Descriptor
 ###############
 
-This descriptor is intended to reference `Gene`_ value objects.
+This descriptor is intended to reference `VRS Gene`_ value objects.
 In addition to the attributes inherited from its :ref:`value_object_descriptor`
 parent class, the *Gene Descriptor* has the following attributes:
 

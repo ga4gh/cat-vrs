@@ -93,17 +93,17 @@ class from the VRS standard, and this is explicitly represented
 in the VOD type. The following classes from VRS 1.2 are supported by
 VRSATILE VODs:
 
-- `Variation`_
+- `VRS Variation`_
    - Allele (VA)
    - Haplotype (VH)
    - CopyNumber (CN)
    - Text (VT)
    - VariationSet (VS)
-- `Location <https://vrs.ga4gh.org/en/latest/terms_and_model.html#location>`_
+- `VRS Location`_
    - SequenceLocation (VSL)
    - ChromosomeLocation (VCL)
-- `Sequence (SQ) <https://vrs.ga4gh.org/en/latest/terms_and_model.html#sequence>`_
-- `Gene <https://vrs.ga4gh.org/en/latest/terms_and_model.html#gene>`_
+- `VRS Sequence`_
+- `VRS Gene`_
 
 .. include:: vrs_descriptors.rst
 
