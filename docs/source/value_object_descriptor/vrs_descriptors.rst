@@ -54,9 +54,9 @@ parent class, the *Variation Descriptor* has the following attributes:
       - 0..*
       - A specific gene context that applies to this variant.
    *  - vrs_ref_allele_seq
-      - `Sequence`_
+      - `VRS Sequence`_
       - 0..1
-      - A `Sequence`_ corresponding to a "ref allele", describing the
+      - A `VRS Sequence`_ corresponding to a "ref allele", describing the
         sequence expected at a `SequenceLocation` reference.
    *  - location_descriptor
       - :ref:`LocationDescriptor`
@@ -177,7 +177,7 @@ parent class, the *Sequence Location Descriptor* has the following attributes:
 Sequence Descriptor
 ###################
 
-This descriptor is intended to reference `Sequence`_ value objects.
+This descriptor is intended to reference `VRS Sequence`_ value objects.
 In addition to the attributes inherited from its :ref:`value_object_descriptor`
 parent class, the *Sequence Descriptor* has the following attributes:
 
@@ -209,7 +209,6 @@ parent class, the *Sequence Descriptor* has the following attributes:
       - CURIE MUST be `SO:0000348 (nucleic acid)`_, `SO:0001407 (peptidyl)`_,
         or a descendent of one of these concepts.
 
-.. _Sequence: https://vrs.ga4gh.org/en/latest/terms_and_model.html#sequence
 .. _`SO:0000348 (nucleic acid)`: http://www.sequenceontology.org/browser/current_release/term/SO:0000348
 .. _`SO:0001407 (peptidyl)`: http://www.sequenceontology.org/browser/current_release/term/SO:0001407
 
