@@ -1,0 +1,23 @@
+$schema: "http://json-schema.org/draft/2019-09/schema"
+title: "GA4GH-VRSATILE-Definitions"
+type: object
+
+$defs:
+  ValueObjectDescriptor:
+    description: >-
+      This is the abstract parent class.
+    oneOf:
+      - $ref: "#/$defs/VariationDescriptor"
+  VariationDescriptor:
+    description: >-
+      This is a concrete class.
+    additionalProperties: false
+    type: object
+    properties:
+      type:
+        type: string
+        enum: ["VariationDescriptor"]
+        default: "VariationDescriptor"
+      variation:
+        $ref: "https://raw.githubusercontent.com/ga4gh/vrs/main/schema/vrs.json#/definitions/Variation"
+    required: [ "type", "variation" ]
