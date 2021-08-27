@@ -24,7 +24,7 @@
                "default": "VariationDescriptor"
             },
             "variation": {
-               "$ref": "https://raw.githubusercontent.com/ga4gh/vrs/main/schema/vrs.json#definitions/Variation"
+               "$ref": "https://raw.githubusercontent.com/ga4gh/vrs/main/schema/vrs.json#/definitions/Variation"
             }
          },
          "required": [

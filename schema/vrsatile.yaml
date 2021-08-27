@@ -1,13 +1,54 @@
-$schema: "http://json-schema.org/draft/2019-09/schema"
+$schema: "http://json-schema.org/draft/2020-12/schema"
 title: "GA4GH-VRSATILE-Definitions"
 type: object
+namespaces:
+  - vrs: "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/"
 
 $defs:
   ValueObjectDescriptor:
     description: >-
-      This is the abstract parent class.
+      The abstract *Value Object Descriptor* parent class. All attributes
+      of this parent class are inherited by child classes.
     oneOf:
       - $ref: "#/$defs/VariationDescriptor"
+    heritable_properties:
+      id:
+        $ref_curie: "vrs:CURIE"
+        $ref_description: >-
+          Descriptor ID; MUST be unique within document
+      type:
+        type: string
+        description: >-
+          MUST be VOD class name
+      label:
+        type: string
+        description: >-
+          A primary label for the value object
+      description:
+        type: string
+        description: >-
+          A free-text description of the value object
+      xrefs:
+        type: array
+        uniqueItems: true
+        items:
+          $ref_curie: "vrs:CURIE"
+        description: >-
+          List of CURIEs representing associated concepts
+      alternate_labels:
+        type: array
+        items:
+          type: string
+        description: >-
+          List of strings representing alternate labels for the value object
+      extensions:
+        type: array
+        items:
+          $ref: "#/$defs/Extensions"
+        description: >-
+          List of resource-specific :ref:`Extensions` needed to describe the
+          value object
+
   VariationDescriptor:
     description: >-
       This is a concrete class.
@@ -19,5 +60,5 @@ $defs:
         enum: ["VariationDescriptor"]
         default: "VariationDescriptor"
       variation:
-        $ref: "https://raw.githubusercontent.com/ga4gh/vrs/main/schema/vrs.json#/definitions/Variation"
+        $ref_curie: "vrs:Variation"
     required: [ "type", "variation" ]
