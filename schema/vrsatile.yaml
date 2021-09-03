@@ -2,7 +2,7 @@ $schema: "http://json-schema.org/draft/2020-12/schema"
 title: "GA4GH-VRSATILE-Definitions"
 type: object
 namespaces:
-  - vrs: "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/"
+  vrs: "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/"
 
 $defs:
   ValueObjectDescriptor:
@@ -63,7 +63,7 @@ $defs:
         description: >-
           MUST be "VariationDescriptor".
       variation_id:
-        $ref_cuire: "vrs:CURIE"
+        $ref_curie: "vrs:CURIE"
         description: >-
           The SHOULD be provided if *variation* is omitted.
       variation:
