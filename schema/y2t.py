@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""convert yaml on stdin to .rst artifacts"""
+"""convert vrsatile.yaml to .rst artifacts"""
 
 import yaml
 import os
