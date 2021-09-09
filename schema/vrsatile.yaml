@@ -53,8 +53,8 @@ $defs:
   VariationDescriptor:
     description: >-
       This descriptor class is used for describing VRS Variation value objects.
-      Like all descriptors, this is a subclass of :ref:`value_object_descriptor`
-      and consequently inherits all Value Object Descriptor attributes.
+      This is a subclass of :ref:`value_object_descriptor` and inherits all Value
+      Object Descriptor attributes.
     additionalProperties: false
     type: object
     properties:
