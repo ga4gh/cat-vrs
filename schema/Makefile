@@ -1,14 +1,18 @@
-.PHONY: FORCE
+.PHONY: defs FORCE
 .SUFFIXES:
 .DELETE_ON_ERROR:
 
 YAMLS:=vrsatile.yaml
 JSONS:=${YAMLS:.yaml=.json}
 
-all: ${JSONS}
+all: ${JSONS} defs
+
+defs:
+	rm -rf defs
+	./y2t.py
 
 %.json: %.yaml
-	./y2j <$< >$@
+	./y2j.py <$< >$@
 
 ## # npm install -g json-dereference-cli
 ## %.json: %.yaml
