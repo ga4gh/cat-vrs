@@ -82,7 +82,7 @@ $defs:
         $ref_curie: "vrs:CURIE"
         description: >-
           The structural variant type associated with this variant. We RECOMMEND a descendent term of
-          `SO:0001537<http://www.sequenceontology.org/browser/current_release/term/SO:0001537>`_.
+          `SO:0001537 <http://www.sequenceontology.org/browser/current_release/term/SO:0001537>`_.
       expressions:
         $ref: "#/$defs/Expression"
         description: >-
@@ -109,4 +109,4 @@ $defs:
         description: >-
           We RECOMMEND that the *allelic_state* of a variation be described by terms from the
           Genotype Ontology (GENO). These SHOULD descend from concept
-          `GENO:0000875<http://purl.obolibrary.org/obo/GENO_0000875>`.
+          `GENO:0000875 <http://purl.obolibrary.org/obo/GENO_0000875>`.

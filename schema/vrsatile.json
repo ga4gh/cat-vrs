@@ -76,7 +76,7 @@
                "description": "The molecular context of this variant. Must be one of \"genomic\", \"transcript\", or \"protein\"."
             },
             "structural_type": {
-               "description": "The structural variant type associated with this variant. We RECOMMEND a descendent term of `SO:0001537<http://www.sequenceontology.org/browser/current_release/term/SO:0001537>`_.",
+               "description": "The structural variant type associated with this variant. We RECOMMEND a descendent term of `SO:0001537 <http://www.sequenceontology.org/browser/current_release/term/SO:0001537>`_.",
                "$ref": "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/CURIE"
             },
             "expressions": {
@@ -103,7 +103,7 @@
                "$ref": "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/Sequence"
             },
             "allelic_state": {
-               "description": "We RECOMMEND that the *allelic_state* of a variation be described by terms from the Genotype Ontology (GENO). These SHOULD descend from concept `GENO:0000875<http://purl.obolibrary.org/obo/GENO_0000875>`.",
+               "description": "We RECOMMEND that the *allelic_state* of a variation be described by terms from the Genotype Ontology (GENO). These SHOULD descend from concept `GENO:0000875 <http://purl.obolibrary.org/obo/GENO_0000875>`.",
                "$ref": "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/CURIE"
             }
          },

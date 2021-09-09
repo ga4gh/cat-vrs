@@ -1,68 +1,6 @@
 .. _VariationDescriptor:
 
-Variation Descriptor
-####################
-This descriptor is intended as an class for describing `VRS Variation`_ value objects.
-In addition to the attributes inherited from its :ref:`value_object_descriptor`
-parent class, the *Variation Descriptor* has the following attributes:
-
-.. list-table::
-   :class: clean-wrap
-   :header-rows: 1
-   :align: left
-   :widths: auto
-
-   *  - Field
-      - Type
-      - Limits
-      - Description
-   *  - type
-      - string
-      - 1..1
-      - MUST be "VariationDescriptor"
-   *  - variation_id
-      - CURIE_
-      - 0..1
-      - This SHOULD be provided if `variation` is omitted
-   *  - variation
-      - `VRS Variation`_
-      - 0..1
-      - This SHOULD be provided if `variation_id` is omitted
-   *  - molecule_context
-      - enum
-      - 0..1
-      - The molecular context of this variant. Must be one of
-        "genomic", "transcript", or "protein".
-   *  - structural_type
-      - CURIE
-      - 0..1
-      - The structural variant type associated with this variant.
-        We RECOMMEND a descendent term of `SO:0001537`_.
-   *  - expressions
-      - :ref:`Expression`
-      - 0..m
-      - Typically HGVS or ISCN nomenclature expressions. Other systems
-        relevant to the description of variation MAY be used.
-   *  - vcf_record
-      - :ref:`VcfRecord`
-      - 0..1
-      - A VCF Record of the variant. This SHOULD be a single allele, the
-        the VCF genotype (GT) field should be represented in the
-        `allelic_state` attribute.
-   *  - gene_context
-      - CURIE | :ref:`GeneDescriptor`
-      - 0..*
-      - A specific gene context that applies to this variant.
-   *  - vrs_ref_allele_seq
-      - `VRS Sequence`_
-      - 0..1
-      - A `VRS Sequence`_ corresponding to a "ref allele", describing the
-        sequence expected at a `SequenceLocation` reference.
-   *  - allelic_state
-      - `CURIE`_
-      - 0..1
-      - We RECOMMEND that the allelic_state of variant be described by terms from
-        the Genotype Ontology (GENO). These SHOULD descend from concept `GENO:0000875`_.
+.. include:: ../defs/VariationDescriptor.rst
 
 .. _VcfRecord:
 

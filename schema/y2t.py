@@ -25,30 +25,42 @@ def resolve_curie(curie):
 
 def resolve_type(class_property_definition):
     if 'type' in class_property_definition:
+        if class_property_definition['type'] == 'array':
+            return resolve_type(class_property_definition['items'])
         return class_property_definition['type']
     elif '$ref_curie' in class_property_definition:
         curie = class_property_definition['$ref_curie']
         identifier = curie.split(':')[-1]
-        return f'`{identifier}<{resolve_curie(curie)}>`_'
+        return f'`{identifier} <{resolve_curie(curie)}>`_'
     elif '$ref' in class_property_definition:
         ref = class_property_definition['$ref']
         identifier = ref.split('/')[-1]
-        return f'`{identifier}<{ref}>`_'
+        return f'`{identifier} <{ref}>`_'
     elif 'oneOf' in class_property_definition:
         return ' | '.join([resolve_type(x) for x in class_property_definition['oneOf']])
     else:
         raise ValueError(class_property_definition)
 
-def resolve_cardinality(class_property_name, class_definition):
+
+def resolve_cardinality(class_property_name, class_property_attributes, class_definition):
     """Resolve class property cardinality from yaml definition"""
-    raise NotImplementedError
+    if class_property_name in class_definition.get('required', []):
+        min_count = '1'
+    elif class_property_name in class_definition.get('heritable_required', []):
+        min_count = '1'
+    else:
+        min_count = '0'
+    if class_property_attributes.get('type') == 'array':
+        max_count = 'm'
+    else:
+        max_count = '1'
+    return f'{min_count}..{max_count}'
 
 
 for class_name, class_definition in schema['$defs'].items():
     with open(defs_path / (class_name + '.rst'), "w") as f:
         header = i.titleize(class_name)
         ref = i.underscore(class_name)
-        print(f'.. _{ref}:\n', file=f)
         print(header, file=f)
         print(SECTION_DELIMITER * len(header), file=f)
         print(class_definition['description'], file=f)
@@ -73,5 +85,5 @@ for class_name, class_definition in schema['$defs'].items():
             print(f"""\
    *  - {class_property_name}
       - {resolve_type(class_property_attributes)}
-      - {resolve_cardinality(class_property_name, class_definition)}
-      - MUST be "VariationDescriptor""", file=f)
+      - {resolve_cardinality(class_property_name, class_property_attributes, class_definition)}
+      - {class_property_attributes['description']}""", file=f)
