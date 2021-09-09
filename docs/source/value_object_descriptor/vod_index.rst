@@ -36,23 +36,6 @@ through inspection of the variant itself.
 
 .. include:: ../defs/ValueObjectDescriptor.rst
 
-All VODs in VRSATILE are designed to describe exactly one corresponding
-class from the VRS standard, and this is explicitly represented
-in the VOD type. The following classes from VRS 1.2 are supported by
-VRSATILE VODs:
-
-- `VRS Variation`_
-   - Allele (VA)
-   - Haplotype (VH)
-   - CopyNumber (CN)
-   - Text (VT)
-   - VariationSet (VS)
-- `VRS Location`_
-   - SequenceLocation (VSL)
-   - ChromosomeLocation (VCL)
-- `VRS Sequence`_
-- `VRS Gene`_
-
 .. include:: vrs_descriptors.rst
 
 Other Data Classes
