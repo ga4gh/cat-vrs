@@ -6,7 +6,12 @@ import os
 import pathlib
 from inflector import Inflector
 
-SECTION_DELIMITER = '#'
+HEADER_LEVELS = {
+    1: '!',
+    2: '@',
+    3: '#',
+    4: '$'
+}
 
 defs_path = pathlib.Path.cwd() / 'defs'
 os.mkdir(defs_path)  # error expected if directory already exists – clear with Make
@@ -35,7 +40,10 @@ def resolve_type(class_property_definition):
     elif '$ref' in class_property_definition:
         ref = class_property_definition['$ref']
         identifier = ref.split('/')[-1]
-        return f'`{identifier} <{ref}>`_'
+        if ref.startswith('#'):
+            return f':ref:`{identifier}`'
+        else:
+            return f'`{identifier} <{ref}>`_'
     elif 'oneOf' in class_property_definition:
         return ' | '.join([resolve_type(x) for x in class_property_definition['oneOf']])
     else:
@@ -62,7 +70,7 @@ for class_name, class_definition in schema['$defs'].items():
         header = i.titleize(class_name)
         ref = i.underscore(class_name)
         print(header, file=f)
-        print(SECTION_DELIMITER * len(header), file=f)
+        print(HEADER_LEVELS[class_definition['header_level']] * len(header), file=f)
         print(class_definition['description'], file=f)
         print("""
 .. list-table::

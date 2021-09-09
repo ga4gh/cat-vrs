@@ -1,5 +1,5 @@
 Value Object Descriptor
-#######################
+@@@@@@@@@@@@@@@@@@@@@@@
 The abstract *Value Object Descriptor* parent class. All attributes of this parent class are inherited by child classes.
 
 .. list-table::
@@ -37,6 +37,6 @@ The abstract *Value Object Descriptor* parent class. All attributes of this pare
       - 0..m
       - List of strings representing alternate labels for the value object.
    *  - extensions
-      - `Extension <#/$defs/Extension>`_
+      - :ref:`Extension`
       - 0..m
-      - List of resource-specific :ref:`Extensions` needed to describe the value object.
+      - List of resource-specific :ref:`Extensions <Extension>` needed to describe the value object.

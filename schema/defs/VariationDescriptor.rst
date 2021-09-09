@@ -33,15 +33,15 @@ This descriptor class is used for describing VRS Variation value objects. This i
       - 0..1
       - The structural variant type associated with this variant. We RECOMMEND a descendent term of `SO:0001537 <http://www.sequenceontology.org/browser/current_release/term/SO:0001537>`_.
    *  - expressions
-      - `Expression <#/$defs/Expression>`_
+      - :ref:`Expression`
       - 0..1
       - Typically HGVS or ISCN nomenclature expressions. Other systems relevant to the description of variation MAY be used.
    *  - vcf_record
-      - `VcfRecord <#/$defs/VcfRecord>`_
+      - :ref:`VcfRecord`
       - 0..1
       - A VCF Record of the variant. This SHOULD be a single allele, the VCF genotype (GT) field should be represented in the *allelic_state* attribute.
    *  - gene_context
-      - `CURIE <https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/CURIE>`_ | `GeneDescriptor <#/$defs/GeneDescriptor>`_
+      - `CURIE <https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/CURIE>`_ | :ref:`GeneDescriptor`
       - 0..1
       - A specific gene context that applies to this variant.
    *  - vrs_ref_allele_seq

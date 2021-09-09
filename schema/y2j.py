@@ -91,5 +91,6 @@ for schema_class in defs:
     if class_is_abstract(schema_class):
         del defs[schema_class]['heritable_properties']
         del defs[schema_class]['heritable_required']
+        del defs[schema_class]['header_level']
 
 json.dump(processed_schema, sys.stdout, indent=3, sort_keys=False)

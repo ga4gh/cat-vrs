@@ -12,6 +12,7 @@
          ]
       },
       "VariationDescriptor": {
+         "header_level": 3,
          "description": "This descriptor class is used for describing VRS Variation value objects. This is a subclass of :ref:`value_object_descriptor` and inherits all Value Object Descriptor attributes.",
          "additionalProperties": false,
          "type": "object",
@@ -56,7 +57,7 @@
                "items": {
                   "$ref": "#/$defs/Extension"
                },
-               "description": "List of resource-specific :ref:`Extensions` needed to describe the value object."
+               "description": "List of resource-specific :ref:`Extensions <Extension>` needed to describe the value object."
             },
             "variation_id": {
                "description": "The SHOULD be provided if *variation* is omitted.",
@@ -108,8 +109,8 @@
             }
          },
          "required": [
-            "id",
-            "type"
+            "type",
+            "id"
          ]
       }
    }
