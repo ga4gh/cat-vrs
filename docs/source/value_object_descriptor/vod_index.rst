@@ -34,73 +34,14 @@ through inspection of the variant itself.
 
 .. _value_object_descriptor:
 
-Value Object Descriptor
-@@@@@@@@@@@@@@@@@@@@@@@
-The root class of all VODs is the abstract *Value Object Descriptor* class.
-All attributes of this parent class are inherited by child classes.
-
-.. list-table::
-   :class: clean-wrap
-   :header-rows: 1
-   :align: left
-   :widths: auto
-
-   *  - Field
-      - Type
-      - Limits
-      - Description
-   *  - id
-      - CURIE_
-      - 1..1
-      - Descriptor ID; MUST be unique within document
-   *  - type
-      - string
-      - 1..1
-      - MUST be VOD class name
-   *  - label
-      - string
-      - 0..1
-      - A primary label for the value object
-   *  - description
-      - string
-      - 0..1
-      - A free-text description of the value object
-   *  - xrefs
-      - CURIE_\[]
-      - 0..*
-      - List of CURIEs representing associated concepts
-   *  - alternate_labels
-      - string[]
-      - 0..*
-      - List of strings representing alternate labels for
-        the value object
-   *  - extensions
-      - Extension_\[]
-      - 0..*
-      - List of resource-specific Extensions needed to
-        describe the value object
-
-All VODs in VRSATILE are designed to describe exactly one corresponding
-class from the VRS standard, and this is explicitly represented
-in the VOD type. The following classes from VRS 1.2 are supported by
-VRSATILE VODs:
-
-- `VRS Variation`_
-   - Allele (VA)
-   - Haplotype (VH)
-   - CopyNumber (CN)
-   - Text (VT)
-   - VariationSet (VS)
-- `VRS Location`_
-   - SequenceLocation (VSL)
-   - ChromosomeLocation (VCL)
-- `VRS Sequence`_
-- `VRS Gene`_
+.. include:: ../defs/ValueObjectDescriptor.rst
 
 .. include:: vrs_descriptors.rst
 
 Other Data Classes
 @@@@@@@@@@@@@@@@@@
+
+.. _Extension:
 
 Extension
 #########

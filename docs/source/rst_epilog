@@ -3,9 +3,9 @@
 .. _clinvar: https://www.ncbi.nlm.nih.gov/clinvar/
 .. _dbsnp: https://www.ncbi.nlm.nih.gov/snp/
 .. _hgvs: https://varnomen.hgvs.org/
-.. _CURIE: https://vrs.ga4gh.org/en/latest/terms_and_model.html#curie
 .. _VRS Variation: https://vrs.ga4gh.org/en/latest/terms_and_model.html#variation
 .. _VRS Location: https://vrs.ga4gh.org/en/latest/terms_and_model.html#location
+.. _VRS SequenceLocation: https://vrs.ga4gh.org/en/latest/terms_and_model.html#sequencelocation
 .. _VRS Sequence: https://vrs.ga4gh.org/en/latest/terms_and_model.html#sequence
 .. _VRS Gene: https://vrs.ga4gh.org/en/latest/terms_and_model.html#gene
 

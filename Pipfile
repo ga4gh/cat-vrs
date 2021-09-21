@@ -6,8 +6,10 @@ name = "pypi"
 [packages]
 sphinx = "*"
 sphinx-rtd-theme = "*"
+inflector = "*"
 
 [dev-packages]
+pyyaml = "*"
 
 [requires]
 python_version = "3.9"
