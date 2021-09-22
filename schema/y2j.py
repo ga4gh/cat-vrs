@@ -10,10 +10,17 @@ raw_schema = yaml.load(sys.stdin, Loader=yaml.SafeLoader)
 
 processed_schema = copy.deepcopy(raw_schema)
 
-del (processed_schema['namespaces'])
+processed_schema.pop('namespaces', None)
+
+SCHEMA_DEF_KEYWORD_BY_VERSION = {
+    "http://json-schema.org/draft-07/schema": "definitions",
+    "http://json-schema.org/draft/2020-12/schema": "$defs"
+}
+
+SCHEMA_DEF_KEYWORD = SCHEMA_DEF_KEYWORD_BY_VERSION[raw_schema['$schema']]
 
 dependency_map = defaultdict(set)
-defs = processed_schema['$defs']
+defs = processed_schema[SCHEMA_DEF_KEYWORD]
 for schema_class in defs:
     if 'heritable_properties' in defs[schema_class]:
         assert 'oneOf' in defs[schema_class]  # Expected schema pattern
@@ -23,8 +30,15 @@ for schema_class in defs:
 
 
 def class_is_abstract(schema_class):
-    one_of_items = raw_schema['$defs'][schema_class].get('oneOf', [])
+    one_of_items = raw_schema[SCHEMA_DEF_KEYWORD][schema_class].get('oneOf', [])
     if len(one_of_items) > 0 and '$ref' in one_of_items[0]:
+        return True
+    return False
+
+
+def class_is_primitive(schema_class):
+    schema_class_type = raw_schema[SCHEMA_DEF_KEYWORD][schema_class].get('type', 'abstract')
+    if schema_class_type not in ['abstract', 'object']:
         return True
     return False
 
@@ -51,10 +65,13 @@ def process_property_tree(raw_node, processed_node):
 
 
 def process_schema_class(schema_class):
-    raw_class_def = raw_schema['$defs'][schema_class]
+    raw_class_def = raw_schema[SCHEMA_DEF_KEYWORD][schema_class]
     if schema_class in processed_classes:
         return
-    processed_class_def = processed_schema['$defs'][schema_class]
+    if class_is_primitive(schema_class):
+        processed_classes.add(schema_class)
+        return
+    processed_class_def = processed_schema[SCHEMA_DEF_KEYWORD][schema_class]
     inherited_properties = dict()
     inherited_required = set()
     # The below assertion is in place to limit support to single inheritance.
@@ -64,7 +81,7 @@ def process_schema_class(schema_class):
     assert len(dependency_map[schema_class]) <= 1
     for dependency in dependency_map[schema_class]:
         process_schema_class(dependency)
-        processed_dependency = processed_schema['$defs'][dependency]
+        processed_dependency = processed_schema[SCHEMA_DEF_KEYWORD][dependency]
         inherited_properties |= processed_dependency['heritable_properties']
         inherited_required |= set(processed_dependency['heritable_required'])
     if class_is_abstract(schema_class):
@@ -73,8 +90,8 @@ def process_schema_class(schema_class):
     else:
         prop_k = 'properties'
         req_k = 'required'
-    raw_class_properties = raw_class_def[prop_k]  # Nested inheritance!
-    processed_class_properties = processed_class_def[prop_k]
+    raw_class_properties = raw_class_def.get(prop_k, dict())  # Nested inheritance!
+    processed_class_properties = processed_class_def.get(prop_k, dict())
     processed_class_required = set(processed_class_def.get(req_k, []))
     process_property_tree(raw_class_properties, processed_class_properties)
     # Mix in inherited properties
@@ -89,8 +106,8 @@ for schema_class in defs:
     process_schema_class(schema_class)
 for schema_class in defs:
     if class_is_abstract(schema_class):
-        del defs[schema_class]['heritable_properties']
-        del defs[schema_class]['heritable_required']
-        del defs[schema_class]['header_level']
+        defs[schema_class].pop('heritable_properties', None)
+        defs[schema_class].pop('heritable_required', None)
+        defs[schema_class].pop('header_level', None)
 
 json.dump(processed_schema, sys.stdout, indent=3, sort_keys=False)
