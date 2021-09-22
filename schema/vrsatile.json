@@ -109,8 +109,8 @@
             }
          },
          "required": [
-            "type",
-            "id"
+            "id",
+            "type"
          ]
       },
       "VcfRecord": {
@@ -158,10 +158,10 @@
          },
          "required": [
             "alt",
-            "pos",
             "chrom",
-            "ref",
-            "genome_assembly"
+            "genome_assembly",
+            "pos",
+            "ref"
          ]
       }
    }
