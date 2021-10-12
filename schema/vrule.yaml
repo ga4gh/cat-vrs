@@ -58,13 +58,35 @@ $defs:
     - complement
     - type
   EquivalentVariationRule:
-    description: A thing!
+    description: The EquivalentVariationRule class constructs objects which indicate
+      that any variation that can be "equivalently mapped" to the indicated *variation*
+      value. The rules by which equivalency mapping is determined are managed at the
+      implementation level, but typically involve operations such as variation projection
+      (e.g. genomic <-> transcript <-> protein) and translation (e.g. GRCh37 genomic
+      <-> GRCh38 genomic).
     properties:
-      type: *id002
+      type:
+        type: string
+        enum:
+        - EquivalentVariationRule
+        description: MUST be "EquivalentVariationRule".
       complement: *id001
+      variation:
+        description: The `VRS Variation <https://vrs.ga4gh.org/en/1.2.0/terms_and_model.html#variation>`_
+          object to which equivalency must be determined.
+        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/Variation
+      molecular_context:
+        type: string
+        enum:
+        - genomic
+        - transcript
+        - protein
+        description: The molecular context of the *variation* value.
     required:
     - complement
+    - molecular_context
     - type
+    - variation
   GeneFunctionalConsequenceRule:
     description: A thing!
     properties:

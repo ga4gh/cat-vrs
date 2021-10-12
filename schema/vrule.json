@@ -84,20 +84,38 @@
          ]
       },
       "EquivalentVariationRule": {
-         "description": "A thing!",
+         "description": "The EquivalentVariationRule class constructs objects which indicate that any variation that can be \"equivalently mapped\" to the indicated *variation* value. The rules by which equivalency mapping is determined are managed at the implementation level, but typically involve operations such as variation projection (e.g. genomic <-> transcript <-> protein) and translation (e.g. GRCh37 genomic <-> GRCh38 genomic).",
          "properties": {
             "type": {
                "type": "string",
-               "description": "MUST be Variation Rule class name."
+               "enum": [
+                  "EquivalentVariationRule"
+               ],
+               "description": "MUST be \"EquivalentVariationRule\"."
             },
             "complement": {
                "type": "bool",
                "description": "This field indicates whether the variation rule is defined to include (false) or exclude (true) variation concepts matching the rule. This is equivalent to a logical NOT operation on the variation rule expression."
+            },
+            "variation": {
+               "description": "The `VRS Variation <https://vrs.ga4gh.org/en/1.2.0/terms_and_model.html#variation>`_ object to which equivalency must be determined.",
+               "$ref": "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/Variation"
+            },
+            "molecular_context": {
+               "type": "string",
+               "enum": [
+                  "genomic",
+                  "transcript",
+                  "protein"
+               ],
+               "description": "The molecular context of the *variation* value."
             }
          },
          "required": [
             "complement",
-            "type"
+            "molecular_context",
+            "type",
+            "variation"
          ]
       },
       "GeneFunctionalConsequenceRule": {
