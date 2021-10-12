@@ -3,7 +3,7 @@ GA4GH VRSATILE
 
 .. note::
 
-   VRSATILE is as Driver Project initiative to guide extending VRS in practical,
+   VRSATILE is a Driver Project initiative to guide extending VRS in practical,
    real-world data exchange. **The contents of this resource are not a GA4GH
    standard**. As the demonstrated utility of VRSATILE specification components
    become clear through Driver Project feedback and adoption, we will advance those
@@ -31,6 +31,5 @@ Reference SNP IDs.
    :maxdepth: 2
    :includehidden:
 
-   value_object_descriptor/vod_index
-   vcops/index
-   examples/index
+   value_object_descriptor/index
+   vrule/index
