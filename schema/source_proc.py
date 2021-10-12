@@ -23,7 +23,7 @@ class YamlSchemaProcessor:
         self.processed_schema = copy.deepcopy(raw_schema)
         self.schema_def_keyword = SCHEMA_DEF_KEYWORD_BY_VERSION[self.raw_schema['$schema']]
         self.dependency_map = defaultdict(set)
-        self.defs = self.processed_schema[self.schema_def_keyword]
+        self.defs = self.processed_schema.get(self.schema_def_keyword, None)
         self.processed_classes = set()
         self.process_schema()
         self.for_js = copy.deepcopy(self.processed_schema)
@@ -40,6 +40,8 @@ class YamlSchemaProcessor:
                 self._map_dependencies(ref, child_refs)
 
     def process_schema(self):
+        if self.defs is None:
+            return
         for schema_class in self.defs:
             if 'heritable_properties' in self.defs[schema_class]:
                 assert 'oneOf' in self.defs[schema_class]  # Expected schema pattern
@@ -130,7 +132,7 @@ class YamlSchemaProcessor:
 
     def clean_for_js(self):
         self.for_js.pop('namespaces', None)
-        for schema_class, schema_definition in self.for_js[self.schema_def_keyword].items():
+        for schema_class, schema_definition in self.for_js.get(self.schema_def_keyword, dict()).items():
             if self.class_is_abstract(schema_class):
                 schema_definition.pop('heritable_properties', None)
                 schema_definition.pop('heritable_required', None)

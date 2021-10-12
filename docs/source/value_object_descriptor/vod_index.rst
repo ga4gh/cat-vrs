@@ -32,9 +32,12 @@ the NM and LRG sequence identifiers), and in fact the referenced entities
 can only be retrieved through lookup on a sequence registry instead of
 through inspection of the variant itself.
 
-.. _value_object_descriptor:
+.. _ValueObjectDescriptor:
 
-.. include:: ../defs/ValueObjectDescriptor.rst
+Value Object Descriptor
+@@@@@@@@@@@@@@@@@@@@@@@
+
+.. include:: ../defs/vod/ValueObjectDescriptor.rst
 
 .. include:: vrs_descriptors.rst
 

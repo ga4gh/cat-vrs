@@ -1,10 +1,16 @@
 .. _VariationDescriptor:
 
-.. include:: ../defs/VariationDescriptor.rst
+Variation Descriptor
+####################
+
+.. include:: ../defs/vod/VariationDescriptor.rst
 
 .. _VcfRecord:
 
-.. include:: ../defs/VcfRecord.rst
+VCF Record
+$$$$$$$$$$
+
+.. include:: ../defs/vod/VcfRecord.rst
 
 .. _LocationDescriptor:
 
@@ -12,7 +18,7 @@ Location Descriptor
 ###################
 
 This descriptor is intended to reference `VRS Location`_ value objects.
-In addition to the attributes inherited from its :ref:`value_object_descriptor`
+In addition to the attributes inherited from its :ref:`ValueObjectDescriptor`
 parent class, the *Sequence Location Descriptor* has the following attributes:
 
 .. list-table::
@@ -44,7 +50,7 @@ Sequence Descriptor
 ###################
 
 This descriptor is intended to reference `VRS Sequence`_ value objects.
-In addition to the attributes inherited from its :ref:`value_object_descriptor`
+In addition to the attributes inherited from its :ref:`ValueObjectDescriptor`
 parent class, the *Sequence Descriptor* has the following attributes:
 
 .. list-table::
@@ -84,7 +90,7 @@ Gene Descriptor
 ###############
 
 This descriptor is intended to reference `VRS Gene`_ value objects.
-In addition to the attributes inherited from its :ref:`value_object_descriptor`
+In addition to the attributes inherited from its :ref:`ValueObjectDescriptor`
 parent class, the *Gene Descriptor* has the following attributes:
 
 .. list-table::

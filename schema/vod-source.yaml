@@ -1,12 +1,11 @@
 $schema: "http://json-schema.org/draft/2020-12/schema"
-title: "GA4GH-VRSATILE-Definitions"
+title: "GA4GH-Value-Object-Descriptor-Definitions"
 type: object
 namespaces:
   vrs: "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/"
 
 $defs:
   ValueObjectDescriptor:
-    header_level: 2
     description: >-
       The abstract *Value Object Descriptor* parent class. All attributes
       of this parent class are inherited by child classes.
@@ -52,10 +51,9 @@ $defs:
     heritable_required: ["id", "type"]
 
   VariationDescriptor:
-    header_level: 3
     description: >-
       This descriptor class is used for describing VRS Variation value objects.
-      This is a subclass of :ref:`value_object_descriptor` and inherits all Value
+      This is a subclass of :ref:`ValueObjectDescriptor` and inherits all Value
       Object Descriptor attributes.
     additionalProperties: false
     type: object
@@ -114,7 +112,6 @@ $defs:
           `GENO:0000875 <http://purl.obolibrary.org/obo/GENO_0000875>`.
 
   VcfRecord:
-    header_level: 4
     description: >-
       This data class is used when it is desirable to pass data as expected from a VCF record.
       The class is only used as an optional attribute within a :ref:`VariationDescriptor`.

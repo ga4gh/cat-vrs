@@ -3,18 +3,23 @@
 
 import yaml
 import os
+import sys
 import pathlib
 from inflector import Inflector
 from source_proc import SCHEMA_DEF_KEYWORD_BY_VERSION, YamlSchemaProcessor
 
-defs_path = pathlib.Path.cwd() / 'defs'
-os.mkdir(defs_path)  # error expected if directory already exists – clear with Make
+source_file = pathlib.Path(sys.argv[1])
 
-with open('vrs-source.yaml', 'r') as f:
+defs_path = pathlib.Path.cwd() / 'defs' / str(source_file.stem)[:-7]
+os.makedirs(defs_path)  # error expected if directory already exists – clear with Make
+
+with open(source_file, 'r') as f:
     schema = yaml.load(f, Loader=yaml.SafeLoader)
 
 i = Inflector()
 proc_schema = YamlSchemaProcessor(schema)
+if proc_schema.defs is None:
+    exit(0)
 schema_def_keyword = SCHEMA_DEF_KEYWORD_BY_VERSION[schema['$schema']]
 
 
@@ -93,7 +98,7 @@ for class_name, class_definition in proc_schema.defs.items():
 **Information Model**
 {inheritance}
 .. list-table::
-   :class: reece-wrap
+   :class: clean-wrap
    :header-rows: 1
    :align: left
    :widths: auto
