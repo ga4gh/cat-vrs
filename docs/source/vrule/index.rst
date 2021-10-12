@@ -5,7 +5,7 @@ To facilitate search of observed biomolecular variation, contemporary biomolecul
 knowledgebases routinely "flatten" variation concepts to a specific context that
 facilitates computable matching to observed variation, and typically provide related
 contexts to help characterize the intended biological concept. For example, the
-variant "BRAF V600E" at the `CIViC <https://civicdb.org>`_ resource describes a protein
+variant "BRAF V600E" at the `CIViC`_ resource describes a protein
 change, but is flattened to a *representative genomic change* (GRCh37 chr7:g.140453136A>T)
 and contextualized with corresponding transcript (NM_004333.4:c.1799T>A) and protein
 (NP_004324.2:p.Val600Glu) descriptions. The representative change is linked to its
@@ -23,7 +23,7 @@ applicable to the V600E mutation.
 
 In addition, more complex cases of variation also exist, where the closest approximation of
 a variation amounts to a simple genomic range. Examples of these types of variations include:
-`PTEN V317 mutations`_, `TP53 truncating mutations`_, `EGFR exon 19 deletions`_. The concepts
+`BRAF V600 mutations`_, `TP53 truncating mutations`_, `EGFR exon 19 deletions`_. The concepts
 associated with these variations (any protein mutation at a codon, any truncating mutation in
 a gene, and any in-frame deletion in an exon) are not clearly definable using a variation
 description framework such as VRS or HGVS.
@@ -32,8 +32,11 @@ To address these shortfalls, we introduce Variation Rules (VRules). VRules captu
 that are missing or implied in genomic knowledge resources, providing a framework for expressing
 how genomic knowledge may match to assayed variation. Much like the VRS objects used in this
 specification, Variation Rule classes are designed to represent value objects that are readily
-usable by genomic knowledge search engines. Also see the `VariationRuleDescriptor`_ class for
-describing Variation Rules under a consistent paradigm with the `VariationDescriptor`_ class.
+usable by genomic knowledge search engines. Also see the :ref:`VariationRuleDescriptor` class for
+describing Variation Rules under a consistent paradigm with the :ref:`VariationDescriptor` class.
 
 .. _CA123643: https://reg.genome.network/redmine/projects/registry/genboree_registry/by_caid?caid=CA123643
 .. _CA16602531: http://reg.clinicalgenome.org/redmine/projects/registry/genboree_registry/by_caid?caid=CA16602531
+.. _BRAF V600 mutations: https://civicdb.org/events/genes/5/summary/variants/17/summary
+.. _EGFR exon 19 deletions: https://civicdb.org/events/genes/19/summary/variants/133/summary
+.. _TP53 truncating mutations: https://civicdb.org/events/genes/45/summary/variants/223/summary
