@@ -17,15 +17,11 @@ variation concepts. Common examples of this are reference sequence ids,
 *EGFR vIII*. VRSATILE and its components are in a draft state and a reflection
 of current Driver Project interoperability efforts based on the VRS standard.
 
-VRSATILE also enables simplification of "aggregate" variation concepts
+VRSATILE also enables precise representation of "aggregate" variation concepts
 that include multiple contextual forms. Examples of aggregate variation
 include the concepts represented by `ClinVar`_ variation IDs, `CIViC`_
 variation IDs, `ClinGen Allele Registry`_ Canonical Allele IDs, and `dbSNP`_
 Reference SNP IDs.
-
-.. figure:: images/vrsatile_overview.png
-
-   **Overview of the VRSATILE Framework**
 
 .. toctree::
    :maxdepth: 2
