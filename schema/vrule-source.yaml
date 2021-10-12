@@ -3,3 +3,81 @@ title: "GA4GH-Variation-Rule-Definitions"
 type: object
 namespaces:
   vrs: "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/"
+
+$defs:
+  # VRSATILE Variaton Rules are presented top-down. Everything rolls up to VariationRule,
+  # which is a polymorphic abstraction of many kinds of variation rule.
+
+  # =============================================================================
+  # Top-level Variation Rule concepts
+  # =============================================================================
+
+  VariationRule:
+    description: >-
+      The abstract *Variation Rule* parent class. All attributes of this parent
+      class are inherited by Variation Rule descendent classes.
+    oneOf:
+      - $ref: "#/$defs/SimpleVariationRule"
+      - $ref: "#/$defs/ComplexVariationRule"
+    heritable_properties:
+      type:
+        type: string
+        description: >-
+          MUST be Variation Rule class name.
+      complement:
+        type: bool
+        description: >-
+          This field indicates whether the variation rule is defined to include (false)
+          or exclude (true) variation concepts matching the rule. This is equivalent to
+          a logical NOT operation on the variation rule expression.
+    heritable_required: ['type', 'complement']
+
+  SimpleVariationRule:
+    description: >-
+      The SimpleVariationRule abstract class represents the set of :ref:`VariationRule` classes
+      that are used directly by genomic knowledge statements, or as components for defining
+      a :ref:`ComplexVariationRule`.
+    oneOf:
+      - $ref: "#/$defs/LocatedMolecularConsequenceRule"
+      - $ref: "#/$defs/EquivalentVariationRule"
+      - $ref: "#/$defs/GeneFunctionalConsequenceRule"
+
+  ComplexVariationRule:
+    description: >-
+      The ComplexVariationRule class creates objects for defining complex logical
+      relationships between two or more other :ref:`VariationRule` objects.
+    properties:
+      type:
+        type: string
+        description: >-
+          MUST be "ComplexVariationRule".
+        enum: ["ComplexVariationRule"]
+      operands:
+        type: array
+        items:
+          $ref: "#/$defs/VariationRule"
+        minItems: 2
+        description: >-
+          The :ref:`VariationRule` objects that are being evaluated collectively.
+      operator:
+        type: string
+        enum: ["AND", "OR"]
+        description: >-
+          The logical operation applied to evaluating the object *operands*.
+    required: ["operands", "operator"]
+
+  # =============================================================================
+  # Simple Variation Rules
+  # =============================================================================
+
+  LocatedMolecularConsequenceRule:
+    description: >-
+      A thing!
+
+  EquivalentVariationRule:
+    description: >-
+      A thing!
+
+  GeneFunctionalConsequenceRule:
+    description: >-
+      A thing!

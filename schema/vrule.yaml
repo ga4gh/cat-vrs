@@ -1,0 +1,75 @@
+$schema: http://json-schema.org/draft/2020-12/schema
+title: GA4GH-Variation-Rule-Definitions
+type: object
+$defs:
+  VariationRule:
+    description: The abstract *Variation Rule* parent class. All attributes of this
+      parent class are inherited by Variation Rule descendent classes.
+    oneOf:
+    - $ref: '#/$defs/SimpleVariationRule'
+    - $ref: '#/$defs/ComplexVariationRule'
+  SimpleVariationRule:
+    description: The SimpleVariationRule abstract class represents the set of VariationRule
+      classes that are used directly by genomic knowledge statements, or as components
+      for defining a ComplexVariationRule.
+    oneOf:
+    - $ref: '#/$defs/LocatedMolecularConsequenceRule'
+    - $ref: '#/$defs/EquivalentVariationRule'
+    - $ref: '#/$defs/GeneFunctionalConsequenceRule'
+  ComplexVariationRule:
+    description: The ComplexVariationRule class creates objects for defining complex
+      logical relationships between two or more other VariationRule objects.
+    properties:
+      type:
+        type: string
+        description: MUST be "ComplexVariationRule".
+        enum:
+        - ComplexVariationRule
+      complement: &id001
+        type: bool
+        description: This field indicates whether the variation rule is defined to
+          include (false) or exclude (true) variation concepts matching the rule.
+          This is equivalent to a logical NOT operation on the variation rule expression.
+      operands:
+        type: array
+        items:
+          $ref: '#/$defs/VariationRule'
+        minItems: 2
+        description: The :ref:`VariationRule` objects that are being evaluated collectively.
+      operator:
+        type: string
+        enum:
+        - AND
+        - OR
+        description: The logical operation applied to evaluating the object *operands*.
+    required:
+    - complement
+    - operands
+    - operator
+    - type
+  LocatedMolecularConsequenceRule:
+    description: A thing!
+    properties:
+      type: &id002
+        type: string
+        description: MUST be Variation Rule class name.
+      complement: *id001
+    required:
+    - complement
+    - type
+  EquivalentVariationRule:
+    description: A thing!
+    properties:
+      type: *id002
+      complement: *id001
+    required:
+    - complement
+    - type
+  GeneFunctionalConsequenceRule:
+    description: A thing!
+    properties:
+      type: *id002
+      complement: *id001
+    required:
+    - complement
+    - type
