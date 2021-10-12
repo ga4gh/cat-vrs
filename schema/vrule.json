@@ -1,0 +1,5 @@
+{
+   "$schema": "http://json-schema.org/draft/2020-12/schema",
+   "title": "GA4GH-Variation-Rule-Definitions",
+   "type": "object"
+}

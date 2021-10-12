@@ -1,0 +1,5 @@
+$schema: "http://json-schema.org/draft/2020-12/schema"
+title: "GA4GH-Variation-Rule-Definitions"
+type: object
+namespaces:
+  vrs: "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/"
