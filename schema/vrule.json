@@ -60,7 +60,7 @@
                   "AND",
                   "OR"
                ],
-               "description": "The logical operation applied to evaluating the object *operands*."
+               "description": "The logical operation applied to evaluating the object *operands*. MUST be \"AND\" or \"OR\"."
             }
          },
          "required": [

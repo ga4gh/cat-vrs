@@ -35,4 +35,4 @@ Some ComplexVariationRule attributes are inherited from :ref:`VariationRule`.
    *  - operator
       - string
       - 1..1
-      - The logical operation applied to evaluating the object *operands*.
+      - The logical operation applied to evaluating the object *operands*. MUST be "AND" or "OR".
