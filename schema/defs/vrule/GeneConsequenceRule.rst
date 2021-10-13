@@ -30,9 +30,9 @@ Some GeneConsequenceRule attributes are inherited from :ref:`SimpleVariationRule
       - This field indicates whether the variation rule is defined to include (false) or exclude (true) variation concepts matching the rule. This is equivalent to a logical NOT operation on the variation rule expression.
    *  - gene
       - `Gene <https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/Gene>`_
-      - 0..1
+      - 1..1
       - A `VRS Gene <https://vrs.ga4gh.org/en/1.2.0/terms_and_model.html#gene>`_ object.
    *  - gene_consequence
       - string
-      - 0..1
-      - 
+      - 1..1
+      - MUST be one of "gain-of-function", "loss-of-function", "oncogenic", "pathogenic".

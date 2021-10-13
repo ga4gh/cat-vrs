@@ -182,11 +182,14 @@
                   "loss-of-function",
                   "oncogenic",
                   "pathogenic"
-               ]
+               ],
+               "description": "MUST be one of \"gain-of-function\", \"loss-of-function\", \"oncogenic\", \"pathogenic\"."
             }
          },
          "required": [
             "complement",
+            "gene",
+            "gene_consequence",
             "type"
          ]
       }
