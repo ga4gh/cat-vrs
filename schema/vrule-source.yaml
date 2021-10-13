@@ -20,6 +20,10 @@ $defs:
       - $ref: "#/$defs/SimpleVariationRule"
       - $ref: "#/$defs/ComplexVariationRule"
     heritable_properties:
+      _id:
+        type: string
+        description: >-
+          A GA4GH computed identifier.
       type:
         type: string
         description: >-
@@ -44,7 +48,7 @@ $defs:
 
   ComplexVariationRule:
     description: >-
-      The ComplexVariationRule class creates objects for defining complex logical
+      The ComplexVariationRule class constructs objects for defining complex logical
       relationships between two or more other :ref:`VariationRule` objects.
     properties:
       type:
@@ -72,11 +76,35 @@ $defs:
 
   LocatedMolecularConsequenceRule:
     description: >-
-      A thing!
+      The LocatedMolecularConsequenceRule class constructs objects which describe
+      any variation that results in the *molecular_consequence* at the specified
+      *location*.
+    properties:
+      type:
+        type: string
+        enum: ["LocatedMolecularConsequenceRule"]
+        description: >-
+          MUST be "LocatedMolecularConsequenceRule"
+      location:
+        $ref_curie: "vrs:Location"
+        description: >-
+          The location where the *molecular_consequence* is observed.
+      molecular_consequence:
+        $ref_curie: "vrs:CURIE"
+        description: >-
+          A sequence ontology term specifying the type of molecular consequence.
+          The value SHOULD be a descendent term of
+          `SO:0001537 (structural_variant) <http://www.sequenceontology.org/browser/current_release/term/SO:0001537>`_.
+      molecular_context:
+        type: string
+        enum: ["genomic", "transcript", "protein"]
+        description: >-
+          The molecular context of the *location* value.
+    required: ["type", "location", "molecular_consequence", "molecular_context"]
 
   EquivalentVariationRule:
     description: >-
-      The EquivalentVariationRule class constructs objects which indicate that
+      The EquivalentVariationRule class constructs objects which describe
       any variation that can be "equivalently mapped" to the indicated *variation*
       value. The rules by which equivalency mapping is determined are managed at
       the implementation level, but typically involve operations such as variation

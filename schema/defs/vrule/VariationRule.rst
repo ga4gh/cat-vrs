@@ -14,6 +14,10 @@ The abstract *Variation Rule* parent class. All attributes of this parent class 
       - Type
       - Limits
       - Description
+   *  - _id
+      - string
+      - 0..1
+      - A GA4GH computed identifier.
    *  - type
       - string
       - 1..1

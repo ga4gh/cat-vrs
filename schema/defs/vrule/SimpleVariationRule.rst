@@ -16,6 +16,10 @@ Some SimpleVariationRule attributes are inherited from :ref:`VariationRule`.
       - Type
       - Limits
       - Description
+   *  - _id
+      - string
+      - 0..1
+      - A GA4GH computed identifier.
    *  - type
       - string
       - 1..1

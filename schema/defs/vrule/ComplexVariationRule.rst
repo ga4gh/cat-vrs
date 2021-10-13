@@ -1,6 +1,6 @@
 **Computational Definition**
 
-The ComplexVariationRule class creates objects for defining complex logical relationships between two or more other :ref:`VariationRule` objects.
+The ComplexVariationRule class constructs objects for defining complex logical relationships between two or more other :ref:`VariationRule` objects.
 
 **Information Model**
 
@@ -16,6 +16,10 @@ Some ComplexVariationRule attributes are inherited from :ref:`VariationRule`.
       - Type
       - Limits
       - Description
+   *  - _id
+      - string
+      - 0..1
+      - A GA4GH computed identifier.
    *  - type
       - string
       - 1..1

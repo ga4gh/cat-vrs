@@ -17,15 +17,18 @@ $defs:
     - $ref: '#/$defs/EquivalentVariationRule'
     - $ref: '#/$defs/GeneFunctionalConsequenceRule'
   ComplexVariationRule:
-    description: The ComplexVariationRule class creates objects for defining complex
+    description: The ComplexVariationRule class constructs objects for defining complex
       logical relationships between two or more other VariationRule objects.
     properties:
+      _id: &id001
+        type: string
+        description: A GA4GH computed identifier.
       type:
         type: string
         description: MUST be "ComplexVariationRule".
         enum:
         - ComplexVariationRule
-      complement: &id001
+      complement: &id002
         type: bool
         description: This field indicates whether the variation rule is defined to
           include (false) or exclude (true) variation concepts matching the rule.
@@ -48,29 +51,53 @@ $defs:
     - operator
     - type
   LocatedMolecularConsequenceRule:
-    description: A thing!
+    description: The LocatedMolecularConsequenceRule class constructs objects which
+      describe any variation that results in the *molecular_consequence* at the specified
+      *location*.
     properties:
-      type: &id002
+      _id: *id001
+      type:
         type: string
-        description: MUST be Variation Rule class name.
-      complement: *id001
+        enum:
+        - LocatedMolecularConsequenceRule
+        description: MUST be "LocatedMolecularConsequenceRule"
+      complement: *id002
+      location:
+        description: The location where the *molecular_consequence* is observed.
+        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/Location
+      molecular_consequence:
+        description: A sequence ontology term specifying the type of molecular consequence.
+          The value SHOULD be a descendent term of `SO:0001537 (structural_variant)
+          <http://www.sequenceontology.org/browser/current_release/term/SO:0001537>`_.
+        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/CURIE
+      molecular_context:
+        type: string
+        enum:
+        - genomic
+        - transcript
+        - protein
+        description: The molecular context of the *location* value.
     required:
     - complement
+    - location
+    - molecular_consequence
+    - molecular_context
     - type
   EquivalentVariationRule:
-    description: The EquivalentVariationRule class constructs objects which indicate
-      that any variation that can be "equivalently mapped" to the indicated *variation*
+    description: The EquivalentVariationRule class constructs objects which describe
+      any variation that can be "equivalently mapped" to the indicated *variation*
       value. The rules by which equivalency mapping is determined are managed at the
       implementation level, but typically involve operations such as variation projection
       (e.g. genomic <-> transcript <-> protein) and translation (e.g. GRCh37 genomic
       <-> GRCh38 genomic).
     properties:
+      _id: *id001
       type:
         type: string
         enum:
         - EquivalentVariationRule
         description: MUST be "EquivalentVariationRule".
-      complement: *id001
+      complement: *id002
       variation:
         description: The `VRS Variation <https://vrs.ga4gh.org/en/1.2.0/terms_and_model.html#variation>`_
           object to which equivalency must be determined.
@@ -90,8 +117,11 @@ $defs:
   GeneFunctionalConsequenceRule:
     description: A thing!
     properties:
-      type: *id002
-      complement: *id001
+      _id: *id001
+      type:
+        type: string
+        description: MUST be Variation Rule class name.
+      complement: *id002
     required:
     - complement
     - type

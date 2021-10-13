@@ -1,6 +1,6 @@
 **Computational Definition**
 
-The EquivalentVariationRule class constructs objects which indicate that any variation that can be "equivalently mapped" to the indicated *variation* value. The rules by which equivalency mapping is determined are managed at the implementation level, but typically involve operations such as variation projection (e.g. genomic <-> transcript <-> protein) and translation (e.g. GRCh37 genomic <-> GRCh38 genomic).
+The EquivalentVariationRule class constructs objects which describe any variation that can be "equivalently mapped" to the indicated *variation* value. The rules by which equivalency mapping is determined are managed at the implementation level, but typically involve operations such as variation projection (e.g. genomic <-> transcript <-> protein) and translation (e.g. GRCh37 genomic <-> GRCh38 genomic).
 
 **Information Model**
 
@@ -16,6 +16,10 @@ Some EquivalentVariationRule attributes are inherited from :ref:`SimpleVariation
       - Type
       - Limits
       - Description
+   *  - _id
+      - string
+      - 0..1
+      - A GA4GH computed identifier.
    *  - type
       - string
       - 1..1

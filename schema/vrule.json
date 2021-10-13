@@ -29,8 +29,12 @@
          ]
       },
       "ComplexVariationRule": {
-         "description": "The ComplexVariationRule class creates objects for defining complex logical relationships between two or more other VariationRule objects.",
+         "description": "The ComplexVariationRule class constructs objects for defining complex logical relationships between two or more other VariationRule objects.",
          "properties": {
+            "_id": {
+               "type": "string",
+               "description": "A GA4GH computed identifier."
+            },
             "type": {
                "type": "string",
                "description": "MUST be \"ComplexVariationRule\".",
@@ -67,25 +71,56 @@
          ]
       },
       "LocatedMolecularConsequenceRule": {
-         "description": "A thing!",
+         "description": "The LocatedMolecularConsequenceRule class constructs objects which describe any variation that results in the *molecular_consequence* at the specified *location*.",
          "properties": {
+            "_id": {
+               "type": "string",
+               "description": "A GA4GH computed identifier."
+            },
             "type": {
                "type": "string",
-               "description": "MUST be Variation Rule class name."
+               "enum": [
+                  "LocatedMolecularConsequenceRule"
+               ],
+               "description": "MUST be \"LocatedMolecularConsequenceRule\""
             },
             "complement": {
                "type": "bool",
                "description": "This field indicates whether the variation rule is defined to include (false) or exclude (true) variation concepts matching the rule. This is equivalent to a logical NOT operation on the variation rule expression."
+            },
+            "location": {
+               "description": "The location where the *molecular_consequence* is observed.",
+               "$ref": "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/Location"
+            },
+            "molecular_consequence": {
+               "description": "A sequence ontology term specifying the type of molecular consequence. The value SHOULD be a descendent term of `SO:0001537 (structural_variant) <http://www.sequenceontology.org/browser/current_release/term/SO:0001537>`_.",
+               "$ref": "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/CURIE"
+            },
+            "molecular_context": {
+               "type": "string",
+               "enum": [
+                  "genomic",
+                  "transcript",
+                  "protein"
+               ],
+               "description": "The molecular context of the *location* value."
             }
          },
          "required": [
             "complement",
+            "location",
+            "molecular_consequence",
+            "molecular_context",
             "type"
          ]
       },
       "EquivalentVariationRule": {
-         "description": "The EquivalentVariationRule class constructs objects which indicate that any variation that can be \"equivalently mapped\" to the indicated *variation* value. The rules by which equivalency mapping is determined are managed at the implementation level, but typically involve operations such as variation projection (e.g. genomic <-> transcript <-> protein) and translation (e.g. GRCh37 genomic <-> GRCh38 genomic).",
+         "description": "The EquivalentVariationRule class constructs objects which describe any variation that can be \"equivalently mapped\" to the indicated *variation* value. The rules by which equivalency mapping is determined are managed at the implementation level, but typically involve operations such as variation projection (e.g. genomic <-> transcript <-> protein) and translation (e.g. GRCh37 genomic <-> GRCh38 genomic).",
          "properties": {
+            "_id": {
+               "type": "string",
+               "description": "A GA4GH computed identifier."
+            },
             "type": {
                "type": "string",
                "enum": [
@@ -121,6 +156,10 @@
       "GeneFunctionalConsequenceRule": {
          "description": "A thing!",
          "properties": {
+            "_id": {
+               "type": "string",
+               "description": "A GA4GH computed identifier."
+            },
             "type": {
                "type": "string",
                "description": "MUST be Variation Rule class name."
