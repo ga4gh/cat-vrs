@@ -44,7 +44,7 @@ $defs:
     oneOf:
       - $ref: "#/$defs/LocatedMolecularConsequenceRule"
       - $ref: "#/$defs/EquivalentVariationRule"
-      - $ref: "#/$defs/GeneFunctionalConsequenceRule"
+      - $ref: "#/$defs/GeneConsequenceRule"
 
   ComplexVariationRule:
     description: >-
@@ -128,6 +128,20 @@ $defs:
           The molecular context of the *variation* value.
     required: ["type", "variation", "molecular_context"]
 
-  GeneFunctionalConsequenceRule:
+  GeneConsequenceRule:
     description: >-
-      A thing!
+      The GeneConsequenceRule class constructs objects which describe
+      any variation within a *gene* resulting in the indicated *gene_consequence*.
+    properties:
+      type:
+        type: string
+        enum: ["GeneConsequenceRule"]
+        description: >-
+          MUST be "GeneFunctionalConsequenceRule".
+      gene:
+        $ref_curie: "vrs:Gene"
+        description: >-
+          A `VRS Gene <https://vrs.ga4gh.org/en/1.2.0/terms_and_model.html#gene>`_ object.
+      gene_consequence:
+        type: string
+        enum: ["gain-of-function", "loss-of-function", "oncogenic", "pathogenic"]

@@ -24,7 +24,7 @@
                "$ref": "#/$defs/EquivalentVariationRule"
             },
             {
-               "$ref": "#/$defs/GeneFunctionalConsequenceRule"
+               "$ref": "#/$defs/GeneConsequenceRule"
             }
          ]
       },
@@ -153,8 +153,8 @@
             "variation"
          ]
       },
-      "GeneFunctionalConsequenceRule": {
-         "description": "A thing!",
+      "GeneConsequenceRule": {
+         "description": "The GeneConsequenceRule class constructs objects which describe any variation within a *gene* resulting in the indicated *gene_consequence*.",
          "properties": {
             "_id": {
                "type": "string",
@@ -162,11 +162,27 @@
             },
             "type": {
                "type": "string",
-               "description": "MUST be Variation Rule class name."
+               "enum": [
+                  "GeneConsequenceRule"
+               ],
+               "description": "MUST be \"GeneFunctionalConsequenceRule\"."
             },
             "complement": {
                "type": "bool",
                "description": "This field indicates whether the variation rule is defined to include (false) or exclude (true) variation concepts matching the rule. This is equivalent to a logical NOT operation on the variation rule expression."
+            },
+            "gene": {
+               "description": "A `VRS Gene <https://vrs.ga4gh.org/en/1.2.0/terms_and_model.html#gene>`_ object.",
+               "$ref": "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/Gene"
+            },
+            "gene_consequence": {
+               "type": "string",
+               "enum": [
+                  "gain-of-function",
+                  "loss-of-function",
+                  "oncogenic",
+                  "pathogenic"
+               ]
             }
          },
          "required": [

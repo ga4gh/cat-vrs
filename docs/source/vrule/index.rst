@@ -68,7 +68,7 @@ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 Gene Functional Consequence Rule
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-.. include:: ../defs/vrule/GeneFunctionalConsequenceRule.rst
+.. include:: ../defs/vrule/GeneConsequenceRule.rst
 
 .. _ComplexVariationRule:
 
