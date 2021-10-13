@@ -1,5 +1,197 @@
 {
    "$schema": "http://json-schema.org/draft/2020-12/schema",
    "title": "GA4GH-Variation-Rule-Definitions",
-   "type": "object"
+   "type": "object",
+   "$defs": {
+      "VariationRule": {
+         "description": "The abstract *Variation Rule* parent class. All attributes of this parent class are inherited by Variation Rule descendent classes.",
+         "oneOf": [
+            {
+               "$ref": "#/$defs/SimpleVariationRule"
+            },
+            {
+               "$ref": "#/$defs/ComplexVariationRule"
+            }
+         ]
+      },
+      "SimpleVariationRule": {
+         "description": "The SimpleVariationRule abstract class represents the set of VariationRule classes that are used directly by genomic knowledge statements, or as components for defining a ComplexVariationRule.",
+         "oneOf": [
+            {
+               "$ref": "#/$defs/LocatedMolecularConsequenceRule"
+            },
+            {
+               "$ref": "#/$defs/EquivalentVariationRule"
+            },
+            {
+               "$ref": "#/$defs/GeneConsequenceRule"
+            }
+         ]
+      },
+      "ComplexVariationRule": {
+         "description": "The ComplexVariationRule class constructs objects for defining complex logical relationships between two or more other VariationRule objects.",
+         "properties": {
+            "_id": {
+               "type": "string",
+               "description": "A GA4GH computed identifier."
+            },
+            "type": {
+               "type": "string",
+               "description": "MUST be \"ComplexVariationRule\".",
+               "enum": [
+                  "ComplexVariationRule"
+               ]
+            },
+            "complement": {
+               "type": "bool",
+               "description": "This field indicates whether the variation rule is defined to include (false) or exclude (true) variation concepts matching the rule. This is equivalent to a logical NOT operation on the variation rule expression."
+            },
+            "operands": {
+               "type": "array",
+               "items": {
+                  "$ref": "#/$defs/VariationRule"
+               },
+               "minItems": 2,
+               "description": "The :ref:`VariationRule` objects that are being evaluated collectively."
+            },
+            "operator": {
+               "type": "string",
+               "enum": [
+                  "AND",
+                  "OR"
+               ],
+               "description": "The logical operation applied to evaluating the object *operands*. MUST be \"AND\" or \"OR\"."
+            }
+         },
+         "required": [
+            "complement",
+            "operands",
+            "operator",
+            "type"
+         ]
+      },
+      "LocatedMolecularConsequenceRule": {
+         "description": "The LocatedMolecularConsequenceRule class constructs objects which describe any variation that results in the *molecular_consequence* at the specified *location*.",
+         "properties": {
+            "_id": {
+               "type": "string",
+               "description": "A GA4GH computed identifier."
+            },
+            "type": {
+               "type": "string",
+               "enum": [
+                  "LocatedMolecularConsequenceRule"
+               ],
+               "description": "MUST be \"LocatedMolecularConsequenceRule\""
+            },
+            "complement": {
+               "type": "bool",
+               "description": "This field indicates whether the variation rule is defined to include (false) or exclude (true) variation concepts matching the rule. This is equivalent to a logical NOT operation on the variation rule expression."
+            },
+            "location": {
+               "description": "The location where the *molecular_consequence* is observed.",
+               "$ref": "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/Location"
+            },
+            "molecular_consequence": {
+               "description": "A sequence ontology term specifying the type of molecular consequence. The value SHOULD be a descendent term of `SO:0001537 (structural_variant) <http://www.sequenceontology.org/browser/current_release/term/SO:0001537>`_.",
+               "$ref": "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/CURIE"
+            },
+            "molecular_context": {
+               "type": "string",
+               "enum": [
+                  "genomic",
+                  "transcript",
+                  "protein"
+               ],
+               "description": "The molecular context of the *location* value."
+            }
+         },
+         "required": [
+            "complement",
+            "location",
+            "molecular_consequence",
+            "molecular_context",
+            "type"
+         ]
+      },
+      "EquivalentVariationRule": {
+         "description": "The EquivalentVariationRule class constructs objects which describe any variation that can be \"equivalently mapped\" to the indicated *variation* value. The rules by which equivalency mapping is determined are managed at the implementation level, but typically involve operations such as variation projection (e.g. genomic <-> transcript <-> protein) and translation (e.g. GRCh37 genomic <-> GRCh38 genomic).",
+         "properties": {
+            "_id": {
+               "type": "string",
+               "description": "A GA4GH computed identifier."
+            },
+            "type": {
+               "type": "string",
+               "enum": [
+                  "EquivalentVariationRule"
+               ],
+               "description": "MUST be \"EquivalentVariationRule\"."
+            },
+            "complement": {
+               "type": "bool",
+               "description": "This field indicates whether the variation rule is defined to include (false) or exclude (true) variation concepts matching the rule. This is equivalent to a logical NOT operation on the variation rule expression."
+            },
+            "variation": {
+               "description": "The `VRS Variation <https://vrs.ga4gh.org/en/1.2.0/terms_and_model.html#variation>`_ object to which equivalency must be determined.",
+               "$ref": "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/Variation"
+            },
+            "molecular_context": {
+               "type": "string",
+               "enum": [
+                  "genomic",
+                  "transcript",
+                  "protein"
+               ],
+               "description": "The molecular context of the *variation* value."
+            }
+         },
+         "required": [
+            "complement",
+            "molecular_context",
+            "type",
+            "variation"
+         ]
+      },
+      "GeneConsequenceRule": {
+         "description": "The GeneConsequenceRule class constructs objects which describe any variation within a *gene* resulting in the indicated *gene_consequence*.",
+         "properties": {
+            "_id": {
+               "type": "string",
+               "description": "A GA4GH computed identifier."
+            },
+            "type": {
+               "type": "string",
+               "enum": [
+                  "GeneConsequenceRule"
+               ],
+               "description": "MUST be \"GeneFunctionalConsequenceRule\"."
+            },
+            "complement": {
+               "type": "bool",
+               "description": "This field indicates whether the variation rule is defined to include (false) or exclude (true) variation concepts matching the rule. This is equivalent to a logical NOT operation on the variation rule expression."
+            },
+            "gene": {
+               "description": "A `VRS Gene <https://vrs.ga4gh.org/en/1.2.0/terms_and_model.html#gene>`_ object.",
+               "$ref": "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/Gene"
+            },
+            "gene_consequence": {
+               "type": "string",
+               "enum": [
+                  "gain-of-function",
+                  "loss-of-function",
+                  "oncogenic",
+                  "pathogenic"
+               ],
+               "description": "MUST be one of \"gain-of-function\", \"loss-of-function\", \"oncogenic\", \"pathogenic\"."
+            }
+         },
+         "required": [
+            "complement",
+            "gene",
+            "gene_consequence",
+            "type"
+         ]
+      }
+   }
 }

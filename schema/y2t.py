@@ -69,7 +69,8 @@ def resolve_cardinality(class_property_name, class_property_attributes, class_de
     else:
         min_count = '0'
     if class_property_attributes.get('type') == 'array':
-        max_count = 'm'
+        max_count = class_property_attributes.get('maxItems', 'm')
+        min_count = class_property_attributes.get('minItems', 0)
     else:
         max_count = '1'
     return f'{min_count}..{max_count}'

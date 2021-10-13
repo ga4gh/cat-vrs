@@ -35,6 +35,48 @@ specification, Variation Rule classes are designed to represent value objects th
 usable by genomic knowledge search engines. Also see the :ref:`VariationRuleDescriptor` class for
 describing Variation Rules under a consistent paradigm with the :ref:`VariationDescriptor` class.
 
+.. _VariationRule:
+
+Variation Rule
+@@@@@@@@@@@@@@
+
+.. include:: ../defs/vrule/VariationRule.rst
+
+.. _SimpleVariationRule:
+
+Simple Variation Rule
+#####################
+
+.. include:: ../defs/vrule/SimpleVariationRule.rst
+
+.. _EquivalentVariationRule:
+
+Equivalent Variation Rule
+$$$$$$$$$$$$$$$$$$$$$$$$$
+
+.. include:: ../defs/vrule/EquivalentVariationRule.rst
+
+.. _LocatedMolecularConsequenceRule:
+
+Located Molecular Consequence Rule
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+.. include:: ../defs/vrule/LocatedMolecularConsequenceRule.rst
+
+.. _GeneFunctionalConsequenceRule:
+
+Gene Functional Consequence Rule
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+.. include:: ../defs/vrule/GeneConsequenceRule.rst
+
+.. _ComplexVariationRule:
+
+Complex Variation Rule
+######################
+
+.. include:: ../defs/vrule/ComplexVariationRule.rst
+
 .. _CA123643: https://reg.genome.network/redmine/projects/registry/genboree_registry/by_caid?caid=CA123643
 .. _CA16602531: http://reg.clinicalgenome.org/redmine/projects/registry/genboree_registry/by_caid?caid=CA16602531
 .. _BRAF V600 mutations: https://civicdb.org/events/genes/5/summary/variants/17/summary

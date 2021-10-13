@@ -4,7 +4,7 @@
    "type": "object",
    "$defs": {
       "ValueObjectDescriptor": {
-         "description": "The abstract *Value Object Descriptor* parent class. All attributes of this parent class are inherited by child classes.",
+         "description": "The abstract *Value Object Descriptor* parent class. All attributes of this parent class are inherited by descendent classes.",
          "oneOf": [
             {
                "$ref": "#/$defs/VariationDescriptor"
