@@ -11,6 +11,7 @@ inflector = "*"
 [dev-packages]
 pyyaml = "*"
 inflector = "*"
+build = "*"
 
 [requires]
 python_version = "3.9"
