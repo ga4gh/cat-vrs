@@ -6,7 +6,8 @@ import os
 import sys
 import pathlib
 from inflector import Inflector
-from source_proc import SCHEMA_DEF_KEYWORD_BY_VERSION, YamlSchemaProcessor
+from ga4gh.vrsatile.tools.source_proc import SCHEMA_DEF_KEYWORD_BY_VERSION, \
+    YamlSchemaProcessor
 
 source_file = pathlib.Path(sys.argv[1])
 

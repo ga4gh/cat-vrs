@@ -2,7 +2,7 @@
 
 import yaml
 import sys
-from source_proc import YamlSchemaProcessor
+from ga4gh.vrsatile.tools.source_proc import YamlSchemaProcessor
 
 raw_schema = yaml.load(sys.stdin, Loader=yaml.SafeLoader)
 p = YamlSchemaProcessor(raw_schema)

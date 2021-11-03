@@ -7,6 +7,7 @@ name = "pypi"
 sphinx = "==3.5.4"
 sphinx-rtd-theme = "*"
 inflector = "*"
+"ga4gh.vrsatile" = {editable = true, path = "."}
 
 [dev-packages]
 pyyaml = "*"
