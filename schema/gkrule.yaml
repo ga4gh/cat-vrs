@@ -105,7 +105,7 @@ $defs:
     - variation
   ConsequenceFeatureRule:
     description: The ConsequenceFeatureRule class constructs objects which describe
-      any variation within a *gene* resulting in the indicated *gene_consequence*.
+      any variation within a *feature* resulting in the indicated *feature_consequence*.
     properties:
       _id: *id001
       type:

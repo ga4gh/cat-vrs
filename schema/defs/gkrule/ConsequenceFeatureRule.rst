@@ -1,6 +1,6 @@
 **Computational Definition**
 
-The ConsequenceFeatureRule class constructs objects which describe any variation within a *gene* resulting in the indicated *gene_consequence*.
+The ConsequenceFeatureRule class constructs objects which describe any variation within a *feature* resulting in the indicated *feature_consequence*.
 
 **Information Model**
 
