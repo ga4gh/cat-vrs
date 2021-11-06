@@ -3,7 +3,7 @@
 .SUFFIXES:
 .DELETE_ON_ERROR:
 
-JSYAMLS:=vod.yaml vrule.yaml
+JSYAMLS:=vod.yaml gkrule.yaml
 JSONS:=${JSYAMLS:.yaml=.json}
 
 all: ${JSONS} defs
@@ -17,4 +17,4 @@ all: ${JSONS} defs
 defs:
 	rm -rf defs
 	y2t.py vod-source.yaml
-	y2t.py vrule-source.yaml
+	y2t.py gkrule-source.yaml

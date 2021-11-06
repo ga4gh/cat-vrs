@@ -1,0 +1,144 @@
+$schema: "http://json-schema.org/draft/2020-12/schema"
+title: "GA4GH-Genomic-Knowledge-Rule-Definitions"
+type: object
+namespaces:
+  vrs: "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/"
+
+$defs:
+  # VRSATILE Genomic Knowledge Rules are presented top-down. Everything rolls up to
+  # GenomicKnowledgeRule, which is a polymorphic abstraction of many kinds of genomic
+  # knowledge rules.
+
+  # =============================================================================
+  # Top-level Genomic Knowledge Rule concepts
+  # =============================================================================
+
+  GenomicKnowledgeRule:
+    description: >-
+      The abstract *Genomic Knowledge Rule* parent class. All attributes of this parent
+      class are inherited by Genomic Knowledge Rule descendent classes. Genomic Knowledge
+      Rules are a mechanism for specifying constraints on how observed variation matches
+      to genomic knowledge.
+    oneOf:
+      - $ref: "#/$defs/SimpleRule"
+      - $ref: "#/$defs/ComplexRule"
+    heritable_properties:
+      _id:
+        type: string
+        description: >-
+          A GA4GH computed identifier.
+      type:
+        type: string
+        description: >-
+          MUST be Genomic Knowledge Rule class name.
+      complement:
+        type: bool
+        description: >-
+          This field indicates whether the genomic knowledge rule is defined to include (false)
+          or exclude (true) variation concepts matching the rule. This is equivalent to
+          a logical NOT operation on the genomic knowledge rule expression.
+    heritable_required: ['type', 'complement']
+
+  SimpleRule:
+    description: >-
+      The SimpleRule abstract class represents the set of :ref:`GenomicKnowledgeRule` classes
+      that are used directly by genomic knowledge statements, or as components for defining
+      a :ref:`ComplexRule`.
+    oneOf:
+      - $ref: "#/$defs/MolecularConsequenceLocationRule"
+      - $ref: "#/$defs/CanonicalVariationRule"
+      - $ref: "#/$defs/ConsequenceFeatureRule"
+
+  ComplexRule:
+    description: >-
+      The ComplexRule class constructs objects for defining complex logical
+      relationships between two or more other :ref:`GenomicKnowledgeRule` objects.
+    properties:
+      type:
+        type: string
+        description: >-
+          MUST be "ComplexRule".
+        enum: ["ComplexRule"]
+      operands:
+        type: array
+        items:
+          $ref: "#/$defs/GenomicKnowledgeRule"
+        minItems: 2
+        description: >-
+          The :ref:`GenomicKnowledgeRule` objects that are being evaluated collectively.
+      operator:
+        type: string
+        enum: ["AND", "OR"]
+        description: >-
+          The logical operation applied to evaluating the object *operands*. MUST
+          be "AND" or "OR".
+    required: ["operands", "operator"]
+
+  # =============================================================================
+  # Simple Genomic Knowledge Rules
+  # =============================================================================
+
+  MolecularConsequenceLocationRule:
+    description: >-
+      The MolecularConsequenceLocationRule class constructs objects which describe
+      any variation that results in the *molecular_consequence* at the specified
+      *location*.
+    properties:
+      type:
+        type: string
+        enum: ["MolecularConsequenceLocationRule"]
+        description: >-
+          MUST be "MolecularConsequenceLocationRule"
+      location:
+        $ref_curie: "vrs:Location"
+        description: >-
+          The location where the *molecular_consequence* is observed.
+      molecular_consequence:
+        $ref_curie: "vrs:CURIE"
+        description: >-
+          A sequence ontology term specifying the type of molecular consequence.
+          The value SHOULD be a descendent term of
+          `SO:0001537 (structural_variant) <http://www.sequenceontology.org/browser/current_release/term/SO:0001537>`_.
+    required: ["type", "location", "molecular_consequence"]
+
+  CanonicalVariationRule:
+    description: >-
+      The CanonicalVariationRule class constructs objects which describe
+      any variation that are congruent with the indicated *variation*
+      value. The rules by which congruency is determined are managed at
+      the implementation level, but typically involve operations such as variation
+      projection (genomic <-> transcript), translation (transcript <-> protein)
+      and liftover (e.g. GRCh37 genomic <-> GRCh38 genomic).
+    properties:
+      type:
+        type: string
+        enum: ["CanonicalVariationRule"]
+        description: >-
+          MUST be "CanonicalVariationRule".
+      variation:
+        $ref_curie: "vrs:Variation"
+        description: >-
+          The `VRS Variation <https://vrs.ga4gh.org/en/1.2.0/terms_and_model.html#variation>`_
+          object to which equivalency must be determined.
+    required: ["type", "variation"]
+
+  ConsequenceFeatureRule:
+    description: >-
+      The ConsequenceFeatureRule class constructs objects which describe
+      any variation within a *gene* resulting in the indicated *gene_consequence*.
+    properties:
+      type:
+        type: string
+        enum: ["ConsequenceFeatureRule"]
+        description: >-
+          MUST be "ConsequenceFeatureRule".
+      feature:
+        $ref_curie: "vrs:Feature"
+        description: >-
+          A `VRS Feature <https://vrs.ga4gh.org/en/1.2.0/terms_and_model.html#feature>`_ object.
+      feature_consequence:
+        type: string
+        enum: ["gain-of-function", "loss-of-function", "oncogenic", "pathogenic"]
+        description: >-
+          MUST be one of "gain-of-function", "loss-of-function", "oncogenic", "pathogenic".
+    required: ["type", "feature", "feature_consequence"]
