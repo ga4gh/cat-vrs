@@ -28,4 +28,4 @@ Reference SNP IDs.
    :includehidden:
 
    value_object_descriptor/index
-   vrule/index
+   gkrule/index

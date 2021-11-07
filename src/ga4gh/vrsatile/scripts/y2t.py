@@ -77,10 +77,19 @@ def resolve_cardinality(class_property_name, class_property_attributes, class_de
     return f'{min_count}..{max_count}'
 
 
+def get_ancestor_with_attributes(class_name):
+    if proc_schema.class_is_passthrough(class_name):
+        ancestor = list(proc_schema.dependency_map[class_name])[0]
+        return get_ancestor_with_attributes(ancestor)
+    return class_name
+
+
 for class_name, class_definition in proc_schema.defs.items():
     with open(defs_path / (class_name + '.rst'), "w") as f:
         print("**Computational Definition**\n", file=f)
         print(class_definition['description'], file=f)
+        if proc_schema.class_is_passthrough(class_name):
+            continue
         if 'heritable_properties' in class_definition:
             p = 'heritable_properties'
         elif 'properties' in class_definition:
@@ -91,7 +100,8 @@ for class_name, class_definition in proc_schema.defs.items():
             raise ValueError(class_name, class_definition)
         deps = list(proc_schema.dependency_map[class_name])
         if len(deps) == 1:
-            inheritance = f"\nSome {class_name} attributes are inherited from :ref:`{deps[0]}`.\n"
+            ancestor = get_ancestor_with_attributes(deps[0])
+            inheritance = f"\nSome {class_name} attributes are inherited from :ref:`{ancestor}`.\n"
         elif len(deps) == 0:
             inheritance = ""
         else:

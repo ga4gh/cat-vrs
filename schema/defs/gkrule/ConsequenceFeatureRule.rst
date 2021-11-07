@@ -4,7 +4,7 @@ The ConsequenceFeatureRule class constructs objects which describe any variation
 
 **Information Model**
 
-Some ConsequenceFeatureRule attributes are inherited from :ref:`SimpleRule`.
+Some ConsequenceFeatureRule attributes are inherited from :ref:`GenomicKnowledgeRule`.
 
 .. list-table::
    :class: clean-wrap

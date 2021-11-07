@@ -1,5 +1,5 @@
-Variation Rule Specification
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Genomic Knowledge Rule Specification
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 To facilitate search of observed biomolecular variation, contemporary biomolecular
 knowledgebases routinely "flatten" variation concepts to a specific context that
@@ -19,63 +19,64 @@ for example, are all associated contexts with CA123643 but none result in an alt
 protein product. Similarly, `CA16602531`_ can *also* serve as a linked representative
 genomic change (through NC_000007.14:g.140753335_140753336delinsTT), but again this
 concept contains several contexts describing the role of the variant that are not
-applicable to the V600E mutation.
+applicable to the V600E protein variation.
 
 In addition, more complex cases of variation also exist, where the closest approximation of
-a variation amounts to a simple genomic range. Examples of these types of variations include:
+a variation amounts to a simple genomic range. Examples of these types of variation include:
 `BRAF V600 mutations`_, `TP53 truncating mutations`_, `EGFR exon 19 deletions`_. The concepts
-associated with these variations (any protein mutation at a codon, any truncating mutation in
+associated with these variation (any protein mutation at a codon, any truncating mutation in
 a gene, and any in-frame deletion in an exon) are not clearly definable using a variation
 description framework such as VRS or HGVS.
 
-To address these shortfalls, we introduce Variation Rules (VRules). VRules capture the semantics
-that are missing or implied in genomic knowledge resources, providing a framework for expressing
-how genomic knowledge may match to assayed variation. Much like the VRS objects used in this
-specification, Variation Rule classes are designed to represent value objects that are readily
-usable by genomic knowledge search engines. Also see the :ref:`VariationRuleDescriptor` class for
-describing Variation Rules under a consistent paradigm with the :ref:`VariationDescriptor` class.
+To address these shortfalls, we introduce Genomic Knowledge Rules (GKRules). GKRules capture the
+semantics that are missing or implied in genomic knowledge resources, providing a framework for
+expressing how genomic knowledge may match to observed variation. Much like the VRS objects used
+in this specification, Genomic Knowledge Rule classes are designed to represent value objects that
+are readily usable by genomic knowledge search engines. Also see the :ref:`GenomicKnowledgeRuleDescriptor`
+class for describing GKRules under a consistent paradigm with the :ref:`VariationDescriptor`
+class.
 
-.. _VariationRule:
+.. _GenomicKnowledgeRule:
 
-Variation Rule
-@@@@@@@@@@@@@@
+Genomic Knowledge Rule
+@@@@@@@@@@@@@@@@@@@@@@
 
-.. include:: ../defs/vrule/VariationRule.rst
+.. include:: ../defs/gkrule/GenomicKnowledgeRule.rst
 
-.. _SimpleVariationRule:
+.. _SimpleRule:
 
-Simple Variation Rule
-#####################
+Simple Rule
+###########
 
-.. include:: ../defs/vrule/SimpleVariationRule.rst
+.. include:: ../defs/gkrule/SimpleRule.rst
 
-.. _EquivalentVariationRule:
+.. _CanonicalVariationRule:
 
-Equivalent Variation Rule
-$$$$$$$$$$$$$$$$$$$$$$$$$
+Canonical Variation Rule
+$$$$$$$$$$$$$$$$$$$$$$$$
 
-.. include:: ../defs/vrule/EquivalentVariationRule.rst
+.. include:: ../defs/gkrule/CanonicalVariationRule.rst
 
-.. _LocatedMolecularConsequenceRule:
+.. _MolecularConsequenceLocationRule:
 
-Located Molecular Consequence Rule
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Molecular Consequence Location Rule
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-.. include:: ../defs/vrule/LocatedMolecularConsequenceRule.rst
+.. include:: ../defs/gkrule/MolecularConsequenceLocationRule.rst
 
-.. _GeneFunctionalConsequenceRule:
+.. _ConsequenceFeatureRule:
 
-Gene Functional Consequence Rule
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+Consequence Feature Rule
+$$$$$$$$$$$$$$$$$$$$$$$$
 
-.. include:: ../defs/vrule/GeneConsequenceRule.rst
+.. include:: ../defs/gkrule/ConsequenceFeatureRule.rst
 
-.. _ComplexVariationRule:
+.. _ComplexRule:
 
-Complex Variation Rule
-######################
+Complex Rule
+############
 
-.. include:: ../defs/vrule/ComplexVariationRule.rst
+.. include:: ../defs/gkrule/ComplexRule.rst
 
 .. _CA123643: https://reg.genome.network/redmine/projects/registry/genboree_registry/by_caid?caid=CA123643
 .. _CA16602531: http://reg.clinicalgenome.org/redmine/projects/registry/genboree_registry/by_caid?caid=CA16602531

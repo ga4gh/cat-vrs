@@ -24,6 +24,7 @@ class YamlSchemaProcessor:
         self.schema_def_keyword = SCHEMA_DEF_KEYWORD_BY_VERSION[self.raw_schema['$schema']]
         self.dependency_map = defaultdict(set)
         self.defs = self.processed_schema.get(self.schema_def_keyword, None)
+        self.raw_defs = self.raw_schema.get(self.schema_def_keyword, None)
         self.processed_classes = set()
         self.process_schema()
         self.for_js = copy.deepcopy(self.processed_schema)
@@ -54,6 +55,16 @@ class YamlSchemaProcessor:
     def class_is_abstract(self, schema_class):
         one_of_items = self.raw_schema[self.schema_def_keyword][schema_class].get('oneOf', [])
         if len(one_of_items) > 0 and '$ref' in one_of_items[0]:
+            return True
+        return False
+
+    def class_is_passthrough(self, schema_class):
+        if not self.class_is_abstract(schema_class):
+            return False
+        raw_class_definition = self.raw_defs[schema_class]
+        if 'heritable_properties' not in raw_class_definition \
+                and 'properties' not in raw_class_definition \
+                and len(list(self.dependency_map[schema_class])) == 1:
             return True
         return False
 

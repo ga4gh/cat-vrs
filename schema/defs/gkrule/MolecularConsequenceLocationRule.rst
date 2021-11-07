@@ -4,7 +4,7 @@ The MolecularConsequenceLocationRule class constructs objects which describe any
 
 **Information Model**
 
-Some MolecularConsequenceLocationRule attributes are inherited from :ref:`SimpleRule`.
+Some MolecularConsequenceLocationRule attributes are inherited from :ref:`GenomicKnowledgeRule`.
 
 .. list-table::
    :class: clean-wrap
