@@ -31,7 +31,7 @@ Some ComplexVariation attributes are inherited from :ref:`CategoricalVariation`.
    *  - operands
       - :ref:`CategoricalVariation`
       - 2..m
-      - The :ref:`GenomicKnowledgeRule` objects that are being evaluated collectively.
+      - The :ref:`CategoricalVariation` objects that are being evaluated collectively.
    *  - operator
       - string
       - 1..1

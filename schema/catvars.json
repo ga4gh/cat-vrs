@@ -36,7 +36,7 @@
                   "$ref": "#/$defs/CategoricalVariation"
                },
                "minItems": 2,
-               "description": "The GenomicKnowledgeRule objects that are being evaluated collectively."
+               "description": "The CategoricalVariation objects that are being evaluated collectively."
             },
             "operator": {
                "type": "string",

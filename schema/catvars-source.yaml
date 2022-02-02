@@ -53,7 +53,7 @@ $defs:
           $ref: "#/$defs/CategoricalVariation"
         minItems: 2
         description: >-
-          The :ref:`GenomicKnowledgeRule` objects that are being evaluated collectively.
+          The :ref:`CategoricalVariation` objects that are being evaluated collectively.
       operator:
         type: string
         enum: ["AND", "OR"]
