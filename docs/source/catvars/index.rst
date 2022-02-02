@@ -1,16 +1,16 @@
-Genomic Knowledge Rule Specification
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+Categorical Variation Specification
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-To facilitate search of observed biomolecular variation, contemporary biomolecular
+To facilitate search of biomolecular variation, contemporary biomolecular
 knowledgebases routinely "flatten" variation concepts to a specific context that
-facilitates computable matching to observed variation, and typically provide related
+facilitates computable matching to assayed variation, and typically provide related
 contexts to help characterize the intended biological concept. For example, the
 variant "BRAF V600E" at the `CIViC`_ resource describes a protein
 change, but is flattened to a *representative genomic change* (GRCh37 chr7:g.140453136A>T)
 and contextualized with corresponding transcript (NM_004333.4:c.1799T>A) and protein
 (NP_004324.2:p.Val600Glu) descriptions. The representative change is linked to its
 ClinGen Allele Registry identifier (CAID; `CA123643`_) to facilitate CAID matching
-from other resources.
+from ClinGen resources.
 
 However, CA123643 is likewise a collection of variation contexts, including many
 contexts that would typically not be considered equivalent to BRAF V600E:
@@ -28,55 +28,34 @@ associated with these variation (any protein mutation at a codon, any truncating
 a gene, and any in-frame deletion in an exon) are not clearly definable using a variation
 description framework such as VRS or HGVS.
 
-To address these shortfalls, we introduce Genomic Knowledge Rules (GKRules). GKRules capture the
-semantics that are missing or implied in genomic knowledge resources, providing a framework for
-expressing how genomic knowledge may match to observed variation. Much like the VRS objects used
-in this specification, Genomic Knowledge Rule classes are designed to represent value objects that
-are readily usable by genomic knowledge search engines. Also see the :ref:`GenomicKnowledgeRuleDescriptor`
-class for describing GKRules under a consistent paradigm with the :ref:`VariationDescriptor`
+To address these shortfalls, we introduce the Categorical Variation Specification. Categorical Variation
+captures the semantics that are missing or implied in genomic knowledge resources, providing a framework for
+expressing how genomic knowledge may match to assayed variation. Much like the VRS objects used
+in this specification, Categorical Variation classes are designed to instantiate value objects that
+are readily usable by genomic knowledge search engines. Also see the :ref:`CategoricalVariationDescriptor`
+class for describing Categorical Variation under a consistent paradigm with the :ref:`ValueObjectDescriptor`
 class.
 
-.. _GenomicKnowledgeRule:
+.. _CategoricalVariation:
 
-Genomic Knowledge Rule
-@@@@@@@@@@@@@@@@@@@@@@
+Categorical Variation
+@@@@@@@@@@@@@@@@@@@@@
 
-.. include:: ../defs/gkrule/GenomicKnowledgeRule.rst
+.. include:: ../defs/catvars/CategoricalVariation.rst
 
-.. _SimpleRule:
+.. _Canonical:
 
-Simple Rule
-###########
+Canonical Variation
+###################
 
-.. include:: ../defs/gkrule/SimpleRule.rst
+.. include:: ../defs/catvars/CanonicalVariation.rst
 
-.. _CanonicalVariationRule:
+.. _Complex:
 
-Canonical Variation Rule
-$$$$$$$$$$$$$$$$$$$$$$$$
+Complex Variation
+#################
 
-.. include:: ../defs/gkrule/CanonicalVariationRule.rst
-
-.. _MolecularConsequenceLocationRule:
-
-Molecular Consequence Location Rule
-$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-
-.. include:: ../defs/gkrule/MolecularConsequenceLocationRule.rst
-
-.. _ConsequenceFeatureRule:
-
-Consequence Feature Rule
-$$$$$$$$$$$$$$$$$$$$$$$$
-
-.. include:: ../defs/gkrule/ConsequenceFeatureRule.rst
-
-.. _ComplexRule:
-
-Complex Rule
-############
-
-.. include:: ../defs/gkrule/ComplexRule.rst
+.. include:: ../defs/catvars/ComplexVariation.rst
 
 .. _CA123643: https://reg.genome.network/redmine/projects/registry/genboree_registry/by_caid?caid=CA123643
 .. _CA16602531: http://reg.clinicalgenome.org/redmine/projects/registry/genboree_registry/by_caid?caid=CA16602531
