@@ -1,10 +1,10 @@
 **Computational Definition**
 
-The ComplexRule class constructs objects for defining complex logical relationships between two or more other :ref:`GenomicKnowledgeRule` objects.
+A categorical variation domain jointly characterized by two or more other categorical  variation domains.
 
 **Information Model**
 
-Some ComplexRule attributes are inherited from :ref:`GenomicKnowledgeRule`.
+Some ComplexVariation attributes are inherited from :ref:`CategoricalVariation`.
 
 .. list-table::
    :class: clean-wrap
@@ -23,13 +23,13 @@ Some ComplexRule attributes are inherited from :ref:`GenomicKnowledgeRule`.
    *  - type
       - string
       - 1..1
-      - MUST be "ComplexRule".
+      - MUST be "ComplexVariation".
    *  - complement
       - bool
       - 1..1
-      - This field indicates whether the genomic knowledge rule is defined to include (false) or exclude (true) variation concepts matching the rule. This is equivalent to a logical NOT operation on the genomic knowledge rule expression.
+      - This field indicates that a categorical variation is defined to include (false) or exclude (true) variation concepts matching the categorical variation. This is  equivalent to a logical NOT operation on the categorical variation properties.
    *  - operands
-      - :ref:`GenomicKnowledgeRule`
+      - :ref:`CategoricalVariation`
       - 2..m
       - The :ref:`GenomicKnowledgeRule` objects that are being evaluated collectively.
    *  - operator
