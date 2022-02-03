@@ -56,7 +56,7 @@
                "items": {
                   "$ref": "#/$defs/Extension"
                },
-               "description": "List of resource-specific :ref:`Extensions <Extension>` needed to describe the value object."
+               "description": "List of resource-specific Extensions needed to describe the value object."
             },
             "variation_id": {
                "description": "The SHOULD be provided if *variation* is omitted.",
@@ -76,7 +76,7 @@
                "description": "The molecular context of this variant. Must be one of \"genomic\", \"transcript\", or \"protein\"."
             },
             "structural_type": {
-               "description": "The structural variant type associated with this variant. We RECOMMEND a descendent term of `SO:0001537 <http://www.sequenceontology.org/browser/current_release/term/SO:0001537>`_.",
+               "description": "The structural variant type associated with this variant. We RECOMMEND a descendent term of [SO:0001537](http://www.sequenceontology.org/browser/current_release/term/SO:0001537).",
                "$ref": "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/CURIE"
             },
             "expressions": {
@@ -131,7 +131,7 @@
             },
             "id": {
                "type": "string",
-               "description": "A semicolon-separated list of unique identifiers where available. For example, dbSNP rsIDs. We RECOMMEND storing this information as a list in the :ref:`VariationDescriptor` `xrefs` field."
+               "description": "A semicolon-separated list of unique identifiers where available. For example, dbSNP rsIDs. We RECOMMEND storing this information as a list in the VariationDescriptor `xrefs` field."
             },
             "ref": {
                "type": "string",

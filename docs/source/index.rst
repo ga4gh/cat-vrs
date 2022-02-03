@@ -18,14 +18,14 @@ variation concepts. Common examples of this are reference sequence ids,
 of current Driver Project interoperability efforts based on the VRS standard.
 
 VRSATILE also enables precise representation of "aggregate" variation concepts
-that include multiple contextual forms. Examples of aggregate variation
-include the concepts represented by `ClinVar`_ variation IDs, `CIViC`_
-variation IDs, `ClinGen Allele Registry`_ Canonical Allele IDs, and `dbSNP`_
-Reference SNP IDs.
+(categorical variation) that bundle multiple contextual forms defined by shared
+properties. Examples of categorical variation include the concepts represented by
+`ClinVar`_ variation IDs, `CIViC`_ variation IDs, `ClinGen Allele Registry`_
+Canonical Allele IDs, and `dbSNP`_ Reference SNP IDs.
 
 .. toctree::
    :maxdepth: 2
    :includehidden:
 
    value_object_descriptor/index
-   vrule/index
+   catvars/index
