@@ -1,8 +1,10 @@
 **Computational Definition**
 
-The abstract *Value Object Descriptor* parent class. All attributes of this parent class are inherited by descendent classes.
+This descriptor class is used for describing Categorical Variation value objects.
 
 **Information Model**
+
+Some CategoricalVariationDescriptor attributes are inherited from :ref:`ValueObjectDescriptor`.
 
 .. list-table::
    :class: clean-wrap
@@ -21,7 +23,7 @@ The abstract *Value Object Descriptor* parent class. All attributes of this pare
    *  - type
       - string
       - 1..1
-      - MUST be VOD class name.
+      - MUST be "VariationDescriptor".
    *  - label
       - string
       - 0..1
@@ -42,3 +44,11 @@ The abstract *Value Object Descriptor* parent class. All attributes of this pare
       - :ref:`Extension`
       - 0..m
       - List of resource-specific :ref:`Extensions <Extension>` needed to describe the value object.
+   *  - categorical_variation_id
+      - `CURIE <https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE>`_
+      - 0..1
+      - The SHOULD be provided if *categorical_variation* is omitted.
+   *  - categorical_variation
+      - `CategoricalVariation <catvars.json/$defs/CategoricalVariation>`_
+      - 0..1
+      - The SHOULD be provided if *variation_id* is omitted.

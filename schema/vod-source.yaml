@@ -1,8 +1,9 @@
-$schema: "http://json-schema.org/draft/2020-12/schema"
-title: "GA4GH-Value-Object-Descriptor-Definitions"
+$schema: http://json-schema.org/draft/2020-12/schema
+$id: https://raw.githubusercontent.com/ga4gh/vrsatile/main/schema/vod.json
+title: GA4GH-Value-Object-Descriptor-Definitions
 type: object
 namespaces:
-  vrs: "https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/"
+  vrs: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/
 
 $defs:
   ValueObjectDescriptor:
@@ -11,6 +12,7 @@ $defs:
       of this parent class are inherited by descendent classes.
     oneOf:
       - $ref: "#/$defs/VariationDescriptor"
+      - $ref: "#/$defs/CategoricalVariationDescriptor"
     heritable_properties:
       id:
         $ref_curie: "vrs:CURIE"
@@ -53,8 +55,6 @@ $defs:
   VariationDescriptor:
     description: >-
       This descriptor class is used for describing VRS Variation value objects.
-      This is a subclass of :ref:`ValueObjectDescriptor` and inherits all Value
-      Object Descriptor attributes.
     additionalProperties: false
     type: object
     properties:
@@ -110,6 +110,25 @@ $defs:
           We RECOMMEND that the *allelic_state* of a variation be described by terms from the
           Genotype Ontology (GENO). These SHOULD descend from concept
           `GENO:0000875 <http://purl.obolibrary.org/obo/GENO_0000875>`.
+
+  CategoricalVariationDescriptor:
+    description: >-
+      This descriptor class is used for describing Categorical Variation value objects.
+    additionalProperties: false
+    type: object
+    properties:
+      type:
+        type: string
+        const: VariationDescriptor
+        description: MUST be "VariationDescriptor".
+      categorical_variation_id:
+        $ref_curie: "vrs:CURIE"
+        description: >-
+          The SHOULD be provided if *categorical_variation* is omitted.
+      categorical_variation:
+        $ref: catvars.json/$defs/CategoricalVariation
+        description: >-
+          The SHOULD be provided if *variation_id* is omitted.
 
   VcfRecord:
     description: >-
