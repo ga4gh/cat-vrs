@@ -21,7 +21,7 @@ $defs:
         description: MUST be "ComplexVariation".
         const: ComplexVariation
       complement: &id002
-        type: bool
+        type: boolean
         description: This field indicates that a categorical variation is defined
           to include (false) or exclude (true) variation concepts matching the categorical
           variation. This is  equivalent to a logical NOT operation on the categorical

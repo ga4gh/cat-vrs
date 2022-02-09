@@ -25,7 +25,7 @@ Some ComplexVariation attributes are inherited from :ref:`CategoricalVariation`.
       - 1..1
       - MUST be "ComplexVariation".
    *  - complement
-      - bool
+      - boolean
       - 1..1
       - This field indicates that a categorical variation is defined to include (false) or exclude (true) variation concepts matching the categorical variation. This is  equivalent to a logical NOT operation on the categorical variation properties.
    *  - operands

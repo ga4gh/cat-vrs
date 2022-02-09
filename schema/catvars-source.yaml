@@ -32,7 +32,7 @@ $defs:
         description: >-
           MUST be Categorical Variation class name.
       complement:
-        type: bool
+        type: boolean
         description: >-
           This field indicates that a categorical variation is defined to include (false)
           or exclude (true) variation concepts matching the categorical variation. This is 

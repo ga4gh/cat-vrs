@@ -23,6 +23,6 @@ A representation of a categorically-defined  `functional domain <https://en.wiki
       - 1..1
       - MUST be Categorical Variation class name.
    *  - complement
-      - bool
+      - boolean
       - 1..1
       - This field indicates that a categorical variation is defined to include (false) or exclude (true) variation concepts matching the categorical variation. This is  equivalent to a logical NOT operation on the categorical variation properties.
