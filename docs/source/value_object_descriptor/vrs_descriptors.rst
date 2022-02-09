@@ -117,3 +117,10 @@ parent class, the *Gene Descriptor* has the following attributes:
       - This MUST be provided if `gene_id` is omitted
 
 .. _Gene: https://vrs.ga4gh.org/en/latest/terms_and_model.html#gene
+
+.. _CategoricalVariationDescriptor:
+
+Categorical Variation Descriptor
+################################
+
+.. include:: ../defs/vod/CategoricalVariationDescriptor.rst

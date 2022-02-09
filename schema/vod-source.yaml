@@ -1,9 +1,9 @@
-$schema: "http://json-schema.org/draft/2020-12/schema"
-title: "GA4GH-Value-Object-Descriptor-Definitions"
+$schema: http://json-schema.org/draft/2020-12/schema
+$id: https://raw.githubusercontent.com/ga4gh/vrsatile/main/schema/vod.json
+title: GA4GH-Value-Object-Descriptor-Definitions
 type: object
 namespaces:
-  vrs: "https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/"
-  catvars: "" #TODO: allow versioning of Categorical Variation spec schema
+  vrs: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/
 
 $defs:
   ValueObjectDescriptor:
@@ -122,7 +122,13 @@ $defs:
         const: VariationDescriptor
         description: MUST be "VariationDescriptor".
       categorical_variation_id:
-        $ref_curie: "catvars:"
+        $ref_curie: "vrs:CURIE"
+        description: >-
+          The SHOULD be provided if *categorical_variation* is omitted.
+      categorical_variation:
+        $ref: catvars.json/$defs/CategoricalVariation
+        description: >-
+          The SHOULD be provided if *variation_id* is omitted.
 
   VcfRecord:
     description: >-

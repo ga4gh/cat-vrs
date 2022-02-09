@@ -1,4 +1,5 @@
 $schema: http://json-schema.org/draft/2020-12/schema
+$id: https://raw.githubusercontent.com/ga4gh/vrsatile/main/schema/vod.json
 title: GA4GH-Value-Object-Descriptor-Definitions
 type: object
 $defs:
@@ -7,40 +8,40 @@ $defs:
       of this parent class are inherited by descendent classes.
     oneOf:
     - $ref: '#/$defs/VariationDescriptor'
+    - $ref: '#/$defs/CategoricalVariationDescriptor'
   VariationDescriptor:
     description: This descriptor class is used for describing VRS Variation value
-      objects. This is a subclass of ValueObjectDescriptor and inherits all Value
-      Object Descriptor attributes.
+      objects.
     additionalProperties: false
     type: object
     properties:
-      id:
+      id: &id001
         description: Descriptor ID; MUST be unique within document.
-        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/CURIE
+        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE
       type:
         type: string
         enum:
         - VariationDescriptor
         default: VariationDescriptor
         description: MUST be "VariationDescriptor".
-      label:
+      label: &id002
         type: string
         description: A primary label for the value object.
-      description:
+      description: &id003
         type: string
         description: A free-text description of the value object.
-      xrefs:
+      xrefs: &id004
         type: array
         uniqueItems: true
         items:
-          $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/CURIE
+          $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE
         description: List of CURIEs representing associated concepts.
-      alternate_labels:
+      alternate_labels: &id005
         type: array
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
-      extensions:
+      extensions: &id006
         type: array
         items:
           $ref: '#/$defs/Extension'
@@ -48,10 +49,10 @@ $defs:
           object.
       variation_id:
         description: The SHOULD be provided if *variation* is omitted.
-        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/CURIE
+        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE
       variation:
         description: The SHOULD be provided if *variation_id* is omitted.
-        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/Variation
+        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/Variation
       molecule_context:
         type: string
         enum:
@@ -63,7 +64,7 @@ $defs:
       structural_type:
         description: The structural variant type associated with this variant. We
           RECOMMEND a descendent term of [SO:0001537](http://www.sequenceontology.org/browser/current_release/term/SO:0001537).
-        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/CURIE
+        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE
       expressions:
         $ref: '#/$defs/Expression'
         description: Typically HGVS or ISCN nomenclature expressions. Other systems
@@ -76,17 +77,42 @@ $defs:
       gene_context:
         description: A specific gene context that applies to this variant.
         oneOf:
-        - $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/CURIE
+        - $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE
         - $ref: '#/$defs/GeneDescriptor'
       vrs_ref_allele_seq:
         description: A `VRS Sequence`_ corresponding to a "ref allele", describing
           the sequence expected at a `VRS SequenceLocation`_ reference.
-        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/Sequence
+        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/Sequence
       allelic_state:
         description: We RECOMMEND that the *allelic_state* of a variation be described
           by terms from the Genotype Ontology (GENO). These SHOULD descend from concept
           `GENO:0000875 <http://purl.obolibrary.org/obo/GENO_0000875>`.
-        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.0/schema/vrs.json#/definitions/CURIE
+        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE
+    required:
+    - id
+    - type
+  CategoricalVariationDescriptor:
+    description: This descriptor class is used for describing Categorical Variation
+      value objects.
+    additionalProperties: false
+    type: object
+    properties:
+      id: *id001
+      type:
+        type: string
+        const: VariationDescriptor
+        description: MUST be "VariationDescriptor".
+      label: *id002
+      description: *id003
+      xrefs: *id004
+      alternate_labels: *id005
+      extensions: *id006
+      categorical_variation_id:
+        description: The SHOULD be provided if *categorical_variation* is omitted.
+        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE
+      categorical_variation:
+        $ref: catvars.json/$defs/CategoricalVariation
+        description: The SHOULD be provided if *variation_id* is omitted.
     required:
     - id
     - type

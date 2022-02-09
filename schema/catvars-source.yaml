@@ -1,8 +1,9 @@
-$schema: "http://json-schema.org/draft/2020-12/schema"
-title: "GA4GH-Categorical-Variation-Definitions"
+$schema: http://json-schema.org/draft/2020-12/schema
+$id: https://raw.githubusercontent.com/ga4gh/vrsatile/main/schema/catvars.json
+title: GA4GH-Categorical-Variation-Definitions
 type: object
 namespaces:
-  vrs: "https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/"
+  vrs: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/
 
 $defs:
   # VRSATILE Categorical Variation are presented top-down. Everything rolls up to
@@ -16,7 +17,7 @@ $defs:
   CategoricalVariation:
     description: >-
       A representation of a categorically-defined 
-      `functional domain<https://en.wikipedia.org/wiki/Domain_of_a_function>`_ 
+      `functional domain <https://en.wikipedia.org/wiki/Domain_of_a_function>`_ 
       for variation, in which individual variation instances may be members.
     oneOf:
       - $ref: "#/$defs/CanonicalVariation"
