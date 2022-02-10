@@ -1,0 +1,35 @@
+{
+  "id": "clinvar:17014",
+  "version": "2022-02-10",
+  "type": "CategoricalVariationDescriptor",
+  "categorical_variation": {
+    "_id": "unk:?",
+    "complement": false,
+    "type": "CanonicalVariation",
+    "variation": {
+      "_id": "ga4gh:VA.KGopzor-bEw8Ot5sAQQ5o5SVx4o7TuLN",
+      "type": "Allele",
+      "location": {
+        "_id": "ga4gh:VSL.p4e9kMEY9PrKZ1BbNRuFr6n30DkwXWlX",
+        "type": "SequenceLocation",
+        "sequence_id": "ga4gh:SQ._0wi-qoDrvram155UmcSC-zA5ZK4fpLT",
+        "interval": {
+          "type": "SequenceInterval",
+          "start": {
+            "type": "Number",
+            "value": 20189346
+          },
+          "end": {
+            "type": "Number",
+            "value": 20189349
+          }
+        }
+      },
+      "state": {
+        "type": "LiteralSequenceExpression",
+        "sequence": "GG"
+      }
+    }
+  },
+
+}

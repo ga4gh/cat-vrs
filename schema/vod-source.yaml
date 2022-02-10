@@ -111,6 +111,22 @@ $defs:
           Genotype Ontology (GENO). These SHOULD descend from concept
           `GENO:0000875 <http://purl.obolibrary.org/obo/GENO_0000875>`.
 
+  Expression:
+    maturity: draft
+    description: >-
+      Representation of a variation by a specified nomenclature or syntax for a Variation object. Common examples of expressions for the description of molecular variation include the HGVS and ISCN nomenclatures.
+    properties:
+      type:
+        type: string
+        const: Expression
+      syntax:
+        enum: ["hgvs.c", "hgvs.p", "hgvs.g", "hgvs.m", "hgvs.n", "hgvs.r", "iscn", "gnomad"]
+      value:
+        type: string
+      version:
+        type: string
+    required: ['type', 'syntax', 'value']
+
   CategoricalVariationDescriptor:
     description: >-
       This descriptor class is used for describing Categorical Variation value objects.
@@ -129,6 +145,23 @@ $defs:
         $ref: catvars.json/$defs/CategoricalVariation
         description: >-
           The SHOULD be provided if *variation_id* is omitted.
+      members:
+        description: >-
+          VariationMember instances that fall within the functional domain
+          of the Categorical Variation.
+        type: array
+        items:
+          $ref: VariationMember
+
+  VariationMember:
+    description: >-
+      A compact class for representing a variation context that is a member of a
+      Categorical Variation. It supports one or more Expressions of a Variation
+      and optionally an associated VRS ID.
+    expressions:
+      type: array
+      items:
+        $
 
   VcfRecord:
     description: >-
