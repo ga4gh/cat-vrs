@@ -44,6 +44,13 @@ Value Object Descriptor
 Other Data Classes
 @@@@@@@@@@@@@@@@@@
 
+.. _VcfRecord:
+
+VCF Record
+##########
+
+.. include:: ../defs/vod/VcfRecord.rst
+
 .. _Extension:
 
 Extension

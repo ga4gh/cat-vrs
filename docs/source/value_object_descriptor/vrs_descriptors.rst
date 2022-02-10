@@ -5,13 +5,6 @@ Variation Descriptor
 
 .. include:: ../defs/vod/VariationDescriptor.rst
 
-.. _VcfRecord:
-
-VCF Record
-$$$$$$$$$$
-
-.. include:: ../defs/vod/VcfRecord.rst
-
 .. _LocationDescriptor:
 
 Location Descriptor
