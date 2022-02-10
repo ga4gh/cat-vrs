@@ -67,11 +67,11 @@ $defs:
       variation_id:
         $ref_curie: "vrs:CURIE"
         description: >-
-          The SHOULD be provided if *variation* is omitted.
+          This SHOULD be provided if *variation* is omitted.
       variation:
         $ref_curie: "vrs:Variation"
         description: >-
-          The SHOULD be provided if *variation_id* is omitted.
+          This SHOULD be provided if *variation_id* is omitted.
       molecule_context:
         type: string
         enum: ["genomic", "transcript", "protein"]
@@ -137,14 +137,17 @@ $defs:
         type: string
         const: VariationDescriptor
         description: MUST be "VariationDescriptor".
+      version:
+        type: string
+        description: The version of the Categorical Variation Descriptor.
       categorical_variation_id:
         $ref_curie: "vrs:CURIE"
         description: >-
-          The SHOULD be provided if *categorical_variation* is omitted.
+          This SHOULD be provided if *categorical_variation* is omitted.
       categorical_variation:
         $ref: catvars.json/$defs/CategoricalVariation
         description: >-
-          The SHOULD be provided if *variation_id* is omitted.
+          This SHOULD be provided if *variation_id* is omitted.
       members:
         description: >-
           VariationMember instances that fall within the functional domain
@@ -158,10 +161,15 @@ $defs:
       A compact class for representing a variation context that is a member of a
       Categorical Variation. It supports one or more Expressions of a Variation
       and optionally an associated VRS ID.
-    expressions:
-      type: array
-      items:
-        $
+    properties:
+      expressions:
+        type: array
+        items:
+          $ref: Expression
+        minItems: 1
+      variation_id:
+        $ref_curie: "vrs:CURIE"
+    required: ['expressions']
 
   VcfRecord:
     description: >-
