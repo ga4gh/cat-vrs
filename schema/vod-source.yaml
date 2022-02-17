@@ -162,6 +162,9 @@ $defs:
       Categorical Variation. It supports one or more Expressions of a Variation
       and optionally an associated VRS ID.
     properties:
+      type:
+        const: VariationMember
+        description: MUST be "VariationMember"
       expressions:
         type: array
         items:
@@ -172,6 +175,7 @@ $defs:
     required: ['expressions']
 
   VcfRecord:
+    deprecated: true
     description: >-
       This data class is used when it is desirable to pass data as expected from a VCF record.
       The class is only used as an optional attribute within a :ref:`VariationDescriptor`.
