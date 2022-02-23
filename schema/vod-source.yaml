@@ -120,6 +120,7 @@ $defs:
         type: string
         const: Expression
       syntax:
+        type: string
         enum: ["hgvs.c", "hgvs.p", "hgvs.g", "hgvs.m", "hgvs.n", "hgvs.r", "iscn", "gnomad", "spdi"]
       value:
         type: string
@@ -163,6 +164,7 @@ $defs:
       and optionally an associated VRS ID.
     properties:
       type:
+        type: string
         const: VariationMember
         description: MUST be "VariationMember"
       expressions:
