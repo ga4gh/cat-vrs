@@ -111,6 +111,26 @@ $defs:
           Genotype Ontology (GENO). These SHOULD descend from concept
           `GENO:0000875 <http://purl.obolibrary.org/obo/GENO_0000875>`.
 
+  Extension:
+    description: >-
+      The Extension class provides VODs with a means to extend descriptions
+      with other attributes unique to a content provider. These extensions
+      are not expected to be natively understood under VRSATILE, but may be
+      used for pre-negotiated exchange of message attributes when needed.
+    properties:
+      type:
+        type: string
+        const: Extension
+        description: MUST be "Extension".
+      name:
+        type: string
+        description: A name for the Extension
+      value:
+        type: array
+        items:
+          type: ["number","string","boolean","object","array", "null"]
+        description: Any primitive or structured object
+
   Expression:
     maturity: draft
     description: >-
