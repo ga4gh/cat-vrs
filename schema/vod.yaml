@@ -48,10 +48,10 @@ $defs:
         description: List of resource-specific Extensions needed to describe the value
           object.
       variation_id:
-        description: The SHOULD be provided if *variation* is omitted.
+        description: This SHOULD be provided if *variation* is omitted.
         $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE
       variation:
-        description: The SHOULD be provided if *variation_id* is omitted.
+        description: This SHOULD be provided if *variation_id* is omitted.
         $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/Variation
       molecule_context:
         type: string
@@ -91,6 +91,60 @@ $defs:
     required:
     - id
     - type
+  Extension:
+    description: The Extension class provides VODs with a means to extend descriptions
+      with other attributes unique to a content provider. These extensions are not
+      expected to be natively understood under VRSATILE, but may be used for pre-negotiated
+      exchange of message attributes when needed.
+    properties:
+      type:
+        type: string
+        const: Extension
+        description: MUST be "Extension".
+      name:
+        type: string
+        description: A name for the Extension
+      value:
+        type: array
+        items:
+          type:
+          - number
+          - string
+          - boolean
+          - object
+          - array
+          - 'null'
+        description: Any primitive or structured object
+    required: []
+  Expression:
+    maturity: draft
+    description: Representation of a variation by a specified nomenclature or syntax
+      for a Variation object. Common examples of expressions for the description of
+      molecular variation include the HGVS and ISCN nomenclatures.
+    properties:
+      type:
+        type: string
+        const: Expression
+      syntax:
+        type: string
+        enum:
+        - hgvs.c
+        - hgvs.p
+        - hgvs.g
+        - hgvs.m
+        - hgvs.n
+        - hgvs.r
+        - iscn
+        - gnomad
+        - spdi
+      value:
+        type: string
+      syntax_version:
+        type: string
+    required:
+    - syntax
+    - type
+    - value
   CategoricalVariationDescriptor:
     description: This descriptor class is used for describing Categorical Variation
       value objects.
@@ -107,16 +161,44 @@ $defs:
       xrefs: *id004
       alternate_labels: *id005
       extensions: *id006
+      version:
+        type: string
+        description: The version of the Categorical Variation Descriptor.
       categorical_variation_id:
-        description: The SHOULD be provided if *categorical_variation* is omitted.
+        description: This SHOULD be provided if *categorical_variation* is omitted.
         $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE
       categorical_variation:
         $ref: catvars.json/$defs/CategoricalVariation
-        description: The SHOULD be provided if *variation_id* is omitted.
+        description: This SHOULD be provided if *variation_id* is omitted.
+      members:
+        description: VariationMember instances that fall within the functional domain
+          of the Categorical Variation.
+        type: array
+        items:
+          $ref: VariationMember
     required:
     - id
     - type
+  VariationMember:
+    description: A compact class for representing a variation context that is a member
+      of a Categorical Variation. It supports one or more Expressions of a Variation
+      and optionally an associated VRS ID.
+    properties:
+      type:
+        type: string
+        const: VariationMember
+        description: MUST be "VariationMember"
+      expressions:
+        type: array
+        items:
+          $ref: Expression
+        minItems: 1
+      variation_id:
+        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE
+    required:
+    - expressions
   VcfRecord:
+    deprecated: true
     description: This data class is used when it is desirable to pass data as expected
       from a VCF record. The class is only used as an optional attribute within a
       VariationDescriptor. The Genotype field from a VCF should be captured by the

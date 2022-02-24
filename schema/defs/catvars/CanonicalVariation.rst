@@ -19,7 +19,7 @@ Some CanonicalVariation attributes are inherited from :ref:`CategoricalVariation
    *  - _id
       - string
       - 0..1
-      - A GA4GH computed identifier.
+      - Categorical Variation Id. MUST be unique within document.
    *  - type
       - string
       - 1..1

@@ -44,11 +44,19 @@ Some CategoricalVariationDescriptor attributes are inherited from :ref:`ValueObj
       - :ref:`Extension`
       - 0..m
       - List of resource-specific :ref:`Extensions <Extension>` needed to describe the value object.
+   *  - version
+      - string
+      - 0..1
+      - The version of the Categorical Variation Descriptor.
    *  - categorical_variation_id
       - `CURIE <https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE>`_
       - 0..1
-      - The SHOULD be provided if *categorical_variation* is omitted.
+      - This SHOULD be provided if *categorical_variation* is omitted.
    *  - categorical_variation
       - `CategoricalVariation <catvars.json/$defs/CategoricalVariation>`_
       - 0..1
-      - The SHOULD be provided if *variation_id* is omitted.
+      - This SHOULD be provided if *variation_id* is omitted.
+   *  - members
+      - `VariationMember <VariationMember>`_
+      - 0..m
+      - VariationMember instances that fall within the functional domain of the Categorical Variation.

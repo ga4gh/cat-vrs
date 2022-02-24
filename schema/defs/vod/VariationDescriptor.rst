@@ -47,11 +47,11 @@ Some VariationDescriptor attributes are inherited from :ref:`ValueObjectDescript
    *  - variation_id
       - `CURIE <https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE>`_
       - 0..1
-      - The SHOULD be provided if *variation* is omitted.
+      - This SHOULD be provided if *variation* is omitted.
    *  - variation
       - `Variation <https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/Variation>`_
       - 0..1
-      - The SHOULD be provided if *variation_id* is omitted.
+      - This SHOULD be provided if *variation_id* is omitted.
    *  - molecule_context
       - string
       - 0..1
