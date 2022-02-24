@@ -128,7 +128,7 @@ $defs:
       value:
         type: array
         items:
-          type: ["number","string","boolean","object","array", "null"]
+          type: ["number", "string", "boolean", "object", "array", "null"]
         description: Any primitive or structured object
 
   Expression:
