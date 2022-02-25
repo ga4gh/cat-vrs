@@ -20,7 +20,7 @@
          "properties": {
             "_id": {
                "type": "string",
-               "description": "A GA4GH computed identifier."
+               "description": "Categorical Variation Id. MUST be unique within document."
             },
             "type": {
                "type": "string",
@@ -60,7 +60,7 @@
          "properties": {
             "_id": {
                "type": "string",
-               "description": "A GA4GH computed identifier."
+               "description": "Categorical Variation Id. MUST be unique within document."
             },
             "type": {
                "type": "string",
