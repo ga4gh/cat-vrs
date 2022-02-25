@@ -15,7 +15,7 @@ $defs:
     properties:
       _id: &id001
         type: string
-        description: A GA4GH computed identifier.
+        description: Categorical Variation Id. MUST be unique within document.
       type:
         type: string
         description: MUST be "ComplexVariation".
