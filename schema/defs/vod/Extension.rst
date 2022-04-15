@@ -16,13 +16,13 @@ The Extension class provides VODs with a means to extend descriptions with other
       - Description
    *  - type
       - string
-      - 0..1
+      - 1..1
       - MUST be "Extension".
    *  - name
       - string
-      - 0..1
+      - 1..1
       - A name for the Extension
    *  - value
       - ['number', 'string', 'boolean', 'object', 'array', 'null']
-      - 0..m
+      - 0..1
       - Any primitive or structured object
