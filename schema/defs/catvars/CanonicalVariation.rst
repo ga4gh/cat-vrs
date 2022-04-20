@@ -24,10 +24,6 @@ Some CanonicalVariation attributes are inherited from :ref:`CategoricalVariation
       - string
       - 1..1
       - MUST be "CanonicalVariation".
-   *  - complement
-      - boolean
-      - 1..1
-      - This field indicates that a categorical variation is defined to include (false) or exclude (true) variation concepts matching the categorical variation. This is  equivalent to a logical NOT operation on the categorical variation properties.
    *  - variation
       - `Variation <https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/Variation>`_
       - 1..1

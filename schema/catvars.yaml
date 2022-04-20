@@ -20,12 +20,6 @@ $defs:
         type: string
         description: MUST be "ComplexVariation".
         const: ComplexVariation
-      complement: &id002
-        type: boolean
-        description: This field indicates that a categorical variation is defined
-          to include (false) or exclude (true) variation concepts matching the categorical
-          variation. This is  equivalent to a logical NOT operation on the categorical
-          variation properties.
       operands:
         type: array
         items:
@@ -54,7 +48,6 @@ $defs:
         type: string
         const: CanonicalVariation
         description: MUST be "CanonicalVariation".
-      complement: *id002
       variation:
         description: The [VRS Variation](https://vrs.ga4gh.org/en/1.2.1/terms_and_model.html#variation)
           object to which congruency must be determined.
