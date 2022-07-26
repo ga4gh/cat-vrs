@@ -45,7 +45,7 @@ $defs:
       extensions:
         type: array
         items:
-          $ref: "#/$defs/Extension"
+          $ref: "core.json#/$defs/Extension"
         description: >-
           List of resource-specific :ref:`Extensions <Extension>` needed to
           describe the value object.
@@ -109,25 +109,6 @@ $defs:
           We RECOMMEND that the *allelic_state* of a variation be described by terms from the
           Genotype Ontology (GENO). These SHOULD descend from concept
           `GENO:0000875 <http://purl.obolibrary.org/obo/GENO_0000875>`.
-
-  Extension:
-    description: >-
-      The Extension class provides VODs with a means to extend descriptions
-      with other attributes unique to a content provider. These extensions
-      are not expected to be natively understood under VRSATILE, but may be
-      used for pre-negotiated exchange of message attributes when needed.
-    properties:
-      type:
-        type: string
-        const: Extension
-        description: MUST be "Extension".
-      name:
-        type: string
-        description: A name for the Extension
-      value:
-        type: ["number", "string", "boolean", "object", "array", "null"]
-        description: Any primitive or structured object
-    required: ["type", "name"]
 
   Expression:
     maturity: draft

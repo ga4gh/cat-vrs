@@ -43,7 +43,7 @@ $defs:
       extensions: &id006
         type: array
         items:
-          $ref: '#/$defs/Extension'
+          $ref: core.json#/$defs/Extension
         description: List of resource-specific Extensions needed to describe the value
           object.
       variation_id:
@@ -89,31 +89,6 @@ $defs:
         $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE
     required:
     - id
-    - type
-  Extension:
-    description: The Extension class provides VODs with a means to extend descriptions
-      with other attributes unique to a content provider. These extensions are not
-      expected to be natively understood under VRSATILE, but may be used for pre-negotiated
-      exchange of message attributes when needed.
-    properties:
-      type:
-        type: string
-        const: Extension
-        description: MUST be "Extension".
-      name:
-        type: string
-        description: A name for the Extension
-      value:
-        type:
-        - number
-        - string
-        - boolean
-        - object
-        - array
-        - 'null'
-        description: Any primitive or structured object
-    required:
-    - name
     - type
   Expression:
     maturity: draft

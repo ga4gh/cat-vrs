@@ -57,7 +57,7 @@
             "extensions": {
                "type": "array",
                "items": {
-                  "$ref": "#/$defs/Extension"
+                  "$ref": "core.json#/$defs/Extension"
                },
                "description": "List of resource-specific Extensions needed to describe the value object."
             },
@@ -112,35 +112,6 @@
          },
          "required": [
             "id",
-            "type"
-         ]
-      },
-      "Extension": {
-         "description": "The Extension class provides VODs with a means to extend descriptions with other attributes unique to a content provider. These extensions are not expected to be natively understood under VRSATILE, but may be used for pre-negotiated exchange of message attributes when needed.",
-         "properties": {
-            "type": {
-               "type": "string",
-               "const": "Extension",
-               "description": "MUST be \"Extension\"."
-            },
-            "name": {
-               "type": "string",
-               "description": "A name for the Extension"
-            },
-            "value": {
-               "type": [
-                  "number",
-                  "string",
-                  "boolean",
-                  "object",
-                  "array",
-                  "null"
-               ],
-               "description": "Any primitive or structured object"
-            }
-         },
-         "required": [
-            "name",
             "type"
          ]
       },
@@ -219,7 +190,7 @@
             "extensions": {
                "type": "array",
                "items": {
-                  "$ref": "#/$defs/Extension"
+                  "$ref": "core.json#/$defs/Extension"
                },
                "description": "List of resource-specific Extensions needed to describe the value object."
             },

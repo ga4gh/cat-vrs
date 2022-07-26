@@ -41,7 +41,7 @@ Some CategoricalVariationDescriptor attributes are inherited from :ref:`ValueObj
       - 0..m
       - List of strings representing alternate labels for the value object.
    *  - extensions
-      - :ref:`Extension`
+      - `Extension <core.json#/$defs/Extension>`_
       - 0..m
       - List of resource-specific :ref:`Extensions <Extension>` needed to describe the value object.
    *  - version
