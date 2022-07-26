@@ -12,9 +12,6 @@ $defs:
     description: A categorical variation domain jointly characterized by two or more
       other categorical  variation domains.
     properties:
-      _id: &id001
-        type: string
-        description: Categorical Variation Id. MUST be unique within document.
       type:
         type: string
         description: MUST be "ComplexVariation".
@@ -33,25 +30,21 @@ $defs:
         description: The logical operation applied to evaluating the object *operands*.
           MUST be "AND" or "OR".
     required:
-    - complement
     - operands
     - operator
-    - type
   CanonicalVariation:
     description: A categorical variation domain characterized by a representative
       Variation context  to which members lift-over, project, translate, or otherwise
       directly align.
     properties:
-      _id: *id001
       type:
         type: string
         const: CanonicalVariation
         description: MUST be "CanonicalVariation".
-      variation:
+      canonical_context:
         description: The [VRS Variation](https://vrs.ga4gh.org/en/1.2.1/terms_and_model.html#variation)
           object to which congruency must be determined.
-        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/Variation
+        $ref: vrs.json#/definitions/Variation
     required:
-    - complement
     - type
     - variation

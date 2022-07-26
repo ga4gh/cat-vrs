@@ -15,8 +15,10 @@ $defs:
     type: object
     properties:
       id: &id001
-        description: Descriptor ID; MUST be unique within document.
-        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE
+        $ref: core.json#/$defs/CURIE
+        description: The 'logical' identifier of the entity in the system of record,
+          e.g. a UUID. This 'id' is  unique within a given system. The identified
+          entity may have a different 'id' in a different  system.
       type:
         type: string
         enum:
@@ -26,32 +28,36 @@ $defs:
       label: &id002
         type: string
         description: A primary label for the value object.
-      description: &id003
+      extensions: &id003
+        type: array
+        items:
+          $ref: core.json#/$defs/Extension
+      record_metadata: &id004
+        $ref: core.json#/$defs/RecordMetadata
+      value: &id005
+        $ref: core.json#/$defs/ValueEntity
+      value_id: &id006
+        $ref: core.json#/$defs/CURIE
+      description: &id007
         type: string
         description: A free-text description of the value object.
-      xrefs: &id004
+      xrefs: &id008
         type: array
         uniqueItems: true
         items:
-          $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE
+          $ref: core.json#/$defs/CURIE
         description: List of CURIEs representing associated concepts.
-      alternate_labels: &id005
+      alternate_labels: &id009
         type: array
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
-      extensions: &id006
-        type: array
-        items:
-          $ref: core.json#/$defs/Extension
-        description: List of resource-specific Extensions needed to describe the value
-          object.
       variation_id:
+        $ref: core.json#/$defs/CURIE
         description: This SHOULD be provided if *variation* is omitted.
-        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE
       variation:
+        $ref: vrs.json#/definitions/Variation
         description: This SHOULD be provided if *variation_id* is omitted.
-        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/Variation
       molecule_context:
         type: string
         enum:
@@ -63,7 +69,7 @@ $defs:
       structural_type:
         description: The structural variant type associated with this variant. We
           RECOMMEND a descendent term of [SO:0001537](http://www.sequenceontology.org/browser/current_release/term/SO:0001537).
-        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE
+        $ref: core.json#/$defs/CURIE
       expressions:
         $ref: '#/$defs/Expression'
         description: Typically HGVS or ISCN nomenclature expressions. Other systems
@@ -76,19 +82,39 @@ $defs:
       gene_context:
         description: A specific gene context that applies to this variant.
         oneOf:
-        - $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE
+        - $ref: core.json#/$defs/CURIE
         - $ref: '#/$defs/GeneDescriptor'
       vrs_ref_allele_seq:
         description: A `VRS Sequence`_ corresponding to a "ref allele", describing
           the sequence expected at a `VRS SequenceLocation`_ reference.
-        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/Sequence
+        $ref: vrs.json#/definitions/Sequence
       allelic_state:
         description: We RECOMMEND that the *allelic_state* of a variation be described
           by terms from the Genotype Ontology (GENO). These SHOULD descend from concept
           `GENO:0000875 <http://purl.obolibrary.org/obo/GENO_0000875>`.
-        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE
+        $ref: core.json#/$defs/CURIE
     required:
-    - id
+    - type
+  ConditionDescriptor:
+    description: This descriptor class is used for describing Condition domain entities.
+    properties:
+      id: *id001
+      type:
+        type: string
+        const: ConditionDescriptor
+        default: ConditionDescriptor
+        description: MUST be "ConditionDescriptor".
+      label: *id002
+      extensions: *id003
+      record_metadata: *id004
+      value: *id005
+      value_id: *id006
+      description: *id007
+      xrefs: *id008
+      alternate_labels: *id009
+      condition:
+        $ref: gks.core:Condition
+    required:
     - type
   Expression:
     maturity: draft
@@ -122,36 +148,41 @@ $defs:
   CategoricalVariationDescriptor:
     description: This descriptor class is used for describing Categorical Variation
       value objects.
-    additionalProperties: false
     type: object
+    $ref: '#/$defs/CanonicalVariationDescriptor'
+  CanonicalVariationDescriptor:
+    description: This descriptor class is used for describing Canonical Variation
+      value objects.
     properties:
       id: *id001
       type:
         type: string
-        const: VariationDescriptor
-        description: MUST be "VariationDescriptor".
+        const: CanonicalVariationDescriptor
+        default: CanonicalVariationDescriptor
+        description: MUST be "CanonicalVariationDescriptor".
       label: *id002
-      description: *id003
-      xrefs: *id004
-      alternate_labels: *id005
-      extensions: *id006
-      version:
-        type: string
-        description: The version of the Categorical Variation Descriptor.
+      extensions: *id003
+      record_metadata: *id004
+      value: *id005
+      value_id: *id006
+      description: *id007
+      xrefs: *id008
+      alternate_labels: *id009
       categorical_variation_id:
-        description: This SHOULD be provided if *categorical_variation* is omitted.
-        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE
+        $ref: core.json#/$defs/CURIE
+        description: This MUST be provided if *categorical_variation* is omitted.
       categorical_variation:
         $ref: catvars.json/$defs/CategoricalVariation
-        description: This SHOULD be provided if *variation_id* is omitted.
+        description: This MUST be provided if *variation_id* is omitted.
       members:
         description: VariationMember instances that fall within the functional domain
           of the Categorical Variation.
         type: array
         items:
           $ref: VariationMember
+      subject_variation_descriptor:
+        $ref: '#/$defs/VariationDescriptor'
     required:
-    - id
     - type
   VariationMember:
     description: A compact class for representing a variation context that is a member
@@ -165,10 +196,10 @@ $defs:
       expressions:
         type: array
         items:
-          $ref: Expression
+          $ref: '#/$defs/Expression'
         minItems: 1
       variation_id:
-        $ref: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE
+        $ref: core.json#/$defs/CURIE
     required:
     - expressions
   VcfRecord:

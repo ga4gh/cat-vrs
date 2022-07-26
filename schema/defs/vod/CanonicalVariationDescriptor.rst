@@ -1,0 +1,74 @@
+**Computational Definition**
+
+This descriptor class is used for describing Canonical Variation value objects.
+
+**Information Model**
+
+Some CanonicalVariationDescriptor attributes are inherited from :ref:`Entity`.
+
+.. list-table::
+   :class: clean-wrap
+   :header-rows: 1
+   :align: left
+   :widths: auto
+   
+   *  - Field
+      - Type
+      - Limits
+      - Description
+   *  - id
+      - `CURIE <core.json#/$defs/CURIE>`_
+      - 0..1
+      - The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system.
+   *  - type
+      - string
+      - 1..1
+      - MUST be "CanonicalVariationDescriptor".
+   *  - label
+      - string
+      - 0..1
+      - A primary label for the value object.
+   *  - extensions
+      - `Extension <core.json#/$defs/Extension>`_
+      - 0..m
+      - 
+   *  - record_metadata
+      - `RecordMetadata <core.json#/$defs/RecordMetadata>`_
+      - 0..1
+      - 
+   *  - value
+      - `ValueEntity <core.json#/$defs/ValueEntity>`_
+      - 0..1
+      - 
+   *  - value_id
+      - `CURIE <core.json#/$defs/CURIE>`_
+      - 0..1
+      - 
+   *  - description
+      - string
+      - 0..1
+      - A free-text description of the value object.
+   *  - xrefs
+      - `CURIE <core.json#/$defs/CURIE>`_
+      - 0..m
+      - List of CURIEs representing associated concepts.
+   *  - alternate_labels
+      - string
+      - 0..m
+      - List of strings representing alternate labels for the value object.
+   *  - categorical_variation_id
+      - `CURIE <core.json#/$defs/CURIE>`_
+      - 0..1
+      - This MUST be provided if *categorical_variation* is omitted.
+   *  - categorical_variation
+      - `CategoricalVariation <catvars.json/$defs/CategoricalVariation>`_
+      - 0..1
+      - This MUST be provided if *variation_id* is omitted.
+   *  - members
+      - `VariationMember <VariationMember>`_
+      - 0..m
+      - VariationMember instances that fall within the functional domain of the Categorical Variation.
+   *  - subject_variation_descriptor
+      - :ref:`VariationDescriptor`
+      - 0..1
+      - 

@@ -12,7 +12,7 @@ all: ${JSONS} defs
 	jsy2js.py <$< >$@
 
 %.yaml: %-source.yaml
-	source2jsy.py <$< >$@
+	source2jsy.py $< >$@
 
 defs:
 	rm -rf defs

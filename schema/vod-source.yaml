@@ -1,11 +1,18 @@
 $schema: http://json-schema.org/draft/2020-12/schema
 title: GA4GH-Value-Object-Descriptor-Definitions
 type: object
+
+imports:
+  vrs: vrs-source.yaml
+  gks.core: core-source.yaml
+
 namespaces:
-  vrs: https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/
+  vrs: vrs.json#/definitions/
+  gks.core: core.json#/$defs/
 
 $defs:
   ValueObjectDescriptor:
+    inherits: gks.core:ExtensibleEntity
     description: >-
       The abstract *Value Object Descriptor* parent class. All attributes
       of this parent class are inherited by descendent classes.
@@ -13,14 +20,10 @@ $defs:
       - $ref: "#/$defs/VariationDescriptor"
       - $ref: "#/$defs/CategoricalVariationDescriptor"
     heritable_properties:
-      id:
-        $ref_curie: "vrs:CURIE"
-        description: >-
-          Descriptor ID; MUST be unique within document.
-      type:
-        type: string
-        description: >-
-          MUST be VOD class name.
+      value:
+        $ref_curie: gks.core:ValueEntity
+      value_id:
+        $ref_curie: gks.core:CURIE
       label:
         type: string
         description: >-
@@ -33,7 +36,7 @@ $defs:
         type: array
         uniqueItems: true
         items:
-          $ref_curie: "vrs:CURIE"
+          $ref_curie: "gks.core:CURIE"
         description: >-
           List of CURIEs representing associated concepts.
       alternate_labels:
@@ -42,16 +45,9 @@ $defs:
           type: string
         description: >-
           List of strings representing alternate labels for the value object.
-      extensions:
-        type: array
-        items:
-          $ref: "core.json#/$defs/Extension"
-        description: >-
-          List of resource-specific :ref:`Extensions <Extension>` needed to
-          describe the value object.
-    heritable_required: ["id", "type"]
 
   VariationDescriptor:
+    inherits: ValueObjectDescriptor
     description: >-
       This descriptor class is used for describing VRS Variation value objects.
     additionalProperties: false
@@ -64,10 +60,12 @@ $defs:
         description: >-
           MUST be "VariationDescriptor".
       variation_id:
-        $ref_curie: "vrs:CURIE"
+        extends: value_id
+        $ref_curie: "gks.core:CURIE"
         description: >-
           This SHOULD be provided if *variation* is omitted.
       variation:
+        extends: value
         $ref_curie: "vrs:Variation"
         description: >-
           This SHOULD be provided if *variation_id* is omitted.
@@ -78,7 +76,7 @@ $defs:
           The molecular context of this variant. Must be one of "genomic",
           "transcript", or "protein".
       structural_type:
-        $ref_curie: "vrs:CURIE"
+        $ref_curie: "gks.core:CURIE"
         description: >-
           The structural variant type associated with this variant. We RECOMMEND a descendent term of
           `SO:0001537 <http://www.sequenceontology.org/browser/current_release/term/SO:0001537>`_.
@@ -96,7 +94,7 @@ $defs:
         description: >-
           A specific gene context that applies to this variant.
         oneOf:
-          - $ref_curie: "vrs:CURIE"
+          - $ref_curie: "gks.core:CURIE"
           - $ref: "#/$defs/GeneDescriptor"
       vrs_ref_allele_seq:
         $ref_curie: "vrs:Sequence"
@@ -104,11 +102,25 @@ $defs:
           A `VRS Sequence`_ corresponding to a "ref allele", describing the sequence expected at a
           `VRS SequenceLocation`_ reference.
       allelic_state:
-        $ref_curie: "vrs:CURIE"
+        $ref_curie: "gks.core:CURIE"
         description: >-
           We RECOMMEND that the *allelic_state* of a variation be described by terms from the
           Genotype Ontology (GENO). These SHOULD descend from concept
           `GENO:0000875 <http://purl.obolibrary.org/obo/GENO_0000875>`.
+
+  ConditionDescriptor:
+    inherits: ValueObjectDescriptor
+    description: >-
+      This descriptor class is used for describing Condition domain entities.
+    properties:
+      type:
+        type: string
+        const: ConditionDescriptor
+        default: ConditionDescriptor
+        description: MUST be "ConditionDescriptor".
+      condition:
+        extends: value
+        $ref: gks.core:Condition
 
   Expression:
     maturity: draft
@@ -128,26 +140,22 @@ $defs:
     required: ['type', 'syntax', 'value']
 
   CategoricalVariationDescriptor:
+    inherits: ValueObjectDescriptor
     description: >-
       This descriptor class is used for describing Categorical Variation value objects.
-    additionalProperties: false
     type: object
-    properties:
-      type:
-        type: string
-        const: VariationDescriptor
-        description: MUST be "VariationDescriptor".
-      version:
-        type: string
-        description: The version of the Categorical Variation Descriptor.
+    $ref: "#/$defs/CanonicalVariationDescriptor"
+    heritable_properties:
       categorical_variation_id:
-        $ref_curie: "vrs:CURIE"
+        extends: value_id
+        $ref_curie: gks.core:CURIE
         description: >-
-          This SHOULD be provided if *categorical_variation* is omitted.
+          This MUST be provided if *categorical_variation* is omitted.
       categorical_variation:
+        extends: value
         $ref: catvars.json/$defs/CategoricalVariation
         description: >-
-          This SHOULD be provided if *variation_id* is omitted.
+          This MUST be provided if *variation_id* is omitted.
       members:
         description: >-
           VariationMember instances that fall within the functional domain
@@ -155,6 +163,19 @@ $defs:
         type: array
         items:
           $ref: VariationMember
+
+  CanonicalVariationDescriptor:
+    inherits: CategoricalVariationDescriptor
+    description: >-
+      This descriptor class is used for describing Canonical Variation value objects.
+    properties:
+      type:
+        type: string
+        const: CanonicalVariationDescriptor
+        default: CanonicalVariationDescriptor
+        description: MUST be "CanonicalVariationDescriptor".
+      subject_variation_descriptor:
+        $ref: "#/$defs/VariationDescriptor"
 
   VariationMember:
     description: >-
@@ -169,10 +190,10 @@ $defs:
       expressions:
         type: array
         items:
-          $ref: Expression
+          $ref: "#/$defs/Expression"
         minItems: 1
       variation_id:
-        $ref_curie: "vrs:CURIE"
+        $ref_curie: "gks.core:CURIE"
     required: ['expressions']
 
   VcfRecord:

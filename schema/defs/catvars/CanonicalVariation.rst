@@ -4,8 +4,6 @@ A categorical variation domain characterized by a representative Variation conte
 
 **Information Model**
 
-Some CanonicalVariation attributes are inherited from :ref:`CategoricalVariation`.
-
 .. list-table::
    :class: clean-wrap
    :header-rows: 1
@@ -16,15 +14,11 @@ Some CanonicalVariation attributes are inherited from :ref:`CategoricalVariation
       - Type
       - Limits
       - Description
-   *  - _id
-      - string
-      - 0..1
-      - Categorical Variation Id. MUST be unique within document.
    *  - type
       - string
       - 1..1
       - MUST be "CanonicalVariation".
-   *  - variation
-      - `Variation <https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/Variation>`_
-      - 1..1
+   *  - canonical_context
+      - `Variation <vrs.json#/definitions/Variation>`_
+      - 0..1
       - The `VRS Variation <https://vrs.ga4gh.org/en/1.2.1/terms_and_model.html#variation>`_ object to which congruency must be determined.

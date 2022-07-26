@@ -19,10 +19,10 @@ A compact class for representing a variation context that is a member of a Categ
       - 0..1
       - MUST be "VariationMember"
    *  - expressions
-      - `Expression <Expression>`_
+      - :ref:`Expression`
       - 1..m
       - 
    *  - variation_id
-      - `CURIE <https://raw.githubusercontent.com/ga4gh/vrs/1.2.1/schema/vrs.json#/definitions/CURIE>`_
+      - `CURIE <core.json#/$defs/CURIE>`_
       - 0..1
       - 

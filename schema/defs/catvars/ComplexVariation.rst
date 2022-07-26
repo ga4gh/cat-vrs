@@ -4,8 +4,6 @@ A categorical variation domain jointly characterized by two or more other catego
 
 **Information Model**
 
-Some ComplexVariation attributes are inherited from :ref:`CategoricalVariation`.
-
 .. list-table::
    :class: clean-wrap
    :header-rows: 1
@@ -16,13 +14,9 @@ Some ComplexVariation attributes are inherited from :ref:`CategoricalVariation`.
       - Type
       - Limits
       - Description
-   *  - _id
-      - string
-      - 0..1
-      - Categorical Variation Id. MUST be unique within document.
    *  - type
       - string
-      - 1..1
+      - 0..1
       - MUST be "ComplexVariation".
    *  - operands
       - :ref:`CategoricalVariation`
