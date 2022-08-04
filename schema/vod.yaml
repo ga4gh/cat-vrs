@@ -14,40 +14,37 @@ $defs:
     additionalProperties: false
     type: object
     properties:
-      id: &id001
-        $ref: core.json#/$defs/CURIE
+      id:
+        type: string
         description: The 'logical' identifier of the entity in the system of record,
           e.g. a UUID. This 'id' is  unique within a given system. The identified
-          entity may have a different 'id' in a different  system.
+          entity may have a different 'id' in a different  system, or may refer to
+          an 'id' for the shared concept in another system (e.g. a CURIE).
       type:
         type: string
         enum:
         - VariationDescriptor
         default: VariationDescriptor
         description: MUST be "VariationDescriptor".
-      label: &id002
+      label:
         type: string
         description: A primary label for the value object.
-      extensions: &id003
+      extensions:
         type: array
         items:
           $ref: core.json#/$defs/Extension
-      record_metadata: &id004
+      record_metadata:
         $ref: core.json#/$defs/RecordMetadata
-      value: &id005
-        $ref: core.json#/$defs/ValueEntity
-      value_id: &id006
-        $ref: core.json#/$defs/CURIE
-      description: &id007
+      description:
         type: string
         description: A free-text description of the value object.
-      xrefs: &id008
+      xrefs:
         type: array
         uniqueItems: true
         items:
           $ref: core.json#/$defs/CURIE
         description: List of CURIEs representing associated concepts.
-      alternate_labels: &id009
+      alternate_labels:
         type: array
         items:
           type: string
@@ -98,20 +95,42 @@ $defs:
   ConditionDescriptor:
     description: This descriptor class is used for describing Condition domain entities.
     properties:
-      id: *id001
+      id:
+        type: string
+        description: The 'logical' identifier of the entity in the system of record,
+          e.g. a UUID. This 'id' is  unique within a given system. The identified
+          entity may have a different 'id' in a different  system, or may refer to
+          an 'id' for the shared concept in another system (e.g. a CURIE).
       type:
         type: string
         const: ConditionDescriptor
         default: ConditionDescriptor
         description: MUST be "ConditionDescriptor".
-      label: *id002
-      extensions: *id003
-      record_metadata: *id004
-      value: *id005
-      value_id: *id006
-      description: *id007
-      xrefs: *id008
-      alternate_labels: *id009
+      label:
+        type: string
+        description: A primary label for the value object.
+      extensions:
+        type: array
+        items:
+          $ref: core.json#/$defs/Extension
+      record_metadata:
+        $ref: core.json#/$defs/RecordMetadata
+      value_id:
+        $ref: core.json#/$defs/CURIE
+      description:
+        type: string
+        description: A free-text description of the value object.
+      xrefs:
+        type: array
+        uniqueItems: true
+        items:
+          $ref: core.json#/$defs/CURIE
+        description: List of CURIEs representing associated concepts.
+      alternate_labels:
+        type: array
+        items:
+          type: string
+        description: List of strings representing alternate labels for the value object.
       condition:
         $ref: gks.core:Condition
     required:
@@ -154,20 +173,40 @@ $defs:
     description: This descriptor class is used for describing Canonical Variation
       value objects.
     properties:
-      id: *id001
+      id:
+        type: string
+        description: The 'logical' identifier of the entity in the system of record,
+          e.g. a UUID. This 'id' is  unique within a given system. The identified
+          entity may have a different 'id' in a different  system, or may refer to
+          an 'id' for the shared concept in another system (e.g. a CURIE).
       type:
         type: string
         const: CanonicalVariationDescriptor
         default: CanonicalVariationDescriptor
         description: MUST be "CanonicalVariationDescriptor".
-      label: *id002
-      extensions: *id003
-      record_metadata: *id004
-      value: *id005
-      value_id: *id006
-      description: *id007
-      xrefs: *id008
-      alternate_labels: *id009
+      label:
+        type: string
+        description: A primary label for the value object.
+      extensions:
+        type: array
+        items:
+          $ref: core.json#/$defs/Extension
+      record_metadata:
+        $ref: core.json#/$defs/RecordMetadata
+      description:
+        type: string
+        description: A free-text description of the value object.
+      xrefs:
+        type: array
+        uniqueItems: true
+        items:
+          $ref: core.json#/$defs/CURIE
+        description: List of CURIEs representing associated concepts.
+      alternate_labels:
+        type: array
+        items:
+          type: string
+        description: List of strings representing alternate labels for the value object.
       categorical_variation_id:
         $ref: core.json#/$defs/CURIE
         description: This MUST be provided if *categorical_variation* is omitted.

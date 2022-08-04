@@ -17,9 +17,9 @@ Some CanonicalVariationDescriptor attributes are inherited from :ref:`Entity`.
       - Limits
       - Description
    *  - id
-      - `CURIE <core.json#/$defs/CURIE>`_
+      - string
       - 0..1
-      - The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system.
+      - The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE).
    *  - type
       - string
       - 1..1
@@ -34,14 +34,6 @@ Some CanonicalVariationDescriptor attributes are inherited from :ref:`Entity`.
       - 
    *  - record_metadata
       - `RecordMetadata <core.json#/$defs/RecordMetadata>`_
-      - 0..1
-      - 
-   *  - value
-      - `ValueEntity <core.json#/$defs/ValueEntity>`_
-      - 0..1
-      - 
-   *  - value_id
-      - `CURIE <core.json#/$defs/CURIE>`_
       - 0..1
       - 
    *  - description
