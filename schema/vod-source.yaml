@@ -114,7 +114,7 @@ $defs:
   ConditionDescriptor:
     inherits: ValueObjectDescriptor
     description: >-
-      This descriptor class is used for describing Condition domain entities.
+      This descriptor class is used for describing Condition entities.
     properties:
       type:
         type: string
@@ -123,8 +123,46 @@ $defs:
         description: MUST be "ConditionDescriptor".
       condition:
         extends: value
-        $ref: gks.core:Condition
+        $ref_curie: gks.core:Condition
       condition_id:
+        extends: value_id
+      member_descriptors:
+        type: array
+        items:
+          anyOf:
+            - $ref: "#/$defs/DiseaseDescriptor"
+            - $ref: "#/$defs/PhenotypeDescriptor"
+
+  DiseaseDescriptor:
+    inherits: ValueObjectDescriptor
+    description: >-
+      This descriptor class is used for describing Disease domain entities.
+    properties:
+      type:
+        type: string
+        const: DiseaseDescriptor
+        default: DiseaseDescriptor
+        description: MUST be "DiseaseDescriptor".
+      disease:
+        extends: value
+        $ref_curie: gks.core:Disease
+      disease_id:
+        extends: value_id
+
+  PhenotypeDescriptor:
+    inherits: ValueObjectDescriptor
+    description: >-
+      This descriptor class is used for describing Disease domain entities.
+    properties:
+      type:
+        type: string
+        const: PhenotypeDescriptor
+        default: PhenotypeDescriptor
+        description: MUST be "PhenotypeDescriptor".
+      phenotype:
+        extends: value
+        $ref_curie: gks.core:Phenotype
+      phenotype_id:
         extends: value_id
 
   Expression:
