@@ -6,10 +6,12 @@ strict: true
 imports:
   vrs: vrs-source.yaml
   gks.core: core-source.yaml
+  catvars: catvars-source.yaml
 
 namespaces:
   vrs: vrs.json#/definitions/
   gks.core: core.json#/$defs/
+  catvars: catvars.json#/$defs/
 
 $defs:
   ValueObjectDescriptor:
@@ -122,6 +124,8 @@ $defs:
       condition:
         extends: value
         $ref: gks.core:Condition
+      condition_id:
+        extends: value_id
 
   Expression:
     maturity: draft
@@ -177,6 +181,11 @@ $defs:
         description: MUST be "CanonicalVariationDescriptor".
       subject_variation_descriptor:
         $ref: "#/$defs/VariationDescriptor"
+      canonical_variation_id:
+        extends: categorical_variation_id
+      canonical_variation:
+        extends: categorical_variation
+        $ref_curie: catvars:CanonicalVariation
 
   VariationMember:
     description: >-

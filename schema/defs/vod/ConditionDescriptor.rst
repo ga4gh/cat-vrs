@@ -36,10 +36,6 @@ Some ConditionDescriptor attributes are inherited from :ref:`Entity`.
       - `RecordMetadata <core.json#/$defs/RecordMetadata>`_
       - 0..1
       - 
-   *  - value_id
-      - `CURIE <core.json#/$defs/CURIE>`_
-      - 0..1
-      - 
    *  - description
       - string
       - 0..1
@@ -54,5 +50,9 @@ Some ConditionDescriptor attributes are inherited from :ref:`Entity`.
       - List of strings representing alternate labels for the value object.
    *  - condition
       - `gks.core:Condition <gks.core:Condition>`_
+      - 0..1
+      - 
+   *  - condition_id
+      - `CURIE <core.json#/$defs/CURIE>`_
       - 0..1
       - 

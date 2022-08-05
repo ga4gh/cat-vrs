@@ -115,8 +115,6 @@ $defs:
           $ref: core.json#/$defs/Extension
       record_metadata:
         $ref: core.json#/$defs/RecordMetadata
-      value_id:
-        $ref: core.json#/$defs/CURIE
       description:
         type: string
         description: A free-text description of the value object.
@@ -133,6 +131,8 @@ $defs:
         description: List of strings representing alternate labels for the value object.
       condition:
         $ref: gks.core:Condition
+      condition_id:
+        $ref: core.json#/$defs/CURIE
     required:
     - type
     additionalProperties: false
@@ -209,12 +209,6 @@ $defs:
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
-      categorical_variation_id:
-        $ref: core.json#/$defs/CURIE
-        description: This MUST be provided if *categorical_variation* is omitted.
-      categorical_variation:
-        $ref: catvars.json/$defs/CategoricalVariation
-        description: This MUST be provided if *variation_id* is omitted.
       members:
         description: VariationMember instances that fall within the functional domain
           of the Categorical Variation.
@@ -223,6 +217,12 @@ $defs:
           $ref: VariationMember
       subject_variation_descriptor:
         $ref: '#/$defs/VariationDescriptor'
+      canonical_variation_id:
+        $ref: core.json#/$defs/CURIE
+        description: This MUST be provided if *categorical_variation* is omitted.
+      canonical_variation:
+        $ref: catvars.json#/$defs/CanonicalVariation
+        description: This MUST be provided if *variation_id* is omitted.
     required:
     - type
     additionalProperties: false

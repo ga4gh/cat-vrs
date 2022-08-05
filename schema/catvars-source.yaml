@@ -2,6 +2,10 @@ $schema: http://json-schema.org/draft/2020-12/schema
 title: GA4GH-Categorical-Variation-Definitions
 type: object
 strict: true
+
+imports:
+  gks.core: core-source.yaml
+
 namespaces:
   vrs: vrs.json#/definitions/
 
@@ -15,6 +19,7 @@ $defs:
   # =============================================================================
 
   CategoricalVariation:
+    inherits: gks.core:ValueEntity
     description: >-
       A representation of a categorically-defined 
       `functional domain <https://en.wikipedia.org/wiki/Domain_of_a_function>`_ 
@@ -22,18 +27,9 @@ $defs:
     oneOf:
       - $ref: "#/$defs/CanonicalVariation"
       - $ref: "#/$defs/ComplexVariation"
-    heritable_properties:
-      _id:
-        type: string
-        description: >-
-          Categorical Variation Id. MUST be unique within document.
-      type:
-        type: string
-        description: >-
-          MUST be Categorical Variation class name.
-    heritable_required: ['type', 'complement']
 
   ComplexVariation:
+    inherits: CategoricalVariation
     description: >-
       A categorical variation domain jointly characterized by two or more other categorical 
       variation domains.
@@ -58,6 +54,7 @@ $defs:
     required: ["operands", "operator"]
 
   CanonicalVariation:
+    inherits: CategoricalVariation
     description: >-
       A categorical variation domain characterized by a representative Variation context 
       to which members lift-over, project, translate, or otherwise directly align.
@@ -65,10 +62,11 @@ $defs:
       type:
         type: string
         const: CanonicalVariation
+        default: CanonicalVariation
         description: MUST be "CanonicalVariation".
       canonical_context:
         $ref_curie: vrs:Variation
         description: >-
           The `VRS Variation <https://vrs.ga4gh.org/en/1.2.1/terms_and_model.html#variation>`_
           object to which congruency must be determined.
-    required: ["type", "variation"]
+    required: ["canonical_context"]

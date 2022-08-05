@@ -12,6 +12,12 @@ $defs:
     description: A categorical variation domain jointly characterized by two or more
       other categorical  variation domains.
     properties:
+      id:
+        $ref: core.json#/$defs/CURIE
+        description: The 'logical' identifier of the entity in the system of record,
+          and MUST be represented as a CURIE. This 'id' is unique within a given system,
+          but may also refer to an 'id' for the shared concept in  another system
+          (represented by namespace, accordingly).
       type:
         type: string
         description: MUST be "ComplexVariation".
@@ -32,21 +38,29 @@ $defs:
     required:
     - operands
     - operator
+    - type
     additionalProperties: false
   CanonicalVariation:
     description: A categorical variation domain characterized by a representative
       Variation context  to which members lift-over, project, translate, or otherwise
       directly align.
     properties:
+      id:
+        $ref: core.json#/$defs/CURIE
+        description: The 'logical' identifier of the entity in the system of record,
+          and MUST be represented as a CURIE. This 'id' is unique within a given system,
+          but may also refer to an 'id' for the shared concept in  another system
+          (represented by namespace, accordingly).
       type:
         type: string
         const: CanonicalVariation
+        default: CanonicalVariation
         description: MUST be "CanonicalVariation".
       canonical_context:
         description: The [VRS Variation](https://vrs.ga4gh.org/en/1.2.1/terms_and_model.html#variation)
           object to which congruency must be determined.
         $ref: vrs.json#/definitions/Variation
     required:
+    - canonical_context
     - type
-    - variation
     additionalProperties: false
