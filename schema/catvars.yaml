@@ -32,6 +32,7 @@ $defs:
     required:
     - operands
     - operator
+    additionalProperties: false
   CanonicalVariation:
     description: A categorical variation domain characterized by a representative
       Variation context  to which members lift-over, project, translate, or otherwise
@@ -48,3 +49,4 @@ $defs:
     required:
     - type
     - variation
+    additionalProperties: false

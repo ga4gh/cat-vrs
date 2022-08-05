@@ -135,6 +135,7 @@ $defs:
         $ref: gks.core:Condition
     required:
     - type
+    additionalProperties: false
   Expression:
     maturity: draft
     description: Representation of a variation by a specified nomenclature or syntax
@@ -164,6 +165,7 @@ $defs:
     - syntax
     - type
     - value
+    additionalProperties: false
   CategoricalVariationDescriptor:
     description: This descriptor class is used for describing Categorical Variation
       value objects.
@@ -223,6 +225,7 @@ $defs:
         $ref: '#/$defs/VariationDescriptor'
     required:
     - type
+    additionalProperties: false
   VariationMember:
     description: A compact class for representing a variation context that is a member
       of a Categorical Variation. It supports one or more Expressions of a Variation
@@ -241,6 +244,7 @@ $defs:
         $ref: core.json#/$defs/CURIE
     required:
     - expressions
+    additionalProperties: false
   VcfRecord:
     deprecated: true
     description: This data class is used when it is desirable to pass data as expected

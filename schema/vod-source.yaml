@@ -1,6 +1,7 @@
 $schema: http://json-schema.org/draft/2020-12/schema
 title: GA4GH-Value-Object-Descriptor-Definitions
 type: object
+strict: true
 
 imports:
   vrs: vrs-source.yaml

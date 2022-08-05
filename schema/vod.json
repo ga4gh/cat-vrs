@@ -170,7 +170,8 @@
          },
          "required": [
             "type"
-         ]
+         ],
+         "additionalProperties": false
       },
       "Expression": {
          "maturity": "draft",
@@ -205,7 +206,8 @@
             "syntax",
             "type",
             "value"
-         ]
+         ],
+         "additionalProperties": false
       },
       "CategoricalVariationDescriptor": {
          "description": "This descriptor class is used for describing Categorical Variation value objects.",
@@ -278,7 +280,8 @@
          },
          "required": [
             "type"
-         ]
+         ],
+         "additionalProperties": false
       },
       "VariationMember": {
          "description": "A compact class for representing a variation context that is a member of a Categorical Variation. It supports one or more Expressions of a Variation and optionally an associated VRS ID.",
@@ -301,7 +304,8 @@
          },
          "required": [
             "expressions"
-         ]
+         ],
+         "additionalProperties": false
       },
       "VcfRecord": {
          "deprecated": true,
