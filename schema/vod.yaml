@@ -91,6 +91,7 @@ $defs:
           `GENO:0000875 <http://purl.obolibrary.org/obo/GENO_0000875>`.
         $ref: core.json#/$defs/CURIE
     required:
+    - id
     - type
   ConditionDescriptor:
     description: This descriptor class is used for describing Condition domain entities.
@@ -134,6 +135,7 @@ $defs:
       condition:
         $ref: gks.core:Condition
     required:
+    - id
     - type
     additionalProperties: false
   Expression:
@@ -224,6 +226,7 @@ $defs:
       subject_variation_descriptor:
         $ref: '#/$defs/VariationDescriptor'
     required:
+    - id
     - type
     additionalProperties: false
   VariationMember:
