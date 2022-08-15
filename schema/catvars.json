@@ -17,6 +17,10 @@
       "ComplexVariation": {
          "description": "A categorical variation domain jointly characterized by two or more other categorical  variation domains.",
          "properties": {
+            "id": {
+               "$ref": "core.json#/$defs/CURIE",
+               "description": "The 'logical' identifier of the entity in the system of record, and MUST be represented as a CURIE. This 'id' is unique within a given system, but may also refer to an 'id' for the shared concept in  another system (represented by namespace, accordingly)."
+            },
             "type": {
                "type": "string",
                "description": "MUST be \"ComplexVariation\".",
@@ -41,16 +45,22 @@
          },
          "required": [
             "operands",
-            "operator"
+            "operator",
+            "type"
          ],
          "additionalProperties": false
       },
       "CanonicalVariation": {
          "description": "A categorical variation domain characterized by a representative Variation context  to which members lift-over, project, translate, or otherwise directly align.",
          "properties": {
+            "id": {
+               "$ref": "core.json#/$defs/CURIE",
+               "description": "The 'logical' identifier of the entity in the system of record, and MUST be represented as a CURIE. This 'id' is unique within a given system, but may also refer to an 'id' for the shared concept in  another system (represented by namespace, accordingly)."
+            },
             "type": {
                "type": "string",
                "const": "CanonicalVariation",
+               "default": "CanonicalVariation",
                "description": "MUST be \"CanonicalVariation\"."
             },
             "canonical_context": {
@@ -59,8 +69,8 @@
             }
          },
          "required": [
-            "type",
-            "variation"
+            "canonical_context",
+            "type"
          ],
          "additionalProperties": false
       }

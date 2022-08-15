@@ -48,14 +48,6 @@ Some CanonicalVariationDescriptor attributes are inherited from :ref:`Entity`.
       - string
       - 0..m
       - List of strings representing alternate labels for the value object.
-   *  - categorical_variation_id
-      - `CURIE <core.json#/$defs/CURIE>`_
-      - 0..1
-      - This MUST be provided if *categorical_variation* is omitted.
-   *  - categorical_variation
-      - `CategoricalVariation <catvars.json/$defs/CategoricalVariation>`_
-      - 0..1
-      - This MUST be provided if *variation_id* is omitted.
    *  - members
       - `VariationMember <VariationMember>`_
       - 0..m
@@ -64,3 +56,11 @@ Some CanonicalVariationDescriptor attributes are inherited from :ref:`Entity`.
       - :ref:`VariationDescriptor`
       - 0..1
       - 
+   *  - canonical_variation_id
+      - `CURIE <core.json#/$defs/CURIE>`_
+      - 0..1
+      - This MUST be provided if *categorical_variation* is omitted.
+   *  - canonical_variation
+      - `CanonicalVariation <catvars.json#/$defs/CanonicalVariation>`_
+      - 0..1
+      - This MUST be provided if *variation_id* is omitted.

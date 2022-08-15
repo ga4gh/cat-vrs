@@ -118,7 +118,7 @@
          ]
       },
       "ConditionDescriptor": {
-         "description": "This descriptor class is used for describing Condition domain entities.",
+         "description": "This descriptor class is used for describing Condition entities.",
          "properties": {
             "id": {
                "type": "string",
@@ -143,9 +143,6 @@
             "record_metadata": {
                "$ref": "core.json#/$defs/RecordMetadata"
             },
-            "value_id": {
-               "$ref": "core.json#/$defs/CURIE"
-            },
             "description": {
                "type": "string",
                "description": "A free-text description of the value object."
@@ -166,7 +163,137 @@
                "description": "List of strings representing alternate labels for the value object."
             },
             "condition": {
-               "$ref": "gks.core:Condition"
+               "$ref": "core.json#/$defs/Condition"
+            },
+            "condition_id": {
+               "$ref": "core.json#/$defs/CURIE"
+            },
+            "member_descriptors": {
+               "type": "array",
+               "items": {
+                  "anyOf": [
+                     {
+                        "$ref": "#/$defs/DiseaseDescriptor"
+                     },
+                     {
+                        "$ref": "#/$defs/PhenotypeDescriptor"
+                     }
+                  ]
+               }
+            }
+         },
+         "required": [
+            "type"
+         ],
+         "additionalProperties": false
+      },
+      "DiseaseDescriptor": {
+         "description": "This descriptor class is used for describing Disease domain entities.",
+         "properties": {
+            "id": {
+               "type": "string",
+               "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
+            },
+            "type": {
+               "type": "string",
+               "const": "DiseaseDescriptor",
+               "default": "DiseaseDescriptor",
+               "description": "MUST be \"DiseaseDescriptor\"."
+            },
+            "label": {
+               "type": "string",
+               "description": "A primary label for the value object."
+            },
+            "extensions": {
+               "type": "array",
+               "items": {
+                  "$ref": "core.json#/$defs/Extension"
+               }
+            },
+            "record_metadata": {
+               "$ref": "core.json#/$defs/RecordMetadata"
+            },
+            "description": {
+               "type": "string",
+               "description": "A free-text description of the value object."
+            },
+            "xrefs": {
+               "type": "array",
+               "uniqueItems": true,
+               "items": {
+                  "$ref": "core.json#/$defs/CURIE"
+               },
+               "description": "List of CURIEs representing associated concepts."
+            },
+            "alternate_labels": {
+               "type": "array",
+               "items": {
+                  "type": "string"
+               },
+               "description": "List of strings representing alternate labels for the value object."
+            },
+            "disease": {
+               "$ref": "core.json#/$defs/Disease"
+            },
+            "disease_id": {
+               "$ref": "core.json#/$defs/CURIE"
+            }
+         },
+         "required": [
+            "type"
+         ],
+         "additionalProperties": false
+      },
+      "PhenotypeDescriptor": {
+         "description": "This descriptor class is used for describing Disease domain entities.",
+         "properties": {
+            "id": {
+               "type": "string",
+               "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
+            },
+            "type": {
+               "type": "string",
+               "const": "PhenotypeDescriptor",
+               "default": "PhenotypeDescriptor",
+               "description": "MUST be \"PhenotypeDescriptor\"."
+            },
+            "label": {
+               "type": "string",
+               "description": "A primary label for the value object."
+            },
+            "extensions": {
+               "type": "array",
+               "items": {
+                  "$ref": "core.json#/$defs/Extension"
+               }
+            },
+            "record_metadata": {
+               "$ref": "core.json#/$defs/RecordMetadata"
+            },
+            "description": {
+               "type": "string",
+               "description": "A free-text description of the value object."
+            },
+            "xrefs": {
+               "type": "array",
+               "uniqueItems": true,
+               "items": {
+                  "$ref": "core.json#/$defs/CURIE"
+               },
+               "description": "List of CURIEs representing associated concepts."
+            },
+            "alternate_labels": {
+               "type": "array",
+               "items": {
+                  "type": "string"
+               },
+               "description": "List of strings representing alternate labels for the value object."
+            },
+            "phenotype": {
+               "$ref": "core.json#/$defs/Phenotype"
+            },
+            "phenotype_id": {
+               "$ref": "core.json#/$defs/CURIE"
             }
          },
          "required": [
@@ -261,14 +388,6 @@
                },
                "description": "List of strings representing alternate labels for the value object."
             },
-            "categorical_variation_id": {
-               "$ref": "core.json#/$defs/CURIE",
-               "description": "This MUST be provided if *categorical_variation* is omitted."
-            },
-            "categorical_variation": {
-               "$ref": "catvars.json/$defs/CategoricalVariation",
-               "description": "This MUST be provided if *variation_id* is omitted."
-            },
             "members": {
                "description": "VariationMember instances that fall within the functional domain of the Categorical Variation.",
                "type": "array",
@@ -278,6 +397,14 @@
             },
             "subject_variation_descriptor": {
                "$ref": "#/$defs/VariationDescriptor"
+            },
+            "canonical_variation_id": {
+               "$ref": "core.json#/$defs/CURIE",
+               "description": "This MUST be provided if *categorical_variation* is omitted."
+            },
+            "canonical_variation": {
+               "$ref": "catvars.json#/$defs/CanonicalVariation",
+               "description": "This MUST be provided if *variation_id* is omitted."
             }
          },
          "required": [
@@ -309,57 +436,6 @@
             "expressions"
          ],
          "additionalProperties": false
-      },
-      "VcfRecord": {
-         "deprecated": true,
-         "description": "This data class is used when it is desirable to pass data as expected from a VCF record. The class is only used as an optional attribute within a VariationDescriptor. The Genotype field from a VCF should be captured by the `allelic_state` attribute in the Variation Descriptor.",
-         "additionalProperties": false,
-         "type": "object",
-         "properties": {
-            "genome_assembly": {
-               "type": "string",
-               "description": "Identifier for the genome assembly used to call the allele."
-            },
-            "chrom": {
-               "type": "string",
-               "description": "A chromosome or contig identifier."
-            },
-            "pos": {
-               "type": "string",
-               "description": "The reference residue-coordinate position, with the first residue having position 1."
-            },
-            "id": {
-               "type": "string",
-               "description": "A semicolon-separated list of unique identifiers where available. For example, dbSNP rsIDs. We RECOMMEND storing this information as a list in the VariationDescriptor `xrefs` field."
-            },
-            "ref": {
-               "type": "string",
-               "description": "Reference base as expected by the VCF specification."
-            },
-            "alt": {
-               "type": "string",
-               "description": "Alternate base as expected by the VCF specification."
-            },
-            "qual": {
-               "type": "string",
-               "description": "Quality: Phred-scaled quality score for the assertion made in ALT."
-            },
-            "filter": {
-               "type": "string",
-               "description": "Filter status: PASS if this position has passed all filters."
-            },
-            "info": {
-               "type": "string",
-               "description": "Additional information: Semicolon-separated series of additional information fields."
-            }
-         },
-         "required": [
-            "alt",
-            "chrom",
-            "genome_assembly",
-            "pos",
-            "ref"
-         ]
       }
    }
 }

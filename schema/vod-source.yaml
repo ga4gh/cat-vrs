@@ -6,10 +6,12 @@ strict: true
 imports:
   vrs: vrs-source.yaml
   gks.core: core-source.yaml
+  catvars: catvars-source.yaml
 
 namespaces:
   vrs: vrs.json#/definitions/
   gks.core: core.json#/$defs/
+  catvars: catvars.json#/$defs/
 
 $defs:
   ValueObjectDescriptor:
@@ -113,7 +115,7 @@ $defs:
   ConditionDescriptor:
     inherits: ValueObjectDescriptor
     description: >-
-      This descriptor class is used for describing Condition domain entities.
+      This descriptor class is used for describing Condition entities.
     properties:
       type:
         type: string
@@ -122,7 +124,47 @@ $defs:
         description: MUST be "ConditionDescriptor".
       condition:
         extends: value
-        $ref: gks.core:Condition
+        $ref_curie: gks.core:Condition
+      condition_id:
+        extends: value_id
+      member_descriptors:
+        type: array
+        items:
+          anyOf:
+            - $ref: "#/$defs/DiseaseDescriptor"
+            - $ref: "#/$defs/PhenotypeDescriptor"
+
+  DiseaseDescriptor:
+    inherits: ValueObjectDescriptor
+    description: >-
+      This descriptor class is used for describing Disease domain entities.
+    properties:
+      type:
+        type: string
+        const: DiseaseDescriptor
+        default: DiseaseDescriptor
+        description: MUST be "DiseaseDescriptor".
+      disease:
+        extends: value
+        $ref_curie: gks.core:Disease
+      disease_id:
+        extends: value_id
+
+  PhenotypeDescriptor:
+    inherits: ValueObjectDescriptor
+    description: >-
+      This descriptor class is used for describing Disease domain entities.
+    properties:
+      type:
+        type: string
+        const: PhenotypeDescriptor
+        default: PhenotypeDescriptor
+        description: MUST be "PhenotypeDescriptor".
+      phenotype:
+        extends: value
+        $ref_curie: gks.core:Phenotype
+      phenotype_id:
+        extends: value_id
 
   Expression:
     maturity: draft
@@ -178,6 +220,11 @@ $defs:
         description: MUST be "CanonicalVariationDescriptor".
       subject_variation_descriptor:
         $ref: "#/$defs/VariationDescriptor"
+      canonical_variation_id:
+        extends: categorical_variation_id
+      canonical_variation:
+        extends: categorical_variation
+        $ref_curie: catvars:CanonicalVariation
 
   VariationMember:
     description: >-
@@ -197,53 +244,3 @@ $defs:
       variation_id:
         $ref_curie: "gks.core:CURIE"
     required: ['expressions']
-
-  VcfRecord:
-    deprecated: true
-    description: >-
-      This data class is used when it is desirable to pass data as expected from a VCF record.
-      The class is only used as an optional attribute within a :ref:`VariationDescriptor`.
-      The Genotype field from a VCF should be captured by the `allelic_state` attribute in
-      the Variation Descriptor.
-    additionalProperties: false
-    type: object
-    properties:
-      genome_assembly:
-        type: string
-        description: Identifier for the genome assembly used to call the allele.
-      chrom:
-        type: string
-        description: A chromosome or contig identifier.
-      pos:
-        type: string
-        description: >-
-          The reference residue-coordinate position, with the first
-          residue having position 1.
-      id:
-        type: string
-        description: >-
-          A semicolon-separated list of unique identifiers where available.
-          For example, dbSNP rsIDs. We RECOMMEND storing this information as
-          a list in the :ref:`VariationDescriptor` `xrefs` field.
-      ref:
-        type: string
-        description: >-
-          Reference base as expected by the VCF specification.
-      alt:
-        type: string
-        description: >-
-          Alternate base as expected by the VCF specification.
-      qual:
-        type: string
-        description: >-
-          Quality: Phred-scaled quality score for the assertion made in ALT.
-      filter:
-        type: string
-        description: >-
-          Filter status: PASS if this position has passed all filters.
-      info:
-        type: string
-        description: >-
-          Additional information: Semicolon-separated series of additional
-          information fields.
-    required: ['genome_assembly', 'chrom', 'pos', 'ref', 'alt']
