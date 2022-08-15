@@ -306,7 +306,10 @@ $defs:
           type: string
         description: List of strings representing alternate labels for the value object.
       therapeutics_collection:
-        $ref: core.json#/$defs/Condition
+        $ref: core.json#/$defs/ValueEntity
+        oneOf:
+        - $ref: core.json#/$defs/CombinationTherapeutics
+        - $ref: core.json#/$defs/SubstituteTherapeutics
       therapeutics_collection_id:
         $ref: core.json#/$defs/CURIE
       member_descriptors:

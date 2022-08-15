@@ -194,7 +194,9 @@ $defs:
         description: MUST be "TherapeuticsCollectionDescriptor".
       therapeutics_collection:
         extends: value
-        $ref_curie: gks.core:Condition
+        oneOf:
+        - $ref_curie: gks.core:CombinationTherapeutics
+        - $ref_curie: gks.core:SubstituteTherapeutics
       therapeutics_collection_id:
         extends: value_id
       member_descriptors:
