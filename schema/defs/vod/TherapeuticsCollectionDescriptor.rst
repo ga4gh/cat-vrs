@@ -45,7 +45,7 @@ Some TherapeuticsCollectionDescriptor attributes are inherited from :ref:`Entity
       - 0..m
       - List of strings representing alternate labels for the value object.
    *  - therapeutics_collection
-      - `ValueEntity <core.json#/$defs/ValueEntity>`_
+      - `CombinationTherapeutics <core.json#/$defs/CombinationTherapeutics>`_ | `SubstituteTherapeutics <core.json#/$defs/SubstituteTherapeutics>`_
       - 0..1
       - 
    *  - therapeutics_collection_id
