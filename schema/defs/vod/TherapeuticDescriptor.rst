@@ -1,10 +1,10 @@
 **Computational Definition**
 
-This descriptor class is used for describing Condition domain entities.
+This descriptor class is used for describing Therapeutic domain entities.
 
 **Information Model**
 
-Some ConditionDescriptor attributes are inherited from :ref:`Entity`.
+Some TherapeuticDescriptor attributes are inherited from :ref:`Entity`.
 
 .. list-table::
    :class: clean-wrap
@@ -23,7 +23,7 @@ Some ConditionDescriptor attributes are inherited from :ref:`Entity`.
    *  - type
       - string
       - 1..1
-      - MUST be "ConditionDescriptor".
+      - MUST be "TherapeuticDescriptor".
    *  - label
       - string
       - 0..1
@@ -44,15 +44,11 @@ Some ConditionDescriptor attributes are inherited from :ref:`Entity`.
       - string
       - 0..m
       - List of strings representing alternate labels for the value object.
-   *  - condition
-      - `Condition <core.json#/$defs/Condition>`_
+   *  - therapeutic
+      - `Therapeutic <core.json#/$defs/Therapeutic>`_
       - 0..1
       - 
-   *  - condition_id
+   *  - therapeutic_id
       - `CURIE <core.json#/$defs/CURIE>`_
       - 0..1
-      - 
-   *  - member_descriptors
-      - :ref:`DiseaseDescriptor` | :ref:`PhenotypeDescriptor`
-      - 0..m
       - 

@@ -115,7 +115,7 @@ $defs:
   ConditionDescriptor:
     inherits: ValueObjectDescriptor
     description: >-
-      This descriptor class is used for describing Condition entities.
+      This descriptor class is used for describing Condition domain entities.
     properties:
       type:
         type: string
@@ -165,6 +165,42 @@ $defs:
         $ref_curie: gks.core:Phenotype
       phenotype_id:
         extends: value_id
+
+  TherapeuticDescriptor:
+    inherits: ValueObjectDescriptor
+    description: >-
+      This descriptor class is used for describing Therapeutic domain entities.
+    properties:
+      type:
+        type: string
+        const: TherapeuticDescriptor
+        default: TherapeuticDescriptor
+        description: MUST be "TherapeuticDescriptor".
+      therapeutic:
+        extends: value
+        $ref_curie: gks.core:Therapeutic
+      therapeutic_id:
+        extends: value_id
+
+  TherapeuticsCollectionDescriptor:
+    inherits: ValueObjectDescriptor
+    description: >-
+      This descriptor class is used for describing TherapeuticsCollection domain entities.
+    properties:
+      type:
+        type: string
+        const: TherapeuticsCollectionDescriptor
+        default: TherapeuticsCollectionDescriptor
+        description: MUST be "TherapeuticsCollectionDescriptor".
+      therapeutics_collection:
+        extends: value
+        $ref_curie: gks.core:Condition
+      therapeutics_collection_id:
+        extends: value_id
+      member_descriptors:
+        type: array
+        items:
+          $ref: "#/$defs/TherapeuticDescriptor"
 
   Expression:
     maturity: draft
