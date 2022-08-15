@@ -33,8 +33,6 @@ $defs:
         type: array
         items:
           $ref: core.json#/$defs/Extension
-      record_metadata:
-        $ref: core.json#/$defs/RecordMetadata
       description:
         type: string
         description: A free-text description of the value object.
@@ -114,8 +112,6 @@ $defs:
         type: array
         items:
           $ref: core.json#/$defs/Extension
-      record_metadata:
-        $ref: core.json#/$defs/RecordMetadata
       description:
         type: string
         description: A free-text description of the value object.
@@ -141,6 +137,7 @@ $defs:
           - $ref: '#/$defs/DiseaseDescriptor'
           - $ref: '#/$defs/PhenotypeDescriptor'
     required:
+    - id
     - type
     additionalProperties: false
   DiseaseDescriptor:
@@ -164,8 +161,6 @@ $defs:
         type: array
         items:
           $ref: core.json#/$defs/Extension
-      record_metadata:
-        $ref: core.json#/$defs/RecordMetadata
       description:
         type: string
         description: A free-text description of the value object.
@@ -185,6 +180,7 @@ $defs:
       disease_id:
         $ref: core.json#/$defs/CURIE
     required:
+    - id
     - type
     additionalProperties: false
   PhenotypeDescriptor:
@@ -208,8 +204,6 @@ $defs:
         type: array
         items:
           $ref: core.json#/$defs/Extension
-      record_metadata:
-        $ref: core.json#/$defs/RecordMetadata
       description:
         type: string
         description: A free-text description of the value object.
@@ -289,8 +283,6 @@ $defs:
         type: array
         items:
           $ref: core.json#/$defs/Extension
-      record_metadata:
-        $ref: core.json#/$defs/RecordMetadata
       description:
         type: string
         description: A free-text description of the value object.

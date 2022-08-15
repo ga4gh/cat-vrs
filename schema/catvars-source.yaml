@@ -29,6 +29,7 @@ $defs:
       - $ref: "#/$defs/ComplexVariation"
 
   ComplexVariation:
+    ga4gh_prefix: CXV
     inherits: CategoricalVariation
     description: >-
       A categorical variation domain jointly characterized by two or more other categorical 
@@ -54,6 +55,7 @@ $defs:
     required: ["operands", "operator"]
 
   CanonicalVariation:
+    ga4gh_prefix: CLV
     inherits: CategoricalVariation
     description: >-
       A categorical variation domain characterized by a representative Variation context 

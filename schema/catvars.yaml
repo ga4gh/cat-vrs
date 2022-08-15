@@ -9,6 +9,7 @@ $defs:
     - $ref: '#/$defs/CanonicalVariation'
     - $ref: '#/$defs/ComplexVariation'
   ComplexVariation:
+    ga4gh_prefix: CXV
     description: A categorical variation domain jointly characterized by two or more
       other categorical  variation domains.
     properties:
@@ -41,6 +42,7 @@ $defs:
     - type
     additionalProperties: false
   CanonicalVariation:
+    ga4gh_prefix: CLV
     description: A categorical variation domain characterized by a representative
       Variation context  to which members lift-over, project, translate, or otherwise
       directly align.

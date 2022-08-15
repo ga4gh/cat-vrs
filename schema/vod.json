@@ -41,9 +41,6 @@
                   "$ref": "core.json#/$defs/Extension"
                }
             },
-            "record_metadata": {
-               "$ref": "core.json#/$defs/RecordMetadata"
-            },
             "description": {
                "type": "string",
                "description": "A free-text description of the value object."
@@ -140,9 +137,6 @@
                   "$ref": "core.json#/$defs/Extension"
                }
             },
-            "record_metadata": {
-               "$ref": "core.json#/$defs/RecordMetadata"
-            },
             "description": {
                "type": "string",
                "description": "A free-text description of the value object."
@@ -183,6 +177,7 @@
             }
          },
          "required": [
+            "id",
             "type"
          ],
          "additionalProperties": false
@@ -209,9 +204,6 @@
                "items": {
                   "$ref": "core.json#/$defs/Extension"
                }
-            },
-            "record_metadata": {
-               "$ref": "core.json#/$defs/RecordMetadata"
             },
             "description": {
                "type": "string",
@@ -240,6 +232,7 @@
             }
          },
          "required": [
+            "id",
             "type"
          ],
          "additionalProperties": false
@@ -266,9 +259,6 @@
                "items": {
                   "$ref": "core.json#/$defs/Extension"
                }
-            },
-            "record_metadata": {
-               "$ref": "core.json#/$defs/RecordMetadata"
             },
             "description": {
                "type": "string",
@@ -365,9 +355,6 @@
                "items": {
                   "$ref": "core.json#/$defs/Extension"
                }
-            },
-            "record_metadata": {
-               "$ref": "core.json#/$defs/RecordMetadata"
             },
             "description": {
                "type": "string",
