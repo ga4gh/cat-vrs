@@ -89,11 +89,6 @@ definitions:
         description: >-
           Typically HGVS or ISCN nomenclature expressions. Other systems relevant to the description
           of variation MAY be used.
-      vcf_record:
-        $ref: "#/definitions/VcfRecord"
-        description: >-
-          A VCF Record of the variant. This SHOULD be a single allele, the VCF genotype (GT) field
-          should be represented in the *allelic_state* attribute.
       gene_context:
         description: >-
           A specific gene context that applies to this variant.
@@ -133,6 +128,22 @@ definitions:
           anyOf:
             - $ref: "#/definitions/DiseaseDescriptor"
             - $ref: "#/definitions/PhenotypeDescriptor"
+
+  GeneDescriptor:
+    inherits: ValueObjectDescriptor
+    description: >-
+      This descriptor class is used for describing Gene domain entities.
+    properties:
+      type:
+        type: string
+        const: GeneDescriptor
+        default: GeneDescriptor
+        description: MUST be "GeneDescriptor".
+      gene:
+        extends: value
+        $ref_curie: gks.core:Gene
+      gene_id:
+        extends: value_id
 
   DiseaseDescriptor:
     inherits: ValueObjectDescriptor
@@ -226,6 +237,8 @@ definitions:
     description: >-
       This descriptor class is used for describing Categorical Variation value objects.
     type: object
+    oneOf:
+      - $ref: "#/definitions/CanonicalVariationDescriptor"
     heritable_properties:
       categorical_variation_id:
         extends: value_id

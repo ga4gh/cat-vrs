@@ -69,11 +69,6 @@ definitions:
         $ref: '#/definitions/Expression'
         description: Typically HGVS or ISCN nomenclature expressions. Other systems
           relevant to the description of variation MAY be used.
-      vcf_record:
-        $ref: '#/definitions/VcfRecord'
-        description: A VCF Record of the variant. This SHOULD be a single allele,
-          the VCF genotype (GT) field should be represented in the *allelic_state*
-          attribute.
       gene_context:
         description: A specific gene context that applies to this variant.
         oneOf:
@@ -136,6 +131,49 @@ definitions:
           anyOf:
           - $ref: '#/definitions/DiseaseDescriptor'
           - $ref: '#/definitions/PhenotypeDescriptor'
+    required:
+    - id
+    - type
+    additionalProperties: false
+  GeneDescriptor:
+    description: This descriptor class is used for describing Gene domain entities.
+    properties:
+      id:
+        type: string
+        description: The 'logical' identifier of the entity in the system of record,
+          e.g. a UUID. This 'id' is  unique within a given system. The identified
+          entity may have a different 'id' in a different  system, or may refer to
+          an 'id' for the shared concept in another system (e.g. a CURIE).
+      type:
+        type: string
+        const: GeneDescriptor
+        default: GeneDescriptor
+        description: MUST be "GeneDescriptor".
+      label:
+        type: string
+        description: A primary label for the value object.
+      extensions:
+        type: array
+        items:
+          $ref: core.json#/$defs/Extension
+      description:
+        type: string
+        description: A free-text description of the value object.
+      xrefs:
+        type: array
+        uniqueItems: true
+        items:
+          $ref: core.json#/$defs/CURIE
+        description: List of CURIEs representing associated concepts.
+      alternate_labels:
+        type: array
+        items:
+          type: string
+        description: List of strings representing alternate labels for the value object.
+      gene:
+        $ref: core.json#/$defs/Gene
+      gene_id:
+        $ref: core.json#/$defs/CURIE
     required:
     - id
     - type
@@ -349,6 +387,12 @@ definitions:
     - type
     - value
     additionalProperties: false
+  CategoricalVariationDescriptor:
+    description: This descriptor class is used for describing Categorical Variation
+      value objects.
+    type: object
+    oneOf:
+    - $ref: '#/definitions/CanonicalVariationDescriptor'
   CanonicalVariationDescriptor:
     description: This descriptor class is used for describing Canonical Variation
       value objects.

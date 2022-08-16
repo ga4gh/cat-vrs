@@ -64,10 +64,6 @@ Some VariationDescriptor attributes are inherited from :ref:`Entity`.
       - :ref:`Expression`
       - 0..1
       - Typically HGVS or ISCN nomenclature expressions. Other systems relevant to the description of variation MAY be used.
-   *  - vcf_record
-      - :ref:`VcfRecord`
-      - 0..1
-      - A VCF Record of the variant. This SHOULD be a single allele, the VCF genotype (GT) field should be represented in the *allelic_state* attribute.
    *  - gene_context
       - `CURIE <core.json#/$defs/CURIE>`_ | :ref:`GeneDescriptor`
       - 0..1
