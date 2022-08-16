@@ -1,13 +1,13 @@
-$schema: http://json-schema.org/draft/2020-12/schema
+$schema: http://json-schema.org/draft-07/schema
 title: GA4GH-Value-Object-Descriptor-Definitions-Merged-Imports
 type: object
-$defs:
+definitions:
   ValueObjectDescriptor:
     description: The abstract *Value Object Descriptor* parent class. All attributes
       of this parent class are inherited by descendent classes.
     oneOf:
-    - $ref: '#/$defs/VariationDescriptor'
-    - $ref: '#/$defs/CategoricalVariationDescriptor'
+    - $ref: '#/definitions/VariationDescriptor'
+    - $ref: '#/definitions/CategoricalVariationDescriptor'
   VariationDescriptor:
     description: This descriptor class is used for describing VRS Variation value
       objects.
@@ -32,7 +32,7 @@ $defs:
       extensions:
         type: array
         items:
-          $ref: '#/$defs/Extension'
+          $ref: '#/definitions/Extension'
       description:
         type: string
         description: A free-text description of the value object.
@@ -40,7 +40,7 @@ $defs:
         type: array
         uniqueItems: true
         items:
-          $ref: '#/$defs/CURIE'
+          $ref: '#/definitions/CURIE'
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
@@ -48,10 +48,10 @@ $defs:
           type: string
         description: List of strings representing alternate labels for the value object.
       variation_id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: This SHOULD be provided if *variation* is omitted.
       variation:
-        $ref: '#/$defs/Variation'
+        $ref: '#/definitions/Variation'
         description: This SHOULD be provided if *variation_id* is omitted.
       molecule_context:
         type: string
@@ -64,30 +64,30 @@ $defs:
       structural_type:
         description: The structural variant type associated with this variant. We
           RECOMMEND a descendent term of [SO:0001537](http://www.sequenceontology.org/browser/current_release/term/SO:0001537).
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
       expressions:
-        $ref: '#/$defs/Expression'
+        $ref: '#/definitions/Expression'
         description: Typically HGVS or ISCN nomenclature expressions. Other systems
           relevant to the description of variation MAY be used.
       vcf_record:
-        $ref: '#/$defs/VcfRecord'
+        $ref: '#/definitions/VcfRecord'
         description: A VCF Record of the variant. This SHOULD be a single allele,
           the VCF genotype (GT) field should be represented in the *allelic_state*
           attribute.
       gene_context:
         description: A specific gene context that applies to this variant.
         oneOf:
-        - $ref: '#/$defs/CURIE'
-        - $ref: '#/$defs/GeneDescriptor'
+        - $ref: '#/definitions/CURIE'
+        - $ref: '#/definitions/GeneDescriptor'
       vrs_ref_allele_seq:
         description: A `VRS Sequence`_ corresponding to a "ref allele", describing
           the sequence expected at a `VRS SequenceLocation`_ reference.
-        $ref: '#/$defs/Sequence'
+        $ref: '#/definitions/Sequence'
       allelic_state:
         description: We RECOMMEND that the *allelic_state* of a variation be described
           by terms from the Genotype Ontology (GENO). These SHOULD descend from concept
           `GENO:0000875 <http://purl.obolibrary.org/obo/GENO_0000875>`.
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
     required:
     - id
     - type
@@ -111,7 +111,7 @@ $defs:
       extensions:
         type: array
         items:
-          $ref: '#/$defs/Extension'
+          $ref: '#/definitions/Extension'
       description:
         type: string
         description: A free-text description of the value object.
@@ -119,7 +119,7 @@ $defs:
         type: array
         uniqueItems: true
         items:
-          $ref: '#/$defs/CURIE'
+          $ref: '#/definitions/CURIE'
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
@@ -127,15 +127,15 @@ $defs:
           type: string
         description: List of strings representing alternate labels for the value object.
       condition:
-        $ref: '#/$defs/Condition'
+        $ref: '#/definitions/Condition'
       condition_id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
       member_descriptors:
         type: array
         items:
           anyOf:
-          - $ref: '#/$defs/DiseaseDescriptor'
-          - $ref: '#/$defs/PhenotypeDescriptor'
+          - $ref: '#/definitions/DiseaseDescriptor'
+          - $ref: '#/definitions/PhenotypeDescriptor'
     required:
     - id
     - type
@@ -160,7 +160,7 @@ $defs:
       extensions:
         type: array
         items:
-          $ref: '#/$defs/Extension'
+          $ref: '#/definitions/Extension'
       description:
         type: string
         description: A free-text description of the value object.
@@ -168,7 +168,7 @@ $defs:
         type: array
         uniqueItems: true
         items:
-          $ref: '#/$defs/CURIE'
+          $ref: '#/definitions/CURIE'
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
@@ -176,9 +176,9 @@ $defs:
           type: string
         description: List of strings representing alternate labels for the value object.
       disease:
-        $ref: '#/$defs/Disease'
+        $ref: '#/definitions/Disease'
       disease_id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
     required:
     - id
     - type
@@ -203,7 +203,7 @@ $defs:
       extensions:
         type: array
         items:
-          $ref: '#/$defs/Extension'
+          $ref: '#/definitions/Extension'
       description:
         type: string
         description: A free-text description of the value object.
@@ -211,7 +211,7 @@ $defs:
         type: array
         uniqueItems: true
         items:
-          $ref: '#/$defs/CURIE'
+          $ref: '#/definitions/CURIE'
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
@@ -219,9 +219,9 @@ $defs:
           type: string
         description: List of strings representing alternate labels for the value object.
       phenotype:
-        $ref: '#/$defs/Phenotype'
+        $ref: '#/definitions/Phenotype'
       phenotype_id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
     required:
     - id
     - type
@@ -246,7 +246,7 @@ $defs:
       extensions:
         type: array
         items:
-          $ref: '#/$defs/Extension'
+          $ref: '#/definitions/Extension'
       description:
         type: string
         description: A free-text description of the value object.
@@ -254,7 +254,7 @@ $defs:
         type: array
         uniqueItems: true
         items:
-          $ref: '#/$defs/CURIE'
+          $ref: '#/definitions/CURIE'
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
@@ -262,9 +262,9 @@ $defs:
           type: string
         description: List of strings representing alternate labels for the value object.
       therapeutic:
-        $ref: '#/$defs/Therapeutic'
+        $ref: '#/definitions/Therapeutic'
       therapeutic_id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
     required:
     - id
     - type
@@ -290,7 +290,7 @@ $defs:
       extensions:
         type: array
         items:
-          $ref: '#/$defs/Extension'
+          $ref: '#/definitions/Extension'
       description:
         type: string
         description: A free-text description of the value object.
@@ -298,7 +298,7 @@ $defs:
         type: array
         uniqueItems: true
         items:
-          $ref: '#/$defs/CURIE'
+          $ref: '#/definitions/CURIE'
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
@@ -307,14 +307,14 @@ $defs:
         description: List of strings representing alternate labels for the value object.
       therapeutics_collection:
         oneOf:
-        - $ref: '#/$defs/CombinationTherapeutics'
-        - $ref: '#/$defs/SubstituteTherapeutics'
+        - $ref: '#/definitions/CombinationTherapeutics'
+        - $ref: '#/definitions/SubstituteTherapeutics'
       therapeutics_collection_id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
       member_descriptors:
         type: array
         items:
-          $ref: '#/$defs/TherapeuticDescriptor'
+          $ref: '#/definitions/TherapeuticDescriptor'
     required:
     - id
     - type
@@ -370,7 +370,7 @@ $defs:
       extensions:
         type: array
         items:
-          $ref: '#/$defs/Extension'
+          $ref: '#/definitions/Extension'
       description:
         type: string
         description: A free-text description of the value object.
@@ -378,7 +378,7 @@ $defs:
         type: array
         uniqueItems: true
         items:
-          $ref: '#/$defs/CURIE'
+          $ref: '#/definitions/CURIE'
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
@@ -390,14 +390,14 @@ $defs:
           of the Categorical Variation.
         type: array
         items:
-          $ref: '#/$defs/VariationMember'
+          $ref: '#/definitions/VariationMember'
       subject_variation_descriptor:
-        $ref: '#/$defs/VariationDescriptor'
+        $ref: '#/definitions/VariationDescriptor'
       canonical_variation_id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: This MUST be provided if *categorical_variation* is omitted.
       canonical_variation:
-        $ref: '#/$defs/CanonicalVariation'
+        $ref: '#/definitions/CanonicalVariation'
         description: This MUST be provided if *variation_id* is omitted.
     required:
     - id
@@ -415,10 +415,10 @@ $defs:
       expressions:
         type: array
         items:
-          $ref: '#/$defs/Expression'
+          $ref: '#/definitions/Expression'
         minItems: 1
       variation_id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
     required:
     - expressions
     additionalProperties: false
@@ -444,9 +444,9 @@ $defs:
       extensions:
         type: array
         items:
-          $ref: '#/$defs/Extension'
+          $ref: '#/definitions/Extension'
       is_version_of:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
       version:
         type: string
     required:
@@ -457,7 +457,7 @@ $defs:
       globally  namespaced identifiers known as "codes".
     properties:
       id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: The `coding.id` field is used to capture the code as a CURIE.
       type:
         type: string
@@ -469,9 +469,9 @@ $defs:
       extensions:
         type: array
         items:
-          $ref: '#/$defs/Extension'
+          $ref: '#/definitions/Extension'
       record_metadata:
-        $ref: '#/$defs/RecordMetadata'
+        $ref: '#/definitions/RecordMetadata'
     required:
     - type
     additionalProperties: false
@@ -513,7 +513,7 @@ $defs:
       authority is RECOMMENDED.
     properties:
       id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: The 'logical' identifier of the entity in the system of record,
           and MUST be represented as a CURIE. This 'id' is unique within a given system,
           but may also refer to an 'id' for the shared concept in  another system
@@ -533,7 +533,7 @@ $defs:
       as the disease authority is RECOMMENDED.
     properties:
       id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: The 'logical' identifier of the entity in the system of record,
           and MUST be represented as a CURIE. This 'id' is unique within a given system,
           but may also refer to an 'id' for the shared concept in  another system
@@ -554,7 +554,7 @@ $defs:
     type: object
     properties:
       id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: The 'logical' identifier of the entity in the system of record,
           and MUST be represented as a CURIE. This 'id' is unique within a given system,
           but may also refer to an 'id' for the shared concept in  another system
@@ -572,7 +572,7 @@ $defs:
     description: A set of phenotype and/or disease concepts that constitute a condition.
     properties:
       id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: The 'logical' identifier of the entity in the system of record,
           and MUST be represented as a CURIE. This 'id' is unique within a given system,
           but may also refer to an 'id' for the shared concept in  another system
@@ -585,8 +585,8 @@ $defs:
         type: array
         items:
           anyOf:
-          - $ref: '#/$defs/Disease'
-          - $ref: '#/$defs/Phenotype'
+          - $ref: '#/definitions/Disease'
+          - $ref: '#/definitions/Phenotype'
         minItems: 2
     required:
     - members
@@ -596,7 +596,7 @@ $defs:
     description: A treatment, therapy, or drug.
     properties:
       id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: The 'logical' identifier of the entity in the system of record,
           and MUST be represented as a CURIE. This 'id' is unique within a given system,
           but may also refer to an 'id' for the shared concept in  another system
@@ -614,7 +614,7 @@ $defs:
     description: A collection of therapeutics that are taken during a course of treatment.
     properties:
       id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: The 'logical' identifier of the entity in the system of record,
           and MUST be represented as a CURIE. This 'id' is unique within a given system,
           but may also refer to an 'id' for the shared concept in  another system
@@ -628,7 +628,7 @@ $defs:
         type: array
         description: The therapeutics that constitute the described collection.
         items:
-          $ref: '#/$defs/Therapeutic'
+          $ref: '#/definitions/Therapeutic'
         minItems: 2
     required:
     - members
@@ -639,7 +639,7 @@ $defs:
       entities.
     properties:
       id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: The 'logical' identifier of the entity in the system of record,
           and MUST be represented as a CURIE. This 'id' is unique within a given system,
           but may also refer to an 'id' for the shared concept in  another system
@@ -653,7 +653,7 @@ $defs:
         type: array
         description: The therapeutics that constitute the described collection.
         items:
-          $ref: '#/$defs/Therapeutic'
+          $ref: '#/definitions/Therapeutic'
         minItems: 2
     required:
     - members
@@ -662,16 +662,16 @@ $defs:
   Variation:
     description: A representation of the state of one or more biomolecules.
     oneOf:
-    - $ref: '#/$defs/MolecularVariation'
-    - $ref: '#/$defs/SystemicVariation'
-    - $ref: '#/$defs/UtilityVariation'
+    - $ref: '#/definitions/MolecularVariation'
+    - $ref: '#/definitions/SystemicVariation'
+    - $ref: '#/definitions/UtilityVariation'
     discriminator:
       propertyName: type
   MolecularVariation:
     description: A variation on a contiguous molecule.
     oneOf:
-    - $ref: '#/$defs/Allele'
-    - $ref: '#/$defs/Haplotype'
+    - $ref: '#/definitions/Allele'
+    - $ref: '#/definitions/Haplotype'
     discriminator:
       propertyName: type
   UtilityVariation:
@@ -679,17 +679,17 @@ $defs:
       a specific class of biological variation, but are necessary for some applications
       of VRS.
     oneOf:
-    - $ref: '#/$defs/Text'
-    - $ref: '#/$defs/VariationSet'
+    - $ref: '#/definitions/Text'
+    - $ref: '#/definitions/VariationSet'
     discriminator:
       propertyName: type
   SystemicVariation:
     description: A Variation of multiple molecules in the context of a system, e.g.
       a genome, sample, or homologous chromosomes.
     oneOf:
-    - $ref: '#/$defs/Genotype'
-    - $ref: '#/$defs/AbsoluteCopyNumber'
-    - $ref: '#/$defs/RelativeCopyNumber'
+    - $ref: '#/definitions/Genotype'
+    - $ref: '#/definitions/AbsoluteCopyNumber'
+    - $ref: '#/definitions/RelativeCopyNumber'
     discriminator:
       propertyName: type
   Allele:
@@ -698,7 +698,7 @@ $defs:
     type: object
     properties:
       id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: The 'logical' identifier of the entity in the system of record,
           and MUST be represented as a CURIE. This 'id' is unique within a given system,
           but may also refer to an 'id' for the shared concept in  another system
@@ -710,14 +710,14 @@ $defs:
         description: MUST be "Allele"
       location:
         oneOf:
-        - $ref: '#/$defs/CURIE'
-        - $ref: '#/$defs/Location'
+        - $ref: '#/definitions/CURIE'
+        - $ref: '#/definitions/Location'
         description: Where Allele is located
       state:
-        $ref: '#/$defs/SequenceExpression'
+        $ref: '#/definitions/SequenceExpression'
         description: An expression of the sequence state
         deprecated:
-        - $ref: '#/$defs/SequenceState'
+        - $ref: '#/definitions/SequenceState'
     required:
     - location
     - state
@@ -730,7 +730,7 @@ $defs:
     type: object
     properties:
       id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: The 'logical' identifier of the entity in the system of record,
           and MUST be represented as a CURIE. This 'id' is unique within a given system,
           but may also refer to an 'id' for the shared concept in  another system
@@ -746,8 +746,8 @@ $defs:
         uniqueItems: true
         items:
           oneOf:
-          - $ref: '#/$defs/Allele'
-          - $ref: '#/$defs/CURIE'
+          - $ref: '#/definitions/Allele'
+          - $ref: '#/definitions/CURIE'
         description: List of Alleles, or references to Alleles, that comprise this
           Haplotype.
     required:
@@ -760,7 +760,7 @@ $defs:
     type: object
     properties:
       id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: The 'logical' identifier of the entity in the system of record,
           and MUST be represented as a CURIE. This 'id' is unique within a given system,
           but may also refer to an 'id' for the shared concept in  another system
@@ -784,7 +784,7 @@ $defs:
     type: object
     properties:
       id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: The 'logical' identifier of the entity in the system of record,
           and MUST be represented as a CURIE. This 'id' is unique within a given system,
           but may also refer to an 'id' for the shared concept in  another system
@@ -799,8 +799,8 @@ $defs:
         uniqueItems: true
         items:
           oneOf:
-          - $ref: '#/$defs/CURIE'
-          - $ref: '#/$defs/Variation'
+          - $ref: '#/definitions/CURIE'
+          - $ref: '#/definitions/Variation'
         description: List of Variation objects or identifiers. Attribute is required,
           but MAY be empty.
     required:
@@ -815,7 +815,7 @@ $defs:
       etc.).
     properties:
       id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: The 'logical' identifier of the entity in the system of record,
           and MUST be represented as a CURIE. This 'id' is unique within a given system,
           but may also refer to an 'id' for the shared concept in  another system
@@ -827,14 +827,14 @@ $defs:
         description: MUST be "AbsoluteCopyNumber".
       location:
         oneOf:
-        - $ref: '#/$defs/CURIE'
-        - $ref: '#/$defs/Location'
+        - $ref: '#/definitions/CURIE'
+        - $ref: '#/definitions/Location'
         description: The location within the system.
       copies:
         oneOf:
-        - $ref: '#/$defs/Number'
-        - $ref: '#/$defs/IndefiniteRange'
-        - $ref: '#/$defs/DefiniteRange'
+        - $ref: '#/definitions/Number'
+        - $ref: '#/definitions/IndefiniteRange'
+        - $ref: '#/definitions/DefiniteRange'
         description: The integral number of copies of the subject in a system.
     required:
     - copies
@@ -850,7 +850,7 @@ $defs:
       cell, etc.).
     properties:
       id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: The 'logical' identifier of the entity in the system of record,
           and MUST be represented as a CURIE. This 'id' is unique within a given system,
           but may also refer to an 'id' for the shared concept in  another system
@@ -862,8 +862,8 @@ $defs:
         description: MUST be "RelativeCopyNumber"
       location:
         oneOf:
-        - $ref: '#/$defs/CURIE'
-        - $ref: '#/$defs/Location'
+        - $ref: '#/definitions/CURIE'
+        - $ref: '#/definitions/Location'
         description: The location within the system.
       relative_copy_class:
         type: string
@@ -886,7 +886,7 @@ $defs:
     type: object
     properties:
       id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: The 'logical' identifier of the entity in the system of record,
           and MUST be represented as a CURIE. This 'id' is unique within a given system,
           but may also refer to an 'id' for the shared concept in  another system
@@ -901,14 +901,14 @@ $defs:
         uniqueItems: true
         minItems: 1
         items:
-          $ref: '#/$defs/GenotypeMember'
+          $ref: '#/definitions/GenotypeMember'
         description: Each GenotypeMember in `members` describes a MolecularVariation
           and the count of that variation at the locus.
       count:
         oneOf:
-        - $ref: '#/$defs/Number'
-        - $ref: '#/$defs/IndefiniteRange'
-        - $ref: '#/$defs/DefiniteRange'
+        - $ref: '#/definitions/Number'
+        - $ref: '#/definitions/IndefiniteRange'
+        - $ref: '#/definitions/DefiniteRange'
         description: The total number of copies of all MolecularVariation at this
           locus, MUST be greater than or equal to the sum of GenotypeMember copy counts.
           If greater than the total counts, this implies additional  MolecularVariation
@@ -921,8 +921,8 @@ $defs:
   Location:
     description: A contiguous segment of a biological sequence.
     oneOf:
-    - $ref: '#/$defs/ChromosomeLocation'
-    - $ref: '#/$defs/SequenceLocation'
+    - $ref: '#/definitions/ChromosomeLocation'
+    - $ref: '#/definitions/SequenceLocation'
     discriminator:
       propertyName: type
   ChromosomeLocation:
@@ -931,7 +931,7 @@ $defs:
     type: object
     properties:
       id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: The 'logical' identifier of the entity in the system of record,
           and MUST be represented as a CURIE. This 'id' is unique within a given system,
           but may also refer to an 'id' for the shared concept in  another system
@@ -945,17 +945,17 @@ $defs:
         default: taxonomy:9606
         description: 'CURIE representing a species from the [NCBI species taxonomy](https://registry.identifiers.org/registry/taxonomy).
           Default: "taxonomy:9606" (human)'
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
       chr:
         type: string
         description: The symbolic chromosome name. For humans, For humans, chromosome
           names MUST be one of 1..22, X, Y (case-sensitive)
       start:
-        $ref: '#/$defs/HumanCytoband'
+        $ref: '#/definitions/HumanCytoband'
         description: The start cytoband region. MUST specify a region nearer the terminal
           end (telomere) of the chromosome p-arm than `end`.
       end:
-        $ref: '#/$defs/HumanCytoband'
+        $ref: '#/definitions/HumanCytoband'
         description: The start cytoband region. MUST specify a region nearer the terminal
           end (telomere) of the chromosome q-arm than `start`.
     required:
@@ -971,7 +971,7 @@ $defs:
     type: object
     properties:
       id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: The 'logical' identifier of the entity in the system of record,
           and MUST be represented as a CURIE. This 'id' is unique within a given system,
           but may also refer to an 'id' for the shared concept in  another system
@@ -983,20 +983,20 @@ $defs:
         description: MUST be "SequenceLocation"
       sequence_id:
         description: A VRS Computed Identifier for the reference Sequence.
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
       start:
         oneOf:
-        - $ref: '#/$defs/Number'
-        - $ref: '#/$defs/IndefiniteRange'
-        - $ref: '#/$defs/DefiniteRange'
+        - $ref: '#/definitions/Number'
+        - $ref: '#/definitions/IndefiniteRange'
+        - $ref: '#/definitions/DefiniteRange'
         description: The start coordinate or range of the SequenceLocation. The minimum
           value of this coordinate or range is 0. MUST represent a coordinate or range
           less than the value of `end`.
       end:
         oneOf:
-        - $ref: '#/$defs/Number'
-        - $ref: '#/$defs/IndefiniteRange'
-        - $ref: '#/$defs/DefiniteRange'
+        - $ref: '#/definitions/Number'
+        - $ref: '#/definitions/IndefiniteRange'
+        - $ref: '#/definitions/DefiniteRange'
         description: The end coordinate or range of the SequenceLocation. The minimum
           value of this coordinate or range is 0. MUST represent a coordinate or range
           greater than the value of `start`.
@@ -1009,10 +1009,10 @@ $defs:
   SequenceExpression:
     description: An expression describing a Sequence.
     oneOf:
-    - $ref: '#/$defs/LiteralSequenceExpression'
-    - $ref: '#/$defs/DerivedSequenceExpression'
-    - $ref: '#/$defs/RepeatedSequenceExpression'
-    - $ref: '#/$defs/ComposedSequenceExpression'
+    - $ref: '#/definitions/LiteralSequenceExpression'
+    - $ref: '#/definitions/DerivedSequenceExpression'
+    - $ref: '#/definitions/RepeatedSequenceExpression'
+    - $ref: '#/definitions/ComposedSequenceExpression'
     discriminator:
       propertyName: type
   LiteralSequenceExpression:
@@ -1025,7 +1025,7 @@ $defs:
         default: LiteralSequenceExpression
         description: MUST be "LiteralSequenceExpression"
       sequence:
-        $ref: '#/$defs/Sequence'
+        $ref: '#/definitions/Sequence'
         description: the literal Sequence expressed
     required:
     - sequence
@@ -1045,7 +1045,7 @@ $defs:
         default: DerivedSequenceExpression
         description: MUST be "DerivedSequenceExpression"
       location:
-        $ref: '#/$defs/SequenceLocation'
+        $ref: '#/definitions/SequenceLocation'
         description: The location from which the approximate sequence is derived
       reverse_complement:
         type: boolean
@@ -1067,20 +1067,20 @@ $defs:
         description: MUST be "RepeatedSequenceExpression"
       seq_expr:
         oneOf:
-        - $ref: '#/$defs/LiteralSequenceExpression'
-        - $ref: '#/$defs/DerivedSequenceExpression'
+        - $ref: '#/definitions/LiteralSequenceExpression'
+        - $ref: '#/definitions/DerivedSequenceExpression'
         description: An expression of the repeating subsequence
       count:
         oneOf:
-        - $ref: '#/$defs/Number'
-        - $ref: '#/$defs/IndefiniteRange'
-        - $ref: '#/$defs/DefiniteRange'
+        - $ref: '#/definitions/Number'
+        - $ref: '#/definitions/IndefiniteRange'
+        - $ref: '#/definitions/DefiniteRange'
         description: The count of repeated units, as an integer or inclusive range
     allOf:
     - if:
         properties:
           count:
-            $ref: '#/$defs/Number'
+            $ref: '#/definitions/Number'
       then:
         properties:
           count:
@@ -1090,7 +1090,7 @@ $defs:
     - if:
         properties:
           count:
-            $ref: '#/$defs/IndefiniteRange'
+            $ref: '#/definitions/IndefiniteRange'
       then:
         properties:
           count:
@@ -1100,7 +1100,7 @@ $defs:
     - if:
         properties:
           count:
-            $ref: '#/$defs/DefiniteRange'
+            $ref: '#/definitions/DefiniteRange'
       then:
         properties:
           count:
@@ -1132,9 +1132,9 @@ $defs:
         minItems: 2
         items:
           anyOf:
-          - $ref: '#/$defs/LiteralSequenceExpression'
-          - $ref: '#/$defs/RepeatedSequenceExpression'
-          - $ref: '#/$defs/DerivedSequenceExpression'
+          - $ref: '#/definitions/LiteralSequenceExpression'
+          - $ref: '#/definitions/RepeatedSequenceExpression'
+          - $ref: '#/definitions/DerivedSequenceExpression'
         description: An ordered list of SequenceExpression components comprising the
           expression. MUST NOT have two adjacent LiteralSequenceExpression objects.
     required:
@@ -1151,14 +1151,14 @@ $defs:
         description: MUST be "GenotypeMember".
       count:
         oneOf:
-        - $ref: '#/$defs/Number'
-        - $ref: '#/$defs/IndefiniteRange'
-        - $ref: '#/$defs/DefiniteRange'
+        - $ref: '#/definitions/Number'
+        - $ref: '#/definitions/IndefiniteRange'
+        - $ref: '#/definitions/DefiniteRange'
         description: The number of copies of the `variation` at a Genotype locus.
       variation:
         oneOf:
-        - $ref: '#/$defs/Allele'
-        - $ref: '#/$defs/Haplotype'
+        - $ref: '#/definitions/Allele'
+        - $ref: '#/definitions/Haplotype'
         description: A MolecularVariation at a Genotype locus.
     required:
     - count
@@ -1250,15 +1250,15 @@ $defs:
     description: A representation of a categorically-defined  [functional domain](https://en.wikipedia.org/wiki/Domain_of_a_function)  for
       variation, in which individual variation instances may be members.
     oneOf:
-    - $ref: '#/$defs/CanonicalVariation'
-    - $ref: '#/$defs/ComplexVariation'
+    - $ref: '#/definitions/CanonicalVariation'
+    - $ref: '#/definitions/ComplexVariation'
   ComplexVariation:
     ga4gh_prefix: CXV
     description: A categorical variation domain jointly characterized by two or more
       other categorical  variation domains.
     properties:
       id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: The 'logical' identifier of the entity in the system of record,
           and MUST be represented as a CURIE. This 'id' is unique within a given system,
           but may also refer to an 'id' for the shared concept in  another system
@@ -1270,7 +1270,7 @@ $defs:
       operands:
         type: array
         items:
-          $ref: '#/$defs/CategoricalVariation'
+          $ref: '#/definitions/CategoricalVariation'
         minItems: 2
         description: The CategoricalVariation objects that are being evaluated collectively.
       operator:
@@ -1292,7 +1292,7 @@ $defs:
       directly align.
     properties:
       id:
-        $ref: '#/$defs/CURIE'
+        $ref: '#/definitions/CURIE'
         description: The 'logical' identifier of the entity in the system of record,
           and MUST be represented as a CURIE. This 'id' is unique within a given system,
           but may also refer to an 'id' for the shared concept in  another system
@@ -1305,7 +1305,7 @@ $defs:
       canonical_context:
         description: The [VRS Variation](https://vrs.ga4gh.org/en/1.2.1/terms_and_model.html#variation)
           object to which congruency must be determined.
-        $ref: '#/$defs/Variation'
+        $ref: '#/definitions/Variation'
     required:
     - canonical_context
     - type

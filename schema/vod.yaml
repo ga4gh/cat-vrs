@@ -1,13 +1,13 @@
-$schema: http://json-schema.org/draft/2020-12/schema
+$schema: http://json-schema.org/draft-07/schema
 title: GA4GH-Value-Object-Descriptor-Definitions
 type: object
-$defs:
+definitions:
   ValueObjectDescriptor:
     description: The abstract *Value Object Descriptor* parent class. All attributes
       of this parent class are inherited by descendent classes.
     oneOf:
-    - $ref: '#/$defs/VariationDescriptor'
-    - $ref: '#/$defs/CategoricalVariationDescriptor'
+    - $ref: '#/definitions/VariationDescriptor'
+    - $ref: '#/definitions/CategoricalVariationDescriptor'
   VariationDescriptor:
     description: This descriptor class is used for describing VRS Variation value
       objects.
@@ -66,11 +66,11 @@ $defs:
           RECOMMEND a descendent term of [SO:0001537](http://www.sequenceontology.org/browser/current_release/term/SO:0001537).
         $ref: core.json#/$defs/CURIE
       expressions:
-        $ref: '#/$defs/Expression'
+        $ref: '#/definitions/Expression'
         description: Typically HGVS or ISCN nomenclature expressions. Other systems
           relevant to the description of variation MAY be used.
       vcf_record:
-        $ref: '#/$defs/VcfRecord'
+        $ref: '#/definitions/VcfRecord'
         description: A VCF Record of the variant. This SHOULD be a single allele,
           the VCF genotype (GT) field should be represented in the *allelic_state*
           attribute.
@@ -78,7 +78,7 @@ $defs:
         description: A specific gene context that applies to this variant.
         oneOf:
         - $ref: core.json#/$defs/CURIE
-        - $ref: '#/$defs/GeneDescriptor'
+        - $ref: '#/definitions/GeneDescriptor'
       vrs_ref_allele_seq:
         description: A `VRS Sequence`_ corresponding to a "ref allele", describing
           the sequence expected at a `VRS SequenceLocation`_ reference.
@@ -134,8 +134,8 @@ $defs:
         type: array
         items:
           anyOf:
-          - $ref: '#/$defs/DiseaseDescriptor'
-          - $ref: '#/$defs/PhenotypeDescriptor'
+          - $ref: '#/definitions/DiseaseDescriptor'
+          - $ref: '#/definitions/PhenotypeDescriptor'
     required:
     - id
     - type
@@ -314,7 +314,7 @@ $defs:
       member_descriptors:
         type: array
         items:
-          $ref: '#/$defs/TherapeuticDescriptor'
+          $ref: '#/definitions/TherapeuticDescriptor'
     required:
     - id
     - type
@@ -390,9 +390,9 @@ $defs:
           of the Categorical Variation.
         type: array
         items:
-          $ref: '#/$defs/VariationMember'
+          $ref: '#/definitions/VariationMember'
       subject_variation_descriptor:
-        $ref: '#/$defs/VariationDescriptor'
+        $ref: '#/definitions/VariationDescriptor'
       canonical_variation_id:
         $ref: core.json#/$defs/CURIE
         description: This MUST be provided if *categorical_variation* is omitted.
@@ -415,7 +415,7 @@ $defs:
       expressions:
         type: array
         items:
-          $ref: '#/$defs/Expression'
+          $ref: '#/definitions/Expression'
         minItems: 1
       variation_id:
         $ref: core.json#/$defs/CURIE
