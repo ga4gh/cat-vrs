@@ -451,11 +451,6 @@
          ],
          "additionalProperties": false
       },
-      "CategoricalVariationDescriptor": {
-         "description": "This descriptor class is used for describing Categorical Variation value objects.",
-         "type": "object",
-         "$ref": "#/$defs/CanonicalVariationDescriptor"
-      },
       "CanonicalVariationDescriptor": {
          "description": "This descriptor class is used for describing Canonical Variation value objects.",
          "properties": {
@@ -502,7 +497,7 @@
                "description": "VariationMember instances that fall within the functional domain of the Categorical Variation.",
                "type": "array",
                "items": {
-                  "$ref": "VariationMember"
+                  "$ref": "#/$defs/VariationMember"
                }
             },
             "subject_variation_descriptor": {

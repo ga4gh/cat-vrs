@@ -45,7 +45,7 @@ Some CanonicalVariationDescriptor attributes are inherited from :ref:`Entity`.
       - 0..m
       - List of strings representing alternate labels for the value object.
    *  - members
-      - `VariationMember <VariationMember>`_
+      - :ref:`VariationMember`
       - 0..m
       - VariationMember instances that fall within the functional domain of the Categorical Variation.
    *  - subject_variation_descriptor

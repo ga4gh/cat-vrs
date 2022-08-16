@@ -349,11 +349,6 @@ $defs:
     - type
     - value
     additionalProperties: false
-  CategoricalVariationDescriptor:
-    description: This descriptor class is used for describing Categorical Variation
-      value objects.
-    type: object
-    $ref: '#/$defs/CanonicalVariationDescriptor'
   CanonicalVariationDescriptor:
     description: This descriptor class is used for describing Canonical Variation
       value objects.
@@ -395,7 +390,7 @@ $defs:
           of the Categorical Variation.
         type: array
         items:
-          $ref: VariationMember
+          $ref: '#/$defs/VariationMember'
       subject_variation_descriptor:
         $ref: '#/$defs/VariationDescriptor'
       canonical_variation_id:

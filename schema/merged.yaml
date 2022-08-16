@@ -349,11 +349,6 @@ $defs:
     - type
     - value
     additionalProperties: false
-  CategoricalVariationDescriptor:
-    description: This descriptor class is used for describing Categorical Variation
-      value objects.
-    type: object
-    $ref: '#/$defs/CanonicalVariationDescriptor'
   CanonicalVariationDescriptor:
     description: This descriptor class is used for describing Canonical Variation
       value objects.
@@ -395,7 +390,7 @@ $defs:
           of the Categorical Variation.
         type: array
         items:
-          $ref: VariationMember
+          $ref: '#/$defs/VariationMember'
       subject_variation_descriptor:
         $ref: '#/$defs/VariationDescriptor'
       canonical_variation_id:
@@ -427,25 +422,6 @@ $defs:
     required:
     - expressions
     additionalProperties: false
-  Entity:
-    description: "Entity is the root class of \u2018core\u2019 classes model - those\
-      \ that have identifiers and other general  metadata like labels, xrefs, urls,\
-      \ descriptions, etc. All core classes descend from and inherit  its attributes."
-    oneOf:
-    - $ref: '#/$defs/ExtensibleEntity'
-    - $ref: '#/$defs/ValueEntity'
-    discriminator:
-      propertyName: type
-  ValueEntity:
-    description: ValueEntity is the root class for classes that instantiate Value
-      Objects. ValueEntity classes are not extensible and MUST NOT have optional properties.
-  DomainEntity:
-    description: An abstract ValueEntity class extended to capture specific domain
-      entities by reference to an external identifier.
-  ExtensibleEntity:
-    description: ExtensibleEntity is the root class for classes that instantiate Extensible
-      Objects. Extensible Objects are extensible using the extensions property and
-      MAY have optional properties.
   RecordMetadata:
     description: A re-usable structure that encapsulates provenance metadata that
       applies to a specific concrete record of information as encoded in a particular
@@ -634,8 +610,6 @@ $defs:
     - id
     - type
     additionalProperties: false
-  TherapeuticsCollection:
-    description: A collection of therapeutics.
   CombinationTherapeutics:
     description: A collection of therapeutics that are taken during a course of treatment.
     properties:
@@ -688,16 +662,16 @@ $defs:
   Variation:
     description: A representation of the state of one or more biomolecules.
     oneOf:
-    - $ref: '#/definitions/MolecularVariation'
-    - $ref: '#/definitions/SystemicVariation'
-    - $ref: '#/definitions/UtilityVariation'
+    - $ref: '#/$defs/MolecularVariation'
+    - $ref: '#/$defs/SystemicVariation'
+    - $ref: '#/$defs/UtilityVariation'
     discriminator:
       propertyName: type
   MolecularVariation:
     description: A variation on a contiguous molecule.
     oneOf:
-    - $ref: '#/definitions/Allele'
-    - $ref: '#/definitions/Haplotype'
+    - $ref: '#/$defs/Allele'
+    - $ref: '#/$defs/Haplotype'
     discriminator:
       propertyName: type
   UtilityVariation:
@@ -705,17 +679,17 @@ $defs:
       a specific class of biological variation, but are necessary for some applications
       of VRS.
     oneOf:
-    - $ref: '#/definitions/Text'
-    - $ref: '#/definitions/VariationSet'
+    - $ref: '#/$defs/Text'
+    - $ref: '#/$defs/VariationSet'
     discriminator:
       propertyName: type
   SystemicVariation:
     description: A Variation of multiple molecules in the context of a system, e.g.
       a genome, sample, or homologous chromosomes.
     oneOf:
-    - $ref: '#/definitions/Genotype'
-    - $ref: '#/definitions/AbsoluteCopyNumber'
-    - $ref: '#/definitions/RelativeCopyNumber'
+    - $ref: '#/$defs/Genotype'
+    - $ref: '#/$defs/AbsoluteCopyNumber'
+    - $ref: '#/$defs/RelativeCopyNumber'
     discriminator:
       propertyName: type
   Allele:
@@ -737,13 +711,13 @@ $defs:
       location:
         oneOf:
         - $ref: '#/$defs/CURIE'
-        - $ref: '#/definitions/Location'
+        - $ref: '#/$defs/Location'
         description: Where Allele is located
       state:
-        $ref: '#/definitions/SequenceExpression'
+        $ref: '#/$defs/SequenceExpression'
         description: An expression of the sequence state
         deprecated:
-        - $ref: '#/definitions/SequenceState'
+        - $ref: '#/$defs/SequenceState'
     required:
     - location
     - state
@@ -772,7 +746,7 @@ $defs:
         uniqueItems: true
         items:
           oneOf:
-          - $ref: '#/definitions/Allele'
+          - $ref: '#/$defs/Allele'
           - $ref: '#/$defs/CURIE'
         description: List of Alleles, or references to Alleles, that comprise this
           Haplotype.
@@ -826,16 +800,13 @@ $defs:
         items:
           oneOf:
           - $ref: '#/$defs/CURIE'
-          - $ref: '#/definitions/Variation'
+          - $ref: '#/$defs/Variation'
         description: List of Variation objects or identifiers. Attribute is required,
           but MAY be empty.
     required:
     - members
     - type
     additionalProperties: false
-  CopyNumber:
-    type: object
-    description: A measure of the copies of a Location within a system (e.g. a genome)
   AbsoluteCopyNumber:
     ga4gh_prefix: ACN
     type: object
@@ -857,13 +828,13 @@ $defs:
       location:
         oneOf:
         - $ref: '#/$defs/CURIE'
-        - $ref: '#/definitions/Location'
+        - $ref: '#/$defs/Location'
         description: The location within the system.
       copies:
         oneOf:
-        - $ref: '#/definitions/Number'
-        - $ref: '#/definitions/IndefiniteRange'
-        - $ref: '#/definitions/DefiniteRange'
+        - $ref: '#/$defs/Number'
+        - $ref: '#/$defs/IndefiniteRange'
+        - $ref: '#/$defs/DefiniteRange'
         description: The integral number of copies of the subject in a system.
     required:
     - copies
@@ -892,7 +863,7 @@ $defs:
       location:
         oneOf:
         - $ref: '#/$defs/CURIE'
-        - $ref: '#/definitions/Location'
+        - $ref: '#/$defs/Location'
         description: The location within the system.
       relative_copy_class:
         type: string
@@ -930,14 +901,14 @@ $defs:
         uniqueItems: true
         minItems: 1
         items:
-          $ref: '#/definitions/GenotypeMember'
+          $ref: '#/$defs/GenotypeMember'
         description: Each GenotypeMember in `members` describes a MolecularVariation
           and the count of that variation at the locus.
       count:
         oneOf:
-        - $ref: '#/definitions/Number'
-        - $ref: '#/definitions/IndefiniteRange'
-        - $ref: '#/definitions/DefiniteRange'
+        - $ref: '#/$defs/Number'
+        - $ref: '#/$defs/IndefiniteRange'
+        - $ref: '#/$defs/DefiniteRange'
         description: The total number of copies of all MolecularVariation at this
           locus, MUST be greater than or equal to the sum of GenotypeMember copy counts.
           If greater than the total counts, this implies additional  MolecularVariation
@@ -950,8 +921,8 @@ $defs:
   Location:
     description: A contiguous segment of a biological sequence.
     oneOf:
-    - $ref: '#/definitions/ChromosomeLocation'
-    - $ref: '#/definitions/SequenceLocation'
+    - $ref: '#/$defs/ChromosomeLocation'
+    - $ref: '#/$defs/SequenceLocation'
     discriminator:
       propertyName: type
   ChromosomeLocation:
@@ -980,17 +951,18 @@ $defs:
         description: The symbolic chromosome name. For humans, For humans, chromosome
           names MUST be one of 1..22, X, Y (case-sensitive)
       start:
-        $ref: '#/definitions/HumanCytoband'
+        $ref: '#/$defs/HumanCytoband'
         description: The start cytoband region. MUST specify a region nearer the terminal
           end (telomere) of the chromosome p-arm than `end`.
       end:
-        $ref: '#/definitions/HumanCytoband'
+        $ref: '#/$defs/HumanCytoband'
         description: The start cytoband region. MUST specify a region nearer the terminal
           end (telomere) of the chromosome q-arm than `start`.
     required:
     - chr
-    - interval
+    - end
     - species_id
+    - start
     - type
     additionalProperties: false
   SequenceLocation:
@@ -1014,17 +986,17 @@ $defs:
         $ref: '#/$defs/CURIE'
       start:
         oneOf:
-        - $ref: '#/definitions/Number'
-        - $ref: '#/definitions/IndefiniteRange'
-        - $ref: '#/definitions/DefiniteRange'
+        - $ref: '#/$defs/Number'
+        - $ref: '#/$defs/IndefiniteRange'
+        - $ref: '#/$defs/DefiniteRange'
         description: The start coordinate or range of the SequenceLocation. The minimum
           value of this coordinate or range is 0. MUST represent a coordinate or range
           less than the value of `end`.
       end:
         oneOf:
-        - $ref: '#/definitions/Number'
-        - $ref: '#/definitions/IndefiniteRange'
-        - $ref: '#/definitions/DefiniteRange'
+        - $ref: '#/$defs/Number'
+        - $ref: '#/$defs/IndefiniteRange'
+        - $ref: '#/$defs/DefiniteRange'
         description: The end coordinate or range of the SequenceLocation. The minimum
           value of this coordinate or range is 0. MUST represent a coordinate or range
           greater than the value of `start`.
@@ -1037,10 +1009,10 @@ $defs:
   SequenceExpression:
     description: An expression describing a Sequence.
     oneOf:
-    - $ref: '#/definitions/LiteralSequenceExpression'
-    - $ref: '#/definitions/DerivedSequenceExpression'
-    - $ref: '#/definitions/RepeatedSequenceExpression'
-    - $ref: '#/definitions/ComposedSequenceExpression'
+    - $ref: '#/$defs/LiteralSequenceExpression'
+    - $ref: '#/$defs/DerivedSequenceExpression'
+    - $ref: '#/$defs/RepeatedSequenceExpression'
+    - $ref: '#/$defs/ComposedSequenceExpression'
     discriminator:
       propertyName: type
   LiteralSequenceExpression:
@@ -1053,7 +1025,7 @@ $defs:
         default: LiteralSequenceExpression
         description: MUST be "LiteralSequenceExpression"
       sequence:
-        $ref: '#/definitions/Sequence'
+        $ref: '#/$defs/Sequence'
         description: the literal Sequence expressed
     required:
     - sequence
@@ -1073,7 +1045,7 @@ $defs:
         default: DerivedSequenceExpression
         description: MUST be "DerivedSequenceExpression"
       location:
-        $ref: '#/definitions/SequenceLocation'
+        $ref: '#/$defs/SequenceLocation'
         description: The location from which the approximate sequence is derived
       reverse_complement:
         type: boolean
@@ -1095,20 +1067,20 @@ $defs:
         description: MUST be "RepeatedSequenceExpression"
       seq_expr:
         oneOf:
-        - $ref: '#/definitions/LiteralSequenceExpression'
-        - $ref: '#/definitions/DerivedSequenceExpression'
+        - $ref: '#/$defs/LiteralSequenceExpression'
+        - $ref: '#/$defs/DerivedSequenceExpression'
         description: An expression of the repeating subsequence
       count:
         oneOf:
-        - $ref: '#/definitions/Number'
-        - $ref: '#/definitions/IndefiniteRange'
-        - $ref: '#/definitions/DefiniteRange'
+        - $ref: '#/$defs/Number'
+        - $ref: '#/$defs/IndefiniteRange'
+        - $ref: '#/$defs/DefiniteRange'
         description: The count of repeated units, as an integer or inclusive range
     allOf:
     - if:
         properties:
           count:
-            $ref: '#/definitions/Number'
+            $ref: '#/$defs/Number'
       then:
         properties:
           count:
@@ -1118,7 +1090,7 @@ $defs:
     - if:
         properties:
           count:
-            $ref: '#/definitions/IndefiniteRange'
+            $ref: '#/$defs/IndefiniteRange'
       then:
         properties:
           count:
@@ -1128,7 +1100,7 @@ $defs:
     - if:
         properties:
           count:
-            $ref: '#/definitions/DefiniteRange'
+            $ref: '#/$defs/DefiniteRange'
       then:
         properties:
           count:
@@ -1160,9 +1132,9 @@ $defs:
         minItems: 2
         items:
           anyOf:
-          - $ref: '#/definitions/LiteralSequenceExpression'
-          - $ref: '#/definitions/RepeatedSequenceExpression'
-          - $ref: '#/definitions/DerivedSequenceExpression'
+          - $ref: '#/$defs/LiteralSequenceExpression'
+          - $ref: '#/$defs/RepeatedSequenceExpression'
+          - $ref: '#/$defs/DerivedSequenceExpression'
         description: An ordered list of SequenceExpression components comprising the
           expression. MUST NOT have two adjacent LiteralSequenceExpression objects.
     required:
@@ -1179,14 +1151,14 @@ $defs:
         description: MUST be "GenotypeMember".
       count:
         oneOf:
-        - $ref: '#/definitions/Number'
-        - $ref: '#/definitions/IndefiniteRange'
-        - $ref: '#/definitions/DefiniteRange'
+        - $ref: '#/$defs/Number'
+        - $ref: '#/$defs/IndefiniteRange'
+        - $ref: '#/$defs/DefiniteRange'
         description: The number of copies of the `variation` at a Genotype locus.
       variation:
         oneOf:
-        - $ref: '#/definitions/Allele'
-        - $ref: '#/definitions/Haplotype'
+        - $ref: '#/$defs/Allele'
+        - $ref: '#/$defs/Haplotype'
         description: A MolecularVariation at a Genotype locus.
     required:
     - count

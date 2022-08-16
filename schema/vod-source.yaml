@@ -226,7 +226,6 @@ $defs:
     description: >-
       This descriptor class is used for describing Categorical Variation value objects.
     type: object
-    $ref: "#/$defs/CanonicalVariationDescriptor"
     heritable_properties:
       categorical_variation_id:
         extends: value_id
@@ -235,7 +234,7 @@ $defs:
           This MUST be provided if *categorical_variation* is omitted.
       categorical_variation:
         extends: value
-        $ref: catvars.json/$defs/CategoricalVariation
+        $ref_curie: catvars:CategoricalVariation
         description: >-
           This MUST be provided if *variation_id* is omitted.
       members:
@@ -244,7 +243,7 @@ $defs:
           of the Categorical Variation.
         type: array
         items:
-          $ref: VariationMember
+          $ref: "#/$defs/VariationMember"
 
   CanonicalVariationDescriptor:
     inherits: CategoricalVariationDescriptor
