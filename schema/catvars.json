@@ -31,7 +31,14 @@
                "type": "array",
                "ordered": false,
                "items": {
-                  "$ref": "#/$defs/CategoricalVariation"
+                  "oneOf": [
+                     {
+                        "$ref": "#/$defs/CanonicalVariation"
+                     },
+                     {
+                        "$ref": "#/$defs/ComplexVariation"
+                     }
+                  ]
                },
                "minItems": 2,
                "description": "The CategoricalVariation objects that are being evaluated collectively."

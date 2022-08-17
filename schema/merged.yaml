@@ -888,8 +888,14 @@ definitions:
         uniqueItems: true
         items:
           oneOf:
+          - $ref: '#/definitions/AbsoluteCopyNumber'
+          - $ref: '#/definitions/Allele'
           - $ref: '#/definitions/CURIE'
-          - $ref: '#/definitions/Variation'
+          - $ref: '#/definitions/Genotype'
+          - $ref: '#/definitions/Haplotype'
+          - $ref: '#/definitions/RelativeCopyNumber'
+          - $ref: '#/definitions/Text'
+          - $ref: '#/definitions/VariationSet'
         description: List of Variation objects or identifiers. Attribute is required,
           but MAY be empty.
     required:
@@ -1364,7 +1370,9 @@ definitions:
         type: array
         ordered: false
         items:
-          $ref: '#/definitions/CategoricalVariation'
+          oneOf:
+          - $ref: '#/definitions/CanonicalVariation'
+          - $ref: '#/definitions/ComplexVariation'
         minItems: 2
         description: The CategoricalVariation objects that are being evaluated collectively.
       operator:
