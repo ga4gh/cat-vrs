@@ -29,6 +29,7 @@
             },
             "operands": {
                "type": "array",
+               "ordered": false,
                "items": {
                   "$ref": "#/$defs/CategoricalVariation"
                },

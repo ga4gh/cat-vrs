@@ -37,6 +37,7 @@
             },
             "extensions": {
                "type": "array",
+               "ordered": true,
                "items": {
                   "$ref": "#/definitions/Extension"
                }
@@ -47,6 +48,7 @@
             },
             "xrefs": {
                "type": "array",
+               "ordered": false,
                "uniqueItems": true,
                "items": {
                   "$ref": "#/definitions/CURIE"
@@ -55,6 +57,7 @@
             },
             "alternate_labels": {
                "type": "array",
+               "ordered": false,
                "items": {
                   "type": "string"
                },
@@ -65,8 +68,30 @@
                "description": "This SHOULD be provided if *variation* is omitted."
             },
             "variation": {
-               "$ref": "#/definitions/Variation",
-               "description": "This SHOULD be provided if *variation_id* is omitted."
+               "description": "This SHOULD be provided if *variation_id* is omitted.",
+               "oneOf": [
+                  {
+                     "$ref": "#/definitions/AbsoluteCopyNumber"
+                  },
+                  {
+                     "$ref": "#/definitions/Allele"
+                  },
+                  {
+                     "$ref": "#/definitions/Genotype"
+                  },
+                  {
+                     "$ref": "#/definitions/Haplotype"
+                  },
+                  {
+                     "$ref": "#/definitions/RelativeCopyNumber"
+                  },
+                  {
+                     "$ref": "#/definitions/Text"
+                  },
+                  {
+                     "$ref": "#/definitions/VariationSet"
+                  }
+               ]
             },
             "molecule_context": {
                "type": "string",
@@ -129,6 +154,7 @@
             },
             "extensions": {
                "type": "array",
+               "ordered": true,
                "items": {
                   "$ref": "#/definitions/Extension"
                }
@@ -139,6 +165,7 @@
             },
             "xrefs": {
                "type": "array",
+               "ordered": false,
                "uniqueItems": true,
                "items": {
                   "$ref": "#/definitions/CURIE"
@@ -147,6 +174,7 @@
             },
             "alternate_labels": {
                "type": "array",
+               "ordered": false,
                "items": {
                   "type": "string"
                },
@@ -160,6 +188,7 @@
             },
             "member_descriptors": {
                "type": "array",
+               "ordered": false,
                "items": {
                   "anyOf": [
                      {
@@ -197,6 +226,7 @@
             },
             "extensions": {
                "type": "array",
+               "ordered": true,
                "items": {
                   "$ref": "#/definitions/Extension"
                }
@@ -207,6 +237,7 @@
             },
             "xrefs": {
                "type": "array",
+               "ordered": false,
                "uniqueItems": true,
                "items": {
                   "$ref": "#/definitions/CURIE"
@@ -215,6 +246,7 @@
             },
             "alternate_labels": {
                "type": "array",
+               "ordered": false,
                "items": {
                   "type": "string"
                },
@@ -252,6 +284,7 @@
             },
             "extensions": {
                "type": "array",
+               "ordered": true,
                "items": {
                   "$ref": "#/definitions/Extension"
                }
@@ -262,6 +295,7 @@
             },
             "xrefs": {
                "type": "array",
+               "ordered": false,
                "uniqueItems": true,
                "items": {
                   "$ref": "#/definitions/CURIE"
@@ -270,6 +304,7 @@
             },
             "alternate_labels": {
                "type": "array",
+               "ordered": false,
                "items": {
                   "type": "string"
                },
@@ -307,6 +342,7 @@
             },
             "extensions": {
                "type": "array",
+               "ordered": true,
                "items": {
                   "$ref": "#/definitions/Extension"
                }
@@ -317,6 +353,7 @@
             },
             "xrefs": {
                "type": "array",
+               "ordered": false,
                "uniqueItems": true,
                "items": {
                   "$ref": "#/definitions/CURIE"
@@ -325,6 +362,7 @@
             },
             "alternate_labels": {
                "type": "array",
+               "ordered": false,
                "items": {
                   "type": "string"
                },
@@ -362,6 +400,7 @@
             },
             "extensions": {
                "type": "array",
+               "ordered": true,
                "items": {
                   "$ref": "#/definitions/Extension"
                }
@@ -372,6 +411,7 @@
             },
             "xrefs": {
                "type": "array",
+               "ordered": false,
                "uniqueItems": true,
                "items": {
                   "$ref": "#/definitions/CURIE"
@@ -380,6 +420,7 @@
             },
             "alternate_labels": {
                "type": "array",
+               "ordered": false,
                "items": {
                   "type": "string"
                },
@@ -417,6 +458,7 @@
             },
             "extensions": {
                "type": "array",
+               "ordered": true,
                "items": {
                   "$ref": "#/definitions/Extension"
                }
@@ -427,6 +469,7 @@
             },
             "xrefs": {
                "type": "array",
+               "ordered": false,
                "uniqueItems": true,
                "items": {
                   "$ref": "#/definitions/CURIE"
@@ -435,6 +478,7 @@
             },
             "alternate_labels": {
                "type": "array",
+               "ordered": false,
                "items": {
                   "type": "string"
                },
@@ -455,6 +499,7 @@
             },
             "member_descriptors": {
                "type": "array",
+               "ordered": false,
                "items": {
                   "$ref": "#/definitions/TherapeuticDescriptor"
                }
@@ -530,6 +575,7 @@
             },
             "extensions": {
                "type": "array",
+               "ordered": true,
                "items": {
                   "$ref": "#/definitions/Extension"
                }
@@ -540,6 +586,7 @@
             },
             "xrefs": {
                "type": "array",
+               "ordered": false,
                "uniqueItems": true,
                "items": {
                   "$ref": "#/definitions/CURIE"
@@ -548,6 +595,7 @@
             },
             "alternate_labels": {
                "type": "array",
+               "ordered": false,
                "items": {
                   "type": "string"
                },
@@ -556,6 +604,7 @@
             "members": {
                "description": "VariationMember instances that fall within the functional domain of the Categorical Variation.",
                "type": "array",
+               "ordered": false,
                "items": {
                   "$ref": "#/definitions/VariationMember"
                }
@@ -588,6 +637,7 @@
             },
             "expressions": {
                "type": "array",
+               "ordered": false,
                "items": {
                   "$ref": "#/definitions/Expression"
                },
@@ -620,6 +670,7 @@
             },
             "extensions": {
                "type": "array",
+               "ordered": true,
                "items": {
                   "$ref": "#/definitions/Extension"
                }
@@ -654,6 +705,7 @@
             },
             "extensions": {
                "type": "array",
+               "ordered": true,
                "items": {
                   "$ref": "#/definitions/Extension"
                }
@@ -776,6 +828,7 @@
             },
             "members": {
                "type": "array",
+               "ordered": false,
                "items": {
                   "anyOf": [
                      {
@@ -830,6 +883,7 @@
             },
             "members": {
                "type": "array",
+               "ordered": false,
                "description": "The therapeutics that constitute the described collection.",
                "items": {
                   "$ref": "#/definitions/Therapeutic"
@@ -858,6 +912,7 @@
             },
             "members": {
                "type": "array",
+               "ordered": false,
                "description": "The therapeutics that constitute the described collection.",
                "items": {
                   "$ref": "#/definitions/Therapeutic"
@@ -954,17 +1009,28 @@
                      "$ref": "#/definitions/CURIE"
                   },
                   {
-                     "$ref": "#/definitions/Location"
+                     "$ref": "#/definitions/ChromosomeLocation"
+                  },
+                  {
+                     "$ref": "#/definitions/SequenceLocation"
                   }
                ],
                "description": "Where Allele is located"
             },
             "state": {
-               "$ref": "#/definitions/SequenceExpression",
                "description": "An expression of the sequence state",
-               "deprecated": [
+               "oneOf": [
                   {
-                     "$ref": "#/definitions/SequenceState"
+                     "$ref": "#/definitions/ComposedSequenceExpression"
+                  },
+                  {
+                     "$ref": "#/definitions/DerivedSequenceExpression"
+                  },
+                  {
+                     "$ref": "#/definitions/LiteralSequenceExpression"
+                  },
+                  {
+                     "$ref": "#/definitions/RepeatedSequenceExpression"
                   }
                ]
             }
@@ -993,6 +1059,7 @@
             },
             "members": {
                "type": "array",
+               "ordered": false,
                "minItems": 2,
                "uniqueItems": true,
                "items": {
@@ -1057,6 +1124,7 @@
             },
             "members": {
                "type": "array",
+               "ordered": false,
                "uniqueItems": true,
                "items": {
                   "oneOf": [
@@ -1098,7 +1166,10 @@
                      "$ref": "#/definitions/CURIE"
                   },
                   {
-                     "$ref": "#/definitions/Location"
+                     "$ref": "#/definitions/ChromosomeLocation"
+                  },
+                  {
+                     "$ref": "#/definitions/SequenceLocation"
                   }
                ],
                "description": "The location within the system."
@@ -1106,13 +1177,13 @@
             "copies": {
                "oneOf": [
                   {
-                     "$ref": "#/definitions/Number"
+                     "$ref": "#/definitions/DefiniteRange"
                   },
                   {
                      "$ref": "#/definitions/IndefiniteRange"
                   },
                   {
-                     "$ref": "#/definitions/DefiniteRange"
+                     "$ref": "#/definitions/Number"
                   }
                ],
                "description": "The integral number of copies of the subject in a system."
@@ -1147,7 +1218,10 @@
                      "$ref": "#/definitions/CURIE"
                   },
                   {
-                     "$ref": "#/definitions/Location"
+                     "$ref": "#/definitions/ChromosomeLocation"
+                  },
+                  {
+                     "$ref": "#/definitions/SequenceLocation"
                   }
                ],
                "description": "The location within the system."
@@ -1188,6 +1262,7 @@
             },
             "members": {
                "type": "array",
+               "ordered": false,
                "uniqueItems": true,
                "minItems": 1,
                "items": {
@@ -1198,13 +1273,13 @@
             "count": {
                "oneOf": [
                   {
-                     "$ref": "#/definitions/Number"
+                     "$ref": "#/definitions/DefiniteRange"
                   },
                   {
                      "$ref": "#/definitions/IndefiniteRange"
                   },
                   {
-                     "$ref": "#/definitions/DefiniteRange"
+                     "$ref": "#/definitions/Number"
                   }
                ],
                "description": "The total number of copies of all MolecularVariation at this locus, MUST be greater than or equal to the sum of GenotypeMember copy counts. If greater than the total counts, this implies additional  MolecularVariation that are expected to exist but are not explicitly indicated."
@@ -1295,13 +1370,13 @@
             "start": {
                "oneOf": [
                   {
-                     "$ref": "#/definitions/Number"
+                     "$ref": "#/definitions/DefiniteRange"
                   },
                   {
                      "$ref": "#/definitions/IndefiniteRange"
                   },
                   {
-                     "$ref": "#/definitions/DefiniteRange"
+                     "$ref": "#/definitions/Number"
                   }
                ],
                "description": "The start coordinate or range of the SequenceLocation. The minimum value of this coordinate or range is 0. MUST represent a coordinate or range less than the value of `end`."
@@ -1309,13 +1384,13 @@
             "end": {
                "oneOf": [
                   {
-                     "$ref": "#/definitions/Number"
+                     "$ref": "#/definitions/DefiniteRange"
                   },
                   {
                      "$ref": "#/definitions/IndefiniteRange"
                   },
                   {
-                     "$ref": "#/definitions/DefiniteRange"
+                     "$ref": "#/definitions/Number"
                   }
                ],
                "description": "The end coordinate or range of the SequenceLocation. The minimum value of this coordinate or range is 0. MUST represent a coordinate or range greater than the value of `start`."
@@ -1409,10 +1484,10 @@
             "seq_expr": {
                "oneOf": [
                   {
-                     "$ref": "#/definitions/LiteralSequenceExpression"
+                     "$ref": "#/definitions/DerivedSequenceExpression"
                   },
                   {
-                     "$ref": "#/definitions/DerivedSequenceExpression"
+                     "$ref": "#/definitions/LiteralSequenceExpression"
                   }
                ],
                "description": "An expression of the repeating subsequence"
@@ -1420,13 +1495,13 @@
             "count": {
                "oneOf": [
                   {
-                     "$ref": "#/definitions/Number"
+                     "$ref": "#/definitions/DefiniteRange"
                   },
                   {
                      "$ref": "#/definitions/IndefiniteRange"
                   },
                   {
-                     "$ref": "#/definitions/DefiniteRange"
+                     "$ref": "#/definitions/Number"
                   }
                ],
                "description": "The count of repeated units, as an integer or inclusive range"
@@ -1517,6 +1592,7 @@
             },
             "components": {
                "type": "array",
+               "ordered": true,
                "uniqueItems": true,
                "minItems": 2,
                "items": {
@@ -1552,13 +1628,13 @@
             "count": {
                "oneOf": [
                   {
-                     "$ref": "#/definitions/Number"
+                     "$ref": "#/definitions/DefiniteRange"
                   },
                   {
                      "$ref": "#/definitions/IndefiniteRange"
                   },
                   {
-                     "$ref": "#/definitions/DefiniteRange"
+                     "$ref": "#/definitions/Number"
                   }
                ],
                "description": "The number of copies of the `variation` at a Genotype locus."
@@ -1700,6 +1776,7 @@
             },
             "operands": {
                "type": "array",
+               "ordered": false,
                "items": {
                   "$ref": "#/definitions/CategoricalVariation"
                },
@@ -1738,7 +1815,29 @@
             },
             "canonical_context": {
                "description": "The [VRS Variation](https://vrs.ga4gh.org/en/1.2.1/terms_and_model.html#variation) object to which congruency must be determined.",
-               "$ref": "#/definitions/Variation"
+               "oneOf": [
+                  {
+                     "$ref": "#/definitions/AbsoluteCopyNumber"
+                  },
+                  {
+                     "$ref": "#/definitions/Allele"
+                  },
+                  {
+                     "$ref": "#/definitions/Genotype"
+                  },
+                  {
+                     "$ref": "#/definitions/Haplotype"
+                  },
+                  {
+                     "$ref": "#/definitions/RelativeCopyNumber"
+                  },
+                  {
+                     "$ref": "#/definitions/Text"
+                  },
+                  {
+                     "$ref": "#/definitions/VariationSet"
+                  }
+               ]
             }
          },
          "required": [

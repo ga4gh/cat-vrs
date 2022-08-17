@@ -37,6 +37,7 @@ definitions:
           A free-text description of the value object.
       xrefs:
         type: array
+        ordered: false
         uniqueItems: true
         items:
           $ref_curie: "gks.core:CURIE"
@@ -44,6 +45,7 @@ definitions:
           List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
+        ordered: false
         items:
           type: string
         description: >-
@@ -124,6 +126,7 @@ definitions:
         extends: value_id
       member_descriptors:
         type: array
+        ordered: false
         items:
           anyOf:
             - $ref: "#/definitions/DiseaseDescriptor"
@@ -212,6 +215,7 @@ definitions:
         extends: value_id
       member_descriptors:
         type: array
+        ordered: false
         items:
           $ref: "#/definitions/TherapeuticDescriptor"
 
@@ -255,6 +259,7 @@ definitions:
           VariationMember instances that fall within the functional domain
           of the Categorical Variation.
         type: array
+        ordered: false
         items:
           $ref: "#/definitions/VariationMember"
 
@@ -288,6 +293,7 @@ definitions:
         description: MUST be "VariationMember"
       expressions:
         type: array
+        ordered: false
         items:
           $ref: "#/definitions/Expression"
         minItems: 1

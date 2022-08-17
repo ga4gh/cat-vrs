@@ -31,6 +31,7 @@ definitions:
         description: A primary label for the value object.
       extensions:
         type: array
+        ordered: true
         items:
           $ref: core.json#/$defs/Extension
       description:
@@ -38,12 +39,14 @@ definitions:
         description: A free-text description of the value object.
       xrefs:
         type: array
+        ordered: false
         uniqueItems: true
         items:
           $ref: core.json#/$defs/CURIE
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
+        ordered: false
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
@@ -72,8 +75,8 @@ definitions:
       gene_context:
         description: A specific gene context that applies to this variant.
         oneOf:
-        - $ref: core.json#/$defs/CURIE
         - $ref: '#/definitions/GeneDescriptor'
+        - $ref: core.json#/$defs/CURIE
       vrs_ref_allele_seq:
         description: A `VRS Sequence`_ corresponding to a "ref allele", describing
           the sequence expected at a `VRS SequenceLocation`_ reference.
@@ -105,6 +108,7 @@ definitions:
         description: A primary label for the value object.
       extensions:
         type: array
+        ordered: true
         items:
           $ref: core.json#/$defs/Extension
       description:
@@ -112,12 +116,14 @@ definitions:
         description: A free-text description of the value object.
       xrefs:
         type: array
+        ordered: false
         uniqueItems: true
         items:
           $ref: core.json#/$defs/CURIE
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
+        ordered: false
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
@@ -127,6 +133,7 @@ definitions:
         $ref: core.json#/$defs/CURIE
       member_descriptors:
         type: array
+        ordered: false
         items:
           anyOf:
           - $ref: '#/definitions/DiseaseDescriptor'
@@ -154,6 +161,7 @@ definitions:
         description: A primary label for the value object.
       extensions:
         type: array
+        ordered: true
         items:
           $ref: core.json#/$defs/Extension
       description:
@@ -161,12 +169,14 @@ definitions:
         description: A free-text description of the value object.
       xrefs:
         type: array
+        ordered: false
         uniqueItems: true
         items:
           $ref: core.json#/$defs/CURIE
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
+        ordered: false
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
@@ -197,6 +207,7 @@ definitions:
         description: A primary label for the value object.
       extensions:
         type: array
+        ordered: true
         items:
           $ref: core.json#/$defs/Extension
       description:
@@ -204,12 +215,14 @@ definitions:
         description: A free-text description of the value object.
       xrefs:
         type: array
+        ordered: false
         uniqueItems: true
         items:
           $ref: core.json#/$defs/CURIE
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
+        ordered: false
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
@@ -240,6 +253,7 @@ definitions:
         description: A primary label for the value object.
       extensions:
         type: array
+        ordered: true
         items:
           $ref: core.json#/$defs/Extension
       description:
@@ -247,12 +261,14 @@ definitions:
         description: A free-text description of the value object.
       xrefs:
         type: array
+        ordered: false
         uniqueItems: true
         items:
           $ref: core.json#/$defs/CURIE
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
+        ordered: false
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
@@ -283,6 +299,7 @@ definitions:
         description: A primary label for the value object.
       extensions:
         type: array
+        ordered: true
         items:
           $ref: core.json#/$defs/Extension
       description:
@@ -290,12 +307,14 @@ definitions:
         description: A free-text description of the value object.
       xrefs:
         type: array
+        ordered: false
         uniqueItems: true
         items:
           $ref: core.json#/$defs/CURIE
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
+        ordered: false
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
@@ -327,6 +346,7 @@ definitions:
         description: A primary label for the value object.
       extensions:
         type: array
+        ordered: true
         items:
           $ref: core.json#/$defs/Extension
       description:
@@ -334,12 +354,14 @@ definitions:
         description: A free-text description of the value object.
       xrefs:
         type: array
+        ordered: false
         uniqueItems: true
         items:
           $ref: core.json#/$defs/CURIE
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
+        ordered: false
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
@@ -351,6 +373,7 @@ definitions:
         $ref: core.json#/$defs/CURIE
       member_descriptors:
         type: array
+        ordered: false
         items:
           $ref: '#/definitions/TherapeuticDescriptor'
     required:
@@ -413,6 +436,7 @@ definitions:
         description: A primary label for the value object.
       extensions:
         type: array
+        ordered: true
         items:
           $ref: core.json#/$defs/Extension
       description:
@@ -420,12 +444,14 @@ definitions:
         description: A free-text description of the value object.
       xrefs:
         type: array
+        ordered: false
         uniqueItems: true
         items:
           $ref: core.json#/$defs/CURIE
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
+        ordered: false
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
@@ -433,6 +459,7 @@ definitions:
         description: VariationMember instances that fall within the functional domain
           of the Categorical Variation.
         type: array
+        ordered: false
         items:
           $ref: '#/definitions/VariationMember'
       subject_variation_descriptor:
@@ -458,6 +485,7 @@ definitions:
         description: MUST be "VariationMember"
       expressions:
         type: array
+        ordered: false
         items:
           $ref: '#/definitions/Expression'
         minItems: 1

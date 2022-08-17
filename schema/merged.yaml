@@ -31,6 +31,7 @@ definitions:
         description: A primary label for the value object.
       extensions:
         type: array
+        ordered: true
         items:
           $ref: '#/definitions/Extension'
       description:
@@ -38,12 +39,14 @@ definitions:
         description: A free-text description of the value object.
       xrefs:
         type: array
+        ordered: false
         uniqueItems: true
         items:
           $ref: '#/definitions/CURIE'
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
+        ordered: false
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
@@ -51,8 +54,15 @@ definitions:
         $ref: '#/definitions/CURIE'
         description: This SHOULD be provided if *variation* is omitted.
       variation:
-        $ref: '#/definitions/Variation'
         description: This SHOULD be provided if *variation_id* is omitted.
+        oneOf:
+        - $ref: '#/definitions/AbsoluteCopyNumber'
+        - $ref: '#/definitions/Allele'
+        - $ref: '#/definitions/Genotype'
+        - $ref: '#/definitions/Haplotype'
+        - $ref: '#/definitions/RelativeCopyNumber'
+        - $ref: '#/definitions/Text'
+        - $ref: '#/definitions/VariationSet'
       molecule_context:
         type: string
         enum:
@@ -105,6 +115,7 @@ definitions:
         description: A primary label for the value object.
       extensions:
         type: array
+        ordered: true
         items:
           $ref: '#/definitions/Extension'
       description:
@@ -112,12 +123,14 @@ definitions:
         description: A free-text description of the value object.
       xrefs:
         type: array
+        ordered: false
         uniqueItems: true
         items:
           $ref: '#/definitions/CURIE'
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
+        ordered: false
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
@@ -127,6 +140,7 @@ definitions:
         $ref: '#/definitions/CURIE'
       member_descriptors:
         type: array
+        ordered: false
         items:
           anyOf:
           - $ref: '#/definitions/DiseaseDescriptor'
@@ -154,6 +168,7 @@ definitions:
         description: A primary label for the value object.
       extensions:
         type: array
+        ordered: true
         items:
           $ref: '#/definitions/Extension'
       description:
@@ -161,12 +176,14 @@ definitions:
         description: A free-text description of the value object.
       xrefs:
         type: array
+        ordered: false
         uniqueItems: true
         items:
           $ref: '#/definitions/CURIE'
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
+        ordered: false
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
@@ -197,6 +214,7 @@ definitions:
         description: A primary label for the value object.
       extensions:
         type: array
+        ordered: true
         items:
           $ref: '#/definitions/Extension'
       description:
@@ -204,12 +222,14 @@ definitions:
         description: A free-text description of the value object.
       xrefs:
         type: array
+        ordered: false
         uniqueItems: true
         items:
           $ref: '#/definitions/CURIE'
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
+        ordered: false
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
@@ -240,6 +260,7 @@ definitions:
         description: A primary label for the value object.
       extensions:
         type: array
+        ordered: true
         items:
           $ref: '#/definitions/Extension'
       description:
@@ -247,12 +268,14 @@ definitions:
         description: A free-text description of the value object.
       xrefs:
         type: array
+        ordered: false
         uniqueItems: true
         items:
           $ref: '#/definitions/CURIE'
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
+        ordered: false
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
@@ -283,6 +306,7 @@ definitions:
         description: A primary label for the value object.
       extensions:
         type: array
+        ordered: true
         items:
           $ref: '#/definitions/Extension'
       description:
@@ -290,12 +314,14 @@ definitions:
         description: A free-text description of the value object.
       xrefs:
         type: array
+        ordered: false
         uniqueItems: true
         items:
           $ref: '#/definitions/CURIE'
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
+        ordered: false
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
@@ -327,6 +353,7 @@ definitions:
         description: A primary label for the value object.
       extensions:
         type: array
+        ordered: true
         items:
           $ref: '#/definitions/Extension'
       description:
@@ -334,12 +361,14 @@ definitions:
         description: A free-text description of the value object.
       xrefs:
         type: array
+        ordered: false
         uniqueItems: true
         items:
           $ref: '#/definitions/CURIE'
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
+        ordered: false
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
@@ -351,6 +380,7 @@ definitions:
         $ref: '#/definitions/CURIE'
       member_descriptors:
         type: array
+        ordered: false
         items:
           $ref: '#/definitions/TherapeuticDescriptor'
     required:
@@ -413,6 +443,7 @@ definitions:
         description: A primary label for the value object.
       extensions:
         type: array
+        ordered: true
         items:
           $ref: '#/definitions/Extension'
       description:
@@ -420,12 +451,14 @@ definitions:
         description: A free-text description of the value object.
       xrefs:
         type: array
+        ordered: false
         uniqueItems: true
         items:
           $ref: '#/definitions/CURIE'
         description: List of CURIEs representing associated concepts.
       alternate_labels:
         type: array
+        ordered: false
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
@@ -433,6 +466,7 @@ definitions:
         description: VariationMember instances that fall within the functional domain
           of the Categorical Variation.
         type: array
+        ordered: false
         items:
           $ref: '#/definitions/VariationMember'
       subject_variation_descriptor:
@@ -458,6 +492,7 @@ definitions:
         description: MUST be "VariationMember"
       expressions:
         type: array
+        ordered: false
         items:
           $ref: '#/definitions/Expression'
         minItems: 1
@@ -487,6 +522,7 @@ definitions:
         type: string
       extensions:
         type: array
+        ordered: true
         items:
           $ref: '#/definitions/Extension'
       is_version_of:
@@ -512,6 +548,7 @@ definitions:
         type: string
       extensions:
         type: array
+        ordered: true
         items:
           $ref: '#/definitions/Extension'
       record_metadata:
@@ -627,6 +664,7 @@ definitions:
           be the name of a class from  the VA schema.
       members:
         type: array
+        ordered: false
         items:
           anyOf:
           - $ref: '#/definitions/Disease'
@@ -670,6 +708,7 @@ definitions:
         description: MUST be "CombinationTherapeutics"
       members:
         type: array
+        ordered: false
         description: The therapeutics that constitute the described collection.
         items:
           $ref: '#/definitions/Therapeutic'
@@ -695,6 +734,7 @@ definitions:
         description: MUST be "SubstituteTherapeutics"
       members:
         type: array
+        ordered: false
         description: The therapeutics that constitute the described collection.
         items:
           $ref: '#/definitions/Therapeutic'
@@ -755,13 +795,16 @@ definitions:
       location:
         oneOf:
         - $ref: '#/definitions/CURIE'
-        - $ref: '#/definitions/Location'
+        - $ref: '#/definitions/ChromosomeLocation'
+        - $ref: '#/definitions/SequenceLocation'
         description: Where Allele is located
       state:
-        $ref: '#/definitions/SequenceExpression'
         description: An expression of the sequence state
-        deprecated:
-        - $ref: '#/definitions/SequenceState'
+        oneOf:
+        - $ref: '#/definitions/ComposedSequenceExpression'
+        - $ref: '#/definitions/DerivedSequenceExpression'
+        - $ref: '#/definitions/LiteralSequenceExpression'
+        - $ref: '#/definitions/RepeatedSequenceExpression'
     required:
     - location
     - state
@@ -786,6 +829,7 @@ definitions:
         description: MUST be "Haplotype"
       members:
         type: array
+        ordered: false
         minItems: 2
         uniqueItems: true
         items:
@@ -840,6 +884,7 @@ definitions:
         description: MUST be "VariationSet"
       members:
         type: array
+        ordered: false
         uniqueItems: true
         items:
           oneOf:
@@ -872,13 +917,14 @@ definitions:
       location:
         oneOf:
         - $ref: '#/definitions/CURIE'
-        - $ref: '#/definitions/Location'
+        - $ref: '#/definitions/ChromosomeLocation'
+        - $ref: '#/definitions/SequenceLocation'
         description: The location within the system.
       copies:
         oneOf:
-        - $ref: '#/definitions/Number'
-        - $ref: '#/definitions/IndefiniteRange'
         - $ref: '#/definitions/DefiniteRange'
+        - $ref: '#/definitions/IndefiniteRange'
+        - $ref: '#/definitions/Number'
         description: The integral number of copies of the subject in a system.
     required:
     - copies
@@ -907,7 +953,8 @@ definitions:
       location:
         oneOf:
         - $ref: '#/definitions/CURIE'
-        - $ref: '#/definitions/Location'
+        - $ref: '#/definitions/ChromosomeLocation'
+        - $ref: '#/definitions/SequenceLocation'
         description: The location within the system.
       relative_copy_class:
         type: string
@@ -942,6 +989,7 @@ definitions:
         description: MUST be "Genotype"
       members:
         type: array
+        ordered: false
         uniqueItems: true
         minItems: 1
         items:
@@ -950,9 +998,9 @@ definitions:
           and the count of that variation at the locus.
       count:
         oneOf:
-        - $ref: '#/definitions/Number'
-        - $ref: '#/definitions/IndefiniteRange'
         - $ref: '#/definitions/DefiniteRange'
+        - $ref: '#/definitions/IndefiniteRange'
+        - $ref: '#/definitions/Number'
         description: The total number of copies of all MolecularVariation at this
           locus, MUST be greater than or equal to the sum of GenotypeMember copy counts.
           If greater than the total counts, this implies additional  MolecularVariation
@@ -1030,17 +1078,17 @@ definitions:
         $ref: '#/definitions/CURIE'
       start:
         oneOf:
-        - $ref: '#/definitions/Number'
-        - $ref: '#/definitions/IndefiniteRange'
         - $ref: '#/definitions/DefiniteRange'
+        - $ref: '#/definitions/IndefiniteRange'
+        - $ref: '#/definitions/Number'
         description: The start coordinate or range of the SequenceLocation. The minimum
           value of this coordinate or range is 0. MUST represent a coordinate or range
           less than the value of `end`.
       end:
         oneOf:
-        - $ref: '#/definitions/Number'
-        - $ref: '#/definitions/IndefiniteRange'
         - $ref: '#/definitions/DefiniteRange'
+        - $ref: '#/definitions/IndefiniteRange'
+        - $ref: '#/definitions/Number'
         description: The end coordinate or range of the SequenceLocation. The minimum
           value of this coordinate or range is 0. MUST represent a coordinate or range
           greater than the value of `start`.
@@ -1111,14 +1159,14 @@ definitions:
         description: MUST be "RepeatedSequenceExpression"
       seq_expr:
         oneOf:
-        - $ref: '#/definitions/LiteralSequenceExpression'
         - $ref: '#/definitions/DerivedSequenceExpression'
+        - $ref: '#/definitions/LiteralSequenceExpression'
         description: An expression of the repeating subsequence
       count:
         oneOf:
-        - $ref: '#/definitions/Number'
-        - $ref: '#/definitions/IndefiniteRange'
         - $ref: '#/definitions/DefiniteRange'
+        - $ref: '#/definitions/IndefiniteRange'
+        - $ref: '#/definitions/Number'
         description: The count of repeated units, as an integer or inclusive range
     allOf:
     - if:
@@ -1172,6 +1220,7 @@ definitions:
         description: MUST be "ComposedSequenceExpression"
       components:
         type: array
+        ordered: true
         uniqueItems: true
         minItems: 2
         items:
@@ -1195,9 +1244,9 @@ definitions:
         description: MUST be "GenotypeMember".
       count:
         oneOf:
-        - $ref: '#/definitions/Number'
-        - $ref: '#/definitions/IndefiniteRange'
         - $ref: '#/definitions/DefiniteRange'
+        - $ref: '#/definitions/IndefiniteRange'
+        - $ref: '#/definitions/Number'
         description: The number of copies of the `variation` at a Genotype locus.
       variation:
         oneOf:
@@ -1313,6 +1362,7 @@ definitions:
         const: ComplexVariation
       operands:
         type: array
+        ordered: false
         items:
           $ref: '#/definitions/CategoricalVariation'
         minItems: 2
@@ -1349,7 +1399,14 @@ definitions:
       canonical_context:
         description: The [VRS Variation](https://vrs.ga4gh.org/en/1.2.1/terms_and_model.html#variation)
           object to which congruency must be determined.
-        $ref: '#/definitions/Variation'
+        oneOf:
+        - $ref: '#/definitions/AbsoluteCopyNumber'
+        - $ref: '#/definitions/Allele'
+        - $ref: '#/definitions/Genotype'
+        - $ref: '#/definitions/Haplotype'
+        - $ref: '#/definitions/RelativeCopyNumber'
+        - $ref: '#/definitions/Text'
+        - $ref: '#/definitions/VariationSet'
     required:
     - canonical_context
     - type

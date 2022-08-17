@@ -41,6 +41,7 @@ $defs:
         const: ComplexVariation
       operands:
         type: array
+        ordered: false
         items:
           $ref: "#/$defs/CategoricalVariation"
         minItems: 2
