@@ -326,7 +326,7 @@ definitions:
     - id
     - type
     additionalProperties: false
-  TherapeuticsCollectionDescriptor:
+  TherapeuticCollectionDescriptor:
     description: This descriptor class is used for describing TherapeuticsCollection
       domain entities.
     properties:
@@ -365,11 +365,11 @@ definitions:
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
-      therapeutics_collection:
+      therapeutic_collection:
         oneOf:
-        - $ref: core.json#/$defs/CombinationTherapeutics
-        - $ref: core.json#/$defs/SubstituteTherapeutics
-      therapeutics_collection_id:
+        - $ref: core.json#/$defs/CombinationTherapeuticCollection
+        - $ref: core.json#/$defs/SubstituteTherapeuticCollection
+      therapeutic_collection_id:
         $ref: core.json#/$defs/CURIE
       member_descriptors:
         type: array

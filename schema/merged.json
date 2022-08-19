@@ -439,7 +439,7 @@
          ],
          "additionalProperties": false
       },
-      "TherapeuticsCollectionDescriptor": {
+      "TherapeuticCollectionDescriptor": {
          "description": "This descriptor class is used for describing TherapeuticsCollection domain entities.",
          "properties": {
             "id": {
@@ -484,17 +484,17 @@
                },
                "description": "List of strings representing alternate labels for the value object."
             },
-            "therapeutics_collection": {
+            "therapeutic_collection": {
                "oneOf": [
                   {
-                     "$ref": "#/definitions/CombinationTherapeutics"
+                     "$ref": "#/definitions/CombinationTherapeuticCollection"
                   },
                   {
-                     "$ref": "#/definitions/SubstituteTherapeutics"
+                     "$ref": "#/definitions/SubstituteTherapeuticCollection"
                   }
                ]
             },
-            "therapeutics_collection_id": {
+            "therapeutic_collection_id": {
                "$ref": "#/definitions/CURIE"
             },
             "member_descriptors": {
@@ -868,7 +868,7 @@
          ],
          "additionalProperties": false
       },
-      "CombinationTherapeutics": {
+      "CombinationTherapeuticCollection": {
          "description": "A collection of therapeutics that are taken during a course of treatment.",
          "properties": {
             "id": {
@@ -897,7 +897,7 @@
          ],
          "additionalProperties": false
       },
-      "SubstituteTherapeutics": {
+      "SubstituteTherapeuticCollection": {
          "description": "A collection of therapeutics that are considered as valid alternative entities.",
          "properties": {
             "id": {

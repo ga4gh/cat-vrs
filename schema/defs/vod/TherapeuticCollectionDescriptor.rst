@@ -4,7 +4,7 @@ This descriptor class is used for describing TherapeuticsCollection domain entit
 
 **Information Model**
 
-Some TherapeuticsCollectionDescriptor attributes are inherited from :ref:`Entity`.
+Some TherapeuticCollectionDescriptor attributes are inherited from :ref:`Entity`.
 
 .. list-table::
    :class: clean-wrap
@@ -44,11 +44,11 @@ Some TherapeuticsCollectionDescriptor attributes are inherited from :ref:`Entity
       - string
       - 0..m
       - List of strings representing alternate labels for the value object.
-   *  - therapeutics_collection
-      - `CombinationTherapeutics <core.json#/$defs/CombinationTherapeutics>`_ | `SubstituteTherapeutics <core.json#/$defs/SubstituteTherapeutics>`_
+   *  - therapeutic_collection
+      - `CombinationTherapeuticCollection <core.json#/$defs/CombinationTherapeuticCollection>`_ | `SubstituteTherapeuticCollection <core.json#/$defs/SubstituteTherapeuticCollection>`_
       - 0..1
       - 
-   *  - therapeutics_collection_id
+   *  - therapeutic_collection_id
       - `CURIE <core.json#/$defs/CURIE>`_
       - 0..1
       - 

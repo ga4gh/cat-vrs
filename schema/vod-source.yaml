@@ -196,7 +196,7 @@ definitions:
       therapeutic_id:
         extends: value_id
 
-  TherapeuticsCollectionDescriptor:
+  TherapeuticCollectionDescriptor:
     inherits: ValueObjectDescriptor
     description: >-
       This descriptor class is used for describing TherapeuticsCollection domain entities.
@@ -206,12 +206,12 @@ definitions:
         const: TherapeuticsCollectionDescriptor
         default: TherapeuticsCollectionDescriptor
         description: MUST be "TherapeuticsCollectionDescriptor".
-      therapeutics_collection:
+      therapeutic_collection:
         extends: value
         oneOf:
-        - $ref_curie: gks.core:CombinationTherapeutics
-        - $ref_curie: gks.core:SubstituteTherapeutics
-      therapeutics_collection_id:
+        - $ref_curie: gks.core:CombinationTherapeuticCollection
+        - $ref_curie: gks.core:SubstituteTherapeuticCollection
+      therapeutic_collection_id:
         extends: value_id
       member_descriptors:
         type: array

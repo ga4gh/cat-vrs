@@ -333,7 +333,7 @@ definitions:
     - id
     - type
     additionalProperties: false
-  TherapeuticsCollectionDescriptor:
+  TherapeuticCollectionDescriptor:
     description: This descriptor class is used for describing TherapeuticsCollection
       domain entities.
     properties:
@@ -372,11 +372,11 @@ definitions:
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
-      therapeutics_collection:
+      therapeutic_collection:
         oneOf:
-        - $ref: '#/definitions/CombinationTherapeutics'
-        - $ref: '#/definitions/SubstituteTherapeutics'
-      therapeutics_collection_id:
+        - $ref: '#/definitions/CombinationTherapeuticCollection'
+        - $ref: '#/definitions/SubstituteTherapeuticCollection'
+      therapeutic_collection_id:
         $ref: '#/definitions/CURIE'
       member_descriptors:
         type: array
@@ -692,7 +692,7 @@ definitions:
     - id
     - type
     additionalProperties: false
-  CombinationTherapeutics:
+  CombinationTherapeuticCollection:
     description: A collection of therapeutics that are taken during a course of treatment.
     properties:
       id:
@@ -717,7 +717,7 @@ definitions:
     - members
     - type
     additionalProperties: false
-  SubstituteTherapeutics:
+  SubstituteTherapeuticCollection:
     description: A collection of therapeutics that are considered as valid alternative
       entities.
     properties:
