@@ -97,6 +97,7 @@ definitions:
     - id
     - type
   ConditionDescriptor:
+    type: object
     description: This descriptor class is used for describing Condition domain entities.
     properties:
       id:
@@ -150,6 +151,7 @@ definitions:
     - type
     additionalProperties: false
   GeneDescriptor:
+    type: object
     description: This descriptor class is used for describing Gene domain entities.
     properties:
       id:
@@ -196,6 +198,7 @@ definitions:
     - type
     additionalProperties: false
   DiseaseDescriptor:
+    type: object
     description: This descriptor class is used for describing Disease domain entities.
     properties:
       id:
@@ -242,6 +245,7 @@ definitions:
     - type
     additionalProperties: false
   PhenotypeDescriptor:
+    type: object
     description: This descriptor class is used for describing Disease domain entities.
     properties:
       id:
@@ -288,6 +292,7 @@ definitions:
     - type
     additionalProperties: false
   TherapeuticDescriptor:
+    type: object
     description: This descriptor class is used for describing Therapeutic domain entities.
     properties:
       id:
@@ -334,6 +339,7 @@ definitions:
     - type
     additionalProperties: false
   TherapeuticCollectionDescriptor:
+    type: object
     description: This descriptor class is used for describing TherapeuticsCollection
       domain entities.
     properties:
@@ -388,6 +394,7 @@ definitions:
     - type
     additionalProperties: false
   Expression:
+    type: object
     maturity: draft
     description: Representation of a variation by a specified nomenclature or syntax
       for a Variation object. Common examples of expressions for the description of
@@ -420,10 +427,10 @@ definitions:
   CategoricalVariationDescriptor:
     description: This descriptor class is used for describing Categorical Variation
       value objects.
-    type: object
     oneOf:
     - $ref: '#/definitions/CanonicalVariationDescriptor'
   CanonicalVariationDescriptor:
+    type: object
     description: This descriptor class is used for describing Canonical Variation
       value objects.
     properties:
@@ -482,6 +489,7 @@ definitions:
     - type
     additionalProperties: false
   VariationMember:
+    type: object
     description: A compact class for representing a variation context that is a member
       of a Categorical Variation. It supports one or more Expressions of a Variation
       and optionally an associated VRS ID.
@@ -502,6 +510,7 @@ definitions:
     - expressions
     additionalProperties: false
   RecordMetadata:
+    type: object
     description: A re-usable structure that encapsulates provenance metadata that
       applies to a specific concrete record of information as encoded in a particular
       system, as opposed to  provenance of the abstract information content/knowledge
@@ -533,6 +542,7 @@ definitions:
     - type
     additionalProperties: false
   Coding:
+    type: object
     description: A `coding` is an extensible entity for labeling or otherwise annotating
       globally  namespaced identifiers known as "codes".
     properties:
@@ -557,6 +567,7 @@ definitions:
     - type
     additionalProperties: false
   Extension:
+    type: object
     description: The Extension class provides VODs with a means to extend descriptions
       with other attributes unique to a content provider. These extensions are not
       expected to be natively understood under VRSATILE, but may be used for pre-negotiated
@@ -589,6 +600,7 @@ definitions:
     pattern: ^\w[^:]*:.+$
     example: ensembl:ENSG00000139618
   Disease:
+    type: object
     description: A reference to a Disease as defined by an authority. For human diseases,
       the use of [MONDO](https://registry.identifiers.org/registry/mondo) as the disease
       authority is RECOMMENDED.
@@ -609,6 +621,7 @@ definitions:
     - type
     additionalProperties: false
   Phenotype:
+    type: object
     description: A reference to a Phenotype as defined by an authority. For human
       phenotypes, the use of [HPO](https://registry.identifiers.org/registry/hpo)
       as the disease authority is RECOMMENDED.
@@ -650,6 +663,7 @@ definitions:
     - type
     additionalProperties: false
   Condition:
+    type: object
     description: A set of phenotype and/or disease concepts that constitute a condition.
     properties:
       id:
@@ -675,6 +689,7 @@ definitions:
     - type
     additionalProperties: false
   Therapeutic:
+    type: object
     description: A treatment, therapy, or drug.
     properties:
       id:
@@ -693,6 +708,7 @@ definitions:
     - type
     additionalProperties: false
   CombinationTherapeuticCollection:
+    type: object
     description: A collection of therapeutics that are taken during a course of treatment.
     properties:
       id:
@@ -718,6 +734,7 @@ definitions:
     - type
     additionalProperties: false
   SubstituteTherapeuticCollection:
+    type: object
     description: A collection of therapeutics that are considered as valid alternative
       entities.
     properties:
@@ -1352,6 +1369,7 @@ definitions:
     - $ref: '#/definitions/CanonicalVariation'
     - $ref: '#/definitions/ComplexVariation'
   ComplexVariation:
+    type: object
     ga4gh_prefix: CXV
     description: A categorical variation domain jointly characterized by two or more
       other categorical  variation domains.
@@ -1388,6 +1406,7 @@ definitions:
     - type
     additionalProperties: false
   CanonicalVariation:
+    type: object
     ga4gh_prefix: CLV
     description: A categorical variation domain characterized by a representative
       Variation context  to which members lift-over, project, translate, or otherwise

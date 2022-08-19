@@ -29,6 +29,7 @@ $defs:
       - $ref: "#/$defs/ComplexVariation"
 
   ComplexVariation:
+    type: object
     ga4gh_prefix: CXV
     inherits: CategoricalVariation
     description: >-
@@ -56,6 +57,7 @@ $defs:
     required: ["operands", "operator"]
 
   CanonicalVariation:
+    type: object
     ga4gh_prefix: CLV
     inherits: CategoricalVariation
     description: >-

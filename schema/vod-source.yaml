@@ -110,6 +110,7 @@ definitions:
           `GENO:0000875 <http://purl.obolibrary.org/obo/GENO_0000875>`.
 
   ConditionDescriptor:
+    type: object
     inherits: ValueObjectDescriptor
     description: >-
       This descriptor class is used for describing Condition domain entities.
@@ -133,6 +134,7 @@ definitions:
             - $ref: "#/definitions/PhenotypeDescriptor"
 
   GeneDescriptor:
+    type: object
     inherits: ValueObjectDescriptor
     description: >-
       This descriptor class is used for describing Gene domain entities.
@@ -149,6 +151,7 @@ definitions:
         extends: value_id
 
   DiseaseDescriptor:
+    type: object
     inherits: ValueObjectDescriptor
     description: >-
       This descriptor class is used for describing Disease domain entities.
@@ -165,6 +168,7 @@ definitions:
         extends: value_id
 
   PhenotypeDescriptor:
+    type: object
     inherits: ValueObjectDescriptor
     description: >-
       This descriptor class is used for describing Disease domain entities.
@@ -181,6 +185,7 @@ definitions:
         extends: value_id
 
   TherapeuticDescriptor:
+    type: object
     inherits: ValueObjectDescriptor
     description: >-
       This descriptor class is used for describing Therapeutic domain entities.
@@ -197,6 +202,7 @@ definitions:
         extends: value_id
 
   TherapeuticCollectionDescriptor:
+    type: object
     inherits: ValueObjectDescriptor
     description: >-
       This descriptor class is used for describing TherapeuticsCollection domain entities.
@@ -220,6 +226,7 @@ definitions:
           $ref: "#/definitions/TherapeuticDescriptor"
 
   Expression:
+    type: object
     maturity: draft
     description: >-
       Representation of a variation by a specified nomenclature or syntax for a Variation object. Common examples of expressions for the description of molecular variation include the HGVS and ISCN nomenclatures.
@@ -240,7 +247,6 @@ definitions:
     inherits: ValueObjectDescriptor
     description: >-
       This descriptor class is used for describing Categorical Variation value objects.
-    type: object
     oneOf:
       - $ref: "#/definitions/CanonicalVariationDescriptor"
     heritable_properties:
@@ -264,6 +270,7 @@ definitions:
           $ref: "#/definitions/VariationMember"
 
   CanonicalVariationDescriptor:
+    type: object
     inherits: CategoricalVariationDescriptor
     description: >-
       This descriptor class is used for describing Canonical Variation value objects.
@@ -282,6 +289,7 @@ definitions:
         $ref_curie: catvars:CanonicalVariation
 
   VariationMember:
+    type: object
     description: >-
       A compact class for representing a variation context that is a member of a
       Categorical Variation. It supports one or more Expressions of a Variation

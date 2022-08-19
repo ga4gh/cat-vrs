@@ -90,6 +90,7 @@ definitions:
     - id
     - type
   ConditionDescriptor:
+    type: object
     description: This descriptor class is used for describing Condition domain entities.
     properties:
       id:
@@ -143,6 +144,7 @@ definitions:
     - type
     additionalProperties: false
   GeneDescriptor:
+    type: object
     description: This descriptor class is used for describing Gene domain entities.
     properties:
       id:
@@ -189,6 +191,7 @@ definitions:
     - type
     additionalProperties: false
   DiseaseDescriptor:
+    type: object
     description: This descriptor class is used for describing Disease domain entities.
     properties:
       id:
@@ -235,6 +238,7 @@ definitions:
     - type
     additionalProperties: false
   PhenotypeDescriptor:
+    type: object
     description: This descriptor class is used for describing Disease domain entities.
     properties:
       id:
@@ -281,6 +285,7 @@ definitions:
     - type
     additionalProperties: false
   TherapeuticDescriptor:
+    type: object
     description: This descriptor class is used for describing Therapeutic domain entities.
     properties:
       id:
@@ -327,6 +332,7 @@ definitions:
     - type
     additionalProperties: false
   TherapeuticCollectionDescriptor:
+    type: object
     description: This descriptor class is used for describing TherapeuticsCollection
       domain entities.
     properties:
@@ -381,6 +387,7 @@ definitions:
     - type
     additionalProperties: false
   Expression:
+    type: object
     maturity: draft
     description: Representation of a variation by a specified nomenclature or syntax
       for a Variation object. Common examples of expressions for the description of
@@ -413,10 +420,10 @@ definitions:
   CategoricalVariationDescriptor:
     description: This descriptor class is used for describing Categorical Variation
       value objects.
-    type: object
     oneOf:
     - $ref: '#/definitions/CanonicalVariationDescriptor'
   CanonicalVariationDescriptor:
+    type: object
     description: This descriptor class is used for describing Canonical Variation
       value objects.
     properties:
@@ -475,6 +482,7 @@ definitions:
     - type
     additionalProperties: false
   VariationMember:
+    type: object
     description: A compact class for representing a variation context that is a member
       of a Categorical Variation. It supports one or more Expressions of a Variation
       and optionally an associated VRS ID.
