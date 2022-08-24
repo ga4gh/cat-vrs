@@ -62,7 +62,7 @@ Some VariationDescriptor attributes are inherited from :ref:`Entity`.
       - The structural variant type associated with this variant. We RECOMMEND a descendent term of `SO:0001537 <http://www.sequenceontology.org/browser/current_release/term/SO:0001537>`_.
    *  - expressions
       - :ref:`Expression`
-      - 0..1
+      - 0..m
       - Typically HGVS or ISCN nomenclature expressions. Other systems relevant to the description of variation MAY be used.
    *  - gene_context
       - `CURIE <core.json#/$defs/CURIE>`_ | :ref:`GeneDescriptor`

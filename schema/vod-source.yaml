@@ -87,7 +87,10 @@ definitions:
           The structural variant type associated with this variant. We RECOMMEND a descendent term of
           `SO:0001537 <http://www.sequenceontology.org/browser/current_release/term/SO:0001537>`_.
       expressions:
-        $ref: "#/definitions/Expression"
+        type: array
+        ordered: false
+        items:
+          $ref: "#/definitions/Expression"
         description: >-
           Typically HGVS or ISCN nomenclature expressions. Other systems relevant to the description
           of variation MAY be used.
@@ -233,6 +236,7 @@ definitions:
     properties:
       type:
         type: string
+        default: Expression
         const: Expression
       syntax:
         type: string

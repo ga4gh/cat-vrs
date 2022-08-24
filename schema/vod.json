@@ -85,7 +85,11 @@
                "$ref": "core.json#/$defs/CURIE"
             },
             "expressions": {
-               "$ref": "#/definitions/Expression",
+               "type": "array",
+               "ordered": false,
+               "items": {
+                  "$ref": "#/definitions/Expression"
+               },
                "description": "Typically HGVS or ISCN nomenclature expressions. Other systems relevant to the description of variation MAY be used."
             },
             "gene_context": {
@@ -502,6 +506,7 @@
          "properties": {
             "type": {
                "type": "string",
+               "default": "Expression",
                "const": "Expression"
             },
             "syntax": {
