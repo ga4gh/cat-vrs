@@ -50,19 +50,17 @@ definitions:
         items:
           type: string
         description: List of strings representing alternate labels for the value object.
-      variation_id:
-        $ref: '#/definitions/CURIE'
-        description: This SHOULD be provided if *variation* is omitted.
       variation:
-        description: This SHOULD be provided if *variation_id* is omitted.
         oneOf:
         - $ref: '#/definitions/AbsoluteCopyNumber'
         - $ref: '#/definitions/Allele'
+        - $ref: '#/definitions/CURIE'
         - $ref: '#/definitions/Genotype'
         - $ref: '#/definitions/Haplotype'
         - $ref: '#/definitions/RelativeCopyNumber'
         - $ref: '#/definitions/Text'
         - $ref: '#/definitions/VariationSet'
+        description: MUST be a `Variation` or CURIE reference to a `Variation`.
       molecule_context:
         type: string
         enum:
@@ -99,6 +97,7 @@ definitions:
     required:
     - id
     - type
+    - variation
   ConditionDescriptor:
     type: object
     description: This descriptor class is used for describing Condition domain entities.
@@ -139,9 +138,9 @@ definitions:
           type: string
         description: List of strings representing alternate labels for the value object.
       condition:
-        $ref: '#/definitions/Condition'
-      condition_id:
-        $ref: '#/definitions/CURIE'
+        oneOf:
+        - $ref: '#/definitions/CURIE'
+        - $ref: '#/definitions/Condition'
       member_descriptors:
         type: array
         ordered: false
@@ -150,6 +149,7 @@ definitions:
           - $ref: '#/definitions/DiseaseDescriptor'
           - $ref: '#/definitions/PhenotypeDescriptor'
     required:
+    - condition
     - id
     - type
     additionalProperties: false
@@ -193,10 +193,11 @@ definitions:
           type: string
         description: List of strings representing alternate labels for the value object.
       gene:
-        $ref: '#/definitions/Gene'
-      gene_id:
-        $ref: '#/definitions/CURIE'
+        oneOf:
+        - $ref: '#/definitions/CURIE'
+        - $ref: '#/definitions/Gene'
     required:
+    - gene
     - id
     - type
     additionalProperties: false
@@ -240,10 +241,11 @@ definitions:
           type: string
         description: List of strings representing alternate labels for the value object.
       disease:
-        $ref: '#/definitions/Disease'
-      disease_id:
-        $ref: '#/definitions/CURIE'
+        oneOf:
+        - $ref: '#/definitions/CURIE'
+        - $ref: '#/definitions/Disease'
     required:
+    - disease
     - id
     - type
     additionalProperties: false
@@ -287,11 +289,12 @@ definitions:
           type: string
         description: List of strings representing alternate labels for the value object.
       phenotype:
-        $ref: '#/definitions/Phenotype'
-      phenotype_id:
-        $ref: '#/definitions/CURIE'
+        oneOf:
+        - $ref: '#/definitions/CURIE'
+        - $ref: '#/definitions/Phenotype'
     required:
     - id
+    - phenotype
     - type
     additionalProperties: false
   TherapeuticDescriptor:
@@ -334,11 +337,12 @@ definitions:
           type: string
         description: List of strings representing alternate labels for the value object.
       therapeutic:
-        $ref: '#/definitions/Therapeutic'
-      therapeutic_id:
-        $ref: '#/definitions/CURIE'
+        oneOf:
+        - $ref: '#/definitions/CURIE'
+        - $ref: '#/definitions/Therapeutic'
     required:
     - id
+    - therapeutic
     - type
     additionalProperties: false
   TherapeuticCollectionDescriptor:
@@ -383,10 +387,9 @@ definitions:
         description: List of strings representing alternate labels for the value object.
       therapeutic_collection:
         oneOf:
+        - $ref: '#/definitions/CURIE'
         - $ref: '#/definitions/CombinationTherapeuticCollection'
         - $ref: '#/definitions/SubstituteTherapeuticCollection'
-      therapeutic_collection_id:
-        $ref: '#/definitions/CURIE'
       member_descriptors:
         type: array
         ordered: false
@@ -394,6 +397,7 @@ definitions:
           $ref: '#/definitions/TherapeuticDescriptor'
     required:
     - id
+    - therapeutic_collection
     - type
     additionalProperties: false
   Expression:
@@ -482,13 +486,13 @@ definitions:
           $ref: '#/definitions/VariationMember'
       subject_variation_descriptor:
         $ref: '#/definitions/VariationDescriptor'
-      canonical_variation_id:
-        $ref: '#/definitions/CURIE'
-        description: This MUST be provided if *categorical_variation* is omitted.
       canonical_variation:
-        $ref: '#/definitions/CanonicalVariation'
-        description: This MUST be provided if *variation_id* is omitted.
+        oneOf:
+        - $ref: '#/definitions/CURIE'
+        - $ref: '#/definitions/CanonicalVariation'
+        description: MUST be a `CategoricalVariation` or a CURIE reference to a `CategoricalVariation`.
     required:
+    - canonical_variation
     - id
     - type
     additionalProperties: false
@@ -508,8 +512,16 @@ definitions:
         items:
           $ref: '#/definitions/Expression'
         minItems: 1
-      variation_id:
-        $ref: '#/definitions/CURIE'
+      variation:
+        oneOf:
+        - $ref: '#/definitions/AbsoluteCopyNumber'
+        - $ref: '#/definitions/Allele'
+        - $ref: '#/definitions/CURIE'
+        - $ref: '#/definitions/Genotype'
+        - $ref: '#/definitions/Haplotype'
+        - $ref: '#/definitions/RelativeCopyNumber'
+        - $ref: '#/definitions/Text'
+        - $ref: '#/definitions/VariationSet'
     required:
     - expressions
     additionalProperties: false

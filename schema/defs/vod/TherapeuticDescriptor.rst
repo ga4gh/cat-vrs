@@ -45,10 +45,6 @@ Some TherapeuticDescriptor attributes are inherited from :ref:`Entity`.
       - 0..m
       - List of strings representing alternate labels for the value object.
    *  - therapeutic
-      - `Therapeutic <core.json#/$defs/Therapeutic>`_
-      - 0..1
-      - 
-   *  - therapeutic_id
-      - `CURIE <core.json#/$defs/CURIE>`_
-      - 0..1
+      - `CURIE <core.json#/$defs/CURIE>`_ | `Therapeutic <core.json#/$defs/Therapeutic>`_
+      - 1..1
       - 

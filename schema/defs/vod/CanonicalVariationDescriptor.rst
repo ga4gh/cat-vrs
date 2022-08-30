@@ -52,11 +52,7 @@ Some CanonicalVariationDescriptor attributes are inherited from :ref:`Entity`.
       - :ref:`VariationDescriptor`
       - 0..1
       - 
-   *  - canonical_variation_id
-      - `CURIE <core.json#/$defs/CURIE>`_
-      - 0..1
-      - This MUST be provided if *categorical_variation* is omitted.
    *  - canonical_variation
-      - `CanonicalVariation <catvars.json#/$defs/CanonicalVariation>`_
-      - 0..1
-      - This MUST be provided if *variation_id* is omitted.
+      - `CURIE <core.json#/$defs/CURIE>`_ | `CanonicalVariation <catvars.json#/$defs/CanonicalVariation>`_
+      - 1..1
+      - MUST be a `CategoricalVariation` or a CURIE reference to a `CategoricalVariation`.

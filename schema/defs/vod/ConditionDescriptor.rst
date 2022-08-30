@@ -45,12 +45,8 @@ Some ConditionDescriptor attributes are inherited from :ref:`Entity`.
       - 0..m
       - List of strings representing alternate labels for the value object.
    *  - condition
-      - `Condition <core.json#/$defs/Condition>`_
-      - 0..1
-      - 
-   *  - condition_id
-      - `CURIE <core.json#/$defs/CURIE>`_
-      - 0..1
+      - `CURIE <core.json#/$defs/CURIE>`_ | `Condition <core.json#/$defs/Condition>`_
+      - 1..1
       - 
    *  - member_descriptors
       - :ref:`DiseaseDescriptor` | :ref:`PhenotypeDescriptor`

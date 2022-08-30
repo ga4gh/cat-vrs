@@ -24,9 +24,9 @@ definitions:
       - $ref: "#/definitions/CategoricalVariationDescriptor"
     heritable_properties:
       value:
-        $ref_curie: gks.core:ValueEntity
-      value_id:
-        $ref_curie: gks.core:CURIE
+        oneOf:
+          - $ref_curie: gks.core:ValueEntity
+          - $ref_curie: gks.core:CURIE
       label:
         type: string
         description: >-
@@ -50,7 +50,7 @@ definitions:
           type: string
         description: >-
           List of strings representing alternate labels for the value object.
-    heritable_required: [ "id" ]
+    heritable_required: [ "id", "value" ]
 
   VariationDescriptor:
     inherits: ValueObjectDescriptor
@@ -65,16 +65,13 @@ definitions:
         default: "VariationDescriptor"
         description: >-
           MUST be "VariationDescriptor".
-      variation_id:
-        extends: value_id
-        $ref_curie: "gks.core:CURIE"
-        description: >-
-          This SHOULD be provided if *variation* is omitted.
       variation:
         extends: value
-        $ref_curie: "vrs:Variation"
+        oneOf:
+          - $ref_curie: gks.core:CURIE
+          - $ref_curie: vrs:Variation
         description: >-
-          This SHOULD be provided if *variation_id* is omitted.
+          MUST be a `Variation` or CURIE reference to a `Variation`.
       molecule_context:
         type: string
         enum: ["genomic", "transcript", "protein"]
@@ -125,9 +122,9 @@ definitions:
         description: MUST be "ConditionDescriptor".
       condition:
         extends: value
-        $ref_curie: gks.core:Condition
-      condition_id:
-        extends: value_id
+        oneOf:
+          - $ref_curie: gks.core:CURIE
+          - $ref_curie: gks.core:Condition
       member_descriptors:
         type: array
         ordered: false
@@ -149,9 +146,9 @@ definitions:
         description: MUST be "GeneDescriptor".
       gene:
         extends: value
-        $ref_curie: gks.core:Gene
-      gene_id:
-        extends: value_id
+        oneOf:
+          - $ref_curie: gks.core:CURIE
+          - $ref_curie: gks.core:Gene
 
   DiseaseDescriptor:
     type: object
@@ -166,9 +163,9 @@ definitions:
         description: MUST be "DiseaseDescriptor".
       disease:
         extends: value
-        $ref_curie: gks.core:Disease
-      disease_id:
-        extends: value_id
+        oneOf:
+          - $ref_curie: gks.core:CURIE
+          - $ref_curie: gks.core:Disease
 
   PhenotypeDescriptor:
     type: object
@@ -183,9 +180,9 @@ definitions:
         description: MUST be "PhenotypeDescriptor".
       phenotype:
         extends: value
-        $ref_curie: gks.core:Phenotype
-      phenotype_id:
-        extends: value_id
+        oneOf:
+          - $ref_curie: gks.core:CURIE
+          - $ref_curie: gks.core:Phenotype
 
   TherapeuticDescriptor:
     type: object
@@ -200,9 +197,9 @@ definitions:
         description: MUST be "TherapeuticDescriptor".
       therapeutic:
         extends: value
-        $ref_curie: gks.core:Therapeutic
-      therapeutic_id:
-        extends: value_id
+        oneOf:
+          - $ref_curie: gks.core:CURIE
+          - $ref_curie: gks.core:Therapeutic
 
   TherapeuticCollectionDescriptor:
     type: object
@@ -220,8 +217,7 @@ definitions:
         oneOf:
         - $ref_curie: gks.core:CombinationTherapeuticCollection
         - $ref_curie: gks.core:SubstituteTherapeuticCollection
-      therapeutic_collection_id:
-        extends: value_id
+        - $ref_curie: gks.core:CURIE
       member_descriptors:
         type: array
         ordered: false
@@ -254,16 +250,13 @@ definitions:
     oneOf:
       - $ref: "#/definitions/CanonicalVariationDescriptor"
     heritable_properties:
-      categorical_variation_id:
-        extends: value_id
-        $ref_curie: gks.core:CURIE
-        description: >-
-          This MUST be provided if *categorical_variation* is omitted.
       categorical_variation:
         extends: value
-        $ref_curie: catvars:CategoricalVariation
+        oneOf:
+          - $ref_curie: gks.core:CURIE
+          - $ref_curie: catvars:CategoricalVariation
         description: >-
-          This MUST be provided if *variation_id* is omitted.
+          MUST be a `CategoricalVariation` or a CURIE reference to a `CategoricalVariation`.
       members:
         description: >-
           VariationMember instances that fall within the functional domain
@@ -286,11 +279,11 @@ definitions:
         description: MUST be "CanonicalVariationDescriptor".
       subject_variation_descriptor:
         $ref: "#/definitions/VariationDescriptor"
-      canonical_variation_id:
-        extends: categorical_variation_id
       canonical_variation:
         extends: categorical_variation
-        $ref_curie: catvars:CanonicalVariation
+        oneOf:
+          - $ref_curie: gks.core:CURIE
+          - $ref_curie: catvars:CanonicalVariation
 
   VariationMember:
     type: object
@@ -309,6 +302,8 @@ definitions:
         items:
           $ref: "#/definitions/Expression"
         minItems: 1
-      variation_id:
-        $ref_curie: "gks.core:CURIE"
+      variation:
+        oneOf:
+          - $ref_curie: gks.core:CURIE
+          - $ref_curie: vrs:Variation
     required: ['expressions']

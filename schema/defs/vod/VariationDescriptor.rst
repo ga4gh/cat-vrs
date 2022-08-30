@@ -44,14 +44,10 @@ Some VariationDescriptor attributes are inherited from :ref:`Entity`.
       - string
       - 0..m
       - List of strings representing alternate labels for the value object.
-   *  - variation_id
-      - `CURIE <core.json#/$defs/CURIE>`_
-      - 0..1
-      - This SHOULD be provided if *variation* is omitted.
    *  - variation
-      - `Variation <vrs.json#/definitions/Variation>`_
-      - 0..1
-      - This SHOULD be provided if *variation_id* is omitted.
+      - `CURIE <core.json#/$defs/CURIE>`_ | `Variation <vrs.json#/definitions/Variation>`_
+      - 1..1
+      - MUST be a `Variation` or CURIE reference to a `Variation`.
    *  - molecule_context
       - string
       - 0..1

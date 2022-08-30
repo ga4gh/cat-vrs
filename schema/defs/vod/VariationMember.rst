@@ -22,7 +22,7 @@ A compact class for representing a variation context that is a member of a Categ
       - :ref:`Expression`
       - 1..m
       - 
-   *  - variation_id
-      - `CURIE <core.json#/$defs/CURIE>`_
+   *  - variation
+      - `CURIE <core.json#/$defs/CURIE>`_ | `Variation <vrs.json#/definitions/Variation>`_
       - 0..1
       - 

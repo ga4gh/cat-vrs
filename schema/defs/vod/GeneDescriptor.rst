@@ -45,10 +45,6 @@ Some GeneDescriptor attributes are inherited from :ref:`Entity`.
       - 0..m
       - List of strings representing alternate labels for the value object.
    *  - gene
-      - `Gene <core.json#/$defs/Gene>`_
-      - 0..1
-      - 
-   *  - gene_id
-      - `CURIE <core.json#/$defs/CURIE>`_
-      - 0..1
+      - `CURIE <core.json#/$defs/CURIE>`_ | `Gene <core.json#/$defs/Gene>`_
+      - 1..1
       - 

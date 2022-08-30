@@ -63,13 +63,16 @@
                },
                "description": "List of strings representing alternate labels for the value object."
             },
-            "variation_id": {
-               "$ref": "core.json#/$defs/CURIE",
-               "description": "This SHOULD be provided if *variation* is omitted."
-            },
             "variation": {
-               "$ref": "vrs.json#/definitions/Variation",
-               "description": "This SHOULD be provided if *variation_id* is omitted."
+               "oneOf": [
+                  {
+                     "$ref": "core.json#/$defs/CURIE"
+                  },
+                  {
+                     "$ref": "vrs.json#/definitions/Variation"
+                  }
+               ],
+               "description": "MUST be a `Variation` or CURIE reference to a `Variation`."
             },
             "molecule_context": {
                "type": "string",
@@ -114,7 +117,8 @@
          },
          "required": [
             "id",
-            "type"
+            "type",
+            "variation"
          ]
       },
       "ConditionDescriptor": {
@@ -164,10 +168,14 @@
                "description": "List of strings representing alternate labels for the value object."
             },
             "condition": {
-               "$ref": "core.json#/$defs/Condition"
-            },
-            "condition_id": {
-               "$ref": "core.json#/$defs/CURIE"
+               "oneOf": [
+                  {
+                     "$ref": "core.json#/$defs/CURIE"
+                  },
+                  {
+                     "$ref": "core.json#/$defs/Condition"
+                  }
+               ]
             },
             "member_descriptors": {
                "type": "array",
@@ -185,6 +193,7 @@
             }
          },
          "required": [
+            "condition",
             "id",
             "type"
          ],
@@ -237,13 +246,18 @@
                "description": "List of strings representing alternate labels for the value object."
             },
             "gene": {
-               "$ref": "core.json#/$defs/Gene"
-            },
-            "gene_id": {
-               "$ref": "core.json#/$defs/CURIE"
+               "oneOf": [
+                  {
+                     "$ref": "core.json#/$defs/CURIE"
+                  },
+                  {
+                     "$ref": "core.json#/$defs/Gene"
+                  }
+               ]
             }
          },
          "required": [
+            "gene",
             "id",
             "type"
          ],
@@ -296,13 +310,18 @@
                "description": "List of strings representing alternate labels for the value object."
             },
             "disease": {
-               "$ref": "core.json#/$defs/Disease"
-            },
-            "disease_id": {
-               "$ref": "core.json#/$defs/CURIE"
+               "oneOf": [
+                  {
+                     "$ref": "core.json#/$defs/CURIE"
+                  },
+                  {
+                     "$ref": "core.json#/$defs/Disease"
+                  }
+               ]
             }
          },
          "required": [
+            "disease",
             "id",
             "type"
          ],
@@ -355,14 +374,19 @@
                "description": "List of strings representing alternate labels for the value object."
             },
             "phenotype": {
-               "$ref": "core.json#/$defs/Phenotype"
-            },
-            "phenotype_id": {
-               "$ref": "core.json#/$defs/CURIE"
+               "oneOf": [
+                  {
+                     "$ref": "core.json#/$defs/CURIE"
+                  },
+                  {
+                     "$ref": "core.json#/$defs/Phenotype"
+                  }
+               ]
             }
          },
          "required": [
             "id",
+            "phenotype",
             "type"
          ],
          "additionalProperties": false
@@ -414,14 +438,19 @@
                "description": "List of strings representing alternate labels for the value object."
             },
             "therapeutic": {
-               "$ref": "core.json#/$defs/Therapeutic"
-            },
-            "therapeutic_id": {
-               "$ref": "core.json#/$defs/CURIE"
+               "oneOf": [
+                  {
+                     "$ref": "core.json#/$defs/CURIE"
+                  },
+                  {
+                     "$ref": "core.json#/$defs/Therapeutic"
+                  }
+               ]
             }
          },
          "required": [
             "id",
+            "therapeutic",
             "type"
          ],
          "additionalProperties": false
@@ -475,15 +504,15 @@
             "therapeutic_collection": {
                "oneOf": [
                   {
+                     "$ref": "core.json#/$defs/CURIE"
+                  },
+                  {
                      "$ref": "core.json#/$defs/CombinationTherapeuticCollection"
                   },
                   {
                      "$ref": "core.json#/$defs/SubstituteTherapeuticCollection"
                   }
                ]
-            },
-            "therapeutic_collection_id": {
-               "$ref": "core.json#/$defs/CURIE"
             },
             "member_descriptors": {
                "type": "array",
@@ -495,6 +524,7 @@
          },
          "required": [
             "id",
+            "therapeutic_collection",
             "type"
          ],
          "additionalProperties": false
@@ -602,16 +632,20 @@
             "subject_variation_descriptor": {
                "$ref": "#/definitions/VariationDescriptor"
             },
-            "canonical_variation_id": {
-               "$ref": "core.json#/$defs/CURIE",
-               "description": "This MUST be provided if *categorical_variation* is omitted."
-            },
             "canonical_variation": {
-               "$ref": "catvars.json#/$defs/CanonicalVariation",
-               "description": "This MUST be provided if *variation_id* is omitted."
+               "oneOf": [
+                  {
+                     "$ref": "catvars.json#/$defs/CanonicalVariation"
+                  },
+                  {
+                     "$ref": "core.json#/$defs/CURIE"
+                  }
+               ],
+               "description": "MUST be a `CategoricalVariation` or a CURIE reference to a `CategoricalVariation`."
             }
          },
          "required": [
+            "canonical_variation",
             "id",
             "type"
          ],
@@ -634,8 +668,15 @@
                },
                "minItems": 1
             },
-            "variation_id": {
-               "$ref": "core.json#/$defs/CURIE"
+            "variation": {
+               "oneOf": [
+                  {
+                     "$ref": "core.json#/$defs/CURIE"
+                  },
+                  {
+                     "$ref": "vrs.json#/definitions/Variation"
+                  }
+               ]
             }
          },
          "required": [

@@ -45,10 +45,6 @@ Some PhenotypeDescriptor attributes are inherited from :ref:`Entity`.
       - 0..m
       - List of strings representing alternate labels for the value object.
    *  - phenotype
-      - `Phenotype <core.json#/$defs/Phenotype>`_
-      - 0..1
-      - 
-   *  - phenotype_id
-      - `CURIE <core.json#/$defs/CURIE>`_
-      - 0..1
+      - `CURIE <core.json#/$defs/CURIE>`_ | `Phenotype <core.json#/$defs/Phenotype>`_
+      - 1..1
       - 
