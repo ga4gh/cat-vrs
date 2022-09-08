@@ -1904,7 +1904,7 @@
       },
       "CanonicalVariation": {
          "type": "object",
-         "ga4gh_prefix": "CLV",
+         "ga4gh_prefix": "CAN",
          "description": "A categorical variation domain characterized by a representative Variation context  to which members lift-over, project, translate, or otherwise directly align.",
          "properties": {
             "id": {
