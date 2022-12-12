@@ -2,5 +2,5 @@ pytest
 sphinx==3.5.4
 sphinx-rtd-theme
 ga4gh.gks.metaschema==0.2.0rc3
-python-jsonschema-objects>=0.3,<=0.3.10
+python-jsonschema-objects>=0.3.13
 jsonschema==3.2.0
