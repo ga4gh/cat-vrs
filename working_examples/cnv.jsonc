@@ -1,0 +1,10 @@
+// CNV categorical variation
+{
+    "type": "CategoricalVariation",
+    "constraints": {
+        "canonicalLocation": {
+            /* some VRS location object */
+        },
+        ""
+    }
+}
