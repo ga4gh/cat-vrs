@@ -1,10 +1,10 @@
 **Computational Definition**
 
-A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>`  that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid  change on different underlying reference sequences. Congruent representations of an Allele often exist across different genome assemblies and associated cDNA transcript representations.
+Some categorical variation concepts are supported by custom nomenclatures or text-descriptive representations for which a categorical variation model does not exist. DescribedVariation is a class that adds requirements and contextual semantics to the `label` and `description` fields to indicate how a categorical variation concept should be evaluated for matching variants.
 
     **Information Model**
     
-Some CanonicalAllele attributes are inherited from :ref:`CategoricalVariation`.
+Some DescribedVariation attributes are inherited from :ref:`CategoricalVariation`.
 
     .. list-table::
        :class: clean-wrap
@@ -20,14 +20,6 @@ Some CanonicalAllele attributes are inherited from :ref:`CategoricalVariation`.
           - string
           - 0..1
           - The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE).
-       *  - label
-          - string
-          - 0..1
-          - A primary label for the entity.
-       *  - description
-          - string
-          - 0..1
-          - A free-text description of the entity.
        *  - extensions
           - `Extension <core.json#/$defs/Extension>`_
           - 0..m
@@ -44,7 +36,11 @@ Some CanonicalAllele attributes are inherited from :ref:`CategoricalVariation`.
           - string
           - 1..1
           - 
-       *  - definingContext
-          - {'$refCurie': 'vrs:Variation'}
+       *  - label
+          - string
           - 1..1
-          - The `VRS Variation <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>`_ object that is congruent with variants on alternate reference sequences.
+          - A primary label for the categorical variation. This required property should provide a  short and descriptive textual representation of the concept.
+       *  - description
+          - string
+          - 0..1
+          - A textual description of the domain of variation that should match the categorical  variation entity.

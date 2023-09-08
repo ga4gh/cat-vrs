@@ -40,6 +40,10 @@ Some CategoricalCnv attributes are inherited from :ref:`CategoricalVariation`.
           - vrs:Variation | :ref:``
           - 0..m
           - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.
+       *  - type
+          - string
+          - 1..1
+          - 
        *  - location
           - {'$refCurie': 'vrs:Location'}
           - 1..1
