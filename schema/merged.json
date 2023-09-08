@@ -221,6 +221,34 @@
          ],
          "additionalProperties": false
       },
+      "Coding": {
+         "type": "object",
+         "maturity": "Alpha",
+         "description": "a concept codified by a terminology system.",
+         "properties": {
+            "label": {
+               "type": "string",
+               "description": "A primary label for the coding."
+            },
+            "system": {
+               "type": "string",
+               "description": "Identity of the terminology system."
+            },
+            "version": {
+               "type": "string",
+               "description": "Version of the terminology system."
+            },
+            "code": {
+               "$ref": "#/$defs/Code",
+               "description": "Symbol in syntax defined by the terminology system."
+            }
+         },
+         "required": [
+            "code",
+            "system"
+         ],
+         "additionalProperties": false
+      },
       "Mapping": {
          "type": "object",
          "maturity": "Alpha",
@@ -245,17 +273,8 @@
                   "$ref": "#/$defs/Extension"
                }
             },
-            "system": {
-               "type": "string",
-               "description": "Identity of the terminology system."
-            },
-            "version": {
-               "type": "string",
-               "description": "Version of the terminology system."
-            },
-            "code": {
-               "$ref": "#/$defs/Code",
-               "description": "Symbol in syntax defined by the terminology system."
+            "coding": {
+               "$ref": "#/$defs/Coding"
             },
             "relation": {
                "description": "A mapping relation between concepts as defined by the Simple Knowledge Organization System (SKOS).",
@@ -270,9 +289,8 @@
             }
          },
          "required": [
-            "code",
-            "relation",
-            "system"
+            "coding",
+            "relation"
          ],
          "additionalProperties": false
       },
@@ -737,17 +755,6 @@
          ],
          "additionalProperties": false
       },
-      "Location": {
-         "description": "A contiguous segment of a biological sequence.",
-         "oneOf": [
-            {
-               "$ref": "#/$defs/SequenceLocation"
-            }
-         ],
-         "discriminator": {
-            "propertyName": "type"
-         }
-      },
       "SequenceLocation": {
          "maturity": "Alpha",
          "ga4ghDigest": {
@@ -836,9 +843,7 @@
       "SequenceReference": {
          "maturity": "Alpha",
          "ga4ghDigest": {
-            "keys": [
-               "refgetAccession"
-            ]
+            "assigned": true
          },
          "type": "object",
          "description": "A sequence of nucleic or amino acid character codes.",
@@ -867,6 +872,10 @@
                "type": "string",
                "pattern": "[0-9A-Za-z_\\-]{32}"
             },
+            "type": {
+               "type": "string",
+               "const": "SequenceReference"
+            },
             "refgetAccession": {
                "description": "A `GA4GH RefGet <http://samtools.github.io/hts-specs/refget.html>` identifier for the referenced sequence, using the sha512t24u digest.",
                "type": "string",
@@ -882,7 +891,8 @@
             }
          },
          "required": [
-            "refgetAccession"
+            "refgetAccession",
+            "type"
          ],
          "additionalProperties": false
       },
