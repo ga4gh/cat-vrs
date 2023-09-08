@@ -41,7 +41,7 @@
                "items": {
                   "anyOf": [
                      {
-                        "$refCurie": "vrs:Variation"
+                        "$ref": "vrs.json#/$defs/Variation"
                      },
                      {
                         "$ref": "#/$defs/"
@@ -55,7 +55,7 @@
             },
             "definingContext": {
                "type": {
-                  "$refCurie": "vrs:Variation"
+                  "$ref": "vrs.json#/$defs/Variation"
                },
                "description": "The [VRS Variation](https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation) object that is congruent with variants on alternate reference sequences."
             }
@@ -104,7 +104,7 @@
                "items": {
                   "anyOf": [
                      {
-                        "$refCurie": "vrs:Variation"
+                        "$ref": "vrs.json#/$defs/Variation"
                      },
                      {
                         "$ref": "#/$defs/"
@@ -118,11 +118,11 @@
             },
             "location": {
                "type": {
-                  "$refCurie": "vrs:Location"
+                  "$ref": "vrs.json#/$defs/Location"
                },
                "description": "A [VRS Location](https://vrs.ga4gh.org/en/2.0/terms_and_model.html#location) object that represents a sequence derived from that location, and is congruent with locations  on alternate reference sequences."
             },
-            "matchCharacteristic": {
+            "locationMatchCharacteristic": {
                "type": "string",
                "enum": [
                   "exact",
@@ -149,10 +149,10 @@
             "copies": {
                "oneOf": [
                   {
-                     "type": "integer"
+                     "$ref": "vrs.json#/$defs/Range"
                   },
                   {
-                     "$refCurie": "vrs:Range"
+                     "type": "integer"
                   }
                ],
                "description": "The integral number of copies of the subject in a system."
@@ -194,7 +194,7 @@
                "items": {
                   "anyOf": [
                      {
-                        "$refCurie": "vrs:Variation"
+                        "$ref": "vrs.json#/$defs/Variation"
                      },
                      {
                         "$ref": "#/$defs/"

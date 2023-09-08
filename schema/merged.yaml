@@ -40,14 +40,14 @@ $defs:
           the constraints of this categorical variant.
         items:
           anyOf:
-          - $refCurie: vrs:Variation
+          - $ref: '#/$defs/Variation'
           - $ref: '#/$defs/'
       type:
         type: string
         const: CanonicalAllele
       definingContext:
         type:
-          $refCurie: vrs:Variation
+          $ref: '#/$defs/Variation'
         description: The [VRS Variation](https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation)
           object that is congruent with variants on alternate reference sequences.
     required:
@@ -94,18 +94,18 @@ $defs:
           the constraints of this categorical variant.
         items:
           anyOf:
-          - $refCurie: vrs:Variation
+          - $ref: '#/$defs/Variation'
           - $ref: '#/$defs/'
       type:
         type: string
         const: CategoricalCNV
       location:
         type:
-          $refCurie: vrs:Location
+          $ref: '#/$defs/Location'
         description: A [VRS Location](https://vrs.ga4gh.org/en/2.0/terms_and_model.html#location)
           object that represents a sequence derived from that location, and is congruent
           with locations  on alternate reference sequences.
-      matchCharacteristic:
+      locationMatchCharacteristic:
         type: string
         enum:
         - exact
@@ -138,8 +138,8 @@ $defs:
           "efo:0030072"  (high-level gain).
       copies:
         oneOf:
+        - $ref: '#/$defs/Range'
         - type: integer
-        - $refCurie: vrs:Range
         description: The integral number of copies of the subject in a system.
     required:
     - location
@@ -177,7 +177,7 @@ $defs:
           the constraints of this categorical variant.
         items:
           anyOf:
-          - $refCurie: vrs:Variation
+          - $ref: '#/$defs/Variation'
           - $ref: '#/$defs/'
       type:
         type: string
@@ -352,8 +352,8 @@ $defs:
         description: MUST be "Allele"
       location:
         oneOf:
+        - $ref: '#/$defs/IRI'
         - $ref: '#/$defs/SequenceLocation'
-        - $refCurie: gks.core:IRI
         description: The location of the Allele
       state:
         description: An expression of the sequence state
@@ -412,7 +412,7 @@ $defs:
           oneOf:
           - $ref: '#/$defs/Allele'
           - $ref: '#/$defs/HaplotypeMemberAllele'
-          - $refCurie: gks.core:IRI
+          - $ref: '#/$defs/IRI'
         description: A list of Alleles (or IRI references to `Alleles`) that comprise
           a Haplotype. Since each `Haplotype` member MUST be an `Allele`, and all
           members MUST share a common SequenceReference, implementations MAY use a
@@ -464,8 +464,8 @@ $defs:
         description: MUST be "CopyNumberCount"
       location:
         oneOf:
+        - $ref: '#/$defs/IRI'
         - $ref: '#/$defs/SequenceLocation'
-        - $refCurie: gks.core:IRI
         description: A location for which the number of systemic copies is described.
       copies:
         oneOf:
@@ -518,8 +518,8 @@ $defs:
         description: MUST be "CopyNumberChange"
       location:
         oneOf:
+        - $ref: '#/$defs/IRI'
         - $ref: '#/$defs/SequenceLocation'
-        - $refCurie: gks.core:IRI
         description: A location for which the number of systemic copies is described.
       copyChange:
         type: string
@@ -648,8 +648,8 @@ $defs:
         description: MUST be "SequenceLocation"
       sequenceReference:
         oneOf:
+        - $ref: '#/$defs/IRI'
         - $ref: '#/$defs/SequenceReference'
-        - $refCurie: gks.core:IRI
         description: A SequenceReference.
       start:
         oneOf:

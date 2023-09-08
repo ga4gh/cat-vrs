@@ -29,7 +29,7 @@ Some DescribedVariation attributes are inherited from :ref:`CategoricalVariation
           - 0..m
           - 
        *  - members
-          - vrs:Variation | :ref:``
+          - `Variation <vrs.json#/$defs/Variation>`_ | :ref:``
           - 0..m
           - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.
        *  - type

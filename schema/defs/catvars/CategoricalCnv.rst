@@ -37,7 +37,7 @@ Some CategoricalCnv attributes are inherited from :ref:`CategoricalVariation`.
           - 0..m
           - 
        *  - members
-          - vrs:Variation | :ref:``
+          - `Variation <vrs.json#/$defs/Variation>`_ | :ref:``
           - 0..m
           - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.
        *  - type
@@ -45,10 +45,10 @@ Some CategoricalCnv attributes are inherited from :ref:`CategoricalVariation`.
           - 1..1
           - 
        *  - location
-          - {'$refCurie': 'vrs:Location'}
+          - {'$ref': 'vrs.json#/$defs/Location'}
           - 1..1
           - A `VRS Location <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#location>`_ object that represents a sequence derived from that location, and is congruent with locations  on alternate reference sequences.
-       *  - matchCharacteristic
+       *  - locationMatchCharacteristic
           - string
           - 0..1
           - The characteristics of a valid match between a contextual CNV location (the query) and the  Categorical CNV location (the domain), when both query and domain are represented on the same  reference sequence. An `exact` match requires the location of the query and domain to be identical.  A `subinterval` match requires the query to be a subinterval of the domain. A `superinterval` match requires the query to be a superinterval of the domain. A `partial` match requires at least 1 residue of overlap between the query and domain.
@@ -57,6 +57,6 @@ Some CategoricalCnv attributes are inherited from :ref:`CategoricalVariation`.
           - 0..1
           - A representation of the change in copies of a sequence in a system. MUST be one of "efo:0030069" (complete  genomic loss), "efo:0020073" (high-level loss), "efo:0030068" (low-level loss), "efo:0030067" (loss),  "efo:0030064" (regional base ploidy), "efo:0030070" (gain), "efo:0030071" (low-level gain), "efo:0030072"  (high-level gain).
        *  - copies
-          - integer | vrs:Range
+          - integer | `Range <vrs.json#/$defs/Range>`_
           - 0..1
           - The integral number of copies of the subject in a system.
