@@ -3,7 +3,7 @@
 .SUFFIXES:
 .DELETE_ON_ERROR:
 
-JSYAMLS:=vod.yaml catvars.yaml
+JSYAMLS:=catvars.yaml
 JSONS:=${JSYAMLS:.yaml=.json}
 
 all: ${JSONS} merged.json defs
@@ -14,10 +14,9 @@ all: ${JSONS} merged.json defs
 %.yaml: %-source.yaml
 	source2jsy.py $< >$@
 
-merged.yaml: vod-source.yaml
+merged.yaml: catvars-source.yaml
 	source2mergedjsy.py $< >$@
 
 defs:
 	rm -rf defs
-	y2t.py vod-source.yaml
 	y2t.py catvars-source.yaml
