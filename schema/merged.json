@@ -1,0 +1,1037 @@
+{
+   "$schema": "http://json-schema.org/draft/2020-12/schema",
+   "title": "GA4GH-Categorical-Variation-Definitions-Merged-Imports",
+   "type": "object",
+   "$defs": {
+      "CanonicalAllele": {
+         "maturity": "Alpha",
+         "description": "A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>`  that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid  change on different underlying reference sequences. Congruent representations of an Allele often exist across different genome assemblies and associated cDNA transcript representations.",
+         "type": "object",
+         "properties": {
+            "id": {
+               "type": "string",
+               "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
+            },
+            "label": {
+               "type": "string",
+               "description": "A primary label for the entity."
+            },
+            "description": {
+               "type": "string",
+               "description": "A free-text description of the entity."
+            },
+            "extensions": {
+               "type": "array",
+               "ordered": true,
+               "items": {
+                  "$ref": "#/$defs/Extension"
+               }
+            },
+            "mappings": {
+               "type": "array",
+               "ordered": false,
+               "items": {
+                  "$ref": "#/$defs/Mapping"
+               }
+            },
+            "members": {
+               "type": "array",
+               "ordered": false,
+               "description": "A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.",
+               "items": {
+                  "anyOf": [
+                     {
+                        "$refCurie": "vrs:Variation"
+                     },
+                     {
+                        "$ref": "#/$defs/"
+                     }
+                  ]
+               }
+            },
+            "type": {
+               "type": "string",
+               "const": "CanonicalAllele"
+            },
+            "definingContext": {
+               "type": {
+                  "$refCurie": "vrs:Variation"
+               },
+               "description": "The [VRS Variation](https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation) object that is congruent with variants on alternate reference sequences."
+            }
+         },
+         "required": [
+            "definingContext"
+         ],
+         "additionalProperties": false
+      },
+      "CategoricalCnv": {
+         "maturity": "Alpha",
+         "type": "object",
+         "description": "A categorical variation domain is defined first by a sequence derived from a canonical [Location ](https://vrs.ga4gh.org/en/2.0/terms_and_model.html#Location) , which is representative of  a collection of congruent Locations. The change or count of this sequence is also described, either by a numeric value (e.g. \"3 or more copies\") or categorical representation (e.g. \"high-level gain\").  Categorical CNVs may optionally be defined by rules specifying the location match characteristics for  member CNVs.",
+         "properties": {
+            "id": {
+               "type": "string",
+               "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
+            },
+            "label": {
+               "type": "string",
+               "description": "A primary label for the entity."
+            },
+            "description": {
+               "type": "string",
+               "description": "A free-text description of the entity."
+            },
+            "extensions": {
+               "type": "array",
+               "ordered": true,
+               "items": {
+                  "$ref": "#/$defs/Extension"
+               }
+            },
+            "mappings": {
+               "type": "array",
+               "ordered": false,
+               "items": {
+                  "$ref": "#/$defs/Mapping"
+               }
+            },
+            "members": {
+               "type": "array",
+               "ordered": false,
+               "description": "A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.",
+               "items": {
+                  "anyOf": [
+                     {
+                        "$refCurie": "vrs:Variation"
+                     },
+                     {
+                        "$ref": "#/$defs/"
+                     }
+                  ]
+               }
+            },
+            "location": {
+               "type": {
+                  "$refCurie": "vrs:Location"
+               },
+               "description": "A [VRS Location](https://vrs.ga4gh.org/en/2.0/terms_and_model.html#location) object that represents a sequence derived from that location, and is congruent with locations  on alternate reference sequences."
+            },
+            "matchCharacteristic": {
+               "type": "string",
+               "enum": [
+                  "exact",
+                  "partial",
+                  "subinterval",
+                  "superinterval"
+               ],
+               "description": "The characteristics of a valid match between a contextual CNV location (the query) and the  Categorical CNV location (the domain), when both query and domain are represented on the same  reference sequence. An `exact` match requires the location of the query and domain to be identical.  A `subinterval` match requires the query to be a subinterval of the domain. A `superinterval` match requires the query to be a superinterval of the domain. A `partial` match requires at least 1 residue of overlap between the query and domain."
+            },
+            "copyChange": {
+               "type": "string",
+               "enum": [
+                  "efo:0030069",
+                  "efo:0020073",
+                  "efo:0030068",
+                  "efo:0030067",
+                  "efo:0030064",
+                  "efo:0030070",
+                  "efo:0030071",
+                  "efo:0030072"
+               ],
+               "description": "A representation of the change in copies of a sequence in a system. MUST be one of \"efo:0030069\" (complete  genomic loss), \"efo:0020073\" (high-level loss), \"efo:0030068\" (low-level loss), \"efo:0030067\" (loss),  \"efo:0030064\" (regional base ploidy), \"efo:0030070\" (gain), \"efo:0030071\" (low-level gain), \"efo:0030072\"  (high-level gain)."
+            },
+            "copies": {
+               "oneOf": [
+                  {
+                     "type": "integer"
+                  },
+                  {
+                     "$refCurie": "vrs:Range"
+                  }
+               ],
+               "description": "The integral number of copies of the subject in a system."
+            }
+         },
+         "required": [
+            "location"
+         ],
+         "additionalProperties": false
+      },
+      "Mapping": {
+         "type": "object",
+         "maturity": "Alpha",
+         "description": "A mapping to a concept in a terminology system.",
+         "properties": {
+            "id": {
+               "type": "string",
+               "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
+            },
+            "label": {
+               "type": "string",
+               "description": "A primary label for the entity."
+            },
+            "description": {
+               "type": "string",
+               "description": "A free-text description of the entity."
+            },
+            "extensions": {
+               "type": "array",
+               "ordered": true,
+               "items": {
+                  "$ref": "#/$defs/Extension"
+               }
+            },
+            "system": {
+               "type": "string",
+               "description": "Identity of the terminology system."
+            },
+            "version": {
+               "type": "string",
+               "description": "Version of the terminology system."
+            },
+            "code": {
+               "$ref": "#/$defs/Code",
+               "description": "Symbol in syntax defined by the terminology system."
+            },
+            "relation": {
+               "description": "A mapping relation between concepts as defined by the Simple Knowledge Organization System (SKOS).",
+               "type": "string",
+               "enum": [
+                  "closeMatch",
+                  "exactMatch",
+                  "broadMatch",
+                  "narrowMatch",
+                  "relatedMatch"
+               ]
+            }
+         },
+         "required": [
+            "code",
+            "relation",
+            "system"
+         ],
+         "additionalProperties": false
+      },
+      "Extension": {
+         "type": "object",
+         "maturity": "Alpha",
+         "description": "The Extension class provides VODs with a means to extend descriptions with other attributes unique to a content provider. These extensions are not expected to be natively understood under VRSATILE, but may be used for pre-negotiated exchange of message attributes when needed.",
+         "properties": {
+            "type": {
+               "type": "string",
+               "const": "Extension",
+               "description": "MUST be \"Extension\"."
+            },
+            "name": {
+               "type": "string",
+               "description": "A name for the Extension"
+            },
+            "value": {
+               "type": [
+                  "number",
+                  "string",
+                  "boolean",
+                  "object",
+                  "array",
+                  "null"
+               ],
+               "description": "Any primitive or structured object"
+            }
+         },
+         "required": [
+            "name"
+         ],
+         "additionalProperties": false
+      },
+      "Code": {
+         "maturity": "Alpha",
+         "description": "Indicates that the value is taken from a set of controlled strings defined elsewhere. Technically, a code is restricted to a string which has at least one character and no leading or  trailing whitespace, and where there is no whitespace other than single spaces in the contents.",
+         "type": "string",
+         "pattern": "\\S+( \\S+)*",
+         "example": "ENSG00000139618"
+      },
+      "IRI": {
+         "maturity": "Alpha",
+         "description": "An IRI Reference (either an IRI or a relative-reference), according to `RFC3986 section 4.1  <https://datatracker.ietf.org/doc/html/rfc3986#section-4.1>` and `RFC3987 section 2.1 <https://datatracker.ietf.org/doc/html/rfc3987#section-2.1>`. MAY be a JSON Pointer as an IRI fragment, as  described by `RFC6901 section 6 <https://datatracker.ietf.org/doc/html/rfc6901#section-6>`.",
+         "type": "string",
+         "format": "iri-reference"
+      },
+      "Variation": {
+         "description": "A representation of the state of one or more biomolecules.",
+         "oneOf": [
+            {
+               "$ref": "#/$defs/Allele"
+            },
+            {
+               "$ref": "#/$defs/CopyNumberChange"
+            },
+            {
+               "$ref": "#/$defs/CopyNumberCount"
+            },
+            {
+               "$ref": "#/$defs/Genotype"
+            },
+            {
+               "$ref": "#/$defs/Haplotype"
+            }
+         ],
+         "discriminator": {
+            "propertyName": "type"
+         }
+      },
+      "MolecularVariation": {
+         "description": "A variation on a contiguous molecule.",
+         "oneOf": [
+            {
+               "$ref": "#/$defs/Allele"
+            },
+            {
+               "$ref": "#/$defs/Haplotype"
+            }
+         ],
+         "discriminator": {
+            "propertyName": "type"
+         }
+      },
+      "SystemicVariation": {
+         "description": "A Variation of multiple molecules in the context of a system, e.g. a genome, sample, or homologous chromosomes.",
+         "oneOf": [
+            {
+               "$ref": "#/$defs/CopyNumberChange"
+            },
+            {
+               "$ref": "#/$defs/CopyNumberCount"
+            },
+            {
+               "$ref": "#/$defs/Genotype"
+            }
+         ],
+         "discriminator": {
+            "propertyName": "type"
+         }
+      },
+      "Allele": {
+         "maturity": "Alpha",
+         "ga4ghDigest": {
+            "prefix": "VA",
+            "keys": [
+               "location",
+               "state",
+               "type"
+            ]
+         },
+         "description": "The state of a molecule at a Location.",
+         "type": "object",
+         "properties": {
+            "id": {
+               "type": "string",
+               "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
+            },
+            "label": {
+               "type": "string",
+               "description": "A primary label for the entity."
+            },
+            "description": {
+               "type": "string",
+               "description": "A free-text description of the entity."
+            },
+            "extensions": {
+               "type": "array",
+               "ordered": true,
+               "items": {
+                  "$ref": "#/$defs/Extension"
+               }
+            },
+            "digest": {
+               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
+               "type": "string",
+               "pattern": "[0-9A-Za-z_\\-]{32}"
+            },
+            "type": {
+               "type": "string",
+               "const": "Allele",
+               "default": "Allele",
+               "description": "MUST be \"Allele\""
+            },
+            "location": {
+               "oneOf": [
+                  {
+                     "$ref": "#/$defs/SequenceLocation"
+                  },
+                  {
+                     "$refCurie": "gks.core:IRI"
+                  }
+               ],
+               "description": "The location of the Allele"
+            },
+            "state": {
+               "description": "An expression of the sequence state",
+               "oneOf": [
+                  {
+                     "$ref": "#/$defs/LiteralSequenceExpression"
+                  },
+                  {
+                     "$ref": "#/$defs/ReferenceLengthExpression"
+                  }
+               ]
+            }
+         },
+         "required": [
+            "location",
+            "state",
+            "type"
+         ],
+         "additionalProperties": false
+      },
+      "Haplotype": {
+         "maturity": "Alpha",
+         "ga4ghDigest": {
+            "prefix": "HT",
+            "keys": [
+               "members",
+               "type"
+            ]
+         },
+         "description": "A set of non-overlapping Allele members that co-occur on the same molecule.",
+         "type": "object",
+         "properties": {
+            "id": {
+               "type": "string",
+               "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
+            },
+            "label": {
+               "type": "string",
+               "description": "A primary label for the entity."
+            },
+            "description": {
+               "type": "string",
+               "description": "A free-text description of the entity."
+            },
+            "extensions": {
+               "type": "array",
+               "ordered": true,
+               "items": {
+                  "$ref": "#/$defs/Extension"
+               }
+            },
+            "digest": {
+               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
+               "type": "string",
+               "pattern": "[0-9A-Za-z_\\-]{32}"
+            },
+            "type": {
+               "type": "string",
+               "const": "Haplotype",
+               "default": "Haplotype",
+               "description": "MUST be \"Haplotype\""
+            },
+            "members": {
+               "type": "array",
+               "ordered": false,
+               "minItems": 2,
+               "uniqueItems": true,
+               "items": {
+                  "oneOf": [
+                     {
+                        "$ref": "#/$defs/Allele"
+                     },
+                     {
+                        "$ref": "#/$defs/HaplotypeMemberAllele"
+                     },
+                     {
+                        "$refCurie": "gks.core:IRI"
+                     }
+                  ]
+               },
+               "description": "A list of Alleles (or IRI references to `Alleles`) that comprise a Haplotype. Since each `Haplotype` member MUST be an `Allele`, and all members MUST share a common SequenceReference, implementations MAY use a compact representation of Haplotype that omits type and SequenceReference information in individual Haplotype members. Implementations MUST transform compact `Allele` representations into an `Allele` when computing GA4GH identifiers."
+            }
+         },
+         "required": [
+            "members",
+            "type"
+         ],
+         "additionalProperties": false
+      },
+      "CopyNumberCount": {
+         "maturity": "Alpha",
+         "ga4ghDigest": {
+            "keys": [
+               "copies",
+               "subject",
+               "type"
+            ],
+            "prefix": "CN"
+         },
+         "type": "object",
+         "description": "The absolute count of discrete copies of a Location or Gene, within a system (e.g. genome, cell, etc.).",
+         "properties": {
+            "id": {
+               "type": "string",
+               "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
+            },
+            "label": {
+               "type": "string",
+               "description": "A primary label for the entity."
+            },
+            "description": {
+               "type": "string",
+               "description": "A free-text description of the entity."
+            },
+            "extensions": {
+               "type": "array",
+               "ordered": true,
+               "items": {
+                  "$ref": "#/$defs/Extension"
+               }
+            },
+            "digest": {
+               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
+               "type": "string",
+               "pattern": "[0-9A-Za-z_\\-]{32}"
+            },
+            "type": {
+               "type": "string",
+               "const": "CopyNumberCount",
+               "default": "CopyNumberCount",
+               "description": "MUST be \"CopyNumberCount\""
+            },
+            "subject": {
+               "oneOf": [
+                  {
+                     "$ref": "#/$defs/SequenceLocation"
+                  },
+                  {
+                     "$refCurie": "gks.core:IRI"
+                  }
+               ],
+               "description": "A location for which the number of systemic copies is described."
+            },
+            "copies": {
+               "oneOf": [
+                  {
+                     "$ref": "#/$defs/Range"
+                  },
+                  {
+                     "type": "integer"
+                  }
+               ],
+               "description": "The integral number of copies of the subject in a system"
+            }
+         },
+         "required": [
+            "copies",
+            "subject",
+            "type"
+         ],
+         "additionalProperties": false
+      },
+      "CopyNumberChange": {
+         "maturity": "Alpha",
+         "ga4ghDigest": {
+            "keys": [
+               "copyChange",
+               "subject",
+               "type"
+            ],
+            "prefix": "CX"
+         },
+         "type": "object",
+         "description": "An assessment of the copy number of a Location or a Gene within a system (e.g. genome, cell, etc.) relative to a baseline ploidy.",
+         "properties": {
+            "id": {
+               "type": "string",
+               "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
+            },
+            "label": {
+               "type": "string",
+               "description": "A primary label for the entity."
+            },
+            "description": {
+               "type": "string",
+               "description": "A free-text description of the entity."
+            },
+            "extensions": {
+               "type": "array",
+               "ordered": true,
+               "items": {
+                  "$ref": "#/$defs/Extension"
+               }
+            },
+            "digest": {
+               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
+               "type": "string",
+               "pattern": "[0-9A-Za-z_\\-]{32}"
+            },
+            "type": {
+               "type": "string",
+               "const": "CopyNumberChange",
+               "default": "CopyNumberChange",
+               "description": "MUST be \"CopyNumberChange\""
+            },
+            "subject": {
+               "oneOf": [
+                  {
+                     "$ref": "#/$defs/SequenceLocation"
+                  },
+                  {
+                     "$refCurie": "gks.core:IRI"
+                  }
+               ],
+               "description": "A location for which the number of systemic copies is described."
+            },
+            "copyChange": {
+               "type": "string",
+               "enum": [
+                  "efo:0030069",
+                  "efo:0020073",
+                  "efo:0030068",
+                  "efo:0030067",
+                  "efo:0030064",
+                  "efo:0030070",
+                  "efo:0030071",
+                  "efo:0030072"
+               ],
+               "description": "MUST be one of \"efo:0030069\" (complete genomic loss), \"efo:0020073\" (high-level loss), \"efo:0030068\" (low-level loss), \"efo:0030067\" (loss), \"efo:0030064\" (regional base ploidy), \"efo:0030070\" (gain), \"efo:0030071\" (low-level gain), \"efo:0030072\" (high-level gain)."
+            }
+         },
+         "required": [
+            "copyChange",
+            "subject",
+            "type"
+         ],
+         "additionalProperties": false
+      },
+      "Genotype": {
+         "maturity": "Alpha",
+         "ga4ghDigest": {
+            "keys": [
+               "count",
+               "members",
+               "type"
+            ],
+            "prefix": "GT"
+         },
+         "description": "A quantified set of _in-trans_ MolecularVariation at a genomic locus.",
+         "type": "object",
+         "properties": {
+            "id": {
+               "type": "string",
+               "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
+            },
+            "label": {
+               "type": "string",
+               "description": "A primary label for the entity."
+            },
+            "description": {
+               "type": "string",
+               "description": "A free-text description of the entity."
+            },
+            "extensions": {
+               "type": "array",
+               "ordered": true,
+               "items": {
+                  "$ref": "#/$defs/Extension"
+               }
+            },
+            "digest": {
+               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
+               "type": "string",
+               "pattern": "[0-9A-Za-z_\\-]{32}"
+            },
+            "type": {
+               "type": "string",
+               "const": "Genotype",
+               "default": "Genotype",
+               "description": "MUST be \"Genotype\""
+            },
+            "members": {
+               "type": "array",
+               "ordered": false,
+               "uniqueItems": true,
+               "minItems": 1,
+               "items": {
+                  "$ref": "#/$defs/GenotypeMember"
+               },
+               "description": "Each GenotypeMember in `members` describes a MolecularVariation and the count of that variation at the locus."
+            },
+            "count": {
+               "oneOf": [
+                  {
+                     "$ref": "#/$defs/Range"
+                  },
+                  {
+                     "type": "integer"
+                  }
+               ],
+               "description": "The total number of copies of all MolecularVariation at this locus, MUST be greater than or equal to the sum of GenotypeMember copy counts. If greater than the total counts, this implies additional MolecularVariation that are expected to exist but are not explicitly indicated."
+            }
+         },
+         "required": [
+            "count",
+            "members",
+            "type"
+         ],
+         "additionalProperties": false
+      },
+      "Location": {
+         "description": "A contiguous segment of a biological sequence.",
+         "oneOf": [
+            {
+               "$ref": "#/$defs/SequenceLocation"
+            }
+         ],
+         "discriminator": {
+            "propertyName": "type"
+         }
+      },
+      "SequenceLocation": {
+         "maturity": "Alpha",
+         "ga4ghDigest": {
+            "keys": [
+               "end",
+               "sequence",
+               "start",
+               "type"
+            ],
+            "prefix": "SL"
+         },
+         "description": "A Location defined by an interval on a referenced Sequence.",
+         "type": "object",
+         "properties": {
+            "id": {
+               "type": "string",
+               "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
+            },
+            "label": {
+               "type": "string",
+               "description": "A primary label for the entity."
+            },
+            "description": {
+               "type": "string",
+               "description": "A free-text description of the entity."
+            },
+            "extensions": {
+               "type": "array",
+               "ordered": true,
+               "items": {
+                  "$ref": "#/$defs/Extension"
+               }
+            },
+            "digest": {
+               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
+               "type": "string",
+               "pattern": "[0-9A-Za-z_\\-]{32}"
+            },
+            "type": {
+               "type": "string",
+               "const": "SequenceLocation",
+               "default": "SequenceLocation",
+               "description": "MUST be \"SequenceLocation\""
+            },
+            "sequenceReference": {
+               "oneOf": [
+                  {
+                     "$ref": "#/$defs/SequenceReference"
+                  },
+                  {
+                     "$refCurie": "gks.core:IRI"
+                  }
+               ],
+               "description": "A SequenceReference."
+            },
+            "start": {
+               "oneOf": [
+                  {
+                     "$ref": "#/$defs/Range"
+                  },
+                  {
+                     "type": "integer"
+                  }
+               ],
+               "description": "The start coordinate or range of the SequenceLocation. The minimum value of this coordinate or range is 0. MUST represent a coordinate or range less than the value of `end`."
+            },
+            "end": {
+               "oneOf": [
+                  {
+                     "$ref": "#/$defs/Range"
+                  },
+                  {
+                     "type": "integer"
+                  }
+               ],
+               "description": "The end coordinate or range of the SequenceLocation. The minimum value of this coordinate or range is 0. MUST represent a coordinate or range greater than the value of `start`."
+            }
+         },
+         "required": [
+            "end",
+            "start",
+            "type"
+         ],
+         "additionalProperties": false
+      },
+      "SequenceReference": {
+         "maturity": "Alpha",
+         "ga4ghDigest": {
+            "keys": [
+               "refgetAccession"
+            ]
+         },
+         "type": "object",
+         "description": "A sequence of nucleic or amino acid character codes.",
+         "properties": {
+            "id": {
+               "type": "string",
+               "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
+            },
+            "label": {
+               "type": "string",
+               "description": "A primary label for the entity."
+            },
+            "description": {
+               "type": "string",
+               "description": "A free-text description of the entity."
+            },
+            "extensions": {
+               "type": "array",
+               "ordered": true,
+               "items": {
+                  "$ref": "#/$defs/Extension"
+               }
+            },
+            "digest": {
+               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
+               "type": "string",
+               "pattern": "[0-9A-Za-z_\\-]{32}"
+            },
+            "refgetAccession": {
+               "description": "A `GA4GH RefGet <http://samtools.github.io/hts-specs/refget.html>` identifier for the referenced sequence, using the sha512t24u digest.",
+               "type": "string",
+               "pattern": "SQ.[0-9A-Za-z_\\-]{32}"
+            },
+            "residueAlphabet": {
+               "type": "string",
+               "description": "The interpretation of the character codes referred to by the refget accession, where \"aa\" specifies an amino acid character set, and \"na\" specifies a nucleic acid character set.",
+               "enum": [
+                  "aa",
+                  "na"
+               ]
+            }
+         },
+         "required": [
+            "refgetAccession"
+         ],
+         "additionalProperties": false
+      },
+      "SequenceExpression": {
+         "description": "An expression describing a Sequence.",
+         "oneOf": [
+            {
+               "$ref": "#/$defs/LiteralSequenceExpression"
+            },
+            {
+               "$ref": "#/$defs/ReferenceLengthExpression"
+            }
+         ],
+         "discriminator": {
+            "propertyName": "type"
+         }
+      },
+      "ReferenceLengthExpression": {
+         "maturity": "Alpha",
+         "description": "An expression of a length of a sequence from a repeating reference.",
+         "type": "object",
+         "properties": {
+            "id": {
+               "type": "string",
+               "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
+            },
+            "label": {
+               "type": "string",
+               "description": "A primary label for the entity."
+            },
+            "description": {
+               "type": "string",
+               "description": "A free-text description of the entity."
+            },
+            "extensions": {
+               "type": "array",
+               "ordered": true,
+               "items": {
+                  "$ref": "#/$defs/Extension"
+               }
+            },
+            "digest": {
+               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
+               "type": "string",
+               "pattern": "[0-9A-Za-z_\\-]{32}"
+            },
+            "type": {
+               "type": "string",
+               "const": "ReferenceLengthExpression",
+               "default": "ReferenceLengthExpression",
+               "description": "MUST be \"ReferenceLengthExpression\""
+            },
+            "length": {
+               "oneOf": [
+                  {
+                     "$ref": "#/$defs/Range"
+                  },
+                  {
+                     "type": "integer"
+                  }
+               ],
+               "description": "The number of residues in the expressed sequence."
+            },
+            "sequence": {
+               "$ref": "#/$defs/SequenceString",
+               "description": "the Sequence encoded by the Reference Length Expression."
+            },
+            "repeatSubunitLength": {
+               "type": "integer",
+               "description": "The number of residues in the repeat subunit."
+            }
+         },
+         "required": [
+            "length",
+            "repeatSubunitLength",
+            "type"
+         ],
+         "additionalProperties": false
+      },
+      "LiteralSequenceExpression": {
+         "maturity": "Alpha",
+         "description": "An explicit expression of a Sequence.",
+         "type": "object",
+         "properties": {
+            "id": {
+               "type": "string",
+               "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
+            },
+            "label": {
+               "type": "string",
+               "description": "A primary label for the entity."
+            },
+            "description": {
+               "type": "string",
+               "description": "A free-text description of the entity."
+            },
+            "extensions": {
+               "type": "array",
+               "ordered": true,
+               "items": {
+                  "$ref": "#/$defs/Extension"
+               }
+            },
+            "digest": {
+               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
+               "type": "string",
+               "pattern": "[0-9A-Za-z_\\-]{32}"
+            },
+            "type": {
+               "type": "string",
+               "const": "LiteralSequenceExpression",
+               "default": "LiteralSequenceExpression",
+               "description": "MUST be \"LiteralSequenceExpression\""
+            },
+            "sequence": {
+               "$ref": "#/$defs/SequenceString",
+               "description": "the literal sequence"
+            }
+         },
+         "required": [
+            "sequence",
+            "type"
+         ],
+         "additionalProperties": false
+      },
+      "GenotypeMember": {
+         "privateTo": "Genotype",
+         "description": "A class for expressing the count of a specific MolecularVariation present _in-trans_ at a genomic locus represented by a Genotype.",
+         "type": "object",
+         "properties": {
+            "id": {
+               "type": "string",
+               "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
+            },
+            "label": {
+               "type": "string",
+               "description": "A primary label for the entity."
+            },
+            "description": {
+               "type": "string",
+               "description": "A free-text description of the entity."
+            },
+            "extensions": {
+               "type": "array",
+               "ordered": true,
+               "items": {
+                  "$ref": "#/$defs/Extension"
+               }
+            },
+            "digest": {
+               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
+               "type": "string",
+               "pattern": "[0-9A-Za-z_\\-]{32}"
+            },
+            "count": {
+               "oneOf": [
+                  {
+                     "$ref": "#/$defs/Range"
+                  },
+                  {
+                     "type": "integer"
+                  }
+               ],
+               "description": "The number of copies of the `variation` at a Genotype locus."
+            },
+            "variation": {
+               "oneOf": [
+                  {
+                     "$ref": "#/$defs/Allele"
+                  },
+                  {
+                     "$ref": "#/$defs/Haplotype"
+                  }
+               ],
+               "description": "A MolecularVariation at a Genotype locus."
+            }
+         },
+         "required": [
+            "count",
+            "variation"
+         ],
+         "additionalProperties": false
+      },
+      "Range": {
+         "maturity": "Alpha",
+         "description": "An inclusive range of values bounded by one or more integers.",
+         "type": "array",
+         "ordered": true,
+         "items": {
+            "oneOf": [
+               {
+                  "type": "integer"
+               },
+               {
+                  "type": "null"
+               }
+            ]
+         },
+         "maxItems": 2,
+         "minItems": 2
+      },
+      "Residue": {
+         "maturity": "Alpha",
+         "description": "A character representing a specific residue (i.e., molecular species) or groupings of these (\"ambiguity codes\"), using [one-letter IUPAC abbreviations](https://en.wikipedia.org/wiki/International_Union_of_Pure_and_Applied_Chemistry#Amino_acid_and_nucleotide_base_codes) for nucleic acids and amino acids.",
+         "type": "string",
+         "pattern": "[A-Z*\\-]"
+      },
+      "SequenceString": {
+         "maturity": "Alpha",
+         "description": "A character string of Residues that represents a biological sequence using the conventional sequence order (5\u2019-to-3\u2019 for nucleic acid sequences, and amino-to-carboxyl for amino acid sequences). IUPAC ambiguity codes are permitted in Sequence Strings.",
+         "type": "string",
+         "pattern": "^[A-Z*\\-]*$"
+      }
+   }
+}

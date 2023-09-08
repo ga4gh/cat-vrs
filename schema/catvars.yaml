@@ -2,72 +2,141 @@ $schema: http://json-schema.org/draft/2020-12/schema
 title: GA4GH-Categorical-Variation-Definitions
 type: object
 $defs:
-  CategoricalVariation:
-    description: A representation of a categorically-defined  [functional domain](https://en.wikipedia.org/wiki/Domain_of_a_function)  for
-      variation, in which individual variation instances may be members.
-    oneOf:
-    - $ref: '#/$defs/CanonicalVariation'
-    - $ref: '#/$defs/ComplexVariation'
-  ComplexVariation:
+  CanonicalAllele:
+    maturity: Alpha
+    description: A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>`  that
+      is representative of a collection of congruent Alleles, each of which depict
+      the same nucleic acid  change on different underlying reference sequences. Congruent
+      representations of an Allele often exist across different genome assemblies
+      and associated cDNA transcript representations.
     type: object
-    ga4gh_prefix: CXV
-    description: A categorical variation domain jointly characterized by two or more
-      other categorical  variation domains.
     properties:
       id:
-        $ref: core.json#/$defs/CURIE
-        description: The 'logical' identifier of the entity in the system of record,
-          and MUST be represented as a CURIE. This 'id' is unique within a given system,
-          but may also refer to an 'id' for the shared concept in  another system
-          (represented by namespace, accordingly).
-      type:
         type: string
-        description: MUST be "ComplexVariation".
-        const: ComplexVariation
-      operands:
+        description: The 'logical' identifier of the entity in the system of record,
+          e.g. a UUID. This 'id' is  unique within a given system. The identified
+          entity may have a different 'id' in a different  system, or may refer to
+          an 'id' for the shared concept in another system (e.g. a CURIE).
+      label:
+        type: string
+        description: A primary label for the entity.
+      description:
+        type: string
+        description: A free-text description of the entity.
+      extensions:
+        type: array
+        ordered: true
+        items:
+          $ref: core.json#/$defs/Extension
+      mappings:
         type: array
         ordered: false
         items:
-          oneOf:
-          - $ref: '#/$defs/CanonicalVariation'
-          - $ref: '#/$defs/ComplexVariation'
-        minItems: 2
-        description: The CategoricalVariation objects that are being evaluated collectively.
-      operator:
-        type: string
-        enum:
-        - AND
-        - OR
-        description: The logical operation applied to evaluating the object *operands*.
-          MUST be "AND" or "OR".
-    required:
-    - operands
-    - operator
-    - type
-    additionalProperties: false
-  CanonicalVariation:
-    type: object
-    ga4gh_prefix: CAN
-    description: A categorical variation domain characterized by a representative
-      Variation context  to which members lift-over, project, translate, or otherwise
-      directly align.
-    properties:
-      id:
-        $ref: core.json#/$defs/CURIE
-        description: The 'logical' identifier of the entity in the system of record,
-          and MUST be represented as a CURIE. This 'id' is unique within a given system,
-          but may also refer to an 'id' for the shared concept in  another system
-          (represented by namespace, accordingly).
+          $ref: core.json#/$defs/Mapping
+      members:
+        type: array
+        ordered: false
+        description: A non-exhaustive list of VRS variation contexts that satisfy
+          the constraints of this categorical variant.
+        items:
+          anyOf:
+          - $refCurie: vrs:Variation
+          - $ref: '#/$defs/'
       type:
         type: string
-        const: CanonicalVariation
-        default: CanonicalVariation
-        description: MUST be "CanonicalVariation".
-      canonical_context:
-        description: The [VRS Variation](https://vrs.ga4gh.org/en/1.2.1/terms_and_model.html#variation)
-          object to which congruency must be determined.
-        $ref: vrs.json#/definitions/Variation
+        const: CanonicalAllele
+      definingContext:
+        type:
+          $refCurie: vrs:Variation
+        description: The [VRS Variation](https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation)
+          object that is congruent with variants on alternate reference sequences.
     required:
-    - canonical_context
-    - type
+    - definingContext
+    additionalProperties: false
+  CategoricalCnv:
+    maturity: Alpha
+    type: object
+    description: A categorical variation domain is defined first by a sequence derived
+      from a canonical [Location ](https://vrs.ga4gh.org/en/2.0/terms_and_model.html#Location)
+      , which is representative of  a collection of congruent Locations. The change
+      or count of this sequence is also described, either by a numeric value (e.g.
+      "3 or more copies") or categorical representation (e.g. "high-level gain").  Categorical
+      CNVs may optionally be defined by rules specifying the location match characteristics
+      for  member CNVs.
+    properties:
+      id:
+        type: string
+        description: The 'logical' identifier of the entity in the system of record,
+          e.g. a UUID. This 'id' is  unique within a given system. The identified
+          entity may have a different 'id' in a different  system, or may refer to
+          an 'id' for the shared concept in another system (e.g. a CURIE).
+      label:
+        type: string
+        description: A primary label for the entity.
+      description:
+        type: string
+        description: A free-text description of the entity.
+      extensions:
+        type: array
+        ordered: true
+        items:
+          $ref: core.json#/$defs/Extension
+      mappings:
+        type: array
+        ordered: false
+        items:
+          $ref: core.json#/$defs/Mapping
+      members:
+        type: array
+        ordered: false
+        description: A non-exhaustive list of VRS variation contexts that satisfy
+          the constraints of this categorical variant.
+        items:
+          anyOf:
+          - $refCurie: vrs:Variation
+          - $ref: '#/$defs/'
+      location:
+        type:
+          $refCurie: vrs:Location
+        description: A [VRS Location](https://vrs.ga4gh.org/en/2.0/terms_and_model.html#location)
+          object that represents a sequence derived from that location, and is congruent
+          with locations  on alternate reference sequences.
+      matchCharacteristic:
+        type: string
+        enum:
+        - exact
+        - partial
+        - subinterval
+        - superinterval
+        description: The characteristics of a valid match between a contextual CNV
+          location (the query) and the  Categorical CNV location (the domain), when
+          both query and domain are represented on the same  reference sequence. An
+          `exact` match requires the location of the query and domain to be identical.  A
+          `subinterval` match requires the query to be a subinterval of the domain.
+          A `superinterval` match requires the query to be a superinterval of the
+          domain. A `partial` match requires at least 1 residue of overlap between
+          the query and domain.
+      copyChange:
+        type: string
+        enum:
+        - efo:0030069
+        - efo:0020073
+        - efo:0030068
+        - efo:0030067
+        - efo:0030064
+        - efo:0030070
+        - efo:0030071
+        - efo:0030072
+        description: A representation of the change in copies of a sequence in a system.
+          MUST be one of "efo:0030069" (complete  genomic loss), "efo:0020073" (high-level
+          loss), "efo:0030068" (low-level loss), "efo:0030067" (loss),  "efo:0030064"
+          (regional base ploidy), "efo:0030070" (gain), "efo:0030071" (low-level gain),
+          "efo:0030072"  (high-level gain).
+      copies:
+        oneOf:
+        - type: integer
+        - $refCurie: vrs:Range
+        description: The integral number of copies of the subject in a system.
+    required:
+    - location
     additionalProperties: false

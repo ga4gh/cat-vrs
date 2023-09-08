@@ -28,6 +28,7 @@ $defs:
     heritableProperties:
       members:
         type: array
+        ordered: false
         description: >-
           A non-exhaustive list of VRS variation contexts that satisfy the constraints of
           this categorical variant.
@@ -37,6 +38,7 @@ $defs:
             - $ref: "#/$defs/"
 
   CanonicalAllele:
+    maturity: Alpha
     inherits: CategoricalVariation
     description: >-
       A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>` 
@@ -58,6 +60,7 @@ $defs:
       - definingContext
 
   CategoricalCnv:
+    maturity: Alpha
     type: object
     inherits: CategoricalVariation
     description: >-

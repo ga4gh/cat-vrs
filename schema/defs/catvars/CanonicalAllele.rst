@@ -1,10 +1,10 @@
 **Computational Definition**
 
-A representation of a categorically-defined domain for variation, in which individual  contextual variation instances may be members of the domain.
+A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>`  that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid  change on different underlying reference sequences. Congruent representations of an Allele often exist across different genome assemblies and associated cDNA transcript representations.
 
     **Information Model**
     
-Some CategoricalVariation attributes are inherited from :ref:`gks.core:MappableEntity`.
+Some CanonicalAllele attributes are inherited from :ref:`CategoricalVariation`.
 
     .. list-table::
        :class: clean-wrap
@@ -40,3 +40,11 @@ Some CategoricalVariation attributes are inherited from :ref:`gks.core:MappableE
           - vrs:Variation | :ref:``
           - 0..m
           - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.
+       *  - type
+          - string
+          - 0..1
+          - 
+       *  - definingContext
+          - {'$refCurie': 'vrs:Variation'}
+          - 1..1
+          - The `VRS Variation <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>`_ object that is congruent with variants on alternate reference sequences.
