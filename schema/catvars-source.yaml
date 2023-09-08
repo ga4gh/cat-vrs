@@ -8,7 +8,8 @@ imports:
   vrs: vrs-source.yaml
 
 namespaces:
-  vrs: vrs.json#/definitions/
+  vrs: vrs.json#/$defs/
+  gks.core: core.json#/$defs/
 
 $defs:
   # VRSATILE Categorical Variation are presented top-down. Everything rolls up to
@@ -22,16 +23,9 @@ $defs:
   CategoricalVariation:
     inherits: gks.core:MappableEntity
     description: >-
-      A representation of a categorically-defined 
-      `functional domain <https://en.wikipedia.org/wiki/Domain_of_a_function>`_ 
-      for variation, in which individual variation instances may be members.
-    properties:
-      constraints:
-        type: array
-        description: >-
-          A collection of constraints that define a categorical variation.
-        items:
-          $ref: "#/$defs/Constraint"
+      A representation of a categorically-defined domain for variation, in which individual 
+      contextual variation instances may be members of the domain.
+    heritableProperties:
       members:
         type: array
         description: >-
@@ -42,16 +36,13 @@ $defs:
             - $refCurie: vrs:Variation
             - $ref: "#/$defs/"
 
-  Constraint:
-    inherits: Entity
-    type: object
-    description: >-
-      A property that constrains the domain of a categorical variant.
-    heritableRequired:
-      - type
-
   CanonicalAllele:
-    inherits: Constraint
+    inherits: CategoricalVariation
+    description: >-
+      A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>` 
+      that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid 
+      change on different underlying reference sequences. Congruent representations of an Allele often exist
+      across different genome assemblies and associated cDNA transcript representations.
     type: object
     properties:
       type:
@@ -62,29 +53,74 @@ $defs:
           $refCurie: vrs:Variation
         description: >-
           The `VRS Variation <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>`_
-          object to which congruency must be determined.
+          object that is congruent with variants on alternate reference sequences.
+    required:
+      - definingContext
 
-  CanonicalLocation:
-    inherits: Constraint
+  CategoricalCnv:
     type: object
+    inherits: CategoricalVariation
+    description: >-
+      A categorical variation domain is defined first by a sequence derived from a canonical `Location 
+      <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#Location>`_ , which is representative of 
+      a collection of congruent Locations. The change or count of this sequence is also described, either
+      by a numeric value (e.g. "3 or more copies") or categorical representation (e.g. "high-level gain"). 
+      Categorical CNVs may optionally be defined by rules specifying the location match characteristics for 
+      member CNVs.
     properties:
-      type:
-        type: string
-        const: "CanonicalLocation"
-      definingContext:
+      location:
         type:
           $refCurie: vrs:Location
         description: >-
-          The `VRS Location <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#location>`_
-          object describing the location range for the categorical variant.
+          A `VRS Location <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#location>`_
+          object that represents a sequence derived from that location, and is congruent with locations 
+          on alternate reference sequences.
       matchCharacteristic:
         type: string
-        enum:
-          - exact
-          - partial
-          - complete
+        enum: ['exact', 'partial', 'subinterval', 'superinterval']
+        description: >-
+          The characteristics of a valid match between a contextual CNV location (the query) and the 
+          Categorical CNV location (the domain), when both query and domain are represented on the same 
+          reference sequence. An `exact` match requires the location of the query and domain to be identical. 
+          A `subinterval` match requires the query to be a subinterval of the domain. A `superinterval` match
+          requires the query to be a superinterval of the domain. A `partial` match requires at least 1 residue
+          of overlap between the query and domain.
+      copyChange:
+        type: string
+        enum: [ "efo:0030069", "efo:0020073", "efo:0030068", "efo:0030067", "efo:0030064", "efo:0030070", "efo:0030071", "efo:0030072" ]
+        description: >-
+          A representation of the change in copies of a sequence in a system. MUST be one of "efo:0030069" (complete 
+          genomic loss), "efo:0020073" (high-level loss), "efo:0030068" (low-level loss), "efo:0030067" (loss), 
+          "efo:0030064" (regional base ploidy), "efo:0030070" (gain), "efo:0030071" (low-level gain), "efo:0030072" 
+          (high-level gain).
+      copies:
+        oneOf:
+          - type: integer
+          - $refCurie: vrs:Range
+        description: >-
+          The integral number of copies of the subject in a system.
+    required:
+      - location
 
-  
+#  CanonicalLocation:
+#    inherits: Constraint
+#    type: object
+#    properties:
+#      type:
+#        type: string
+#        const: "CanonicalLocation"
+#      definingContext:
+#        type:
+#          $refCurie: vrs:Location
+#        description: >-
+#          The `VRS Location <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#location>`_
+#          object describing the location range for the categorical variant.
+#      matchCharacteristic:
+#        type: string
+#        enum:
+#          - exact
+#          - partial
+#          - complete
 
 
   # GeneContext:
@@ -125,30 +161,3 @@ $defs:
   #         The logical operation applied to evaluating the object *operands*. MUST
   #         be "AND" or "OR".
   #   required: ["operands", "operator"]
-
-  CategoricalCopyNumber:
-    type: object
-    inherits: CategoricalVariation
-    description: >-
-      A categorical variation domain characterized by a canonical Sequence Location
-      with a 
-
-
-  CanonicalAllele:
-    type: object
-    inherits: CategoricalVariation
-    description: >-
-      A categorical variation domain characterized by a canonical Variation context 
-      to which members lift-over, project, translate, or otherwise directly align.
-    properties:
-      type:
-        type: string
-        const: CanonicalAllele
-        default: CanonicalAllele
-        description: MUST be "CanonicalAllele".
-      canonical_context:
-        $refCurie: vrs:Variation
-        description: >-
-          The `VRS Variation <https://vrs.ga4gh.org/en/1.2.1/terms_and_model.html#variation>`_
-          object to which congruency must be determined.
-    required: ["canonical_context"]
