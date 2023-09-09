@@ -45,6 +45,6 @@ Some CanonicalAllele attributes are inherited from :ref:`CategoricalVariation`.
           - 1..1
           - 
        *  - definingContext
-          - {'$ref': 'vrs.json#/$defs/Variation'}
+          - `Variation <vrs.json#/$defs/Variation>`_
           - 1..1
           - The `VRS Variation <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>`_ object that is congruent with variants on alternate reference sequences.

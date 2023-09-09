@@ -27,7 +27,7 @@ $defs:
       contextual variation instances may be members of the domain.
     oneOf:
       - $ref: "#/$defs/CanonicalAllele"
-      - $ref: "#/$defs/CategoricalCNV"
+      - $ref: "#/$defs/CategoricalCnv"
       - $ref: "#/$defs/DescribedVariation"
     heritableProperties:
       members:
@@ -55,8 +55,7 @@ $defs:
         type: string
         const: "CanonicalAllele"
       definingContext:
-        type:
-          $refCurie: vrs:Variation
+        $refCurie: vrs:Variation
         description: >-
           The `VRS Variation <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>`_
           object that is congruent with variants on alternate reference sequences.
