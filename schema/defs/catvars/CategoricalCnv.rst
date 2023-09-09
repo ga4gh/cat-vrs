@@ -37,7 +37,7 @@ Some CategoricalCnv attributes are inherited from :ref:`CategoricalVariation`.
           - 0..m
           - 
        *  - members
-          - `Variation <vrs.json#/$defs/Variation>`_ | :ref:``
+          - `Variation <vrs.json#/$defs/Variation>`_ | `IRI <core.json#/$defs/IRI>`_
           - 0..m
           - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.
        *  - type

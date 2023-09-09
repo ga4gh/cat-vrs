@@ -58,7 +58,7 @@
                         "$ref": "vrs.json#/$defs/Variation"
                      },
                      {
-                        "$ref": "#/$defs/"
+                        "$ref": "core.json#/$defs/IRI"
                      }
                   ]
                }
@@ -121,7 +121,7 @@
                         "$ref": "vrs.json#/$defs/Variation"
                      },
                      {
-                        "$ref": "#/$defs/"
+                        "$ref": "core.json#/$defs/IRI"
                      }
                   ]
                }
@@ -211,7 +211,7 @@
                         "$ref": "vrs.json#/$defs/Variation"
                      },
                      {
-                        "$ref": "#/$defs/"
+                        "$ref": "core.json#/$defs/IRI"
                      }
                   ]
                }

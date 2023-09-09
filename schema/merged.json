@@ -58,7 +58,7 @@
                         "$ref": "#/$defs/Variation"
                      },
                      {
-                        "$ref": "#/$defs/"
+                        "$ref": "#/$defs/IRI"
                      }
                   ]
                }
@@ -121,7 +121,7 @@
                         "$ref": "#/$defs/Variation"
                      },
                      {
-                        "$ref": "#/$defs/"
+                        "$ref": "#/$defs/IRI"
                      }
                   ]
                }
@@ -211,7 +211,7 @@
                         "$ref": "#/$defs/Variation"
                      },
                      {
-                        "$ref": "#/$defs/"
+                        "$ref": "#/$defs/IRI"
                      }
                   ]
                }

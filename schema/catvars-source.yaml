@@ -39,7 +39,7 @@ $defs:
         items:
           anyOf:
             - $refCurie: vrs:Variation
-            - $ref: "#/$defs/"
+            - $refCurie: gks.core:IRI
 
   CanonicalAllele:
     maturity: Alpha

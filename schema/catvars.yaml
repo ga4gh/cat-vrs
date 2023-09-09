@@ -48,7 +48,7 @@ $defs:
         items:
           anyOf:
           - $ref: vrs.json#/$defs/Variation
-          - $ref: '#/$defs/'
+          - $ref: core.json#/$defs/IRI
       type:
         type: string
         const: CanonicalAllele
@@ -102,7 +102,7 @@ $defs:
         items:
           anyOf:
           - $ref: vrs.json#/$defs/Variation
-          - $ref: '#/$defs/'
+          - $ref: core.json#/$defs/IRI
       type:
         type: string
         const: CategoricalCNV
@@ -185,7 +185,7 @@ $defs:
         items:
           anyOf:
           - $ref: vrs.json#/$defs/Variation
-          - $ref: '#/$defs/'
+          - $ref: core.json#/$defs/IRI
       type:
         type: string
         const: DescribedVariation
