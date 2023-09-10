@@ -48,6 +48,14 @@
                   "$ref": "core.json#/$defs/Mapping"
                }
             },
+            "aliases": {
+               "description": "Aliases are alternate labels for a Domain Entity.",
+               "ordered": false,
+               "type": "array",
+               "items": {
+                  "type": "string"
+               }
+            },
             "members": {
                "type": "array",
                "ordered": false,
@@ -65,7 +73,9 @@
             },
             "type": {
                "type": "string",
-               "const": "CanonicalAllele"
+               "const": "CanonicalAllele",
+               "default": "CanonicalAllele",
+               "description": "MUST be \"CanonicalAllele\""
             },
             "definingContext": {
                "description": "The [VRS Variation](https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation) object that is congruent with variants on alternate reference sequences.",
@@ -109,6 +119,14 @@
                   "$ref": "core.json#/$defs/Mapping"
                }
             },
+            "aliases": {
+               "description": "Aliases are alternate labels for a Domain Entity.",
+               "ordered": false,
+               "type": "array",
+               "items": {
+                  "type": "string"
+               }
+            },
             "members": {
                "type": "array",
                "ordered": false,
@@ -126,7 +144,9 @@
             },
             "type": {
                "type": "string",
-               "const": "CategoricalCNV"
+               "const": "CategoricalCnv",
+               "default": "CategoricalCnv",
+               "description": "MUST be \"CategoricalCnv\""
             },
             "location": {
                "type": {
@@ -199,6 +219,14 @@
                   "$ref": "core.json#/$defs/Mapping"
                }
             },
+            "aliases": {
+               "description": "Aliases are alternate labels for a Domain Entity.",
+               "ordered": false,
+               "type": "array",
+               "items": {
+                  "type": "string"
+               }
+            },
             "members": {
                "type": "array",
                "ordered": false,
@@ -216,7 +244,9 @@
             },
             "type": {
                "type": "string",
-               "const": "DescribedVariation"
+               "const": "DescribedVariation",
+               "default": "DescribedVariation",
+               "description": "MUST be \"DescribedVariation\""
             },
             "label": {
                "type": "string",

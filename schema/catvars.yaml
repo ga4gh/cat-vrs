@@ -40,6 +40,12 @@ $defs:
         ordered: false
         items:
           $ref: core.json#/$defs/Mapping
+      aliases:
+        description: Aliases are alternate labels for a Domain Entity.
+        ordered: false
+        type: array
+        items:
+          type: string
       members:
         type: array
         ordered: false
@@ -52,6 +58,8 @@ $defs:
       type:
         type: string
         const: CanonicalAllele
+        default: CanonicalAllele
+        description: MUST be "CanonicalAllele"
       definingContext:
         description: The [VRS Variation](https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation)
           object that is congruent with variants on alternate reference sequences.
@@ -93,6 +101,12 @@ $defs:
         ordered: false
         items:
           $ref: core.json#/$defs/Mapping
+      aliases:
+        description: Aliases are alternate labels for a Domain Entity.
+        ordered: false
+        type: array
+        items:
+          type: string
       members:
         type: array
         ordered: false
@@ -104,7 +118,9 @@ $defs:
           - $ref: core.json#/$defs/IRI
       type:
         type: string
-        const: CategoricalCNV
+        const: CategoricalCnv
+        default: CategoricalCnv
+        description: MUST be "CategoricalCnv"
       location:
         type:
           $ref: vrs.json#/$defs/Location
@@ -176,6 +192,12 @@ $defs:
         ordered: false
         items:
           $ref: core.json#/$defs/Mapping
+      aliases:
+        description: Aliases are alternate labels for a Domain Entity.
+        ordered: false
+        type: array
+        items:
+          type: string
       members:
         type: array
         ordered: false
@@ -188,6 +210,8 @@ $defs:
       type:
         type: string
         const: DescribedVariation
+        default: DescribedVariation
+        description: MUST be "DescribedVariation"
       label:
         type: string
         description: A primary label for the categorical variation. This required

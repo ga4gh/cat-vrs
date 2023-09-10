@@ -40,6 +40,12 @@ $defs:
         ordered: false
         items:
           $ref: '#/$defs/Mapping'
+      aliases:
+        description: Aliases are alternate labels for a Domain Entity.
+        ordered: false
+        type: array
+        items:
+          type: string
       members:
         type: array
         ordered: false
@@ -52,6 +58,8 @@ $defs:
       type:
         type: string
         const: CanonicalAllele
+        default: CanonicalAllele
+        description: MUST be "CanonicalAllele"
       definingContext:
         description: The [VRS Variation](https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation)
           object that is congruent with variants on alternate reference sequences.
@@ -98,6 +106,12 @@ $defs:
         ordered: false
         items:
           $ref: '#/$defs/Mapping'
+      aliases:
+        description: Aliases are alternate labels for a Domain Entity.
+        ordered: false
+        type: array
+        items:
+          type: string
       members:
         type: array
         ordered: false
@@ -109,7 +123,9 @@ $defs:
           - $ref: '#/$defs/IRI'
       type:
         type: string
-        const: CategoricalCNV
+        const: CategoricalCnv
+        default: CategoricalCnv
+        description: MUST be "CategoricalCnv"
       location:
         type:
           $ref: '#/$defs/Location'
@@ -181,6 +197,12 @@ $defs:
         ordered: false
         items:
           $ref: '#/$defs/Mapping'
+      aliases:
+        description: Aliases are alternate labels for a Domain Entity.
+        ordered: false
+        type: array
+        items:
+          type: string
       members:
         type: array
         ordered: false
@@ -193,6 +215,8 @@ $defs:
       type:
         type: string
         const: DescribedVariation
+        default: DescribedVariation
+        description: MUST be "DescribedVariation"
       label:
         type: string
         description: A primary label for the categorical variation. This required
@@ -344,6 +368,12 @@ $defs:
         ordered: false
         items:
           $ref: '#/$defs/Mapping'
+      aliases:
+        description: Aliases are alternate labels for a Domain Entity.
+        ordered: false
+        type: array
+        items:
+          type: string
       type:
         type: string
         const: TraitSet
@@ -390,6 +420,12 @@ $defs:
         ordered: false
         items:
           $ref: '#/$defs/Mapping'
+      aliases:
+        description: Aliases are alternate labels for a Domain Entity.
+        ordered: false
+        type: array
+        items:
+          type: string
       type:
         type: string
         const: Disease
@@ -425,6 +461,12 @@ $defs:
         ordered: false
         items:
           $ref: '#/$defs/Mapping'
+      aliases:
+        description: Aliases are alternate labels for a Domain Entity.
+        ordered: false
+        type: array
+        items:
+          type: string
       type:
         type: string
         const: Phenotype
@@ -469,6 +511,12 @@ $defs:
         ordered: false
         items:
           $ref: '#/$defs/Mapping'
+      aliases:
+        description: Aliases are alternate labels for a Domain Entity.
+        ordered: false
+        type: array
+        items:
+          type: string
       type:
         type: string
         const: TherapeuticAction
@@ -519,6 +567,12 @@ $defs:
         ordered: false
         items:
           $ref: '#/$defs/Mapping'
+      aliases:
+        description: Aliases are alternate labels for a Domain Entity.
+        ordered: false
+        type: array
+        items:
+          type: string
       type:
         type: string
         const: TherapeuticAgent
@@ -569,6 +623,12 @@ $defs:
         ordered: false
         items:
           $ref: '#/$defs/Mapping'
+      aliases:
+        description: Aliases are alternate labels for a Domain Entity.
+        ordered: false
+        type: array
+        items:
+          type: string
       type:
         type: string
         const: CombinationTherapy
@@ -617,6 +677,12 @@ $defs:
         ordered: false
         items:
           $ref: '#/$defs/Mapping'
+      aliases:
+        description: Aliases are alternate labels for a Domain Entity.
+        ordered: false
+        type: array
+        items:
+          type: string
       type:
         type: string
         const: TherapeuticSubstituteGroup
@@ -799,7 +865,6 @@ $defs:
         items:
           oneOf:
           - $ref: '#/$defs/Allele'
-          - $ref: '#/$defs/HaplotypeMemberAllele'
           - $ref: '#/$defs/IRI'
         description: A list of Alleles (or IRI references to `Alleles`) that comprise
           a Haplotype. Since each `Haplotype` member MUST be an `Allele`, and all
@@ -816,7 +881,7 @@ $defs:
     ga4ghDigest:
       keys:
       - copies
-      - subject
+      - location
       - type
       prefix: CN
     type: object
@@ -875,7 +940,7 @@ $defs:
     ga4ghDigest:
       keys:
       - copyChange
-      - subject
+      - location
       - type
       prefix: CX
     type: object
@@ -1009,7 +1074,7 @@ $defs:
     ga4ghDigest:
       keys:
       - end
-      - sequence
+      - sequenceReference
       - start
       - type
       prefix: SL
@@ -1101,7 +1166,7 @@ $defs:
         const: SequenceReference
       refgetAccession:
         description: A `GA4GH RefGet <http://samtools.github.io/hts-specs/refget.html>`
-          identifier for the referenced sequence, using the sha512t24u digest.
+          identifier for the referenced sequence,  using the sha512t24u digest.
         type: string
         pattern: SQ.[0-9A-Za-z_\-]{32}
       residueAlphabet:
@@ -1125,6 +1190,11 @@ $defs:
       propertyName: type
   ReferenceLengthExpression:
     maturity: Alpha
+    ga4ghDigest:
+      keys:
+      - length
+      - repeatSubunitLength
+      - type
     description: An expression of a length of a sequence from a repeating reference.
     type: object
     properties:
@@ -1173,6 +1243,10 @@ $defs:
     additionalProperties: false
   LiteralSequenceExpression:
     maturity: Alpha
+    ga4ghDigest:
+      keys:
+      - sequence
+      - type
     description: An explicit expression of a Sequence.
     type: object
     properties:
@@ -1212,6 +1286,10 @@ $defs:
     additionalProperties: false
   GenotypeMember:
     privateTo: Genotype
+    ga4ghDigest:
+      keys:
+      - count
+      - variation
     description: A class for expressing the count of a specific MolecularVariation
       present _in-trans_ at a genomic locus represented by a Genotype.
     type: object

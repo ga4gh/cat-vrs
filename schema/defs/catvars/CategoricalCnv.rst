@@ -36,6 +36,10 @@ Some CategoricalCnv attributes are inherited from :ref:`CategoricalVariation`.
           - `Mapping <core.json#/$defs/Mapping>`_
           - 0..m
           - 
+       *  - aliases
+          - string
+          - 0..m
+          - Aliases are alternate labels for a Domain Entity.
        *  - members
           - `Variation <vrs.json#/$defs/Variation>`_ | `IRI <core.json#/$defs/IRI>`_
           - 0..m
@@ -43,7 +47,7 @@ Some CategoricalCnv attributes are inherited from :ref:`CategoricalVariation`.
        *  - type
           - string
           - 1..1
-          - 
+          - MUST be "CategoricalCnv"
        *  - location
           - {'$ref': 'vrs.json#/$defs/Location'}
           - 1..1

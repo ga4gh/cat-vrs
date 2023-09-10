@@ -4,7 +4,7 @@ A representation of a categorically-defined domain for variation, in which indiv
 
     **Information Model**
     
-Some CategoricalVariation attributes are inherited from :ref:`gks.core:MappableEntity`.
+Some CategoricalVariation attributes are inherited from :ref:`gks.core:DomainEntity`.
 
     .. list-table::
        :class: clean-wrap
@@ -36,6 +36,14 @@ Some CategoricalVariation attributes are inherited from :ref:`gks.core:MappableE
           - `Mapping <core.json#/$defs/Mapping>`_
           - 0..m
           - 
+       *  - type
+          - string
+          - 1..1
+          - 
+       *  - aliases
+          - string
+          - 0..m
+          - Aliases are alternate labels for a Domain Entity.
        *  - members
           - `Variation <vrs.json#/$defs/Variation>`_ | `IRI <core.json#/$defs/IRI>`_
           - 0..m
