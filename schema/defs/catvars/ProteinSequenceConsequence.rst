@@ -1,10 +1,10 @@
 **Computational Definition**
 
-A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>`  that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid  change on different underlying reference sequences. Congruent representations of an Allele often exist across different genome assemblies and associated cDNA transcript representations.
+A change that occurs in a protein sequence as a result of genomic changes. Due to the degenerate nature of the genetic code, there are often several genomic changes that can cause a protein sequence consequence. The protein sequence consequence, like a :ref:`CanonicalAllele`, is defined by an `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>` that is representative of a collection of congruent Protein Alleles that share the same altered codon(s).
 
     **Information Model**
     
-Some CanonicalAllele attributes are inherited from :ref:`CategoricalVariation`.
+Some ProteinSequenceConsequence attributes are inherited from :ref:`CategoricalVariation`.
 
     .. list-table::
        :class: clean-wrap
@@ -47,8 +47,8 @@ Some CanonicalAllele attributes are inherited from :ref:`CategoricalVariation`.
        *  - type
           - string
           - 1..1
-          - MUST be "CanonicalAllele"
+          - MUST be "ProteinSequenceConsequence"
        *  - definingContext
           - `Allele <vrs.json#/$defs/Allele>`_ | `IRI <core.json#/$defs/IRI>`_
           - 1..1
-          - The `VRS Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#allele>`_ object that is congruent with variants on alternate reference sequences.
+          - The `VRS Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#allele>`_ object that is congruent with (projects to the same codons) as alleles on other protein reference  sequences.

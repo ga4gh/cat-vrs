@@ -29,6 +29,7 @@ $defs:
       - $ref: "#/$defs/CanonicalAllele"
       - $ref: "#/$defs/CategoricalCnv"
       - $ref: "#/$defs/DescribedVariation"
+      - $ref: "#/$defs/ProteinSequenceConsequence"
     heritableProperties:
       members:
         type: array
@@ -40,6 +41,33 @@ $defs:
           anyOf:
             - $refCurie: vrs:Variation
             - $refCurie: gks.core:IRI
+
+  ProteinSequenceConsequence:
+    maturity: Alpha
+    type: object
+    inherits: CategoricalVariation
+    description: >-
+      A change that occurs in a protein sequence as a result of genomic changes. Due to the degenerate nature
+      of the genetic code, there are often several genomic changes that can cause a protein sequence consequence.
+      The protein sequence consequence, like a :ref:`CanonicalAllele`, is defined by an
+      `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>` that is representative of a collection
+      of congruent Protein Alleles that share the same altered codon(s).
+    properties:
+      type:
+        extends: type
+        const: ProteinSequenceConsequence
+        default: ProteinSequenceConsequence
+        description: 'MUST be "ProteinSequenceConsequence"'
+      definingContext:
+        oneOf:
+          - $refCurie: vrs:Allele
+          - $refCurie: gks.core:IRI
+        description: >-
+          The `VRS Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#allele>`_
+          object that is congruent with (projects to the same codons) as alleles on other protein reference 
+          sequences.
+    required:
+      - definingContext
 
   CanonicalAllele:
     maturity: Alpha
@@ -57,9 +85,11 @@ $defs:
         default: CanonicalAllele
         description: 'MUST be "CanonicalAllele"'
       definingContext:
-        $refCurie: vrs:Variation
+        oneOf:
+          - $refCurie: vrs:Allele
+          - $refCurie: gks.core:IRI
         description: >-
-          The `VRS Variation <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>`_
+          The `VRS Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#allele>`_
           object that is congruent with variants on alternate reference sequences.
     required:
       - definingContext

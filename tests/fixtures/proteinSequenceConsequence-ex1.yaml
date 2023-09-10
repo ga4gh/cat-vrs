@@ -1,0 +1,60 @@
+id: civic.mpid:33
+type: ProteinSequenceConsequence
+description: >-
+  EGFR L858R has long been recognized as a functionally significant mutation in cancer, 
+  and is one of the most prevalent single mutations in lung cancer. Best described in 
+  non-small cell lung cancer (NSCLC), the mutation seems to confer sensitivity to first 
+  and second generation TKI's like gefitinib and neratinib. NSCLC patients with this 
+  mutation treated with TKI's show increased overall and progression-free survival, as 
+  compared to chemotherapy alone. Third generation TKI's are currently in clinical trials 
+  that specifically focus on mutant forms of EGFR, a few of which have shown efficacy in 
+  treating patients that failed to respond to earlier generation TKI therapies.
+label: EGFR L858R
+definingContext: vrs.json#/ga4gh:VA.kgjrhgf84CEndyLjKdAO0RxN-e3pJjxA
+members:
+  - vrs.json#/ga4gh:VA.7jX7fHgVEqx4C4jMRyZOH0ZBHnLn7_gJ
+  - vrs.json#/ga4gh:VA.3_FsKSUHEdurPIw5gqpw6g0_Ga0TEXQh
+  - vrs.json#/ga4gh:VA.zpv3dW34z8jioKL-NtbGc0fa9clsgAZT
+  - vrs.json#/ga4gh:VA.BJOtfUhZMooMJUO4FjxHXTEimrKXtF0i
+aliases:
+  - LEU858ARG
+  - rs121434568
+mappings:
+  - coding:
+      code: CA126713
+      system: https://reg.clinicalgenome.org/
+    relation: relatedMatch
+  - coding:
+      code: '16609'
+      system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
+    relation: relatedMatch
+  - coding:
+      code: '376282'
+      system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
+    relation: relatedMatch
+  - coding:
+      code: '376280'
+      system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
+    relation: relatedMatch
+  - coding:
+      code: rs121434568
+      system: https://www.ncbi.nlm.nih.gov/snp/
+    relation: relatedMatch
+extensions:
+  - name: CIViC representative coordinate
+    value:
+      chromosome: '7'
+      start: 55259515
+      stop: 55259515
+      reference_bases: T
+      variant_bases: G
+      representative_transcript: ENST00000275493.2
+      ensembl_version: 75
+      reference_build: GRCh37
+  - name: CIViC Molecular Profile Score
+    value: 379
+  - name: Variant type
+    value:
+      code: SO:0001583
+      system: http://www.sequenceontology.org/browser/current_release/term/
+      label: missense_variant

@@ -1,0 +1,4 @@
+tests:
+  - test_file: proteinSequenceConsequence-ex1.yaml
+    schema: catvars
+    definition: ProteinSequenceConsequence
