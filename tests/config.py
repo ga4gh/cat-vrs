@@ -7,7 +7,7 @@ catvar_json_path = schema_path / "catvars.json"
 catvar_merged_yaml_path = schema_path / "merged.yaml"
 
 test_path = root_path / 'tests'
-fixtures_path = test_path / 'fixtures'
+fixtures_path = root_path / 'examples'
 
 
 def get_schema_ref(schema_file, schema_class, kw="$defs"):
