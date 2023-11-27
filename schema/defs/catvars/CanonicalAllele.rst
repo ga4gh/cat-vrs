@@ -2,7 +2,7 @@
 
 A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>`  that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid  change on different underlying reference sequences. Congruent representations of an Allele often exist across different genome assemblies and associated cDNA transcript representations.
 
-    **Information Model**
+**Information Model**
     
 Some CanonicalAllele attributes are inherited from :ref:`CategoricalVariation`.
 
@@ -10,7 +10,7 @@ Some CanonicalAllele attributes are inherited from :ref:`CategoricalVariation`.
        :class: clean-wrap
        :header-rows: 1
        :align: left
-       :widths: auto
+       :widths: 5 8 2 20
        
        *  - Field
           - Type

@@ -33,8 +33,8 @@ def _parse_release_as_version(rls):
 
 # -- Project information -----------------------------------------------------
 
-project = 'GA4GH VRSATILE'
-copyright = '2021, GA4GH VRSATILE Contributors'
+project = 'GA4GH Categorical Variation Representation Specification'
+copyright = '2023, GA4GH CatVar Study Group'
 author = 'Committers'
 master_doc = 'index'
 # N.B. RTD ignores these values. :-/
@@ -75,17 +75,15 @@ todo_emit_warnings = True
 html_theme = 'sphinx_rtd_theme'
 html_logo = 'images/GA-logo.png'
 
+
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-html_context = {
-    'css_files': [
-        '_static/theme_overrides.css',  # override wide tables in RTD theme
-        ],
-     }
+html_css_files = ['theme_overrides.css']
 
 # Sidebars
 
-html_sidebars = { '**': ['globaltoc.html', 'relations.html', 'sourcelink.html', 'searchbox.html'] }
+html_sidebars = { '**': ['globaltoc.html', 'relations.html',
+                         'sourcelink.html', 'searchbox.html'] }
