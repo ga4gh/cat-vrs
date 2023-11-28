@@ -1,5 +1,5 @@
 $schema: http://json-schema.org/draft/2020-12/schema
-title: GA4GH-Categorical-Variation-Definitions
+title: GA4GH-Cat-VRS-Definitions
 type: object
 $defs:
   CategoricalVariation:
@@ -42,6 +42,11 @@ $defs:
         ordered: false
         items:
           $ref: core.json#/$defs/Mapping
+      type:
+        type: string
+        const: ProteinSequenceConsequence
+        default: ProteinSequenceConsequence
+        description: MUST be "ProteinSequenceConsequence"
       aliases:
         description: Aliases are alternate labels for a Domain Entity.
         ordered: false
@@ -54,14 +59,9 @@ $defs:
         description: A non-exhaustive list of VRS variation contexts that satisfy
           the constraints of this categorical variant.
         items:
-          anyOf:
-          - $ref: vrs.json#/$defs/Variation
+          oneOf:
           - $ref: core.json#/$defs/IRI
-      type:
-        type: string
-        const: ProteinSequenceConsequence
-        default: ProteinSequenceConsequence
-        description: MUST be "ProteinSequenceConsequence"
+          - $ref: vrs.json#/$defs/Variation
       definingContext:
         oneOf:
         - $ref: core.json#/$defs/IRI
@@ -104,6 +104,11 @@ $defs:
         ordered: false
         items:
           $ref: core.json#/$defs/Mapping
+      type:
+        type: string
+        const: CanonicalAllele
+        default: CanonicalAllele
+        description: MUST be "CanonicalAllele"
       aliases:
         description: Aliases are alternate labels for a Domain Entity.
         ordered: false
@@ -116,14 +121,9 @@ $defs:
         description: A non-exhaustive list of VRS variation contexts that satisfy
           the constraints of this categorical variant.
         items:
-          anyOf:
-          - $ref: vrs.json#/$defs/Variation
+          oneOf:
           - $ref: core.json#/$defs/IRI
-      type:
-        type: string
-        const: CanonicalAllele
-        default: CanonicalAllele
-        description: MUST be "CanonicalAllele"
+          - $ref: vrs.json#/$defs/Variation
       definingContext:
         oneOf:
         - $ref: core.json#/$defs/IRI
@@ -167,6 +167,11 @@ $defs:
         ordered: false
         items:
           $ref: core.json#/$defs/Mapping
+      type:
+        type: string
+        const: CategoricalCnv
+        default: CategoricalCnv
+        description: MUST be "CategoricalCnv"
       aliases:
         description: Aliases are alternate labels for a Domain Entity.
         ordered: false
@@ -179,14 +184,9 @@ $defs:
         description: A non-exhaustive list of VRS variation contexts that satisfy
           the constraints of this categorical variant.
         items:
-          anyOf:
-          - $ref: vrs.json#/$defs/Variation
+          oneOf:
           - $ref: core.json#/$defs/IRI
-      type:
-        type: string
-        const: CategoricalCnv
-        default: CategoricalCnv
-        description: MUST be "CategoricalCnv"
+          - $ref: vrs.json#/$defs/Variation
       location:
         type:
           $ref: vrs.json#/$defs/Location
@@ -258,6 +258,11 @@ $defs:
         ordered: false
         items:
           $ref: core.json#/$defs/Mapping
+      type:
+        type: string
+        const: DescribedVariation
+        default: DescribedVariation
+        description: MUST be "DescribedVariation"
       aliases:
         description: Aliases are alternate labels for a Domain Entity.
         ordered: false
@@ -270,14 +275,9 @@ $defs:
         description: A non-exhaustive list of VRS variation contexts that satisfy
           the constraints of this categorical variant.
         items:
-          anyOf:
-          - $ref: vrs.json#/$defs/Variation
+          oneOf:
           - $ref: core.json#/$defs/IRI
-      type:
-        type: string
-        const: DescribedVariation
-        default: DescribedVariation
-        description: MUST be "DescribedVariation"
+          - $ref: vrs.json#/$defs/Variation
       label:
         type: string
         description: A primary label for the categorical variation. This required

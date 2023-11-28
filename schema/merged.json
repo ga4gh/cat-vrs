@@ -1,6 +1,6 @@
 {
    "$schema": "http://json-schema.org/draft/2020-12/schema",
-   "title": "GA4GH-Categorical-Variation-Definitions-Merged-Imports",
+   "title": "GA4GH-Cat-VRS-Definitions-Merged-Imports",
    "type": "object",
    "$defs": {
       "CategoricalVariation": {
@@ -51,6 +51,12 @@
                   "$ref": "#/$defs/Mapping"
                }
             },
+            "type": {
+               "type": "string",
+               "const": "ProteinSequenceConsequence",
+               "default": "ProteinSequenceConsequence",
+               "description": "MUST be \"ProteinSequenceConsequence\""
+            },
             "aliases": {
                "description": "Aliases are alternate labels for a Domain Entity.",
                "ordered": false,
@@ -64,21 +70,27 @@
                "ordered": false,
                "description": "A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.",
                "items": {
-                  "anyOf": [
+                  "oneOf": [
                      {
-                        "$ref": "#/$defs/Variation"
+                        "$ref": "#/$defs/Allele"
+                     },
+                     {
+                        "$ref": "#/$defs/CopyNumberChange"
+                     },
+                     {
+                        "$ref": "#/$defs/CopyNumberCount"
+                     },
+                     {
+                        "$ref": "#/$defs/Genotype"
+                     },
+                     {
+                        "$ref": "#/$defs/Haplotype"
                      },
                      {
                         "$ref": "#/$defs/IRI"
                      }
                   ]
                }
-            },
-            "type": {
-               "type": "string",
-               "const": "ProteinSequenceConsequence",
-               "default": "ProteinSequenceConsequence",
-               "description": "MUST be \"ProteinSequenceConsequence\""
             },
             "definingContext": {
                "oneOf": [
@@ -129,6 +141,12 @@
                   "$ref": "#/$defs/Mapping"
                }
             },
+            "type": {
+               "type": "string",
+               "const": "CanonicalAllele",
+               "default": "CanonicalAllele",
+               "description": "MUST be \"CanonicalAllele\""
+            },
             "aliases": {
                "description": "Aliases are alternate labels for a Domain Entity.",
                "ordered": false,
@@ -142,21 +160,27 @@
                "ordered": false,
                "description": "A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.",
                "items": {
-                  "anyOf": [
+                  "oneOf": [
                      {
-                        "$ref": "#/$defs/Variation"
+                        "$ref": "#/$defs/Allele"
+                     },
+                     {
+                        "$ref": "#/$defs/CopyNumberChange"
+                     },
+                     {
+                        "$ref": "#/$defs/CopyNumberCount"
+                     },
+                     {
+                        "$ref": "#/$defs/Genotype"
+                     },
+                     {
+                        "$ref": "#/$defs/Haplotype"
                      },
                      {
                         "$ref": "#/$defs/IRI"
                      }
                   ]
                }
-            },
-            "type": {
-               "type": "string",
-               "const": "CanonicalAllele",
-               "default": "CanonicalAllele",
-               "description": "MUST be \"CanonicalAllele\""
             },
             "definingContext": {
                "oneOf": [
@@ -207,6 +231,12 @@
                   "$ref": "#/$defs/Mapping"
                }
             },
+            "type": {
+               "type": "string",
+               "const": "CategoricalCnv",
+               "default": "CategoricalCnv",
+               "description": "MUST be \"CategoricalCnv\""
+            },
             "aliases": {
                "description": "Aliases are alternate labels for a Domain Entity.",
                "ordered": false,
@@ -220,21 +250,27 @@
                "ordered": false,
                "description": "A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.",
                "items": {
-                  "anyOf": [
+                  "oneOf": [
                      {
-                        "$ref": "#/$defs/Variation"
+                        "$ref": "#/$defs/Allele"
+                     },
+                     {
+                        "$ref": "#/$defs/CopyNumberChange"
+                     },
+                     {
+                        "$ref": "#/$defs/CopyNumberCount"
+                     },
+                     {
+                        "$ref": "#/$defs/Genotype"
+                     },
+                     {
+                        "$ref": "#/$defs/Haplotype"
                      },
                      {
                         "$ref": "#/$defs/IRI"
                      }
                   ]
                }
-            },
-            "type": {
-               "type": "string",
-               "const": "CategoricalCnv",
-               "default": "CategoricalCnv",
-               "description": "MUST be \"CategoricalCnv\""
             },
             "location": {
                "type": {
@@ -307,6 +343,12 @@
                   "$ref": "#/$defs/Mapping"
                }
             },
+            "type": {
+               "type": "string",
+               "const": "DescribedVariation",
+               "default": "DescribedVariation",
+               "description": "MUST be \"DescribedVariation\""
+            },
             "aliases": {
                "description": "Aliases are alternate labels for a Domain Entity.",
                "ordered": false,
@@ -320,21 +362,27 @@
                "ordered": false,
                "description": "A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.",
                "items": {
-                  "anyOf": [
+                  "oneOf": [
                      {
-                        "$ref": "#/$defs/Variation"
+                        "$ref": "#/$defs/Allele"
+                     },
+                     {
+                        "$ref": "#/$defs/CopyNumberChange"
+                     },
+                     {
+                        "$ref": "#/$defs/CopyNumberCount"
+                     },
+                     {
+                        "$ref": "#/$defs/Genotype"
+                     },
+                     {
+                        "$ref": "#/$defs/Haplotype"
                      },
                      {
                         "$ref": "#/$defs/IRI"
                      }
                   ]
                }
-            },
-            "type": {
-               "type": "string",
-               "const": "DescribedVariation",
-               "default": "DescribedVariation",
-               "description": "MUST be \"DescribedVariation\""
             },
             "label": {
                "type": "string",

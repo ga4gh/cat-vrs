@@ -28,6 +28,10 @@ Some DescribedVariation attributes are inherited from :ref:`CategoricalVariation
           - `Mapping <core.json#/$defs/Mapping>`_
           - 0..m
           - 
+       *  - type
+          - string
+          - 1..1
+          - MUST be "DescribedVariation"
        *  - aliases
           - string
           - 0..m
@@ -36,10 +40,6 @@ Some DescribedVariation attributes are inherited from :ref:`CategoricalVariation
           - `Variation <vrs.json#/$defs/Variation>`_ | `IRI <core.json#/$defs/IRI>`_
           - 0..m
           - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.
-       *  - type
-          - string
-          - 1..1
-          - MUST be "DescribedVariation"
        *  - label
           - string
           - 1..1

@@ -2,8 +2,8 @@ from pathlib import Path
 
 root_path = Path(__file__).parent.parent
 schema_path = root_path / "schema"
-catvar_yaml_path = schema_path / "catvars-source.yaml"
-catvar_json_path = schema_path / "catvars.json"
+catvar_yaml_path = schema_path / "catvrs-source.yaml"
+catvar_json_path = schema_path / "catvrs.json"
 catvar_merged_yaml_path = schema_path / "merged.yaml"
 
 test_path = root_path / 'tests'
