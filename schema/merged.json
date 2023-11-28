@@ -72,6 +72,9 @@
                "items": {
                   "oneOf": [
                      {
+                        "$ref": "#/$defs/Adjacency"
+                     },
+                     {
                         "$ref": "#/$defs/Allele"
                      },
                      {
@@ -162,6 +165,9 @@
                "items": {
                   "oneOf": [
                      {
+                        "$ref": "#/$defs/Adjacency"
+                     },
+                     {
                         "$ref": "#/$defs/Allele"
                      },
                      {
@@ -251,6 +257,9 @@
                "description": "A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.",
                "items": {
                   "oneOf": [
+                     {
+                        "$ref": "#/$defs/Adjacency"
+                     },
                      {
                         "$ref": "#/$defs/Allele"
                      },
@@ -363,6 +372,9 @@
                "description": "A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.",
                "items": {
                   "oneOf": [
+                     {
+                        "$ref": "#/$defs/Adjacency"
+                     },
                      {
                         "$ref": "#/$defs/Allele"
                      },
@@ -1012,6 +1024,9 @@
          "description": "A representation of the state of one or more biomolecules.",
          "oneOf": [
             {
+               "$ref": "#/$defs/Adjacency"
+            },
+            {
                "$ref": "#/$defs/Allele"
             },
             {
@@ -1160,6 +1175,9 @@
                "description": "An expression of the sequence state",
                "oneOf": [
                   {
+                     "$ref": "#/$defs/LengthExpression"
+                  },
+                  {
                      "$ref": "#/$defs/LiteralSequenceExpression"
                   },
                   {
@@ -1170,8 +1188,7 @@
          },
          "required": [
             "location",
-            "state",
-            "type"
+            "state"
          ],
          "additionalProperties": false
       },
@@ -1184,7 +1201,7 @@
                "type"
             ]
          },
-         "description": "A set of non-overlapping Allele members that co-occur on the same molecule.",
+         "description": "An ordered set of co-occurring variants on the same molecule.",
          "type": "object",
          "properties": {
             "id": {
@@ -1226,11 +1243,14 @@
             },
             "members": {
                "type": "array",
-               "ordered": false,
+               "ordered": true,
                "minItems": 2,
-               "uniqueItems": true,
+               "uniqueItems": false,
                "items": {
                   "oneOf": [
+                     {
+                        "$ref": "#/$defs/Adjacency"
+                     },
                      {
                         "$ref": "#/$defs/Allele"
                      },
@@ -1239,12 +1259,11 @@
                      }
                   ]
                },
-               "description": "A list of Alleles (or IRI references to `Alleles`) that comprise a Haplotype. Since each `Haplotype` member MUST be an `Allele`, and all members MUST share a common SequenceReference, implementations MAY use a compact representation of Haplotype that omits type and SequenceReference information in individual Haplotype members. Implementations MUST transform compact `Allele` representations into an `Allele` when computing GA4GH identifiers."
+               "description": "A list of Alleles that comprise a Haplotype.  Members must share the same reference sequence as adjacent members. Alleles should not have overlapping or adjacent coordinates with neighboring Alleles. Neighboring alleles should be ordered  by ascending coordinates, unless represented on a DNA inversion (following an end-defined sequence  terminal), in which case they should be ordered in descending coordinates. Sequence references MUST be consistent for all members between and including the end of one Adjacency and the beginning of  another."
             }
          },
          "required": [
-            "members",
-            "type"
+            "members"
          ],
          "additionalProperties": false
       },
@@ -1323,8 +1342,7 @@
          },
          "required": [
             "copies",
-            "location",
-            "type"
+            "location"
          ],
          "additionalProperties": false
       },
@@ -1406,8 +1424,7 @@
          },
          "required": [
             "copyChange",
-            "location",
-            "type"
+            "location"
          ],
          "additionalProperties": false
       },
@@ -1485,8 +1502,7 @@
          },
          "required": [
             "count",
-            "members",
-            "type"
+            "members"
          ],
          "additionalProperties": false
       },
@@ -1554,7 +1570,7 @@
                      "type": "integer"
                   }
                ],
-               "description": "The start coordinate or range of the SequenceLocation. The minimum value of this coordinate or range is 0. MUST represent a coordinate or range less than the value of `end`."
+               "description": "The start coordinate or range of the SequenceLocation. The minimum value of this coordinate or range is 0. MUST represent a coordinate or range less than or equal to the value of `end`."
             },
             "end": {
                "oneOf": [
@@ -1565,14 +1581,10 @@
                      "type": "integer"
                   }
                ],
-               "description": "The end coordinate or range of the SequenceLocation. The minimum value of this coordinate or range is 0. MUST represent a coordinate or range greater than the value of `start`."
+               "description": "The end coordinate or range of the SequenceLocation. The minimum value of this coordinate or range is 0. MUST represent a coordinate or range greater than or equal to the value of `start`."
             }
          },
-         "required": [
-            "end",
-            "start",
-            "type"
-         ],
+         "required": [],
          "additionalProperties": false
       },
       "SequenceReference": {
@@ -1626,8 +1638,7 @@
             }
          },
          "required": [
-            "refgetAccession",
-            "type"
+            "refgetAccession"
          ],
          "additionalProperties": false
       },
@@ -1710,6 +1721,63 @@
          "required": [
             "length",
             "repeatSubunitLength",
+            "type"
+         ],
+         "additionalProperties": false
+      },
+      "LengthExpression": {
+         "maturity": "Alpha",
+         "ga4ghDigest": {
+            "keys": [
+               "length",
+               "type"
+            ]
+         },
+         "type": "object",
+         "description": "A sequence expressed only by its length.",
+         "properties": {
+            "id": {
+               "type": "string",
+               "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
+            },
+            "label": {
+               "type": "string",
+               "description": "A primary label for the entity."
+            },
+            "description": {
+               "type": "string",
+               "description": "A free-text description of the entity."
+            },
+            "extensions": {
+               "type": "array",
+               "ordered": true,
+               "items": {
+                  "$ref": "#/$defs/Extension"
+               }
+            },
+            "digest": {
+               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
+               "type": "string",
+               "pattern": "[0-9A-Za-z_\\-]{32}"
+            },
+            "type": {
+               "type": "string",
+               "const": "LengthExpression",
+               "default": "LengthExpression",
+               "description": "MUST be \"LengthExpression\""
+            },
+            "length": {
+               "oneOf": [
+                  {
+                     "$ref": "#/$defs/Range"
+                  },
+                  {
+                     "type": "integer"
+                  }
+               ]
+            }
+         },
+         "required": [
             "type"
          ],
          "additionalProperties": false
@@ -1859,6 +1927,94 @@
          "description": "A character string of Residues that represents a biological sequence using the conventional sequence order (5\u2019-to-3\u2019 for nucleic acid sequences, and amino-to-carboxyl for amino acid sequences). IUPAC ambiguity codes are permitted in Sequence Strings.",
          "type": "string",
          "pattern": "^[A-Z*\\-]*$"
+      },
+      "Adjacency": {
+         "maturity": "Alpha",
+         "ga4ghDigest": {
+            "prefix": "AJ",
+            "keys": [
+               "linker",
+               "sequenceTerminals",
+               "type"
+            ]
+         },
+         "description": "The `Adjacency` class represents the termination of a sequence and (when present) the beginning of an adjacent sequence, potentially with an intervening linker sequence.",
+         "type": "object",
+         "properties": {
+            "id": {
+               "type": "string",
+               "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
+            },
+            "label": {
+               "type": "string",
+               "description": "A primary label for the entity."
+            },
+            "description": {
+               "type": "string",
+               "description": "A free-text description of the entity."
+            },
+            "extensions": {
+               "type": "array",
+               "ordered": true,
+               "items": {
+                  "$ref": "#/$defs/Extension"
+               }
+            },
+            "digest": {
+               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
+               "type": "string",
+               "pattern": "[0-9A-Za-z_\\-]{32}"
+            },
+            "type": {
+               "type": "string",
+               "const": "Adjacency",
+               "default": "Adjacency",
+               "description": "MUST be \"Adjacency\"."
+            },
+            "expressions": {
+               "type": "array",
+               "ordered": false,
+               "items": {
+                  "$ref": "#/$defs/Expression"
+               }
+            },
+            "sequenceTerminals": {
+               "type": "array",
+               "uniqueItems": false,
+               "ordered": true,
+               "items": {
+                  "oneOf": [
+                     {
+                        "$ref": "#/$defs/IRI"
+                     },
+                     {
+                        "$ref": "#/$defs/SequenceLocation"
+                     }
+                  ]
+               },
+               "description": "Sequence terminals involved in the adjacency.",
+               "minItems": 1,
+               "maxItems": 2
+            },
+            "linker": {
+               "description": "A linker sequence found between the sequence terminals.",
+               "oneOf": [
+                  {
+                     "$ref": "#/$defs/LengthExpression"
+                  },
+                  {
+                     "$ref": "#/$defs/LiteralSequenceExpression"
+                  },
+                  {
+                     "$ref": "#/$defs/ReferenceLengthExpression"
+                  }
+               ]
+            }
+         },
+         "required": [
+            "sequenceTerminals"
+         ],
+         "additionalProperties": false
       }
    }
 }

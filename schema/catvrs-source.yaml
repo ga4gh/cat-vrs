@@ -4,12 +4,12 @@ type: object
 strict: true
 
 imports:
-  gks.core: core-source.yaml
+  gks.core: gks.common-source.yaml
   vrs: vrs-source.yaml
 
 namespaces:
   vrs: vrs.json#/$defs/
-  gks.core: core.json#/$defs/
+  gks.core: gks.common.json#/$defs/
 
 $defs:
   # VRSATILE Categorical Variation are presented top-down. Everything rolls up to

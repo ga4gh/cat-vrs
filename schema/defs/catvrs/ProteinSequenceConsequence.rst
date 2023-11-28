@@ -29,11 +29,11 @@ Some ProteinSequenceConsequence attributes are inherited from :ref:`CategoricalV
           - 0..1
           - A free-text description of the entity.
        *  - extensions
-          - `Extension <core.json#/$defs/Extension>`_
+          - `Extension <gks.common.json#/$defs/Extension>`_
           - 0..m
           - 
        *  - mappings
-          - `Mapping <core.json#/$defs/Mapping>`_
+          - `Mapping <gks.common.json#/$defs/Mapping>`_
           - 0..m
           - 
        *  - type
@@ -45,10 +45,10 @@ Some ProteinSequenceConsequence attributes are inherited from :ref:`CategoricalV
           - 0..m
           - Aliases are alternate labels for a Domain Entity.
        *  - members
-          - `Variation <vrs.json#/$defs/Variation>`_ | `IRI <core.json#/$defs/IRI>`_
+          - `Variation <vrs.json#/$defs/Variation>`_ | `IRI <gks.common.json#/$defs/IRI>`_
           - 0..m
           - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.
        *  - definingContext
-          - `Allele <vrs.json#/$defs/Allele>`_ | `IRI <core.json#/$defs/IRI>`_
+          - `Allele <vrs.json#/$defs/Allele>`_ | `IRI <gks.common.json#/$defs/IRI>`_
           - 1..1
           - The `VRS Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#allele>`_ object that is congruent with (projects to the same codons) as alleles on other protein reference  sequences.

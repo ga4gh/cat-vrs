@@ -29,11 +29,11 @@ Some CategoricalVariation attributes are inherited from :ref:`gks.core:DomainEnt
           - 0..1
           - A free-text description of the entity.
        *  - extensions
-          - `Extension <core.json#/$defs/Extension>`_
+          - `Extension <gks.common.json#/$defs/Extension>`_
           - 0..m
           - 
        *  - mappings
-          - `Mapping <core.json#/$defs/Mapping>`_
+          - `Mapping <gks.common.json#/$defs/Mapping>`_
           - 0..m
           - 
        *  - type
@@ -45,6 +45,6 @@ Some CategoricalVariation attributes are inherited from :ref:`gks.core:DomainEnt
           - 0..m
           - Aliases are alternate labels for a Domain Entity.
        *  - members
-          - `Variation <vrs.json#/$defs/Variation>`_ | `IRI <core.json#/$defs/IRI>`_
+          - `Variation <vrs.json#/$defs/Variation>`_ | `IRI <gks.common.json#/$defs/IRI>`_
           - 0..m
           - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.

@@ -21,11 +21,11 @@ Some DescribedVariation attributes are inherited from :ref:`CategoricalVariation
           - 0..1
           - The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE).
        *  - extensions
-          - `Extension <core.json#/$defs/Extension>`_
+          - `Extension <gks.common.json#/$defs/Extension>`_
           - 0..m
           - 
        *  - mappings
-          - `Mapping <core.json#/$defs/Mapping>`_
+          - `Mapping <gks.common.json#/$defs/Mapping>`_
           - 0..m
           - 
        *  - type
@@ -37,7 +37,7 @@ Some DescribedVariation attributes are inherited from :ref:`CategoricalVariation
           - 0..m
           - Aliases are alternate labels for a Domain Entity.
        *  - members
-          - `Variation <vrs.json#/$defs/Variation>`_ | `IRI <core.json#/$defs/IRI>`_
+          - `Variation <vrs.json#/$defs/Variation>`_ | `IRI <gks.common.json#/$defs/IRI>`_
           - 0..m
           - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.
        *  - label

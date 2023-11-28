@@ -36,12 +36,12 @@ $defs:
         type: array
         ordered: true
         items:
-          $ref: core.json#/$defs/Extension
+          $ref: gks.common.json#/$defs/Extension
       mappings:
         type: array
         ordered: false
         items:
-          $ref: core.json#/$defs/Mapping
+          $ref: gks.common.json#/$defs/Mapping
       type:
         type: string
         const: ProteinSequenceConsequence
@@ -60,11 +60,11 @@ $defs:
           the constraints of this categorical variant.
         items:
           oneOf:
-          - $ref: core.json#/$defs/IRI
+          - $ref: gks.common.json#/$defs/IRI
           - $ref: vrs.json#/$defs/Variation
       definingContext:
         oneOf:
-        - $ref: core.json#/$defs/IRI
+        - $ref: gks.common.json#/$defs/IRI
         - $ref: vrs.json#/$defs/Allele
         description: The [VRS Allele](https://vrs.ga4gh.org/en/2.0/terms_and_model.html#allele)
           object that is congruent with (projects to the same codons) as alleles on
@@ -98,12 +98,12 @@ $defs:
         type: array
         ordered: true
         items:
-          $ref: core.json#/$defs/Extension
+          $ref: gks.common.json#/$defs/Extension
       mappings:
         type: array
         ordered: false
         items:
-          $ref: core.json#/$defs/Mapping
+          $ref: gks.common.json#/$defs/Mapping
       type:
         type: string
         const: CanonicalAllele
@@ -122,11 +122,11 @@ $defs:
           the constraints of this categorical variant.
         items:
           oneOf:
-          - $ref: core.json#/$defs/IRI
+          - $ref: gks.common.json#/$defs/IRI
           - $ref: vrs.json#/$defs/Variation
       definingContext:
         oneOf:
-        - $ref: core.json#/$defs/IRI
+        - $ref: gks.common.json#/$defs/IRI
         - $ref: vrs.json#/$defs/Allele
         description: The [VRS Allele](https://vrs.ga4gh.org/en/2.0/terms_and_model.html#allele)
           object that is congruent with variants on alternate reference sequences.
@@ -161,12 +161,12 @@ $defs:
         type: array
         ordered: true
         items:
-          $ref: core.json#/$defs/Extension
+          $ref: gks.common.json#/$defs/Extension
       mappings:
         type: array
         ordered: false
         items:
-          $ref: core.json#/$defs/Mapping
+          $ref: gks.common.json#/$defs/Mapping
       type:
         type: string
         const: CategoricalCnv
@@ -185,7 +185,7 @@ $defs:
           the constraints of this categorical variant.
         items:
           oneOf:
-          - $ref: core.json#/$defs/IRI
+          - $ref: gks.common.json#/$defs/IRI
           - $ref: vrs.json#/$defs/Variation
       location:
         type:
@@ -252,12 +252,12 @@ $defs:
         type: array
         ordered: true
         items:
-          $ref: core.json#/$defs/Extension
+          $ref: gks.common.json#/$defs/Extension
       mappings:
         type: array
         ordered: false
         items:
-          $ref: core.json#/$defs/Mapping
+          $ref: gks.common.json#/$defs/Mapping
       type:
         type: string
         const: DescribedVariation
@@ -276,7 +276,7 @@ $defs:
           the constraints of this categorical variant.
         items:
           oneOf:
-          - $ref: core.json#/$defs/IRI
+          - $ref: gks.common.json#/$defs/IRI
           - $ref: vrs.json#/$defs/Variation
       label:
         type: string
