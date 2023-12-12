@@ -1,5 +1,6 @@
 pytest
 sphinx==3.5.4
+pyyaml
 sphinx-rtd-theme
 ga4gh.gks.metaschema==0.2.1
 python-jsonschema-objects>=0.3.13
