@@ -47,54 +47,78 @@ While a single categorical variant may have many assayed variant members, the sa
 
 
 .. image:: images/relations-between-assayed-and-CatVars-and-CatVars-to-other-CatVars.png
-    :alt: The figure depicts a stack of clinical reports,
+    :alt: The figure depicts a single centralized assayed variant, with arrows radiating out to a number of categorical variants to which it is a member.  Among these, the assayed variant NC_000007.13:g.140453136A>T is a BRAF V600E variant, a BRAF gene variant, and a chromosome 7 variant.
 
 
-Because a single categoricla variant may have many assayed variants as members, while a single assayed variant can be a member of many categorical variants, different 
-
+Because a single categoricla variant may have many assayed variants as members, while a single assayed variant can be a member of many categorical variants, different categorical have complex heirarchical relationships with each other.  the figure below depicts some of the relationships between some of the categorical variants to which NC_000007.13:g.140453136A>T is a member.  For example, all BRAF V600E variants are also BRAF gene variants.  And all BRAF V600E variants and BRAF gene variants are chromosome 7 variants.  A BRAF V600E variant is also an inframe protein variant, which is itself a type of sequence variant.
 
 
 .. image:: images/relations-between-assayed-and-CatVars-and-CatVars-to-other-CatVars(1).png
-    :alt: The figure depicts a stack of clinical reports,
+    :alt: The figure depicts the same assayed variant and categorical variants as the previous figure, but with arrows added to show subset relationships between various categorical variants.  One arrow connects BRAF V600E variants to BRAF gene variants to show that all BRAF V600E variants are also members of the set of BRAF gene variants.  A simialr arrow shows that all BRAF gene variants are members of the set of chromosome 7 variants.
 
 
 
 .. CatVar labels do not always denote the same thing across different KBs, and may even be redundant-specified
 
+To make categoricla variant matching even more complicated, it is often the case that identical labels across different resiuorces in fact describe different categroical variants, as seen in the figure below where an ACT sequence has been inserted directly 3' of a ACTG sequence.  While this would not be considered a duplication variant in the HGVS nomenclature due to the intervening G base pair, it could appear in other resources as a duplication of the preceeding ACT sequence.  This implies that the catgorical variant descriptor "duplication" has different meanings across different resources.
+
+
+.. image:: images/CatVar-CatVar-matching.png
+    :alt: The figure depicts a hypothetical variant where an ACT sequence has been inserted directly 3' of a ACTG sequence.  While this would not be considered a duplication variant in the HGVS nomenclature due to the intervening G base pair, it could appear in other resources as a duplication of the preceeding ACT sequence, or alternately simply as an insertion of ACT.  This implies that the catgorical variant descriptor "duplication" has different meanings across different resources.
+
+
+On the other hand, it is also the often the case that spurious ambiguity exists within resources.  The figure depicts a hypothetical case where compared to a reference sequence ACT, the variant sequence is ACCCCCT.  In HVGS, this variant could either be described as an insertion of 4 C nucleotides, or else a five repetitions of the single nucleotide sequence C.  This demonstrates spurious ambiguity of categorical variant descriptors, as both categorical variants desribe two sets with all and only the same member variants.
+
+
+.. image:: images/CatVar-CatVar-spurious-ambiguity.png
+    :alt: The figure depicts a hypothetical case where compared to a reference sequence ACT, the variant sequence is ACCCCCT.  In HVGS, this variant could either be described as an insertion of 4 C nucleotides, or else a five repetitions of the single nucleotide sequence C.  This demonstrates spurious ambiguity of categorical variant descriptors, as both categorical variants desribe two sets with all and only the same member variants.
 
 
 
+In summary, a crucial step in the course of genomic variant interpretation is assayed-categorical variant matching, where one determines all and only those categorical variants to whoch the assayed variant in question is a member.  Successful assayed-categorical variant matching makes it possible to connect evidence to support or refute determinations of pathogenicity and/or oncogenicity of the assayed variants.  In a different but related use case, categorical-categorical variant matching is crucial to the process of data harmonization and knowledgebase curation.  
 
 
-To facilitate search of biomolecular variation, contemporary biomolecular
-knowledgebases routinely "flatten" variation concepts to a specific context that
-facilitates computable matching to assayed variation, and typically provide related
-contexts to help characterize the intended biological concept. For example, the
-variant "BRAF V600E" at the `CIViC`_ resource describes a protein
-change, but is flattened to a *representative genomic change* (GRCh37 chr7:g.140453136A>T)
-and contextualized with corresponding transcript (NM_004333.4:c.1799T>A) and protein
-(NP_004324.2:p.Val600Glu) descriptions. The representative change is linked to its
-ClinGen Allele Registry identifier (CAID; `CA123643`_) to facilitate CAID matching
-from ClinGen resources.
 
-However, CA123643 is likewise a collection of variation contexts, including many
-contexts that would typically not be considered equivalent to BRAF V600E:
-ENST00000497784.1:n.1834T>A, ENST00000647434.1:n.738-3918T>A, and ENST00000642228.1:c.*877T>A,
-for example, are all associated contexts with CA123643 but none result in an altered
-protein product. Similarly, `CA16602531`_ can *also* serve as a linked representative
-genomic change (through NC_000007.14:g.140753335_140753336delinsTT), but again this
-concept contains several contexts describing the role of the variant that are not
-applicable to the V600E protein variation.
+.. To facilitate search of biomolecular variation, contemporary biomolecular
+.. knowledgebases routinely "flatten" variation concepts to a specific context that
+.. facilitates computable matching to assayed variation, and typically provide related
+.. contexts to help characterize the intended biological concept. For example, the
+.. variant "BRAF V600E" at the `CIViC`_ resource describes a protein
+.. change, but is flattened to a *representative genomic change* (GRCh37 chr7:g.140453136A>T)
+.. and contextualized with corresponding transcript (NM_004333.4:c.1799T>A) and protein
+.. (NP_004324.2:p.Val600Glu) descriptions. The representative change is linked to its
+.. ClinGen Allele Registry identifier (CAID; `CA123643`_) to facilitate CAID matching
+.. from ClinGen resources.
 
-In addition, more complex cases of variation also exist, where the closest approximation of
-a variation amounts to a simple genomic range. Examples of these types of variation include:
-`BRAF V600 mutations`_, `TP53 truncating mutations`_, `EGFR exon 19 deletions`_. The concepts
-associated with these variation (any protein mutation at a codon, any truncating mutation in
-a gene, and any in-frame deletion in an exon) are not clearly definable using a variation
-description framework such as VRS or HGVS.
 
-To address these shortfalls, we introduce the Categorical Variation Specification (Cat-VRS). Categorical Variation
-captures the semantics that are missing or implied in genomic knowledge resources, providing a framework for
+.. However, CA123643 is likewise a collection of variation contexts, including many
+.. contexts that would typically not be considered equivalent to BRAF V600E:
+.. ENST00000497784.1:n.1834T>A, ENST00000647434.1:n.738-3918T>A, and ENST00000642228.1:c.*877T>A,
+.. for example, are all associated contexts with CA123643 but none result in an altered
+.. protein product. Similarly, `CA16602531`_ can *also* serve as a linked representative
+.. genomic change (through NC_000007.14:g.140753335_140753336delinsTT), but again this
+.. concept contains several contexts describing the role of the variant that are not
+.. applicable to the V600E protein variation.
+
+
+.. In addition, more complex cases of variation also exist, where the closest approximation of
+.. a variation amounts to a simple genomic range. Examples of these types of variation include:
+.. `BRAF V600 mutations`_, `TP53 truncating mutations`_, `EGFR exon 19 deletions`_. The concepts
+.. associated with these variation (any protein mutation at a codon, any truncating mutation in
+.. a gene, and any in-frame deletion in an exon) are not clearly definable using a variation
+.. description framework such as VRS or HGVS.
+
+
+.. To address these shortfalls, we introduce the Categorical Variation Specification (Cat-VRS). Categorical Variation
+.. captures the semantics that are missing or implied in genomic knowledge resources, providing a framework for
+.. expressing how genomic knowledge may match to assayed variation. Much like the VRS objects used
+.. in this specification, Categorical Variation classes are designed to instantiate objects that
+.. are readily usable by genomic knowledge search engines.
+
+
+
+To address these challenges, we introduce the Categorical Variation Representation Specification (Cat-VRS). The Cat-VRS
+captures the semantics that are specified, implied, or missing in genomic knowledge resources, providing a computable framework for
 expressing how genomic knowledge may match to assayed variation. Much like the VRS objects used
 in this specification, Categorical Variation classes are designed to instantiate objects that
 are readily usable by genomic knowledge search engines.
