@@ -123,6 +123,17 @@ expressing how genomic knowledge may match to assayed variation. Much like the V
 in this specification, Categorical Variation classes are designed to instantiate objects that
 are readily usable by genomic knowledge search engines.
 
+
+Disclaimers
+@@@@@@@@@@@
+
+
+This repository is the for the GA4GH Categorical Variation Study Group.  As a study group, the categorical variation group has not yet recieved steering committee approval to process to the state of a product working group.
+
+
+Relatedly, The contents of this repository represents a very early pre-alpha version of the Cat-VRS. First, this means that the schemas contained herein are not yet an officially-released version of the specification.  Second, this menas that the spec is expected to undergo frequent and potentially breaking updates until a more stable beta version is released.  Caveat emptor.
+
+
 .. _CategoricalVariation:
 
 Categorical Variation
