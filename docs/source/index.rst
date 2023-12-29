@@ -1,6 +1,71 @@
 Categorical Variation Representation Specification
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+.. Short Problem statement.
+
+The Categorical Variation Study Group is developing a data framework and specification for a computable model of categorical variants. This is related to broader GA4GH efforts to streamline genomic knowledge standards across disparate genomic knowledge repositories. A categorical variation representation specification is required to facilitate the needs for storing, searching, and interpreting knowledge related to both individual genomic variants and the categories of variation to which they belong.
+
+.. Variant interpretation
+
+Genomic medicine is the discipline of interpreting genomic information about an individual as part of their clinical care for diagnosis, prognosis, or therapeutic decision-making. Integral to the practice of genome interpretation is the collection of multiple lines of evidence from disparate genomic data resources to support or refute the clinical significance of evaluated variants. However, this process is rarely as straightforward as exact pattern matching.  The reason for this complication comes from a subtle but crucial difference between the information that the analyst posesses and the information to which evidence is typically attached in knowledgebases.
+
+.. Analyst has an assayed variant
+
+Suppose our analyst is interpreting a variant NC_000007.13:g.140453136A>T that was assayed in a patient.  This *assayed variant* label represents one specific genomic variant.  However, the evidence associated with this variant and its association with cancer are often not directly associated with that exact assayed variant.  Rather, the variant NC_000007.13:g.140453136A>T belongs to a larger class of related variants, BRAF V600E variants, and the underlying evidence items are associated with this class.
+
+
+
+
+.. image:: images/Assayed-variant-vs-categorical-variant.png
+    :alt: The figure depicts a stack of clinical reports, each of which represents a single assayed variant.  Each assayed variant is an connected to a common node labelled "BRAF V600E Variant", to dinicate that they are all members of that class of variants.  BRAF V600E is connected to a variety of genomic knowledge statements, such as being found in various cancers, having implications on drug sensitivity, and that its effect is that of gene amplification.
+
+
+.. What a catvar is
+
+
+This class, *BRAF V600E*, is a *categorical variant*, so-called because it represents an entire category of variation.  Categorical variants are  sets of properties related to different dimensions of genomic and biological variation.  The members of a categorical variant are individual assayed variants.
+
+
+.. KB has categorival variants
+
+To return to our rhetorical analyst, the variant they are interpreting, NC_000007.13:g.140453136A>T, is an *assayed variant*.  That variant exists in the genome of an individual patient.  The labelled entity to which the genomic knowledge is associated, however, the *categorical variant* BRAF V600E, does not exist in the genome.  Categorical variants exist solely within genomics knowledgebases.  Therefore, one critical step in the interpretation of an assayed variant is determining which categorical variants to which it belongs in order to connect the assayed variant to the evidence items associated with that variant.
+
+
+..  CatVars are hard to pin down
+.. Why they arise
+
+Categorical variants arise organically and continuously in the course of genomics research.  When clinical studies are run and journal papers published, the results are typically not charactorized in terms of an exhaustive list of assayed variants to which the conclusions apply.  Rather, the domain of the conclusions are currently characterized in terms of a chategorical variant, all of the individual assayed variants that fall into the same biological bucket.  Like all scientific abstractions, these models have several useful properties.  They describe insightful conclusions related to the biological events that underly a function common to a class of variants.  They also make useful predictions, namely that the same conclusions should apply to variants that weren't explicitly tested but ought to function in a similar way to those explicitly tested.  They thus allow us to generalize genomic knowledge.
+
+To return to the running example, the BRAF V600E categorical variant inlcudes as its members any of 2 single-nucleotide substitutions and 6 double-nucleotide substitions that convert a Valine codon into one coding for Glutamic acid. The Valine to Glutamic Acid amino acid substitution variant is also a member of that set.  Any other variant or series of variants that would have the net effect of substituting glutamic acid for valine in the same location of the resulting polypeptide chain is also a member of the same categorical variant.
+
+
+
+
+.. CatVars have complicated relationships with each other
+
+While a single categorical variant may have many assayed variant members, the same is true in the other direction.  A single assayed variant is a member of many possible categorical variants simultaneously.  While NC_000007.13:g.140453136A>T is a member of the BRAF V600E categorical variant, it is also a Change-of-function variant, a protein missense variant, and a chromosome 7 variant, among other categorical variants.
+
+
+.. image:: images/relations-between-assayed-and-CatVars-and-CatVars-to-other-CatVars.png
+    :alt: The figure depicts a stack of clinical reports,
+
+
+Because a single categoricla variant may have many assayed variants as members, while a single assayed variant can be a member of many categorical variants, different 
+
+
+
+.. image:: images/relations-between-assayed-and-CatVars-and-CatVars-to-other-CatVars(1).png
+    :alt: The figure depicts a stack of clinical reports,
+
+
+
+.. CatVar labels do not always denote the same thing across different KBs, and may even be redundant-specified
+
+
+
+
+
+
 To facilitate search of biomolecular variation, contemporary biomolecular
 knowledgebases routinely "flatten" variation concepts to a specific context that
 facilitates computable matching to assayed variation, and typically provide related
