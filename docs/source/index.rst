@@ -17,6 +17,7 @@ Suppose our analyst is interpreting a variant NC_000007.13:g.140453136A>T that w
 
 
 .. image:: images/Assayed-variant-vs-categorical-variant.png
+    :width: 80%
     :alt: The figure depicts a stack of clinical reports, each of which represents a single assayed variant.  Each assayed variant is an connected to a common node labelled "BRAF V600E Variant", to dinicate that they are all members of that class of variants.  BRAF V600E is connected to a variety of genomic knowledge statements, such as being found in various cancers, having implications on drug sensitivity, and that its effect is that of gene amplification.
 
 
@@ -47,6 +48,7 @@ While a single categorical variant may have many assayed variant members, the sa
 
 
 .. image:: images/relations-between-assayed-and-CatVars-and-CatVars-to-other-CatVars.png
+    :width: 80%
     :alt: The figure depicts a single centralized assayed variant, with arrows radiating out to a number of categorical variants to which it is a member.  Among these, the assayed variant NC_000007.13:g.140453136A>T is a BRAF V600E variant, a BRAF gene variant, and a chromosome 7 variant.
 
 
@@ -54,6 +56,7 @@ Because a single categoricla variant may have many assayed variants as members, 
 
 
 .. image:: images/relations-between-assayed-and-CatVars-and-CatVars-to-other-CatVars(1).png
+    :width: 80%
     :alt: The figure depicts the same assayed variant and categorical variants as the previous figure, but with arrows added to show subset relationships between various categorical variants.  One arrow connects BRAF V600E variants to BRAF gene variants to show that all BRAF V600E variants are also members of the set of BRAF gene variants.  A simialr arrow shows that all BRAF gene variants are members of the set of chromosome 7 variants.
 
 
@@ -64,6 +67,7 @@ To make categoricla variant matching even more complicated, it is often the case
 
 
 .. image:: images/CatVar-CatVar-matching.png
+    :width: 80%
     :alt: The figure depicts a hypothetical variant where an ACT sequence has been inserted directly 3' of a ACTG sequence.  While this would not be considered a duplication variant in the HGVS nomenclature due to the intervening G base pair, it could appear in other resources as a duplication of the preceeding ACT sequence, or alternately simply as an insertion of ACT.  This implies that the catgorical variant descriptor "duplication" has different meanings across different resources.
 
 
@@ -71,6 +75,7 @@ On the other hand, it is also the often the case that spurious ambiguity exists 
 
 
 .. image:: images/CatVar-CatVar-spurious-ambiguity.png
+    :width: 60%
     :alt: The figure depicts a hypothetical case where compared to a reference sequence ACT, the variant sequence is ACCCCCT.  In HVGS, this variant could either be described as an insertion of 4 C nucleotides, or else a five repetitions of the single nucleotide sequence C.  This demonstrates spurious ambiguity of categorical variant descriptors, as both categorical variants desribe two sets with all and only the same member variants.
 
 
