@@ -43,7 +43,7 @@ $defs:
             - $refCurie: gks.core:IRI
 
   ProteinSequenceConsequence:
-    maturity: Alpha
+    maturity: draft
     type: object
     inherits: CategoricalVariation
     description: >-
@@ -70,7 +70,7 @@ $defs:
       - definingContext
 
   CanonicalAllele:
-    maturity: Alpha
+    maturity: draft
     inherits: CategoricalVariation
     description: >-
       A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>` 
@@ -95,7 +95,7 @@ $defs:
       - definingContext
 
   CategoricalCnv:
-    maturity: Alpha
+    maturity: draft
     type: object
     inherits: CategoricalVariation
     description: >-
@@ -146,7 +146,7 @@ $defs:
       - location
 
   DescribedVariation:
-    maturity: Alpha
+    maturity: draft
     type: object
     inherits: CategoricalVariation
     description: >-

@@ -21,7 +21,7 @@
          ]
       },
       "ProteinSequenceConsequence": {
-         "maturity": "Alpha",
+         "maturity": "draft",
          "type": "object",
          "description": "A change that occurs in a protein sequence as a result of genomic changes. Due to the degenerate nature of the genetic code, there are often several genomic changes that can cause a protein sequence consequence. The protein sequence consequence, like a CanonicalAllele, is defined by an `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>` that is representative of a collection of congruent Protein Alleles that share the same altered codon(s).",
          "properties": {
@@ -84,9 +84,6 @@
                         "$ref": "#/$defs/CopyNumberCount"
                      },
                      {
-                        "$ref": "#/$defs/Genotype"
-                     },
-                     {
                         "$ref": "#/$defs/Haplotype"
                      },
                      {
@@ -114,7 +111,7 @@
          "additionalProperties": false
       },
       "CanonicalAllele": {
-         "maturity": "Alpha",
+         "maturity": "draft",
          "description": "A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>`  that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid  change on different underlying reference sequences. Congruent representations of an Allele often exist across different genome assemblies and associated cDNA transcript representations.",
          "type": "object",
          "properties": {
@@ -177,9 +174,6 @@
                         "$ref": "#/$defs/CopyNumberCount"
                      },
                      {
-                        "$ref": "#/$defs/Genotype"
-                     },
-                     {
                         "$ref": "#/$defs/Haplotype"
                      },
                      {
@@ -207,7 +201,7 @@
          "additionalProperties": false
       },
       "CategoricalCnv": {
-         "maturity": "Alpha",
+         "maturity": "draft",
          "type": "object",
          "description": "A categorical variation domain is defined first by a sequence derived from a canonical [Location ](https://vrs.ga4gh.org/en/2.0/terms_and_model.html#Location) , which is representative of  a collection of congruent Locations. The change or count of this sequence is also described, either by a numeric value (e.g. \"3 or more copies\") or categorical representation (e.g. \"high-level gain\").  Categorical CNVs may optionally be defined by rules specifying the location match characteristics for  member CNVs.",
          "properties": {
@@ -270,9 +264,6 @@
                         "$ref": "#/$defs/CopyNumberCount"
                      },
                      {
-                        "$ref": "#/$defs/Genotype"
-                     },
-                     {
                         "$ref": "#/$defs/Haplotype"
                      },
                      {
@@ -330,7 +321,7 @@
          "additionalProperties": false
       },
       "DescribedVariation": {
-         "maturity": "Alpha",
+         "maturity": "draft",
          "type": "object",
          "description": "Some categorical variation concepts are supported by custom nomenclatures or text-descriptive representations for which a categorical variation model does not exist. DescribedVariation is a class that adds requirements and contextual semantics to the `label` and `description` fields to indicate how a categorical variation concept should be evaluated for matching variants.",
          "properties": {
@@ -385,9 +376,6 @@
                         "$ref": "#/$defs/CopyNumberCount"
                      },
                      {
-                        "$ref": "#/$defs/Genotype"
-                     },
-                     {
                         "$ref": "#/$defs/Haplotype"
                      },
                      {
@@ -413,7 +401,7 @@
       },
       "Coding": {
          "type": "object",
-         "maturity": "Alpha",
+         "maturity": "draft",
          "description": "a concept codified by a terminology system.",
          "properties": {
             "label": {
@@ -441,7 +429,7 @@
       },
       "Mapping": {
          "type": "object",
-         "maturity": "Alpha",
+         "maturity": "draft",
          "description": "A mapping to a concept in a terminology system.",
          "properties": {
             "id": {
@@ -486,7 +474,7 @@
       },
       "Extension": {
          "type": "object",
-         "maturity": "Alpha",
+         "maturity": "draft",
          "description": "The Extension class provides VODs with a means to extend descriptions with other attributes unique to a content provider. These extensions are not expected to be natively understood under VRSATILE, but may be used for pre-negotiated exchange of message attributes when needed.",
          "properties": {
             "type": {
@@ -516,14 +504,14 @@
          "additionalProperties": false
       },
       "Code": {
-         "maturity": "Alpha",
+         "maturity": "draft",
          "description": "Indicates that the value is taken from a set of controlled strings defined elsewhere. Technically, a code is restricted to a string which has at least one character and no leading or  trailing whitespace, and where there is no whitespace other than single spaces in the contents.",
          "type": "string",
          "pattern": "\\S+( \\S+)*",
          "example": "ENSG00000139618"
       },
       "IRI": {
-         "maturity": "Alpha",
+         "maturity": "draft",
          "description": "An IRI Reference (either an IRI or a relative-reference), according to `RFC3986 section 4.1  <https://datatracker.ietf.org/doc/html/rfc3986#section-4.1>` and `RFC3987 section 2.1 <https://datatracker.ietf.org/doc/html/rfc3987#section-2.1>`. MAY be a JSON Pointer as an IRI fragment, as  described by `RFC6901 section 6 <https://datatracker.ietf.org/doc/html/rfc6901#section-6>`.",
          "type": "string",
          "format": "iri-reference"
@@ -544,7 +532,7 @@
       },
       "TraitSet": {
          "type": "object",
-         "maturity": "Alpha",
+         "maturity": "draft",
          "description": "A set of phenotype and/or disease concepts that together constitute a condition.",
          "properties": {
             "id": {
@@ -611,7 +599,7 @@
       },
       "Disease": {
          "type": "object",
-         "maturity": "Alpha",
+         "maturity": "draft",
          "description": "A particular abnormal condition that negatively affects the structure or function  of all or part of an organism and is not immediately due to any external injury.",
          "properties": {
             "id": {
@@ -662,7 +650,7 @@
       },
       "Phenotype": {
          "type": "object",
-         "maturity": "Alpha",
+         "maturity": "draft",
          "description": "An observable characteristic or trait of an organism.",
          "properties": {
             "id": {
@@ -730,7 +718,7 @@
       },
       "TherapeuticAction": {
          "type": "object",
-         "maturity": "Alpha",
+         "maturity": "draft",
          "description": "A therapeutic action taken that is intended to alter or stop a pathologic process.",
          "properties": {
             "id": {
@@ -781,7 +769,7 @@
       },
       "TherapeuticAgent": {
          "type": "object",
-         "maturity": "Alpha",
+         "maturity": "draft",
          "description": "An administered therapeutic agent that is intended to alter or stop a pathologic process.",
          "properties": {
             "id": {
@@ -832,7 +820,7 @@
       },
       "CombinationTherapy": {
          "type": "object",
-         "maturity": "Alpha",
+         "maturity": "draft",
          "description": "A therapeutic procedure that involves multiple different therapeutic procedures  performed in combination.",
          "properties": {
             "id": {
@@ -903,7 +891,7 @@
       },
       "TherapeuticSubstituteGroup": {
          "type": "object",
-         "maturity": "Alpha",
+         "maturity": "draft",
          "description": "A group of therapeutic procedures that may be treated as substitutes for one another.",
          "properties": {
             "id": {
@@ -970,7 +958,7 @@
          "additionalProperties": false
       },
       "Gene": {
-         "maturity": "Alpha",
+         "maturity": "draft",
          "description": "A basic physical and functional unit of heredity.",
          "type": "object",
          "properties": {
@@ -1036,9 +1024,6 @@
                "$ref": "#/$defs/CopyNumberCount"
             },
             {
-               "$ref": "#/$defs/Genotype"
-            },
-            {
                "$ref": "#/$defs/Haplotype"
             }
          ],
@@ -1049,7 +1034,7 @@
       "Expression": {
          "type": "object",
          "privateTo": "Variation",
-         "maturity": "Alpha",
+         "maturity": "draft",
          "description": "Representation of a variation by a specified nomenclature or syntax for a Variation object.  Common examples of expressions for the description of molecular variation include the HGVS  and ISCN nomenclatures.",
          "properties": {
             "syntax": {
@@ -1101,9 +1086,6 @@
             },
             {
                "$ref": "#/$defs/CopyNumberCount"
-            },
-            {
-               "$ref": "#/$defs/Genotype"
             }
          ],
          "discriminator": {
@@ -1111,7 +1093,7 @@
          }
       },
       "Allele": {
-         "maturity": "Alpha",
+         "maturity": "draft",
          "ga4ghDigest": {
             "prefix": "VA",
             "keys": [
@@ -1142,16 +1124,16 @@
                   "$ref": "#/$defs/Extension"
                }
             },
-            "digest": {
-               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
-               "type": "string",
-               "pattern": "[0-9A-Za-z_\\-]{32}"
-            },
             "type": {
                "type": "string",
                "const": "Allele",
                "default": "Allele",
                "description": "MUST be \"Allele\""
+            },
+            "digest": {
+               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
+               "type": "string",
+               "pattern": "^[0-9A-Za-z_\\-]{32}$"
             },
             "expressions": {
                "type": "array",
@@ -1193,7 +1175,7 @@
          "additionalProperties": false
       },
       "Haplotype": {
-         "maturity": "Alpha",
+         "maturity": "draft",
          "ga4ghDigest": {
             "prefix": "HT",
             "keys": [
@@ -1223,16 +1205,16 @@
                   "$ref": "#/$defs/Extension"
                }
             },
-            "digest": {
-               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
-               "type": "string",
-               "pattern": "[0-9A-Za-z_\\-]{32}"
-            },
             "type": {
                "type": "string",
                "const": "Haplotype",
                "default": "Haplotype",
                "description": "MUST be \"Haplotype\""
+            },
+            "digest": {
+               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
+               "type": "string",
+               "pattern": "^[0-9A-Za-z_\\-]{32}$"
             },
             "expressions": {
                "type": "array",
@@ -1259,7 +1241,7 @@
                      }
                   ]
                },
-               "description": "A list of Alleles that comprise a Haplotype.  Members must share the same reference sequence as adjacent members. Alleles should not have overlapping or adjacent coordinates with neighboring Alleles. Neighboring alleles should be ordered  by ascending coordinates, unless represented on a DNA inversion (following an end-defined sequence  terminal), in which case they should be ordered in descending coordinates. Sequence references MUST be consistent for all members between and including the end of one Adjacency and the beginning of  another."
+               "description": "A list of Alleles that comprise a Haplotype.  Members must share the same reference sequence as adjacent members. Alleles should not have overlapping or adjacent coordinates with neighboring Alleles. Neighboring alleles should be ordered  by ascending coordinates, unless represented on a DNA inversion (following an Adjacency with  end-defined adjoinedSequences), in which case they should be ordered in descending coordinates.  Sequence references MUST be consistent for all members between and including the end of one  Adjacency and the beginning of another."
             }
          },
          "required": [
@@ -1268,7 +1250,7 @@
          "additionalProperties": false
       },
       "CopyNumberCount": {
-         "maturity": "Alpha",
+         "maturity": "draft",
          "ga4ghDigest": {
             "keys": [
                "copies",
@@ -1299,16 +1281,16 @@
                   "$ref": "#/$defs/Extension"
                }
             },
-            "digest": {
-               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
-               "type": "string",
-               "pattern": "[0-9A-Za-z_\\-]{32}"
-            },
             "type": {
                "type": "string",
                "const": "CopyNumberCount",
                "default": "CopyNumberCount",
                "description": "MUST be \"CopyNumberCount\""
+            },
+            "digest": {
+               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
+               "type": "string",
+               "pattern": "^[0-9A-Za-z_\\-]{32}$"
             },
             "expressions": {
                "type": "array",
@@ -1347,7 +1329,7 @@
          "additionalProperties": false
       },
       "CopyNumberChange": {
-         "maturity": "Alpha",
+         "maturity": "draft",
          "ga4ghDigest": {
             "keys": [
                "copyChange",
@@ -1378,16 +1360,16 @@
                   "$ref": "#/$defs/Extension"
                }
             },
-            "digest": {
-               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
-               "type": "string",
-               "pattern": "[0-9A-Za-z_\\-]{32}"
-            },
             "type": {
                "type": "string",
                "const": "CopyNumberChange",
                "default": "CopyNumberChange",
                "description": "MUST be \"CopyNumberChange\""
+            },
+            "digest": {
+               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
+               "type": "string",
+               "pattern": "^[0-9A-Za-z_\\-]{32}$"
             },
             "expressions": {
                "type": "array",
@@ -1428,86 +1410,8 @@
          ],
          "additionalProperties": false
       },
-      "Genotype": {
-         "maturity": "Alpha",
-         "ga4ghDigest": {
-            "keys": [
-               "count",
-               "members",
-               "type"
-            ],
-            "prefix": "GT"
-         },
-         "description": "A quantified set of _in-trans_ MolecularVariation at a genomic locus.",
-         "type": "object",
-         "properties": {
-            "id": {
-               "type": "string",
-               "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
-            },
-            "label": {
-               "type": "string",
-               "description": "A primary label for the entity."
-            },
-            "description": {
-               "type": "string",
-               "description": "A free-text description of the entity."
-            },
-            "extensions": {
-               "type": "array",
-               "ordered": true,
-               "items": {
-                  "$ref": "#/$defs/Extension"
-               }
-            },
-            "digest": {
-               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
-               "type": "string",
-               "pattern": "[0-9A-Za-z_\\-]{32}"
-            },
-            "type": {
-               "type": "string",
-               "const": "Genotype",
-               "default": "Genotype",
-               "description": "MUST be \"Genotype\""
-            },
-            "expressions": {
-               "type": "array",
-               "ordered": false,
-               "items": {
-                  "$ref": "#/$defs/Expression"
-               }
-            },
-            "members": {
-               "type": "array",
-               "ordered": false,
-               "uniqueItems": true,
-               "minItems": 1,
-               "items": {
-                  "$ref": "#/$defs/GenotypeMember"
-               },
-               "description": "Each GenotypeMember in `members` describes a MolecularVariation and the count of that variation at the locus."
-            },
-            "count": {
-               "oneOf": [
-                  {
-                     "$ref": "#/$defs/Range"
-                  },
-                  {
-                     "type": "integer"
-                  }
-               ],
-               "description": "The total number of copies of all MolecularVariation at this locus, MUST be greater than or equal to the sum of GenotypeMember copy counts. If greater than the total counts, this implies additional MolecularVariation that are expected to exist but are not explicitly indicated."
-            }
-         },
-         "required": [
-            "count",
-            "members"
-         ],
-         "additionalProperties": false
-      },
       "SequenceLocation": {
-         "maturity": "Alpha",
+         "maturity": "draft",
          "ga4ghDigest": {
             "keys": [
                "end",
@@ -1539,16 +1443,16 @@
                   "$ref": "#/$defs/Extension"
                }
             },
-            "digest": {
-               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
-               "type": "string",
-               "pattern": "[0-9A-Za-z_\\-]{32}"
-            },
             "type": {
                "type": "string",
                "const": "SequenceLocation",
                "default": "SequenceLocation",
                "description": "MUST be \"SequenceLocation\""
+            },
+            "digest": {
+               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
+               "type": "string",
+               "pattern": "^[0-9A-Za-z_\\-]{32}$"
             },
             "sequenceReference": {
                "oneOf": [
@@ -1588,7 +1492,7 @@
          "additionalProperties": false
       },
       "SequenceReference": {
-         "maturity": "Alpha",
+         "maturity": "draft",
          "ga4ghDigest": {
             "assigned": true
          },
@@ -1614,11 +1518,6 @@
                   "$ref": "#/$defs/Extension"
                }
             },
-            "digest": {
-               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
-               "type": "string",
-               "pattern": "[0-9A-Za-z_\\-]{32}"
-            },
             "type": {
                "type": "string",
                "const": "SequenceReference"
@@ -1626,7 +1525,7 @@
             "refgetAccession": {
                "description": "A `GA4GH RefGet <http://samtools.github.io/hts-specs/refget.html>` identifier for the referenced sequence,  using the sha512t24u digest.",
                "type": "string",
-               "pattern": "SQ.[0-9A-Za-z_\\-]{32}"
+               "pattern": "^SQ.[0-9A-Za-z_\\-]{32}$"
             },
             "residueAlphabet": {
                "type": "string",
@@ -1657,7 +1556,7 @@
          }
       },
       "ReferenceLengthExpression": {
-         "maturity": "Alpha",
+         "maturity": "draft",
          "ga4ghDigest": {
             "keys": [
                "length",
@@ -1686,11 +1585,6 @@
                "items": {
                   "$ref": "#/$defs/Extension"
                }
-            },
-            "digest": {
-               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
-               "type": "string",
-               "pattern": "[0-9A-Za-z_\\-]{32}"
             },
             "type": {
                "type": "string",
@@ -1726,7 +1620,7 @@
          "additionalProperties": false
       },
       "LengthExpression": {
-         "maturity": "Alpha",
+         "maturity": "draft",
          "ga4ghDigest": {
             "keys": [
                "length",
@@ -1755,11 +1649,6 @@
                   "$ref": "#/$defs/Extension"
                }
             },
-            "digest": {
-               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
-               "type": "string",
-               "pattern": "[0-9A-Za-z_\\-]{32}"
-            },
             "type": {
                "type": "string",
                "const": "LengthExpression",
@@ -1783,7 +1672,7 @@
          "additionalProperties": false
       },
       "LiteralSequenceExpression": {
-         "maturity": "Alpha",
+         "maturity": "draft",
          "ga4ghDigest": {
             "keys": [
                "sequence",
@@ -1812,11 +1701,6 @@
                   "$ref": "#/$defs/Extension"
                }
             },
-            "digest": {
-               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
-               "type": "string",
-               "pattern": "[0-9A-Za-z_\\-]{32}"
-            },
             "type": {
                "type": "string",
                "const": "LiteralSequenceExpression",
@@ -1834,72 +1718,8 @@
          ],
          "additionalProperties": false
       },
-      "GenotypeMember": {
-         "privateTo": "Genotype",
-         "ga4ghDigest": {
-            "keys": [
-               "count",
-               "variation"
-            ]
-         },
-         "description": "A class for expressing the count of a specific MolecularVariation present _in-trans_ at a genomic locus represented by a Genotype.",
-         "type": "object",
-         "properties": {
-            "id": {
-               "type": "string",
-               "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
-            },
-            "label": {
-               "type": "string",
-               "description": "A primary label for the entity."
-            },
-            "description": {
-               "type": "string",
-               "description": "A free-text description of the entity."
-            },
-            "extensions": {
-               "type": "array",
-               "ordered": true,
-               "items": {
-                  "$ref": "#/$defs/Extension"
-               }
-            },
-            "digest": {
-               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
-               "type": "string",
-               "pattern": "[0-9A-Za-z_\\-]{32}"
-            },
-            "count": {
-               "oneOf": [
-                  {
-                     "$ref": "#/$defs/Range"
-                  },
-                  {
-                     "type": "integer"
-                  }
-               ],
-               "description": "The number of copies of the `variation` at a Genotype locus."
-            },
-            "variation": {
-               "oneOf": [
-                  {
-                     "$ref": "#/$defs/Allele"
-                  },
-                  {
-                     "$ref": "#/$defs/Haplotype"
-                  }
-               ],
-               "description": "A MolecularVariation at a Genotype locus."
-            }
-         },
-         "required": [
-            "count",
-            "variation"
-         ],
-         "additionalProperties": false
-      },
       "Range": {
-         "maturity": "Alpha",
+         "maturity": "draft",
          "description": "An inclusive range of values bounded by one or more integers.",
          "type": "array",
          "ordered": true,
@@ -1917,28 +1737,28 @@
          "minItems": 2
       },
       "Residue": {
-         "maturity": "Alpha",
+         "maturity": "draft",
          "description": "A character representing a specific residue (i.e., molecular species) or groupings of these (\"ambiguity codes\"), using [one-letter IUPAC abbreviations](https://en.wikipedia.org/wiki/International_Union_of_Pure_and_Applied_Chemistry#Amino_acid_and_nucleotide_base_codes) for nucleic acids and amino acids.",
          "type": "string",
          "pattern": "[A-Z*\\-]"
       },
       "SequenceString": {
-         "maturity": "Alpha",
+         "maturity": "draft",
          "description": "A character string of Residues that represents a biological sequence using the conventional sequence order (5\u2019-to-3\u2019 for nucleic acid sequences, and amino-to-carboxyl for amino acid sequences). IUPAC ambiguity codes are permitted in Sequence Strings.",
          "type": "string",
          "pattern": "^[A-Z*\\-]*$"
       },
       "Adjacency": {
-         "maturity": "Alpha",
+         "maturity": "draft",
          "ga4ghDigest": {
             "prefix": "AJ",
             "keys": [
+               "adjoinedSequences",
                "linker",
-               "sequenceTerminals",
                "type"
             ]
          },
-         "description": "The `Adjacency` class represents the termination of a sequence and (when present) the beginning of an adjacent sequence, potentially with an intervening linker sequence.",
+         "description": "The `Adjacency` class can represent either the termination of a sequence or the adjoining of the end of a sequence with the beginning of an adjacent sequence, potentially with an intervening linker sequence.",
          "type": "object",
          "properties": {
             "id": {
@@ -1960,16 +1780,16 @@
                   "$ref": "#/$defs/Extension"
                }
             },
-            "digest": {
-               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
-               "type": "string",
-               "pattern": "[0-9A-Za-z_\\-]{32}"
-            },
             "type": {
                "type": "string",
                "const": "Adjacency",
                "default": "Adjacency",
                "description": "MUST be \"Adjacency\"."
+            },
+            "digest": {
+               "description": "A sha512t24u digest created using the VRS Computed Identifier algorithm.",
+               "type": "string",
+               "pattern": "^[0-9A-Za-z_\\-]{32}$"
             },
             "expressions": {
                "type": "array",
@@ -1978,7 +1798,7 @@
                   "$ref": "#/$defs/Expression"
                }
             },
-            "sequenceTerminals": {
+            "adjoinedSequences": {
                "type": "array",
                "uniqueItems": false,
                "ordered": true,
@@ -1992,12 +1812,12 @@
                      }
                   ]
                },
-               "description": "Sequence terminals involved in the adjacency.",
+               "description": "The terminal sequence or pair of adjoined sequences that defines in the adjacency.",
                "minItems": 1,
                "maxItems": 2
             },
             "linker": {
-               "description": "A linker sequence found between the sequence terminals.",
+               "description": "The sequence found between adjoined sequences.",
                "oneOf": [
                   {
                      "$ref": "#/$defs/LengthExpression"
@@ -2012,7 +1832,7 @@
             }
          },
          "required": [
-            "sequenceTerminals"
+            "adjoinedSequences"
          ],
          "additionalProperties": false
       }
