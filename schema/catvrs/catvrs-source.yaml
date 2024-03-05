@@ -1,15 +1,16 @@
-$schema: http://json-schema.org/draft/2020-12/schema
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://w3id.org/ga4gh/schema/catvrs/1.x/catvrs-source.yaml"
 title: GA4GH-Cat-VRS-Definitions
 type: object
 strict: true
 
 imports:
-  gks.core: gks.common-source.yaml
-  vrs: vrs-source.yaml
+  gks.core: ../gks-common/core-source.yaml
+  vrs: ../vrs/vrs-source.yaml
 
 namespaces:
-  vrs: vrs.json#/$defs/
-  gks.core: gks.common.json#/$defs/
+  vrs: ../vrs/vrs.yaml#/$defs/
+  gks.core: ../gks-common/core.yaml#/$defs/
 
 $defs:
   # VRSATILE Categorical Variation are presented top-down. Everything rolls up to

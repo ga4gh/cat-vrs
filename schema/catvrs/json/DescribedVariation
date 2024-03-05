@@ -1,0 +1,70 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/catvrs/1.x/json/DescribedVariation",
+   "title": "DescribedVariation",
+   "type": "object",
+   "maturity": "draft",
+   "description": "Some categorical variation concepts are supported by custom nomenclatures or text-descriptive representations for which a categorical variation model does not exist. DescribedVariation is a class that adds requirements and contextual semantics to the `label` and `description` fields to indicate how a categorical variation concept should be evaluated for matching variants.",
+   "properties": {
+      "id": {
+         "type": "string",
+         "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
+      },
+      "extensions": {
+         "type": "array",
+         "ordered": true,
+         "items": {
+            "$ref": "/ga4gh/schema/gks-common/1.x/json/Extension"
+         }
+      },
+      "mappings": {
+         "type": "array",
+         "ordered": false,
+         "items": {
+            "$ref": "/ga4gh/schema/gks-common/1.x/json/Mapping"
+         }
+      },
+      "type": {
+         "type": "string",
+         "const": "DescribedVariation",
+         "default": "DescribedVariation",
+         "description": "MUST be \"DescribedVariation\""
+      },
+      "aliases": {
+         "description": "Aliases are alternate labels for a Domain Entity.",
+         "ordered": false,
+         "type": "array",
+         "items": {
+            "type": "string"
+         }
+      },
+      "members": {
+         "type": "array",
+         "ordered": false,
+         "description": "A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.",
+         "items": {
+            "oneOf": [
+               {
+                  "$ref": "/ga4gh/schema/gks-common/1.x/json/IRI"
+               },
+               {
+                  "$ref": "/ga4gh/schema/vrs/2.x/json/Variation"
+               }
+            ]
+         }
+      },
+      "label": {
+         "type": "string",
+         "description": "A primary label for the categorical variation. This required property should provide a  short and descriptive textual representation of the concept."
+      },
+      "description": {
+         "type": "string",
+         "description": "A textual description of the domain of variation that should match the categorical  variation entity."
+      }
+   },
+   "required": [
+      "label",
+      "type"
+   ],
+   "additionalProperties": false
+}

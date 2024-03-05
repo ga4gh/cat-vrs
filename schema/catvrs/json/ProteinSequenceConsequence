@@ -1,0 +1,81 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/catvrs/1.x/json/ProteinSequenceConsequence",
+   "title": "ProteinSequenceConsequence",
+   "type": "object",
+   "maturity": "draft",
+   "description": "A change that occurs in a protein sequence as a result of genomic changes. Due to the degenerate nature of the genetic code, there are often several genomic changes that can cause a protein sequence consequence. The protein sequence consequence, like a CanonicalAllele, is defined by an `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>` that is representative of a collection of congruent Protein Alleles that share the same altered codon(s).",
+   "properties": {
+      "id": {
+         "type": "string",
+         "description": "The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE)."
+      },
+      "label": {
+         "type": "string",
+         "description": "A primary label for the entity."
+      },
+      "description": {
+         "type": "string",
+         "description": "A free-text description of the entity."
+      },
+      "extensions": {
+         "type": "array",
+         "ordered": true,
+         "items": {
+            "$ref": "/ga4gh/schema/gks-common/1.x/json/Extension"
+         }
+      },
+      "mappings": {
+         "type": "array",
+         "ordered": false,
+         "items": {
+            "$ref": "/ga4gh/schema/gks-common/1.x/json/Mapping"
+         }
+      },
+      "type": {
+         "type": "string",
+         "const": "ProteinSequenceConsequence",
+         "default": "ProteinSequenceConsequence",
+         "description": "MUST be \"ProteinSequenceConsequence\""
+      },
+      "aliases": {
+         "description": "Aliases are alternate labels for a Domain Entity.",
+         "ordered": false,
+         "type": "array",
+         "items": {
+            "type": "string"
+         }
+      },
+      "members": {
+         "type": "array",
+         "ordered": false,
+         "description": "A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.",
+         "items": {
+            "oneOf": [
+               {
+                  "$ref": "/ga4gh/schema/gks-common/1.x/json/IRI"
+               },
+               {
+                  "$ref": "/ga4gh/schema/vrs/2.x/json/Variation"
+               }
+            ]
+         }
+      },
+      "definingContext": {
+         "oneOf": [
+            {
+               "$ref": "/ga4gh/schema/gks-common/1.x/json/IRI"
+            },
+            {
+               "$ref": "/ga4gh/schema/vrs/2.x/json/Allele"
+            }
+         ],
+         "description": "The [VRS Allele](https://vrs.ga4gh.org/en/2.0/terms_and_model.html#allele) object that is congruent with (projects to the same codons) as alleles on other protein reference  sequences."
+      }
+   },
+   "required": [
+      "definingContext",
+      "type"
+   ],
+   "additionalProperties": false
+}
