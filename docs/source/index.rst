@@ -7,7 +7,8 @@ Categorical Variation Representation Specification
    :includehidden:
 
    introduction
-   terms_and_model
+   getting_involved
+   terms_and_model  
    schema
    impl-guide/index
    releases/index
