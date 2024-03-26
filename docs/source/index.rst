@@ -1,6 +1,21 @@
 Categorical Variation Representation Specification
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
+
+.. toctree::
+   :maxdepth: 2
+   :includehidden:
+
+   introduction
+   terms_and_model
+   schema
+   impl-guide/index
+   releases/index
+   appendices/index
+
+
+
+
 .. Short Problem statement.
 
 The Categorical Variation Study Group is developing a data framework and specification for a computable model of categorical variants. This is related to broader GA4GH efforts to streamline genomic knowledge standards across disparate genomic knowledge repositories. A categorical variation representation specification is required to facilitate the needs for storing, searching, and interpreting knowledge related to both individual genomic variants and the categories of variation to which they belong.
