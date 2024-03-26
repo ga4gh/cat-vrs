@@ -3,6 +3,8 @@ Categorical Variation Representation Specification
 
 .. Short Problem statement.
 
+blah
+
 The Categorical Variation Study Group is developing a data framework and specification for a computable model of categorical variants. This is related to broader GA4GH efforts to streamline genomic knowledge standards across disparate genomic knowledge repositories. A categorical variation representation specification is required to facilitate the needs for storing, searching, and interpreting knowledge related to both individual genomic variants and the categories of variation to which they belong.
 
 .. Variant interpretation
