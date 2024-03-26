@@ -21,3 +21,4 @@ can get involved:
 .. image:: images/cat-vrs-transparent-bg.png
     :width: 50%
     :alt: An irresistably cute kittynaut beckoning you to enter the Cat-VRS.
+    :align: center
