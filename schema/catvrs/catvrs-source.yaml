@@ -245,7 +245,7 @@ $defs:
           - type: integer
           - $refCurie: vrs:Range
         description: >-
-          The integral quantity of the subject in a system
+          The integral quantity or wuantity range of the subject in a system
     required: [ "count" ]
 
 
@@ -274,10 +274,11 @@ $defs:
             type: string
             enum: [ "efo:0030069", "efo:0020073", "efo:0030068", "efo:0030067", "efo:0030064", "efo:0030070",
                     "efo:0030071", "efo:0030072" ]
-            description: >-
-              MUST be one of "efo:0030069" (complete genomic loss), "efo:0020073" (high-level loss),
-              "efo:0030068" (low-level loss), "efo:0030067" (loss), "efo:0030064" (regional base ploidy),
-              "efo:0030070" (gain), "efo:0030071" (low-level gain), "efo:0030072" (high-level gain).
+        description: >-
+          a quantitative or qualitative value of the measurement with respect to a baseline (0). 
+          If qualitative, must be one of "efo:0030069" (complete genomic loss), "efo:0020073" (high-level loss),
+          "efo:0030068" (low-level loss), "efo:0030067" (loss), "efo:0030064" (regional base ploidy),
+          "efo:0030070" (gain), "efo:0030071" (low-level gain), "efo:0030072" (high-level gain).
         required: [ "change" ]
 
 

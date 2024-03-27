@@ -21,4 +21,4 @@ The absolute count of a discrete assayable unit (e.g. chromosome, gene, or seque
        *  - count
           - integer | `Range <../vrs/vrs.yaml#/$defs/Range>`_
           - 1..1
-          - The integral quantity of the subject in a system
+          - The integral quantity or wuantity range of the subject in a system
