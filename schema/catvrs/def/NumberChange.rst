@@ -1,6 +1,6 @@
 **Computational Definition**
 
-The absolute count of a discrete assayable unit (e.g. chromosome, gene, or sequence).
+A quantitative assessment of a unit within a system (e.g. genome, cell, etc.) relative to a baseline quantity.
 
     **Information Model**
     
@@ -17,8 +17,8 @@ The absolute count of a discrete assayable unit (e.g. chromosome, gene, or seque
        *  - type
           - string
           - 0..1
-          - MUST be "NumberCount"
-       *  - count
-          - integer | `Range <../vrs/vrs.yaml#/$defs/Range>`_
-          - 1..1
-          - The integral quantity of the subject in a system
+          - MUST be "NumberChange"
+       *  - change
+          - integer | `Range <../vrs/vrs.yaml#/$defs/Range>`_ | string
+          - 0..1
+          - 

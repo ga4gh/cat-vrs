@@ -4,11 +4,6 @@
    "title": "NumberCount",
    "type": "object",
    "maturity": "draft",
-   "ga4ghDigest": {
-      "keys": [
-         "copies"
-      ]
-   },
    "description": "The absolute count of a discrete assayable unit (e.g. chromosome, gene, or sequence).",
    "properties": {
       "type": {
@@ -17,7 +12,7 @@
          "default": "NumberCount",
          "description": "MUST be \"NumberCount\""
       },
-      "copies": {
+      "count": {
          "oneOf": [
             {
                "$ref": "/ga4gh/schema/vrs/2.x/json/Range"
@@ -30,7 +25,7 @@
       }
    },
    "required": [
-      "copies"
+      "count"
    ],
    "additionalProperties": false
 }

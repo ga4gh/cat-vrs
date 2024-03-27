@@ -227,9 +227,9 @@ $defs:
 
   NumberCount:
     maturity: draft
-    ga4ghDigest:
-      keys:
-        - copies
+    # ga4ghDigest:
+    #   keys:
+    #     - numberCount
     type: object
     description: >-
       The absolute count of a discrete assayable unit (e.g. chromosome, gene, or sequence).
@@ -240,15 +240,45 @@ $defs:
         default: "NumberCount"
         description: >-
           MUST be "NumberCount"
-      copies:
+      count:
         oneOf:
           - type: integer
           - $refCurie: vrs:Range
         description: >-
           The integral quantity of the subject in a system
-    required: [ "copies" ]
+    required: [ "count" ]
 
 
+  NumberChange:
+    maturity: draft
+    # ga4ghDigest:
+    #   keys:
+    #     - numberChange
+    #   prefix: CX
+    type: object
+    description: >-
+      A quantitative assessment of a unit within a system (e.g. genome, cell,
+      etc.) relative to a baseline quantity.
+    properties:
+      type:
+        type: string
+        const: "NumberChange"
+        default: "NumberChange"
+        description: >-
+          MUST be "NumberChange"
+      change:
+        oneOf:
+          - type: integer
+          - $refCurie: vrs:Range
+          - copyChange:
+            type: string
+            enum: [ "efo:0030069", "efo:0020073", "efo:0030068", "efo:0030067", "efo:0030064", "efo:0030070",
+                    "efo:0030071", "efo:0030072" ]
+            description: >-
+              MUST be one of "efo:0030069" (complete genomic loss), "efo:0020073" (high-level loss),
+              "efo:0030068" (low-level loss), "efo:0030067" (loss), "efo:0030064" (regional base ploidy),
+              "efo:0030070" (gain), "efo:0030071" (low-level gain), "efo:0030072" (high-level gain).
+        required: [ "change" ]
 
 
 
