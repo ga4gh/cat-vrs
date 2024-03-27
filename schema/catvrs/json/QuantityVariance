@@ -1,0 +1,18 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/catvrs/1.x/json/QuantityVariance",
+   "title": "QuantityVariance",
+   "type": "object",
+   "maturity": "draft",
+   "description": "The Quantity Variance class captures one axis of variation in the generalized model of categorical variation.  It is used to model quantitative measure changes in a given biological level of variation.",
+   "properties": {
+      "type": {
+         "type": "string",
+         "const": "QuantityVariance",
+         "default": "QuantityVariance",
+         "description": "MUST be \"QuantityVariance\""
+      }
+   },
+   "required": [],
+   "additionalProperties": false
+}
