@@ -21,7 +21,7 @@
                "type": "integer"
             }
          ],
-         "description": "The integral quantity or wuantity range of the subject in a system"
+         "description": "The integral quantity or quantity range of the subject in a system"
       }
    },
    "required": [
