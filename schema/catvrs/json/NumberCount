@@ -1,0 +1,36 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/catvrs/1.x/json/NumberCount",
+   "title": "NumberCount",
+   "type": "object",
+   "maturity": "draft",
+   "ga4ghDigest": {
+      "keys": [
+         "copies"
+      ]
+   },
+   "description": "The absolute count of a discrete assayable unit (e.g. chromosome, gene, or sequence).",
+   "properties": {
+      "type": {
+         "type": "string",
+         "const": "NumberCount",
+         "default": "NumberCount",
+         "description": "MUST be \"NumberCount\""
+      },
+      "copies": {
+         "oneOf": [
+            {
+               "$ref": "/ga4gh/schema/vrs/2.x/json/Range"
+            },
+            {
+               "type": "integer"
+            }
+         ],
+         "description": "The integral quantity of the subject in a system"
+      }
+   },
+   "required": [
+      "copies"
+   ],
+   "additionalProperties": false
+}

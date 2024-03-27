@@ -174,6 +174,122 @@ $defs:
     required:
       - label
 
+  # QuantityChange:
+  #   maturity: draft
+  #   type: object
+  #   inherits: CategoricalVariation
+  #   description: >-
+  #     The Quantity Change class captures one axis of variation in the generalized model of categorical
+  #     variation.  It is used to model quantitative measure changes in a given biological level of
+  #     variation.
+  #   properties:
+  #     type:
+  #       type: string
+  #       const: QuantityChange
+  #       default: QuantityChange
+  #       description: 'MUST be "QuantityChange"'
+  #     label:
+  #       extends: label
+  #       description: >-
+  #         A primary label for the categorical variation. This required property should provide a 
+  #         short and descriptive textual representation of the concept.
+  #     description:
+  #       extends: description
+  #       description: >-
+  #         A textual description of the domain of variation that should match the categorical 
+  #         variation entity.
+  #     locationMatchCharacteristic:
+  #       type: string
+  #       enum: ['exact', 'partial', 'subinterval', 'superinterval']
+  #       description: >-
+  #         The characteristics of a valid match between a contextual CNV location (the query) and the 
+  #         Categorical CNV location (the domain), when both query and domain are represented on the same 
+  #         reference sequence. An `exact` match requires the location of the query and domain to be identical. 
+  #         A `subinterval` match requires the query to be a subinterval of the domain. A `superinterval` match
+  #         requires the query to be a superinterval of the domain. A `partial` match requires at least 1 residue
+  #         of overlap between the query and domain.
+  #     copyChange:
+  #       type: string
+  #       enum: [ "efo:0030069", "efo:0020073", "efo:0030068", "efo:0030067", "efo:0030064", "efo:0030070", "efo:0030071", "efo:0030072" ]
+  #       description: >-
+  #         A representation of the change in copies of a sequence in a system. MUST be one of "efo:0030069" (complete 
+  #         genomic loss), "efo:0020073" (high-level loss), "efo:0030068" (low-level loss), "efo:0030067" (loss), 
+  #         "efo:0030064" (regional base ploidy), "efo:0030070" (gain), "efo:0030071" (low-level gain), "efo:0030072" 
+  #         (high-level gain).
+  #     copies:
+  #       oneOf:
+  #         - type: integer
+  #         - $refCurie: vrs:Range
+  #       description: >-
+  #         The integral number of copies of the subject in a system.
+  #   required:
+  #     - label
+
+  NumberCount:
+    maturity: draft
+    ga4ghDigest:
+      keys:
+        - copies
+    type: object
+    description: >-
+      The absolute count of a discrete assayable unit (e.g. chromosome, gene, or sequence).
+    properties:
+      type:
+        type: string
+        const: "NumberCount"
+        default: "NumberCount"
+        description: >-
+          MUST be "NumberCount"
+      copies:
+        oneOf:
+          - type: integer
+          - $refCurie: vrs:Range
+        description: >-
+          The integral quantity of the subject in a system
+    required: [ "copies" ]
+
+
+
+
+
+  # # Categorical Variation is presented top-down. Everything rolls up to
+  # # CategoricalVariant, is composed of one or several level variants, 
+  # # each of which is in turn associated with a biological level of 
+  # # variation, and relevant properties to intensionally define set
+  # # membership.
+
+  # # =============================================================================
+  # # Top-level Categorical Variation concepts
+  # # =============================================================================
+
+  # CategoricalVariant:
+  #   inherits: gks.core:DomainEntity
+  #   description: >-
+  #     A top-level representation of a categorically-defined domain for variation across one or multiple biological levels in which individual contextual variants may be members of the domain.
+  #   properties:
+  #     id:
+  #       type: string
+  #       description: >-
+  #         The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is 
+  #         unique within a given system. The identified entity may have a different 'id' in a different 
+  #         system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE).
+  #     label:
+  #       type: string
+  #       description: A primary label for the entity.
+  #     description:
+  #       type: string
+  #       description: A free-text description of the entity.
+  #     extensions:
+  #       type: array
+  #       ordered: true
+  #       items:
+  #         - $refExtension: gks.core:Extension
+
+
+
+
+
+
 #  CanonicalLocation:
 #    inherits: Constraint
 #    type: object
