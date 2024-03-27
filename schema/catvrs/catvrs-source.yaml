@@ -235,7 +235,7 @@ $defs:
   QuantityVariance:
     maturity: draft
     type: object
-    inherits: NumberCount
+    # inherits: NumberCount
     description: >-
       The Quantity Variance class captures one axis of variation in the generalized model of categorical
       variation.  It is used to model quantitative measure changes in a given biological level of
