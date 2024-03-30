@@ -3,7 +3,7 @@ Terminology & Information Model
 
 
 
-information on the terminologya d information model go here.  subsections include:
+information on the terminology and information model go here.  subsections include:
 
 Information Model Principles
 Basic types
