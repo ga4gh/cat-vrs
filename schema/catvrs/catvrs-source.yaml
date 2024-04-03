@@ -175,6 +175,53 @@ $defs:
       - label
 
 
+  # test_parent_A:
+  #   maturity: draft
+  #   heritable properties:
+  #     type:
+  #       type: string
+  #     prop1:
+  #       type: string
+  #       const: "property from the test parent class"
+  #       description: >-
+  #         Must be "property from the test parent class"
+  #   description: >-
+  #     test parent ID.  MUST be "test_parent"
+  #   # heritable_required: ["type"]
+
+  # test_child_B:
+  #   inherits: test_parent_A
+  #   # type: object
+  #   description: >-
+  #     Child_B, a child of test_parent_A
+  #   heritable properties:
+  #     prop2:
+  #       type: string
+  #       const: "property from the test_child_B"
+  #       description: >-
+  #         Must be "property from the test_child_B"
+    
+  # test_child_C:
+  #   inherits: test_parent_A
+  #   description: >-
+  #     Child_C, a child of test_parent_A
+  #   heritable properties:
+  #     prop3:
+  #       type: string
+  #       const: "property from the test_child_C"
+  #       description: >-
+  #         Must be "property from the test_child_C"
+
+
+  # test_grandchild_D:
+  #   inherits: test_child_B, test_child_C
+  #   # inherits: test_child_C
+  #   description: >-
+  #     Child_C, a child of test_child_B and test_child_D
+
+
+
+
   NumberCount:
     maturity: draft
     # ga4ghDigest:
