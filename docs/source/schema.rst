@@ -9,6 +9,16 @@ Overview
 Machine Readable Specifications
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
+
+The machine readable Cat-VRS is written using `JSON Schema
+<https://json-schema.org/>`_.
+
+The schema itself is written in YAML (|vrs_yaml|) and converted to JSON
+(|vrs_json|).
+
+Contributions to the schema MUST be written in the YAML document.
+
+
 .. _CategoricalVariation:
 
 [THIS SECTION WILL GET UPDATEED WHEN I HAVE SCHEMAS READY]
