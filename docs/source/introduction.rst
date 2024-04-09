@@ -66,7 +66,7 @@ While a single categorical variant may have many assayed variant members, the sa
     :alt: The figure depicts a single centralized assayed variant, with arrows radiating out to a number of categorical variants to which it is a member.  Among these, the assayed variant NC_000007.13:g.140453136A>T is a BRAF V600E variant, a BRAF gene variant, and a chromosome 7 variant.
 
 
-Because a single categoricla variant may have many assayed variants as members, while a single assayed variant can be a member of many categorical variants, different categorical have complex heirarchical relationships with each other.  the figure below depicts some of the relationships between some of the categorical variants to which NC_000007.13:g.140453136A>T is a member.  For example, all BRAF V600E variants are also BRAF gene variants.  And all BRAF V600E variants and BRAF gene variants are chromosome 7 variants.  A BRAF V600E variant is also an inframe protein variant, which is itself a type of sequence variant.
+Because a single categorical variant may have many assayed variants as members, while a single assayed variant can be a member of many categorical variants, different categorical have complex heirarchical relationships with each other.  the figure below depicts some of the relationships between some of the categorical variants to which NC_000007.13:g.140453136A>T is a member.  For example, all BRAF V600E variants are also BRAF gene variants.  And all BRAF V600E variants and BRAF gene variants are chromosome 7 variants.  A BRAF V600E variant is also an inframe protein variant, which is itself a type of sequence variant.
 
 
 .. image:: images/relations-between-assayed-and-CatVars-and-CatVars-to-other-CatVars(1).png
@@ -87,14 +87,18 @@ To make categoricla variant matching even more complicated, it is often the case
     :alt: The figure depicts a hypothetical variant where an ACT sequence has been inserted directly 3' of a ACTG sequence.  While this would not be considered a duplication variant in the HGVS nomenclature due to the intervening G base pair, it could appear in other resources as a duplication of the preceeding ACT sequence, or alternately simply as an insertion of ACT.  This implies that the catgorical variant descriptor "duplication" has different meanings across different resources.
 
 
-On the other hand, it is also the often the case that spurious ambiguity exists within resources.  The figure depicts a hypothetical case where compared to a reference sequence ACT, the variant sequence is ACCCCCT.  In HVGS, this variant could either be described as an insertion of 4 C nucleotides, or else a five repetitions of the single nucleotide sequence C.  This demonstrates spurious ambiguity of categorical variant descriptors, as both categorical variants desribe two sets with all and only the same member variants.
+On the other hand, it is also often the case that spurious ambiguity exists within resources.  The figure depicts a hypothetical case where compared to a reference sequence ACT, the variant sequence is ACCCCCT.  In HVGS, this variant could either validly be described as an insertion of 4 C nucleotides, or else a five repetitions of the single nucleotide sequence C.  This demonstrates spurious ambiguity of categorical variant descriptors, as both categorical variants desribe two sets with all and only the same member variants.
 
 
 .. image:: images/CatVar-CatVar-spurious-ambiguity.png
-    :width: 60%
+    :width: 40%
     :align: center
     :alt: The figure depicts a hypothetical case where compared to a reference sequence ACT, the variant sequence is ACCCCCT.  In HVGS, this variant could either be described as an insertion of 4 C nucleotides, or else a five repetitions of the single nucleotide sequence C.  This demonstrates spurious ambiguity of categorical variant descriptors, as both categorical variants desribe two sets with all and only the same member variants.
 
+
+
+Discussion
+@@@@@@@@@@
 
 
 In summary, a crucial step in the course of genomic variant interpretation is assayed-categorical variant matching, where one determines all and only those categorical variants to whoch the assayed variant in question is a member.  Successful assayed-categorical variant matching makes it possible to connect evidence to support or refute determinations of pathogenicity and/or oncogenicity of the assayed variants.  In a different but related use case, categorical-categorical variant matching is crucial to the process of data harmonization and knowledgebase curation.  
@@ -156,43 +160,6 @@ This repository is the for the GA4GH Categorical Variation Study Group.  As a st
 Relatedly, The contents of this repository represents a very early pre-alpha version of the Cat-VRS. First, this means that the schemas contained herein are not yet an officially-released version of the specification.  Second, this menas that the spec is expected to undergo frequent and potentially breaking updates until a more stable beta version is released.  Caveat emptor.
 
 
-.. _CategoricalVariation:
-
-[THIS SECTION WILL GET UPDATEED WHEN I HAVE SCHEMAS READY]
-
-
-Categorical Variation
-@@@@@@@@@@@@@@@@@@@@@
-
-.. include:: defs/CategoricalVariation.rst
-
-.. _Canonical:
-
-Canonical Allele
-################
-
-.. include:: defs/CanonicalAllele.rst
-
-.. _Described:
-
-Described Variation
-###################
-
-.. include:: defs/DescribedVariation.rst
-
-.. _CatCNV:
-
-Categorical Copy Number
-#######################
-
-.. include:: defs/CategoricalCnv.rst
-
-.. _ProtConsequence:
-
-Protein Sequence Consequence
-############################
-
-.. include:: defs/ProteinSequenceConsequence.rst
 
 
 .. _CA123643: https://reg.genome.network/redmine/projects/registry/genboree_registry/by_caid?caid=CA123643
