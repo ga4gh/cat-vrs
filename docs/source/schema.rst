@@ -21,11 +21,17 @@ Contributions to the schema MUST be written in the YAML document.
 
 .. _CategoricalVariation:
 
-[THIS SECTION WILL GET UPDATEED WHEN I HAVE SCHEMAS READY]
-
 
 Categorical Variation
 @@@@@@@@@@@@@@@@@@@@@
+
+THIS SECTION WILL GET UPDATEED WHEN I HAVE SCHEMAS READY
+PLEASE CHECK BACK IN THE FUTURE!
+
+.. image:: images/cat-vrs-transparent-bg.png
+    :width: 50%
+    :alt: An irresistably cute kittynaut beckoning you to enter the Cat-VRS.
+    :align: center
 
 .. include:: defs/CategoricalVariation.rst
 
