@@ -6,20 +6,25 @@ Introduction
 
 The Categorical Variation Study Group is developing a data framework and specification for a computable model of categorical variants. This is related to broader GA4GH efforts to streamline genomic knowledge standards across disparate genomic knowledge repositories. A categorical variation representation specification is required to facilitate the needs for storing, searching, and interpreting knowledge related to both individual genomic variants and the categories of variation to which they belong.
 
+
+Background and Problem Statement
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
 .. Variant interpretation
 
 Genomic medicine is the discipline of interpreting genomic information about an individual as part of their clinical care for diagnosis, prognosis, or therapeutic decision-making. Integral to the practice of genome interpretation is the collection of multiple lines of evidence from disparate genomic data resources to support or refute the clinical significance of evaluated variants. However, this process is rarely as straightforward as exact pattern matching.  The reason for this complication comes from a subtle but crucial difference between the information that the analyst posesses and the information to which evidence is typically attached in knowledgebases.
 
 .. Analyst has an assayed variant
 
-Suppose our analyst is interpreting a variant NC_000007.13:g.140453136A>T that was assayed in a patient.  This *assayed variant* label represents one specific genomic variant.  However, the evidence associated with this variant and its association with cancer are often not directly associated with that exact assayed variant.  Rather, the variant NC_000007.13:g.140453136A>T belongs to a larger class of related variants, BRAF V600E variants, and the underlying evidence items are associated with this class.
+Suppose an analyst is interpreting a variant, NC_000007.13:g.140453136A>T, that was assayed in a patient.  This *assayed variant* label represents one specific genomic variant.  However, the evidence connected with this variant and its association with cancer are often not directly attached to that exact assayed variant.  Rather, the variant NC_000007.13:g.140453136A>T belongs to a larger class of related variants, BRAF V600E variants, and the underlying evidence items are associated with this class label.
 
 
 
 
 .. image:: images/Assayed-variant-vs-categorical-variant.png
     :width: 80%
-    :alt: The figure depicts a stack of clinical reports, each of which represents a single assayed variant.  Each assayed variant is an connected to a common node labelled "BRAF V600E Variant", to dinicate that they are all members of that class of variants.  BRAF V600E is connected to a variety of genomic knowledge statements, such as being found in various cancers, having implications on drug sensitivity, and that its effect is that of gene amplification.
+    :alt: The figure depicts a stack of clinical reports, each of which represents a single assayed variant.  Each assayed variant is connected to a common node labelled "BRAF V600E Variant", to indicate that they are all members of that class of variants.  BRAF V600E is connected to a variety of genomic knowledge statements, such as being found in various cancers, having implications for drug sensitivity, and that its effect is that of gene amplification.
 
 
 .. What a catvar is
@@ -31,6 +36,12 @@ This class, *BRAF V600E*, is a *categorical variant*, so-called because it repre
 .. KB has categorival variants
 
 To return to our rhetorical analyst, the variant they are interpreting, NC_000007.13:g.140453136A>T, is an *assayed variant*.  That variant exists in the genome of an individual patient.  The labelled entity to which the genomic knowledge is associated, however, the *categorical variant* BRAF V600E, does not exist in the genome.  Categorical variants exist solely within genomics knowledgebases.  Therefore, one critical step in the interpretation of an assayed variant is determining which categorical variants to which it belongs in order to connect the assayed variant to the evidence items associated with that variant.
+
+
+
+
+Challenges to Unifying Representation of Categorical Variants
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 
 ..  CatVars are hard to pin down
@@ -141,6 +152,9 @@ Relatedly, The contents of this repository represents a very early pre-alpha ver
 
 
 .. _CategoricalVariation:
+
+[THIS SECTION WILL GET UPDATEED WHEN I HAVE SCHEMAS READY]
+
 
 Categorical Variation
 @@@@@@@@@@@@@@@@@@@@@
