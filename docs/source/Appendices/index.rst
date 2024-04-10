@@ -5,7 +5,7 @@ Appendices
 blah
 
 
-.. toctree::
+.. .. toctree::
     :maxdepth: 2
     design_decisions
     glossary
