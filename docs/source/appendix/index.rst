@@ -5,12 +5,15 @@ Appendices
 blah
 
 
-.. .. toctree::
+.. toctree::
     :maxdepth: 2
     design_decisions
     glossary
     relationships
     faq
+
+
+
 
 ..    truncated_digest_collision_analysis
 ..    future_plans
