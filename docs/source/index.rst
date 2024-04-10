@@ -15,8 +15,8 @@ The Categorical Variation Representation Specification (Cat-VRS, pronounced "cat
    terms_and_model  
    schema
    impl-guide/index
-   releases/index
    appendices/index
+..   releases/index
 
 
 

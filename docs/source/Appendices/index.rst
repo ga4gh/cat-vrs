@@ -10,6 +10,7 @@ blah
     design_decisions
     glossary
     relationships
+    faq
 
 ..    truncated_digest_collision_analysis
 ..    future_plans
@@ -18,7 +19,6 @@ blah
     associating_annotations
     ga4gh_identifiers
     development_process
-    faq
     
 
 
