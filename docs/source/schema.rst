@@ -19,13 +19,13 @@ The schema itself is written in YAML (|vrs_yaml|) and converted to JSON
 Contributions to the schema MUST be written in the YAML document.
 
 
-.. _CategoricalVariation:
+.. _CategoricalVariationSchemata:
 
 
-Categorical Variation
-@@@@@@@@@@@@@@@@@@@@@
+Categorical Variation Schemata
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-THIS SECTION WILL GET UPDATEED WHEN I HAVE SCHEMAS READY
+THIS SECTION WILL GET UPDATEED WHEN I HAVE SCHEMATA READY
 PLEASE CHECK BACK IN THE FUTURE!
 
 .. image:: images/cat-vrs-transparent-bg.png
