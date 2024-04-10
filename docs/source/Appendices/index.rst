@@ -8,7 +8,6 @@ blah
 .. toctree::
     :maxdepth: 2
     design_decisions
-    faq
     glossary
     relationships
 
@@ -19,6 +18,7 @@ blah
     associating_annotations
     ga4gh_identifiers
     development_process
+    faq
     
 
 
