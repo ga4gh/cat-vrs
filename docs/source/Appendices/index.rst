@@ -4,7 +4,6 @@ Appendices
 
 .. toctree::
     :maxdepth: 2
-
     design_decisions
     faq
     glossary

@@ -1,4 +1,0 @@
-.. _relationships:
-
-Relationships
-!!!!!!!!!!!!!
