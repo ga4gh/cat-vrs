@@ -11,7 +11,7 @@ correctly reflecting uncertainty of our understanding at the
 time. Unfortunately, such terms are not readily translatable into an
 unambiguous representation of knowledge.
 
-As discussed in the :ref:'Introduction', categorical variation labels are homophonous, ambiguous, and vague, often all three simultanously.  This poses a great difficulty to the precise repreentation of categorical variation.  In contrast, **the computational representation of categorical variation concepts requires
+As discussed in the :ref:`Introduction`, categorical variation labels are homophonous, ambiguous, and vague, often all three simultanously.  This poses a great difficulty to the precise representation of categorical variation.  In contrast, **the computational representation of categorical variation concepts requires
 translating precise categorical definitions into information models and
 data structures that may be used in software.** This translation
 should result in a representation of information that is consistent
@@ -25,7 +25,7 @@ Accordingly, for each term we define below, we begin by describing the
 term as used by the genetics and/or bioinformatics communities as
 available. When a term has multiple such definitions, we
 explicitly choose one of them for the purposes of computational
-modelling. We then define the **computational definition** that
+modeling. We then define the **computational definition** that
 reformulates the community definition in terms of information content.
 Finally, we translate each of these computational definitions into precise
 specifications for the (**information model**). 
