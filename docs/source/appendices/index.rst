@@ -7,8 +7,7 @@ blah
 
 .. toctree::
    :maxdepth: 2
-
-   getting_involved    
+ 
    design_decisions
    development_process
    future_plans
