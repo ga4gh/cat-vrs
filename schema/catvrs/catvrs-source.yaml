@@ -174,52 +174,63 @@ $defs:
     required:
       - label
 
-
-  # test_parent_A:
-  #   maturity: draft
-  #   heritable properties:
-  #     type:
-  #       type: string
-  #     prop1:
-  #       type: string
-  #       const: "property from the test parent class"
-  #       description: >-
-  #         Must be "property from the test parent class"
-  #   description: >-
-  #     test parent ID.  MUST be "test_parent"
-  #   # heritable_required: ["type"]
-
-  # test_child_B:
-  #   inherits: test_parent_A
-  #   # type: object
-  #   description: >-
-  #     Child_B, a child of test_parent_A
-  #   heritable properties:
-  #     prop2:
-  #       type: string
-  #       const: "property from the test_child_B"
-  #       description: >-
-  #         Must be "property from the test_child_B"
-    
-  # test_child_C:
-  #   inherits: test_parent_A
-  #   description: >-
-  #     Child_C, a child of test_parent_A
-  #   heritable properties:
-  #     prop3:
-  #       type: string
-  #       const: "property from the test_child_C"
-  #       description: >-
-  #         Must be "property from the test_child_C"
-
-
-  # test_grandchild_D:
-  #   inherits: test_child_B, test_child_C
-  #   # inherits: test_child_C
-  #   description: >-
-  #     Child_C, a child of test_child_B and test_child_D
-
-
+  CanonicalSequenceCountVariant:
+    maturity: draft
+    inherits: CategoricalVariation
+    description: >-
+      A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>` 
+      that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid 
+      change on different underlying reference sequences. Congruent representations of an Allele often exist
+      across different genome assemblies and associated cDNA transcript representations.
+      
+      This class denotes the classes of sequence variants, copy-number variants, and function variants, 
+      canonicalized across genome assemblies and associated cDNA trasncript representations.
+    type: object
+    properties:
+      type:
+        type: string
+        const: FunctionVariant
+        default: FunctionVariant
+        description: 'MUST be "FunctionVariant"'
+      level:
+        type: string
+        enum: ['protein','genomic']
+        description: >-
+          The biological level of the variation being described.
+      definingContext:
+        oneOf:
+          - $refCurie: vrs:Allele
+          - $refCurie: gks.core:IRI
+        description: >-
+          The `VRS Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#allele>`_
+          object that is congruent with variants on alternate reference sequences.
+      locationMatchCharacteristic:
+        type: string
+        enum: ['exact', 'partial', 'subinterval', 'superinterval']
+        description: >-
+          The characteristics of a valid match between a contextual CNV location (the query) and the 
+          Categorical CNV location (the domain), when both query and domain are represented on the same 
+          reference sequence. An `exact` match requires the location of the query and domain to be identical. 
+          A `subinterval` match requires the query to be a subinterval of the domain. A `superinterval` match
+          requires the query to be a superinterval of the domain. A `partial` match requires at least 1 residue
+          of overlap between the query and domain.
+      copyChange:
+        type: string
+        enum: [ "efo:0030069", "efo:0020073", "efo:0030068", "efo:0030067", "efo:0030064", "efo:0030070", "efo:0030071", "efo:0030072" ]
+        description: >-
+          A representation of the change in copies of a sequence in a system. MUST be one of "efo:0030069" (complete 
+          genomic loss), "efo:0020073" (high-level loss), "efo:0030068" (low-level loss), "efo:0030067" (loss), 
+          "efo:0030064" (regional base ploidy), "efo:0030070" (gain), "efo:0030071" (low-level gain), "efo:0030072" 
+          (high-level gain).
+      copies:
+        oneOf:
+          - type: integer
+          - $refCurie: vrs:Range
+        description: >-
+          The integral number of copies of the subject in a system.
+    required:
+      - level
+      - definingContext
 
 
   NumberCount:
