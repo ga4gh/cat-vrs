@@ -40,6 +40,10 @@ Some DescribedVariation attributes are inherited from :ref:`CategoricalVariation
           - `Variation <../vrs/vrs.yaml#/$defs/Variation>`_ | `IRI <../gks-common/core.yaml#/$defs/IRI>`_
           - 0..m
           - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.
+       *  - constraints
+          - :ref:`Constraint`
+          - 0..m
+          - 
        *  - label
           - string
           - 1..1

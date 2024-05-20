@@ -61,6 +61,13 @@
             ]
          }
       },
+      "constraints": {
+         "type": "array",
+         "ordered": false,
+         "items": {
+            "$ref": "/ga4gh/schema/catvrs/1.x/json/Constraint"
+         }
+      },
       "definingContext": {
          "oneOf": [
             {
