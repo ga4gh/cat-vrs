@@ -3,6 +3,11 @@
 [A terminology and data model for describing categorical variation concepts](https://vrsatile.readthedocs.io/en/latest/catvars/index.html), built on top of the
 [GA4GH Variation Representation Specification (VRS)](https://vrs.ga4gh.org).
 
+# Test Set
+
+Categorical variant classes intended to be covered by this specification can be [appended to this CatVar test set document](https://docs.google.com/document/d/1aV-SqxdmuRN_EKvafzTSe0GoGC9yOzPsjrdWE0LXqYc/edit) to direct future specification development efforts.
+
+
 ![image](docs/source/images/cat-vrs-transparent-bg.png)
 
 
