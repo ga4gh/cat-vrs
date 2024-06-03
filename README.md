@@ -1,4 +1,6 @@
-# Cat-VRS
+# Categorical Variation Representation Specification (Cat-VRS)
+
+[![Read the Docs](https://img.shields.io/readthedocs/vr-spec/1.1)](https://cat-vrs.readthedocs.io/en/latest/)
 
 [A terminology and data model for describing categorical variation concepts](https://vrsatile.readthedocs.io/en/latest/catvars/index.html), built on top of the
 [GA4GH Variation Representation Specification (VRS)](https://vrs.ga4gh.org).
