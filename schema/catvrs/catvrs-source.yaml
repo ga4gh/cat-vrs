@@ -5,12 +5,12 @@ type: object
 strict: true
 
 imports:
-  gks.core: ../gks-common/core-source.yaml
+  gks.common: ../gks-common/common-source.yaml
   vrs: ../vrs/vrs-source.yaml
 
 namespaces:
   vrs: ../vrs/vrs.yaml#/$defs/
-  gks.core: ../gks-common/core.yaml#/$defs/
+  gks.common: ../gks-common/common.yaml#/$defs/
 
 $defs:
   # VRSATILE Categorical Variation are presented top-down. Everything rolls up to
@@ -22,7 +22,7 @@ $defs:
   # =============================================================================
 
   CategoricalVariation:
-    inherits: gks.core:DomainEntity
+    inherits: gks.common:DomainEntity
     description: >-
       A representation of a categorically-defined domain for variation, in which individual 
       contextual variation instances may be members of the domain.
@@ -41,7 +41,7 @@ $defs:
         items:
           oneOf:
             - $refCurie: vrs:Variation
-            - $refCurie: gks.core:IRI
+            - $refCurie: gks.common:IRI
 
   ProteinSequenceConsequence:
     maturity: draft
@@ -62,7 +62,7 @@ $defs:
       definingContext:
         oneOf:
           - $refCurie: vrs:Allele
-          - $refCurie: gks.core:IRI
+          - $refCurie: gks.common:IRI
         description: >-
           The `VRS Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#allele>`_
           object that is congruent with (projects to the same codons) as alleles on other protein reference 
@@ -88,7 +88,7 @@ $defs:
       definingContext:
         oneOf:
           - $refCurie: vrs:Allele
-          - $refCurie: gks.core:IRI
+          - $refCurie: gks.common:IRI
         description: >-
           The `VRS Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#allele>`_
           object that is congruent with variants on alternate reference sequences.
@@ -342,7 +342,7 @@ $defs:
   # =============================================================================
 
   CategoricalVariant:
-    inherits: gks.core:DomainEntity
+    inherits: gks.common:DomainEntity
     description: >-
       A top-level representation of a categorically-defined domain for variation across one or multiple biological levels in which individual contextual variants may be members of the domain.
     # type: object
