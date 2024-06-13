@@ -13,7 +13,7 @@ namespaces:
   gks.common: ../gks-common/common.yaml#/$defs/
 
 $defs:
-  # VRSATILE Categorical Variation are presented top-down. Everything rolls up to
+  # Categorical Variation are presented top-down. Everything rolls up to
   # CategoricalVariation, which is a polymorphic abstraction of many kinds of
   # categorical variation.
 

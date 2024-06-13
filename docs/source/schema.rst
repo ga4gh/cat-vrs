@@ -13,14 +13,14 @@ Machine Readable Specifications
 The machine readable Cat-VRS is written using `JSON Schema
 <https://json-schema.org/>`_.
 
-The schema itself is written in YAML (|vrs_yaml|) and converted to JSON
-(|vrs_json|).
+The schema itself is written in YAML (|vrs_yaml|) and converted to individual
+JSON files for each class in the schema (|vrs_json|).
 
 Contributions to the schema MUST be written in the YAML document.
 
 
 .. _CategoricalVariationSchemata:
-
+.. _CategoricalVariation:
 
 Categorical Variation Schemata
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -33,32 +33,32 @@ PLEASE CHECK BACK IN THE FUTURE!
     :alt: An irresistably cute kittynaut beckoning you to enter the Cat-VRS.
     :align: center
 
-.. include:: defs/CategoricalVariation.rst
+.. include:: def/CategoricalVariation.rst
 
-.. _Canonical:
+.. _CanonicalAllele:
 
 Canonical Allele
 ################
 
-.. include:: defs/CanonicalAllele.rst
+.. include:: def/CanonicalAllele.rst
 
-.. _Described:
+.. _DescribedVariation:
 
 Described Variation
 ###################
 
-.. include:: defs/DescribedVariation.rst
+.. include:: def/DescribedVariation.rst
 
-.. _CatCNV:
+.. _CategoricalCnv:
 
 Categorical Copy Number
 #######################
 
-.. include:: defs/CategoricalCnv.rst
+.. include:: def/CategoricalCnv.rst
 
-.. _ProtConsequence:
+.. _ProteinSequenceConsequence:
 
 Protein Sequence Consequence
 ############################
 
-.. include:: defs/ProteinSequenceConsequence.rst
+.. include:: def/ProteinSequenceConsequence.rst
