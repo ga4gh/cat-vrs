@@ -28,24 +28,24 @@ Some CategoricalCnv attributes are inherited from :ref:`CategoricalVariation`.
           - string
           - 0..1
           - A free-text description of the entity.
-       *  - mappings
-          - `ConceptMapping <../gks-common/common.json#/$defs/ConceptMapping>`_
+       *  - alternativeLabels
+          - string
           - 0..m
-          - A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation.
+          - Alternative name(s) for the Entity.
        *  - extensions
-          - `Extension <../gks-common/common.json#/$defs/Extension>`_
+          - `Extension <../gks-core-im/core.json#/$defs/Extension>`_
           - 0..m
           - A list of extensions to the entity. Extensions are not expected to be natively understood, but may be used for pre-negotiated exchange of message attributes between systems.
        *  - type
           - string
           - 1..1
           - MUST be "CategoricalCnv"
-       *  - aliases
-          - string
+       *  - mappings
+          - `ConceptMapping <../gks-core-im/core.json#/$defs/ConceptMapping>`_
           - 0..m
-          - Aliases are alternate names for a Domain Entity.
+          - A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation.
        *  - members
-          - `Variation <../vrs/vrs.yaml#/$defs/Variation>`_ | `IRI <../gks-common/common.yaml#/$defs/IRI>`_
+          - `Variation <../vrs/vrs.yaml#/$defs/Variation>`_ | `IRI <../gks-core-im/core-im.yaml#/$defs/IRI>`_
           - 0..m
           - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.
        *  - location

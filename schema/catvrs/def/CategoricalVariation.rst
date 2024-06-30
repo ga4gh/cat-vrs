@@ -4,7 +4,7 @@ A representation of a categorically-defined domain for variation, in which indiv
 
     **Information Model**
     
-Some CategoricalVariation attributes are inherited from :ref:`gks.common:DomainEntity`.
+Some CategoricalVariation attributes are inherited from :ref:`gks.core:DomainEntity`.
 
     .. list-table::
        :class: clean-wrap
@@ -28,23 +28,23 @@ Some CategoricalVariation attributes are inherited from :ref:`gks.common:DomainE
           - string
           - 0..1
           - A free-text description of the entity.
-       *  - mappings
-          - `ConceptMapping <../gks-common/common.json#/$defs/ConceptMapping>`_
+       *  - alternativeLabels
+          - string
           - 0..m
-          - A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation.
+          - Alternative name(s) for the Entity.
        *  - extensions
-          - `Extension <../gks-common/common.json#/$defs/Extension>`_
+          - `Extension <../gks-core-im/core.json#/$defs/Extension>`_
           - 0..m
           - A list of extensions to the entity. Extensions are not expected to be natively understood, but may be used for pre-negotiated exchange of message attributes between systems.
        *  - type
           - string
           - 1..1
           - 
-       *  - aliases
-          - string
+       *  - mappings
+          - `ConceptMapping <../gks-core-im/core.json#/$defs/ConceptMapping>`_
           - 0..m
-          - Aliases are alternate names for a Domain Entity.
+          - A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation.
        *  - members
-          - `Variation <../vrs/vrs.yaml#/$defs/Variation>`_ | `IRI <../gks-common/common.yaml#/$defs/IRI>`_
+          - `Variation <../vrs/vrs.yaml#/$defs/Variation>`_ | `IRI <../gks-core-im/core-im.yaml#/$defs/IRI>`_
           - 0..m
           - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.
