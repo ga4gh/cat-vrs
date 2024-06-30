@@ -18,19 +18,19 @@
          "type": "string",
          "description": "A free-text description of the entity."
       },
-      "mappings": {
+      "alternativeLabels": {
          "type": "array",
          "ordered": false,
          "items": {
-            "$ref": "/ga4gh/schema/gks-common/1.x/json/ConceptMapping"
+            "type": "string"
          },
-         "description": "A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation."
+         "description": "Alternative name(s) for the Entity."
       },
       "extensions": {
          "type": "array",
          "ordered": true,
          "items": {
-            "$ref": "/ga4gh/schema/gks-common/1.x/json/Extension"
+            "$ref": "/ga4gh/schema/gks-core-im/1.x/json/Extension"
          },
          "description": "A list of extensions to the entity. Extensions are not expected to be natively understood, but may be used for pre-negotiated exchange of message attributes between systems."
       },
@@ -40,13 +40,13 @@
          "default": "CategoricalCnv",
          "description": "MUST be \"CategoricalCnv\""
       },
-      "aliases": {
-         "description": "Aliases are alternate names for a Domain Entity.",
-         "ordered": false,
+      "mappings": {
          "type": "array",
+         "ordered": false,
          "items": {
-            "type": "string"
-         }
+            "$ref": "/ga4gh/schema/gks-core-im/1.x/json/ConceptMapping"
+         },
+         "description": "A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation."
       },
       "members": {
          "type": "array",
@@ -55,7 +55,7 @@
          "items": {
             "oneOf": [
                {
-                  "$ref": "/ga4gh/schema/gks-common/1.x/json/IRI"
+                  "$ref": "/ga4gh/schema/gks-core-im/1.x/json/IRI"
                },
                {
                   "$ref": "/ga4gh/schema/vrs/2.x/json/Variation"
