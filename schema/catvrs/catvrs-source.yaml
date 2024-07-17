@@ -5,15 +5,15 @@ type: object
 strict: true
 
 imports:
-  gks.core: ../gks-common/core-source.yaml
+  gks.common: ../gks-common/common-source.yaml
   vrs: ../vrs/vrs-source.yaml
 
 namespaces:
   vrs: ../vrs/vrs.yaml#/$defs/
-  gks.core: ../gks-common/core.yaml#/$defs/
+  gks.common: ../gks-common/common.yaml#/$defs/
 
 $defs:
-  # VRSATILE Categorical Variation are presented top-down. Everything rolls up to
+  # Categorical Variation are presented top-down. Everything rolls up to
   # CategoricalVariation, which is a polymorphic abstraction of many kinds of
   # categorical variation.
 
@@ -22,7 +22,7 @@ $defs:
   # =============================================================================
 
   CategoricalVariation:
-    inherits: gks.core:DomainEntity
+    inherits: gks.common:DomainEntity
     description: >-
       A representation of a categorically-defined domain for variation, in which individual 
       contextual variation instances may be members of the domain.
@@ -41,7 +41,7 @@ $defs:
         items:
           oneOf:
             - $refCurie: vrs:Variation
-            - $refCurie: gks.core:IRI
+            - $refCurie: gks.common:IRI
       constraints:
         type: array
         ordered: false
@@ -60,14 +60,14 @@ $defs:
       of congruent Protein Alleles that share the same altered codon(s).
     properties:
       type:
-        type: string
+        extends: type
         const: ProteinSequenceConsequence
         default: ProteinSequenceConsequence
         description: 'MUST be "ProteinSequenceConsequence"'
       definingContext:
         oneOf:
           - $refCurie: vrs:Allele
-          - $refCurie: gks.core:IRI
+          - $refCurie: gks.common:IRI
         description: >-
           The `VRS Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#allele>`_
           object that is congruent with (projects to the same codons) as alleles on other protein reference 
@@ -86,14 +86,14 @@ $defs:
     type: object
     properties:
       type:
-        type: string
+        extends: type
         const: CanonicalAllele
         default: CanonicalAllele
         description: 'MUST be "CanonicalAllele"'
       definingContext:
         oneOf:
           - $refCurie: vrs:Allele
-          - $refCurie: gks.core:IRI
+          - $refCurie: gks.common:IRI
         description: >-
           The `VRS Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#allele>`_
           object that is congruent with variants on alternate reference sequences.
@@ -113,7 +113,7 @@ $defs:
       member CNVs.
     properties:
       type:
-        type: string
+        extends: type
         const: CategoricalCnv
         default: CategoricalCnv
         description: 'MUST be "CategoricalCnv"'
@@ -162,7 +162,7 @@ $defs:
       to indicate how a categorical variation concept should be evaluated for matching variants.
     properties:
       type:
-        type: string
+        extends: type
         const: DescribedVariation
         default: DescribedVariation
         description: 'MUST be "DescribedVariation"'
@@ -460,10 +460,10 @@ $defs:
   # Top-level Categorical Variation concepts
   # =============================================================================
 
-  # CategoricalVariant:
-  #   inherits: gks.core:DomainEntity
-  #   description: >-
-  #     A top-level representation of a categorically-defined domain for variation across one or multiple biological levels in which individual contextual variants may be members of the domain.
+  CategoricalVariant:
+    inherits: gks.common:DomainEntity
+    description: >-
+      A top-level representation of a categorically-defined domain for variation across one or multiple biological levels in which individual contextual variants may be members of the domain.
     # type: object
     # properties:
     #   id:
@@ -482,7 +482,7 @@ $defs:
     #     type: array
     #     ordered: true
     #     items:
-    #       - $refExtension: gks.core:Extension
+    #       - $refExtension: gks.common:Extension
 
 
 

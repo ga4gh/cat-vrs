@@ -19,40 +19,40 @@ Some ProteinSequenceConsequence attributes are inherited from :ref:`CategoricalV
        *  - id
           - string
           - 0..1
-          - The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is  unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE).
+          - The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is unique within a given system. The identified entity may have a different 'id' in a different system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE).
        *  - label
           - string
           - 0..1
-          - A primary label for the entity.
+          - A primary name for the entity.
        *  - description
           - string
           - 0..1
           - A free-text description of the entity.
+       *  - alternativeLabels
+          - string
+          - 0..m
+          - Alternative name(s) for the Entity.
        *  - extensions
-          - `Extension <../gks-common/core.json#/$defs/Extension>`_
+          - `Extension <../gks-common/common.json#/$defs/Extension>`_
           - 0..m
-          - 
+          - A list of extensions to the entity. Extensions are not expected to be natively understood, but may be used for pre-negotiated exchange of message attributes between systems.
        *  - mappings
-          - `Mapping <../gks-common/core.json#/$defs/Mapping>`_
+          - `ConceptMapping <../gks-common/common.json#/$defs/ConceptMapping>`_
           - 0..m
-          - 
+          - A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation.
+       *  - members
+          - `Variation <../vrs/vrs.yaml#/$defs/Variation>`_ | `IRI <../gks-common/common.yaml#/$defs/IRI>`_
+          - 0..m
+          - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.
        *  - type
           - string
           - 1..1
           - MUST be "ProteinSequenceConsequence"
-       *  - aliases
-          - string
-          - 0..m
-          - Aliases are alternate labels for a Domain Entity.
-       *  - members
-          - `Variation <../vrs/vrs.yaml#/$defs/Variation>`_ | `IRI <../gks-common/core.yaml#/$defs/IRI>`_
-          - 0..m
-          - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.
        *  - constraints
           - :ref:`Constraint`
           - 0..m
           - 
        *  - definingContext
-          - `Allele <../vrs/vrs.yaml#/$defs/Allele>`_ | `IRI <../gks-common/core.yaml#/$defs/IRI>`_
+          - `Allele <../vrs/vrs.yaml#/$defs/Allele>`_ | `IRI <../gks-common/common.yaml#/$defs/IRI>`_
           - 1..1
           - The `VRS Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#allele>`_ object that is congruent with (projects to the same codons) as alleles on other protein reference  sequences.
