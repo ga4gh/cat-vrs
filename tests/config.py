@@ -7,9 +7,9 @@ import re
 
 root_path = Path(__file__).parents[1]
 schema_path = root_path / "schema"
-catvrs_schema_path = schema_path / "catvrs"
+catvrs_schema_path = schema_path / "cat-vrs"
 catvrs_jsons_path = catvrs_schema_path / "json"
-catvar_yaml_path = catvrs_schema_path / "catvrs-source.yaml"
+catvar_yaml_path = catvrs_schema_path / "cat-vrs-source.yaml"
 
 test_path = root_path / 'tests'
 fixtures_path = root_path / 'examples'
