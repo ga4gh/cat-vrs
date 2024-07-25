@@ -1,6 +1,6 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/catvrs/1.x/json/CategoricalCnv",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.x/json/CategoricalCnv",
    "title": "CategoricalCnv",
    "type": "object",
    "maturity": "draft",
@@ -30,7 +30,7 @@
          "type": "array",
          "ordered": true,
          "items": {
-            "$ref": "/ga4gh/schema/gks-common/1.x/json/Extension"
+            "$ref": "/ga4gh/schema/gks-common/1.x/common/json/Extension"
          },
          "description": "A list of extensions to the entity. Extensions are not expected to be natively understood, but may be used for pre-negotiated exchange of message attributes between systems."
       },
@@ -38,7 +38,7 @@
          "type": "array",
          "ordered": false,
          "items": {
-            "$ref": "/ga4gh/schema/gks-common/1.x/json/ConceptMapping"
+            "$ref": "/ga4gh/schema/gks-common/1.x/common/json/ConceptMapping"
          },
          "description": "A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation."
       },
@@ -49,7 +49,7 @@
          "items": {
             "oneOf": [
                {
-                  "$ref": "/ga4gh/schema/gks-common/1.x/json/IRI"
+                  "$ref": "/ga4gh/schema/gks-common/1.x/common/json/IRI"
                },
                {
                   "$ref": "/ga4gh/schema/vrs/2.x/json/Variation"

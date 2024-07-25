@@ -1,6 +1,6 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/catvrs/1.x/json/QuantityVariance",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.x/json/QuantityVariance",
    "title": "QuantityVariance",
    "type": "object",
    "maturity": "draft",

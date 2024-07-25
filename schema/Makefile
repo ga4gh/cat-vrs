@@ -1,5 +1,5 @@
 all:
-	(cd catvrs; make all)
+	(cd cat-vrs; make all)
 
 clean:
-	(cd catvrs; make clean)
+	(cd cat-vrs; make clean)

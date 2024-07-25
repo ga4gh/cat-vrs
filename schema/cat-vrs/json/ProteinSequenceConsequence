@@ -1,10 +1,10 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/catvrs/1.x/json/CanonicalAllele",
-   "title": "CanonicalAllele",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.x/json/ProteinSequenceConsequence",
+   "title": "ProteinSequenceConsequence",
    "type": "object",
    "maturity": "draft",
-   "description": "A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>`  that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid  change on different underlying reference sequences. Congruent representations of an Allele often exist across different genome assemblies and associated cDNA transcript representations.",
+   "description": "A change that occurs in a protein sequence as a result of genomic changes. Due to the degenerate nature of the genetic code, there are often several genomic changes that can cause a protein sequence consequence. The protein sequence consequence, like a CanonicalAllele, is defined by an `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>` that is representative of a collection of congruent Protein Alleles that share the same altered codon(s).",
    "properties": {
       "id": {
          "type": "string",
@@ -30,7 +30,7 @@
          "type": "array",
          "ordered": true,
          "items": {
-            "$ref": "/ga4gh/schema/gks-common/1.x/json/Extension"
+            "$ref": "/ga4gh/schema/gks-common/1.x/common/json/Extension"
          },
          "description": "A list of extensions to the entity. Extensions are not expected to be natively understood, but may be used for pre-negotiated exchange of message attributes between systems."
       },
@@ -38,7 +38,7 @@
          "type": "array",
          "ordered": false,
          "items": {
-            "$ref": "/ga4gh/schema/gks-common/1.x/json/ConceptMapping"
+            "$ref": "/ga4gh/schema/gks-common/1.x/common/json/ConceptMapping"
          },
          "description": "A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation."
       },
@@ -49,7 +49,7 @@
          "items": {
             "oneOf": [
                {
-                  "$ref": "/ga4gh/schema/gks-common/1.x/json/IRI"
+                  "$ref": "/ga4gh/schema/gks-common/1.x/common/json/IRI"
                },
                {
                   "$ref": "/ga4gh/schema/vrs/2.x/json/Variation"
@@ -59,20 +59,20 @@
       },
       "type": {
          "type": "string",
-         "const": "CanonicalAllele",
-         "default": "CanonicalAllele",
-         "description": "MUST be \"CanonicalAllele\""
+         "const": "ProteinSequenceConsequence",
+         "default": "ProteinSequenceConsequence",
+         "description": "MUST be \"ProteinSequenceConsequence\""
       },
       "definingContext": {
          "oneOf": [
             {
-               "$ref": "/ga4gh/schema/gks-common/1.x/json/IRI"
+               "$ref": "/ga4gh/schema/gks-common/1.x/common/json/IRI"
             },
             {
                "$ref": "/ga4gh/schema/vrs/2.x/json/Allele"
             }
          ],
-         "description": "The [VRS Allele](https://vrs.ga4gh.org/en/2.0/terms_and_model.html#allele) object that is congruent with variants on alternate reference sequences."
+         "description": "The [VRS Allele](https://vrs.ga4gh.org/en/2.0/terms_and_model.html#allele) object that is congruent with (projects to the same codons) as alleles on other protein reference  sequences."
       }
    },
    "required": [
