@@ -1,0 +1,140 @@
+id: clinvar:662001
+label: NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs)
+type: CanonicalAllele
+definingContext:
+  id: ga4gh:VA.PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
+  type: Allele
+  digest: PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
+  label: 'NC_000001.11:11128043:AT:'
+  location: 
+    id: ga4gh:SL.5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
+    type: SequenceLocation
+    digest: 5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
+    start: 11128043
+    end: 11128045
+    sequenceReference:
+      id: NC_000001.11
+      type: SequenceReference
+      refgetAccession: SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
+      residueAlphabet: na
+      extensions:
+        - name: assembly
+          value: GRCh38
+        - name: chromosome
+          value: '1'      
+  state: 
+    length: 0
+    repeatSubunitLength: 2
+    sequence: ''
+    type: ReferenceLengthExpression
+  expressions: 
+    - syntax: spdi
+      value: 'NC_000001.11:11128043:AT:'
+    - syntax: hgvs.g
+      value: NC_000001.11:g.11128044_11128045del
+    - syntax: gnomad
+      value: 1-11128043-CAT-C
+  extensions:
+    - name: clinvar vcf
+      value: 1-11128043-CAT-C
+    - name: clinvar hgvs type
+      value: genomic, top-level    
+mappings:
+  - coding:
+      code: CA915941124
+      system: https://reg.clinicalgenome.org/
+    relation: closeMatch
+  - coding:
+      code: hg38/rs1570942058
+      system: https://varsome.com/variant/
+    relation: relatedMatch
+  - coding:
+      code: rs1570942058
+      system: https://www.ncbi.nlm.nih.gov/snp/
+    relation: relatedMatch
+members: 
+  - id: ga4gh:VA.PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
+    type: Allele      
+    digest: PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
+    label: 'NC_000001.11:11128043:AT:'
+    location: 
+      id: ga4gh:SL.5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
+      type: SequenceLocation
+      digest: 5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
+      start: 11128043
+      end: 11128045
+      sequenceReference: 
+        id: NC_000001.11
+        type: SequenceReference
+        refgetAccession: SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
+        residueAlphabet: na
+        extensions: 
+          - name: assembly
+            value: GRCh38
+          - name: chromosome
+            value: '1'
+    state: 
+      type: ReferenceLengthExpression
+      length: 0
+      repeatSubunitLength: 2
+      sequence: ''
+    expressions: 
+      - syntax: spdi
+        value: 'NC_000001.11:11128043:AT:'
+      - syntax: hgvs.g
+        value: NC_000001.11:g.11128044_11128045del
+      - syntax: gnomad
+        value: 1-11128043-CAT-C
+    extensions: 
+      - name: clinvar vcf
+        value: 1-11128043-CAT-C
+      - name: clinvar hgvs type
+        value: genomic, top-level        
+extensions: 
+  - name: cytogenetic location
+    value: 1p36.22
+  - name: clinvar variation type
+    value: Deletion
+  - name: clinvar subclass type
+    value: SimpleAllele      
+  - name: hgvs list
+    value:
+      - nucleotideExpression:
+          syntax: hgvs.g
+          value: NC_000001.11:g.11128044_11128045del
+        nucleotideType: genomic, top-level       
+      - nucleotideExpression:
+          syntax: hgvs.g
+          value: NC_000001.10:g.11188101_11188102del
+        nucleotideType: genomic
+      - nucleotideExpression:
+          syntax: hgvs.c
+          value: NM_004958.4:c.5992_5993del
+        nucleotideType: coding
+        maneSelect: true
+        proteinExpression:
+          syntax: hgvs.p
+          value: NP_004949.3:p.Met1998fs
+        molecularConsequence:
+          code: SO:0001589
+          system: http://www.sequenceontology.org/browser/current_release/term/
+          label: frameshift_variant
+      - nucleotideExpression:
+          syntax: hgvs.g
+          value: NG_033239.1:g.139507_139508del
+        nucleotideType: genomic
+      - nucleotideExpression:
+          syntax: hgvs.g
+          value: LRG_734:g.139507_139508del
+        nucleotideType: genomic
+      - nucleotideExpression:
+          syntax: hgvs.c
+          value: LRG_734t1:c.5992_5993del
+        nucleotideType: coding
+
+
+
+
+       
+        
+    
