@@ -49,9 +49,9 @@ Some CategoricalCnv attributes are inherited from :ref:`CategoricalVariation`.
           - 1..1
           - MUST be "CategoricalCnv"
        *  - location
-          - {'$ref': '../vrs/vrs.yaml#/$defs/Location'}
+          - `SequenceLocation <../vrs/vrs.yaml#/$defs/SequenceLocation>`_ | `IRI <../gks-common/common.yaml#/$defs/IRI>`_
           - 1..1
-          - A `VRS Location <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#location>`_ object that represents a sequence derived from that location, and is congruent with locations  on alternate reference sequences.
+          - A `VRS Location <https://vrs.ga4gh.org/en/2.x/concepts/location/SequenceLocation.html>`_ object that represents a sequence derived from that location, and is congruent with locations  on alternate reference sequences.
        *  - locationMatchCharacteristic
           - string
           - 0..1

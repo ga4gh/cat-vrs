@@ -1,0 +1,34 @@
+id: clinvar:151061
+type: CategoricalCnv
+label: GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3
+copies: 3
+location: 
+  type: SequenceLocation
+  start: [null, 5945462]
+  end: [6053792, null]
+  sequenceReference: 
+    id: NC_000007.13
+    type: SequenceReference
+    refgetAccession: SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
+    residueAlphabet: na
+extensions: 
+  - name: vrs processing errors
+    value: "NC_000007.14:g.(?_5905831)_(6014161_?)dup: char 26: expected one of '=', 'con', 'copy', 'del', 'dup', 'ins', or 'inv'"
+  - name: clinvar variation type
+    value: copy number gain
+  - name: clinvar subclass type
+    value: SimpleAllele
+  - name: cytogenetic location
+    value: 7p22.1
+  - name: hgvs list
+    value:
+      - nucleotideExpression:
+          syntax: hgvs.g
+          value: NC_000007.13:g.(?_5945462)_(6053792_?)dup
+        nucleotideType: genomic, top-level
+      - nucleotideExpression:
+          syntax: hgvs.g
+          value: NC_000007.12:g.(?_5911988)_(6020318_?)dup
+        nucleotideType: genomic
+    
+    

@@ -64,10 +64,15 @@
          "description": "MUST be \"CategoricalCnv\""
       },
       "location": {
-         "type": {
-            "$ref": "/ga4gh/schema/vrs/2.x/json/Location"
-         },
-         "description": "A [VRS Location](https://vrs.ga4gh.org/en/2.0/terms_and_model.html#location) object that represents a sequence derived from that location, and is congruent with locations  on alternate reference sequences."
+         "oneOf": [
+            {
+               "$ref": "/ga4gh/schema/gks-common/1.x/common/json/IRI"
+            },
+            {
+               "$ref": "/ga4gh/schema/vrs/2.x/json/SequenceLocation"
+            }
+         ],
+         "description": "A [VRS Location](https://vrs.ga4gh.org/en/2.x/concepts/location/SequenceLocation.html) object that represents a sequence derived from that location, and is congruent with locations  on alternate reference sequences."
       },
       "locationMatchCharacteristic": {
          "type": "string",
