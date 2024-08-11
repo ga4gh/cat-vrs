@@ -4,7 +4,7 @@ A representation of a categorically-defined domain for variation, in which indiv
 
     **Information Model**
     
-Some CategoricalVariation attributes are inherited from :ref:`gks.common:DomainEntity`.
+Some CategoricalVariation attributes are inherited from :ref:`gks.core-im:DomainEntity`.
 
     .. list-table::
        :class: clean-wrap
@@ -37,14 +37,14 @@ Some CategoricalVariation attributes are inherited from :ref:`gks.common:DomainE
           - 0..m
           - Alternative name(s) for the Entity.
        *  - extensions
-          - `Extension <../gks-common/common.json#/$defs/Extension>`_
+          - `Extension </ga4gh/schema/gks-common/1.x/data-types/json/Extension>`_
           - 0..m
           - A list of extensions to the entity. Extensions are not expected to be natively understood, but may be used for pre-negotiated exchange of message attributes between systems.
        *  - mappings
-          - `ConceptMapping <../gks-common/common.json#/$defs/ConceptMapping>`_
+          - `ConceptMapping </ga4gh/schema/gks-common/1.x/data-types/json/ConceptMapping>`_
           - 0..m
           - A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation.
        *  - members
-          - `Variation <../vrs/vrs.yaml#/$defs/Variation>`_ | `IRI <../gks-common/common.yaml#/$defs/IRI>`_
+          - `Variation </ga4gh/schema/vrs/2.x/json/Variation>`_ | `IRI </ga4gh/schema/gks-common/1.x/data-types/json/IRI>`_
           - 0..m
           - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.

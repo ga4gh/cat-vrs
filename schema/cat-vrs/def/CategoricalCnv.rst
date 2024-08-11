@@ -33,15 +33,15 @@ Some CategoricalCnv attributes are inherited from :ref:`CategoricalVariation`.
           - 0..m
           - Alternative name(s) for the Entity.
        *  - extensions
-          - `Extension <../gks-common/common.json#/$defs/Extension>`_
+          - `Extension </ga4gh/schema/gks-common/1.x/data-types/json/Extension>`_
           - 0..m
           - A list of extensions to the entity. Extensions are not expected to be natively understood, but may be used for pre-negotiated exchange of message attributes between systems.
        *  - mappings
-          - `ConceptMapping <../gks-common/common.json#/$defs/ConceptMapping>`_
+          - `ConceptMapping </ga4gh/schema/gks-common/1.x/data-types/json/ConceptMapping>`_
           - 0..m
           - A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation.
        *  - members
-          - `Variation <../vrs/vrs.yaml#/$defs/Variation>`_ | `IRI <../gks-common/common.yaml#/$defs/IRI>`_
+          - `Variation </ga4gh/schema/vrs/2.x/json/Variation>`_ | `IRI </ga4gh/schema/gks-common/1.x/data-types/json/IRI>`_
           - 0..m
           - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.
        *  - type
@@ -49,7 +49,7 @@ Some CategoricalCnv attributes are inherited from :ref:`CategoricalVariation`.
           - 1..1
           - MUST be "CategoricalCnv"
        *  - location
-          - `SequenceLocation <../vrs/vrs.yaml#/$defs/SequenceLocation>`_ | `IRI <../gks-common/common.yaml#/$defs/IRI>`_
+          - `SequenceLocation </ga4gh/schema/vrs/2.x/json/SequenceLocation>`_ | `IRI </ga4gh/schema/gks-common/1.x/data-types/json/IRI>`_
           - 1..1
           - A `VRS Location <https://vrs.ga4gh.org/en/2.x/concepts/location/SequenceLocation.html>`_ object that represents a sequence derived from that location, and is congruent with locations  on alternate reference sequences.
        *  - locationMatchCharacteristic
@@ -59,8 +59,8 @@ Some CategoricalCnv attributes are inherited from :ref:`CategoricalVariation`.
        *  - copyChange
           - string
           - 0..1
-          - A representation of the change in copies of a sequence in a system. MUST be one of "efo:0030069" (complete  genomic loss), "efo:0020073" (high-level loss), "efo:0030068" (low-level loss), "efo:0030067" (loss),  "efo:0030064" (regional base ploidy), "efo:0030070" (gain), "efo:0030071" (low-level gain), "efo:0030072"  (high-level gain).
+          - A representation of the change in copies of a sequence in a system. MUST be one of "EFO:0030069" (complete  genomic loss), "EFO:0020073" (high-level loss), "EFO:0030068" (low-level loss), "EFO:0030067" (loss),  "EFO:0030064" (regional base ploidy), "EFO:0030070" (gain), "EFO:0030071" (low-level gain), "EFO:0030072"  (high-level gain).
        *  - copies
-          - integer | `Range <../vrs/vrs.yaml#/$defs/Range>`_
+          - integer | `Range </ga4gh/schema/vrs/2.x/json/Range>`_
           - 0..1
           - The integral number of copies of the subject in a system.
