@@ -13,42 +13,204 @@ namespaces:
   gks.common: ../gks-common/common.yaml#/$defs/
 
 $defs:
-  # Categorical Variation are presented top-down. Everything rolls up to
-  # CategoricalVariation, which is a polymorphic abstraction of many kinds of
-  # categorical variation.
 
   # =============================================================================
-  # Top-level Categorical Variation concepts
+  # Constraint Model
   # =============================================================================
 
-  # CategoricalVariation:
-  #   inherits: gks.common:DomainEntity
-  #   description: >-
-  #     A representation of a categorically-defined domain for variation, in which individual 
-  #     contextual variation instances may be members of the domain.
-  #   oneOf:
-  #     - $ref: "#/$defs/CanonicalAllele"
-  #     - $ref: "#/$defs/CategoricalCnv"
-  #     - $ref: "#/$defs/DescribedVariation"
-  #     - $ref: "#/$defs/ProteinSequenceConsequence"
-  #   heritableProperties:
-  #     members:
-  #       type: array
-  #       ordered: false
-  #       description: >-
-  #         A non-exhaustive list of VRS variation contexts that satisfy the constraints of
-  #         this categorical variant.
-  #       items:
-  #         oneOf:
-  #           - $refCurie: vrs:Variation
-  #           - $refCurie: gks.common:IRI
-  #     constraints:
-  #       type: array
-  #       ordered: false
-  #       items:
-  #         $ref: "#/$defs/Constraint"
+  Constraint:
+    maturity: draft
+    type: object  # Maybe we don't want this for abstract class?
+    inherits: vrs:ValueObject  # ditto above
+    description: >-
+      Constraints are used to construct an intensional semantics of categorical variant types.
+    heritableProperties:
+      description:
+        extends: description
+        description: >-
+          A textual description of the domain of variation that should match the categorical 
+          variation entity.
+      label:
+        extends: label
+        description: >-
+            A primary label for the categorical variation. This required property should provide a 
+            short and descriptive textual representation of the concept.
+    required:
+      - label
 
-  # ProteinSequenceConsequence:
+  
+  definingContexConstraint:
+    maturity: draft
+    inherits: Constraint
+    description:
+      The location or location-state, congruent with other reference sequences, about which categorical variation is being described.
+    properties:
+      # type:   # Do I need this part?  I don't think so?
+      #   extends: type
+      #   const: definingContext
+      #   default: definingContext
+      #   description: 'MUST be "definingContext"'
+      definingContext:
+        oneOf:
+          - $refCurie: vrs:Location
+          - $refCurie: vrs:Allele
+      relations:
+        type: array
+        items:
+          # I think we need something here but I'm not sure what
+        description: >-
+          a way to represent coded relation concepts, e.g. "genome_liftover"
+      sequenceCollections:
+        type: array
+          items: $refCurie: gks.core:IRI
+    required:
+      - definingContext
+
+
+  copyConstraint:
+    maturity: draft
+    inherits: Constraint
+    description:
+      a quantitative change in copy number in a system
+    properties:
+      copies:
+        scale:
+          type: string
+          oneOf:
+            - absoluteCopyNumber
+            - foldChange
+            - log2Value
+        quantity:
+          oneOf:
+          - type: integer
+          - $refCurie: vrs:Range
+        threshold:
+          type: string
+          description: >-
+            limit above/below which a completely different label may apply, eg CNGain in a gene is considered amplification above a certain threshold per BMH technical lab standards
+        copyChange:
+          $refCurie: gks.data-types:Coding
+          description: >-
+            MUST be a `Coding` representing one of "EFO:0030069" (complete genomic loss), "EFO:0020073" (high-level loss),"EFO:0030068" (low-level loss), "EFO:0030067" (loss), "EFO:0030064" (regional base ploidy),"EFO:0030070" (gain), "EFO:0030071" (low-level gain), "EFO:0030072" (high-level gain).
+    required:
+      - copies
+
+
+
+
+  # =============================================================================
+  # Base CatVar object class
+  # =============================================================================
+
+
+  CategoricalVariant:
+    maturity: draft
+    type: object
+    inherits: gks.common:DomainEntity
+    description: >-
+      A representation of an intensionally-defined categorical domain for variation, in which individual 
+      contextual variation instances may be members of the domain.
+    properties:
+      type:
+        extends: type
+        const: CategoricalVariant
+        default: CategoricalVariant
+        description: 'MUST be "CategoricalVariant"'
+      id: #ref gks-common?
+        type: string
+        description: >-
+          The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE).
+      label:
+        extends: label
+        description: >-
+            A primary label for the categorical variation. This required property should provide a short and descriptive textual representation of the concept.
+      constraints:
+        type: array
+        items: #do we have to have a value here for JSON schema or just require it to be non-empty?
+      extensions:    # Are extensions still being used in current VRS? 
+        type: array
+        ordered: true
+        items:
+          $refCurie: gks.core:Extension
+        description: 
+          A list of extensions to the entity. Extensions are not expected to be natively understood, but may be used for pre-negotiated exchange of message attributes between systems.
+
+      mappings:
+        type: array
+        description: 
+          allowed mapping operations for this context
+          items: [$ref: coding] # ditto not sure what the items consist of
+      members:
+        type: array
+        ordered: false
+        description: >-
+          A non-exhaustive list of VRS variation contexts that satisfy the constraints of
+          this categorical variant.
+        items:
+          oneOf:
+            - $refCurie: vrs:Variation
+            - $refCurie: gks.common:IRI
+    required:
+      -id
+      -label
+      -constraints
+  
+
+  # =============================================================================
+  # Profile classes
+  # =============================================================================
+  # Profiles can be thought of as recipes for capturing specific common CatVars
+  # They do not exhaustively define all classes of CatVars under this schema
+
+
+
+  CanonicalAllele:
+    maturity: draft
+    inherits: CategoricalVariant
+    description: >-
+      A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>` 
+      that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid 
+      change on different underlying reference sequences. Congruent representations of an Allele often exist
+      across different genome assemblies and associated cDNA transcript representations.
+    type: object
+    properties:
+      # type:
+      #   extends: type
+      #   const: CanonicalAllele
+      #   default: CanonicalAllele
+      #   description: 'MUST be "CanonicalAllele"'
+      constraints:
+        INCLUDES: # I DON'T THINK THIS IS THE RIGHT METHOD, NOT SURE WHERE TO LOOK UP WHAT CORRECT METHOD IS?
+          definingContexConstraint
+    required:
+      - constraints
+
+  CategoricalCNV:
+    maturity: draft
+    inherits: CategoricalVariant
+    description: >-
+      description of CNVs
+    type: object
+    properties:
+      # type:
+      #   extends: type
+      #   const: CanonicalAllele
+      #   default: CanonicalAllele
+      #   description: 'MUST be "CanonicalAllele"'
+      constraints:
+        INCLUDES: # I DON'T THINK THIS IS THE RIGHT METHOD, NOT SURE WHERE TO LOOK UP WHAT CORRECT METHOD IS?
+          copyConstraint
+    required:
+      - constraints
+
+
+
+  # =============================================================================
+  # Old stuff (to delete when we're ready to merge)
+  # =============================================================================
+
+
+ # ProteinSequenceConsequence:
   #   maturity: draft
   #   type: object
   #   inherits: CategoricalVariation
@@ -72,31 +234,6 @@ $defs:
   #         The `VRS Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#allele>`_
   #         object that is congruent with (projects to the same codons) as alleles on other protein reference 
   #         sequences.
-  #   required:
-  #     - definingContext
-
-  # CanonicalAllele:
-  #   maturity: draft
-  #   inherits: CategoricalVariation
-  #   description: >-
-  #     A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>` 
-  #     that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid 
-  #     change on different underlying reference sequences. Congruent representations of an Allele often exist
-  #     across different genome assemblies and associated cDNA transcript representations.
-  #   type: object
-  #   properties:
-  #     type:
-  #       extends: type
-  #       const: CanonicalAllele
-  #       default: CanonicalAllele
-  #       description: 'MUST be "CanonicalAllele"'
-  #     definingContext:
-  #       oneOf:
-  #         - $refCurie: vrs:Allele
-  #         - $refCurie: gks.common:IRI
-  #       description: >-
-  #         The `VRS Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#allele>`_
-  #         object that is congruent with variants on alternate reference sequences.
   #   required:
   #     - definingContext
 
@@ -150,199 +287,6 @@ $defs:
   #         The integral number of copies of the subject in a system.
   #   required:
   #     - location
-
-  # DescribedVariation:
-  #   maturity: draft
-  #   type: object
-  #   inherits: CategoricalVariation
-  #   description: >-
-  #     Some categorical variation concepts are supported by custom nomenclatures or text-descriptive
-  #     representations for which a categorical variation model does not exist. DescribedVariation is
-  #     a class that adds requirements and contextual semantics to the `label` and `description` fields
-  #     to indicate how a categorical variation concept should be evaluated for matching variants.
-  #   properties:
-  #     type:
-  #       extends: type
-  #       const: DescribedVariation
-  #       default: DescribedVariation
-  #       description: 'MUST be "DescribedVariation"'
-  #     label:
-  #       extends: label
-  #       description: >-
-  #         A primary label for the categorical variation. This required property should provide a 
-  #         short and descriptive textual representation of the concept.
-  #     description:
-  #       extends: description
-  #       description: >-
-  #         A textual description of the domain of variation that should match the categorical 
-  #         variation entity.
-  #   required:
-  #     - label
-
-
-  # An example class that means nothing but is being use to suss out how the metaschema processor works
-
-  # PrescribedDerision:
-  #   maturity: draft
-  #   type: object
-  #   inherits: CategoricalVariation
-  #   description: >-
-  #     Some categorical variation concepts are supported by custom nomenclatures or text-descriptive
-  #     representations for which a categorical variation model does not exist. PrescribedDerision is
-  #     a class that adds requirements and contextual semantics to the `label` and `description` fields
-  #     to indicate how a categorical variation concept should be evaluated for matching variants.
-  #   properties:
-  #     label:
-  #       extends: label
-  #       description: >-
-  #         A primary label for the categorical variation. This required property should provide a 
-  #         short and descriptive textual representation of the concept.
-  #     description:
-  #       extends: description
-  #       description: >-
-  #         A textual description of the domain of variation that should match the categorical 
-  #         variation entity.
-  #   required:
-  #     - label
-
-
-  # =============================================================================
-  # Constraint Model
-  # =============================================================================
-
-
-  CategoricalVariant:
-    maturity: draft
-    type: object
-    inherits: gks.common:DomainEntity
-    description: >-
-      A representation of an intensionally-defined categorical domain for variation, in which individual 
-      contextual variation instances may be members of the domain.
-    properties:
-      type:
-        extends: type
-        const: CategoricalVariant
-        default: CategoricalVariant
-        description: 'MUST be "CategoricalVariant"'
-      id: #ref gks-common?
-        type: string
-        description: >-
-          The 'logical' identifier of the entity in the system of record, e.g. a UUID. This 'id' is unique within a given system. The identified entity may have a different 'id' in a different  system, or may refer to an 'id' for the shared concept in another system (e.g. a CURIE).
-      label:
-        extends: label
-        description: >-
-            A primary label for the categorical variation. This required property should provide a short and descriptive textual representation of the concept.
-      constraints:
-        type: array
-        items:
-          definingContext:
-            maturity: draft
-            # type: object  # Not sure if this is required/allowed, so I've commented it out.
-            description:
-              The location or location-state, congruent with other reference sequences, about which categorical variation is being described.
-            properties:
-              type:
-                extends: type
-                const: definingContext
-                default: definingContext
-                description: 'MUST be "definingContext"'
-              subject:
-                oneOf:
-                  - $refCurie: vrs:Location
-                  - $refCurie: vrs:Allele
-                  - $refCurie: gks.core:IRI
-              relations:
-                type: array
-                items:
-                  # I think we need something here but I'm not sure what
-                description: 
-      extensions:    # Are extensions still being used in current VRS? 
-        type: array
-        ordered: true
-        items:
-          $refCurie: gks.core:Extension
-        description: 
-          A list of extensions to the entity. Extensions are not expected to be natively understood, but may be used for pre-negotiated exchange of message attributes between systems.
-
-      mappings:
-        type: array
-        description: 
-          allowed mapping operations for this context
-          items: [$ref: coding] # ditto not sure what the items consist of
-      members:
-        type: array
-        ordered: false
-        description: >-
-          A non-exhaustive list of VRS variation contexts that satisfy the constraints of
-          this categorical variant.
-        items:
-          oneOf:
-            - $refCurie: vrs:Variation
-            - $refCurie: gks.common:IRI
-    required:
-      -id
-      -label
-  
-
-  # Constraint:
-  #   maturity: draft
-  #   type: object
-  #   inherits: vrs:ValueObject
-  #   description: >-
-  #     Constraints are used to construct and intensional semantics of categorical variant types.
-  #   properties:
-  #     description:
-  #       extends: description
-  #       description: >-
-  #         A textual description of the domain of variation that should match the categorical 
-  #         variation entity.
-  #     label:
-  #       extends: label
-  #       description: >-
-  #           A primary label for the categorical variation. This required property should provide a 
-  #           short and descriptive textual representation of the concept.
-  #   required:
-  #     - label
-
-
-
-  # definingContext:
-  #   maturity: draft
-  #   type: object
-  #   description:
-  #     The location or location-state, congruent with other reference sequences, about which
-  #     categorical variation is being described.
-  #   inherits: Constraint
-  #   properties:
-  #     subject:
-  #       oneOf:
-  #         - $refCurie: vrs:Location
-  #         - $refCurie: vrs:Allele
-  #         - $refCurie: gks.core:IRI
-  #   mappingOperations:
-  #     description: allowed mapping operations for this context
-  #     type: array
-  #       # items: [$ref: coding]
-
-
-  # =============================================================================
-  # Profiles
-  # =============================================================================
-  #
-  # Profiles can be thought of as recipes for capturing specific common CatVars
-  # They do not exhaustively define all classes of CatVars under this schema
-
-
-
-# CategoricalCNV:
-#   all of:
-#     -ref: CatVar
-#     -prop:
-#       constraints:
-#         items:
-#           all Of:
-#             defining context
-#             -copy Change  
 
 
 
@@ -405,178 +349,3 @@ $defs:
   #     - definingContext
 
 
-  NumberCount:
-    maturity: draft
-    # ga4ghDigest:
-    #   keys:
-    #     - numberCount
-    type: object
-    inherits: CategoricalVariation
-    description: >-
-      The absolute count of a discrete assayable unit (e.g. chromosome, gene, or sequence).
-    properties:
-      type:
-        type: string
-        const: "NumberCount"
-        default: "NumberCount"
-        description: >-
-          MUST be "NumberCount"
-      count:
-        oneOf:
-          - type: integer
-          - $refCurie: vrs:Range
-        description: >-
-          The integral quantity or quantity range of the subject in a system
-    required: [ "count" ]
-
-
-  # NumberChange:
-  #   maturity: draft
-  #   # ga4ghDigest:
-  #   #   keys:
-  #   #     - numberChange
-  #   #   prefix: CX
-  #   type: object
-  #   description: >-
-  #     A quantitative assessment of a unit within a system (e.g. genome, cell,
-  #     etc.) relative to a baseline quantity.
-  #   properties:
-  #     type:
-  #       type: string
-  #       const: "NumberChange"
-  #       default: "NumberChange"
-  #       description: >-
-  #         MUST be "NumberChange"
-  #     change:
-  #       oneOf:
-  #         - type: integer
-  #         - $refCurie: vrs:Range
-  #         - copyChange:
-  #           type: string
-  #           enum: [ "efo:0030069", "efo:0020073", "efo:0030068", "efo:0030067", "efo:0030064", "efo:0030070",
-  #                   "efo:0030071", "efo:0030072" ]
-  #       description: >-
-  #         a quantitative or qualitative value of the measurement with respect to a baseline (0). 
-  #         If qualitative, must be one of "efo:0030069" (complete genomic loss), "efo:0020073" (high-level loss),
-  #         "efo:0030068" (low-level loss), "efo:0030067" (loss), "efo:0030064" (regional base ploidy),
-  #         "efo:0030070" (gain), "efo:0030071" (low-level gain), "efo:0030072" (high-level gain).
-  #       required: [ "change" ]
-
-  # QuantityVariance:
-  #   maturity: draft
-  #   type: object
-  #   # inherits: NumberCount
-  #   description: >-
-  #     The Quantity Variance class captures one axis of variation in the generalized model of categorical
-  #     variation.  It is used to model quantitative measure changes in a given biological level of
-  #     variation.
-  #   properties:
-  #     type:
-  #       type: string
-  #       const: QuantityVariance
-  #       default: QuantityVariance
-  #       description: 'MUST be "QuantityVariance"'
-  #     # label:
-  # #       extends: label
-  # #       description: >-
-  # #         A primary label for the quantity variant. This required property should provide a 
-  # #         short and descriptive textual representation of the concept.
-  # #     description:
-  # #       extends: description
-  # #       description: >-
-  # #         A textual description of the domain of variation that should match the categorical 
-  # #         variation entity.
-  # #     locationMatchCharacteristic:
-  # #       type: string
-  # #       enum: ['exact', 'partial', 'subinterval', 'superinterval']
-  # #       description: >-
-  # #         The characteristics of a valid match between a contextual CNV location (the query) and the 
-  # #         Categorical CNV location (the domain), when both query and domain are represented on the same 
-  # #         reference sequence. An `exact` match requires the location of the query and domain to be identical. 
-  # #         A `subinterval` match requires the query to be a subinterval of the domain. A `superinterval` match
-  # #         requires the query to be a superinterval of the domain. A `partial` match requires at least 1 residue
-  # #         of overlap between the query and domain.
-  # #     copyChange:
-  # #       type: string
-  # #       enum: [ "efo:0030069", "efo:0020073", "efo:0030068", "efo:0030067", "efo:0030064", "efo:0030070", "efo:0030071", "efo:0030072" ]
-  # #       description: >-
-  # #         A representation of the change in copies of a sequence in a system. MUST be one of "efo:0030069" (complete 
-  # #         genomic loss), "efo:0020073" (high-level loss), "efo:0030068" (low-level loss), "efo:0030067" (loss), 
-  # #         "efo:0030064" (regional base ploidy), "efo:0030070" (gain), "efo:0030071" (low-level gain), "efo:0030072" 
-  # #         (high-level gain).
-  # #     copies:
-  # #       oneOf:
-  # #         - type: integer
-  # #         - $refCurie: vrs:Range
-  # #       description: >-
-  # #         The integral number of copies of the subject in a system.
-  # #   required:
-  # #     - label
-
-
-  # # Categorical Variation is presented top-down. Everything rolls up to
-  # # CategoricalVariant, is composed of one or several level variants, 
-  # # each of which is in turn associated with a biological level of 
-  # # variation, and relevant properties to intensionally define set
-  # # membership.
-
-
-#  CanonicalLocation:
-#    inherits: Constraint
-#    type: object
-#    properties:
-#      type:
-#        type: string
-#        const: "CanonicalLocation"
-#      definingContext:
-#        type:
-#          $refCurie: vrs:Location
-#        description: >-
-#          The `VRS Location <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#location>`_
-#          object describing the location range for the categorical variant.
-#      matchCharacteristic:
-#        type: string
-#        enum:
-#          - exact
-#          - partial
-#          - complete
-
-
-  # GeneContext:
-  #   inherits: Constraint
-  #   type: object
-  #   properties:
-  #     type:
-  #       type: string
-  #       const: "GeneContext"
-  #     definingGene:
-  #       description: >-
-  #         The gene context for which variants must be evaluated.
-
-
-  # ComplexVariation:
-  #   type: object
-  #   inherits: CategoricalVariation
-  #   description: >-
-  #     A categorical variation domain jointly characterized by two or more other categorical 
-  #     variation domains.
-  #   properties:
-  #     type:
-  #       type: string
-  #       description: MUST be "ComplexVariation".
-  #       const: ComplexVariation
-  #     operands:
-  #       type: array
-  #       ordered: false
-  #       items:
-  #         $ref: "#/$defs/CategoricalVariation"
-  #       minItems: 2
-  #       description: >-
-  #         The :ref:`CategoricalVariation` objects that are being evaluated collectively.
-  #     operator:
-  #       type: string
-  #       enum: ["AND", "OR"]
-  #       description: >-
-  #         The logical operation applied to evaluating the object *operands*. MUST
-  #         be "AND" or "OR".
-  #   required: ["operands", "operator"]
