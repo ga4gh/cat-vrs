@@ -7,7 +7,7 @@
 
 ## Using the schema
 
-The schema is available in the [schema/](./schema/) directory, in both reStructuredTex
+The schema is available in the [schema/](./schema/) directory, in both reStructuredText
 (RST) and JSON versions. It conforms to JSON Schema Draft 2020-12. For a list of
 libraries that support JSON schema, see
 [JSONSchema>Implementations](https://json-schema.org/tools).
