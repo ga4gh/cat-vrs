@@ -7,7 +7,8 @@
 
 ## Using the schema
 
-The schema is available in the [schema/](./schema/) directory, in both yaml and json versions. It conforms to JSON Schema Draft 2020-12. For a list of
+The schema is available in the [schema/](./schema/) directory, in both yaml and json versions. 
+It conforms to JSON Schema Draft 2020-12. For a list of
 libraries that support JSON schema, see
 [JSONSchema>Tools](https://json-schema.org/tools).
 
