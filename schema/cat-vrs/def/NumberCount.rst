@@ -20,6 +20,6 @@ The absolute count of a discrete assayable unit (e.g. chromosome, gene, or seque
       - 0..1
       - MUST be "NumberCount"
    *  - count
-      - integer | `Range </ga4gh/schema/vrs/2.x/json/Range>`_
+      - integer | :ref:`Range`
       - 1..1
       - The integral quantity or quantity range of the subject in a system

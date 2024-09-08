@@ -20,6 +20,7 @@ $defs:
 
   CategoricalVariation:
     inherits: gks.core-im:DomainEntity
+    maturity: draft
     description: >-
       A representation of a categorically-defined domain for variation, in which individual 
       contextual variation instances may be members of the domain.
@@ -41,9 +42,9 @@ $defs:
             - $ref: "/ga4gh/schema/gks-common/1.x/data-types/json/IRI"
 
   ProteinSequenceConsequence:
-    maturity: draft
     type: object
     inherits: CategoricalVariation
+    maturity: draft
     description: >-
       A change that occurs in a protein sequence as a result of genomic changes. Due to the degenerate nature
       of the genetic code, there are often several genomic changes that can cause a protein sequence consequence.
@@ -68,8 +69,8 @@ $defs:
       - definingContext
 
   CanonicalAllele:
-    maturity: draft
     inherits: CategoricalVariation
+    maturity: draft
     description: >-
       A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>` 
       that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid 
@@ -93,9 +94,9 @@ $defs:
       - definingContext
 
   CategoricalCnv:
-    maturity: draft
     type: object
     inherits: CategoricalVariation
+    maturity: draft
     description: >-
       A categorical variation domain is defined first by a sequence derived from a canonical `Location 
       <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#Location>`_ , which is representative of 
@@ -145,9 +146,9 @@ $defs:
       - location
 
   DescribedVariation:
-    maturity: draft
     type: object
     inherits: CategoricalVariation
+    maturity: draft
     description: >-
       Some categorical variation concepts are supported by custom nomenclatures or text-descriptive
       representations for which a categorical variation model does not exist. DescribedVariation is
@@ -221,12 +222,12 @@ $defs:
 
 
   NumberCount:
-    maturity: draft
     # ga4ghDigest:
     #   keys:
     #     - numberCount
     type: object
     # inherits: QuantityVariance
+    maturity: draft
     description: >-
       The absolute count of a discrete assayable unit (e.g. chromosome, gene, or sequence).
     properties:
@@ -246,12 +247,12 @@ $defs:
 
 
   NumberChange:
-    maturity: draft
     # ga4ghDigest:
     #   keys:
     #     - numberChange
     #   prefix: CX
     type: object
+    maturity: draft
     description: >-
       A quantitative assessment of a unit within a system (e.g. genome, cell,
       etc.) relative to a baseline quantity.
@@ -278,9 +279,9 @@ $defs:
         required: [ "change" ]
 
   QuantityVariance:
-    maturity: draft
     type: object
     # inherits: NumberCount
+    maturity: draft
     description: >-
       The Quantity Variance class captures one axis of variation in the generalized model of categorical
       variation.  It is used to model quantitative measure changes in a given biological level of
@@ -340,6 +341,7 @@ $defs:
 
   CategoricalVariant:
     inherits: gks.core-im:DomainEntity
+    maturity: draft
     description: >-
       A top-level representation of a categorically-defined domain for variation across one or multiple biological levels in which individual contextual variants may be members of the domain.
     # type: object
