@@ -37,15 +37,12 @@ $defs:
         items:
           oneOf:
             - $ref: /ga4gh/schema/vrs/2.x/json/Variation
-            - $ref: /ga4gh/schema/gks-common/1.x/json/IRI
+            - $ref: /ga4gh/schema/gks-common/1.x/data-types/json/IRI
       constraints:
         type: array
         ordered: false
         items:
           $ref: "#/$defs/Constraint"
-        minItems: 1
-    required:
-      - constraints
 
   # =============================================================================
   # Constraint Definitions
@@ -53,11 +50,15 @@ $defs:
 
   Constraint:
     maturity: draft
-    inherits: gks.core-im:DomainEntity
     description: >-
       Constraints are used to construct an intensional semantics of categorical variant types.
     oneOf:
       - $ref: "#/$defs/DefiningContextConstraint"
+    heritableProperties:
+      type:
+        type: string
+    heritableRequired:
+      - type
 
   DefiningContextConstraint:
     maturity: draft
@@ -76,7 +77,7 @@ $defs:
         oneOf:
           - $ref: /ga4gh/schema/vrs/2.x/json/Variation
           - $ref: /ga4gh/schema/vrs/2.x/json/Location
-          - $ref: /ga4gh/schema/gks-common/1.x/json/IRI
+          - $ref: /ga4gh/schema/gks-common/1.x/data-types/json/IRI
       relations:
         type: array
         ordered: false
@@ -93,3 +94,39 @@ $defs:
           refers to variants or locations that translate from the codon(s) represented by the defined concept.
     required:
       - definingContext
+
+  # CopyNumberConstraint:
+  #   maturity: draft
+  #   inherits: Constraint
+  #   description:
+  #     The absolute number of copies in a system
+  #   properties:
+  #     type:
+  #       extends: type
+  #       const: CopyNumberConstraint
+  #       default: CopyNumberConstraint
+  #       description: 'MUST be "CopyNumberConstraint"'
+  #     copies:
+  #       type:
+  #         oneOf:
+  #         - type: integer
+  #         - $ref: /ga4gh/schema/vrs/2.x/json/Range
+  #   required:
+  #     - copies
+
+  # CopyChangeConstraint:
+  #   maturity: draft
+  #   inherits: Constraint
+  #   description:
+  #     A representation of copy number change
+  #   properties:
+  #     type:
+  #       extends: type
+  #       const: CopyNumberConstraint
+  #       default: CopyNumberConstraint
+  #       description: 'MUST be "CopyNumberConstraint"'
+  #     copyChange:
+  #       type:
+  #         $ref: 
+  #   required:
+  #     - copies

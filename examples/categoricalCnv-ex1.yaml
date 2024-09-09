@@ -1,7 +1,10 @@
 id: clinvar:151061
 type: CategoricalCnv
 label: GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3
-copies: 3
+constraints:
+# copies: 3
+
+
 location: 
   type: SequenceLocation
   start: [null, 5945462]

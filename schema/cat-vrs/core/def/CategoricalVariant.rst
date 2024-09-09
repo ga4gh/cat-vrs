@@ -50,5 +50,5 @@ Some CategoricalVariant attributes are inherited from :ref:`gks.core-im:DomainEn
       - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.
    *  - constraints
       - :ref:`Constraint`
-      - 1..m
+      - 0..m
       - 

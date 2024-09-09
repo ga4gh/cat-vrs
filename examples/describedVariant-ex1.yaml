@@ -1,6 +1,6 @@
 id: clinvar:1177130
 label: t(2;15)(q23.1;q25.3)
-type: DescribedVariation
+type: CategoricalVariant
 extensions: 
   - name: cytogenetic location
     value: 2q23.1-23.2
