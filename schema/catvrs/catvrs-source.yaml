@@ -59,9 +59,6 @@ $defs:
           # I think we need something here but I'm not sure what
         description: >-
           a way to represent coded relation concepts, e.g. "genome_liftover"
-      sequenceCollections:
-        type: array
-          items: $refCurie: gks.core:IRI
     required:
       - definingContext
 
