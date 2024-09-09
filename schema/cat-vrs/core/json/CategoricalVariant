@@ -72,6 +72,12 @@
          "items": {
             "oneOf": [
                {
+                  "$ref": "/ga4gh/schema/cat-vrs/1.x/core/json/CopyChangeConstraint"
+               },
+               {
+                  "$ref": "/ga4gh/schema/cat-vrs/1.x/core/json/CopyCountConstraint"
+               },
+               {
                   "$ref": "/ga4gh/schema/cat-vrs/1.x/core/json/DefiningContextConstraint"
                }
             ]

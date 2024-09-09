@@ -2,8 +2,11 @@ id: clinvar:151061
 type: CategoricalVariant
 label: GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3
 constraints:
-  - type: CopyCountConstraint
-    copies: 3
+  - type: CopyChangeConstraint
+    copyChange:
+      system: https://www.ebi.ac.uk/ols4/search?ontology=efo&q=
+      code: EFO:0030070
+      label: Copy Number Gain
   - type: DefiningContextConstraint
     definingContext:
       type: SequenceLocation

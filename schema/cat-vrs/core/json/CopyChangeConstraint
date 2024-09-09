@@ -1,0 +1,40 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.x/core/json/CopyChangeConstraint",
+   "title": "CopyChangeConstraint",
+   "type": "object",
+   "maturity": "draft",
+   "description": "A representation of copy number change",
+   "properties": {
+      "type": {
+         "type": "string",
+         "const": "CopyChangeConstraint",
+         "default": "CopyChangeConstraint",
+         "description": "MUST be \"CopyChangeConstraint\""
+      },
+      "copyChange": {
+         "$ref": "/ga4gh/schema/gks-common/1.x/data-types/json/Coding",
+         "items": {
+            "properties": {
+               "code": {
+                  "enum": [
+                     "EFO:0030069",
+                     "EFO:0020073",
+                     "EFO:0030068",
+                     "EFO:0030067",
+                     "EFO:0030064",
+                     "EFO:0030070",
+                     "EFO:0030071",
+                     "EFO:0030072"
+                  ]
+               }
+            }
+         }
+      }
+   },
+   "required": [
+      "copyChange",
+      "type"
+   ],
+   "additionalProperties": false
+}

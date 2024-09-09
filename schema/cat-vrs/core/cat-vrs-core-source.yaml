@@ -54,6 +54,8 @@ $defs:
       Constraints are used to construct an intensional semantics of categorical variant types.
     oneOf:
       - $ref: "#/$defs/DefiningContextConstraint"
+      - $ref: "#/$defs/CopyCountConstraint"
+      - $ref: "#/$defs/CopyChangeConstraint"
     heritableProperties:
       type:
         type: string
@@ -95,38 +97,50 @@ $defs:
     required:
       - definingContext
 
-  # CopyNumberConstraint:
-  #   maturity: draft
-  #   inherits: Constraint
-  #   description:
-  #     The absolute number of copies in a system
-  #   properties:
-  #     type:
-  #       extends: type
-  #       const: CopyNumberConstraint
-  #       default: CopyNumberConstraint
-  #       description: 'MUST be "CopyNumberConstraint"'
-  #     copies:
-  #       type:
-  #         oneOf:
-  #         - type: integer
-  #         - $ref: /ga4gh/schema/vrs/2.x/json/Range
-  #   required:
-  #     - copies
+  CopyCountConstraint:
+    maturity: draft
+    inherits: Constraint
+    type: object
+    description:
+      The absolute number of copies in a system
+    properties:
+      type:
+        extends: type
+        const: CopyCountConstraint
+        default: CopyCountConstraint
+        description: 'MUST be "CopyCountConstraint"'
+      copies:
+        oneOf:
+          - type: integer
+          - $ref: /ga4gh/schema/vrs/2.x/json/Range
+    required:
+      - copies
 
-  # CopyChangeConstraint:
-  #   maturity: draft
-  #   inherits: Constraint
-  #   description:
-  #     A representation of copy number change
-  #   properties:
-  #     type:
-  #       extends: type
-  #       const: CopyNumberConstraint
-  #       default: CopyNumberConstraint
-  #       description: 'MUST be "CopyNumberConstraint"'
-  #     copyChange:
-  #       type:
-  #         $ref: 
-  #   required:
-  #     - copies
+  CopyChangeConstraint:
+    maturity: draft
+    inherits: Constraint
+    type: object
+    description:
+      A representation of copy number change
+    properties:
+      type:
+        extends: type
+        const: CopyChangeConstraint
+        default: CopyChangeConstraint
+        description: 'MUST be "CopyChangeConstraint"'
+      copyChange:
+        $ref: /ga4gh/schema/gks-common/1.x/data-types/json/Coding
+        items:
+          properties:
+            code:
+              enum: 
+                - EFO:0030069
+                - EFO:0020073
+                - EFO:0030068
+                - EFO:0030067
+                - EFO:0030064
+                - EFO:0030070
+                - EFO:0030071
+                - EFO:0030072
+    required:
+      - copyChange
