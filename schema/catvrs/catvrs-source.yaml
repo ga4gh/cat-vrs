@@ -35,8 +35,7 @@ $defs:
         description: >-
             A primary label for the categorical variation. This required property should provide a 
             short and descriptive textual representation of the concept.
-    required:
-      - label
+
 
   
   definingContexConstraint:
