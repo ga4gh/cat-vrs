@@ -1,6 +1,6 @@
 **Computational Definition**
 
-A representation of a categorically-defined domain for variation, in which individual  contextual variation instances may be members of the domain.
+A representation of a categorically-defined domain for variation, in which individual contextual variation instances may be members of the domain.
 
 **Information Model**
 

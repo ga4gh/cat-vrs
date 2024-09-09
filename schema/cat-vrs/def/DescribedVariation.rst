@@ -43,8 +43,8 @@ Some DescribedVariation attributes are inherited from :ref:`CategoricalVariation
    *  - label
       - string
       - 1..1
-      - A primary label for the categorical variation. This required property should provide a  short and descriptive textual representation of the concept.
+      - A primary label for the categorical variation. This required property should provide a short and descriptive textual representation of the concept.
    *  - description
       - string
       - 0..1
-      - A textual description of the domain of variation that should match the categorical  variation entity.
+      - A textual description of the domain of variation that should match the categorical variation entity.

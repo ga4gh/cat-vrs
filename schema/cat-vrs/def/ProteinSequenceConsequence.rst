@@ -1,6 +1,6 @@
 **Computational Definition**
 
-A change that occurs in a protein sequence as a result of genomic changes. Due to the degenerate nature of the genetic code, there are often several genomic changes that can cause a protein sequence consequence. The protein sequence consequence, like a :ref:`CanonicalAllele`, is defined by an `Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#variation>` that is representative of a collection of congruent Protein Alleles that share the same altered codon(s).
+A change that occurs in a protein sequence as a result of genomic changes. Due to the degenerate nature of the genetic code, there are often several genomic changes that can cause a protein sequence consequence. The protein sequence consequence, like a :ref:`CanonicalAllele`, is defined by an `Allele <https://vrs.ga4gh.org/en/2.0.0-ballot.2024-08/concepts/MolecularVariation/Allele.html#>` that is representative of a collection of congruent Protein Alleles that share the same altered codon(s).
 
 **Information Model**
 
@@ -51,4 +51,4 @@ Some ProteinSequenceConsequence attributes are inherited from :ref:`CategoricalV
    *  - definingContext
       - :ref:`Allele` | :ref:`IRI`
       - 1..1
-      - The `VRS Allele <https://vrs.ga4gh.org/en/2.0/terms_and_model.html#allele>`_ object that is congruent with (projects to the same codons) as alleles on other protein reference  sequences.
+      - The `Allele <https://vrs.ga4gh.org/en/2.0.0-ballot.2024-08/concepts/MolecularVariation/Allele.html#>`_ object that is congruent with (projects to the same codons) as alleles on other protein reference sequences.
