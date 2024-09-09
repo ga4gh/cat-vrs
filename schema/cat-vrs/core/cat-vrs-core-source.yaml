@@ -1,0 +1,101 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.x/cat-vrs-core-source.yaml"
+title: GA4GH-Cat-VRS-Definitions
+type: object
+strict: true
+
+imports:
+  gks.core-im: ../../core-im/core-im-source.yaml
+  gks.data-types: ../../data-types/data-types-source.yaml
+  vrs: ../../vrs/vrs-source.yaml
+
+$defs:
+
+  # =============================================================================
+  # Top-level Categorical Variant concept
+  # =============================================================================
+
+  CategoricalVariant:
+    inherits: gks.core-im:DomainEntity
+    maturity: draft
+    description: >-
+      A representation of a categorically-defined domain for variation, in which individual
+      contextual variation instances may be members of the domain.
+    properties:
+      type:
+        extends: type
+        const: CategoricalVariant
+        default: CategoricalVariant
+        description: 'MUST be "CategoricalVariant"'
+      members:
+        type: array
+        ordered: false
+        description: >-
+          A non-exhaustive list of VRS variation contexts that satisfy the constraints of
+          this categorical variant.
+        items:
+          oneOf:
+            - $ref: "/ga4gh/schema/vrs/2.x/json/Variation"
+            - $ref: "/ga4gh/schema/gks-common/1.x/json/IRI"
+      constraints:
+        type: array
+        ordered: false
+        items:
+          $ref: "#/$defs/Constraint"
+        minItems: 1
+    required:
+      - constraints
+
+  # =============================================================================
+  # Constraint Definitions
+  # =============================================================================
+
+  Constraint:
+    maturity: draft
+    inherits: gks.core-im:DomainEntity
+    description: >-
+      Constraints are used to construct an intensional semantics of categorical variant types.
+    oneOf:
+      - $ref: "#/$defs/DefiningContextConstraint"
+    heritableProperties:
+      description:
+        extends: description
+        description: >-
+          A textual description of the domain of variation that should match the categorical 
+          variation entity.
+      label:
+        extends: label
+        description: >-
+            A primary label for the categorical variation. This required property should provide a 
+            short and descriptive textual representation of the concept.
+
+  DefiningContextConstraint:
+    maturity: draft
+    inherits: Constraint
+    description:
+      The location or location-state, congruent with other reference sequences, about which categorical variation is being described.
+    properties:
+      type:
+        extends: type
+        const: DefiningContextConstriant
+        default: DefiningContextConstriant
+        description: 'MUST be "DefiningContextConstriant"'
+      definingContext:
+        oneOf:
+          - $refCurie: vrs:Location
+          - $refCurie: vrs:Allele
+      relations:
+        type: array
+        items:
+          enum:
+            - sequence_liftover
+            - transcript_projection
+            - codon_translation
+        description: >-
+          Defined relationshis between members of the categorical variant and the defining context.
+          ``sequence_liftover`` refers to variants or locations that represent a congruent concept on a differing assembly of a
+          human genome (e.g. "GRCh37" and "GRCh38") or gene (e.g. Locus Reference Genomic) sequence. ``transcript_projection`` 
+          refers to variants or locations that occur on transcripts projected from the defined genomic concept. ``codon_translation`` 
+          refers to variants or locations that translate from the codon(s) represented by the defined concept.
+    required:
+      - definingContext
