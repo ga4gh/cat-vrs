@@ -4,7 +4,7 @@
    "title": "CategoricalCnv",
    "type": "object",
    "maturity": "draft",
-   "description": "A categorical variation domain is defined first by a sequence derived from a canonical [SequenceLocation](https://vrs.ga4gh.org/en/2.0.0-ballot.2024-08/concepts/LocationAndReference/SequenceLocation.html) , which is representative of a collection of congruent Locations. The change or count of this sequence is also described, either by a numeric value (e.g. \"3 or more copies\") or categorical representation (e.g. \"high-level gain\"). Categorical CNVs may optionally be defined by rules specifying the location match characteristics for member CNVs.",
+   "description": "A categorical variation domain is defined first by a sequence derived from a canonical [SequenceLocation](https://vrs.ga4gh.org/en/2.x/concepts/LocationAndReference/SequenceLocation.html) , which is representative of a collection of congruent Locations. The change or count of this sequence is also described, either by a numeric value (e.g. \"3 or more copies\") or categorical representation (e.g. \"high-level gain\"). Categorical CNVs may optionally be defined by rules specifying the location match characteristics for member CNVs.",
    "properties": {
       "id": {
          "type": "string",
@@ -31,7 +31,7 @@
          "type": "array",
          "ordered": false,
          "items": {
-            "$ref": "/ga4gh/schema/gks-common/1.0.0-ballot.2024.08.1/data-types/json/Extension"
+            "$ref": "/ga4gh/schema/gks-common/1.x/data-types/json/Extension"
          },
          "description": "A list of extensions to the Entity, that allow for capture of information not directly supported by elements defined in the model.",
          "$comment": "Extension objects have a key-value data structure that allows definition of custom fields in the data itself. Extensions are not expected to be natively understood, but may be used for pre-negotiated exchange of message attributes between systems."
@@ -40,7 +40,7 @@
          "type": "array",
          "ordered": false,
          "items": {
-            "$ref": "/ga4gh/schema/gks-common/1.0.0-ballot.2024.08.1/data-types/json/ConceptMapping"
+            "$ref": "/ga4gh/schema/gks-common/1.x/data-types/json/ConceptMapping"
          },
          "description": "A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation."
       },
@@ -51,10 +51,10 @@
          "items": {
             "oneOf": [
                {
-                  "$ref": "/ga4gh/schema/gks-common/1.0.0-ballot.2024.08.1/data-types/json/IRI"
+                  "$ref": "/ga4gh/schema/gks-common/1.x/data-types/json/IRI"
                },
                {
-                  "$ref": "/ga4gh/schema/vrs/2.0.0-ballot.2024-08.1/json/Variation"
+                  "$ref": "/ga4gh/schema/vrs/2.x/json/Variation"
                }
             ]
          }
@@ -69,13 +69,13 @@
       "location": {
          "oneOf": [
             {
-               "$ref": "/ga4gh/schema/gks-common/1.0.0-ballot.2024.08.1/data-types/json/IRI"
+               "$ref": "/ga4gh/schema/gks-common/1.x/data-types/json/IRI"
             },
             {
-               "$ref": "/ga4gh/schema/vrs/2.0.0-ballot.2024-08.1/json/SequenceLocation"
+               "$ref": "/ga4gh/schema/vrs/2.x/json/SequenceLocation"
             }
          ],
-         "description": "A [SequenceLocation](https://vrs.ga4gh.org/en/2.0.0-ballot.2024-08/concepts/LocationAndReference/SequenceLocation.html) object that represents a sequence derived from that location, and is congruent with locations on alternate reference sequences."
+         "description": "A [SequenceLocation](https://vrs.ga4gh.org/en/2.x/concepts/LocationAndReference/SequenceLocation.html) object that represents a sequence derived from that location, and is congruent with locations on alternate reference sequences."
       },
       "locationMatchCharacteristic": {
          "type": "string",
@@ -104,7 +104,7 @@
       "copies": {
          "oneOf": [
             {
-               "$ref": "/ga4gh/schema/vrs/2.0.0-ballot.2024-08.1/json/Range"
+               "$ref": "/ga4gh/schema/vrs/2.x/json/Range"
             },
             {
                "type": "integer"

@@ -1,6 +1,6 @@
 **Computational Definition**
 
-A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.0.0-ballot.2024-08/concepts/MolecularVariation/Allele.html#>`_ that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid change on different underlying reference sequences. Congruent representations of an Allele often exist across different genome assemblies and associated cDNA transcript representations.
+A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.x/concepts/MolecularVariation/Allele.html#>`_ that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid change on different underlying reference sequences. Congruent representations of an Allele often exist across different genome assemblies and associated cDNA transcript representations.
 
 **Information Model**
 
@@ -51,4 +51,4 @@ Some CanonicalAllele attributes are inherited from :ref:`CategoricalVariation`.
    *  - definingContext
       - :ref:`Allele` | :ref:`IRI`
       - 1..1
-      - The `Allele <https://vrs.ga4gh.org/en/2.0.0-ballot.2024-08/concepts/MolecularVariation/Allele.html#>`_ object that is congruent with variants on alternate reference sequences.
+      - The `Allele <https://vrs.ga4gh.org/en/2.x/concepts/MolecularVariation/Allele.html#>`_ object that is congruent with variants on alternate reference sequences.

@@ -1,6 +1,6 @@
 **Computational Definition**
 
-A categorical variation domain is defined first by a sequence derived from a canonical `SequenceLocation <https://vrs.ga4gh.org/en/2.0.0-ballot.2024-08/concepts/LocationAndReference/SequenceLocation.html>`_ , which is representative of a collection of congruent Locations. The change or count of this sequence is also described, either by a numeric value (e.g. "3 or more copies") or categorical representation (e.g. "high-level gain"). Categorical CNVs may optionally be defined by rules specifying the location match characteristics for member CNVs.
+A categorical variation domain is defined first by a sequence derived from a canonical `SequenceLocation <https://vrs.ga4gh.org/en/2.x/concepts/LocationAndReference/SequenceLocation.html>`_ , which is representative of a collection of congruent Locations. The change or count of this sequence is also described, either by a numeric value (e.g. "3 or more copies") or categorical representation (e.g. "high-level gain"). Categorical CNVs may optionally be defined by rules specifying the location match characteristics for member CNVs.
 
 **Information Model**
 
@@ -51,7 +51,7 @@ Some CategoricalCnv attributes are inherited from :ref:`CategoricalVariation`.
    *  - location
       - :ref:`SequenceLocation` | :ref:`IRI`
       - 1..1
-      - A `SequenceLocation <https://vrs.ga4gh.org/en/2.0.0-ballot.2024-08/concepts/LocationAndReference/SequenceLocation.html>`_ object that represents a sequence derived from that location, and is congruent with locations on alternate reference sequences.
+      - A `SequenceLocation <https://vrs.ga4gh.org/en/2.x/concepts/LocationAndReference/SequenceLocation.html>`_ object that represents a sequence derived from that location, and is congruent with locations on alternate reference sequences.
    *  - locationMatchCharacteristic
       - string
       - 0..1

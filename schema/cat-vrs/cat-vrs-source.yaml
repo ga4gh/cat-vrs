@@ -38,8 +38,8 @@ $defs:
           this categorical variant.
         items:
           oneOf:
-            - $ref: "/ga4gh/schema/vrs/2.0.0-ballot.2024-08.1/json/Variation"
-            - $ref: "/ga4gh/schema/gks-common/1.0.0-ballot.2024-08.1/data-types/json/IRI"
+            - $ref: "/ga4gh/schema/vrs/2.x/json/Variation"
+            - $ref: "/ga4gh/schema/gks-common/1.x/json/IRI"
 
   ProteinSequenceConsequence:
     type: object
@@ -49,7 +49,7 @@ $defs:
       A change that occurs in a protein sequence as a result of genomic changes. Due to the degenerate nature
       of the genetic code, there are often several genomic changes that can cause a protein sequence consequence.
       The protein sequence consequence, like a :ref:`CanonicalAllele`, is defined by an
-      `Allele <https://vrs.ga4gh.org/en/2.0.0-ballot.2024-08/concepts/MolecularVariation/Allele.html#>`
+      `Allele <https://vrs.ga4gh.org/en/2.x/concepts/MolecularVariation/Allele.html#>`
       that is representative of a collection of congruent Protein Alleles that share the same altered codon(s).
     properties:
       type:
@@ -59,10 +59,10 @@ $defs:
         description: 'MUST be "ProteinSequenceConsequence"'
       definingContext:
         oneOf:
-          - $ref: "/ga4gh/schema/vrs/2.0.0-ballot.2024-08.1/json/Allele"
-          - $ref: "/ga4gh/schema/gks-common/1.0.0-ballot.2024-08.1/data-types/json/IRI"
+          - $ref: "/ga4gh/schema/vrs/2.x/json/Allele"
+          - $ref: "/ga4gh/schema/gks-common/1.x/data-types/json/IRI"
         description: >-
-          The `Allele <https://vrs.ga4gh.org/en/2.0.0-ballot.2024-08/concepts/MolecularVariation/Allele.html#>`_
+          The `Allele <https://vrs.ga4gh.org/en/2.x/concepts/MolecularVariation/Allele.html#>`_
           object that is congruent with (projects to the same codons) as alleles on other protein reference
           sequences.
     required:
@@ -72,7 +72,7 @@ $defs:
     inherits: CategoricalVariation
     maturity: draft
     description: >-
-      A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.0.0-ballot.2024-08/concepts/MolecularVariation/Allele.html#>`_
+      A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.x/concepts/MolecularVariation/Allele.html#>`_
       that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid
       change on different underlying reference sequences. Congruent representations of an Allele often exist
       across different genome assemblies and associated cDNA transcript representations.
@@ -85,10 +85,10 @@ $defs:
         description: 'MUST be "CanonicalAllele"'
       definingContext:
         oneOf:
-          - $ref: "/ga4gh/schema/vrs/2.0.0-ballot.2024-08.1/json/Allele"
-          - $ref: "/ga4gh/schema/gks-common/1.0.0-ballot.2024-08.1/data-types/json/IRI"
+          - $ref: "/ga4gh/schema/vrs/2.x/json/Allele"
+          - $ref: "/ga4gh/schema/gks-common/1.x/data-types/json/IRI"
         description: >-
-          The `Allele <https://vrs.ga4gh.org/en/2.0.0-ballot.2024-08/concepts/MolecularVariation/Allele.html#>`_
+          The `Allele <https://vrs.ga4gh.org/en/2.x/concepts/MolecularVariation/Allele.html#>`_
           object that is congruent with variants on alternate reference sequences.
     required:
       - definingContext
@@ -99,7 +99,7 @@ $defs:
     maturity: draft
     description: >-
       A categorical variation domain is defined first by a sequence derived from a canonical `SequenceLocation
-      <https://vrs.ga4gh.org/en/2.0.0-ballot.2024-08/concepts/LocationAndReference/SequenceLocation.html>`_ ,
+      <https://vrs.ga4gh.org/en/2.x/concepts/LocationAndReference/SequenceLocation.html>`_ ,
       which is representative of a collection of congruent Locations. The change or count of this sequence is
       also described, either by a numeric value (e.g. "3 or more copies") or categorical representation
       (e.g. "high-level gain"). Categorical CNVs may optionally be defined by rules specifying the location
@@ -112,10 +112,10 @@ $defs:
         description: 'MUST be "CategoricalCnv"'
       location:
         oneOf:
-          - $ref: "/ga4gh/schema/vrs/2.0.0-ballot.2024-08.1/json/SequenceLocation"
-          - $ref: "/ga4gh/schema/gks-common/1.0.0-ballot.2024-08.1/data-types/json/IRI"
+          - $ref: "/ga4gh/schema/vrs/2.x/json/SequenceLocation"
+          - $ref: "/ga4gh/schema/gks-common/1.x/data-types/json/IRI"
         description: >-
-          A `SequenceLocation <https://vrs.ga4gh.org/en/2.0.0-ballot.2024-08/concepts/LocationAndReference/SequenceLocation.html>`_
+          A `SequenceLocation <https://vrs.ga4gh.org/en/2.x/concepts/LocationAndReference/SequenceLocation.html>`_
           object that represents a sequence derived from that location, and is congruent with locations
           on alternate reference sequences.
       locationMatchCharacteristic:
@@ -139,7 +139,7 @@ $defs:
       copies:
         oneOf:
           - type: integer
-          - $ref: "/ga4gh/schema/vrs/2.0.0-ballot.2024-08.1/json/Range"
+          - $ref: "/ga4gh/schema/vrs/2.x/json/Range"
         description: >-
           The integral number of copies of the subject in a system.
     required:
@@ -240,7 +240,7 @@ $defs:
       count:
         oneOf:
           - type: integer
-          - $ref: "/ga4gh/schema/vrs/2.0.0-ballot.2024-08.1/json/Range"
+          - $ref: "/ga4gh/schema/vrs/2.x/json/Range"
         description: >-
           The integral quantity or quantity range of the subject in a system
     required: [ "count" ]
@@ -266,7 +266,7 @@ $defs:
       change:
         oneOf:
           - type: integer
-          - $ref: "/ga4gh/schema/vrs/2.0.0-ballot.2024-08.1/json/Range"
+          - $ref: "/ga4gh/schema/vrs/2.x/json/Range"
           - copyChange:
             type: string
             enum: [ "EFO:0030069", "EFO:0020073", "EFO:0030068", "EFO:0030067", "EFO:0030064", "EFO:0030070",
@@ -323,7 +323,7 @@ $defs:
   #     copies:
   #       oneOf:
   #         - type: integer
-  #         - $ref: "/ga4gh/schema/vrs/2.0.0-ballot.2024-08.1/json/Range"
+  #         - $ref: "/ga4gh/schema/vrs/2.x/json/Range"
   #       description: >-
   #         The integral number of copies of the subject in a system.
   #   required:
