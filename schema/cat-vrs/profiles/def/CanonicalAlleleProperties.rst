@@ -1,6 +1,6 @@
 **Computational Definition**
 
-Categorical Variant constraints found in Canonical Alleles.
+Cat-VRS Constraints found in Canonical Alleles.
 
 **Information Model**
 

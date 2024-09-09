@@ -6,6 +6,6 @@ tests:
   - test_file: describedVariant-ex1.yaml
     definition: CategoricalVariant
   - test_file: categoricalCnv-ex1.yaml
-    definition: CategoricalVariant
+    definition: CategoricalCnv
   - test_file: categoricalCnv-ex2.yaml
-    definition: CategoricalVariant
+    definition: CategoricalCnv

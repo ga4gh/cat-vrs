@@ -14,7 +14,7 @@ $defs:
     type: object
     maturity: draft
     description: >-
-      Categorical Variant constraints found in Protein Sequence Consequences.
+      Cat-VRS Constraints found in Protein Sequence Consequences.
     properties:
       constraints:
         contains:
@@ -41,7 +41,7 @@ $defs:
     type: object
     maturity: draft
     description: >-
-      Categorical Variant constraints found in Canonical Alleles.
+      Cat-VRS Constraints found in Canonical Alleles.
     properties:
       constraints:
         contains:
@@ -65,4 +65,33 @@ $defs:
       across different genome assemblies and associated cDNA transcript representations.
     allOf:
       - $ref: "#/$defs/CanonicalAlleleProperties"
+      - $ref: "/ga4gh/schema/cat-vrs/1.x/core/json/CategoricalVariant"
+
+  CategoricalCnvProperties:
+    type: object
+    maturity: draft
+    description: >-
+      Cat-VRS Constraints found in CategoricalCnvs.
+    properties:
+      constraints:
+        allOf:
+          - contains:
+              allOf:
+                - $ref: "/ga4gh/schema/cat-vrs/1.x/core/json/DefiningContextConstraint"
+                - type: object
+                  properties:
+                    relations:
+                      contains:
+                        const: sequence_liftover
+          - contains:
+              anyOf:
+                - $ref: "/ga4gh/schema/cat-vrs/1.x/core/json/CopyCountConstraint"
+                - $ref: "/ga4gh/schema/cat-vrs/1.x/core/json/CopyChangeConstraint"
+
+  CategoricalCnv:
+    maturity: draft
+    description: >-
+      A representation of the constraints for matching knowledge about CNVs.
+    allOf:
+      - $ref: "#/$defs/CategoricalCnvProperties"
       - $ref: "/ga4gh/schema/cat-vrs/1.x/core/json/CategoricalVariant"

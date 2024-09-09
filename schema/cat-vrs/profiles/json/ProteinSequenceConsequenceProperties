@@ -4,7 +4,7 @@
    "title": "ProteinSequenceConsequenceProperties",
    "type": "object",
    "maturity": "draft",
-   "description": "Categorical Variant constraints found in Protein Sequence Consequences.",
+   "description": "Cat-VRS Constraints found in Protein Sequence Consequences.",
    "properties": {
       "constraints": {
          "contains": {

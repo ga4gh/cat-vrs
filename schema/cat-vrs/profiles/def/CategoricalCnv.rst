@@ -1,6 +1,6 @@
 **Computational Definition**
 
-Cat-VRS Constraints found in Protein Sequence Consequences.
+A representation of the constraints for matching knowledge about CNVs.
 
 **Information Model**
 
@@ -15,7 +15,3 @@ Cat-VRS Constraints found in Protein Sequence Consequences.
       - Type
       - Limits
       - Description
-   *  - constraints
-      - _Not Specified_
-      - 0..1
-      - 

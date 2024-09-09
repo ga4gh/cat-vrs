@@ -1,0 +1,46 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.x/profiles/json/CategoricalCnvProperties",
+   "title": "CategoricalCnvProperties",
+   "type": "object",
+   "maturity": "draft",
+   "description": "Cat-VRS Constraints found in CategoricalCnvs.",
+   "properties": {
+      "constraints": {
+         "allOf": [
+            {
+               "contains": {
+                  "allOf": [
+                     {
+                        "$ref": "/ga4gh/schema/cat-vrs/1.x/core/json/DefiningContextConstraint"
+                     },
+                     {
+                        "type": "object",
+                        "properties": {
+                           "relations": {
+                              "contains": {
+                                 "const": "sequence_liftover"
+                              }
+                           }
+                        }
+                     }
+                  ]
+               }
+            },
+            {
+               "contains": {
+                  "anyOf": [
+                     {
+                        "$ref": "/ga4gh/schema/cat-vrs/1.x/core/json/CopyCountConstraint"
+                     },
+                     {
+                        "$ref": "/ga4gh/schema/cat-vrs/1.x/core/json/CopyChangeConstraint"
+                     }
+                  ]
+               }
+            }
+         ]
+      }
+   },
+   "required": []
+}
