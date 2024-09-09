@@ -10,7 +10,7 @@
          "contains": {
             "allOf": [
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/1.x/json/DefiningContextConstraint"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.x/core/json/DefiningContextConstraint"
                },
                {
                   "type": "object",

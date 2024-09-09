@@ -1,5 +1,5 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.x/cat-vrs-core-source.yaml"
+$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.x/core/cat-vrs-core-source.yaml"
 title: GA4GH-Cat-VRS-Definitions
 type: object
 strict: true
@@ -36,8 +36,8 @@ $defs:
           this categorical variant.
         items:
           oneOf:
-            - $ref: "/ga4gh/schema/vrs/2.x/json/Variation"
-            - $ref: "/ga4gh/schema/gks-common/1.x/json/IRI"
+            - $ref: /ga4gh/schema/vrs/2.x/json/Variation
+            - $ref: /ga4gh/schema/gks-common/1.x/json/IRI
       constraints:
         type: array
         ordered: false
@@ -58,34 +58,25 @@ $defs:
       Constraints are used to construct an intensional semantics of categorical variant types.
     oneOf:
       - $ref: "#/$defs/DefiningContextConstraint"
-    heritableProperties:
-      description:
-        extends: description
-        description: >-
-          A textual description of the domain of variation that should match the categorical 
-          variation entity.
-      label:
-        extends: label
-        description: >-
-            A primary label for the categorical variation. This required property should provide a 
-            short and descriptive textual representation of the concept.
 
   DefiningContextConstraint:
     maturity: draft
     type: object
     inherits: Constraint
-    description:
-      The location or location-state, congruent with other reference sequences, about which categorical variation is being described.
+    description: >-
+      The location or location-state, congruent with other reference sequences, 
+      about which categorical variation is being described.
     properties:
       type:
         extends: type
-        const: DefiningContextConstriant
-        default: DefiningContextConstriant
-        description: 'MUST be "DefiningContextConstriant"'
+        const: DefiningContextConstraint
+        default: DefiningContextConstraint
+        description: 'MUST be "DefiningContextConstraint"'
       definingContext:
         oneOf:
           - $ref: /ga4gh/schema/vrs/2.x/json/Variation
           - $ref: /ga4gh/schema/vrs/2.x/json/Location
+          - $ref: /ga4gh/schema/gks-common/1.x/json/IRI
       relations:
         type: array
         ordered: false
@@ -95,7 +86,7 @@ $defs:
             - transcript_projection
             - codon_translation
         description: >-
-          Defined relationshis between members of the categorical variant and the defining context.
+          Defined relationships between members of the categorical variant and the defining context.
           ``sequence_liftover`` refers to variants or locations that represent a congruent concept on a differing assembly of a
           human genome (e.g. "GRCh37" and "GRCh38") or gene (e.g. Locus Reference Genomic) sequence. ``transcript_projection`` 
           refers to variants or locations that occur on transcripts projected from the defined genomic concept. ``codon_translation`` 

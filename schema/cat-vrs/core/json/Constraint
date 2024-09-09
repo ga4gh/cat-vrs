@@ -1,13 +1,13 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.x/json/Constraint",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.x/core/json/Constraint",
    "title": "Constraint",
    "type": "object",
    "maturity": "draft",
    "description": "Constraints are used to construct an intensional semantics of categorical variant types.",
    "oneOf": [
       {
-         "$ref": "/ga4gh/schema/cat-vrs/1.x/json/DefiningContextConstraint"
+         "$ref": "/ga4gh/schema/cat-vrs/1.x/core/json/DefiningContextConstraint"
       }
    ]
 }

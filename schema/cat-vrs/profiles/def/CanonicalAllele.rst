@@ -1,6 +1,6 @@
 **Computational Definition**
 
-The Quantity Variance class captures one axis of variation in the generalized model of categorical variation.  It is used to model quantitative measure changes in a given biological level of variation.
+A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.x/concepts/MolecularVariation/Allele.html#>`_ that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid change on different underlying reference sequences. Congruent representations of an Allele often exist across different genome assemblies and associated cDNA transcript representations.
 
 **Information Model**
 
@@ -15,7 +15,3 @@ The Quantity Variance class captures one axis of variation in the generalized mo
       - Type
       - Limits
       - Description
-   *  - type
-      - string
-      - 0..1
-      - MUST be "QuantityVariance"

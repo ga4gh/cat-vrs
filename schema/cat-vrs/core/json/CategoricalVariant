@@ -1,6 +1,6 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.x/json/CategoricalVariant",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.x/core/json/CategoricalVariant",
    "title": "CategoricalVariant",
    "type": "object",
    "maturity": "draft",
@@ -72,7 +72,7 @@
          "items": {
             "oneOf": [
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/1.x/json/DefiningContextConstraint"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.x/core/json/DefiningContextConstraint"
                }
             ]
          },
