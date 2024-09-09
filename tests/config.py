@@ -8,8 +8,6 @@ import re
 root_path = Path(__file__).parents[1]
 schema_path = root_path / "schema"
 catvrs_schema_path = schema_path / "cat-vrs"
-catvrs_jsons_path = catvrs_schema_path / "json"
-catvar_yaml_path = catvrs_schema_path / "cat-vrs-source.yaml"
 
 test_path = root_path / 'tests'
 fixtures_path = root_path / 'examples'
@@ -32,7 +30,9 @@ js_registry = Registry(retrieve=retrieve_rel_ref)
 js_def = dict()
 validator = dict()
 
-for schema_path in schema_path.glob('*/json/*'):
+paths = list(schema_path.glob('*/json/*'))+list(catvrs_schema_path.glob('*/json/*'))
+
+for schema_path in paths:
     content = json.loads(schema_path.read_text())
     schema_uri = schema_path.as_uri()
     content['id'] = schema_uri

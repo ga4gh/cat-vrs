@@ -16,6 +16,7 @@ $defs:
   # =============================================================================
 
   CategoricalVariant:
+    type: object
     inherits: gks.core-im:DomainEntity
     maturity: draft
     description: >-
@@ -71,6 +72,7 @@ $defs:
 
   DefiningContextConstraint:
     maturity: draft
+    type: object
     inherits: Constraint
     description:
       The location or location-state, congruent with other reference sequences, about which categorical variation is being described.
@@ -82,10 +84,11 @@ $defs:
         description: 'MUST be "DefiningContextConstriant"'
       definingContext:
         oneOf:
-          - $refCurie: vrs:Location
-          - $refCurie: vrs:Allele
+          - $ref: /ga4gh/schema/vrs/2.x/json/Variation
+          - $ref: /ga4gh/schema/vrs/2.x/json/Location
       relations:
         type: array
+        ordered: false
         items:
           enum:
             - sequence_liftover

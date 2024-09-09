@@ -1,10 +1,10 @@
 **Computational Definition**
 
-A change that occurs in a protein sequence as a result of genomic changes. Due to the degenerate nature of the genetic code, there are often several genomic changes that can cause a protein sequence consequence. The protein sequence consequence, like a :ref:`CanonicalAllele`, is defined by an `Allele <https://vrs.ga4gh.org/en/2.x/concepts/MolecularVariation/Allele.html#>` that is representative of a collection of congruent Protein Alleles that share the same altered codon(s).
+A representation of a categorically-defined domain for variation, in which individual contextual variation instances may be members of the domain.
 
 **Information Model**
 
-Some ProteinSequenceConsequence attributes are inherited from :ref:`CategoricalVariation`.
+Some CategoricalVariant attributes are inherited from :ref:`gks.core-im:DomainEntity`.
 
 .. list-table::
    :class: clean-wrap
@@ -40,15 +40,15 @@ Some ProteinSequenceConsequence attributes are inherited from :ref:`CategoricalV
       - :ref:`ConceptMapping`
       - 0..m
       - A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation.
+   *  - type
+      - string
+      - 1..1
+      - MUST be "CategoricalVariant"
    *  - members
       - :ref:`Variation` | :ref:`IRI`
       - 0..m
       - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.
-   *  - type
-      - string
-      - 1..1
-      - MUST be "ProteinSequenceConsequence"
-   *  - definingContext
-      - :ref:`Allele` | :ref:`IRI`
-      - 1..1
-      - The `Allele <https://vrs.ga4gh.org/en/2.x/concepts/MolecularVariation/Allele.html#>`_ object that is congruent with (projects to the same codons) as alleles on other protein reference sequences.
+   *  - constraints
+      - :ref:`Constraint`
+      - 1..m
+      - 

@@ -2,7 +2,6 @@ $schema: "https://json-schema.org/draft/2020-12/schema"
 $id: "https://w3id.org/ga4gh/schema/cat-vrs/1.x/profiles/cat-vrs-profiles-source.yaml"
 title: GA4GH-Cat-VRS-Definitions
 type: object
-strict: true
 
 imports:
   gks.core-im: ../../core-im/core-im-source.yaml
@@ -12,6 +11,10 @@ imports:
 
 $defs:
   ProteinSequenceConsequenceProperties:
+    type: object
+    maturity: draft
+    description: >-
+      Categorical Variant constraints found in Protein Sequence Consequences.
     properties:
       constraints:
         contains:
@@ -24,8 +27,6 @@ $defs:
                     const: codon_translation
 
   ProteinSequenceConsequence:
-    type: object
-    maturity: draft
     description: >-
       A change that occurs in a protein sequence as a result of genomic changes. Due to the degenerate nature
       of the genetic code, there are often several genomic changes that can cause a protein sequence consequence.
@@ -34,9 +35,13 @@ $defs:
       that is representative of a collection of congruent Protein Alleles that share the same altered codon(s).
     allOf:
       - $ref: "#/$defs/ProteinSequenceConsequenceProperties"
-      - $ref: "/ga4gh/schema/cat-vrs/1.x/core/json/CategoricalVariation"
+      - $ref: "/ga4gh/schema/cat-vrs/1.x/core/json/CategoricalVariant"
 
   CanonicalAlleleProperties:
+    type: object
+    maturity: draft
+    description: >-
+      Categorical Variant constraints found in Canonical Alleles.
     properties:
       constraints:
         contains:
@@ -61,7 +66,7 @@ $defs:
     type: object
     allOf:
       - $ref: "#/$defs/CanonicalAlleleProperties"
-      - $ref: "/ga4gh/schema/cat-vrs/1.x/core/json/CategoricalVariation"
+      - $ref: "/ga4gh/schema/cat-vrs/1.x/core/json/CategoricalVariant"
 
 
   # CategoricalCnv:

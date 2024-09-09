@@ -1,0 +1,15 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.x/profiles/json/ProteinSequenceConsequence",
+   "title": "ProteinSequenceConsequence",
+   "type": "object",
+   "description": "A change that occurs in a protein sequence as a result of genomic changes. Due to the degenerate nature of the genetic code, there are often several genomic changes that can cause a protein sequence consequence. The protein sequence consequence, like a CanonicalAllele, is defined by an `Allele <https://vrs.ga4gh.org/en/2.x/concepts/MolecularVariation/Allele.html#>` that is representative of a collection of congruent Protein Alleles that share the same altered codon(s).",
+   "allOf": [
+      {
+         "$ref": "/ga4gh/schema/cat-vrs/1.x/profiles/json/ProteinSequenceConsequenceProperties"
+      },
+      {
+         "$ref": "/ga4gh/schema/cat-vrs/1.x/json/CategoricalVariant"
+      }
+   ]
+}

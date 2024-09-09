@@ -1,10 +1,10 @@
 **Computational Definition**
 
-A representation of a categorically-defined domain for variation, in which individual contextual variation instances may be members of the domain.
+Constraints are used to construct an intensional semantics of categorical variant types.
 
 **Information Model**
 
-Some CategoricalVariation attributes are inherited from :ref:`gks.core-im:DomainEntity`.
+Some Constraint attributes are inherited from :ref:`gks.core-im:DomainEntity`.
 
 .. list-table::
    :class: clean-wrap
@@ -24,14 +24,6 @@ Some CategoricalVariation attributes are inherited from :ref:`gks.core-im:Domain
       - string
       - 1..1
       - The name of the class that is instantiated by a data object representing the Entity.
-   *  - label
-      - string
-      - 0..1
-      - A primary name for the entity.
-   *  - description
-      - string
-      - 0..1
-      - A free-text description of the Entity.
    *  - alternativeLabels
       - string
       - 0..m
@@ -44,7 +36,11 @@ Some CategoricalVariation attributes are inherited from :ref:`gks.core-im:Domain
       - :ref:`ConceptMapping`
       - 0..m
       - A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation.
-   *  - members
-      - :ref:`Variation` | :ref:`IRI`
-      - 0..m
-      - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.
+   *  - description
+      - string
+      - 0..1
+      - A textual description of the domain of variation that should match the categorical  variation entity.
+   *  - label
+      - string
+      - 0..1
+      - A primary label for the categorical variation. This required property should provide a  short and descriptive textual representation of the concept.
