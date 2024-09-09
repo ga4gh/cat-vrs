@@ -1,6 +1,6 @@
 **Computational Definition**
 
-A representation of a categorically-defined domain for variation, in which individual  contextual variation instances may be members of the domain.
+A representation of a categorically-defined domain for variation, in which individual contextual variation instances may be members of the domain.
 
 **Information Model**
 
@@ -37,14 +37,14 @@ Some CategoricalVariation attributes are inherited from :ref:`gks.core-im:Domain
       - 0..m
       - Alternative name(s) for the Entity.
    *  - extensions
-      - `Extension </ga4gh/schema/gks-common/1.x/data-types/json/Extension>`_
+      - :ref:`Extension`
       - 0..m
       - A list of extensions to the Entity, that allow for capture of information not directly supported by elements defined in the model.
    *  - mappings
-      - `ConceptMapping </ga4gh/schema/gks-common/1.x/data-types/json/ConceptMapping>`_
+      - :ref:`ConceptMapping`
       - 0..m
       - A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation.
    *  - members
-      - `Variation </ga4gh/schema/vrs/2.x/json/Variation>`_ | `IRI </ga4gh/schema/gks-common/1.x/data-types/json/IRI>`_
+      - :ref:`Variation` | :ref:`IRI`
       - 0..m
       - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.
