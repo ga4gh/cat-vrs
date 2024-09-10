@@ -1,44 +1,49 @@
 id: clinvar:662001
 label: NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs)
-type: CanonicalAllele
-definingContext:
-  id: ga4gh:VA.PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
-  type: Allele
-  digest: PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
-  label: 'NC_000001.11:11128043:AT:'
-  location: 
-    id: ga4gh:SL.5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
-    type: SequenceLocation
-    digest: 5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
-    start: 11128043
-    end: 11128045
-    sequenceReference:
-      id: NC_000001.11
-      type: SequenceReference
-      refgetAccession: SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
-      residueAlphabet: na
+type: CategoricalVariant
+constraints:
+  - type: DefiningContextConstraint
+    definingContext:
+      id: ga4gh:VA.PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
+      type: Allele
+      digest: PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
+      label: 'NC_000001.11:11128043:AT:'
+      location: 
+        id: ga4gh:SL.5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
+        type: SequenceLocation
+        digest: 5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
+        start: 11128043
+        end: 11128045
+        sequenceReference:
+          id: NC_000001.11
+          type: SequenceReference
+          refgetAccession: SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
+          residueAlphabet: na
+          extensions:
+            - name: assembly
+              value: GRCh38
+            - name: chromosome
+              value: '1'      
+      state: 
+        length: 0
+        repeatSubunitLength: 2
+        sequence: ''
+        type: ReferenceLengthExpression
+      expressions: 
+        - syntax: spdi
+          value: 'NC_000001.11:11128043:AT:'
+        - syntax: hgvs.g
+          value: NC_000001.11:g.11128044_11128045del
+        - syntax: gnomad
+          value: 1-11128043-CAT-C
       extensions:
-        - name: assembly
-          value: GRCh38
-        - name: chromosome
-          value: '1'      
-  state: 
-    length: 0
-    repeatSubunitLength: 2
-    sequence: ''
-    type: ReferenceLengthExpression
-  expressions: 
-    - syntax: spdi
-      value: 'NC_000001.11:11128043:AT:'
-    - syntax: hgvs.g
-      value: NC_000001.11:g.11128044_11128045del
-    - syntax: gnomad
-      value: 1-11128043-CAT-C
-  extensions:
-    - name: clinvar vcf
-      value: 1-11128043-CAT-C
-    - name: clinvar hgvs type
-      value: genomic, top-level    
+        - name: clinvar vcf
+          value: 1-11128043-CAT-C
+        - name: clinvar hgvs type
+          value: genomic, top-level    
+    relations:
+      - sequence_liftover
+      - transcript_projection
 mappings:
   - coding:
       code: CA915941124

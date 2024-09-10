@@ -1,0 +1,146 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.x/core/cat-vrs-core-source.yaml"
+title: GA4GH-Cat-VRS-Definitions
+type: object
+strict: true
+
+imports:
+  gks.core-im: ../../core-im/core-im-source.yaml
+  gks.data-types: ../../data-types/data-types-source.yaml
+  vrs: ../../vrs/vrs-source.yaml
+
+$defs:
+
+  # =============================================================================
+  # Top-level Categorical Variant concept
+  # =============================================================================
+
+  CategoricalVariant:
+    type: object
+    inherits: gks.core-im:DomainEntity
+    maturity: draft
+    description: >-
+      A representation of a categorically-defined domain for variation, in which individual
+      contextual variation instances may be members of the domain.
+    properties:
+      type:
+        extends: type
+        const: CategoricalVariant
+        default: CategoricalVariant
+        description: 'MUST be "CategoricalVariant"'
+      members:
+        type: array
+        ordered: false
+        description: >-
+          A non-exhaustive list of VRS variation contexts that satisfy the constraints of
+          this categorical variant.
+        items:
+          oneOf:
+            - $ref: /ga4gh/schema/vrs/2.x/json/Variation
+            - $ref: /ga4gh/schema/gks-common/1.x/data-types/json/IRI
+      constraints:
+        type: array
+        ordered: false
+        items:
+          $ref: "#/$defs/Constraint"
+
+  # =============================================================================
+  # Constraint Definitions
+  # =============================================================================
+
+  Constraint:
+    maturity: draft
+    description: >-
+      Constraints are used to construct an intensional semantics of categorical variant types.
+    oneOf:
+      - $ref: "#/$defs/DefiningContextConstraint"
+      - $ref: "#/$defs/CopyCountConstraint"
+      - $ref: "#/$defs/CopyChangeConstraint"
+    heritableProperties:
+      type:
+        type: string
+    heritableRequired:
+      - type
+
+  DefiningContextConstraint:
+    maturity: draft
+    type: object
+    inherits: Constraint
+    description: >-
+      The location or location-state, congruent with other reference sequences, 
+      about which categorical variation is being described.
+    properties:
+      type:
+        extends: type
+        const: DefiningContextConstraint
+        default: DefiningContextConstraint
+        description: 'MUST be "DefiningContextConstraint"'
+      definingContext:
+        oneOf:
+          - $ref: /ga4gh/schema/vrs/2.x/json/Variation
+          - $ref: /ga4gh/schema/vrs/2.x/json/Location
+          - $ref: /ga4gh/schema/gks-common/1.x/data-types/json/IRI
+      relations:
+        type: array
+        ordered: false
+        items:
+          enum:
+            - sequence_liftover
+            - transcript_projection
+            - codon_translation
+        description: >-
+          Defined relationships between members of the categorical variant and the defining context.
+          ``sequence_liftover`` refers to variants or locations that represent a congruent concept on a differing assembly of a
+          human genome (e.g. "GRCh37" and "GRCh38") or gene (e.g. Locus Reference Genomic) sequence. ``transcript_projection`` 
+          refers to variants or locations that occur on transcripts projected from the defined genomic concept. ``codon_translation`` 
+          refers to variants or locations that translate from the codon(s) represented by the defined concept.
+    required:
+      - definingContext
+
+  CopyCountConstraint:
+    maturity: draft
+    inherits: Constraint
+    type: object
+    description:
+      The absolute number of copies in a system
+    properties:
+      type:
+        extends: type
+        const: CopyCountConstraint
+        default: CopyCountConstraint
+        description: 'MUST be "CopyCountConstraint"'
+      copies:
+        oneOf:
+          - type: integer
+          - $ref: /ga4gh/schema/vrs/2.x/json/Range
+    required:
+      - copies
+
+  CopyChangeConstraint:
+    maturity: draft
+    inherits: Constraint
+    type: object
+    description:
+      A representation of copy number change
+    properties:
+      type:
+        extends: type
+        const: CopyChangeConstraint
+        default: CopyChangeConstraint
+        description: 'MUST be "CopyChangeConstraint"'
+      copyChange:
+        $ref: /ga4gh/schema/gks-common/1.x/data-types/json/Coding
+        items:
+          properties:
+            code:
+              enum: 
+                - EFO:0030069
+                - EFO:0020073
+                - EFO:0030068
+                - EFO:0030067
+                - EFO:0030064
+                - EFO:0030070
+                - EFO:0030071
+                - EFO:0030072
+    required:
+      - copyChange

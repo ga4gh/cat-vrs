@@ -1,0 +1,21 @@
+**Computational Definition**
+
+Cat-VRS Constraints found in CategoricalCnvs.
+
+**Information Model**
+
+
+.. list-table::
+   :class: clean-wrap
+   :header-rows: 1
+   :align: left
+   :widths: auto
+
+   *  - Field
+      - Type
+      - Limits
+      - Description
+   *  - constraints
+      - _Not Specified_
+      - 0..1
+      - 

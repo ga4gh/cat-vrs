@@ -1,13 +1,11 @@
 tests:
   - test_file: proteinSequenceConsequence-ex1.yaml
-    schema: catvrs
     definition: ProteinSequenceConsequence
   - test_file: canonicalAllele-ex1.yaml
-    schema: catvrs
     definition: CanonicalAllele
   - test_file: describedVariant-ex1.yaml
-    schema: catvrs
-    definition: DescribedVariation
+    definition: CategoricalVariant
   - test_file: categoricalCnv-ex1.yaml
-    schema: catvrs
+    definition: CategoricalCnv
+  - test_file: categoricalCnv-ex2.yaml
     definition: CategoricalCnv

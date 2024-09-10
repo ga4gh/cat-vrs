@@ -1,0 +1,31 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.x/core/json/CopyCountConstraint",
+   "title": "CopyCountConstraint",
+   "type": "object",
+   "maturity": "draft",
+   "description": "The absolute number of copies in a system",
+   "properties": {
+      "type": {
+         "type": "string",
+         "const": "CopyCountConstraint",
+         "default": "CopyCountConstraint",
+         "description": "MUST be \"CopyCountConstraint\""
+      },
+      "copies": {
+         "oneOf": [
+            {
+               "$ref": "/ga4gh/schema/vrs/2.x/json/Range"
+            },
+            {
+               "type": "integer"
+            }
+         ]
+      }
+   },
+   "required": [
+      "copies",
+      "type"
+   ],
+   "additionalProperties": false
+}

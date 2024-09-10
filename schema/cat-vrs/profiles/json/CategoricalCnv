@@ -1,0 +1,16 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.x/profiles/json/CategoricalCnv",
+   "title": "CategoricalCnv",
+   "type": "object",
+   "maturity": "draft",
+   "description": "A representation of the constraints for matching knowledge about CNVs.",
+   "allOf": [
+      {
+         "$ref": "/ga4gh/schema/cat-vrs/1.x/profiles/json/CategoricalCnvProperties"
+      },
+      {
+         "$ref": "/ga4gh/schema/cat-vrs/1.x/core/json/CategoricalVariant"
+      }
+   ]
+}

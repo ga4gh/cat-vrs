@@ -4,7 +4,7 @@ A representation of a categorically-defined domain for variation, in which indiv
 
 **Information Model**
 
-Some CategoricalVariation attributes are inherited from :ref:`gks.core-im:DomainEntity`.
+Some CategoricalVariant attributes are inherited from :ref:`gks.core-im:DomainEntity`.
 
 .. list-table::
    :class: clean-wrap
@@ -20,10 +20,6 @@ Some CategoricalVariation attributes are inherited from :ref:`gks.core-im:Domain
       - string
       - 0..1
       - The 'logical' identifier of the Entity in the system of record, e.g. a UUID.  This 'id' is unique within a given system, but may or may not be globally unique outside the system. It is used within a system to reference an object from another.
-   *  - type
-      - string
-      - 1..1
-      - The name of the class that is instantiated by a data object representing the Entity.
    *  - label
       - string
       - 0..1
@@ -44,7 +40,15 @@ Some CategoricalVariation attributes are inherited from :ref:`gks.core-im:Domain
       - :ref:`ConceptMapping`
       - 0..m
       - A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation.
+   *  - type
+      - string
+      - 1..1
+      - MUST be "CategoricalVariant"
    *  - members
       - :ref:`Variation` | :ref:`IRI`
       - 0..m
       - A non-exhaustive list of VRS variation contexts that satisfy the constraints of this categorical variant.
+   *  - constraints
+      - :ref:`Constraint`
+      - 0..m
+      - 

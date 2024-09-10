@@ -1,10 +1,10 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.x/json/ProteinSequenceConsequence",
-   "title": "ProteinSequenceConsequence",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.x/core/json/CategoricalVariant",
+   "title": "CategoricalVariant",
    "type": "object",
    "maturity": "draft",
-   "description": "A change that occurs in a protein sequence as a result of genomic changes. Due to the degenerate nature of the genetic code, there are often several genomic changes that can cause a protein sequence consequence. The protein sequence consequence, like a CanonicalAllele, is defined by an [Allele](https://vrs.ga4gh.org/en/2.x/concepts/MolecularVariation/Allele.html#) that is representative of a collection of congruent Protein Alleles that share the same altered codon(s).",
+   "description": "A representation of a categorically-defined domain for variation, in which individual contextual variation instances may be members of the domain.",
    "properties": {
       "id": {
          "type": "string",
@@ -44,6 +44,13 @@
          },
          "description": "A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation."
       },
+      "type": {
+         "type": "string",
+         "description": "MUST be \"CategoricalVariant\"",
+         "$comment": "MUST be the label of a concrete class from the data model.",
+         "const": "CategoricalVariant",
+         "default": "CategoricalVariant"
+      },
       "members": {
          "type": "array",
          "ordered": false,
@@ -59,27 +66,25 @@
             ]
          }
       },
-      "type": {
-         "type": "string",
-         "description": "MUST be \"ProteinSequenceConsequence\"",
-         "$comment": "MUST be the label of a concrete class from the data model.",
-         "const": "ProteinSequenceConsequence",
-         "default": "ProteinSequenceConsequence"
-      },
-      "definingContext": {
-         "oneOf": [
-            {
-               "$ref": "/ga4gh/schema/gks-common/1.x/data-types/json/IRI"
-            },
-            {
-               "$ref": "/ga4gh/schema/vrs/2.x/json/Allele"
-            }
-         ],
-         "description": "The [Allele](https://vrs.ga4gh.org/en/2.x/concepts/MolecularVariation/Allele.html#) object that is congruent with (projects to the same codons) as alleles on other protein reference sequences."
+      "constraints": {
+         "type": "array",
+         "ordered": false,
+         "items": {
+            "oneOf": [
+               {
+                  "$ref": "/ga4gh/schema/cat-vrs/1.x/core/json/CopyChangeConstraint"
+               },
+               {
+                  "$ref": "/ga4gh/schema/cat-vrs/1.x/core/json/CopyCountConstraint"
+               },
+               {
+                  "$ref": "/ga4gh/schema/cat-vrs/1.x/core/json/DefiningContextConstraint"
+               }
+            ]
+         }
       }
    },
    "required": [
-      "definingContext",
       "type"
    ],
    "additionalProperties": false

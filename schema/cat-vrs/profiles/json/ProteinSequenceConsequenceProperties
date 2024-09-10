@@ -1,0 +1,30 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.x/profiles/json/ProteinSequenceConsequenceProperties",
+   "title": "ProteinSequenceConsequenceProperties",
+   "type": "object",
+   "maturity": "draft",
+   "description": "Cat-VRS Constraints found in Protein Sequence Consequences.",
+   "properties": {
+      "constraints": {
+         "contains": {
+            "allOf": [
+               {
+                  "$ref": "/ga4gh/schema/cat-vrs/1.x/core/json/DefiningContextConstraint"
+               },
+               {
+                  "type": "object",
+                  "properties": {
+                     "relations": {
+                        "contains": {
+                           "const": "codon_translation"
+                        }
+                     }
+                  }
+               }
+            ]
+         }
+      }
+   },
+   "required": []
+}

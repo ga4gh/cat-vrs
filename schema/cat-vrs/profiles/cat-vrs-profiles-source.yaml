@@ -1,0 +1,97 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.x/profiles/cat-vrs-profiles-source.yaml"
+title: GA4GH-Cat-VRS-Definitions
+type: object
+
+imports:
+  gks.core-im: ../../core-im/core-im-source.yaml
+  gks.data-types: ../../data-types/data-types-source.yaml
+  vrs: ../../vrs/vrs-source.yaml
+  cat.core: ../core/cat-vrs-core-source.yaml
+
+$defs:
+  ProteinSequenceConsequenceProperties:
+    type: object
+    maturity: draft
+    description: >-
+      Cat-VRS Constraints found in Protein Sequence Consequences.
+    properties:
+      constraints:
+        contains:
+          allOf:
+            - $ref: "/ga4gh/schema/cat-vrs/1.x/core/json/DefiningContextConstraint"
+            - type: object
+              properties:
+                relations:
+                  contains:
+                    const: codon_translation
+
+  ProteinSequenceConsequence:
+    description: >-
+      A change that occurs in a protein sequence as a result of genomic changes. Due to the degenerate nature
+      of the genetic code, there are often several genomic changes that can cause a protein sequence consequence.
+      The protein sequence consequence, like a :ref:`CanonicalAllele`, is defined by an
+      `Allele <https://vrs.ga4gh.org/en/2.x/concepts/MolecularVariation/Allele.html#>`_
+      that is representative of a collection of congruent Protein Alleles that share the same altered codon(s).
+    allOf:
+      - $ref: "#/$defs/ProteinSequenceConsequenceProperties"
+      - $ref: "/ga4gh/schema/cat-vrs/1.x/core/json/CategoricalVariant"
+
+  CanonicalAlleleProperties:
+    type: object
+    maturity: draft
+    description: >-
+      Cat-VRS Constraints found in Canonical Alleles.
+    properties:
+      constraints:
+        contains:
+          allOf:
+            - $ref: "/ga4gh/schema/cat-vrs/1.x/core/json/DefiningContextConstraint"
+            - type: object
+              properties:
+                relations:
+                  allOf:
+                    - contains:
+                        const: sequence_liftover
+                    - contains:
+                        const: transcript_projection
+
+  CanonicalAllele:
+    maturity: draft
+    description: >-
+      A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.x/concepts/MolecularVariation/Allele.html#>`_
+      that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid
+      change on different underlying reference sequences. Congruent representations of an Allele often exist
+      across different genome assemblies and associated cDNA transcript representations.
+    allOf:
+      - $ref: "#/$defs/CanonicalAlleleProperties"
+      - $ref: "/ga4gh/schema/cat-vrs/1.x/core/json/CategoricalVariant"
+
+  CategoricalCnvProperties:
+    type: object
+    maturity: draft
+    description: >-
+      Cat-VRS Constraints found in CategoricalCnvs.
+    properties:
+      constraints:
+        allOf:
+          - contains:
+              allOf:
+                - $ref: "/ga4gh/schema/cat-vrs/1.x/core/json/DefiningContextConstraint"
+                - type: object
+                  properties:
+                    relations:
+                      contains:
+                        const: sequence_liftover
+          - contains:
+              anyOf:
+                - $ref: "/ga4gh/schema/cat-vrs/1.x/core/json/CopyCountConstraint"
+                - $ref: "/ga4gh/schema/cat-vrs/1.x/core/json/CopyChangeConstraint"
+
+  CategoricalCnv:
+    maturity: draft
+    description: >-
+      A representation of the constraints for matching knowledge about CNVs.
+    allOf:
+      - $ref: "#/$defs/CategoricalCnvProperties"
+      - $ref: "/ga4gh/schema/cat-vrs/1.x/core/json/CategoricalVariant"

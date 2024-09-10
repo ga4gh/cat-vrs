@@ -1,0 +1,39 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.x/profiles/json/CanonicalAlleleProperties",
+   "title": "CanonicalAlleleProperties",
+   "type": "object",
+   "maturity": "draft",
+   "description": "Cat-VRS Constraints found in Canonical Alleles.",
+   "properties": {
+      "constraints": {
+         "contains": {
+            "allOf": [
+               {
+                  "$ref": "/ga4gh/schema/cat-vrs/1.x/core/json/DefiningContextConstraint"
+               },
+               {
+                  "type": "object",
+                  "properties": {
+                     "relations": {
+                        "allOf": [
+                           {
+                              "contains": {
+                                 "const": "sequence_liftover"
+                              }
+                           },
+                           {
+                              "contains": {
+                                 "const": "transcript_projection"
+                              }
+                           }
+                        ]
+                     }
+                  }
+               }
+            ]
+         }
+      }
+   },
+   "required": []
+}
