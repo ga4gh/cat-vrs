@@ -1,5 +1,5 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.x/profiles/cat-vrs-profiles-source.yaml"
+$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-connect.2024-09.1/profiles/cat-vrs-profiles-source.yaml"
 title: GA4GH-Cat-VRS-Definitions
 type: object
 
