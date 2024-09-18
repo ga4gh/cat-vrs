@@ -36,8 +36,8 @@ $defs:
           this categorical variant.
         items:
           oneOf:
-            - $ref: /ga4gh/schema/vrs/2.x/json/Variation
-            - $ref: /ga4gh/schema/gks-common/1.x/data-types/json/IRI
+            - $ref: /ga4gh/schema/vrs/2.0.0-connect.2024-09.1/json/Variation
+            - $ref: /ga4gh/schema/gks-common/1.0.0-connect.2024-09.1/data-types/json/IRI
       constraints:
         type: array
         ordered: false
@@ -77,9 +77,9 @@ $defs:
         description: 'MUST be "DefiningContextConstraint"'
       definingContext:
         oneOf:
-          - $ref: /ga4gh/schema/vrs/2.x/json/Variation
-          - $ref: /ga4gh/schema/vrs/2.x/json/Location
-          - $ref: /ga4gh/schema/gks-common/1.x/data-types/json/IRI
+          - $ref: /ga4gh/schema/vrs/2.0.0-connect.2024-09.1/json/Variation
+          - $ref: /ga4gh/schema/vrs/2.0.0-connect.2024-09.1/json/Location
+          - $ref: /ga4gh/schema/gks-common/1.0.0-connect.2024-09.1/data-types/json/IRI
       relations:
         type: array
         ordered: false
@@ -112,7 +112,7 @@ $defs:
       copies:
         oneOf:
           - type: integer
-          - $ref: /ga4gh/schema/vrs/2.x/json/Range
+          - $ref: /ga4gh/schema/vrs/2.0.0-connect.2024-09.1/json/Range
     required:
       - copies
 
@@ -129,7 +129,7 @@ $defs:
         default: CopyChangeConstraint
         description: 'MUST be "CopyChangeConstraint"'
       copyChange:
-        $ref: /ga4gh/schema/gks-common/1.x/data-types/json/Coding
+        $ref: /ga4gh/schema/gks-common/1.0.0-connect.2024-09.1/data-types/json/Coding
         items:
           properties:
             code:
