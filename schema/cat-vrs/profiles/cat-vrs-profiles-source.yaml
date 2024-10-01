@@ -25,6 +25,9 @@ $defs:
                 relations:
                   contains:
                     const: codon_translation
+                  maxContains: 1
+    required: 
+      - constraints
 
   ProteinSequenceConsequence:
     description: >-
@@ -55,6 +58,10 @@ $defs:
                         const: sequence_liftover
                     - contains:
                         const: transcript_projection
+                  maxContains: 2
+    required: 
+      - constraints
+
 
   CanonicalAllele:
     maturity: draft
@@ -87,6 +94,9 @@ $defs:
               anyOf:
                 - $ref: "/ga4gh/schema/cat-vrs/1.x/core/json/CopyCountConstraint"
                 - $ref: "/ga4gh/schema/cat-vrs/1.x/core/json/CopyChangeConstraint"
+    required: 
+      - constraints
+
 
   CategoricalCnv:
     maturity: draft
