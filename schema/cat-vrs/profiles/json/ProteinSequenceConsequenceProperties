@@ -18,7 +18,8 @@
                      "relations": {
                         "contains": {
                            "const": "codon_translation"
-                        }
+                        },
+                        "maxContains": 1
                      }
                   }
                }
@@ -26,5 +27,7 @@
          }
       }
    },
-   "required": []
+   "required": [
+      "constraints"
+   ]
 }

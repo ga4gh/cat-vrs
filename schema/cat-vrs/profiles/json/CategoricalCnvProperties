@@ -42,5 +42,7 @@
          ]
       }
    },
-   "required": []
+   "required": [
+      "constraints"
+   ]
 }

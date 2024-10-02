@@ -17,5 +17,5 @@ Cat-VRS Constraints found in CategoricalCnvs.
       - Description
    *  - constraints
       - _Not Specified_
-      - 0..1
+      - 1..1
       - 
