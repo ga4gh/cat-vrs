@@ -5,7 +5,6 @@ type: object
 
 imports:
   gks.core-im: ../../core-im/core-im-source.yaml
-  gks.data-types: ../../data-types/data-types-source.yaml
   vrs: ../../vrs/vrs-source.yaml
   cat.core: ../core/cat-vrs-core-source.yaml
 

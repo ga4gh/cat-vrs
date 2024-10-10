@@ -13,7 +13,7 @@
          "description": "MUST be \"CopyChangeConstraint\""
       },
       "copyChange": {
-         "$ref": "/ga4gh/schema/gks-common/1.x/data-types/json/Coding",
+         "$ref": "/ga4gh/schema/gks-common/1.x/core-im/json/Coding",
          "items": {
             "properties": {
                "code": {

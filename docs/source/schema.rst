@@ -19,11 +19,11 @@ JSON files for each class in the schema (|vrs_json|).
 Contributions to the schema MUST be written in the YAML document.
 
 
-.. _CategoricalVariationSchemata:
-.. _CategoricalVariation:
+.. _CategoricalVariantSchemata:
+.. _CategoricalVariant:
 
-Categorical Variation Schemata
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Categorical Variant Schemata
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 THIS SECTION WILL GET UPDATEED WHEN I HAVE SCHEMATA READY
 PLEASE CHECK BACK IN THE FUTURE!
@@ -33,32 +33,25 @@ PLEASE CHECK BACK IN THE FUTURE!
     :alt: An irresistably cute kittynaut beckoning you to enter the Cat-VRS.
     :align: center
 
-.. include:: def/CategoricalVariation.rst
+.. include:: def-core/CategoricalVariant.rst
 
 .. _CanonicalAllele:
 
 Canonical Allele
 ################
 
-.. include:: def/CanonicalAllele.rst
-
-.. _DescribedVariation:
-
-Described Variation
-###################
-
-.. include:: def/DescribedVariation.rst
+.. include:: def-profiles/CanonicalAllele.rst
 
 .. _CategoricalCnv:
 
 Categorical Copy Number
 #######################
 
-.. include:: def/CategoricalCnv.rst
+.. include:: def-profiles/CategoricalCnv.rst
 
 .. _ProteinSequenceConsequence:
 
 Protein Sequence Consequence
 ############################
 
-.. include:: def/ProteinSequenceConsequence.rst
+.. include:: def-profiles/ProteinSequenceConsequence.rst
