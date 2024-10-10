@@ -6,7 +6,6 @@ strict: true
 
 imports:
   gks.core-im: ../../core-im/core-im-source.yaml
-  gks.data-types: ../../data-types/data-types-source.yaml
   vrs: ../../vrs/vrs-source.yaml
 
 $defs:
@@ -37,7 +36,7 @@ $defs:
         items:
           oneOf:
             - $ref: /ga4gh/schema/vrs/2.x/json/Variation
-            - $ref: /ga4gh/schema/gks-common/1.x/data-types/json/IRI
+            - $ref: /ga4gh/schema/gks-common/1.x/core-im/json/IRI
       constraints:
         type: array
         ordered: false
@@ -79,7 +78,7 @@ $defs:
         oneOf:
           - $ref: /ga4gh/schema/vrs/2.x/json/Variation
           - $ref: /ga4gh/schema/vrs/2.x/json/Location
-          - $ref: /ga4gh/schema/gks-common/1.x/data-types/json/IRI
+          - $ref: /ga4gh/schema/gks-common/1.x/core-im/json/IRI
       relations:
         type: array
         ordered: false
@@ -129,7 +128,7 @@ $defs:
         default: CopyChangeConstraint
         description: 'MUST be "CopyChangeConstraint"'
       copyChange:
-        $ref: /ga4gh/schema/gks-common/1.x/data-types/json/Coding
+        $ref: /ga4gh/schema/gks-common/1.x/core-im/json/Coding
         items:
           properties:
             code:
