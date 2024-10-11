@@ -2,7 +2,7 @@ Appendices
 !!!!!!!!!!
 
 
-.. TODO:: Either add general landing page material for all appendices here or include the content of the different subsections directly.
+.. todo:: Either add general landing page material for all appendices here or include the content of the different subsections directly.
 
 
 .. toctree::
