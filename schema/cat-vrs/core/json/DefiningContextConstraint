@@ -29,6 +29,7 @@
          "type": "array",
          "ordered": false,
          "items": {
+            "type": "string",
             "enum": [
                "sequence_liftover",
                "transcript_projection",

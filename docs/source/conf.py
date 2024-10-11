@@ -25,7 +25,7 @@ def _get_git_tag():
     return tag
 
 def _parse_release_as_version(rls):
-    m = re.match("^(\d+\.\d+)", rls)
+    m = re.match(r"^(\d+\.\d+)", rls)
     if m:
         return m.group(1)
     return rls
