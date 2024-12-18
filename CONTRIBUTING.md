@@ -3,8 +3,8 @@ As a product of the Genomic Knowledge Standards Workstream of GA4GH, the develop
 
 ## Discussions
 [Discussions](https://github.com/ga4gh/cat-vrs/discussions) are for discussion, design decisions, bug
-reports, and feature requests. When creating an issue, use sentence case
-for the issue title and avoid the use of periods at the end of titles.
+reports, and feature requests. When creating a discussion, use sentence case
+for the discussion title and avoid the use of periods at the end of titles.
 
 ## Issues
 [Issues](https://github.com/ga4gh/cat-vrs/issues) are for used to track additions, bugs fixes, or other issues that are intended to be implmented, often as the outcome of a [discussion](https://github.com/ga4gh/cat-vrs/discussions). When creating an issue, use sentence case for the issue title and avoid the use of periods at the end of titles.
