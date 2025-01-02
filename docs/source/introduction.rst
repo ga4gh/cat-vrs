@@ -36,7 +36,7 @@ This class, *BRAF V600E*, is a *categorical variant*, so-called because it repre
 
 .. KB has categorival variants
 
-To return to our rhetorical analyst, the variant they are interpreting, NC_000007.13:g.140453136A>T, is an *assayed variant*.  That variant exists in the genome of an individual patient.  The labelled entity to which the genomic knowledge is associated, however, the *categorical variant* BRAF V600E, does not exist in the genome.  Categorical variants exist solely within genomics knowledgebases.  Therefore, one critical step in the interpretation of an assayed variant is determining which categorical variants to which it belongs in order to connect the assayed variant to the evidence items associated with that variant.
+To return to our rhetorical analyst, the variant they are interpreting, NC_000007.13:g.140453136A>T, is an *assayed variant*.  That variant exists in the genome of an individual patient.  The labelled entity to which the genomic knowledge is associated, however, the *categorical variant* BRAF V600E, does not exist in the genome.  Categorical variants exist within genomics knowledgebases, as clinical trial eligibility criteria, and within clinical quality measures.  Therefore, one critical step in the interpretation of an assayed variant is determining which categorical variants to which it belongs in order to connect the assayed variant to the evidence items associated with that variant.
 
 
 
