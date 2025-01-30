@@ -35,7 +35,7 @@ $defs:
         type: array
         ordered: false
         description: >-
-          A non-exhaustive list of VRS variation Constraints that satisfy the constraints of
+          A non-exhaustive list of VRS Variations that satisfy the constraints of
           this categorical variant.
         items:
           oneOf:
