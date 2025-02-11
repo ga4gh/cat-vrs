@@ -16,7 +16,7 @@ repo administrators only. Feature branches must be associated with an
 open issue describing the desired feature, and named after the issue
 as <issue number>-<short-description>. For example, the associated
 branch for [issue 87](https://github.com/ga4gh/cat-vrs/issues/87) could
-be `87-update documentation`.
+be `87-update examples`.
 
 ## Pull Requests
 [Pull Requests](https://github.com/ga4gh/cat-vrs/pulls) (PRs) for new
@@ -26,4 +26,4 @@ PRs must be approved by at least one project maintainer before they may
 be merged. PR titles must reflect the issue associated with the PR. For
 example, the associated PR title for
 [issue 87](https://github.com/ga4gh/cat-vrs/issues/87) would be
-`#87: update documentation`.
+`#87: update examples`.
