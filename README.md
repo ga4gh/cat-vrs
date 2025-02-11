@@ -72,3 +72,5 @@ Then from the root directory:
 
 Then, open [docs/build/html/index.html](./docs/build/html/index.html). The above make
 command should build docs when source changes. (Some types of changes require recleaning and building.)
+
+Changes to descriptions of schema classes or recipes and new classes, constraints, and recipes should be made to [docs/source/concepts/](./docs/source/concepts) and committed to be reflected within the [readthedocs](https://cat-vrs.readthedocs.io/en/latest/index.html) online. 
