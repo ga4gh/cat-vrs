@@ -1,6 +1,6 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.x/json/CopyCountConstraint",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-snapshot.2025-02.1/json/CopyCountConstraint",
    "title": "CopyCountConstraint",
    "type": "object",
    "maturity": "trial use",
