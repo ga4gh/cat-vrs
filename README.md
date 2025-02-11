@@ -49,6 +49,12 @@ document, from the root directory:
     cd schema
     make all
 
+After regenerating the corresponding def and json files from your changes, validate your changes locally by running the updated schema against the current [examples/](./examples). This will be automatically run as a [GitHub action](https://github.com/ga4gh/cat-vrs/actions/workflows/tests.yml) upon pushing changes to GitHub. From the root directory:
+
+    pytest tests/
+
+Please do not forget to commit schema and recipe changes to [`schema/cat-vrs/def/`](./schema/cat-vrs/def/) and [`schema/cat-vrs/json/`](./schema/cat-vrs/json/), in addition to changes to [`schema/cat-vrs/cat-vrs-source.yaml`](./schema/cat-vrs/cat-vrs-source.yaml) and [`schema/cat-vrs/recipes.yaml`](./schema/cat-vrs/recipes-source.yaml).
+
 ## Contributing to the docs
 
 The Cat-VRS specification documentation is written in reStructuredText and located in
