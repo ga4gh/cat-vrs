@@ -15,8 +15,8 @@ versioning and feature additions. Version branches are to be created by
 repo administrators only. Feature branches must be associated with an
 open issue describing the desired feature, and named after the issue
 as <issue number>-<short-description>. For example, the associated
-branch for [issue 15](https://github.com/ga4gh/cat-vrs/tree/Issue-15) could
-be `15-bug fix`.
+branch for [issue 87](https://github.com/ga4gh/cat-vrs/issues/87) could
+be `87-update documentation`.
 
 ## Pull Requests
 [Pull Requests](https://github.com/ga4gh/cat-vrs/pulls) (PRs) for new
@@ -25,5 +25,5 @@ patches, the PR should target the appropriate minor version branch.
 PRs must be approved by at least one project maintainer before they may
 be merged. PR titles must reflect the issue associated with the PR. For
 example, the associated PR title for
-[issue 15](https://github.com/ga4gh/cat-vrs/tree/Issue-15) would be
-`#15: fix Bug`.
+[issue 87](https://github.com/ga4gh/cat-vrs/issues/87) would be
+`#87: update documentation`.
