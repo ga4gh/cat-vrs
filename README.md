@@ -14,7 +14,7 @@ Cat-VRS is licensed under the [Apache License 2.0](LICENSE).
 Categorical variant classes intended to be covered by this specification can be [appended to this CatVar test set document](https://docs.google.com/document/d/1aV-SqxdmuRN_EKvafzTSe0GoGC9yOzPsjrdWE0LXqYc/edit) to direct future specification development efforts.
 
 
-![image](docs/source/images/cat-vrs-transparent-bg.png)
+<div style="text-align: center;"><img src="docs/source/images/cat-vrs-transparent-bg.png" alt="image" width="300"/></div>
 
 ## Using the schema
 
