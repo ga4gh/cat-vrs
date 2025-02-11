@@ -7,7 +7,7 @@ reports, and feature requests. When creating a discussion, use sentence case
 for the discussion title and avoid the use of periods at the end of titles.
 
 ## Issues
-[Issues](https://github.com/ga4gh/cat-vrs/issues) are for used to track additions, bugs fixes, or other issues that are intended to be implmented, often as the outcome of a [discussion](https://github.com/ga4gh/cat-vrs/discussions). When creating an issue, use sentence case for the issue title and avoid the use of periods at the end of titles.
+[Issues](https://github.com/ga4gh/cat-vrs/issues) are for used to track additions, bugs fixes, or other issues that are intended to be implemented, often as the outcome of a [discussion](https://github.com/ga4gh/cat-vrs/discussions). When creating an issue, use sentence case for the issue title and avoid the use of periods at the end of titles.
 
 ## Branches
 [Branches](https://github.com/ga4gh/cat-vrs/branches) are used for
