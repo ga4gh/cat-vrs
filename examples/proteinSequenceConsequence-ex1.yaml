@@ -9,7 +9,7 @@ description: >-
   compared to chemotherapy alone. Third generation TKI's are currently in clinical trials
   that specifically focus on mutant forms of EGFR, a few of which have shown efficacy in
   treating patients that failed to respond to earlier generation TKI therapies.
-label: EGFR L858R
+name: EGFR L858R
 constraints:
   - type: DefiningAlleleConstraint
     allele: vrs.json#/ga4gh:VA.kgjrhgf84CEndyLjKdAO0RxN-e3pJjxA
@@ -20,7 +20,7 @@ members:
   - vrs.json#/ga4gh:VA.3_FsKSUHEdurPIw5gqpw6g0_Ga0TEXQh
   - vrs.json#/ga4gh:VA.zpv3dW34z8jioKL-NtbGc0fa9clsgAZT
   - vrs.json#/ga4gh:VA.BJOtfUhZMooMJUO4FjxHXTEimrKXtF0i
-alternativeLabels:
+aliases:
   - LEU858ARG
   - rs121434568
 mappings:
@@ -61,4 +61,4 @@ extensions:
     value:
       code: SO:0001583
       system: http://www.sequenceontology.org/browser/current_release/term/
-      label: missense_variant
+      name: missense_variant

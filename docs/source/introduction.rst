@@ -151,7 +151,7 @@ are readily usable by genomic knowledge search engines.
 
 
 .. Disclaimers
-@@@@@@@@@@@
+.. @@@@@@@@@@@
 
 
 .. This repository is maintained by the GA4GH Categorical Variation Working Group.  We are actively developing Cat-VRS, so much of the information contained herein is in an early state of development and should be treated as tentative and liable to change.

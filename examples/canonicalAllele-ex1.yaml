@@ -1,5 +1,5 @@
 id: clinvar:662001
-label: NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs)
+name: NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs)
 type: CategoricalVariant
 constraints:
   - type: DefiningAlleleConstraint
@@ -7,7 +7,7 @@ constraints:
       id: ga4gh:VA.PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
       type: Allele
       digest: PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
-      label: 'NC_000001.11:11128043:AT:'
+      name: 'NC_000001.11:11128043:AT:'
       location:
         id: ga4gh:SL.5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
         type: SequenceLocation
@@ -61,7 +61,7 @@ members:
   - id: ga4gh:VA.PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
     type: Allele
     digest: PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
-    label: 'NC_000001.11:11128043:AT:'
+    name: 'NC_000001.11:11128043:AT:'
     location:
       id: ga4gh:SL.5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
       type: SequenceLocation
@@ -123,7 +123,7 @@ extensions:
         molecularConsequence:
           code: SO:0001589
           system: http://www.sequenceontology.org/browser/current_release/term/
-          label: frameshift_variant
+          name: frameshift_variant
       - nucleotideExpression:
           syntax: hgvs.g
           value: NG_033239.1:g.139507_139508del
