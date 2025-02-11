@@ -3,7 +3,7 @@
 Imported Data Types & Classes
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-The following data types classes are used by Cat-VRS but maintained by either the VRS subgroup 
+The following data types classes are used by Cat-VRS but maintained by either the VRS subgroup
 or across the GKS Work Stream as core data classes.
 
 VRS

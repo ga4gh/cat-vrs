@@ -12,9 +12,9 @@
       {
          "properties": {
             "constraints": {
-               "description": "The constraints array must contain exactly two items: a DefiningLocationConstraint and either a CopyChangeConstraint or CopyCountConstraint.",
                "minItems": 2,
                "maxItems": 2,
+               "description": "The constraints array must contain exactly two items: a DefiningLocationConstraint and either a CopyChangeConstraint or CopyCountConstraint.",
                "allOf": [
                   {
                      "contains": {
@@ -52,10 +52,7 @@
                   }
                ]
             }
-         },
-         "required": [
-            "constraints"
-         ]
+         }
       }
    ]
 }

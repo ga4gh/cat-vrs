@@ -25,7 +25,7 @@ explicitly choose one of them for the purposes of computational
 modeling. We then define the **computational definition** that
 reformulates the community definition in terms of information content.
 Finally, we translate each of these computational definitions into precise
-specifications for the (**information model**). 
+specifications for the (**information model**).
 
 .. note:: The keywords "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL
           NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", and
@@ -54,8 +54,3 @@ Principles
   attributes are not part of the value object.  Such attributes are
   not considered when evaluating equality or creating computed
   identifiers.
-
-
-
-
-

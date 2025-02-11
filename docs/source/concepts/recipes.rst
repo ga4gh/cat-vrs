@@ -22,7 +22,7 @@ CanonicalAllele
 The CanonicalAllele is a :ref:`CategoricalVariant` with exactly one constraint:
 
 1. A :ref:`DefiningAlleleConstraint` with the `.relations` array containing both
-   `liftover_to` and `transcribes_to` codes. This constraint MUST refer to a genomic 
+   `liftover_to` and `transcribes_to` codes. This constraint MUST refer to a genomic
    variant for the `allele`.
 
 .. _ProteinSequenceConsequence:

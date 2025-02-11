@@ -1,5 +1,5 @@
 id: clinvar:662001
-label: NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs)
+name: NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs)
 type: CategoricalVariant
 constraints:
   - type: DefiningAlleleConstraint
@@ -7,8 +7,8 @@ constraints:
       id: ga4gh:VA.PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
       type: Allele
       digest: PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
-      label: 'NC_000001.11:11128043:AT:'
-      location: 
+      name: 'NC_000001.11:11128043:AT:'
+      location:
         id: ga4gh:SL.5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
         type: SequenceLocation
         digest: 5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
@@ -23,13 +23,13 @@ constraints:
             - name: assembly
               value: GRCh38
             - name: chromosome
-              value: '1'      
-      state: 
+              value: '1'
+      state:
         length: 0
         repeatSubunitLength: 2
         sequence: ''
         type: ReferenceLengthExpression
-      expressions: 
+      expressions:
         - syntax: spdi
           value: 'NC_000001.11:11128043:AT:'
         - syntax: hgvs.g
@@ -40,7 +40,7 @@ constraints:
         - name: clinvar vcf
           value: 1-11128043-CAT-C
         - name: clinvar hgvs type
-          value: genomic, top-level    
+          value: genomic, top-level
     relations:
       - primaryCode: liftover_to
       - primaryCode: transcribes_to
@@ -57,57 +57,57 @@ mappings:
       code: rs1570942058
       system: https://www.ncbi.nlm.nih.gov/snp/
     relation: relatedMatch
-members: 
+members:
   - id: ga4gh:VA.PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
-    type: Allele      
+    type: Allele
     digest: PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
-    label: 'NC_000001.11:11128043:AT:'
-    location: 
+    name: 'NC_000001.11:11128043:AT:'
+    location:
       id: ga4gh:SL.5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
       type: SequenceLocation
       digest: 5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
       start: 11128043
       end: 11128045
-      sequenceReference: 
+      sequenceReference:
         id: NC_000001.11
         type: SequenceReference
         refgetAccession: SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
         residueAlphabet: na
-        extensions: 
+        extensions:
           - name: assembly
             value: GRCh38
           - name: chromosome
             value: '1'
-    state: 
+    state:
       type: ReferenceLengthExpression
       length: 0
       repeatSubunitLength: 2
       sequence: ''
-    expressions: 
+    expressions:
       - syntax: spdi
         value: 'NC_000001.11:11128043:AT:'
       - syntax: hgvs.g
         value: NC_000001.11:g.11128044_11128045del
       - syntax: gnomad
         value: 1-11128043-CAT-C
-    extensions: 
+    extensions:
       - name: clinvar vcf
         value: 1-11128043-CAT-C
       - name: clinvar hgvs type
-        value: genomic, top-level        
-extensions: 
+        value: genomic, top-level
+extensions:
   - name: cytogenetic location
     value: 1p36.22
   - name: clinvar variation type
     value: Deletion
   - name: clinvar subclass type
-    value: SimpleAllele      
+    value: SimpleAllele
   - name: hgvs list
     value:
       - nucleotideExpression:
           syntax: hgvs.g
           value: NC_000001.11:g.11128044_11128045del
-        nucleotideType: genomic, top-level       
+        nucleotideType: genomic, top-level
       - nucleotideExpression:
           syntax: hgvs.g
           value: NC_000001.10:g.11188101_11188102del
@@ -123,7 +123,7 @@ extensions:
         molecularConsequence:
           code: SO:0001589
           system: http://www.sequenceontology.org/browser/current_release/term/
-          label: frameshift_variant
+          name: frameshift_variant
       - nucleotideExpression:
           syntax: hgvs.g
           value: NG_033239.1:g.139507_139508del
@@ -136,10 +136,3 @@ extensions:
           syntax: hgvs.c
           value: LRG_734t1:c.5992_5993del
         nucleotideType: coding
-
-
-
-
-       
-        
-    

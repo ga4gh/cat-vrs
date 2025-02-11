@@ -13,6 +13,3 @@ This page will be updated as work on the reference implmentation proceeds.  Plea
     :width: 50%
     :alt: An irresistably cute kittynaut beckoning you to enter the Cat-VRS.
     :align: center
-
-
-
