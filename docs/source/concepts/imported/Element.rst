@@ -1,4 +1,5 @@
 .. _Element:
+.. _gks-core:Element:
 
 Element
 !!!!!!!

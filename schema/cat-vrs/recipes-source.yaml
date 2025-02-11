@@ -4,9 +4,13 @@ title: GA4GH-Cat-VRS-Recipe-Definitions
 type: object
 
 imports:
-  gks.core-im: ../gks-core/gks-core-source.yaml
+  gks.core: ../gks-core/gks-core-source.yaml
   vrs: ../vrs/vrs-source.yaml
   cat-vrs: ./cat-vrs-source.yaml
+
+namespaces:
+  gks.core: /ga4gh/schema/gks-core/1.0.0-snapshot.2025-02/json/
+  vrs: /ga4gh/schema/vrs/2.0.0-snapshot.2025-02/json/
 
 $defs:
   ProteinSequenceConsequence:
@@ -15,8 +19,7 @@ $defs:
       A change that occurs in a protein sequence as a result of genomic changes. Due to the degenerate nature
       of the genetic code, there are often several genomic changes that can cause a protein sequence consequence.
       The protein sequence consequence, like a :ref:`CanonicalAllele`, is defined by an
-      `Allele <https://vrs.ga4gh.org/en/2.x/concepts/MolecularVariation/Allele.html#>`_
-      that is representative of a collection of congruent Protein Alleles that share the same altered codon(s).
+      :ref:`Allele` that is representative of a collection of congruent Protein Alleles that share the same altered codon(s).
     allOf:
       - $ref: CategoricalVariant
       - properties:
@@ -38,10 +41,10 @@ $defs:
   CanonicalAllele:
     maturity: trial use
     description: >-
-      A canonical allele is defined by an `Allele <https://vrs.ga4gh.org/en/2.x/concepts/MolecularVariation/Allele.html#>`_
-      that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid
-      change on different underlying reference sequences. Congruent representations of an Allele often exist
-      across different genome assemblies and associated cDNA transcript representations.
+      A canonical allele is defined by an :ref:`Allele` that is representative of a collection of congruent
+      Alleles, each of which depict the same nucleic acid different underlying reference sequences.
+      Congruent representations of an Allele often exist across different genome assemblies and associated
+      cDNA transcript representations.
     allOf:
       - $ref: CategoricalVariant
       - properties:
