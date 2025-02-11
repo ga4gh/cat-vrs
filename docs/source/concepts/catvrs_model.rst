@@ -3,7 +3,7 @@
 Cat-VRS Model
 @@@@@@@@@@@@@
 
-The following data types classes are used by Cat-VRS but maintained by either the VRS subgroup 
+The following data types classes are used by Cat-VRS but maintained by either the VRS subgroup
 or across the GKS Work Stream as core data classes.
 
 .. _CategoricalVariant:
@@ -13,7 +13,7 @@ Categorical Variant
 
 The Categorical Variant class is the primary class in Cat-VRS. It
 depends on one or more Constraint elements to create a complete
-description of a categorical variant. 
+description of a categorical variant.
 
 .. include:: ../def/cat-vrs/CategoricalVariant.rst
 

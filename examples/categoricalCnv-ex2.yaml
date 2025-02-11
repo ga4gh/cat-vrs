@@ -9,7 +9,7 @@ constraints:
       type: SequenceLocation
       start: 5945462
       end: 6053792
-      sequenceReference: 
+      sequenceReference:
         id: NC_000007.13
         type: SequenceReference
         refgetAccession: SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
@@ -18,7 +18,7 @@ constraints:
       - primaryCode: liftover_to
     matchCharacteristic:
       primaryCode: is_within
-extensions: 
+extensions:
   - name: vrs processing errors
     value: "NC_000007.14:g.(?_5905831)_(6014161_?)dup: char 26: expected one of '=', 'con', 'copy', 'del', 'dup', 'ins', or 'inv'"
   - name: clinvar variation type
@@ -37,5 +37,3 @@ extensions:
           syntax: hgvs.g
           value: NC_000007.12:g.(?_5911988)_(6020318_?)dup
         nucleotideType: genomic
-    
-    

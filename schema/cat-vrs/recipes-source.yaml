@@ -1,5 +1,5 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2024-11.2/recipes-source.yaml"
+$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.x/recipes-source.yaml"
 title: GA4GH-Cat-VRS-Recipe-Definitions
 type: object
 
@@ -75,19 +75,19 @@ $defs:
       - $ref: CategoricalVariant
       - properties:
           constraints:
+            minItems: 2
+            maxItems: 2
             description: >-
               The constraints array must contain exactly two items:
               a DefiningLocationConstraint and either a CopyChangeConstraint
               or CopyCountConstraint.
-            minItems: 2
-            maxItems: 2
             allOf:
               - contains:
                   allOf:
                     - $ref: DefiningLocationConstraint
                     - properties:
                         relations:
-                          contains:     
+                          contains:
                             properties:
                               primaryCode:
                                 const: liftover_to
@@ -95,5 +95,3 @@ $defs:
                   oneOf:
                     - $ref: CopyCountConstraint
                     - $ref: CopyChangeConstraint
-        required:
-          - constraints

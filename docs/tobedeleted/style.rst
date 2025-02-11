@@ -36,7 +36,7 @@ For example::
 To aid comprehension, the Text Styles section source looks like this::
 
     .. _text-styles-target:
-    
+
     Text Styles
     !!!!!!!!!!!
 

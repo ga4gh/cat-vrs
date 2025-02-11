@@ -101,7 +101,7 @@ Discussion
 @@@@@@@@@@
 
 
-In summary, a crucial step in the course of genomic variant interpretation is assayed-categorical variant matching, where one determines all and only those categorical variants to which the assayed variant in question is a member.  Successful assayed-categorical variant matching makes it possible to connect evidence to support or refute determinations of pathogenicity and/or oncogenicity of the assayed variants.  In a different but related use case, categorical-categorical variant matching is crucial to the process of data harmonization and knowledgebase curation.  
+In summary, a crucial step in the course of genomic variant interpretation is assayed-categorical variant matching, where one determines all and only those categorical variants to which the assayed variant in question is a member.  Successful assayed-categorical variant matching makes it possible to connect evidence to support or refute determinations of pathogenicity and/or oncogenicity of the assayed variants.  In a different but related use case, categorical-categorical variant matching is crucial to the process of data harmonization and knowledgebase curation.
 
 
 

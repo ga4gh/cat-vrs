@@ -28,7 +28,7 @@
 
 
 
-See also 
+See also
 [Cat-VRS contributors](https://github.com/ga4gh/cat-vrs/graphs/contributors)
 
 

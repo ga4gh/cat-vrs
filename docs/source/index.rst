@@ -30,7 +30,7 @@ Caveat emptor.
 
    introduction
    getting_involved
-   concepts/index  
+   concepts/index
    impl-guide/index
    releases/index
    appendices/index
@@ -41,7 +41,3 @@ Caveat emptor.
     :width: 50%
     :alt: An irresistably cute kittynaut beckoning you to enter the Cat-VRS.
     :align: center
-
-
-
-

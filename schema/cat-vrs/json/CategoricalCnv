@@ -1,26 +1,26 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2024-11.2/json/CategoricalCnv",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.x/json/CategoricalCnv",
    "title": "CategoricalCnv",
    "type": "object",
    "maturity": "draft",
    "description": "A representation of the constraints for matching knowledge about CNVs.",
    "allOf": [
       {
-         "$ref": "/ga4gh/schema/cat-vrs/1.0.0-ballot.2024-11.2/json/CategoricalVariant"
+         "$ref": "/ga4gh/schema/cat-vrs/1.x/json/CategoricalVariant"
       },
       {
          "properties": {
             "constraints": {
-               "description": "The constraints array must contain exactly two items: a DefiningLocationConstraint and either a CopyChangeConstraint or CopyCountConstraint.",
                "minItems": 2,
                "maxItems": 2,
+               "description": "The constraints array must contain exactly two items: a DefiningLocationConstraint and either a CopyChangeConstraint or CopyCountConstraint.",
                "allOf": [
                   {
                      "contains": {
                         "allOf": [
                            {
-                              "$ref": "/ga4gh/schema/cat-vrs/1.0.0-ballot.2024-11.2/json/DefiningLocationConstraint"
+                              "$ref": "/ga4gh/schema/cat-vrs/1.x/json/DefiningLocationConstraint"
                            },
                            {
                               "properties": {
@@ -42,20 +42,17 @@
                      "contains": {
                         "oneOf": [
                            {
-                              "$ref": "/ga4gh/schema/cat-vrs/1.0.0-ballot.2024-11.2/json/CopyCountConstraint"
+                              "$ref": "/ga4gh/schema/cat-vrs/1.x/json/CopyCountConstraint"
                            },
                            {
-                              "$ref": "/ga4gh/schema/cat-vrs/1.0.0-ballot.2024-11.2/json/CopyChangeConstraint"
+                              "$ref": "/ga4gh/schema/cat-vrs/1.x/json/CopyChangeConstraint"
                            }
                         ]
                      }
                   }
                ]
             }
-         },
-         "required": [
-            "constraints"
-         ]
+         }
       }
    ]
 }
