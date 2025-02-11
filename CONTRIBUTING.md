@@ -20,7 +20,7 @@ be `87-update documentation`.
 
 ## Pull Requests
 [Pull Requests](https://github.com/ga4gh/cat-vrs/pulls) (PRs) for new
-features should target the `main` branch. For version
+features should target the [`Default` branch](https://github.com/ga4gh/cat-vrs/branches). For version
 patches, the PR should target the appropriate minor version branch.
 PRs must be approved by at least one project maintainer before they may
 be merged. PR titles must reflect the issue associated with the PR. For
