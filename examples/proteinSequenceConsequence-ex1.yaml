@@ -15,6 +15,30 @@ constraints:
     allele: vrs.json#/ga4gh:VA.kgjrhgf84CEndyLjKdAO0RxN-e3pJjxA
     relations:
       - primaryCode: translates_from
+  - type: FeatureContextConstraint
+    featureContext:
+      id: normalize.gene.hgnc:3236
+      extensions:
+        - name: symbol_status
+          value: approved
+        - name: approved_name
+          value: epidermal growth factor receptor
+      conceptType: Gene
+      name: EGFR
+      primaryCode: hgnc:3236
+      mappings:
+        - coding:
+            system: https://www.genenames.org
+            code: hgnc:3236
+          relation: exactMatch
+        - coding:
+            system: https://www.ensembl.org
+            code: ensembl:ENSG00000146648
+          relation: relatedMatch
+        - coding:
+            system: https://www.ncbi.nlm.nih.gov/gene/
+            code: ncbigene:1956
+          relation: relatedMatch
 members:
   - vrs.json#/ga4gh:VA.7jX7fHgVEqx4C4jMRyZOH0ZBHnLn7_gJ
   - vrs.json#/ga4gh:VA.3_FsKSUHEdurPIw5gqpw6g0_Ga0TEXQh
