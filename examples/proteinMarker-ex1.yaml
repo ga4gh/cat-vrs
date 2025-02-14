@@ -1,0 +1,25 @@
+id: pr:p03372
+type: CategoricalVariant
+description: >-
+  An estrogen receptor that is encoded in the genome of human.
+label: Estrogen receptor
+constraints:
+  - type: FeatureContextConstraint
+    featureContext:
+      id: pr:p03372
+      conceptType: Protein
+      label: Estrogen receptor
+      primaryCode: hgnc:3236
+      mappings:
+        - coding:
+            system: https://proconsortium.org
+            code: pr:p03372
+          relation: exactMatch
+        - coding:
+            system: https://www.uniprot.org
+            code: p03372
+          relation: relatedMatch
+        - coding:
+            system: https://www.genenames.org
+            code: hgnc:3467
+          relation: relatedMatch
