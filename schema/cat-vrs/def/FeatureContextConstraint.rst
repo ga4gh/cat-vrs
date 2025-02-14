@@ -22,12 +22,12 @@ Some FeatureContextConstraint attributes are inherited from :ref:`Constraint`.
       - Limits
       - Description
    *  - type
-      - 
+      -
       - string
       - 1..1
       - MUST be "FeatureContextConstraint"
    *  - featureContext
-      - 
+      -
       - :ref:`MappableConcept`
       - 1..1
       - A feature identifier.
