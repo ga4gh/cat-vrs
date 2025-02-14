@@ -22,12 +22,12 @@ Some CopyCountConstraint attributes are inherited from :ref:`Constraint`.
       - Limits
       - Description
    *  - type
-      -
+      - 
       - string
       - 1..1
       - MUST be "CopyCountConstraint"
    *  - copies
-      -
+      - 
       - integer | :ref:`Range`
       - 1..1
       - The precise value or range of copies members of this categorical variant must satisfy.

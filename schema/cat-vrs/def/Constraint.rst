@@ -21,7 +21,7 @@ Constraints are used to construct an intensional semantics of categorical varian
       - Limits
       - Description
    *  - type
-      -
+      - 
       - string
       - 1..1
-      -
+      - 

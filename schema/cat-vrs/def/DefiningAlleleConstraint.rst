@@ -22,17 +22,17 @@ Some DefiningAlleleConstraint attributes are inherited from :ref:`Constraint`.
       - Limits
       - Description
    *  - type
-      -
+      - 
       - string
       - 1..1
       - MUST be "DefiningAlleleConstraint"
    *  - allele
-      -
+      - 
       - :ref:`Allele` | :ref:`iriReference`
       - 1..1
-      -
+      - 
    *  - relations
-      -
+      - 
                         .. raw:: html
 
                             <span style="background-color: #B2DFEE; color: black; padding: 2px 6px; border: 1px solid black; border-radius: 3px; font-weight: bold; display: inline-block; margin-bottom: 5px;" title="Unordered">&#8942;</span>
