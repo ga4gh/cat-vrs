@@ -14,7 +14,11 @@ constraints:
   - type: DefiningAlleleConstraint
     allele: vrs.json#/ga4gh:VA.kgjrhgf84CEndyLjKdAO0RxN-e3pJjxA
     relations:
-      - primaryCode: translates_from
+      - primaryCoding:
+          code: translation_of
+          system: http://www.sequenceontology.org
+          iris:
+            - http://www.sequenceontology.org/browser/current_release/term/translation_of
 members:
   - vrs.json#/ga4gh:VA.7jX7fHgVEqx4C4jMRyZOH0ZBHnLn7_gJ
   - vrs.json#/ga4gh:VA.3_FsKSUHEdurPIw5gqpw6g0_Ga0TEXQh

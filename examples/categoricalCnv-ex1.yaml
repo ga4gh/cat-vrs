@@ -15,9 +15,13 @@ constraints:
         refgetAccession: SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
         residueAlphabet: na
     relations:
-      - primaryCode: liftover_to
+      - primaryCoding:
+          code: liftover_to
+          system: ga4gh-gks-term:allele-relation
     matchCharacteristic:
-      primaryCode: is_within
+      primaryCoding:
+        code: is_within
+        system: ga4gh-gks-term:location-match
 extensions:
   - name: vrs processing errors
     value: "NC_000007.14:g.(?_5905831)_(6014161_?)dup: char 26: expected one of '=', 'con', 'copy', 'del', 'dup', 'ins', or 'inv'"
