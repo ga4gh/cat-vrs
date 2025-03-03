@@ -1,5 +1,5 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-snapshot.2025-02.1/recipes-source.yaml"
+$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-snapshot.2025-02.2/recipes-source.yaml"
 title: GA4GH-Cat-VRS-Recipe-Definitions
 type: object
 
@@ -28,8 +28,11 @@ $defs:
                         - contains:
                             type: object
                             properties:
-                              primaryCode:
-                                const: translates_from
+                              primaryCoding:
+                                code:
+                                  const: translation_of
+                                system:
+                                  const: http://www.sequenceontology.org
                       maxContains: 1
 
   CanonicalAllele:
@@ -55,13 +58,19 @@ $defs:
                         - contains:
                             type: object
                             properties:
-                              primaryCode:
-                                const: liftover_to
+                              primaryCoding:
+                                code:
+                                  const: liftover_to
+                                system:
+                                  const: ga4gh-gks-term:allele-relation
                         - contains:
                             type: object
                             properties:
-                              primaryCode:
-                                const: transcribes_to
+                              primaryCoding:
+                                code:
+                                  const: transcribed_to
+                                system:
+                                  const: http://www.sequenceontology.org
                       maxContains: 2
 
   CategoricalCnv:
@@ -86,8 +95,11 @@ $defs:
                         relations:
                           contains:
                             properties:
-                              primaryCode:
-                                const: liftover_to
+                              primaryCoding:
+                                code:
+                                  const: liftover_to
+                                system:
+                                  const: ga4gh-gks-term:allele-relation
               - contains:
                   oneOf:
                     - $ref: CopyCountConstraint

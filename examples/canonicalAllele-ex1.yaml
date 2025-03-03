@@ -42,8 +42,14 @@ constraints:
         - name: clinvar hgvs type
           value: genomic, top-level
     relations:
-      - primaryCode: liftover_to
-      - primaryCode: transcribes_to
+      - primaryCoding:
+          code: liftover_to
+          system: ga4gh-gks-term:allele-relation
+      - primaryCoding:
+          code: transcribed_to
+          system: http://www.sequenceontology.org
+          iris:
+            - http://www.sequenceontology.org/browser/current_release/term/transcribed_to
 mappings:
   - coding:
       code: CA915941124
