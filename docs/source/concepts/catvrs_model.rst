@@ -54,3 +54,8 @@ CopyChangeConstraint
 ####################
 
 .. include:: ../def/cat-vrs/CopyChangeConstraint.rst
+
+FeatureContextConstraint
+########################
+
+.. include:: ../def/cat-vrs/FeatureContextConstraint.rst
