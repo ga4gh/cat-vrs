@@ -8,8 +8,10 @@ constraints:
     featureContext:
       id: pr:p03372
       conceptType: Protein
-      label: Estrogen receptor
-      primaryCode: hgnc:3236
+      name: Estrogen receptor
+      primaryCoding:
+        code: hgnc:3236
+        system: https://www.genenames.org
       mappings:
         - coding:
             system: https://proconsortium.org

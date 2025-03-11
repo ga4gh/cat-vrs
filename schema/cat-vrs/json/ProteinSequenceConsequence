@@ -26,8 +26,13 @@
                                     "contains": {
                                        "type": "object",
                                        "properties": {
-                                          "primaryCode": {
-                                             "const": "translates_from"
+                                          "primaryCoding": {
+                                             "code": {
+                                                "const": "translation_of"
+                                             },
+                                             "system": {
+                                                "const": "http://www.sequenceontology.org"
+                                             }
                                           }
                                        }
                                     }
