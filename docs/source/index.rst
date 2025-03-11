@@ -31,6 +31,7 @@ Caveat emptor.
    introduction
    getting_involved
    concepts/index
+   how-cat-vrs-works
    impl-guide/index
    releases/index
    appendices/index
