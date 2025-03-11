@@ -68,6 +68,7 @@ $defs:
       - $ref: "#/$defs/DefiningLocationConstraint"
       - $ref: "#/$defs/CopyCountConstraint"
       - $ref: "#/$defs/CopyChangeConstraint"
+      - $ref: "#/$defs/FeatureContextConstraint"
     heritableProperties:
       type:
         type: string
@@ -185,3 +186,21 @@ $defs:
           - EFO:0030072
     required:
       - copyChange
+
+  FeatureContextConstraint:
+    maturity: draft
+    type: object
+    inherits: Constraint
+    description: >-
+      The feature that members of this categorical variant are associated with.
+    properties:
+      type:
+        extends: type
+        const: FeatureContextConstraint
+        default: FeatureContextConstraint
+        description: 'MUST be "FeatureContextConstraint"'
+      featureContext:
+        description: A feature identifier.
+        $refCurie: gks.core:MappableConcept
+    required:
+      - featureContext
