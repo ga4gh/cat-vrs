@@ -1,22 +1,22 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-snapshot.2025-02.2/json/Constraint",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-snapshot.2025-02.3/json/Constraint",
    "title": "Constraint",
    "type": "object",
    "maturity": "trial use",
    "description": "Constraints are used to construct an intensional semantics of categorical variant types.",
    "oneOf": [
       {
-         "$ref": "/ga4gh/schema/cat-vrs/1.0.0-snapshot.2025-02.2/json/CopyChangeConstraint"
+         "$ref": "/ga4gh/schema/cat-vrs/1.0.0-snapshot.2025-02.3/json/CopyChangeConstraint"
       },
       {
-         "$ref": "/ga4gh/schema/cat-vrs/1.0.0-snapshot.2025-02.2/json/CopyCountConstraint"
+         "$ref": "/ga4gh/schema/cat-vrs/1.0.0-snapshot.2025-02.3/json/CopyCountConstraint"
       },
       {
-         "$ref": "/ga4gh/schema/cat-vrs/1.0.0-snapshot.2025-02.2/json/DefiningAlleleConstraint"
+         "$ref": "/ga4gh/schema/cat-vrs/1.0.0-snapshot.2025-02.3/json/DefiningAlleleConstraint"
       },
       {
-         "$ref": "/ga4gh/schema/cat-vrs/1.0.0-snapshot.2025-02.2/json/DefiningLocationConstraint"
+         "$ref": "/ga4gh/schema/cat-vrs/1.0.0-snapshot.2025-02.3/json/DefiningLocationConstraint"
       }
    ]
 }
