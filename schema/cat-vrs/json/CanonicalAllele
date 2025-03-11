@@ -28,8 +28,13 @@
                                     "contains": {
                                        "type": "object",
                                        "properties": {
-                                          "primaryCode": {
-                                             "const": "liftover_to"
+                                          "primaryCoding": {
+                                             "code": {
+                                                "const": "liftover_to"
+                                             },
+                                             "system": {
+                                                "const": "ga4gh-gks-term:allele-relation"
+                                             }
                                           }
                                        }
                                     }
@@ -38,8 +43,13 @@
                                     "contains": {
                                        "type": "object",
                                        "properties": {
-                                          "primaryCode": {
-                                             "const": "transcribes_to"
+                                          "primaryCoding": {
+                                             "code": {
+                                                "const": "transcribed_to"
+                                             },
+                                             "system": {
+                                                "const": "http://www.sequenceontology.org"
+                                             }
                                           }
                                        }
                                     }

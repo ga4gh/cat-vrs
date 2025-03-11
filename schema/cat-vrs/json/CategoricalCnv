@@ -27,8 +27,13 @@
                                  "relations": {
                                     "contains": {
                                        "properties": {
-                                          "primaryCode": {
-                                             "const": "liftover_to"
+                                          "primaryCoding": {
+                                             "code": {
+                                                "const": "liftover_to"
+                                             },
+                                             "system": {
+                                                "const": "ga4gh-gks-term:allele-relation"
+                                             }
                                           }
                                        }
                                     }
