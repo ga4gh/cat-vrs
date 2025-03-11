@@ -20,28 +20,30 @@ constraints:
           iris:
             - http://www.sequenceontology.org/browser/current_release/term/translation_of
   - type: FeatureContextConstraint
-      featureContext:
-        id: normalize.gene.hgnc:3236
-        extensions:
-          - name: symbol_status
-            value: approved
-          - name: approved_name
-            value: epidermal growth factor receptor
-        conceptType: Gene
-        name: EGFR
-        primaryCode: hgnc:3236
-        mappings:
-          - coding:
-              system: https://www.genenames.org
-              code: hgnc:3236
-            relation: exactMatch
-          - coding:
-              system: https://www.ensembl.org
-              code: ensembl:ENSG00000146648
-            relation: relatedMatch
-          - coding:
-              system: https://www.ncbi.nlm.nih.gov/gene/
-              code: ncbigene:1956
+    featureContext:
+      id: normalize.gene.hgnc:3236
+      conceptType: Gene
+      name: EGFR
+      primaryCoding:
+        code: hgnc:3236
+        system: https://www.genenames.org
+      extensions:
+        - name: symbol_status
+          value: approved
+        - name: approved_name
+          value: epidermal growth factor receptor
+      mappings:
+        - coding:
+            system: https://www.genenames.org
+            code: hgnc:3236
+          relation: exactMatch
+        - coding:
+            system: https://www.ensembl.org
+            code: ensembl:ENSG00000146648
+          relation: relatedMatch
+        - coding:
+            system: https://www.ncbi.nlm.nih.gov/gene/
+            code: ncbigene:1956
           relation: relatedMatch
 members:
   - vrs.json#/ga4gh:VA.7jX7fHgVEqx4C4jMRyZOH0ZBHnLn7_gJ
