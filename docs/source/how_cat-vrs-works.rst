@@ -60,7 +60,7 @@ To return to the running example, the BRAF V600E categorical variant inlcudes as
 While a single categorical variant may have many assayed variant members, the same is true in the other direction.  A single assayed variant is a member of many possible categorical variants simultaneously.  While NC_000007.13:g.140453136A>T is a member of the BRAF V600E categorical variant, it is also a Change-of-Function variant, a protein missense variant, and a chromosome 7 variant, among other categorical variants.
 
 
-.. image:: images/relations-between-assayed-and-CatVars-and-CatVars-to-other-CatVars.png
+.. image:: images/Cat-VRS use_function figures - Figure 1.png
     :width: 80%
     :align: center
     :alt: The figure depicts a single centralized assayed variant, with arrows radiating out to a number of categorical variants to which it is a member.  Among these, the assayed variant NC_000007.13:g.140453136A>T is a BRAF V600E variant, a BRAF gene variant, and a chromosome 7 variant.
@@ -69,7 +69,7 @@ While a single categorical variant may have many assayed variant members, the sa
 Because a single categorical variant may have many assayed variants as members, while a single assayed variant can be a member of many categorical variants, different categorical have complex heirarchical relationships with each other.  the figure below depicts some of the relationships between some of the categorical variants to which NC_000007.13:g.140453136A>T is a member.  For example, all BRAF V600E variants are also BRAF gene variants.  And all BRAF V600E variants and BRAF gene variants are chromosome 7 variants.  A BRAF V600E variant is also an inframe protein variant, which is itself a type of sequence variant.
 
 
-.. image:: images/relations-between-assayed-and-CatVars-and-CatVars-to-other-CatVars(1).png
+.. image:: images/Cat-VRS use_function figures - Figure 2.png
     :width: 80%
     :align: center
     :alt: The figure depicts the same assayed variant and categorical variants as the previous figure, but with arrows added to show subset relationships between various categorical variants.  One arrow connects BRAF V600E variants to BRAF gene variants to show that all BRAF V600E variants are also members of the set of BRAF gene variants.  A simialr arrow shows that all BRAF gene variants are members of the set of chromosome 7 variants.
@@ -81,7 +81,7 @@ Because a single categorical variant may have many assayed variants as members, 
 To make categoricla variant matching even more complicated, it is often the case that identical labels across different resources in fact describe different categroical variants, as seen in the figure below where an ACT sequence has been inserted directly 3' of a ACTG sequence.  While this would not be considered a duplication variant in the HGVS nomenclature due to the intervening G base pair, it could appear in other resources as a duplication of the preceeding ACT sequence.  This implies that the catgorical variant descriptor "duplication" has different meanings across different resources.
 
 
-.. image:: images/CatVar-CatVar-matching.png
+.. image:: images/Cat-VRS use_function figures - Figure 3.png
     :width: 80%
     :align: center
     :alt: The figure depicts a hypothetical variant where an ACT sequence has been inserted directly 3' of a ACTG sequence.  While this would not be considered a duplication variant in the HGVS nomenclature due to the intervening G base pair, it could appear in other resources as a duplication of the preceeding ACT sequence, or alternately simply as an insertion of ACT.  This implies that the catgorical variant descriptor "duplication" has different meanings across different resources.
