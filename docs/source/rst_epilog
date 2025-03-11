@@ -9,9 +9,9 @@
 .. |catvrs_discussion| replace:: `Cat-VRS Discussion <https://github.com/ga4gh/cat-vrs/discussions>`__
 
 .. |catvrs| replace:: `Cat-VRS <https://cat-vrs.readthedocs.io/en/latest/>`__
-.. |catvrs_yaml| replace:: `Cat-VRS YAML <https://github.com/ga4gh/cat-vrs/tree/1.0.0-snapshot.2025-02/schema/cat-vrs/cat-vrs-source.yaml>`__
-.. |recipes_yaml| replace:: `Cat-VRS Recipes YAML <https://github.com/ga4gh/cat-vrs/tree/1.0.0-snapshot.2025-02/schema/cat-vrs/recipes-source.yaml>`__
-.. |catvrs_json| replace:: `Cat-VRS JSON <https://github.com/ga4gh/cat-vrs/tree/1.0.0-snapshot.2025-02/schema/cat-vrs/json>`__
+.. |catvrs_yaml| replace:: `Cat-VRS YAML <https://github.com/ga4gh/cat-vrs/tree/1.x/schema/cat-vrs/cat-vrs-source.yaml>`__
+.. |recipes_yaml| replace:: `Cat-VRS Recipes YAML <https://github.com/ga4gh/cat-vrs/tree/1.x/schema/cat-vrs/recipes-source.yaml>`__
+.. |catvrs_json| replace:: `Cat-VRS JSON <https://github.com/ga4gh/cat-vrs/tree/1.x/schema/cat-vrs/json>`__
 
 .. |eg| replace:: *e.g.,*
 .. |ie| replace:: *i.e.,*
