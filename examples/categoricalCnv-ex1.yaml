@@ -33,9 +33,9 @@ constraints:
         refgetAccession: SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
       start:
         - null
-        - '5905830'
+        - 5905830
       end:
-        - '6014161'
+        - 6014161
         - null
     relations:
       - primaryCoding:
@@ -76,20 +76,17 @@ members:
         refgetAccession: SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
       start:
         - null
-        - '5905830'
+        - 5905830
       end:
-        - '6014161'
+        - 6014161
         - null
     copyChange:
-      primaryCode: EFO:0030070
-      mappings:
-        - coding:
-            name: copy number gain
-            system: https://www.ebi.ac.uk/efo/
-            code: EFO:0030070
-            iris:
-              - https://www.ebi.ac.uk/ols4/ontologies/efo/classes?short_form=EFO_0030070
-          relation: exactMatch
+      name: copy number gain
+      primaryCoding:
+        system: https://www.ebi.ac.uk/efo/
+        code: EFO:0030070
+        iris:
+          - https://www.ebi.ac.uk/ols4/ontologies/efo/classes?short_form=EFO_0030070
   - id: ga4gh:CX.XfVcSnSqR2oJHzBMueTrgkMWg_UgbuBL
     type: CopyNumberChange
     name: NC_000007.13:g.(?_5945462)_(6053792_?)dup
@@ -107,17 +104,14 @@ members:
         refgetAccession: SQ.IW78mgV5Cqf6M24hy52hPjyyo5tCCd86
       start:
         - null
-        - '5945461'
+        - 5945461
       end:
-        - '6053792'
+        - 6053792
         - null
     copyChange:
-      primaryCode: EFO:0030070
-      mappings:
-        - coding:
-            name: copy number gain
-            system: https://www.ebi.ac.uk/efo/
-            code: EFO:0030070
-            iris:
-              - https://www.ebi.ac.uk/ols4/ontologies/efo/classes?short_form=EFO_0030070
-          relation: exactMatch
+      name: copy number gain
+      primaryCoding:
+        system: https://www.ebi.ac.uk/efo/
+        code: EFO:0030070
+        iris:
+          - https://www.ebi.ac.uk/ols4/ontologies/efo/classes?short_form=EFO_0030070

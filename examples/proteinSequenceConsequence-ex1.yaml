@@ -77,12 +77,8 @@ constraints:
       type: Allele
       name: NP_005219.2:p.Leu858Arg
       description: VRS variation of NP_005219.2:p.Leu858Arg, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
-      digest: ga4gh:VA.S41CcMJT2bcd8R4-qXZWH1PoHWNtG2PZ
+      digest: S41CcMJT2bcd8R4-qXZWH1PoHWNtG2PZ
       expressions:
-        - syntax: hgvs.g
-          value: NC_000007.13:g.55259515T>G
-        - syntax: hgvs.c
-          value: NM_005228.5:c.2573T>G
         - syntax: hgvs.p
           value: NP_005219.2:p.Leu858Arg
       location:
@@ -116,6 +112,7 @@ mappings:
       code: '33'
       iris:
         - https://civicdb.org/molecular-profiles/33/summary
+    relation: relatedMatch
   - coding:
       system: https://reg.clinicalgenome.org/
       code: CA126713

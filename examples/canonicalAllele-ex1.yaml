@@ -68,7 +68,7 @@ constraints:
           value: NM_004958.4:c.5992_5993del
         - syntax: hgvs.p
           value: NP_004949.1:p.Met1998fs
-      location: 
+      location:
         id: ga4gh:SL.gLe4d4Seuxn5fLCfO_2g34gF86vpGvo1
         type: SequenceLocation
         digest: gLe4d4Seuxn5fLCfO_2g34gF86vpGvo1
@@ -78,7 +78,7 @@ constraints:
         start: 6112
         end: 6114
         sequence: AT
-      state: 
+      state:
         type: ReferenceLengthExpression
         length: 0
         sequence: ''
@@ -117,7 +117,7 @@ mappings:
       iris:
         - https://www.ncbi.nlm.nih.gov/snp/rs1570942058
     relation: relatedMatch
-members: 
+members:
   - id: ga4gh:VA.PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
     type: Allele
     name: NC_000001.11:g.11128044_11128045del
@@ -151,7 +151,7 @@ members:
       sequence: ''
       repeatSubunitLength: 2
   - id: ga4gh:VA.0TMQdMT2OBisJ9FI4tkzaBtxGB7r8FfJ
-    type: Allele      
+    type: Allele
     name: NM_004958.4:c.5992_5993del
     description: VRS variation of NM_004958.4:c.5992_5993del, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
     extensions:
@@ -167,7 +167,7 @@ members:
         value: NM_004958.4:c.5992_5993del
       - syntax: hgvs.p
         value: NP_004949.1:p.Met1998fs
-    location: 
+    location:
       id: ga4gh:SL.gLe4d4Seuxn5fLCfO_2g34gF86vpGvo1
       type: SequenceLocation
       digest: gLe4d4Seuxn5fLCfO_2g34gF86vpGvo1
@@ -177,7 +177,7 @@ members:
       start: 6112
       end: 6114
       sequence: AT
-    state: 
+    state:
       type: ReferenceLengthExpression
       length: 0
       sequence: ''

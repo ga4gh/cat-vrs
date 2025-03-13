@@ -15,7 +15,7 @@ extensions:
     value: 17q21.31
   - name: clinvar variation type
     value: Duplication
-  - hgvs list:
+  - name: hgvs list
     value:
       - nucleotideExpression:
           syntax: hgvs.g
@@ -47,8 +47,6 @@ constraints:
       type: Allele
       name: NP_009225.1:p.Tyr1853Ter
       description: VRS variation of NP_009225.1:p.Tyr1853Ter, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
-      aliases: ...
-      extensions: ...
       digest: BfZ-RbjStWkafMsFBcoSL0f4aAjHJU4n
       expressions:
         - syntax: hgvs.g
@@ -71,9 +69,13 @@ constraints:
         sequence: Y
       state:
         type: LiteralSequenceExpression
-        sequence: *
+        sequence: '*'
     relations:
-      - primaryCode: translates_from
+      - primaryCoding:
+          code: translation_of
+          system: http://www.sequenceontology.org
+          iris:
+            - http://www.sequenceontology.org/browser/current_release/term/translation_of
 mappings:
   - coding:
       system: https://www.ncbi.nlm.nih.gov/clinvar
@@ -98,8 +100,6 @@ members:
     type: Allele
     name: NC_000017.11:g.43045712dup
     description: VRS variation of NC_000017.11:g.43045712dup, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
-    aliases: ...
-    extensions: ...
     digest: ju31SHNY7xeTI244BcOS7J78dIek46xL
     expressions:
       - syntax: hgvs.g
@@ -129,8 +129,6 @@ members:
     type: Allele
     name: NC_000017.10:g.41197729dup
     description: VRS variation of NC_000017.10:g.41197729dup, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
-    aliases: ...
-    extensions: ...
     digest: UPNFCFuk1_6v7IzYbbQTV_PsYJ9WOwSa
     expressions:
       - syntax: hgvs.g
@@ -160,8 +158,6 @@ members:
     type: Allele
     name: NP_009225.1:p.Tyr1853Ter
     description: VRS variation of NP_009225.1:p.Tyr1853Ter, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
-    aliases: ...
-    extensions: ...
     digest: BfZ-RbjStWkafMsFBcoSL0f4aAjHJU4n
     expressions:
       - syntax: hgvs.g
@@ -184,4 +180,4 @@ members:
       sequence: Y
     state:
       type: LiteralSequenceExpression
-      sequence: *
+      sequence: '*'
