@@ -42,3 +42,5 @@ General Principles
   attributes are not part of the value object.  Such attributes are
   not considered when evaluating equality or creating computed
   identifiers.
+
+Additional substantive design decisions for Cat-VRS v1.0 can be found `in this document. <https://docs.google.com/document/d/1ad-BxjFsRHJjvoh_LeA-4fub7E8Rsvtl_d_EIYoudds/edit?usp=sharing>`_
