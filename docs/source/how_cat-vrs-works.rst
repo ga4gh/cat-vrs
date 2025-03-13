@@ -47,7 +47,7 @@ While support and reference tooling will continue to be built out as Cat-VRS gai
 
 An overview of Cat-VRS Python's core functions is depicted in the figure below.  Cat-VRS Python can take in Cat-VRS objects as JSON, convert them into Pydantic models for use in validation against a test suite.  Validated catvars can be converted back to JSON for broad compatibility with other Cat-VRS implementations or used in downstream Python-based informatics workflows.
 
-.. image:: images/Cat-VRS use_function figures - Figure 2.png
+.. image:: images/cat-vrs-use-figure-2.png
     :width: 80%
     :align: center
     :alt: This figure depicts a CatVar.JSON object being ingested into Cat-VRS Python and converted into a CatVar.py object via the to_pydantic() method.  Once there, the CatVar.py object can be validated by a test framework, and either validated or rejected with an error.  Once validated, CatVar.py objects can either be made available to other downstream python informatics workflows or else exported back to JSON format for other uses.
