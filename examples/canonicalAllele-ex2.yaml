@@ -1,0 +1,134 @@
+id: clingen:CA415424538
+type: CategoricalVariant
+name: NC_000001.11:g.1699974C>G
+description: ...
+aliases:
+  - NC_000001.11:g.1699974C>G
+  - NC_000001.10:g.1631413C>G
+extensions:
+  - name: cytogenetic location
+    value: 1p36.33
+  - name: hgvs list
+    value:
+      - nucleotideExpression:
+          syntax: hgvs.g
+          value: NC_000001.11:g.1699974C>G
+      - nucleotideExpression:
+          syntax: hgvs.g
+          value: NC_000001.10:g.1631413C>G
+constraints:
+  - type: DefiningAlleleConstraint
+    allele:
+      id: ga4gh:VA.WjRY1EXgci6Nd0M2yI86Ue_OOnfnb-Ss
+      type: Allele
+      name: NC_000001.11:g.1699974C>G
+      description: VRS Allele of NC_000001.11:g.1699974C>G, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+      aliases: ...
+      extensions: ...
+      digest: WjRY1EXgci6Nd0M2yI86Ue_OOnfnb-Ss
+      expressions:
+        - syntax: hgvs.g
+          value: NC_000001.11:g.1699974C>G
+      location:
+        id: ga4gh:SL.YmbtK6FLqlk2bLjpFwH-y7k4RLq_t7L3
+        type: SequenceLocation
+        digest: YmbtK6FLqlk2bLjpFwH-y7k4RLq_t7L3
+        sequenceReference:
+          type: SequenceReference
+          refgetAccession: SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
+        start: 1699973
+        end: 1699974
+        sequence: C
+      state:
+        type: LiteralSequenceExpression
+        sequence: G
+    relations:
+      - primaryCode: liftover_to
+      - primaryCode: transcribes_to
+mappings:
+  - coding:
+      system: https://reg.clinicalgenome.org/
+      code: CA415424538
+      iris:
+        - https://reg.clinicalgenome.org/redmine/projects/registry/genboree_registry/by_caid?caid=CA415424538
+    relation: exactMatch
+  - coding:
+      system: https://www.ncbi.nlm.nih.gov/snp/
+      code: rs1391950675
+      iris:
+        - https://www.ncbi.nlm.nih.gov/snp/rs1391950675
+    relation: relatedMatch
+  - coding:
+      system: https://gnomad.broadinstitute.org
+      code: 1-1631413-C-G
+      iris:
+        - https://gnomad.broadinstitute.org/variant/1-1631413-C-G?dataset=gnomad_r2_1
+      extensions:
+        - name: dataset
+          value: gnomad_r2_1
+    relation: relatedMatch
+  - coding:
+      system: https://gnomad.broadinstitute.org
+      code: 1-1699974-C-G
+      iris:
+        - https://gnomad.broadinstitute.org/variant/1-1699974-C-G?dataset=gnomad_r3
+      extensions:
+        - name: dataset
+          value: gnomad_r3
+    relation: relatedMatch
+  - coding:
+      system: https://gnomad.broadinstitute.org
+      code: chr1-1699974-C-G
+      iris:
+        - https://gnomad.broadinstitute.org/variant/chr1-1699974-C-G?dataset=gnomad_r4
+      extensions:
+        - name: dataset
+          value: gnomad_r4
+    relation: relatedMatch
+members:
+  - id: ga4gh:VA.WjRY1EXgci6Nd0M2yI86Ue_OOnfnb-Ss
+    type: Allele
+    name: NC_000001.11:g.1699974C>G
+    description: VRS variation of NC_000001.11:g.1699974C>G, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+    aliases: ...
+    extensions: ...
+    digest: WjRY1EXgci6Nd0M2yI86Ue_OOnfnb-Ss
+    expressions:
+      - syntax: hgvs.g
+        value: NC_000001.11:g.1699974C>G
+    location:
+      id: ga4gh:SL.YmbtK6FLqlk2bLjpFwH-y7k4RLq_t7L3
+      type: SequenceLocation
+      digest: YmbtK6FLqlk2bLjpFwH-y7k4RLq_t7L3
+      sequenceReference:
+        type: SequenceReference
+        refgetAccession: SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
+      start: 1699973
+      end: 1699974
+      sequence: C
+    state:
+      type: LiteralSequenceExpression
+      sequence: G
+  - id: ga4gh:VA.WW0r6Dh-z_ftn9yS-i0f1Y62JNCpVed2
+    type: Allele
+    name: NC_000001.10:g.1631413C>G
+    description: VRS variation of NC_000001.10:g.1631413C>G, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+    aliases: ...
+    extensions: ...
+    digest: ga4gh:VA.WW0r6Dh-z_ftn9yS-i0f1Y62JNCpVed2
+    expressions:
+      - syntax: hgvs.g
+        value: NC_000001.10:g.1631413C>G
+    location:
+      id: ga4gh:SL.QsC4TgLsfR6-TatBj1sVKAgfv9bGYSxb
+      type: SequenceLocation
+      digest: QsC4TgLsfR6-TatBj1sVKAgfv9bGYSxb
+      sequenceReference:
+        type: SequenceReference
+        refgetAccession: SQ.S_KjnFVz-FE7M0W6yoaUDgYxLPc1jyWU
+      start: 1631412
+      end: 1631413
+      sequence: C
+    state:
+      type: LiteralSequenceExpression
+      sequence: G
