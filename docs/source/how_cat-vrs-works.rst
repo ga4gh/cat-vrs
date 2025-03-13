@@ -12,7 +12,7 @@ Variant Matching and Knowledge Integration
 
 .. Knowledgebase Entries as CatVars
 
-Entries in genomics knowledgebases typically pertain to sets of assayed variation, and are therefore categorical variants by definition.  However, with a myriad of ideosyncratic representations, they are extremely difficult to match.
+Entries in genomics knowledgebases typically pertain to sets of assayed variation, and are therefore categorical variants by definition.  However, with a myriad of idiosyncratic representations, they are extremely difficult to match.
 
 .. Categorical Representations of Assayed Variants
 
