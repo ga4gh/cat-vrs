@@ -4,7 +4,7 @@ How Cat-VRS Works
 
 .. Short Problem statement.
 
-The constraint-based data model of Cat-VRS allows for the precise, flexible, and computable representation of catvars.  In this section, we discuss how this constriant-based Cat-VRS data model model addresses our use cases.
+The constraint-based data model of Cat-VRS allows for the precise, flexible, and computable representation of catvars.  In this section, we discuss how this constraint-based Cat-VRS data model model addresses our use cases.
 
 Variant Matching and Knowledge Integration
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
