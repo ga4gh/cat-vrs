@@ -33,7 +33,7 @@ The figure below shows how variant matching via Cat-VRS effectuates knowledge in
 The ability of Cat-VRS to match between catvars derives from the same formal elements that mediate the flexibility and precision of the data model itself, the constraints.  The constraints in a catvar intensionally define its set of member variants.  Therefore, to compare sets for matching, we need only to compare the constraints of those respective catvars.  In this manner, it is straightforward to compute the relationship, if any, between any two given catvars in Cat-VRS, as demonstrated below.
 
 
-.. image:: images/Cat-VRS use_function figures - Figure 3.png
+.. image:: images/cat-vrs-use-figure-3.png
     :width: 80%
     :align: center
     :alt: This figure depicts two CatVars, X and Y, which are being compared via their constraints.  The FeatureContextConstraint is identical in both cases, meaning that both CarVars relate to the same feature in the genome, in this case, the EGFR Gene.  The difference in the CopyCountConstraint, however, shows that the feature copies required for CatVar X, 4, is a sub-range of that for CatVar Y, 3-7, and so therefore CatVar X is a proper subset of CatVar Y.
