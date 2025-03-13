@@ -55,7 +55,6 @@ constraints:
       type: Allele
       name: NM_004958.4:c.5992_5993del
       description: VRS variation of NC_000001.11:g.11128044_11128045del, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
-      aliases: ...
       extensions:
         - name: clinvar vcf
           value: 1-11128043-CAT-C
@@ -85,8 +84,14 @@ constraints:
         sequence: ''
         repeatSubunitLength: 2
     relations:
-      - primaryCode: liftover_to
-      - primaryCode: transcribes_to
+      - primaryCoding:
+          code: liftover_to
+          system: ga4gh-gks-term:allele-relation
+      - primaryCoding:
+          code: transcribed_to
+          system: http://www.sequenceontology.org
+          iris:
+            - http://www.sequenceontology.org/browser/current_release/term/transcribed_to
 mappings:
   - coding:
       system: https://www.ncbi.nlm.nih.gov/clinvar
@@ -117,7 +122,6 @@ members:
     type: Allele
     name: NC_000001.11:g.11128044_11128045del
     description: VRS variation of NC_000001.11:g.11128044_11128045del, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
-    aliases: ...
     extensions:
       - name: clinvar_vcf
         value: 1-11128043-CAT-C
@@ -150,7 +154,6 @@ members:
     type: Allele      
     name: NM_004958.4:c.5992_5993del
     description: VRS variation of NM_004958.4:c.5992_5993del, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
-    aliases: ...
     extensions:
       - name: clinvar vcf
         value: 1-11128043-CAT-C

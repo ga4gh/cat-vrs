@@ -23,8 +23,6 @@ constraints:
       type: Allele
       name: NC_000001.11:g.1699974C>G
       description: VRS Allele of NC_000001.11:g.1699974C>G, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
-      aliases: ...
-      extensions: ...
       digest: WjRY1EXgci6Nd0M2yI86Ue_OOnfnb-Ss
       expressions:
         - syntax: hgvs.g
@@ -43,8 +41,14 @@ constraints:
         type: LiteralSequenceExpression
         sequence: G
     relations:
-      - primaryCode: liftover_to
-      - primaryCode: transcribes_to
+      - primaryCoding:
+          code: liftover_to
+          system: ga4gh-gks-term:allele-relation
+      - primaryCoding:
+          code: transcribed_to
+          system: http://www.sequenceontology.org
+          iris:
+            - http://www.sequenceontology.org/browser/current_release/term/transcribed_to
 mappings:
   - coding:
       system: https://reg.clinicalgenome.org/
@@ -90,8 +94,6 @@ members:
     type: Allele
     name: NC_000001.11:g.1699974C>G
     description: VRS variation of NC_000001.11:g.1699974C>G, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
-    aliases: ...
-    extensions: ...
     digest: WjRY1EXgci6Nd0M2yI86Ue_OOnfnb-Ss
     expressions:
       - syntax: hgvs.g
@@ -113,9 +115,7 @@ members:
     type: Allele
     name: NC_000001.10:g.1631413C>G
     description: VRS variation of NC_000001.10:g.1631413C>G, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
-    aliases: ...
-    extensions: ...
-    digest: ga4gh:VA.WW0r6Dh-z_ftn9yS-i0f1Y62JNCpVed2
+    digest: WW0r6Dh-z_ftn9yS-i0f1Y62JNCpVed2
     expressions:
       - syntax: hgvs.g
         value: NC_000001.10:g.1631413C>G

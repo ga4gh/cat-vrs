@@ -47,9 +47,13 @@ constraints:
         - '6014161'
         - null
     relations:
-      - primaryCode: liftover_to
+      - primaryCoding:
+          code: liftover_to
+          system: ga4gh-gks-term:allele-relation
     matchCharacteristic:
-      primaryCode: is_within
+      primaryCoding:
+        code: is_within
+        system: ga4gh-gks-term:location-match
 mappings:
   - coding:
       system: https://www.ncbi.nlm.nih.gov/clinvar
