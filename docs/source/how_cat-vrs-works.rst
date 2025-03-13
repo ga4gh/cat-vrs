@@ -45,7 +45,7 @@ Both catvars X and Y in this example are composed of constraints.  And in this c
 
 While support and reference tooling will continue to be built out as Cat-VRS gains adoption and specific use cases are brought to the group, we do already have wheels on the ground in the form of `Cat-VRS python, which can be viewed in this github repository. <https://github.com/ga4gh/cat-vrs-python>`_
 
-An overview of Cat-VRs python's core functions is depicted in the figure below.  Cat-VRS python is capable of accepting JSON Cat-VRS objects, converting them into python pydantic models, and validating the variants against a test suite.  Validated catvars can be re-exported to JSON format for broad compatibility with other Cat-VRS implementations or made available downstream for further python-based informatics workflows.
+An overview of Cat-VRS Python's core functions is depicted in the figure below.  Cat-VRS Python can take in Cat-VRS objects as JSON, convert them into Pydantic models for use in validation against a test suite.  Validated catvars can be converted back to JSON for broad compatibility with other Cat-VRS implementations or used in downstream Python-based informatics workflows.
 
 .. image:: images/Cat-VRS use_function figures - Figure 2.png
     :width: 80%
