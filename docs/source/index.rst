@@ -29,9 +29,9 @@ Caveat emptor.
    :includehidden:
 
    introduction
+   how_cat_vrs_works
    getting_involved
    concepts/index
-   how_cat_vrs_works
    impl-guide/index
    releases/index
    appendices/index
