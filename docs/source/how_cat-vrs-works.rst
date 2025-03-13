@@ -56,4 +56,4 @@ Discussion
 @@@@@@@@@@
 
 
-In summary, the very formal components of the Cat-VRS data model that are required to allow for the precise, flexible, and computable representation of categorical varaints, the constraints, can also be leveraged in implementations of Cat-VRS to address our core use cases in assayed-to-categorical matching, categorical-to-categorical variant matching, and knowledge integration and curation.
+In summary, the very formal components of the Cat-VRS data model that are required to allow for the precise, flexible, and computable representation of categorical variants, the constraints, can also be leveraged in implementations of Cat-VRS to address our core use cases in assayed-to-categorical matching, categorical-to-categorical variant matching, and knowledge integration and curation.
