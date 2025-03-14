@@ -16,17 +16,10 @@
          "$ref": "/ga4gh/schema/cat-vrs/1.0.0-snapshot.2025-02.3/json/DefiningAlleleConstraint"
       },
       {
-<<<<<<< HEAD
          "$ref": "/ga4gh/schema/cat-vrs/1.0.0-snapshot.2025-02.3/json/DefiningLocationConstraint"
       },
       {
          "$ref": "/ga4gh/schema/cat-vrs/1.0.0-snapshot.2025-02.3/json/FeatureContextConstraint"
-=======
-         "$ref": "/ga4gh/schema/cat-vrs/1.x/json/DefiningLocationConstraint"
-      },
-      {
-         "$ref": "/ga4gh/schema/cat-vrs/1.x/json/FeatureContextConstraint"
->>>>>>> 1.x
       }
    ]
 }
