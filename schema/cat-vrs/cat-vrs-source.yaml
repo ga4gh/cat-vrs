@@ -176,6 +176,7 @@ $defs:
           The relative assessment of the change in copies that members of
           this categorical variant satisfies.
         $refCurie: gks.core:MappableConcept
+        $refCurie: gks.core:MappableConcept
     required:
       - copyChange
 

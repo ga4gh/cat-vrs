@@ -133,3 +133,6 @@ dmypy.json
 
 # Pipfile
 Pipfile*
+
+# .DS_Store
+.DS_Store
