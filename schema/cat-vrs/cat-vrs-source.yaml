@@ -174,16 +174,7 @@ $defs:
         description: >-
           The relative assessment of the change in copies that members of
           this categorical variant satisfies.
-        type: string
-        enum:
-          - EFO:0030069
-          - EFO:0020073
-          - EFO:0030068
-          - EFO:0030067
-          - EFO:0030064
-          - EFO:0030070
-          - EFO:0030071
-          - EFO:0030072
+        $refCurie: gks.core:MappableConcept
     required:
       - copyChange
 

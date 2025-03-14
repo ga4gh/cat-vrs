@@ -28,6 +28,6 @@ Some CopyChangeConstraint attributes are inherited from :ref:`Constraint`.
       - MUST be "CopyChangeConstraint"
    *  - copyChange
       -
-      - string
+      - :ref:`MappableConcept`
       - 1..1
       - The relative assessment of the change in copies that members of this categorical variant satisfies.
