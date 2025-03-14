@@ -1,6 +1,6 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.x/json/CopyCountConstraint",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.1/json/CopyCountConstraint",
    "title": "CopyCountConstraint",
    "type": "object",
    "maturity": "trial use",
@@ -16,7 +16,7 @@
          "description": "The precise value or range of copies members of this categorical variant must satisfy.",
          "oneOf": [
             {
-               "$ref": "/ga4gh/schema/vrs/2.x/json/Range"
+               "$ref": "/ga4gh/schema/vrs/2.0.0-snapshot.2025-02.4/json/Range"
             },
             {
                "type": "integer"

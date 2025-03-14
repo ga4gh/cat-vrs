@@ -1,5 +1,5 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.x/recipes-source.yaml"
+$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.1/recipes-source.yaml"
 title: GA4GH-Cat-VRS-Recipe-Definitions
 type: object
 
@@ -7,8 +7,8 @@ imports:
   cat-vrs: ./cat-vrs-source.yaml
 
 namespaces:
-  gks.core: /ga4gh/schema/gks-core/1.x/json/
-  vrs: /ga4gh/schema/vrs/2.x/json/
+  gks.core: /ga4gh/schema/gks-core/1.0.0/json/
+  vrs: /ga4gh/schema/vrs/2.0.0/json/
 
 $defs:
   ProteinSequenceConsequence:

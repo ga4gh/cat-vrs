@@ -1,6 +1,6 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.x/json/DefiningLocationConstraint",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.1/json/DefiningLocationConstraint",
    "title": "DefiningLocationConstraint",
    "type": "object",
    "maturity": "trial use",
@@ -15,10 +15,10 @@
       "location": {
          "oneOf": [
             {
-               "$ref": "/ga4gh/schema/gks-core/1.x/json/iriReference"
+               "$ref": "/ga4gh/schema/gks-core/1.0.0-snapshot.2025-02.4/json/iriReference"
             },
             {
-               "$ref": "/ga4gh/schema/vrs/2.x/json/SequenceLocation"
+               "$ref": "/ga4gh/schema/vrs/2.0.0-snapshot.2025-02.4/json/SequenceLocation"
             }
          ]
       },
@@ -26,13 +26,13 @@
          "type": "array",
          "ordered": false,
          "items": {
-            "$ref": "/ga4gh/schema/gks-core/1.x/json/MappableConcept"
+            "$ref": "/ga4gh/schema/gks-core/1.0.0-snapshot.2025-02.4/json/MappableConcept"
          },
          "description": "Defined relationships from which members relate to the defining location."
       },
       "matchCharacteristic": {
          "description": "A characteristic of the location that is used to match the defining location to member locations.",
-         "$ref": "/ga4gh/schema/gks-core/1.x/json/MappableConcept"
+         "$ref": "/ga4gh/schema/gks-core/1.0.0-snapshot.2025-02.4/json/MappableConcept"
       }
    },
    "required": [
