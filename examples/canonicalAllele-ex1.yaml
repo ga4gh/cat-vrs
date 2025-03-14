@@ -1,122 +1,25 @@
 id: clinvar:662001
-name: NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs)
 type: CategoricalVariant
-constraints:
-  - type: DefiningAlleleConstraint
-    allele:
-      id: ga4gh:VA.PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
-      type: Allele
-      digest: PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
-      name: 'NC_000001.11:11128043:AT:'
-      location:
-        id: ga4gh:SL.5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
-        type: SequenceLocation
-        digest: 5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
-        start: 11128043
-        end: 11128045
-        sequenceReference:
-          id: NC_000001.11
-          type: SequenceReference
-          refgetAccession: SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
-          residueAlphabet: na
-          extensions:
-            - name: assembly
-              value: GRCh38
-            - name: chromosome
-              value: '1'
-      state:
-        length: 0
-        repeatSubunitLength: 2
-        sequence: ''
-        type: ReferenceLengthExpression
-      expressions:
-        - syntax: spdi
-          value: 'NC_000001.11:11128043:AT:'
-        - syntax: hgvs.g
-          value: NC_000001.11:g.11128044_11128045del
-        - syntax: gnomad
-          value: 1-11128043-CAT-C
-      extensions:
-        - name: clinvar vcf
-          value: 1-11128043-CAT-C
-        - name: clinvar hgvs type
-          value: genomic, top-level
-    relations:
-      - primaryCoding:
-          code: liftover_to
-          system: ga4gh-gks-term:allele-relation
-      - primaryCoding:
-          code: transcribed_to
-          system: http://www.sequenceontology.org
-          iris:
-            - http://www.sequenceontology.org/browser/current_release/term/transcribed_to
-mappings:
-  - coding:
-      code: CA915941124
-      system: https://reg.clinicalgenome.org/
-    relation: closeMatch
-  - coding:
-      code: hg38/rs1570942058
-      system: https://varsome.com/variant/
-    relation: relatedMatch
-  - coding:
-      code: rs1570942058
-      system: https://www.ncbi.nlm.nih.gov/snp/
-    relation: relatedMatch
-members:
-  - id: ga4gh:VA.PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
-    type: Allele
-    digest: PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
-    name: 'NC_000001.11:11128043:AT:'
-    location:
-      id: ga4gh:SL.5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
-      type: SequenceLocation
-      digest: 5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
-      start: 11128043
-      end: 11128045
-      sequenceReference:
-        id: NC_000001.11
-        type: SequenceReference
-        refgetAccession: SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
-        residueAlphabet: na
-        extensions:
-          - name: assembly
-            value: GRCh38
-          - name: chromosome
-            value: '1'
-    state:
-      type: ReferenceLengthExpression
-      length: 0
-      repeatSubunitLength: 2
-      sequence: ''
-    expressions:
-      - syntax: spdi
-        value: 'NC_000001.11:11128043:AT:'
-      - syntax: hgvs.g
-        value: NC_000001.11:g.11128044_11128045del
-      - syntax: gnomad
-        value: 1-11128043-CAT-C
-    extensions:
-      - name: clinvar vcf
-        value: 1-11128043-CAT-C
-      - name: clinvar hgvs type
-        value: genomic, top-level
+name: NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs)
+description: ...
+aliases:
+  - NM_004958.4:c.5992_5993del
+  - NC_000001.11:g.11128044_11128045del
+  - NC_000001.10:g.11188101_11188102del
+  - NP_004949.3:p.Met1998fs
+  - NG_033239.1:g.139507_139508del
+  - LRG_734:g.139507_139508del
+  - LRG_734t1:c.5992_5993del
 extensions:
   - name: cytogenetic location
     value: 1p36.22
   - name: clinvar variation type
     value: Deletion
-  - name: clinvar subclass type
-    value: SimpleAllele
   - name: hgvs list
     value:
       - nucleotideExpression:
           syntax: hgvs.g
           value: NC_000001.11:g.11128044_11128045del
-        nucleotideType: genomic, top-level
-      - nucleotideExpression:
-          syntax: hgvs.g
-          value: NC_000001.10:g.11188101_11188102del
         nucleotideType: genomic
       - nucleotideExpression:
           syntax: hgvs.c
@@ -127,9 +30,12 @@ extensions:
           syntax: hgvs.p
           value: NP_004949.3:p.Met1998fs
         molecularConsequence:
-          code: SO:0001589
-          system: http://www.sequenceontology.org/browser/current_release/term/
           name: frameshift_variant
+          system: http://www.sequenceontology.org/browser/
+          systemVersion: release_2.5.3
+          code: SO:0001589
+          iris:
+            - http://www.sequenceontology.org/browser/release_2.5.3/term/SO:0001589
       - nucleotideExpression:
           syntax: hgvs.g
           value: NG_033239.1:g.139507_139508del
@@ -142,3 +48,137 @@ extensions:
           syntax: hgvs.c
           value: LRG_734t1:c.5992_5993del
         nucleotideType: coding
+constraints:
+  - type: DefiningAlleleConstraint
+    allele:
+      id: ga4gh:VA.0TMQdMT2OBisJ9FI4tkzaBtxGB7r8FfJ
+      type: Allele
+      name: NM_004958.4:c.5992_5993del
+      description: VRS variation of NC_000001.11:g.11128044_11128045del, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+      extensions:
+        - name: clinvar vcf
+          value: 1-11128043-CAT-C
+      digest: 0TMQdMT2OBisJ9FI4tkzaBtxGB7r8FfJ
+      expressions:
+        - syntax: spdi
+          value: 'NC_000001.11:11128043:AT:'
+        - syntax: hgvs.g
+          value: NC_000001.11:g.11128044_11128045del
+        - syntax: hgvs.c
+          value: NM_004958.4:c.5992_5993del
+        - syntax: hgvs.p
+          value: NP_004949.1:p.Met1998fs
+      location:
+        id: ga4gh:SL.gLe4d4Seuxn5fLCfO_2g34gF86vpGvo1
+        type: SequenceLocation
+        digest: gLe4d4Seuxn5fLCfO_2g34gF86vpGvo1
+        sequenceReference:
+          type: SequenceReference
+          refgetAccession: SQ.QheGYEnKbwNpM3LulbPTBQhyBSyZwuYm
+        start: 6112
+        end: 6114
+        sequence: AT
+      state:
+        type: ReferenceLengthExpression
+        length: 0
+        sequence: ''
+        repeatSubunitLength: 2
+    relations:
+      - primaryCoding:
+          code: liftover_to
+          system: ga4gh-gks-term:allele-relation
+      - primaryCoding:
+          code: transcribed_to
+          system: http://www.sequenceontology.org
+          iris:
+            - http://www.sequenceontology.org/browser/current_release/term/transcribed_to
+mappings:
+  - coding:
+      system: https://www.ncbi.nlm.nih.gov/clinvar
+      code: '662001'
+      iris:
+        - https://www.ncbi.nlm.nih.gov/clinvar/variation/662001
+    relation: exactMatch
+  - coding:
+      system: https://reg.clinicalgenome.org
+      code: CA915941124
+      iris:
+        - https://reg.clinicalgenome.org/redmine/projects/registry/genboree_registry/by_canonicalid?canonicalid=CA915941124
+    relation: relatedMatch
+  - coding:
+      system: https://varsome.com
+      code: hg38/rs1570942058
+      iris:
+        - https://varsome.com/variant/hg38/rs1570942058
+    relation: relatedMatch
+  - coding:
+      system: https://www.ncbi.nlm.nih.gov/snp
+      code: rs1570942058
+      iris:
+        - https://www.ncbi.nlm.nih.gov/snp/rs1570942058
+    relation: relatedMatch
+members:
+  - id: ga4gh:VA.PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
+    type: Allele
+    name: NC_000001.11:g.11128044_11128045del
+    description: VRS variation of NC_000001.11:g.11128044_11128045del, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+    extensions:
+      - name: clinvar_vcf
+        value: 1-11128043-CAT-C
+    digest: PN-6_l2_yI1UPBRCtFnWkR52iZXKVJ8b
+    expressions:
+      - syntax: spdi
+        value: 'NC_000001.11:11128043:AT:'
+      - syntax: hgvs.g
+        value: NC_000001.11:g.11128044_11128045del
+      - syntax: hgvs.c
+        value: NM_004958.4:c.5992_5993del
+      - syntax: hgvs.p
+        value: NP_004949.1:p.Met1998fs
+    location:
+      id: ga4gh:SL.5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
+      type: SequenceLocation
+      digest: 5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
+      sequenceReference:
+        type: SequenceReference
+        refgetAccession: SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
+      start: 11128043
+      end: 11128045
+      sequence: AT
+    state:
+      type: ReferenceLengthExpression
+      length: 0
+      sequence: ''
+      repeatSubunitLength: 2
+  - id: ga4gh:VA.0TMQdMT2OBisJ9FI4tkzaBtxGB7r8FfJ
+    type: Allele
+    name: NM_004958.4:c.5992_5993del
+    description: VRS variation of NM_004958.4:c.5992_5993del, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+    extensions:
+      - name: clinvar vcf
+        value: 1-11128043-CAT-C
+    digest: 0TMQdMT2OBisJ9FI4tkzaBtxGB7r8FfJ
+    expressions:
+      - syntax: spdi
+        value: 'NC_000001.11:11128043:AT:'
+      - syntax: hgvs.g
+        value: NC_000001.11:g.11128044_11128045del
+      - syntax: hgvs.c
+        value: NM_004958.4:c.5992_5993del
+      - syntax: hgvs.p
+        value: NP_004949.1:p.Met1998fs
+    location:
+      id: ga4gh:SL.gLe4d4Seuxn5fLCfO_2g34gF86vpGvo1
+      type: SequenceLocation
+      digest: gLe4d4Seuxn5fLCfO_2g34gF86vpGvo1
+      sequenceReference:
+        type: SequenceReference
+        refgetAccession: SQ.QheGYEnKbwNpM3LulbPTBQhyBSyZwuYm
+      start: 6112
+      end: 6114
+      sequence: AT
+    state:
+      type: ReferenceLengthExpression
+      length: 0
+      sequence: ''
+      repeatSubunitLength: 2
