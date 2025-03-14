@@ -9,6 +9,8 @@ imports:
   vrs: ../vrs/vrs-source.yaml
 
 namespaces:
+  gks.core: /ga4gh/schema/gks-core/1.x/json/
+  vrs: /ga4gh/schema/vrs/2.x/json/
   gks.core: /ga4gh/schema/gks-core/1.0.0-snapshot.2025-02.4/json/
   vrs: /ga4gh/schema/vrs/2.0.0-snapshot.2025-02.4/json/
 
@@ -68,6 +70,7 @@ $defs:
       - $ref: "#/$defs/DefiningLocationConstraint"
       - $ref: "#/$defs/CopyCountConstraint"
       - $ref: "#/$defs/CopyChangeConstraint"
+      - $ref: "#/$defs/FeatureContextConstraint"
       - $ref: "#/$defs/FeatureContextConstraint"
     heritableProperties:
       type:
@@ -174,18 +177,27 @@ $defs:
         description: >-
           The relative assessment of the change in copies that members of
           this categorical variant satisfies.
-        type: string
-        enum:
-          - EFO:0030069
-          - EFO:0020073
-          - EFO:0030068
-          - EFO:0030067
-          - EFO:0030064
-          - EFO:0030070
-          - EFO:0030071
-          - EFO:0030072
+        $refCurie: gks.core:MappableConcept
     required:
       - copyChange
+
+  FeatureContextConstraint:
+    maturity: draft
+    type: object
+    inherits: Constraint
+    description: >-
+      The feature that members of this categorical variant are associated with.
+    properties:
+      type:
+        extends: type
+        const: FeatureContextConstraint
+        default: FeatureContextConstraint
+        description: 'MUST be "FeatureContextConstraint"'
+      featureContext:
+        description: A feature identifier.
+        $refCurie: gks.core:MappableConcept
+    required:
+      - featureContext
 
   FeatureContextConstraint:
     maturity: draft

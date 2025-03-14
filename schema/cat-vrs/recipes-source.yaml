@@ -6,6 +6,10 @@ type: object
 imports:
   cat-vrs: ./cat-vrs-source.yaml
 
+namespaces:
+  gks.core: /ga4gh/schema/gks-core/1.x/json/
+  vrs: /ga4gh/schema/vrs/2.x/json/
+
 $defs:
   ProteinSequenceConsequence:
     maturity: trial use
@@ -28,6 +32,11 @@ $defs:
                         - contains:
                             type: object
                             properties:
+                              primaryCoding:
+                                code:
+                                  const: translation_of
+                                system:
+                                  const: http://www.sequenceontology.org
                               primaryCoding:
                                 code:
                                   const: translation_of
@@ -63,9 +72,19 @@ $defs:
                                   const: liftover_to
                                 system:
                                   const: ga4gh-gks-term:allele-relation
+                              primaryCoding:
+                                code:
+                                  const: liftover_to
+                                system:
+                                  const: ga4gh-gks-term:allele-relation
                         - contains:
                             type: object
                             properties:
+                              primaryCoding:
+                                code:
+                                  const: transcribed_to
+                                system:
+                                  const: http://www.sequenceontology.org
                               primaryCoding:
                                 code:
                                   const: transcribed_to
@@ -95,6 +114,11 @@ $defs:
                         relations:
                           contains:
                             properties:
+                              primaryCoding:
+                                code:
+                                  const: liftover_to
+                                system:
+                                  const: ga4gh-gks-term:allele-relation
                               primaryCoding:
                                 code:
                                   const: liftover_to
