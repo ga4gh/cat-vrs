@@ -1,6 +1,6 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.1/json/CategoricalVariant",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/json/CategoricalVariant",
    "title": "CategoricalVariant",
    "type": "object",
    "maturity": "trial use",
@@ -53,7 +53,7 @@
                   "$ref": "/ga4gh/schema/gks-core/1.0.0/json/iriReference"
                },
                {
-                  "$ref": "/ga4gh/schema/vrs/2.0.0/json/Variation"
+                  "$ref": "/ga4gh/schema/vrs/2.0.1/json/Variation"
                }
             ]
          }
@@ -64,19 +64,19 @@
          "items": {
             "oneOf": [
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.1/json/CopyChangeConstraint"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/json/CopyChangeConstraint"
                },
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.1/json/CopyCountConstraint"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/json/CopyCountConstraint"
                },
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.1/json/DefiningAlleleConstraint"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/json/DefiningAlleleConstraint"
                },
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.1/json/DefiningLocationConstraint"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/json/DefiningLocationConstraint"
                },
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.1/json/FeatureContextConstraint"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/json/FeatureContextConstraint"
                }
             ]
          }

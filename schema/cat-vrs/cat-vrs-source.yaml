@@ -1,5 +1,5 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.1/cat-vrs-source.yaml"
+$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/cat-vrs-source.yaml"
 title: GA4GH-Cat-VRS-Definitions
 type: object
 strict: true
@@ -10,7 +10,7 @@ imports:
 
 namespaces:
   gks.core: /ga4gh/schema/gks-core/1.0.0/json/
-  vrs: /ga4gh/schema/vrs/2.0.0/json/
+  vrs: /ga4gh/schema/vrs/2.0.1/json/
 
 $defs:
 
@@ -174,7 +174,16 @@ $defs:
         description: >-
           The relative assessment of the change in copies that members of
           this categorical variant satisfies.
-        $refCurie: gks.core:MappableConcept
+        type: string
+        enum:
+          - complete genomic loss
+          - high-level loss
+          - low-level loss
+          - loss
+          - regional base ploidy
+          - gain
+          - low-level gain
+          - high-level gain
     required:
       - copyChange
 

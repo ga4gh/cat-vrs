@@ -1,6 +1,6 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.1/json/CopyChangeConstraint",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/json/CopyChangeConstraint",
    "title": "CopyChangeConstraint",
    "type": "object",
    "maturity": "draft",
@@ -14,7 +14,17 @@
       },
       "copyChange": {
          "description": "The relative assessment of the change in copies that members of this categorical variant satisfies.",
-         "$ref": "/ga4gh/schema/gks-core/1.0.0/json/MappableConcept"
+         "type": "string",
+         "enum": [
+            "complete genomic loss",
+            "high-level loss",
+            "low-level loss",
+            "loss",
+            "regional base ploidy",
+            "gain",
+            "low-level gain",
+            "high-level gain"
+         ]
       }
    },
    "required": [
