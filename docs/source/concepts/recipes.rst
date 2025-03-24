@@ -22,7 +22,7 @@ CanonicalAllele
 The CanonicalAllele is a :ref:`CategoricalVariant` with exactly one constraint:
 
 1. A :ref:`DefiningAlleleConstraint` with the `.relations` array containing both
-   `liftover_to` and `transcribes_to` codes. This constraint MUST refer to a genomic
+   `liftover_to` and `transcribed_to` codes. This constraint MUST refer to a genomic
    variant for the `allele`.
 
 .. _ProteinSequenceConsequence:
@@ -35,7 +35,7 @@ ProteinSequenceConsequence
 The ProteinSequenceConsequence is a :ref:`CategoricalVariant` with exactly one constraint:
 
 1. A :ref:`DefiningAlleleConstraint` with the `.relations` array containing only a
-   `translates_from` code. This constraint MUST refer to a protein variant for the `allele`.
+   `translation_of` code. This constraint MUST refer to a protein variant for the `allele`.
 
 .. _categorical-cnv:
 
