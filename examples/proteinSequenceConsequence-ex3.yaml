@@ -96,7 +96,7 @@ members:
     name: NM_004333.6:p.V600E
     description: VRS variation of NM_004333.6:p.V600E, generated with vrs-python Allele Translator.
     digest: ZrNgYT4HpqQEVmwCX6g5adrsVFM2ZTST
-    expression: 
+    expression:
       - syntax: hgvs.c
         value: NM_004333.6:c.1799T>A
       - syntax: hgvs.p
@@ -120,7 +120,7 @@ members:
     name: NM_004333.6:p.V600K
     description: VRS variation of NM_004333.6:p.V600K, generated with vrs-python Allele Translator.
     digest: envM7kFRn5wcCUsBlFjs9weUuFlrsW0j
-    expression: 
+    expression:
       - syntax: hgvs.c
         value: NM_004333.6:c.1798_1799delinsAA
       - syntax: hgvs.p
@@ -144,7 +144,7 @@ members:
     name: NM_004333.6:p.V600G
     description: VRS variation of NM_004333.6:p.V600G, generated with vrs-python Allele Translator.
     digest: 1_mPoiUp7O2ecg5VWUVlEUiGMPk63pIG
-    expression: 
+    expression:
       - syntax: hgvs.c
         value: NM_004333.6:c.1799T>G
       - syntax: hgvs.p
@@ -168,7 +168,7 @@ members:
     name: NM_004333.6:p.V600M
     description: VRS variation of NM_004333.6:p.V600M, generated with vrs-python Allele Translator.
     digest: MucMi_35ImmZmKRUMDdc7mDHzCpKAptE
-    expression: 
+    expression:
       - syntax: hgvs.c
         value: NM_004333.6:c.1798G>A
       - syntax: hgvs.p
