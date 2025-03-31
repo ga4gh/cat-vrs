@@ -16,7 +16,7 @@ type: CategoricalVariant
 
 # description: A free-text description of the entity
 description: >-
-  TP53 Copy Number Loss is a categorical copy-number variant resulting fromthe deletion of one copy of 
+  TP53 Copy Number Loss is a categorical copy-number variant resulting fromthe deletion of one copy of
   the TP53 Gene
 
 # Alternative name(s) for the Entity.
@@ -39,7 +39,7 @@ extensions:
 # and they are also described online: https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#constraint
 # For each categorical variant, there may be 0 to n constraints.
 constraints:
-  # The Featurecontextconstraint denotes the feature (e.g. gene, pseudogene, or sequence) that members of this 
+  # The Featurecontextconstraint denotes the feature (e.g. gene, pseudogene, or sequence) that members of this
   # categorical variant are associated with.
   - type: FeatureContextConstraint
     featureContext:
@@ -51,7 +51,7 @@ constraints:
           name: TP53
           # the type of feature being denoted: gene, pseudogene, sequence, region, etc
           conceptType: gene
-          # A list of extensions to the Entity, that allow for capture of information not directly supported by 
+          # A list of extensions to the Entity, that allow for capture of information not directly supported by
           # elements defined in the model.
           extensions:
             -
