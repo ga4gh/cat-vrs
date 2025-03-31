@@ -1,0 +1,125 @@
+# Read more about the Cat-VRS data model, here:
+# https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html
+
+# id: The ‘logical’ identifier of the Entity in the system of record, e.g. a UUID.
+# This ‘id’ is unique within a given system, but may or may not be globally unique outside the system.
+# It is used within a system to reference an object from another.
+id: 0
+
+# name: A primary name for the entity.
+name: BRAF V600
+
+type: CategoricalVariant
+
+# The types of CategoricalVariants are dictated by "recipes", found in schema/cat-vrs/recipes-source.yaml
+# Here, we describe a Protein Sequence Consequence for BRAF V600 variants
+
+
+# description: A free-text description of the entity
+description: >-
+  BRAF V600 variants are missense amino acid substitutions that result in Valine changed.
+  V600E is the most common substitution, but V600K, V600M, V600R, and V600G have also been observed.
+
+aliases:
+  - NM_004333.6(BRAF):p.Val600
+
+# extensions: A list of extensions to the Entity, that allow for capture of information not directly
+# supported by elements defined in the model.
+# The decision of how to structure extensions are left to implementers, though we recommend
+# documenting an implementation's use of extensions in the Standard Operating Procedure to
+# promote ease of use
+extensions:
+  -
+
+# constraints: A rule or set of rules that must bve satisfied for a Categorical Variant to be considered valid.
+# constraints are defined within schema/cat-vrs/cat-vrs-source.yaml
+# and they are also described online: https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#constraint
+# For each categorical variant, there may be 0 to n constraints.
+constraints:
+  # The DefiningAlleleConstraint describes variation relative to a VRS allele
+  # The VRS allele can be transcribed in full, or abbreviated with the notation vrs.json#/ga4gh:VA...
+  # Here, we first describe a DefiningAlleleConstraint in full before using an abbreviated notation to describe a second constraint
+  - type: DefiningLocationConstraint
+    location:
+      id: ga4gh:SL.t-3DrWALhgLdXHsupI-e-M00aL3HgK3y
+      name:
+      description:
+      aliases:
+      extensions:
+      digest: t-3DrWALhgLdXHsupI-e-M00aL3HgK3y
+      type: SequenceLocation
+      sequenceReference:
+        type: SequenceReference
+        refgetAccession: SQ.cQvw4UsHHRRlogxbWCB8W-mKD4AraM9y"
+      start:
+      end:
+      sequence:
+    relations:
+      primaryCoding:
+        code: translation_of
+        system: http://www.sequenceontology.org
+        iris:
+          - http://www.sequenceontology.org/browser/current_release/term/translation_of
+    matchCharacteristic:
+      primaryCoding:
+        code: is_within
+        system: ga4gh-gks-term:location-match
+  # TO DO: Here, we may need to have a NOT definingalleleconstraint
+
+# members: A non-exhaustive list of VRS variation Constraints that satisfy the constraints of this categorical variant.
+# Here, we are describing VRS alleles that satisfy BRAF V600
+# Note: I think that the description for members is supposed to be "VRS Alleles", not "VRS variation Constraints"
+# The VariantNormalizer is a useful API tool to retrieve VRS Alleles based on HGVS representation
+# https://normalize.cancervariants.org/variation
+members:
+  # BRAF V600E
+  - vrs.json#/ga4gh:VA.c-oRhbu7nDrBrSW2fPbFlDM15V6jiaho
+  - vrs.json#/ga4gh:VA.4XBXAxSAk-WyAu5H0S1-plrk_SCTW1PO
+  - vrs.json#/ga4gh:VA.PJu8CCaVzEyqXMAEcMNegyDWyvT_jzNn
+  - vrs.json#/ga4gh:VA.3ex0cvKXjHbq8NLuitOAfVwSPzqZUFrR
+  # BRAF V600K
+  - vrs.json#/ga4gh:VA.qJeD4kxFKawdSaqlk0rcJmk0m0K9bbYu
+  - vrs.json#/ga4gh:VA.ylNEQf1I19-sa3VCB4zn3jypvm0gk9z1
+  - vrs.json#/ga4gh:VA.ynzy9s_W0eels7UZR87DKpoYI_Bi9KpR
+  # BRAF V600G
+  - vrs.json#/ga4gh:VA.Rw9Bl-Uz8EtjHGVFYk2mcuZIUvMiyfeQ
+  - vrs.json#/ga4gh:VA.cjkXeq--MlOAC0hPCfQn7ZLrZiC9JaRv
+  - vrs.json#/ga4gh:VA.gowGhC_ZN63oRCNblij0sPlvNxdQ5CP_
+  - vrs.json#/ga4gh:VA.W5VAlOP3NQeXPcWonXuyPOgdAbAzQ1oU
+  # BRAF V600M
+  - vrs.json#/ga4gh:VA.zoukt8UEZGsg6heQUm3JaGR1zMxZ5Whi
+  - vrs.json#/ga4gh:VA.IkyggsZv-8_3vV-JFaPfSa1adXlFYxh0
+  - vrs.json#/ga4gh:VA.2udTmpuIR9ePA4x6RsJxcLX6jgwT1jvr
+  - vrs.json#/ga4gh:VA.p-q9MXODFFHXYBPt80tMepodACrsP9t7
+  # BRAF V600R
+  - vrs.json#/ga4gh:VA.pFgoup0Lzo2W2RkzK17QnNIduycIvKM8
+  - vrs.json#/ga4gh:VA.24QSb7aj80yWNc812Y6FOdLh42zQBL17
+  - vrs.json#/ga4gh:VA.v__bRpAZyFct4cUEhtoaf4gbk7Z2XCLl
+  - vrs.json#/ga4gh:VA.0iWKOmd-taURJribjYKaXDRXorLFiNfU
+
+# mappings: A list of mappings to concepts in terminologies or code systems.
+# Each mapping should include a coding and a relation.
+# Usually, this is intended to describe relations to concepts in _other_ websites or systems
+# For example, linking out to clinvar or dbSNP
+mappings:
+  - coding:
+      code: 13961
+      label: "NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)"
+      system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
+    relation: relatedMatch
+  - coding:
+      code: 40389
+      label: "NM_004333.6(BRAF):c.1799T>G (p.Val600Gly)"
+      system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
+  - coding:
+      code: 375941
+      label: "NM_004333.6(BRAF):c.1798_1799delinsAA (p.Val600Lys)"
+      system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
+  - coding:
+      code: 44815
+      label: "NM_004333.6(BRAF):c.1798G>A (p.Val600Met)"
+      system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
+  - coding:
+      code: 375940
+      label: "NM_004333.6(BRAF):c.1798_1799delinsAG (p.Val600Arg)"
+      system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
