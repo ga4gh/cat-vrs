@@ -46,3 +46,26 @@ members:
     name: GRCh38 (chrX:6978350_6996235-7564455_7594949)x3
   - type: CopyNumberChange
     name: GRCh37 (chrX:6896391_6914276-7482496_7512990)x3
+    #new member!
+  - id: ga4gh:CX.Xb6kSRqlCY2VS1QJeKxhWyGqPfpPigf3
+    name: NC_000023.11:g.(6978350_6996235)_(7564455_7594949)dup
+    description: VRS variation of NC_000023.11:g.(6978350_6996235)_(7564455_7594949)dup, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+    type: CopyNumberChange
+    digest: Xb6kSRqlCY2VS1QJeKxhWyGqPfpPigf3
+    expressions:
+      - syntax: hgvs.g
+        value: NC_000023.11:g.(6978350_6996235)_(7564455_7594949)dup
+    location: 
+      id: ga4gh:SL.XyercAFM_APQwFaDuPcXG5lHa4wUpkiL
+      type: SequenceLocation
+      digest: XyercAFM_APQwFaDuPcXG5lHa4wUpkiL
+      sequenceReference: 
+        type: SequenceReference
+        refgetAccession: SQ.w0WZEvgJF0zf_P4yyTzjjv9oW1z61HHP
+      start: 
+        -6978349
+        -6996234
+      end:
+        -7564455
+        -7594949
+    copyChange: gain
