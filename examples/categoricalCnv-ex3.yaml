@@ -63,9 +63,9 @@ members:
         type: SequenceReference
         refgetAccession: SQ.w0WZEvgJF0zf_P4yyTzjjv9oW1z61HHP
       start: 
-        -6978349
-        -6996234
+        - 6978349
+        - 6996234
       end:
-        -7564455
-        -7594949
+        - 7564455
+        - 7594949
     copyChange: gain
