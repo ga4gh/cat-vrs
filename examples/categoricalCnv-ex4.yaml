@@ -68,7 +68,7 @@ constraints:
 # then there exist vrs member variants, e.g. protein missense, or premature stop variants that would cause TP53 loss
 # and therefore be members of this categorical variant.
 members:
-  - 
+  -
 
 # mappings: A list of mappings to concepts in terminologies or code systems.
 # Each mapping should include a coding and a relation.
