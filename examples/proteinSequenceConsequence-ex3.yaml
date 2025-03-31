@@ -71,31 +71,128 @@ constraints:
 # Note: I think that the description for members is supposed to be "VRS Alleles", not "VRS variation Constraints"
 # The VariantNormalizer is a useful API tool to retrieve VRS Alleles based on HGVS representation
 # https://normalize.cancervariants.org/variation
+
 members:
-  # BRAF V600E
-  - vrs.json#/ga4gh:VA.c-oRhbu7nDrBrSW2fPbFlDM15V6jiaho
-  - vrs.json#/ga4gh:VA.4XBXAxSAk-WyAu5H0S1-plrk_SCTW1PO
-  - vrs.json#/ga4gh:VA.PJu8CCaVzEyqXMAEcMNegyDWyvT_jzNn
-  - vrs.json#/ga4gh:VA.3ex0cvKXjHbq8NLuitOAfVwSPzqZUFrR
-  # BRAF V600K
-  - vrs.json#/ga4gh:VA.qJeD4kxFKawdSaqlk0rcJmk0m0K9bbYu
-  - vrs.json#/ga4gh:VA.ylNEQf1I19-sa3VCB4zn3jypvm0gk9z1
-  - vrs.json#/ga4gh:VA.ynzy9s_W0eels7UZR87DKpoYI_Bi9KpR
-  # BRAF V600G
-  - vrs.json#/ga4gh:VA.Rw9Bl-Uz8EtjHGVFYk2mcuZIUvMiyfeQ
-  - vrs.json#/ga4gh:VA.cjkXeq--MlOAC0hPCfQn7ZLrZiC9JaRv
-  - vrs.json#/ga4gh:VA.gowGhC_ZN63oRCNblij0sPlvNxdQ5CP_
-  - vrs.json#/ga4gh:VA.W5VAlOP3NQeXPcWonXuyPOgdAbAzQ1oU
-  # BRAF V600M
-  - vrs.json#/ga4gh:VA.zoukt8UEZGsg6heQUm3JaGR1zMxZ5Whi
-  - vrs.json#/ga4gh:VA.IkyggsZv-8_3vV-JFaPfSa1adXlFYxh0
-  - vrs.json#/ga4gh:VA.2udTmpuIR9ePA4x6RsJxcLX6jgwT1jvr
-  - vrs.json#/ga4gh:VA.p-q9MXODFFHXYBPt80tMepodACrsP9t7
-  # BRAF V600R
-  - vrs.json#/ga4gh:VA.pFgoup0Lzo2W2RkzK17QnNIduycIvKM8
-  - vrs.json#/ga4gh:VA.24QSb7aj80yWNc812Y6FOdLh42zQBL17
-  - vrs.json#/ga4gh:VA.v__bRpAZyFct4cUEhtoaf4gbk7Z2XCLl
-  - vrs.json#/ga4gh:VA.0iWKOmd-taURJribjYKaXDRXorLFiNfU
+  - id: ga4gh:VA.ZrNgYT4HpqQEVmwCX6g5adrsVFM2ZTST
+    name: NM_004333.6:p.V600E
+    description: VRS variation of NM_004333.6:p.V600E, generated with vrs-python Allele Translator.
+    digest: ZrNgYT4HpqQEVmwCX6g5adrsVFM2ZTST
+    expression: 
+      - syntax: hgvs.c
+        value: NM_004333.6:c.1799T>A
+      - syntax: hgvs.p
+        value: NP_004324.2:p.Val600Glu
+      - syntax: hgvs.g
+        value: NC_000007.14:g.140753336A>T
+    type: Allele
+    location:
+      id: ga4gh:SL.1ReS370wzmC9PGTn13XrnG8Ot7UAKYuw
+      type: SequenceLocation
+      digest: 1ReS370wzmC9PGTn13XrnG8Ot7UAKYuw
+      sequenceReference:
+        type: SequenceReference
+        refgetAccession: SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+      start: 599
+      end: 600
+    state:
+      type: LiteralSequenceExpression
+      sequence: E
+  - id: ga4gh:VA.envM7kFRn5wcCUsBlFjs9weUuFlrsW0j
+    name: NM_004333.6:p.V600K
+    description: VRS variation of NM_004333.6:p.V600K, generated with vrs-python Allele Translator.
+    digest: envM7kFRn5wcCUsBlFjs9weUuFlrsW0j
+    expression: 
+      - syntax: hgvs.c
+        value: NM_004333.6:c.1798_1799delinsAA
+      - syntax: hgvs.p
+        value: NP_004324.2:p.Val600Lys
+      - syntax: hgvs.g
+        value: NC_000007.14:g.140753336_140753337delinsTT
+    type: Allele
+    location:
+      id: ga4gh:SL.1ReS370wzmC9PGTn13XrnG8Ot7UAKYuw
+      type: SequenceLocation
+      digest: 1ReS370wzmC9PGTn13XrnG8Ot7UAKYuw
+      sequenceReference:
+        type: SequenceReference
+        refgetAccession: SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+      start: 599
+      end: 600
+    state:
+      type: LiteralSequenceExpression
+      sequence: K
+  - id: ga4gh:VA.1_mPoiUp7O2ecg5VWUVlEUiGMPk63pIG
+    name: NM_004333.6:p.V600G
+    description: VRS variation of NM_004333.6:p.V600G, generated with vrs-python Allele Translator.
+    digest: 1_mPoiUp7O2ecg5VWUVlEUiGMPk63pIG
+    expression: 
+      - syntax: hgvs.c
+        value: NM_004333.6:c.1799T>G
+      - syntax: hgvs.p
+        value: NP_004324.2:p.Val600Gly
+      - syntax: hgvs.g
+        value: NC_000007.14:g.140753336A>C
+    type: Allele
+    location:
+      id: ga4gh:SL.1ReS370wzmC9PGTn13XrnG8Ot7UAKYuw
+      type: SequenceLocation
+      digest: 1ReS370wzmC9PGTn13XrnG8Ot7UAKYuw
+      sequenceReference:
+        type: SequenceReference
+        refgetAccession: SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+      start: 599
+      end: 600
+    state:
+      type: LiteralSequenceExpression
+      sequence: G
+  - id: ga4gh:VA.MucMi_35ImmZmKRUMDdc7mDHzCpKAptE
+    name: NM_004333.6:p.V600M
+    description: VRS variation of NM_004333.6:p.V600M, generated with vrs-python Allele Translator.
+    digest: MucMi_35ImmZmKRUMDdc7mDHzCpKAptE
+    expression: 
+      - syntax: hgvs.c
+        value: NM_004333.6:c.1798G>A
+      - syntax: hgvs.p
+        value: NP_004324.2:p.Val600Met
+      - syntax: hgvs.g
+        value: NC_000007.14:g.140753337C>T
+    type: Allele
+    location:
+      id: ga4gh:SL.1ReS370wzmC9PGTn13XrnG8Ot7UAKYuw
+      type: SequenceLocation
+      digest: 1ReS370wzmC9PGTn13XrnG8Ot7UAKYuw
+      sequenceReference:
+        type: SequenceReference
+        refgetAccession: SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+      start: 599
+      end: 600
+    state:
+      type: LiteralSequenceExpression
+      sequence: M
+  - id: ga4gh:VA.OQBfT7lTalDPobyrIdldVoV6KkHneOIP
+    name: NM_004333.6:p.V600R
+    description: VRS variation of NM_004333.6:p.V600R, generated with vrs-python Allele Translator.
+    digest: OQBfT7lTalDPobyrIdldVoV6KkHneOIP
+    expression:
+      - syntax: hgvs.c
+        value: NM_004333.6:
+      - syntax: hgvs.p
+        value: NP_004324.2:p.Val600Arg
+      - syntax: hgvs.g
+        value: NC_000007.14:
+    type: Allele
+    location:
+      id: ga4gh:SL.1ReS370wzmC9PGTn13XrnG8Ot7UAKYuw
+      type: SequenceLocation
+      digest: 1ReS370wzmC9PGTn13XrnG8Ot7UAKYuw
+      sequenceReference:
+        type: SequenceReference
+        refgetAccession: SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+      start: 599
+      end: 600
+    state:
+      type: LiteralSequenceExpression
+      sequence: R
 
 # mappings: A list of mappings to concepts in terminologies or code systems.
 # Each mapping should include a coding and a relation.
