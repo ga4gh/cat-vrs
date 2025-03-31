@@ -55,14 +55,14 @@ members:
     expressions:
       - syntax: hgvs.g
         value: NC_000023.11:g.(6978350_6996235)_(7564455_7594949)dup
-    location: 
+    location:
       id: ga4gh:SL.XyercAFM_APQwFaDuPcXG5lHa4wUpkiL
       type: SequenceLocation
       digest: XyercAFM_APQwFaDuPcXG5lHa4wUpkiL
-      sequenceReference: 
+      sequenceReference:
         type: SequenceReference
         refgetAccession: SQ.w0WZEvgJF0zf_P4yyTzjjv9oW1z61HHP
-      start: 
+      start:
         - 6978349
         - 6996234
       end:
