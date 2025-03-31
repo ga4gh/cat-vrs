@@ -1,0 +1,57 @@
+$schema: "https://json-schema.org/draft/2020-12/schema"
+$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/examples-source.yaml"
+title: GA4GH-Cat-VRS-examples
+type: object
+
+imports:
+  cat-vrs: ./cat-vrs-source.yaml
+
+namespaces:
+  gks.core: /ga4gh/schema/gks-core/1.0.0/json/
+  vrs: /ga4gh/schema/vrs/2.0.1/json/
+
+$defs:
+  example_categoricalCnv-ex3:
+    id: clingen:cacn42032202
+    type: CategoricalVariant
+    name: GRCh38 Xp22.31(chrX:6978350-7594949)x3
+    aliases:
+      - NC_000023.11:g.(6978350_6996235)_(7564455_7594949)dup(2)
+    extensions:
+      - name: cytogenetic location
+        value: Xp22.31
+    constraints:
+      - type: CopyCountConstraint
+        copies: 3
+      - type: DefiningLocationConstraint
+        location:
+          type: SequenceLocation
+          sequenceReference:
+            type: SequenceReference
+            refgetAccession: SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
+          start:
+            - 6978350
+            - 6996235
+          end:
+            - 7564455
+            - 7594949
+        relations:
+          - primaryCoding:
+              code: liftover_to
+              system: ga4gh-gks-term:allele-relation
+        matchCharacteristic:
+          primaryCoding:
+            code: is_within
+            system: ga4gh-gks-term:location-match
+    mappings:
+      - coding:
+          system: https://reg.clinicalgenome.org/
+          code: CACN42032202
+          iris:
+            - https://reg.clinicalgenome.org/redmine/projects/Registry/genboree_registry/by_canonicalid?canonicalid=CACN42032202
+        relation: exactMatch
+    members:
+      - type: CopyNumberChange
+        name: GRCh38 (chrX:6978350_6996235-7564455_7594949)x3
+      - type: CopyNumberChange
+        name: GRCh37 (chrX:6896391_6914276-7482496_7512990)x3
