@@ -20,4 +20,5 @@ jobs:
         stale-pr-message: >-
           This pull request was marked stale due to inactivity.
         days-before-stale: 90
+        days-before-close: -1
         exempt-issue-label: "Stayin' Alive"
