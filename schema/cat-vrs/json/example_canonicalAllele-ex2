@@ -1,7 +1,7 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/json/canonicalAllele-ex2",
-   "title": "canonicalAllele-ex2",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/json/example_canonicalAllele-ex2",
+   "title": "example_canonicalAllele-ex2",
    "type": "CategoricalVariant",
    "id": "clingen:CA415424538",
    "maturity": "trial use",

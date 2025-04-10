@@ -1,7 +1,7 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/json/canonicalAllele-ex1",
-   "title": "canonicalAllele-ex1",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/json/example_canonicalAllele-ex1",
+   "title": "example_canonicalAllele-ex1",
    "type": "CategoricalVariant",
    "id": "clinvar:662001",
    "maturity": "trial use",
