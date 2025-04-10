@@ -1,0 +1,20 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/json/example_describedVariant-ex1",
+   "title": "example_describedVariant-ex1",
+   "type": "CategoricalVariant",
+   "id": "clinvar:1177130",
+   "maturity": "trial use",
+   "description": "an example of a variant from ClinVar that the core Cat-VRS data model cannot yet precisely represent via constraints",
+   "name": "t(2;15)(q23.1;q25.3)",
+   "extensions": [
+      {
+         "name": "cytogenetic location",
+         "value": "2q23.1-23.2"
+      },
+      {
+         "name": "clinvar variation type",
+         "value": "Translocation"
+      }
+   ]
+}
