@@ -1,7 +1,7 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/json/example_categoricalCnv-ex1",
-   "title": "example_categoricalCnv-ex1",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/json/example_categoricalCnv-ex2",
+   "title": "example_categoricalCnv-ex2",
    "type": "CategoricalVariant",
    "id": "clinvar:151061",
    "maturity": "trial use",

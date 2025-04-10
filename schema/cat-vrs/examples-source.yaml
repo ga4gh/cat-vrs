@@ -339,7 +339,7 @@ $defs:
           type: LiteralSequenceExpression
           sequence: G
 
-  example_categoricalCnv-ex1:
+  example_categoricalCnv-ex2:
     id: clinvar:151061
     maturity: trial use
     description: >-
