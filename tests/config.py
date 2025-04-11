@@ -17,7 +17,7 @@ fixtures_path = root_path / 'examples'
 
 ga4gh_re = re.compile(r'.*\/ga4gh\/schema\/([\w\-\.]+)\/[\w\.]+\/(.*)$')
 
-def retrieve_rel_ref(ga4gh_regex_expression: str, ga4gh_reference: str) -> Resource:
+def retrieve_rel_ref(ga4gh_ref: str) -> Resource:
     """
     Retrieves a schema from an imported submodule (currently gks-core and vrs).
 
@@ -40,9 +40,9 @@ def retrieve_rel_ref(ga4gh_regex_expression: str, ga4gh_reference: str) -> Resou
     # Regular expression to identify submodules (I think?)
     # PyCharm thinks that the \ is a redundant regex character, may revisit that.
 
-    ga4gh_match = ga4gh_re.match(ga4gh_reference)
+    ga4gh_match = ga4gh_re.match(ga4gh_ref)
     if ga4gh_match is None:
-        raise ValueError(f'ga4gh_reference {ga4gh_reference} is not a root GA4GH reference')
+        raise ValueError(f'ga4gh_reference {ga4gh_ref} is not a root GA4GH reference')
 
     schema_module = ga4gh_match.group(1)
     local_path = ga4gh_match.group(2)
