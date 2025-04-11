@@ -144,7 +144,7 @@ for schema_path in paths:
         if schema_property_definition.get('maturity', '') == 'draft':
             continue
 
-        # Check for coverage of this copy
+        # Check for coverage of this property
         schema_coverage = assess_schema_coverage(
             coverage_dictionary=schema_coverage,
             name=schema_name,
