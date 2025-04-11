@@ -15,7 +15,9 @@ catvrs_schema_path = schema_path / "cat-vrs"
 test_path = root_path / 'tests'
 fixtures_path = root_path / 'examples'
 
-def retrieve_relative_reference(ga4gh_reference: str) -> Resource:
+ga4gh_re = re.compile(r'.*\/ga4gh\/schema\/([\w\-\.]+)\/[\w\.]+\/(.*)$')
+
+def retrieve_rel_ref(ga4gh_regex_expression: str, ga4gh_reference: str) -> Resource:
     """
     Retrieves a schema from an imported submodule (currently gks-core and vrs).
 
@@ -37,7 +39,6 @@ def retrieve_relative_reference(ga4gh_reference: str) -> Resource:
 
     # Regular expression to identify submodules (I think?)
     # PyCharm thinks that the \ is a redundant regex character, may revisit that.
-    ga4gh_re = re.compile(r'.*\/ga4gh\/schema\/([\w\-\.]+)\/[\w\.]+\/(.*)$')
 
     ga4gh_match = ga4gh_re.match(ga4gh_reference)
     if ga4gh_match is None:
@@ -52,7 +53,7 @@ def retrieve_relative_reference(ga4gh_reference: str) -> Resource:
 js_registry = Registry(
     # In the VA-spec example, they do not pass any arguments when providing
     # the retrieve_rel_ref (or retrieve_relative_reference) function
-    retrieve=retrieve_relative_reference
+    retrieve=retrieve_rel_ref
 )
 js_def = dict()
 validator = dict()
