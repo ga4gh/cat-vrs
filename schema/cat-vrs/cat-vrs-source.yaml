@@ -54,6 +54,9 @@ $defs:
         description: >-
           A list of mappings to concepts in terminologies or code systems. Each mapping should
           include a coding and a relation.
+    required:
+      - name
+      - type
 
   # =============================================================================
   # Constraint Definitions
@@ -69,7 +72,6 @@ $defs:
       - $ref: "#/$defs/CopyCountConstraint"
       - $ref: "#/$defs/CopyChangeConstraint"
       - $ref: "#/$defs/FeatureContextConstraint"
-      - $ref: "#/$defs/DescribedVariationConstraint"
     heritableProperties:
       type:
         type: string
@@ -205,30 +207,3 @@ $defs:
         $refCurie: gks.core:MappableConcept
     required:
       - featureContext
-
-  DescribedVariationConstraint:
-    maturity: draft
-    type: object
-    inherits: Constraint
-    description: >-
-      The unique name to identify and describe the variant
-      when no more formal option is available. This is a `last resort`
-      option to allow CategoricalVariants to be defined when no other
-      computationally valid option exists.
-    properties:
-      type:
-        extends: type
-        const: DescribedVariationConstraint
-        default: DescribedVariationConstraint
-        description: 'MUST be "DescribedVariationConstraint"'
-      name:
-        description: >-
-            A primary name for the categorical variation. This required property should provide a
-            short and descriptive textual representation of the concept. This value may also be used
-            as a display name for the categorical variation, but it is not a requirement.
-      description:
-        description: >-
-          A textual description of the domain of variation that should match the categorical
-          variation entity.
-    required:
-      - name

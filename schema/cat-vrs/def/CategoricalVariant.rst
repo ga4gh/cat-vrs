@@ -29,7 +29,7 @@ Some CategoricalVariant attributes are inherited from :ref:`gks-core:Entity`.
    *  - name
       -
       - string
-      - 0..1
+      - 1..1
       - A primary name for the entity.
    *  - description
       -

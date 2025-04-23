@@ -19,9 +19,6 @@
          "$ref": "/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/json/DefiningLocationConstraint"
       },
       {
-         "$ref": "/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/json/DescribedVariationConstraint"
-      },
-      {
          "$ref": "/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/json/FeatureContextConstraint"
       }
    ]
