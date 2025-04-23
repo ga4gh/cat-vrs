@@ -1,0 +1,27 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/json/DescribedVariationConstraint",
+   "title": "DescribedVariationConstraint",
+   "type": "object",
+   "maturity": "draft",
+   "description": "The unique name to identify and describe the variant when no more formal option is available. This is a `last resort` option to allow CategoricalVariants to be defined when no other computationally valid option exists.",
+   "properties": {
+      "type": {
+         "type": "string",
+         "const": "DescribedVariationConstraint",
+         "default": "DescribedVariationConstraint",
+         "description": "MUST be \"DescribedVariationConstraint\""
+      },
+      "name": {
+         "description": "A primary name for the categorical variation. This required property should provide a short and descriptive textual representation of the concept. This value may also be used as a display name for the categorical variation, but it is not a requirement."
+      },
+      "description": {
+         "description": "A textual description of the domain of variation that should match the categorical variation entity."
+      }
+   },
+   "required": [
+      "name",
+      "type"
+   ],
+   "additionalProperties": false
+}

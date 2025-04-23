@@ -9,6 +9,8 @@ tests:
     definition: CategoricalCnv
   - test_file: describedVariant-ex1.yaml
     definition: CategoricalVariant
+  - test_file: describedVariant-ex2.yaml
+    definition: CategoricalVariant
   - test_file: proteinSequenceConsequence-ex1.yaml
     definition: ProteinSequenceConsequence
   - test_file: proteinSequenceConsequence-ex2.yaml
