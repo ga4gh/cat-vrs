@@ -1,0 +1,105 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/json/example_categoricalCnv-ex2",
+   "title": "example_categoricalCnv-ex2",
+   "type": "CategoricalVariant",
+   "id": "clinvar:151061",
+   "maturity": "trial use",
+   "description": "...",
+   "name": "GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3",
+   "aliases": [
+      "NC_000007.14:g.(?_5905831)_(6014161_?)dup",
+      "NC_000007.13:g.(?_5945462)_(6053792_?)dup"
+   ],
+   "extensions": [
+      {
+         "name": "cytogenetic location",
+         "value": "7p22.1"
+      },
+      {
+         "name": "clinvar variation type",
+         "value": "copy number gain"
+      },
+      {
+         "name": "hgvs list",
+         "value": [
+            {
+               "nucleotideExpression": {
+                  "syntax": "hgvs.g",
+                  "value": "NC_000007.14:g.(?_5905831)_(6014161_?)dup"
+               },
+               "nucleotideType": "genomic"
+            },
+            {
+               "nucleotideExpression": {
+                  "syntax": "hgvs.g",
+                  "value": "NC_000007.13:g.(?_5945462)_(6053792_?)dup"
+               },
+               "nucleotideType": "genomic"
+            }
+         ]
+      }
+   ],
+   "constraints": [
+      {
+         "type": "CopyChangeConstraint",
+         "copyChange": "gain"
+      },
+      {
+         "type": "DefiningLocationConstraint",
+         "location": {
+            "id": "ga4gh:SL.LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7",
+            "type": "SequenceLocation",
+            "digest": "LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7",
+            "sequenceReference": {
+               "type": "SequenceReference",
+               "refgetAccession": "SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul"
+            },
+            "start": [
+               null,
+               5905830
+            ],
+            "end": [
+               6014161,
+               null
+            ]
+         },
+         "relations": [
+            {
+               "primaryCoding": {
+                  "code": "liftover_to",
+                  "system": "ga4gh-gks-term:allele-relation"
+               }
+            }
+         ],
+         "matchCharacteristic": {
+            "primaryCoding": {
+               "code": "is_within",
+               "system": "ga4gh-gks-term:location-match"
+            }
+         }
+      }
+   ],
+   "mappings": [
+      {
+         "coding": {
+            "system": "https://www.ncbi.nlm.nih.gov/clinvar",
+            "code": "151061",
+            "iris": [
+               "https://www.ncbi.nlm.nih.gov/clinvar/variation/151061"
+            ]
+         },
+         "relation": "exactMatch"
+      },
+      {
+         "coding": {
+            "system": "https://www.ncbi.nlm.nih.gov/dbvar",
+            "code": "nsv930939",
+            "iris": [
+               "https://www.ncbi.nlm.nih.gov/dbvar/variants/nssv1610575/"
+            ]
+         },
+         "relation": "relatedMatch"
+      }
+   ]
+}

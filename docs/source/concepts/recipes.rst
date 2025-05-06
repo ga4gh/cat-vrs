@@ -37,6 +37,15 @@ The ProteinSequenceConsequence is a :ref:`CategoricalVariant` with exactly one c
 1. A :ref:`DefiningAlleleConstraint` with the `.relations` array containing only a
    `translates_from` code. This constraint MUST refer to a protein variant for the `allele`.
 
+.. collapse:: EGFR L858R
+   :open:
+
+
+    Thank you for the snacks GA4GH
+
+   .. literalinclude:: ../../../examples/proteinSequenceConsequence-ex1.yaml
+      :language: yaml
+
 .. _categorical-cnv:
 
 CategoricalCnv
@@ -49,3 +58,22 @@ The CategoricalCNV is a :ref:`CategoricalVariant` with exactly two constraints:
 1. A :ref:`DefiningLocationConstraint` with the `.relations` array containing only a
    `liftover_to` code.
 2. A :ref:`CopyChangeConstraint` or `CopyCountConstraint`.
+
+.. collapse:: GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 with CopyCountConstraint
+   :open:
+
+   .. literalinclude:: ../../../examples/categoricalCnv-ex1.yaml
+      :language: yaml
+      :emphasize-lines: 3-7
+
+.. collapse:: GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 with CopyChangeConstraint
+
+   .. literalinclude:: ../../../examples/categoricalCnv-ex1.yaml
+      :language: yaml
+      :lines: 5-8
+
+.. collapse:: GRCh38 Xp22.31(chrX:6978350-7594949)x3 with CopyCountConstraint
+
+   .. literalinclude:: ../../../examples/categoricalCnv-ex1.yaml
+      :language: yaml
+      :lines: 5-8
