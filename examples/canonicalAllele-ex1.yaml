@@ -70,7 +70,14 @@ constraints:
           value: NP_004949.1:p.Met1998fs
       location:
         id: ga4gh:SL.gLe4d4Seuxn5fLCfO_2g34gF86vpGvo1
-        description: Coding DNA (cDNA) positions 5992 to 5993 of the MTOR MANE Select transcript (refseq:NM_004958.4).
+        description: Coding DNA (cDNA) positions 5992 to 5993 of the MTOR MANE Select transcript (refseq:NM_004958.4), corresponding to genomic positions 11128044 to 11128045 on chromosome 1 (refseq:NC_000001.11, GRCh38).
+        extensions:
+          - name: GRCh38 1-based, inclusive interval
+            value: chr1:11128044-11128045
+            description: Genomic positions 11128044 to 11128045 on chromosome 1 (refseq:NC_000001.11, GRCh38); 1-based, inclusive interval notation.
+          - name: GRCh38 0-based, half-open interval
+            value: chr1:11128043-11128045
+            description: Genomic positions 11128044 to 11128045 on chromosome 1 (refseq:NC_000001.11, GRCh38); 0-based, half-open interval notation.
         type: SequenceLocation
         digest: gLe4d4Seuxn5fLCfO_2g34gF86vpGvo1
         sequenceReference:
