@@ -32,9 +32,11 @@ General Principles
   that particular combinations of objects are compatible, but such
   validation is not required.
 
-* **Cat-VRS uses** `snake_case
+* **Cat-VRS uses** `PascalCase (a.k.a. CamelCaps)
+  <https://simple.wikipedia.org/wiki/CamelCase>`__ **to represent
+  compound words and** `snake_case
   <https://simple.wikipedia.org/wiki/Snake_case>`__ **to represent
-  compound words.** Although the schema is currently JSON-based (which
+  compound file names** Although the schema is currently JSON-based (which
   would typically use camelCase), Cat-VRS itself is intended to be neutral
   with respect to languages and database.
 
