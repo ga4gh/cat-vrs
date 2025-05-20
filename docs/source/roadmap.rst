@@ -24,3 +24,9 @@ Planned
 @@@@@@@
 
 * 2025 Q3 - `Trial Use Review Ballot <https://github.com/ga4gh/cat-vrs/discussions/86>`_ for additional constraint classes (copy change, feature context, and function)
+
+* 2025 Q3 - `“Call to Action” manuscript: <https://docs.google.com/document/d/1IRo2JlgIPERZeT35wFAUuldWvhk7LRM7hvAhZ98hRro/edit?tab=t.0#heading=h.llb8raw1flsa>`_ brief introduction and landscape analysis of categorical variants
+
+* Representation of `fusions <https://github.com/ga4gh/cat-vrs/discussions/55>`_ and expression variants
+
+* Explore forward compatibility for integration into Beacon v3 / VLM (e.g. parameterization)
