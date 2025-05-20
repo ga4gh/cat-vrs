@@ -34,6 +34,7 @@ Caveat emptor.
    concepts/index
    impl-guide/index
    releases/index
+   roadmap/index
    appendices/index
 
 
