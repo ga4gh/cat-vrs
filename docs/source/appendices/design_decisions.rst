@@ -41,6 +41,22 @@ Major Impact
 ############
 
 
+.. hyperintensional_catvars
+
+**Treatment of CatVars as ((Hyper)intensional) Set-Theoretic Objects**
+
+**Decision:**
+The group decided to model categorical variants as `hyperintensional
+<https://plato.stanford.edu/entries/hyperintensionality/>`_ set objects to address the complexities of categorical data representation.
+
+**Rationale:**
+This decision is comprised of three others that build atop one another, each deciding to model categorical variants (a) as sets of properties, (b) as *intensional* set objects: defined by properties of what they *are*, instead of *extensional*: defined by set membership, and (c) using a *hyper*intensional semantic model. A more in-depth rationale can be found here.
+
+
+
+
+
+
 
 .. medium_impact
 
