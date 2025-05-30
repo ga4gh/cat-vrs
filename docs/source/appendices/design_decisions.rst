@@ -236,6 +236,30 @@ These decisions bring Cat-VRS in compliance with generally accepted best practic
 
 
 
+.. generalizing_genecontextconstraint
+
+**Generalization of GeneContextConstriant into FeatureContextConstraint**
+
+**Decision:**
+The specification originally proposed a *GeneContextConstraint* to capture variation knowledge tied to a specific gene, but this constraint was later broadened into a *FeatureContextConstraint* to include regulatory elements, pseudogenes, and other sequence-related features.
+
+
+
+**Rationale:**
+
+This change was necessary to generalize the model and improve modularity, ensuring that Cat-VRS supports diverse genomic elements beyond strictly defined genes. It also aligns better with other genomic standardization efforts and accommodates structural variants that do not map directly to specific genes​; for example, protein contexts such as “Estrogen Receptor (ER)”. Furthermore, FeatureContext better allows for catvar harmonization across different gene name-space conventions, as these change over time and between organizations. For example, in an older refseq version, *DUXL4* was considered as pseudogene, but in the current refseq version it is not recognized as a gene (or pseudogene) at all.
+
+
+**Citations:**
+
+*  `“Shouldn’t CategoricalCnv be based on a CanonicalLocation vs a Contextual Location?” GitHub Issue <https://github.com/ga4gh/cat-vrs/issues/11>`_
+*  `“Adding FeatureContextConstraint” GitHub issue <https://github.com/ga4gh/cat-vrs/issues/98>`_
+*  `“Handling Function Variants” GitHub Issue <https://github.com/ga4gh/cat-vrs/issues/14>`_
+*  `2025-01-21 meeting minutes <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.f3vr43fppyez>`_
+*  `2024-12-17 meeting minutes <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.bwcukl5umkkw>`_
+
+
+
 
 .. minor_impact
 
@@ -243,14 +267,128 @@ Minor Impact
 ############
 
 
+.. relations_and_mappings
 
-**Machine Readable Specifications**
-The machine readable Cat-VRS is written using `JSON Schema
-<https://json-schema.org/>`_.
+**Distinction between Relations and Mappings**
 
-The schema itself is written in YAML (|catvrs_yaml|) and converted to individual JSON files for each class in the schema (|catvrs_json|).
+**Decision:**
+Relations refer to structured transformations to the underlying variant, such as translating a transcript sequence into an amino acid sequence. Mappings refer to homomorphisms of coded variant concepts between different codings systems and ontologies, for example, mapping the property of protein gain-of-function EFO code to that of a protein hypermorphism in SO.
 
-Because the JSON and rst files are programatically generated from the "-source.yaml" files,  contributions to the schema MUST be written in the "-source.yaml" documents.
+
+**Rationale:**
+
+The group followed existing practices in other GKS standards for relations and mappings adapted to the problem domain of catvar and catvar properties.
+
+**Citations:**
+
+
+*  `"Should 'relations' be a mappable concept?" GitHub issue <https://github.com/ga4gh/cat-vrs/issues/97>`_
+
+*  `2025-02-04 meeting minutes <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.ujjbabr6rnl>`_
+
+*  GKS Core: `ConceptMapping <https://cat-vrs.readthedocs.io/en/latest/concepts/imported/ConceptMapping.html#conceptmapping>`_ and `MappableConcept <https://cat-vrs.readthedocs.io/en/latest/concepts/imported/MappableConcept.html#mappableconcept>`_
+
+
+.. members_are_non-exhaustive
+
+**Inclusion of Members as non-exhaustive array of contextual variants**
+
+**Decision:**
+Items in the *members* property constitute representative examples of GA4GH Variation Representation Specification (VRS) Variations that satisfy the constraints of a given categorical variant. It is neither required nor expected for *members* to contain an exhaustive list of representative VRS variants.
+
+
+**Rationale:**
+
+Because catvars are `defined by their properties (constraints), <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.8tp6mx3oau6h>`_ matching is performed by matching constraints between categorical variants. Thus, listing variants that satisfy the constraints defining a given categorical variant do not impact matching, and instead only serve as representative examples and to aid in human readability. As a result of these considerations, *members* is not a required property of the *CategoricalVariant* data class, and when included, the array of *members* is not to be understood as an exhaustive array of all member variants, even though, in some cases, it may incidentally feasible to exhaustively list all member variants. For example, the *members* property for the categorical variant “*BRAF* p.V600K” should list VRS Variations that correspond to the nucleotide changes that result in this amino acid substitution.
+
+**Citations:**
+
+
+*  `2024-07-03 meeting minutes <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.8tp6mx3oau6h>`_
+
+*  `2024-04-16 meeting minutes <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.cexaqt7e0bcy>`_
+
+*  `Cat-VRS Model: Categorical Variant class <https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#categorical-variant>`_
+
+
+
+.. name_as_a_non-required_field
+
+**Name as a non-required field**
+
+**Decision:**
+The *name* property in the *CategoricalVariant* class is an optional (but not required) field for *CategoricalVariant*.
+
+
+**Rationale:**
+The *name* property is a string field, and is intended to hold a *name* for a categorical variant, often for the benefit of human readability. This field is not required, however, because it is not involved in catvar matching, and will probably be eschewed altogether in programmatic workflows involving Cat-VRS, as it serves no major computational function.
+
+
+
+.. profiles_to_recipes
+
+**Renaming “Profiles” to “Recipes” to represent standard categorical variants templates**
+
+**Decision:**
+`Recipes <https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html>`_ were originally called Profiles, but the group decided to change the name to the current Recipes.
+
+
+**Rationale:**
+The term `profile is already used within the Variant Annotation Specification (VA-spec), <https://va-ga4gh.readthedocs.io/en/latest/base-profiles/index.html#base-profiles>`_ and means something very different from what we intended it to mean in the context of Cat-VRS, so the term was changed in Cat-VRS to avoid confusion.
+
+
+**Citations:**
+*  `“Turn ‘profiles’ into ‘recipes’” GitHub Issue <https://github.com/ga4gh/cat-vrs/issues/60>`_
+
+
+
+.. function_variants_mullers_morphs
+
+**Handling of Function Variants using Müller's Morphs**
+
+**Decision:**
+The classification of functional impact on protein structure in the FunctionConstraint was standardized using terms like hypermorphic, amorphic, neomorphic, and antimorphic (based on `Müller’s morphs <https://en.wikipedia.org/wiki/Muller%27s_morphs>`_), rather than terms like "gain-of-function" or "loss-of-function".
+
+
+**Rationale:**
+This approach provides a more structured, ontology code-backed classification. Additionally, it reserves the use of the variant descriptive keywords “gain” and “loss” solely for the context of copy number gain and copy number loss, avoiding ambiguity in the language surrounding categorical function variants.
+
+We recognize that this terminology is inconsistent with current colloquial use of gain-of-function and loss-of-function descriptors. `A Discussion <https://github.com/ga4gh/cat-vrs/discussions/54>`_ was created on the Cat-VRS GitHub repository on October 6th, 2024 to promote discussion around this design decision. This decision will further be interrogated when this constraint is nominated to Trial Use as part of a GKS review ballot.
+
+
+
+**Citations:**
+
+*  `"Terminology for function changes" GitHub Discussion <https://github.com/ga4gh/cat-vrs/discussions/23>`_
+*  `“Function Variants in the Constraint Model” GitHub Discussion <https://github.com/ga4gh/cat-vrs/discussions/54>`_
+*  `2024-08-27 meeting minutes <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.6pa182hdgx2a>`_
+*  `2024-07-03 meeting minutes <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.8tp6mx3oau6h>`_
+*  `“Handling Function Variants” GitHub Issue <https://github.com/ga4gh/cat-vrs/issues/14>`_
+*  `“Generalizing Canonical allele and Categorical CNV to handle function / expression variants” GitHub Issue <https://github.com/ga4gh/cat-vrs/discussions/16>`_
+
+
+
+
+
+.. mappable_concepts_for_relations
+
+**Integration of Mappable Concepts for Variant Relations**
+
+**Decision:**
+For the relations property in the DefiningAlleleConstraint and DefiningLocationConstraint, the group decided to remove the explicit enum of possible relation methods (such as translates_to and translates_from) and instead refer to the `gks.core:MappableConcept <https://cat-vrs.readthedocs.io/en/latest/concepts/imported/MappableConcept.html#mappableconcept>`_ data class.
+
+
+
+**Rationale:**
+This decision was made for a number of reasons: First, it is more consistent with `DRY <https://en.wikipedia.org/wiki/Don%27t_repeat_yourself>`_ best practices to have a single mechanism to handle relations rather than repeating lists of them multiple times throughout the specification. Second, the *gks.core:MappableConcept* class is a general-purpose data structure that holds codings of a concept and maps them to codings within other systems within a standardized way. Therefore, regardless of which coded methods are used by an implementation to relate one version of a variant to another, containerizing these coded methods in the *gks.core:MappableConcept* should make them easier to map to other coding systems.
+
+
+**Citations:**
+*  `“Should relation or relations be renamed?” GitHub discussion <https://github.com/ga4gh/cat-vrs/discussions/100>`_
+*  `2025-02-05 meeting minutes <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.ujjbabr6rnl>`_
+
+
+
 
 
 .. Error_Handling
