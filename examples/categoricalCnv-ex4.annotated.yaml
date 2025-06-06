@@ -1,0 +1,104 @@
+# Read more about the Cat-VRS data model, here:
+# https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html
+
+# id: The ‘logical’ identifier of the Entity in the system of record; e.g., a UUID.
+# This ‘id’ is unique within a given system, but may or may not be globally unique outside the system.
+# It is used within a system to reference an object from another.
+id: civic.id:4452
+
+# All categorical variants must have the type "CategoricalVariant"
+type: CategoricalVariant
+
+# name: A primary name for the entity.
+name: TP53 Loss
+
+# description: A free-text description of the entity
+description: TP53 Copy Number Loss is a categorical copy-number variant resulting from the deletion of one copy of the TP53 gene.
+
+# Alternative name(s) for the Entity.
+aliases:
+  - TP53 Copy Number Loss
+  - P53 Copy Number Loss
+
+# extensions: A list of extensions to the Entity, that allow for capture of information not directly
+# supported by elements defined in the model.
+# The decision of how to structure extensions are left to implementers, though we recommend
+# documenting an implementation's use of extensions in the Standard Operating Procedure to
+# promote ease of use
+extensions:
+  - name: cytogenetic location
+    value: 17p13
+
+# constraints: A rule or set of rules that must bve satisfied for a Categorical Variant to be considered valid.
+# constraints are defined within schema/cat-vrs/cat-vrs-source.yaml
+# and they are also described online: https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#constraint
+# For each categorical variant, there may be 0 to n constraints.
+
+# When trying to decide what constraints to use to model a categorical variant, it may be useful to refer to "recipes"
+# of constraints to model common types of variation, found in schema/cat-vrs/recipes-source.yaml.
+
+constraints:
+  # The FeatureContextConstraint denotes the feature (e.g. gene, pseudogene, or sequence) that members of this
+  # categorical variant are associated with.
+  # the type should be "FeatureContextConstraint" and featureContext is a mappable concept.
+  - type: FeatureContextConstraint
+    featureContext:
+      # This ‘id’ is unique within a given system, but may or may not be globally unique outside the system.
+      # It is used within a system to reference an object from another.
+      # id is not intended or required ot be human-readible.  In this case it just happens to be so
+      id: TP53
+
+      # A primary name for the concept (usually a human-readible one)
+      name: TP53
+
+      # The type of feature being denoted: gene, pseudogene, sequence, region, etc
+      conceptType: gene
+
+      # A primary coding for the concept.
+      # A coding is structured representation of a code for a defined concept in a terminology or code system.
+      primaryCoding:
+        - id: hgnc:11998
+          name: TP53
+          system: https://genenames.org
+          code: HGNC:11998
+          iris:
+            - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11998
+
+      # A list of extensions to the Entity, which allow for capture of information not directly supported by
+      # elements defined in the model.
+      extensions:
+        - name: cytogenetic location
+          value: 17p13.1
+
+  # The CopyChangeConstraint captures the relative change in copy count of the assayed feature relative to base ploidy
+  - type: CopyChangeConstraint
+    copyChange: loss
+
+# members: A non-exhaustive list of VRS variation Constraints that satisfy the constraints of this categorical variant.
+# Here, however, VRS doesn't support large-scale copy-number events, so there are no valid VRS members of this
+# categorical variant.  However, if this categorical variant had been about loss-of-function or expression variants,
+# then there exist vrs member variants, e.g. protein missense, or premature stop variants that would cause TP53 loss
+# and therefore be members of this categorical variant.
+members:
+  - ...
+
+# mappings: A list of mappings to concepts in terminologies or code systems.
+# Each mapping should include a coding and a relation.
+# Usually, this is intended to describe relations to concepts in _other_ websites or systems
+# For example, linking out to clinvar or dbSNP
+# Here, we reference a related match (an expression/function variant as opposed to a purely copy-number loss) in CIViC
+mappings:
+  - coding:
+      name: TP53 Loss
+      system: https://civicdb.org
+      code: civic.vid:4452
+      iris:
+        - https://civicdb.org/variants/4452/summary
+    relation: exactMatch
+  - coding:
+      name: TP53 Deletion
+      system: https://civicdb.org/
+      code: civic.mpid:4456
+      iris:
+        - https://civicdb.org/molecular-profiles/4456/summary
+    relation: relatedMatch

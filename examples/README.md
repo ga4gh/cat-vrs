@@ -4,14 +4,14 @@
 ## Examples by Constraint
 A [constraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#constraint) is a rule or set of rules that must be satisfied for a CategoricalVariant to be considered valid. Constraint sub classes are only used in CategoricalVariant objects.
 
-| Constraint | Representative example(s) |
-|---|---|
+| Constraint | Representative example(s)                                                                                                                                                                                                      |
+|---|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [DefiningAlleleConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#definingalleleconstraint) | [canonicalAllele-ex1](#canonicalAllele-ex1), [canonicalAllele-ex2](#canonicalAllele-ex2), [proteinSequenceConsequence-ex1](#proteinSequenceConsequence-ex1), [proteinSequenceConsequence-ex2](#proteinSequenceConsequence-ex2) |
-| [DefiningLocationConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#defininglocationconstraint) | [categoricalCnv-ex1](#categoricalCnv-ex1), [categoricalCnv-ex2](#categoricalCnv-ex2) |
-| [CopyCountConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#copycountconstraint) | [categoricalCnv-ex1](#categoricalCnv-ex1) |
-| [CopyChangeConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#copychangeconstraint) | [categoricalCnv-ex2](#categoricalCnv-ex2) |
-| [FeatureContextConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#featurecontextconstraint) | |
-| None | [describedVariant-ex1](#describedVariant-ex1) |
+| [DefiningLocationConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#defininglocationconstraint) | [categoricalCnv-ex1](#categoricalCnv-ex1), [categoricalCnv-ex2](#categoricalCnv-ex2)                                                                                                                                           |
+| [CopyCountConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#copycountconstraint) | [categoricalCnv-ex1](#categoricalCnv-ex1), [categoricalCnv-ex3](#categoricalCnv-ex3)                                                                                                                                           |
+| [CopyChangeConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#copychangeconstraint) | [categoricalCnv-ex2](#categoricalCnv-ex2)                                                                                                                                                                                      |
+| [FeatureContextConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#featurecontextconstraint) | [categoricalCnv-ex4](#categoricalCnv-ex4)                                                                                                                                                                                      |
+| None | [describedVariant-ex1](#describedVariant-ex1)                                                                                                                                                                                  |
 
 ## Examples by Recipe
 [Recipes](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html) are pre-defined CategoricalVariants with specific constraints that represent standard categorical variants that have been identified in variant knowledgebases and registries.
@@ -86,6 +86,21 @@ Fields were otherwise populated identical to [categoricalCNV-ex1](./categoricalC
 - `mappings`: mapping to ClinGen's webpage for this variant.
 
 This example applies two constraints: [CopyCountConstraint](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#copycountconstraint) and [DefiningLocationConstraint](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#defininglocationconstraint). The `copies` field of CopyCountConstraint is set to "3", per the copies being specified as "x3" within the `name` field, as specified by ClinGen. The DefiningLocationConstraint includes the [VRS Sequence Location](https://cat-vrs.readthedocs.io/en/stable/concepts/imported/SequenceLocation.html#sequencelocation) from the GRCh38 representation of this variant, as included within `members`. Unlike [categoricalCNV-ex1](./categoricalCnv-ex1.yaml) and [categoricalCNV-ex2](./categoricalCnv-ex2.yaml), this example includes ranges for the `start` and `end` positions.
+
+## categoricalCNV-ex4
+[categoricalCNV-ex4](./categoricalCnv-ex4.yaml) represents [TP53 Loss](https://civicdb.org/variants/4452/summary) as a Categorical Variant. This example satisfies the [CategoricalCNV Recipe](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#categoricalcnv). Fields were populated as follows:
+
+- `id`: `civic.vid:` followed by the variant id provided by CIViC, 4452, listed for the variant.
+- `type`: specified as "CategoricalVariant", as required by [the specification](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#categorical-variant).
+- `name`: The name of the variant, as provided by CIViC.
+- `description`: A plain text description of the variant.
+- `aliases`: "Copy Number Loss" was provided to clearly specify that this is a copy number event.
+- `extensions`: The value for extension named "cytogenetic location" was obtained from HGNC for TP53.
+- `mappings`: mapping to ClinGen's webpage for this variant.
+
+This example applies two constraints: [CopyChangeConstraint](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#copychangeconstraint) and [FeatureContextConstraint](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html). The `copyChange` field of CopyChangeConstraint uses "loss" to specify the category of copy change. FeatureContextConstraint represents the gene context with a primaryCoding to [HGNC](https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11998). 
+
+We additionally created an [annotated](categoricalCnv-ex4.annotated.yaml) version of this example, detailing each field.
 
 ## describedVariant-ex1
 [describedVariant-ex1](./describedVariant-ex1.yaml) represents [ClinVar entry 1177130](https://www.ncbi.nlm.nih.gov/clinvar/variation/1177130/?oq=1177130&m=t(2%3B15)(q23.1%3Bq25.3)), t(2;15)(q23.1;q25.3). This example **does not include any constraints**. Implementers may choose to represent Categorical Variants in this way while waiting for the specification to support a means to model them. Given this, fields were populated as follows:
