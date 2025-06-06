@@ -26,14 +26,15 @@ constraints:
   - type: DefiningLocationConstraint
     location:
       id: ga4gh:SL.LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
+      name: NC_000007.14:g.(?_5905831)_(6014161_?)
       description: Genomic positions 5905831 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38).
       extensions:
         - name: GRCh38 1-based, inclusive interval
           value: chr7:5905831-6014161
           description: Genomic positions 5905831 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38); 1-based, inclusive interval notation.
         - name: GRCh38 0-based, half-open interval
-        - value: chr7:5905830-6014161
-        - description: Genomic positions 5905830 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38); 0-based, half-open interval notation.
+          value: chr7:5905830-6014161
+          description: Genomic positions 5905830 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38); 0-based, half-open interval notation.
       type: SequenceLocation
       digest: LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
       sequenceReference:
@@ -85,14 +86,15 @@ members:
         value: NC_000007.14:g.(?_5905831)_(6014161_?)dup
     location:
       id: ga4gh:SL.LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
+      name: NC_000007.14:g.(?_5905831)_(6014161_?)
       description: Genomic positions 5905831 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38).
       extensions:
         - name: GRCh38 1-based, inclusive interval
           value: chr7:5905831-6014161
           description: Genomic positions 5905831 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38); 1-based, inclusive interval notation.
         - name: GRCh38 0-based, half-open interval
-        - value: chr7:5905830-6014161
-        - description: Genomic positions 5905830 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38); 0-based, half-open interval notation.
+          value: chr7:5905830-6014161
+          description: Genomic positions 5905830 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38); 0-based, half-open interval notation.
       type: SequenceLocation
       digest: LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
       sequenceReference:
@@ -122,14 +124,15 @@ members:
         value: NC_000007.13:g.(?_5945462)_(6053792_?)dup
     location:
       id: ga4gh:SL.9wrSvk5-4mI6CmYrt6vImSzcLssLY3VJ
+      name: NC_000007.13:g.(?_5945462)_(6053792_?)
       description: Genomic positions 5945462 to 6053792 on chromosome 7 (refseq:NC_000007.13, GRCh37).
       extensions:
         - name: GRCh37 1-based, inclusive interval
           value: chr7:5945462-6053792
           description: Genomic positions 5945462 to 6053792 on chromosome 7 (refseq:NC_000007.13, GRCh37); 1-based, inclusive interval notation.
         - name: GRCh38 0-based, half-open interval
-        - value: chr7:5945461-6053792
-        - description: Genomic positions 5945461 to 6053792 on chromosome 7 (refseq:NC_000007.13, GRCh37); 0-based, half-open interval notation.
+          value: chr7:5945461-6053792
+          description: Genomic positions 5945461 to 6053792 on chromosome 7 (refseq:NC_000007.13, GRCh37); 0-based, half-open interval notation.
       type: SequenceLocation
       digest: 9wrSvk5-4mI6CmYrt6vImSzcLssLY3VJ
       sequenceReference:
