@@ -14,7 +14,6 @@ constraints:
   - type: DefiningLocationConstraint
     location:
       id: ga4gh:SL.XyercAFM_APQwFaDuPcXG5lHa4wUpkiL
-      name: NC_000023.11:g.(6978350_6996235)_(7564455_7594949)
       description: Genomic region between positions 6,978,350-7,594,949 on chromosome X (refseq:NC_000023.11, GRCh38), with breakpoints estimated within the intervals 6,978,350-6,996,235 and 7,564,455-7,594,949.
       extensions:
         - name: GRCh38 1-based, inclusive interval
@@ -67,7 +66,6 @@ members:
         value: NC_000023.11:g.(6978350_6996235)_(7564455_7594949)dup
     location:
       id: ga4gh:SL.XyercAFM_APQwFaDuPcXG5lHa4wUpkiL
-      name: NC_000023.11:g.(6978350_6996235)_(7564455_7594949)
       description: Genomic region between positions 6,978,350-7,594,949 on chromosome X (refseq:NC_000023.11, GRCh38), with breakpoints estimated within the intervals 6,978,350-6,996,235 and 7,564,455-7,594,949.
       extensions:
         - name: GRCh38 1-based, inclusive interval
