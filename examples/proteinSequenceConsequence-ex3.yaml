@@ -1,41 +1,12 @@
-# Categorical Variants are described using the Cat-VRS data model, here:
-# https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html
-
-# While Categorical Variants can be defined using any combination of constraints, the Cat-VRS development team
-# is generating common types of Categorical Variants, named "recipes", and these can be found here:
-# https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html
-
-# Here, we describe the Protein Sequence Consequence Categorical Variant for BRAF V600 variants,
-# referenced from CIViC: https://civicdb.org/variants/17/summary
-
-# id: The ‘logical’ identifier of the Entity in the system of record, e.g. a UUID.
-# This ‘id’ is unique within a given system, but may or may not be globally unique outside the system.
-# Within these examples, we are using the nomenclature {originating resource}:{identifier that they are using}
-# Given the URL https://civicdb.org/variants/17/summary, we will use the id of civic.vid:17
 id: civic.vid:17
-
-# type: All Categorical Variants must be of type 'CategoricalVariant'. This specifies the data type of the object.
 type: CategoricalVariant
-
-# name: A primary name for the entity. This is intended to be human-readable.
 name: BRAF V600
-
-# description: A free-text description of the entity
 description: >-
   BRAF V600 variants are missense amino acid substitutions that result in Valine changed.
   V600E is the most common substitution, but V600K, V600M, V600R, and V600G have also been observed.
-
-# aliases: Alternative names of the Categorical Variant. For most examples, we have filled in hgvs representations
-# within aliases but hgvs requires an alternate allele to be specified, which we cannot do here. Thus we've just added
-# a version of the name with the MANE Select transcript specified.
 aliases:
   - NM_004333.6(BRAF) V600
   - NM_004333.6 V600
-
-# extensions: A list of extensions to the Entity, that allow for capture of information not directly
-# supported by elements defined in the model.
-# The decision of how to structure extensions are left to implementers, though we recommend documenting an
-# implementation's use of extensions in the Standard Operating Procedure to promote ease of use.
 extensions:
   - name: CIViC Representative Variant Coordinates
     value:
@@ -47,16 +18,7 @@ extensions:
       representative_transcript:  ENST00000288602.6
       ensembl_version: 75
       reference_build: GRCh37
-
-# constraints: A rule or set of rules that must be satisfied for a Categorical Variant to be considered valid.
-# The currently implemented constraints can be viewed online, here:
-# https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#constraint
-# They also can be viewed within the source yaml file, located at schema/cat-vrs/cat-vrs-source.yaml, within this
-# GitHub repository.
-# For each categorical variant there may be 0 to n constraints.
 constraints:
-  # The DefiningLocationConstraint describes variation relative to a VRS location
-  # The VRS location can be transcribed in full, or abbreviated with the notation vrs.json#/ga4gh:VA...
   - type: DefiningLocationConstraint
     location:
       id: ga4gh:SL.1ReS370wzmC9PGTn13XrnG8Ot7UAKYuw
@@ -86,11 +48,6 @@ constraints:
       primaryCoding:
         code: is_within
         system: ga4gh-gks-term:location-match
-
-# mappings: A list of mappings to concepts in terminologies or code systems.
-# Each mapping should include a coding and a relation.
-# Usually, this is intended to describe relations to concepts in other websites or systems
-# For example, linking out to clinvar or dbSNP. These mappings are taken from
 mappings:
   - coding:
       system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
@@ -127,11 +84,6 @@ mappings:
       iris:
         - https://www.ncbi.nlm.nih.gov/clinvar/variation/44815
     relation: relatedMatch
-
-# members: A non-exhaustive list of VRS variation Constraints that satisfy the constraints of this categorical variant.
-# Here, we are describing VRS alleles that satisfy BRAF V600
-# The VariantNormalizer is a useful API tool to retrieve VRS Alleles based on HGVS representation
-# https://normalize.cancervariants.org/variation
 members:
   - id: ga4gh:VA.W6xsV-aFm9yT2Bic5cFAV2j0rll6KK5R
     type: Allele

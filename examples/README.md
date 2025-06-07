@@ -155,3 +155,5 @@ This example applies the [DefiningAlleleConstraint](https://cat-vrs.readthedocs.
 - `members`: The [VICC variant normalization](https://github.com/cancervariants/variation-normalization) was used to translate hgvs representations into [VRS variations](https://vrs.ga4gh.org/en/stable/). Specifically, the `/variation/to_vrs` endpoint was used to generate a [VRS Allele](https://cat-vrs.readthedocs.io/en/latest/concepts/imported/Allele.html#allele) for the hgvs.c representations of BRAF V600E, V600K, V600R, V600M, and V600G.
 
 This example applies the [DefiningLocationConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#defininglocationconstraint) to represent it as a Categorical Variant.
+
+We additionally created an [annotated](proteinSequenceConsequence-ex3.annotated.yaml) version of this example, detailing each field.
