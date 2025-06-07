@@ -76,7 +76,7 @@ mappings:
     relation: relatedMatch
 members:
   - id: ga4gh:CX.W8HqtDWeVQy_pq6fOSqnPlAcNnH9vvz4
-    type: CopyNumberChange
+    type: CopyNumberCount
     name: NC_000007.14:g.(?_5905831)_(6014161_?)dup
     description: VRS variation of NC_000007.14:g.(?_5905831)_(6014161_?)dup, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
     digest: W8HqtDWeVQy_pq6fOSqnPlAcNnH9vvz4
@@ -113,7 +113,7 @@ members:
         - null
     copies: 3
   - id: ga4gh:CX.XfVcSnSqR2oJHzBMueTrgkMWg_UgbuBL
-    type: CopyNumberChange
+    type: CopyNumberCount
     name: NC_000007.13:g.(?_5945462)_(6053792_?)dup
     description: VRS variation of NC_000007.13:g.(?_5945462)_(6053792_?)dup, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
     digest: XfVcSnSqR2oJHzBMueTrgkMWg_UgbuBL

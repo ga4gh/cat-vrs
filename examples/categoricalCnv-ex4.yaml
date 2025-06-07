@@ -25,8 +25,7 @@ constraints:
           value: 17p13.1
   - type: CopyChangeConstraint
     copyChange: loss
-members:
-  - ...
+members: []
 mappings:
   - coding:
       name: TP53 Loss

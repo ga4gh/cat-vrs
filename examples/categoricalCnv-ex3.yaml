@@ -58,7 +58,7 @@ mappings:
     relation: exactMatch
 members:
   - id: ga4gh:CX.Xb6kSRqlCY2VS1QJeKxhWyGqPfpPigf3
-    type: CopyNumberChange
+    type: CopyNumberCount
     name: NC_000023.11:g.(6978350_6996235)_(7564455_7594949)dup(2)
     description: VRS variation of NC_000023.11:g.(6978350_6996235)_(7564455_7594949)dup, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
     digest: Xb6kSRqlCY2VS1QJeKxhWyGqPfpPigf3
