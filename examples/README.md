@@ -141,3 +141,17 @@ This example applies the [DefiningAlleleConstraint](https://cat-vrs.readthedocs.
 - `members`: The [VICC variant normalization](https://github.com/cancervariants/variation-normalization) was used to translate hgvs representations into [VRS variations](https://vrs.ga4gh.org/en/stable/). Specifically, the `/variation/to_vrs` endpoint was used to generate a [VRS Allele](https://cat-vrs.readthedocs.io/en/latest/concepts/imported/Allele.html#allele) for the hgvs.g, hgvs.c MANE Select representation and corresponding hgvs.p of this variant ("NC_000017.11:g.43045712dup", "NC_000017.10:g.41197729dup", and "NP_009225.1:p.Tyr1853Ter"); the variant normalization service was unable to generate a VRS Allele for "NM_007294.4:c.5558dup".
 
 This example applies the [DefiningAlleleConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#definingalleleconstraint) to represent it as a Categorical Variant. The Allele associated with the MANE Select's representation, "NP_009225.1:p.Tyr1853Ter", as included within the `members` field, was used to populate the `allele` field.
+
+## proteinSequenceConsequence-ex3.yaml
+[proteinSequenceConsequence-ex3](./proteinSequenceConsequence-ex3.yaml) represents [CIViC entry 17](https://civicdb.org/variants/17/summary), BRAF V600, as a Categorical Variant. This example satisfies the [ProteinSequenceConsequence Recipe](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#proteinsequenceconsequence). Fields were populated as follows:
+
+- `id`: `civic.vid:` followed by the listed Variation ID, "17".
+- `type`: specified as "CategoricalVariant", as required by [the specification](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#categorical-variant).
+- `name`: The human readable name.
+- `description`: A summary was written of the categorical variant.
+- `aliases`: Representations with the MANE Select transcript for BRAF were shown.
+- `extensions`: The CIViC Variant Representative Coordinates were included.
+- `mappings`: A set of ClinVar variants that are amino acid substitutions at BRAF V600.
+- `members`: The [VICC variant normalization](https://github.com/cancervariants/variation-normalization) was used to translate hgvs representations into [VRS variations](https://vrs.ga4gh.org/en/stable/). Specifically, the `/variation/to_vrs` endpoint was used to generate a [VRS Allele](https://cat-vrs.readthedocs.io/en/latest/concepts/imported/Allele.html#allele) for the hgvs.c representations of BRAF V600E, V600K, V600R, V600M, and V600G.
+
+This example applies the [DefiningLocationConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#defininglocationconstraint) to represent it as a Categorical Variant.
