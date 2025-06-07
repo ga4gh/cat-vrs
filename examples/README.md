@@ -98,7 +98,7 @@ This example applies two constraints: [CopyCountConstraint](https://cat-vrs.read
 - `extensions`: The value for extension named "cytogenetic location" was obtained from HGNC for TP53.
 - `mappings`: mapping to ClinGen's webpage for this variant.
 
-This example applies two constraints: [CopyChangeConstraint](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#copychangeconstraint) and [FeatureContextConstraint](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html). The `copyChange` field of CopyChangeConstraint uses "loss" to specify the category of copy change. FeatureContextConstraint represents the gene context with a primaryCoding to [HGNC](https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11998). 
+This example applies two constraints: [CopyChangeConstraint](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#copychangeconstraint) and [FeatureContextConstraint](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html). The `copyChange` field of CopyChangeConstraint uses "loss" to specify the category of copy change. FeatureContextConstraint represents the gene context with a primaryCoding to [HGNC](https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11998).
 
 We additionally created an [annotated](categoricalCnv-ex4.annotated.yaml) version of this example, detailing each field.
 
