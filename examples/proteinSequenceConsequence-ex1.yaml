@@ -83,11 +83,19 @@ constraints:
           value: NP_005219.2:p.Leu858Arg
       location:
         id: ga4gh:SL.v0_edynH98OIu-0QPVT5anCSOriAFSDQ
+        description: Amino acid position 858 within the EGFR protein (refseq:NP_005219.2), which is the protein product of the MANE Select (GRCh38) coding transcript for EGFR (refseq:NM_005228.5), corresponding to leucine in the reference sequence.
         type: SequenceLocation
         digest: v0_edynH98OIu-0QPVT5anCSOriAFSDQ
         sequenceReference:
+          id: refseq:NP_005219.2
+          name: NP_005219.2
+          description: The protein product of the MANE Select (GRCh38) coding transcript for EGFR (refseq:NM_005228.5), corresponding to the Refseq protein accession NP_005219.2.
+          aliases:
+            - ensembl:ENSP00000275493.2
+            - ga4gh:SQ.vyo55F6mA6n2LgN4cagcdRzOuh38V4mE
           type: SequenceReference
           refgetAccession: SQ.vyo55F6mA6n2LgN4cagcdRzOuh38V4mE
+          residueAlphabet: aa
         start: 857
         end: 858
         sequence: L
