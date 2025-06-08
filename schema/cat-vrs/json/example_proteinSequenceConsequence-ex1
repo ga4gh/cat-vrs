@@ -1,0 +1,400 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/json/example_proteinSequenceConsequence-ex1",
+   "title": "example_proteinSequenceConsequence-ex1",
+   "type": "CategoricalVariant",
+   "id": "civic.mpid:33",
+   "name": "EGFR L858R",
+   "description": "EGFR L858R has long been recognized as a functionally significant mutation in cancer, and is one of the most prevalent single mutations in lung cancer. Best described in non-small cell lung cancer (NSCLC), the mutation seems to confer sensitivity to first and second generation TKI's like gefitinib and neratinib. NSCLC patients with this mutation treated with TKI's show increased overall and progression-free survival, as compared to chemotherapy alone. Third generation TKI's are currently in clinical trials that specifically focus on mutant forms of EGFR, a few of which have shown efficacy in treating patients that failed to respond to earlier generation TKI therapies.",
+   "aliases": [
+      "LEU858ARG",
+      "rs121434568",
+      "L813R",
+      "LEU813ARG",
+      "NC_000007.13:g.55259515T>G",
+      "NM_005228.4:c.2573T>G",
+      "ENST00000275493.2:c.2573T>G",
+      "ENST00000275493.7:c.2573T>G",
+      "NP_005219.2:p.Leu858Arg"
+   ],
+   "extensions": [
+      {
+         "name": "CIViC Representative Variant Coordinates",
+         "value": {
+            "chromosome": "7",
+            "start": 55259515,
+            "stop": 55259515,
+            "reference_bases": "T",
+            "variant_bases": "G",
+            "representative_transcript": "ENST00000275493.2",
+            "ensembl_version": 75,
+            "reference_build": "GRCh37"
+         }
+      },
+      {
+         "name": "CIViC Variant Type",
+         "value": {
+            "name": "missense_variant",
+            "system": "http://www.sequenceontology.org/browser/",
+            "systemVersion": "release_2.5.3",
+            "code": "SO:0001583",
+            "iris": [
+               "http://www.sequenceontology.org/browser/release_2.5.3/term/SO:0001583"
+            ]
+         }
+      },
+      {
+         "name": "CIViC Molecular Profile Score",
+         "value": 379
+      },
+      {
+         "name": "hgvs list",
+         "value": [
+            {
+               "nucleotideExpression": {
+                  "syntax": "hgvs.g",
+                  "value": "NC_000007.13:g.55259515T>G"
+               },
+               "nucleotideType": "genomic"
+            },
+            {
+               "nucleotideExpression": {
+                  "syntax": "hgvs.c",
+                  "value": "NM_005228.5:c.2573T>G"
+               },
+               "nucleotideType": "coding"
+            },
+            {
+               "nucleotideExpression": {
+                  "syntax": "hgvs.c",
+                  "value": "ENST00000275493.2:c.2573T>G"
+               },
+               "nucleotideType": "coding"
+            },
+            {
+               "nucleotideExpression": {
+                  "syntax": "hgvs.c",
+                  "value": "ENST00000275493.7:c.2573T>G"
+               },
+               "nucleotideType": "coding",
+               "maneSelect": true,
+               "proteinExpression": {
+                  "syntax": "hgvs.p",
+                  "value": "NP_005219.2:p.Leu858Arg"
+               },
+               "molecularConsequence": {
+                  "name": "missense_variant",
+                  "system": "http://www.sequenceontology.org/browser/",
+                  "systemVersion": "release_2.5.3",
+                  "code": "SO:0001583",
+                  "iris": [
+                     "http://www.sequenceontology.org/browser/release_2.5.3/term/SO:0001583"
+                  ]
+               }
+            }
+         ]
+      }
+   ],
+   "constraints": [
+      {
+         "type": "DefiningAlleleConstraint",
+         "allele": {
+            "id": "ga4gh:VA.S41CcMJT2bcd8R4-qXZWH1PoHWNtG2PZ",
+            "type": "Allele",
+            "name": "NP_005219.2:p.Leu858Arg",
+            "description": "VRS variation of NP_005219.2:p.Leu858Arg, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).",
+            "digest": "S41CcMJT2bcd8R4-qXZWH1PoHWNtG2PZ",
+            "expressions": [
+               {
+                  "syntax": "hgvs.p",
+                  "value": "NP_005219.2:p.Leu858Arg"
+               }
+            ],
+            "location": {
+               "id": "ga4gh:SL.v0_edynH98OIu-0QPVT5anCSOriAFSDQ",
+               "description": "Amino acid position 858 within the EGFR protein (refseq:NP_005219.2), which is the protein product of the MANE Select (GRCh38) coding transcript for EGFR (refseq:NM_005228.5), corresponding to leucine in the reference sequence.",
+               "type": "SequenceLocation",
+               "digest": "v0_edynH98OIu-0QPVT5anCSOriAFSDQ",
+               "sequenceReference": {
+                  "id": "refseq:NP_005219.2",
+                  "name": "NP_005219.2",
+                  "description": "The protein product of the MANE Select (GRCh38) coding transcript for EGFR (refseq:NM_005228.5), corresponding to the RefSeq protein accession NP_005219.2.",
+                  "aliases": [
+                     "ensembl:ENSP00000275493.2",
+                     "ga4gh:SQ.vyo55F6mA6n2LgN4cagcdRzOuh38V4mE"
+                  ],
+                  "type": "SequenceReference",
+                  "refgetAccession": "SQ.vyo55F6mA6n2LgN4cagcdRzOuh38V4mE",
+                  "residueAlphabet": "aa"
+               },
+               "start": 857,
+               "end": 858,
+               "sequence": "L"
+            },
+            "state": {
+               "type": "LiteralSequenceExpression",
+               "sequence": "R"
+            }
+         },
+         "relations": [
+            {
+               "primaryCoding": {
+                  "code": "translation_of",
+                  "system": "http://www.sequenceontology.org",
+                  "iris": [
+                     "http://www.sequenceontology.org/browser/current_release/term/translation_of"
+                  ]
+               }
+            }
+         ]
+      }
+   ],
+   "mappings": [
+      {
+         "coding": {
+            "system": "https://civicdb.org/variants/",
+            "code": "33",
+            "iris": [
+               "https://civicdb.org/variants/33/summary"
+            ]
+         },
+         "relation": "exactMatch"
+      },
+      {
+         "coding": {
+            "system": "https://civicdb.org/molecular-profiles/",
+            "code": "33",
+            "iris": [
+               "https://civicdb.org/molecular-profiles/33/summary"
+            ]
+         },
+         "relation": "relatedMatch"
+      },
+      {
+         "coding": {
+            "system": "https://reg.clinicalgenome.org/",
+            "code": "CA126713",
+            "iris": [
+               "https://reg.genome.network/redmine/projects/registry/genboree_registry/by_caid?caid=CA126713"
+            ]
+         },
+         "relation": "relatedMatch"
+      },
+      {
+         "coding": {
+            "system": "https://www.ncbi.nlm.nih.gov/clinvar/variation/",
+            "code": "16609",
+            "iris": [
+               "https://www.ncbi.nlm.nih.gov/clinvar/variation/16609/"
+            ]
+         },
+         "relation": "relatedMatch"
+      },
+      {
+         "coding": {
+            "system": "https://www.ncbi.nlm.nih.gov/clinvar/variation/",
+            "code": "376282",
+            "iris": [
+               "https://www.ncbi.nlm.nih.gov/clinvar/variation/376282/"
+            ]
+         },
+         "relation": "relatedMatch"
+      },
+      {
+         "coding": {
+            "system": "https://www.ncbi.nlm.nih.gov/clinvar/variation/",
+            "code": "376280",
+            "iris": [
+               "https://www.ncbi.nlm.nih.gov/clinvar/variation/376280/"
+            ]
+         },
+         "relation": "relatedMatch"
+      },
+      {
+         "coding": {
+            "system": "https://www.ncbi.nlm.nih.gov/snp/",
+            "code": "rs121434568",
+            "iris": [
+               "https://www.ncbi.nlm.nih.gov/snp/rs121434568"
+            ]
+         },
+         "relation": "relatedMatch"
+      }
+   ],
+   "members": [
+      {
+         "id": "ga4gh:VA.7WF8GDGgqy8ksDf9KV-qrWS_2_q8fiEO",
+         "type": "Allele",
+         "name": "NC_000007.13:g.55259515T>G",
+         "description": "VRS variation of NC_000007.13:g.55259515T>G, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).",
+         "digest": "7WF8GDGgqy8ksDf9KV-qrWS_2_q8fiEO",
+         "expressions": [
+            {
+               "syntax": "hgvs.g",
+               "value": "NC_000007.13:g.55259515T>G"
+            },
+            {
+               "syntax": "hgvs.c",
+               "value": "NM_005228.5:c.2573T>G"
+            },
+            {
+               "syntax": "hgvs.p",
+               "value": "NP_005219.2:p.Leu858Arg"
+            }
+         ],
+         "location": {
+            "id": "ga4gh:SL.FYIfdQ3NyatgqPT_kKMfeIbt00559Izo",
+            "description": "Genomic position 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38).",
+            "extensions": [
+               {
+                  "name": "GRCh38 1-based, genomic position",
+                  "value": "chr7:55259515",
+                  "description": "Genomic position 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38)."
+               },
+               {
+                  "name": "GRCh38 1-based, inclusive interval notation",
+                  "value": "chr1:55259515-55259515",
+                  "description": "Genomic positions 55,259,515 to 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38); 1-based, inclusive interval notation."
+               },
+               {
+                  "name": "GRCh38 0-based, half-open interval notation",
+                  "value": "chr1:55259514-55259515",
+                  "description": "Genomic positions 55,259,514 to 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38); 0-based, half-open interval notation."
+               }
+            ],
+            "type": "SequenceLocation",
+            "digest": "FYIfdQ3NyatgqPT_kKMfeIbt00559Izo",
+            "sequenceReference": {
+               "id": "refseq:NC_000007.13",
+               "name": "NC_000007.13",
+               "description": "Reference sequence for GRCh38 chromosome 7.",
+               "aliases": [
+                  "GRCh38:7",
+                  "GRCh38:chr7",
+                  "ga4gh:SQ.IW78mgV5Cqf6M24hy52hPjyyo5tCCd86"
+               ],
+               "type": "SequenceReference",
+               "refgetAccession": "SQ.IW78mgV5Cqf6M24hy52hPjyyo5tCCd86",
+               "residueAlphabet": "na"
+            },
+            "start": 55259514,
+            "end": 55259515,
+            "sequence": "AT"
+         },
+         "state": {
+            "type": "LiteralSequenceExpression",
+            "sequence": "G"
+         }
+      },
+      {
+         "id": "ga4gh:VA.gV7_dnvF8SQSeUdvgDFhU65zK_csc6VE",
+         "type": "Allele",
+         "name": "NM_005228.5:c.2573T>G",
+         "description": "VRS variation of NM_005228.5:c.2573T>G, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).",
+         "digest": "gV7_dnvF8SQSeUdvgDFhU65zK_csc6VE",
+         "expressions": [
+            {
+               "syntax": "hgvs.g",
+               "value": "NC_000007.13:g.55259515T>G"
+            },
+            {
+               "syntax": "hgvs.c",
+               "value": "NM_005228.5:c.2573T>G"
+            },
+            {
+               "syntax": "hgvs.p",
+               "value": "NP_005219.2:p.Leu858Arg"
+            }
+         ],
+         "location": {
+            "id": "ga4gh:SL.LREsUiEYvOrRhwXW1rG72kXFPegvkNzI",
+            "description": "Coding DNA (cDNA) position 2573 of the EGFR MANE Select coding transcript (refseq:NM_005228.5), corresponding to genomic position 55259515 on chromosome 7 (refseq:NC_000007.13, GRCh38).",
+            "extensions": [
+               {
+                  "name": "GRCh38 1-based, genomic position",
+                  "value": "chr7:55259515",
+                  "description": "Genomic position 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38)."
+               },
+               {
+                  "name": "GRCh38 1-based, inclusive interval notation",
+                  "value": "chr7:55259515-55259515",
+                  "description": "Genomic positions 55,259,515 to 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38); 1-based, inclusive interval notation."
+               },
+               {
+                  "name": "GRCh38 0-based, half-open interval notation",
+                  "value": "chr7:55259514-55259515",
+                  "description": "Genomic positions 55,259,514 to 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38); 0-based, half-open interval notation."
+               }
+            ],
+            "type": "SequenceLocation",
+            "digest": "LREsUiEYvOrRhwXW1rG72kXFPegvkNzI",
+            "sequenceReference": {
+               "id": "refseq:NM_005228.5",
+               "name": "NM_005228.5",
+               "description": "The MANE Select (GRCh38) coding transcript for EGFR.",
+               "aliases": [
+                  "ensembl:ENST00000275493.7",
+                  "ga4gh:SQ.d_QsP29RWJi6bac7GOC9cJ9AO7s_HUMN"
+               ],
+               "type": "SequenceReference",
+               "refgetAccession": "SQ.d_QsP29RWJi6bac7GOC9cJ9AO7s_HUMN",
+               "residueAlphabet": "na"
+            },
+            "start": 2833,
+            "end": 2834,
+            "sequence": "T"
+         },
+         "state": {
+            "type": "LiteralSequenceExpression",
+            "sequence": "G"
+         }
+      },
+      {
+         "id": "ga4gh:VA.S41CcMJT2bcd8R4-qXZWH1PoHWNtG2PZ",
+         "type": "Allele",
+         "name": "NP_005219.2:p.Leu858Arg",
+         "description": "VRS variation of NP_005219.2:p.Leu858Arg, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).",
+         "digest": "S41CcMJT2bcd8R4-qXZWH1PoHWNtG2PZ",
+         "expressions": [
+            {
+               "syntax": "hgvs.g",
+               "value": "NC_000007.13:g.55259515T>G"
+            },
+            {
+               "syntax": "hgvs.c",
+               "value": "NM_005228.5:c.2573T>G"
+            },
+            {
+               "syntax": "hgvs.p",
+               "value": "NP_005219.2:p.Leu858Arg"
+            }
+         ],
+         "location": {
+            "id": "ga4gh:SL.v0_edynH98OIu-0QPVT5anCSOriAFSDQ",
+            "description": "Amino acid position 858 of the RefSeq protein NP_005219.2, which is the protein product of the MANE Select (GRCh38) coding transcript for EGFR (refseq:NM_005228.5).",
+            "type": "SequenceLocation",
+            "digest": "v0_edynH98OIu-0QPVT5anCSOriAFSDQ",
+            "sequenceReference": {
+               "id": "refseq:NP_005219.2",
+               "name": "NP_005219.2",
+               "description": "The protein product of the MANE Select (GRCh38) coding transcript for EGFR (refseq:NM_005228.5), corresponding to the RefSeq protein accession NP_005219.2.",
+               "aliases": [
+                  "ensembl:ENSP00000275493.2",
+                  "ga4gh:SQ.vyo55F6mA6n2LgN4cagcdRzOuh38V4mE"
+               ],
+               "type": "SequenceReference",
+               "refgetAccession": "SQ.vyo55F6mA6n2LgN4cagcdRzOuh38V4mE",
+               "residueAlphabet": "aa"
+            },
+            "start": 857,
+            "end": 858,
+            "sequence": "L"
+         },
+         "state": {
+            "type": "LiteralSequenceExpression",
+            "sequence": "R"
+         }
+      }
+   ],
+   "maturity": "trial use"
+}
