@@ -1,4 +1,4 @@
-.. _hyperintensiona_catvars:
+.. _hyperintensional-catvars:
 
 Treatment of CatVars as ((Hyper)intensional) Set-Theoretic Objects
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

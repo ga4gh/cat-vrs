@@ -16,8 +16,7 @@ Design decisions as they pertain to the `Categorical Variant Representation Spec
 * **General Principles**: Technical decisions and stylistic conventions that are observed in the Cat-VRS schema and documentation, but do not materially impact the design of the function of the standard.
 
 
-Decisions are labeled based on their maturity status based on the `Genomic Knowledge Standards (GKS) Maturity Model
-<https://cat-vrs.readthedocs.io/en/latest/appendices/maturity_model.html>`_. While the Maturity Model includes draft, trial use, normative, and deprecated categories, to date all components of this product are either draft or trial use status. Components must undergo a period of public comment before changing maturity status.
+Decisions are labeled based on their maturity status based on the :ref:`maturity-model`. While the Maturity Model includes draft, trial use, normative, and deprecated categories, to date all components of this product are either draft or trial use status. Components must undergo a period of public comment before changing maturity status.
 
 Because maturity is a function of (1) the breadth of model adoption and (2) expected stability, rather than a function of how fundamental a concept is to the model, the maturity status property is entirely orthogonal to the impact of a decision on Cat-VRS.
 
@@ -49,7 +48,7 @@ Major Impact
 The group decided to model categorical variants as `hyperintensional <https://plato.stanford.edu/entries/hyperintensionality/>`_ set objects to address the complexities of categorical data representation.
 
 **Rationale:**
-This decision is comprised of three others that build atop one another, each deciding to model categorical variants (a) as sets of properties, (b) as *intensional* set objects: defined by properties of what they *are*, instead of *extensional*: defined by set membership, and (c) using a *hyper* intensional semantic model. A more in-depth rationale can be found `here <hyperintensional_catvars.rst>`_.
+This decision is comprised of three others that build atop one another, each deciding to model categorical variants (a) as sets of properties, (b) as *intensional* set objects: defined by properties of what they *are*, instead of *extensional*: defined by set membership, and (c) using a *hyper* intensional semantic model. A more in-depth rationale can be found here: :ref:`hyperintensional-catvars`.
 
 
 #. **Catvars as sets:** The group recognized that catvars often represent high-order, unspecified variants, which are best conceptualized as sets to capture their broad and flexible nature within genomic knowledgebases.
@@ -219,7 +218,7 @@ Splitting this constraint allows the model to explicitly define variants based o
 **Utilization of semantic versioning and the GKS maturity model**
 
 **Decision:**
-The group decided to adopt standard semantic versioning practices and to indicate data class maturity in compliance with the `GKS workstream maturity model <https://cat-vrs.readthedocs.io/en/latest/appendices/maturity_model.html>`_.
+The group decided to adopt standard semantic versioning practices and to indicate data class maturity in compliance with the :ref:`maturity-model`.
 
 
 **Rationale:**
@@ -280,7 +279,6 @@ The group followed existing practices in other GKS standards for relations and m
 
 **Citations:**
 
-
 *  `"Should 'relations' be a mappable concept?" GitHub issue <https://github.com/ga4gh/cat-vrs/issues/97>`_
 
 *  `2025-02-04 meeting minutes <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.ujjbabr6rnl>`_
@@ -302,13 +300,11 @@ Because catvars are `defined by their properties (constraints), <https://docs.go
 
 **Citations:**
 
-
 *  `2024-07-03 meeting minutes <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.8tp6mx3oau6h>`_
 
 *  `2024-04-16 meeting minutes <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.cexaqt7e0bcy>`_
 
 *  `Cat-VRS Model: Categorical Variant class <https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#categorical-variant>`_
-
 
 
 .. name_as_a_non-required_field
@@ -329,14 +325,15 @@ The *name* property is a string field, and is intended to hold a *name* for a ca
 **Renaming “Profiles” to “Recipes” to represent standard categorical variants templates**
 
 **Decision:**
-`Recipes <https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html>`_ were originally called Profiles, but the group decided to change the name to the current Recipes.
+:ref:`recipes` were originally called Profiles, but the group decided to change the name to the current Recipes.
 
 
 **Rationale:**
-The term `profile is already used within the Variant Annotation Specification (VA-spec), <https://va-ga4gh.readthedocs.io/en/latest/base-profiles/index.html#base-profiles>`_ and means something very different from what we intended it to mean in the context of Cat-VRS, so the term was changed in Cat-VRS to avoid confusion.
+The term `profile is already used within the Variant Annotation Specification (VA-spec), <https://va-ga4gh.readthedocs.io/en/latest/va-standard-profiles/>`_ and means something very different from what we intended it to mean in the context of Cat-VRS, so the term was changed in Cat-VRS to avoid confusion.
 
 
 **Citations:**
+
 *  `“Turn ‘profiles’ into ‘recipes’” GitHub Issue <https://github.com/ga4gh/cat-vrs/issues/60>`_
 
 
@@ -374,7 +371,7 @@ We recognize that this terminology is inconsistent with current colloquial use o
 **Integration of Mappable Concepts for Variant Relations**
 
 **Decision:**
-For the relations property in the DefiningAlleleConstraint and DefiningLocationConstraint, the group decided to remove the explicit enum of possible relation methods (such as translates_to and translates_from) and instead refer to the `gks.core:MappableConcept <https://cat-vrs.readthedocs.io/en/latest/concepts/imported/MappableConcept.html#mappableconcept>`_ data class.
+For the relations property in the DefiningAlleleConstraint and DefiningLocationConstraint, the group decided to remove the explicit enum of possible relation methods (such as translates_to and translates_from) and instead refer to the :ref:`MappableConcept` data class.
 
 
 
@@ -383,6 +380,7 @@ This decision was made for a number of reasons: First, it is more consistent wit
 
 
 **Citations:**
+
 *  `“Should relation or relations be renamed?” GitHub discussion <https://github.com/ga4gh/cat-vrs/discussions/100>`_
 *  `2025-02-05 meeting minutes <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.ujjbabr6rnl>`_
 
