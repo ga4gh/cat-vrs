@@ -79,15 +79,6 @@ The following are example implementations of that satisfy the ProteinSequenceCon
 
 .. raw:: html
 
-   <div style="margin-top: 0.5em;"></div>
-
-.. collapse:: BRAF V600
-
-   .. literalinclude:: ../../../schema/cat-vrs/json/example_proteinSequenceConsequence-ex3
-      :language: json
-
-.. raw:: html
-
    <div style="margin-top: 1em;"></div>
 
 .. _categorical-cnv:
