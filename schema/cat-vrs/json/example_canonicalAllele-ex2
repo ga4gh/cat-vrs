@@ -4,9 +4,8 @@
    "title": "example_canonicalAllele-ex2",
    "type": "CategoricalVariant",
    "id": "clingen:CA415424538",
-   "maturity": "trial use",
-   "description": "...",
    "name": "NC_000001.11:g.1699974C>G",
+   "description": "An example canonical allele.",
    "aliases": [
       "NC_000001.11:g.1699974C>G",
       "NC_000001.10:g.1631413C>G"
@@ -51,11 +50,38 @@
             ],
             "location": {
                "id": "ga4gh:SL.YmbtK6FLqlk2bLjpFwH-y7k4RLq_t7L3",
+               "description": "Genomic position 1699974 on chromosome 1 (refseq:NC_000001.11, GRCh38).",
+               "extensions": [
+                  {
+                     "name": "GRCh38 1-based, genomic position",
+                     "value": "chr1:1699974",
+                     "description": "Genomic position 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38)."
+                  },
+                  {
+                     "name": "GRCh38 1-based, inclusive interval notation",
+                     "value": "chr1:1699974-1699974",
+                     "description": "Genomic positions 1,699,974 to 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38); 1-based, inclusive interval notation."
+                  },
+                  {
+                     "name": "GRCh38 0-based, half-open interval notation",
+                     "value": "chr1:1699973-1699974",
+                     "description": "Genomic positions 1,699,973 to 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38); 0-based, half-open interval notation."
+                  }
+               ],
                "type": "SequenceLocation",
                "digest": "YmbtK6FLqlk2bLjpFwH-y7k4RLq_t7L3",
                "sequenceReference": {
+                  "id": "refseq:NC_000001.11",
+                  "name": "NC_000001.11",
+                  "description": "Reference sequence for GRCh38 chromosome 1.",
+                  "aliases": [
+                     "GRCh38:1",
+                     "GRCh38:chr1",
+                     "ga4gh:SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO"
+                  ],
                   "type": "SequenceReference",
-                  "refgetAccession": "SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO"
+                  "refgetAccession": "SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO",
+                  "residueAlphabet": "na"
                },
                "start": 1699973,
                "end": 1699974,
@@ -170,11 +196,38 @@
          ],
          "location": {
             "id": "ga4gh:SL.YmbtK6FLqlk2bLjpFwH-y7k4RLq_t7L3",
+            "description": "Genomic position 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38).",
             "type": "SequenceLocation",
+            "extensions": [
+               {
+                  "name": "GRCh38 1-based, genomic position",
+                  "value": "chr1:1699974",
+                  "description": "Genomic position 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38)."
+               },
+               {
+                  "name": "GRCh38 1-based, inclusive interval notation",
+                  "value": "chr1:1699974-1699974",
+                  "description": "Genomic positions 1,699,974 to 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38); 1-based, inclusive interval notation."
+               },
+               {
+                  "name": "GRCh38 0-based, half-open interval notation",
+                  "value": "chr1:1699973-1699974",
+                  "description": "Genomic positions 1,699,973 to 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38); 0-based, half-open interval notation."
+               }
+            ],
             "digest": "YmbtK6FLqlk2bLjpFwH-y7k4RLq_t7L3",
             "sequenceReference": {
+               "id": "refseq:NC_000001.11",
+               "name": "NC_000001.11",
+               "description": "Reference sequence for GRCh38 chromosome 1.",
+               "aliases": [
+                  "GRCh38:1",
+                  "GRCh38:chr1",
+                  "ga4gh:SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO"
+               ],
                "type": "SequenceReference",
-               "refgetAccession": "SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO"
+               "refgetAccession": "SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO",
+               "residueAlphabet": "na"
             },
             "start": 1699973,
             "end": 1699974,
@@ -199,11 +252,38 @@
          ],
          "location": {
             "id": "ga4gh:SL.QsC4TgLsfR6-TatBj1sVKAgfv9bGYSxb",
+            "description": "Genomic position 1,631,413 on chromosome 1 (refseq:NC_000001.10, GRCh37).",
             "type": "SequenceLocation",
+            "extensions": [
+               {
+                  "name": "GRCh37 1-based, genomic position",
+                  "value": "chr1:1631413",
+                  "description": "Genomic position 1,631,413 on chromosome 1 (refseq:NC_000001.10, GRCh37)."
+               },
+               {
+                  "name": "GRCh37 1-based, inclusive interval notation",
+                  "value": "chr1:1631413-1631413",
+                  "description": "Genomic positions 1,631,413 to 1,631,413 on chromosome 1 (refseq:NC_000001.10, GRCh37); 1-based, inclusive interval notation."
+               },
+               {
+                  "name": "GRCh37 0-based, half-open interval notation",
+                  "value": "chr1:1631412-1631413",
+                  "description": "Genomic positions 1,631,412 to 1,631,413 on chromosome 1 (refseq:NC_000001.10, GRCh37); 0-based, half-open interval notation."
+               }
+            ],
             "digest": "QsC4TgLsfR6-TatBj1sVKAgfv9bGYSxb",
             "sequenceReference": {
+               "id": "refseq:NC_000001.10",
+               "name": "NC_000001.10",
+               "description": "Reference sequence for GRCh37 chromosome 1.",
+               "aliases": [
+                  "GRCh37.1",
+                  "GRCh37:chr1",
+                  "ga4gh:SQ.S_KjnFVz-FE7M0W6yoaUDgYxLPc1jyWU"
+               ],
                "type": "SequenceReference",
-               "refgetAccession": "SQ.S_KjnFVz-FE7M0W6yoaUDgYxLPc1jyWU"
+               "refgetAccession": "SQ.S_KjnFVz-FE7M0W6yoaUDgYxLPc1jyWU",
+               "residueAlphabet": "na"
             },
             "start": 1631412,
             "end": 1631413,
@@ -214,5 +294,6 @@
             "sequence": "G"
          }
       }
-   ]
+   ],
+   "maturity": "trial use"
 }

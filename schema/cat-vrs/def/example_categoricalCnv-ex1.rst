@@ -4,4 +4,4 @@
 
 **Computational Definition**
 
-...
+An example categorical CNV that uses CopyCountConstraint.

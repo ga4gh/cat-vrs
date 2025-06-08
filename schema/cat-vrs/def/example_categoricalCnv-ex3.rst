@@ -4,4 +4,4 @@
 
 **Computational Definition**
 
-an example copy number catvar
+An example categoricalCNV that uses CopyCountConstraint and uses ranges for start/end positions within the DefiningLocationConstraint.

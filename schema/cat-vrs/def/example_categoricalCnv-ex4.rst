@@ -4,4 +4,4 @@
 
 **Computational Definition**
 
-An example categorical CNV that uses CopyChangeConstraint.
+TP53 Copy Number Loss is a categorical copy-number variant resulting from the deletion of one copy of the TP53 gene.

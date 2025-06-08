@@ -1,7 +1,7 @@
 id: clingen:CA415424538
 type: CategoricalVariant
 name: NC_000001.11:g.1699974C>G
-description: ...
+description: An example canonical allele.
 aliases:
   - NC_000001.11:g.1699974C>G
   - NC_000001.10:g.1631413C>G

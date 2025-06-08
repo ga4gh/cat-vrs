@@ -1,7 +1,7 @@
 id: clinvar:55628
 type: CategoricalVariant
 name: NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter)
-description: ...
+description: An example categorical variant that models NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter) from ClinVar.
 aliases:
   - NM_007294.4:c.5558dup
   - NP_009225.1:p.Tyr1853Ter

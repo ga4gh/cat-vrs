@@ -4,4 +4,4 @@
 
 **Computational Definition**
 
-...
+An example categorical variant that models NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter) from ClinVar.

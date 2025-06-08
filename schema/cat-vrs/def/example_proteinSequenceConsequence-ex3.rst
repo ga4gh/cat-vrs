@@ -4,4 +4,4 @@
 
 **Computational Definition**
 
-An estrogen receptor that is encoded in the genome of human.
+BRAF V600 variants are missense amino acid substitutions that result in Valine changed. V600E is the most common substitution, but V600K, V600M, V600R, and V600G have also been observed.

@@ -4,4 +4,4 @@
 
 **Computational Definition**
 
-an example of a variant from ClinVar that the core Cat-VRS data model cannot yet precisely represent via constraints
+This described variant is an example of a categorical variant being modeled without constraints. This may be useful to model types of categorical variants as necessary constraints are still being developed.

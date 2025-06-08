@@ -13,12 +13,9 @@ namespaces:
 $defs:
   example_canonicalAllele-ex1:
     id: clinvar:662001
-    maturity: trial use
-    description: >-
-      an example Canonical Allele CatVar
     type: CategoricalVariant
     name: NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs)
-    description: ...
+    description: An example canonical allele.
     aliases:
       - NM_004958.4:c.5992_5993del
       - NC_000001.11:g.11128044_11128045del
@@ -71,7 +68,7 @@ $defs:
           id: ga4gh:VA.0TMQdMT2OBisJ9FI4tkzaBtxGB7r8FfJ
           type: Allele
           name: NM_004958.4:c.5992_5993del
-          description: VRS variation of NC_000001.11:g.11128044_11128045del, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+          description: VRS variation of NM_004958.4:c.5992_5993del, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
           extensions:
             - name: clinvar vcf
               value: 1-11128043-CAT-C
@@ -87,11 +84,26 @@ $defs:
               value: NP_004949.1:p.Met1998fs
           location:
             id: ga4gh:SL.gLe4d4Seuxn5fLCfO_2g34gF86vpGvo1
+            description: Coding DNA (cDNA) positions 5992 to 5993 of the MTOR MANE Select coding transcript (refseq:NM_004958.4), corresponding to genomic positions 11128044 to 11128045 on chromosome 1 (refseq:NC_000001.11, GRCh38).
+            extensions:
+              - name: GRCh38 1-based, inclusive interval
+                value: chr1:11128044-11128045
+                description: Genomic positions 11128044 to 11128045 on chromosome 1 (refseq:NC_000001.11, GRCh38); 1-based, inclusive interval notation.
+              - name: GRCh38 0-based, half-open interval
+                value: chr1:11128043-11128045
+                description: Genomic positions 11128043 to 11128045 on chromosome 1 (refseq:NC_000001.11, GRCh38); 0-based, half-open interval notation.
             type: SequenceLocation
             digest: gLe4d4Seuxn5fLCfO_2g34gF86vpGvo1
             sequenceReference:
+              id: refseq:NM_004958.4
+              name: NM_004958.4
+              description: The MANE Select (GRCh38) coding transcript for MTOR.
+              aliases:
+                - ensembl:ENST00000361445.9
+                - ga4gh:SQ.QheGYEnKbwNpM3LulbPTBQhyBSyZwuYm
               type: SequenceReference
               refgetAccession: SQ.QheGYEnKbwNpM3LulbPTBQhyBSyZwuYm
+              residueAlphabet: na
             start: 6112
             end: 6114
             sequence: AT
@@ -154,11 +166,27 @@ $defs:
             value: NP_004949.1:p.Met1998fs
         location:
           id: ga4gh:SL.5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
+          description: Genomic positions 11,128,044 to 11,128,045 on chromosome 1 (refseq:NC_000001.11, GRCh38).
+          extensions:
+            - name: GRCh38 1-based, inclusive interval
+              value: chr1:11128044-11128045
+              description: Genomic positions 11,128,044 to 11,128,045 on chromosome 1 (refseq:NC_000001.11, GRCh38); 1-based, inclusive interval notation.
+            - name: GRCh38 0-based, half-open interval
+              value: chr1:11128043-11128045
+              description: Genomic positions 11,128,043 to 11,128,045 on chromosome 1 (refseq:NC_000001.11, GRCh38); 0-based, half-open interval notation.
           type: SequenceLocation
           digest: 5-SKfXZ941W7JbZW3UmQKtijyUfd6d7z
           sequenceReference:
+            id: refseq:NC_000001.11
+            name: NC_000001.11
+            description: Reference sequence for GRCh38 chromosome 1.
+            aliases:
+              - GRCh38:1
+              - GRCh38:chr1
+              - ga4gh:SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
             type: SequenceReference
             refgetAccession: SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
+            residueAlphabet: na
           start: 11128043
           end: 11128045
           sequence: AT
@@ -186,11 +214,26 @@ $defs:
             value: NP_004949.1:p.Met1998fs
         location:
           id: ga4gh:SL.gLe4d4Seuxn5fLCfO_2g34gF86vpGvo1
+          description: Coding DNA (cDNA) positions 5992 to 5993 of the MTOR MANE Select coding transcript (refseq:NM_004958.4), corresponding to genomic positions 11128044 to 11128045 on chromosome 1 (refseq:NC_000001.11, GRCh38).
+          extensions:
+            - name: GRCh38 1-based, inclusive interval
+              value: chr1:11128044-11128045
+              description: Genomic positions 11128044 to 11128045 on chromosome 1 (refseq:NC_000001.11, GRCh38); 1-based, inclusive interval notation.
+            - name: GRCh38 0-based, half-open interval
+              value: chr1:11128043-11128045
+              description: Genomic positions 11128043 to 11128045 on chromosome 1 (refseq:NC_000001.11, GRCh38); 0-based, half-open interval notation.
           type: SequenceLocation
           digest: gLe4d4Seuxn5fLCfO_2g34gF86vpGvo1
           sequenceReference:
+            id: refseq:NM_004958.4
+            name: NM_004958.4
+            description: The MANE Select (GRCh38) coding transcript for MTOR.
+            aliases:
+              - ensembl:ENST00000361445.9
+              - ga4gh:SQ.QheGYEnKbwNpM3LulbPTBQhyBSyZwuYm
             type: SequenceReference
             refgetAccession: SQ.QheGYEnKbwNpM3LulbPTBQhyBSyZwuYm
+            residueAlphabet: na
           start: 6112
           end: 6114
           sequence: AT
@@ -199,15 +242,13 @@ $defs:
           length: 0
           sequence: ''
           repeatSubunitLength: 2
+    maturity: trial use
 
   example_canonicalAllele-ex2:
     id: clingen:CA415424538
-    maturity: trial use
-    description: >-
-      an example Canonical Allele CatVar
     type: CategoricalVariant
     name: NC_000001.11:g.1699974C>G
-    description: ...
+    description: An example canonical allele.
     aliases:
       - NC_000001.11:g.1699974C>G
       - NC_000001.10:g.1631413C>G
@@ -235,11 +276,30 @@ $defs:
               value: NC_000001.11:g.1699974C>G
           location:
             id: ga4gh:SL.YmbtK6FLqlk2bLjpFwH-y7k4RLq_t7L3
+            description: Genomic position 1699974 on chromosome 1 (refseq:NC_000001.11, GRCh38).
+            extensions:
+              - name: GRCh38 1-based, genomic position
+                value: chr1:1699974
+                description: Genomic position 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38).
+              - name: GRCh38 1-based, inclusive interval notation
+                value: chr1:1699974-1699974
+                description: Genomic positions 1,699,974 to 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38); 1-based, inclusive interval notation.
+              - name: GRCh38 0-based, half-open interval notation
+                value: chr1:1699973-1699974
+                description: Genomic positions 1,699,973 to 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38); 0-based, half-open interval notation.
             type: SequenceLocation
             digest: YmbtK6FLqlk2bLjpFwH-y7k4RLq_t7L3
             sequenceReference:
+              id: refseq:NC_000001.11
+              name: NC_000001.11
+              description: Reference sequence for GRCh38 chromosome 1.
+              aliases:
+                - GRCh38:1
+                - GRCh38:chr1
+                - ga4gh:SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
               type: SequenceReference
               refgetAccession: SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
+              residueAlphabet: na
             start: 1699973
             end: 1699974
             sequence: C
@@ -306,11 +366,30 @@ $defs:
             value: NC_000001.11:g.1699974C>G
         location:
           id: ga4gh:SL.YmbtK6FLqlk2bLjpFwH-y7k4RLq_t7L3
+          description: Genomic position 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38).
           type: SequenceLocation
+          extensions:
+            - name: GRCh38 1-based, genomic position
+              value: chr1:1699974
+              description: Genomic position 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38).
+            - name: GRCh38 1-based, inclusive interval notation
+              value: chr1:1699974-1699974
+              description: Genomic positions 1,699,974 to 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38); 1-based, inclusive interval notation.
+            - name: GRCh38 0-based, half-open interval notation
+              value: chr1:1699973-1699974
+              description: Genomic positions 1,699,973 to 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38); 0-based, half-open interval notation.
           digest: YmbtK6FLqlk2bLjpFwH-y7k4RLq_t7L3
           sequenceReference:
+            id: refseq:NC_000001.11
+            name: NC_000001.11
+            description: Reference sequence for GRCh38 chromosome 1.
+            aliases:
+              - GRCh38:1
+              - GRCh38:chr1
+              - ga4gh:SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
             type: SequenceReference
             refgetAccession: SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
+            residueAlphabet: na
           start: 1699973
           end: 1699974
           sequence: C
@@ -327,26 +406,43 @@ $defs:
             value: NC_000001.10:g.1631413C>G
         location:
           id: ga4gh:SL.QsC4TgLsfR6-TatBj1sVKAgfv9bGYSxb
+          description: Genomic position 1,631,413 on chromosome 1 (refseq:NC_000001.10, GRCh37).
           type: SequenceLocation
+          extensions:
+            - name: GRCh37 1-based, genomic position
+              value: chr1:1631413
+              description: Genomic position 1,631,413 on chromosome 1 (refseq:NC_000001.10, GRCh37).
+            - name: GRCh37 1-based, inclusive interval notation
+              value: chr1:1631413-1631413
+              description: Genomic positions 1,631,413 to 1,631,413 on chromosome 1 (refseq:NC_000001.10, GRCh37); 1-based, inclusive interval notation.
+            - name: GRCh37 0-based, half-open interval notation
+              value: chr1:1631412-1631413
+              description: Genomic positions 1,631,412 to 1,631,413 on chromosome 1 (refseq:NC_000001.10, GRCh37); 0-based, half-open interval notation.
           digest: QsC4TgLsfR6-TatBj1sVKAgfv9bGYSxb
           sequenceReference:
+            id: refseq:NC_000001.10
+            name: NC_000001.10
+            description: Reference sequence for GRCh37 chromosome 1.
+            aliases:
+              - GRCh37.1
+              - GRCh37:chr1
+              - ga4gh:SQ.S_KjnFVz-FE7M0W6yoaUDgYxLPc1jyWU
             type: SequenceReference
             refgetAccession: SQ.S_KjnFVz-FE7M0W6yoaUDgYxLPc1jyWU
+            residueAlphabet: na
           start: 1631412
           end: 1631413
           sequence: C
         state:
           type: LiteralSequenceExpression
           sequence: G
+    maturity: trial use
 
   example_categoricalCnv-ex1:
     id: clinvar:151061
-    maturity: trial use
-    description: >-
-      an example copy number catvar
     type: CategoricalVariant
     name: GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3
-    description: ...
+    description: An example categorical CNV that uses CopyCountConstraint.
     aliases:
       - NC_000007.14:g.(?_5905831)_(6014161_?)dup
       - NC_000007.13:g.(?_5945462)_(6053792_?)dup
@@ -371,11 +467,183 @@ $defs:
       - type: DefiningLocationConstraint
         location:
           id: ga4gh:SL.LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
+          description: Genomic positions 5905831 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+          extensions:
+            - name: GRCh38 1-based, inclusive interval
+              value: chr7:5905831-6014161
+              description: Genomic positions 5905831 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38); 1-based, inclusive interval notation.
+            - name: GRCh38 0-based, half-open interval
+              value: chr7:5905830-6014161
+              description: Genomic positions 5905830 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38); 0-based, half-open interval notation.
           type: SequenceLocation
           digest: LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
           sequenceReference:
+            id: refseq:NC_000007.14
+            name: NC_000007.14
+            description: Reference sequence for GRCh38 chromosome 7.
+            aliases:
+              - GRCh38:7
+              - GRCh38:chr7
+              - ga4gh:SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
             type: SequenceReference
             refgetAccession: SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
+            residueAlphabet: na
+          start:
+            - null
+            - 5905830
+          end:
+            - 6014161
+            - null
+        relations:
+          - primaryCoding:
+              code: liftover_to
+              system: ga4gh-gks-term:allele-relation
+        matchCharacteristic:
+          primaryCoding:
+            code: is_within
+            system: ga4gh-gks-term:location-match
+    mappings:
+      - coding:
+          system: https://www.ncbi.nlm.nih.gov/clinvar
+          code: '151061'
+          iris:
+            - https://www.ncbi.nlm.nih.gov/clinvar/variation/151061
+        relation: exactMatch
+      - coding:
+          system: https://www.ncbi.nlm.nih.gov/dbvar
+          code: nsv930939
+          iris:
+            - https://www.ncbi.nlm.nih.gov/dbvar/variants/nssv1610575/
+        relation: relatedMatch
+    members:
+      - id: ga4gh:CX.W8HqtDWeVQy_pq6fOSqnPlAcNnH9vvz4
+        type: CopyNumberCount
+        name: NC_000007.14:g.(?_5905831)_(6014161_?)dup
+        description: VRS variation of NC_000007.14:g.(?_5905831)_(6014161_?)dup, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+        digest: W8HqtDWeVQy_pq6fOSqnPlAcNnH9vvz4
+        expressions:
+          - syntax: hgvs.g
+            value: NC_000007.14:g.(?_5905831)_(6014161_?)dup
+        location:
+          id: ga4gh:SL.LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
+          description: Genomic positions 5,905,831 to 6,014,161 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+          extensions:
+            - name: GRCh38 1-based, inclusive interval
+              value: chr7:5905831-6014161
+              description: Genomic positions 5,905,831 to 6,014,161 on chromosome 7 (refseq:NC_000007.14, GRCh38); 1-based, inclusive interval notation.
+            - name: GRCh38 0-based, half-open interval
+              value: chr7:5905830-6014161
+              description: Genomic positions 5,905,830 to 6,014,161 on chromosome 7 (refseq:NC_000007.14, GRCh38); 0-based, half-open interval notation.
+          type: SequenceLocation
+          digest: LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
+          sequenceReference:
+            id: refseq:NC_000007.14
+            name: NC_000007.14
+            description: Reference sequence for GRCh38 chromosome 7.
+            aliases:
+              - GRCh38:7
+              - GRCh38:chr7
+              - ga4gh:SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
+            type: SequenceReference
+            refgetAccession: SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
+          start:
+            - null
+            - 5905830
+          end:
+            - 6014161
+            - null
+        copies: 3
+      - id: ga4gh:CX.XfVcSnSqR2oJHzBMueTrgkMWg_UgbuBL
+        type: CopyNumberCount
+        name: NC_000007.13:g.(?_5945462)_(6053792_?)dup
+        description: VRS variation of NC_000007.13:g.(?_5945462)_(6053792_?)dup, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+        digest: XfVcSnSqR2oJHzBMueTrgkMWg_UgbuBL
+        expressions:
+          - syntax: hgvs.g
+            value: NC_000007.13:g.(?_5945462)_(6053792_?)dup
+        location:
+          id: ga4gh:SL.9wrSvk5-4mI6CmYrt6vImSzcLssLY3VJ
+          description: Genomic positions 5,945,462 to 6,053,792 on chromosome 7 (refseq:NC_000007.13, GRCh37).
+          extensions:
+            - name: GRCh37 1-based, inclusive interval
+              value: chr7:5945462-6053792
+              description: Genomic positions 5,945,462 to 6,053,792 on chromosome 7 (refseq:NC_000007.13, GRCh37); 1-based, inclusive interval notation.
+            - name: GRCh38 0-based, half-open interval
+              value: chr7:5945461-6053792
+              description: Genomic positions 5,945,461 to 6,053,792 on chromosome 7 (refseq:NC_000007.13, GRCh37); 0-based, half-open interval notation.
+          type: SequenceLocation
+          digest: 9wrSvk5-4mI6CmYrt6vImSzcLssLY3VJ
+          sequenceReference:
+            id: refseq:NC_000007.13
+            name: NC_000007.13
+            description: Reference sequence for GRCh37 chromosome 7.
+            aliases:
+              - GRCh37:7
+              - GRCh37:chr7
+              - ga4gh:SQ.IW78mgV5Cqf6M24hy52hPjyyo5tCCd86
+            type: SequenceReference
+            refgetAccession: SQ.IW78mgV5Cqf6M24hy52hPjyyo5tCCd86
+            residueAlphabet: na
+          start:
+            - null
+            - 5945461
+          end:
+            - 6053792
+            - null
+        copies: 3
+    maturity: trial use
+
+  example_categoricalCnv-ex2:
+    id: clinvar:151061
+    type: CategoricalVariant
+    name: GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3
+    description: An example categorical CNV that uses CopyChangeConstraint.
+    aliases:
+      - NC_000007.14:g.(?_5905831)_(6014161_?)dup
+      - NC_000007.13:g.(?_5945462)_(6053792_?)dup
+    extensions:
+      - name: cytogenetic location
+        value: 7p22.1
+      - name: clinvar variation type
+        value: copy number gain
+      - name: hgvs list
+        value:
+          - nucleotideExpression:
+              syntax: hgvs.g
+              value: NC_000007.14:g.(?_5905831)_(6014161_?)dup
+            nucleotideType: genomic
+          - nucleotideExpression:
+              syntax: hgvs.g
+              value: NC_000007.13:g.(?_5945462)_(6053792_?)dup
+            nucleotideType: genomic
+    constraints:
+      - type: CopyChangeConstraint
+        copyChange: gain
+      - type: DefiningLocationConstraint
+        location:
+          id: ga4gh:SL.LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
+          name: NC_000007.14:g.(?_5905831)_(6014161_?)
+          description: Genomic positions 5905831 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+          extensions:
+            - name: GRCh38 1-based, inclusive interval
+              value: chr7:5905831-6014161
+              description: Genomic positions 5905831 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38); 1-based, inclusive interval notation.
+            - name: GRCh38 0-based, half-open interval
+              value: chr7:5905830-6014161
+              description: Genomic positions 5905830 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38); 0-based, half-open interval notation.
+          type: SequenceLocation
+          digest: LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
+          sequenceReference:
+            id: refseq:NC_000007.14
+            name: NC_000007.14
+            description: Reference sequence for GRCh38 chromosome 7.
+            aliases:
+              - GRCh38:7
+              - GRCh38:chr7
+              - ga4gh:SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
+            type: SequenceReference
+            refgetAccession: SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
+            residueAlphabet: na
           start:
             - null
             - 5905830
@@ -414,9 +682,24 @@ $defs:
             value: NC_000007.14:g.(?_5905831)_(6014161_?)dup
         location:
           id: ga4gh:SL.LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
+          description: Genomic positions 5905831 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+          extensions:
+            - name: GRCh38 1-based, inclusive interval
+              value: chr7:5905831-6014161
+              description: Genomic positions 5905831 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38); 1-based, inclusive interval notation.
+            - name: GRCh38 0-based, half-open interval
+              value: chr7:5905830-6014161
+              description: Genomic positions 5905830 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38); 0-based, half-open interval notation.
           type: SequenceLocation
           digest: LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
           sequenceReference:
+            id: refseq:NC_000007.14
+            name: NC_000007.14
+            description: Reference sequence for GRCh38 chromosome 7.
+            aliases:
+              - GRCh38:7
+              - GRCh38:chr7
+              - ga4gh:SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
             type: SequenceReference
             refgetAccession: SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
           start:
@@ -436,11 +719,27 @@ $defs:
             value: NC_000007.13:g.(?_5945462)_(6053792_?)dup
         location:
           id: ga4gh:SL.9wrSvk5-4mI6CmYrt6vImSzcLssLY3VJ
+          description: Genomic positions 5945462 to 6053792 on chromosome 7 (refseq:NC_000007.13, GRCh37).
+          extensions:
+            - name: GRCh37 1-based, inclusive interval
+              value: chr7:5945462-6053792
+              description: Genomic positions 5945462 to 6053792 on chromosome 7 (refseq:NC_000007.13, GRCh37); 1-based, inclusive interval notation.
+            - name: GRCh38 0-based, half-open interval
+              value: chr7:5945461-6053792
+              description: Genomic positions 5945461 to 6053792 on chromosome 7 (refseq:NC_000007.13, GRCh37); 0-based, half-open interval notation.
           type: SequenceLocation
           digest: 9wrSvk5-4mI6CmYrt6vImSzcLssLY3VJ
           sequenceReference:
+            id: refseq:NC_000007.13
+            name: NC_000007.13
+            description: Reference sequence for GRCh37 chromosome 7.
+            aliases:
+              - GRCh37:7
+              - GRCh37:chr7
+              - ga4gh:SQ.IW78mgV5Cqf6M24hy52hPjyyo5tCCd86
             type: SequenceReference
             refgetAccession: SQ.IW78mgV5Cqf6M24hy52hPjyyo5tCCd86
+            residueAlphabet: na
           start:
             - null
             - 5945461
@@ -448,126 +747,17 @@ $defs:
             - 6053792
             - null
         copyChange: gain
-
-  example_categoricalCnv-ex2:
-    id: clinvar:151061
     maturity: trial use
-    description: >-
-      an example copy number catvar
-    type: CategoricalVariant
-    name: GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3
-    description: ...
-    aliases:
-      - NC_000007.14:g.(?_5905831)_(6014161_?)dup
-      - NC_000007.13:g.(?_5945462)_(6053792_?)dup
-    extensions:
-      - name: cytogenetic location
-        value: 7p22.1
-      - name: clinvar variation type
-        value: copy number gain
-      - name: hgvs list
-        value:
-          - nucleotideExpression:
-              syntax: hgvs.g
-              value: NC_000007.14:g.(?_5905831)_(6014161_?)dup
-            nucleotideType: genomic
-          - nucleotideExpression:
-              syntax: hgvs.g
-              value: NC_000007.13:g.(?_5945462)_(6053792_?)dup
-            nucleotideType: genomic
-    constraints:
-      - type: CopyChangeConstraint
-        copyChange: gain
-      - type: DefiningLocationConstraint
-        location:
-          id: ga4gh:SL.LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
-          type: SequenceLocation
-          digest: LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
-          sequenceReference:
-            type: SequenceReference
-            refgetAccession: SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
-          start:
-            - null
-            - 5905830
-          end:
-            - 6014161
-            - null
-        relations:
-          - primaryCoding:
-              code: liftover_to
-              system: ga4gh-gks-term:allele-relation
-        matchCharacteristic:
-          primaryCoding:
-            code: is_within
-            system: ga4gh-gks-term:location-match
-    mappings:
-      - coding:
-          system: https://www.ncbi.nlm.nih.gov/clinvar
-          code: '151061'
-          iris:
-            - https://www.ncbi.nlm.nih.gov/clinvar/variation/151061
-        relation: exactMatch
-      - coding:
-          system: https://www.ncbi.nlm.nih.gov/dbvar
-          code: nsv930939
-          iris:
-            - https://www.ncbi.nlm.nih.gov/dbvar/variants/nssv1610575/
-        relation: relatedMatch
-    # members:
-    #   - id: ga4gh:CX.W8HqtDWeVQy_pq6fOSqnPlAcNnH9vvz4
-    #     type: CopyNumberChange
-    #     name: NC_000007.14:g.(?_5905831)_(6014161_?)dup
-    #     description: VRS variation of NC_000007.14:g.(?_5905831)_(6014161_?)dup, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
-    #     digest: W8HqtDWeVQy_pq6fOSqnPlAcNnH9vvz4
-    #     expressions:
-    #       - syntax: hgvs.g
-    #         value: NC_000007.14:g.(?_5905831)_(6014161_?)dup
-    #     location:
-    #       id: ga4gh:SL.LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
-    #       type: SequenceLocation
-    #       digest: LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
-    #       sequenceReference:
-    #         type: SequenceReference
-    #         refgetAccession: SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
-    #       start:
-    #         - null
-    #         - 5905830
-    #       end:
-    #         - 6014161
-    #         - null
-    #     copyChange: copy number gain
-    #   - id: ga4gh:CX.XfVcSnSqR2oJHzBMueTrgkMWg_UgbuBL
-    #     type: CopyNumberChange
-    #     name: NC_000007.13:g.(?_5945462)_(6053792_?)dup
-    #     description: VRS variation of NC_000007.13:g.(?_5945462)_(6053792_?)dup, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
-    #     digest: XfVcSnSqR2oJHzBMueTrgkMWg_UgbuBL
-    #     expressions:
-    #       - syntax: hgvs.g
-    #         value: NC_000007.13:g.(?_5945462)_(6053792_?)dup
-    #     location:
-    #       id: ga4gh:SL.9wrSvk5-4mI6CmYrt6vImSzcLssLY3VJ
-    #       type: SequenceLocation
-    #       digest: 9wrSvk5-4mI6CmYrt6vImSzcLssLY3VJ
-    #       sequenceReference:
-    #         type: SequenceReference
-    #         refgetAccession: SQ.IW78mgV5Cqf6M24hy52hPjyyo5tCCd86
-    #       start:
-    #         - null
-    #         - 5945461
-    #       end:
-    #         - 6053792
-    #         - null
-    #     copyChange: copy number gain
 
   example_categoricalCnv-ex3:
     id: clingen:cacn42032202
-    maturity: trial use
-    description: >-
-      an example copy number catvar
     type: CategoricalVariant
     name: GRCh38 Xp22.31(chrX:6978350-7594949)x3
+    description: An example categoricalCNV that uses CopyCountConstraint and uses ranges for start/end positions within the DefiningLocationConstraint.
     aliases:
       - NC_000023.11:g.(6978350_6996235)_(7564455_7594949)dup(2)
+      - GRCh37 (chrX:6896391_6914276-7482496_7512990)x3
+      - NC_000023.10:g.(6896391_6914276-7482496_7512990)dup(2)
     extensions:
       - name: cytogenetic location
         value: Xp22.31
@@ -576,10 +766,27 @@ $defs:
         copies: 3
       - type: DefiningLocationConstraint
         location:
+          id: ga4gh:SL.XyercAFM_APQwFaDuPcXG5lHa4wUpkiL
+          description: Genomic region between positions 6,978,350-7,594,949 on chromosome X (refseq:NC_000023.11, GRCh38), with breakpoints estimated within the intervals 6,978,350-6,996,235 and 7,564,455-7,594,949.
+          extensions:
+            - name: GRCh38 1-based, inclusive interval
+              value: chrX:(6978350–6996235)-(7564455–7594949)
+              description: Genomic region between positions 6,978,350-7,594,949 on chromosome X (refseq:NC_000023.11, GRCh38), with breakpoints estimated within the intervals 6,978,350-6,996,235 and 7,564,455-7,594,949; 1-based, inclusive interval notation.
+            - name: GRCh38 0-based, half-open interval
+              value: chrX:(6978349–6996235)-(7564454–7594949)
+              description: Genomic region between positions 6,978,349-7,594,949 on chromosome X (refseq:NC_000023.11, GRCh38), with breakpoints estimated within the intervals 6,978,349-6,996,235 and 7,564,454-7,594,949; 0-based, half-open interval notation.
           type: SequenceLocation
+          digest: XyercAFM_APQwFaDuPcXG5lHa4wUpkiL
           sequenceReference:
+            id: refseq:NC_000023.11
+            name: NC_000023.11
+            description: Reference sequence for GRCh38 chromosome X.
+            aliases:
+              - GRCh38:X
+              - GRCh38:chrX
+              - ga4gh:SQ.w0WZEvgJF0zf_P4yyTzjjv9oW1z61HHP
             type: SequenceReference
-            refgetAccession: SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
+            refgetAccession: SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
           start:
             - 6978350
             - 6996235
@@ -602,58 +809,105 @@ $defs:
             - https://reg.clinicalgenome.org/redmine/projects/Registry/genboree_registry/by_canonicalid?canonicalid=CACN42032202
         relation: exactMatch
     members:
-      - type: CopyNumberChange
-        name: GRCh38 (chrX:6978350_6996235-7564455_7594949)x3
-      - type: CopyNumberChange
-        name: GRCh37 (chrX:6896391_6914276-7482496_7512990)x3
+      - id: ga4gh:CX.Xb6kSRqlCY2VS1QJeKxhWyGqPfpPigf3
+        type: CopyNumberCount
+        name: NC_000023.11:g.(6978350_6996235)_(7564455_7594949)dup(2)
+        description: VRS variation of NC_000023.11:g.(6978350_6996235)_(7564455_7594949)dup, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+        digest: Xb6kSRqlCY2VS1QJeKxhWyGqPfpPigf3
+        expressions:
+          - syntax: hgvs.g
+            value: NC_000023.11:g.(6978350_6996235)_(7564455_7594949)dup
+        location:
+          id: ga4gh:SL.XyercAFM_APQwFaDuPcXG5lHa4wUpkiL
+          description: Genomic region between positions 6,978,350-7,594,949 on chromosome X (refseq:NC_000023.11, GRCh38), with breakpoints estimated within the intervals 6,978,350-6,996,235 and 7,564,455-7,594,949.
+          extensions:
+            - name: GRCh38 1-based, inclusive interval
+              value: chrX:(6978350–6996235)-(7564455–7594949)
+              description: Genomic region between positions 6,978,350-7,594,949 on chromosome X (refseq:NC_000023.11, GRCh38), with breakpoints estimated within the intervals 6,978,350-6,996,235 and 7,564,455-7,594,949; 1-based, inclusive interval notation.
+            - name: GRCh38 0-based, half-open interval
+              value: chrX:(6978349–6996235)-(7564454–7594949)
+              description: Genomic region between positions 6,978,349-7,594,949 on chromosome X (refseq:NC_000023.11, GRCh38), with breakpoints estimated within the intervals 6,978,349-6,996,235 and 7,564,454-7,594,949; 0-based, half-open interval notation.
+          type: SequenceLocation
+          digest: XyercAFM_APQwFaDuPcXG5lHa4wUpkiL
+          sequenceReference:
+            id: refseq:NC_000023.11
+            name: NC_000023.11
+            description: Reference sequence for GRCh38 chromosome X.
+            aliases:
+              - GRCh38:X
+              - GRCh38:chrX
+              - ga4gh:SQ.w0WZEvgJF0zf_P4yyTzjjv9oW1z61HHP
+            type: SequenceReference
+            refgetAccession: SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
+          start:
+            - 6978350
+            - 6996235
+          end:
+            - 7564455
+            - 7594949
+        copies: 3
+    maturity: trial use
+
+  example_categoricalCnv-ex4:
+    id: civic.vid:4452
+    type: CategoricalVariant
+    name: TP53 Loss
+    description: TP53 Copy Number Loss is a categorical copy-number variant resulting from the deletion of one copy of the TP53 gene.
+    aliases:
+      - TP53 Copy Number Loss
+    extensions:
+      - name: cytogenetic location
+        value: 17p13
+    constraints:
+      - type: FeatureContextConstraint
+        featureContext:
+          id: TP53
+          name: TP53
+          conceptType: gene
+          primaryCoding:
+            - id: hgnc:11998
+              name: TP53
+              system: https://genenames.org
+              code: HGNC:11998
+              iris:
+                - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11998
+          extensions:
+            - name: cytogenetic location
+              value: 17p13.1
+      - type: CopyChangeConstraint
+        copyChange: loss
+    members: [ ]
+    mappings:
+      - coding:
+          name: TP53 Loss
+          system: https://civicdb.org
+          code: civic.vid:4452
+          iris:
+            - https://civicdb.org/variants/4452/summary
+        relation: exactMatch
+      - coding:
+          name: TP53 Deletion
+          system: https://civicdb.org/
+          code: civic.mpid:4456
+          iris:
+            - https://civicdb.org/molecular-profiles/4456/summary
+        relation: relatedMatch
+    maturity: trial use
 
   example_describedVariant-ex1:
     id: clinvar:1177130
-    maturity: trial use
-    description: >-
-      an example of a variant from ClinVar that the core Cat-VRS data model cannot yet
-      precisely represent via constraints
     type: CategoricalVariant
     name: t(2;15)(q23.1;q25.3)
+    description: This described variant is an example of a categorical variant being modeled without constraints. This may be useful to model types of categorical variants as necessary constraints are still being developed.
     extensions:
       - name: cytogenetic location
         value: 2q23.1-23.2
       - name: clinvar variation type
         value: Translocation
-
-  example_proteinMarker-ex1:
-    id: pr:p03372
     maturity: trial use
-    description: >-
-      An estrogen receptor that is encoded in the genome of human.
-    type: CategoricalVariant
-    label: Estrogen receptor
-    constraints:
-      - type: FeatureContextConstraint
-        featureContext:
-          id: pr:p03372
-          conceptType: Protein
-          name: Estrogen receptor
-          primaryCoding:
-            code: hgnc:3236
-            system: https://www.genenames.org
-          mappings:
-            - coding:
-                system: https://proconsortium.org
-                code: pr:p03372
-              relation: exactMatch
-            - coding:
-                system: https://www.uniprot.org
-                code: p03372
-              relation: relatedMatch
-            - coding:
-                system: https://www.genenames.org
-                code: hgnc:3467
-              relation: relatedMatch
 
   example_proteinSequenceConsequence-ex1:
     id: civic.mpid:33
-    maturity: trial use
     type: CategoricalVariant
     name: EGFR L858R
     description: >-
@@ -738,11 +992,19 @@ $defs:
               value: NP_005219.2:p.Leu858Arg
           location:
             id: ga4gh:SL.v0_edynH98OIu-0QPVT5anCSOriAFSDQ
+            description: Amino acid position 858 within the EGFR protein (refseq:NP_005219.2), which is the protein product of the MANE Select (GRCh38) coding transcript for EGFR (refseq:NM_005228.5), corresponding to leucine in the reference sequence.
             type: SequenceLocation
             digest: v0_edynH98OIu-0QPVT5anCSOriAFSDQ
             sequenceReference:
+              id: refseq:NP_005219.2
+              name: NP_005219.2
+              description: The protein product of the MANE Select (GRCh38) coding transcript for EGFR (refseq:NM_005228.5), corresponding to the RefSeq protein accession NP_005219.2.
+              aliases:
+                - ensembl:ENSP00000275493.2
+                - ga4gh:SQ.vyo55F6mA6n2LgN4cagcdRzOuh38V4mE
               type: SequenceReference
               refgetAccession: SQ.vyo55F6mA6n2LgN4cagcdRzOuh38V4mE
+              residueAlphabet: aa
             start: 857
             end: 858
             sequence: L
@@ -813,11 +1075,30 @@ $defs:
             value: NP_005219.2:p.Leu858Arg
         location:
           id: ga4gh:SL.FYIfdQ3NyatgqPT_kKMfeIbt00559Izo
+          description: Genomic position 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38).
+          extensions:
+            - name: GRCh38 1-based, genomic position
+              value: chr7:55259515
+              description: Genomic position 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38).
+            - name: GRCh38 1-based, inclusive interval notation
+              value: chr1:55259515-55259515
+              description: Genomic positions 55,259,515 to 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38); 1-based, inclusive interval notation.
+            - name: GRCh38 0-based, half-open interval notation
+              value: chr1:55259514-55259515
+              description: Genomic positions 55,259,514 to 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38); 0-based, half-open interval notation.
           type: SequenceLocation
           digest: FYIfdQ3NyatgqPT_kKMfeIbt00559Izo
           sequenceReference:
+            id: refseq:NC_000007.13
+            name: NC_000007.13
+            description: Reference sequence for GRCh38 chromosome 7.
+            aliases:
+              - GRCh38:7
+              - GRCh38:chr7
+              - ga4gh:SQ.IW78mgV5Cqf6M24hy52hPjyyo5tCCd86
             type: SequenceReference
             refgetAccession: SQ.IW78mgV5Cqf6M24hy52hPjyyo5tCCd86
+            residueAlphabet: na
           start: 55259514
           end: 55259515
           sequence: AT
@@ -838,11 +1119,29 @@ $defs:
             value: NP_005219.2:p.Leu858Arg
         location:
           id: ga4gh:SL.LREsUiEYvOrRhwXW1rG72kXFPegvkNzI
+          description: Coding DNA (cDNA) position 2573 of the EGFR MANE Select coding transcript (refseq:NM_005228.5), corresponding to genomic position 55259515 on chromosome 7 (refseq:NC_000007.13, GRCh38).
+          extensions:
+            - name: GRCh38 1-based, genomic position
+              value: chr7:55259515
+              description: Genomic position 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38).
+            - name: GRCh38 1-based, inclusive interval notation
+              value: chr7:55259515-55259515
+              description: Genomic positions 55,259,515 to 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38); 1-based, inclusive interval notation.
+            - name: GRCh38 0-based, half-open interval notation
+              value: chr7:55259514-55259515
+              description: Genomic positions 55,259,514 to 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38); 0-based, half-open interval notation.
           type: SequenceLocation
           digest: LREsUiEYvOrRhwXW1rG72kXFPegvkNzI
           sequenceReference:
+            id: refseq:NM_005228.5
+            name: NM_005228.5
+            description: The MANE Select (GRCh38) coding transcript for EGFR.
+            aliases:
+              - ensembl:ENST00000275493.7
+              - ga4gh:SQ.d_QsP29RWJi6bac7GOC9cJ9AO7s_HUMN
             type: SequenceReference
             refgetAccession: SQ.d_QsP29RWJi6bac7GOC9cJ9AO7s_HUMN
+            residueAlphabet: na
           start: 2833
           end: 2834
           sequence: T
@@ -863,25 +1162,32 @@ $defs:
             value: NP_005219.2:p.Leu858Arg
         location:
           id: ga4gh:SL.v0_edynH98OIu-0QPVT5anCSOriAFSDQ
+          description: Amino acid position 858 of the RefSeq protein NP_005219.2, which is the protein product of the MANE Select (GRCh38) coding transcript for EGFR (refseq:NM_005228.5).
           type: SequenceLocation
           digest: v0_edynH98OIu-0QPVT5anCSOriAFSDQ
           sequenceReference:
+            id: refseq:NP_005219.2
+            name: NP_005219.2
+            description: The protein product of the MANE Select (GRCh38) coding transcript for EGFR (refseq:NM_005228.5), corresponding to the RefSeq protein accession NP_005219.2.
+            aliases:
+              - ensembl:ENSP00000275493.2
+              - ga4gh:SQ.vyo55F6mA6n2LgN4cagcdRzOuh38V4mE
             type: SequenceReference
             refgetAccession: SQ.vyo55F6mA6n2LgN4cagcdRzOuh38V4mE
+            residueAlphabet: aa
           start: 857
           end: 858
           sequence: L
         state:
           type: LiteralSequenceExpression
           sequence: R
+    maturity: trial use
 
   example_proteinSequenceConsequence-ex2:
-    id: civic.mpid:33
-    maturity: trial use
     id: clinvar:55628
     type: CategoricalVariant
     name: NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter)
-    description: ...
+    description: An example categorical variant that models NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter) from ClinVar.
     aliases:
       - NM_007294.4:c.5558dup
       - NP_009225.1:p.Tyr1853Ter
@@ -939,11 +1245,19 @@ $defs:
               value: NP_009225.1:p.Tyr1853Ter
           location:
             id: ga4gh:SL.bR3EOtSngkb9wNbixylsw0sNa_2HCga5
+            description: Amino acid position 1853 of the Refseq protein NP_009225.1, which is the protein product of the MANE Select (GRCh38) coding transcript for BRCA1 (refseq:NM_007294.4).
             type: SequenceLocation
             digest: bR3EOtSngkb9wNbixylsw0sNa_2HCga5
             sequenceReference:
+              id: refseq:NP_009225.1
+              name: NP_009225.1
+              description: The protein product of the MANE Select (GRCh38) coding transcript for BRCA1 (refseq:NM_007294.4), corresponding to the Refseq protein accession NP_009225.1.
+              aliases:
+                - ensembl:ENSP00000350283.3
+                - ga4gh:SQ.nUzIPnHMyQV52hzgBbKl5vlbSwx8M8_Y
               type: SequenceReference
               refgetAccession: SQ.nUzIPnHMyQV52hzgBbKl5vlbSwx8M8_Y
+              residueAlphabet: aa
             start: 1852
             end: 1853
             sequence: Y
@@ -992,11 +1306,26 @@ $defs:
             value: NP_009225.1:p.Tyr1853Ter
         location:
           id: ga4gh:SL.El1CbTY3p0rvxxkf5qI3YdgTo46YIjwl
+          description: Genomic position 43,045,712 on chromosome 17 (refseq:NC_000017.11, GRCh38).
           type: SequenceLocation
+          extensions:
+            - name: GRCh38 1-based, genomic position
+              value: chr17:43045712
+              description: Genomic position 43,045,712 on chromosome 17 (refseq:NC_000017.11, GRCh38).
+            - name: GRCh38 1-based, inclusive interval notation
+              value: chr17:43045712-43045712
+              description: Genomic positions 43,045,712 to 43,045,712 on chromosome 17 (refseq:NC_000017.11, GRCh38); 1-based, inclusive interval notation.
+            - name: GRCh38 0-based, half-open interval notation
+              value: chr17:43045711-43045712
+              description: Genomic positions 43,045,711 to 43,045,712 on chromosome 17 (refseq:NC_000017.11, GRCh38); 0-based, half-open interval notation.
           digest: El1CbTY3p0rvxxkf5qI3YdgTo46YIjwl
           sequenceReference:
+            id: refseq:NC_000017.11
+            name: NC_000017.11
+            description: Reference sequence for GRCh38 chromosome 17
             type: SequenceReference
             refgetAccession: SQ.dLZ15tNO1Ur0IcGjwc3Sdi_0A6Yf4zm7
+            residueAlphabet: na
           start: 43045711
           end: 43045712
           sequence: T
@@ -1021,11 +1350,30 @@ $defs:
             value: NP_009225.1:p.Tyr1853Ter
         location:
           id: ga4gh:SL.bJxQ_soqGHGy4skIMKp6VLEB54XH32M8
+          description: Genomic position 41,197,729 on chromosome 17 (refseq:NC_000017.10, GRCh37).
           type: SequenceLocation
+          extensions:
+            - name: GRCh37 1-based, genomic position
+              value: chr17:41197729
+              description: Genomic position 41,197,729 on chromosome 17 (refseq:NC_000017.10, GRCh37).
+            - name: GRCh37 1-based, inclusive interval notation
+              value: chr17:41197729-41197729
+              description: Genomic position 41,197,729 to 41,197,729 on chromosome 17 (refseq:NC_000017.10, GRCh37); 1-based, inclusive interval notation.
+            - name: GRCh37 0-based, half-open interval notation
+              value: chr17:41197728-41197729
+              description: Genomic position 41,197,728 to 41,197,729 on chromosome 17 (refseq:NC_000017.10, GRCh37); 0-based, half-open interval notation.
           digest: bJxQ_soqGHGy4skIMKp6VLEB54XH32M8
           sequenceReference:
+            id: refseq:NC_000017.10
+            name: NC_000017.10
+            description: Reference sequence for GRCh37 chromosome 17.
+            aliases:
+              - GRCh37:17
+              - GRCh37:chr17
+              - ga4gh:SQ.AjWXsI7AkTK35XW9pgd3UbjpC3MAevlz
             type: SequenceReference
             refgetAccession: SQ.AjWXsI7AkTK35XW9pgd3UbjpC3MAevlz
+            residueAlphabet: na
           start: 41197728
           end: 41197729
           sequence: T
@@ -1050,14 +1398,317 @@ $defs:
             value: NP_009225.1:p.Tyr1853Ter
         location:
           id: ga4gh:SL.bR3EOtSngkb9wNbixylsw0sNa_2HCga5
+          description: Amino acid position 1853 of the Refseq protein NP_009225.1, which is the protein product of the MANE Select (GRCh38) coding transcript for BRCA1 (refseq:NM_007294.4).
           type: SequenceLocation
           digest: bR3EOtSngkb9wNbixylsw0sNa_2HCga5
           sequenceReference:
+            id: refseq:NP_009225.1
+            name: NP_009225.1
+            description: The protein product of the MANE Select (GRCh38) coding transcript for BRCA1 (refseq:NM_007294.4), corresponding to the Refseq protein accession NP_009225.1.
+            aliases:
+              - ensembl:ENSP00000350283.3
+              - ga4gh:SQ.nUzIPnHMyQV52hzgBbKl5vlbSwx8M8_Y
             type: SequenceReference
             refgetAccession: SQ.nUzIPnHMyQV52hzgBbKl5vlbSwx8M8_Y
+            residueAlphabet: aa
           start: 1852
           end: 1853
           sequence: Y
         state:
           type: LiteralSequenceExpression
           sequence: '*'
+    maturity: trial use
+
+  example_proteinSequenceConsequence-ex3:
+    id: civic.vid:17
+    type: CategoricalVariant
+    name: BRAF V600
+    description: >-
+      BRAF V600 variants are missense amino acid substitutions that result in Valine changed.
+      V600E is the most common substitution, but V600K, V600M, V600R, and V600G have also been observed.
+    aliases:
+      - NM_004333.6(BRAF) V600
+      - NM_004333.6 V600
+    extensions:
+      - name: CIViC Representative Variant Coordinates
+        value:
+          chromosome: '7'
+          start: 140453136
+          stop: 140453137
+          reference_bases: ''
+          variant_bases: ''
+          representative_transcript: ENST00000288602.6
+          ensembl_version: 75
+          reference_build: GRCh37
+    constraints:
+      - type: DefiningLocationConstraint
+        location:
+          id: ga4gh:SL.1ReS370wzmC9PGTn13XrnG8Ot7UAKYuw
+          description: Amino acid position 600 within the BRAF protein (refseq:NP_004324.2), which is the protein product of the MANE Select (GRCh38) coding transcript for BRAF (refseq:NM_004333.6), corresponding to valine in the reference sequence.
+          type: SequenceLocation
+          digest: 1ReS370wzmC9PGTn13XrnG8Ot7UAKYuw
+          sequenceReference:
+            id: refseq:NP_004324.2
+            name: NP_004324.2
+            description: The protein product of the MANE Select (GRCh38) coding transcript for BRAF (refseq:NM_004333.6), corresponding to the Refseq protein accession NP_004324.2.
+            aliases:
+              - ensembl:ENSP00000288602.6
+              - ga4gh:SQ.cQvw4UsHHRRlogxbWCB8W-mKD4AraM9y
+            type: SequenceReference
+            refgetAccession: SQ.cQvw4UsHHRRlogxbWCB8W-mKD4AraM9y
+            residueAlphabet: aa
+          start: 599
+          end: 600
+          sequence: V
+        relations:
+          primaryCoding:
+            code: translation_of
+            system: http://www.sequenceontology.org
+            iris:
+              - http://www.sequenceontology.org/browser/current_release/term/translation_of
+        matchCharacteristic:
+          primaryCoding:
+            code: is_within
+            system: ga4gh-gks-term:location-match
+    mappings:
+      - coding:
+          system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
+          code: 13961
+          name: NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)
+          iris:
+            - https://www.ncbi.nlm.nih.gov/clinvar/variation/13961
+        relation: relatedMatch
+      - coding:
+          system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
+          code: 375940
+          name: NM_004333.6(BRAF):c.1798_1799delinsAG (p.Val600Arg)
+          iris:
+            - https://www.ncbi.nlm.nih.gov/clinvar/variation/375940
+        relation: relatedMatch
+      - coding:
+          system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
+          code: 375941
+          name: NM_004333.6(BRAF):c.1798_1799delinsAA (p.Val600Lys)
+          iris:
+            - https://www.ncbi.nlm.nih.gov/clinvar/variation/375941
+        relation: relatedMatch
+      - coding:
+          system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
+          code: 40389
+          name: NM_004333.6(BRAF):c.1799T>G (p.Val600Gly)
+          iris:
+            - https://www.ncbi.nlm.nih.gov/clinvar/variation/40389
+        relation: relatedMatch
+      - coding:
+          system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
+          code: 44815
+          name: NM_004333.6(BRAF):c.1798G>A (p.Val600Met)
+          iris:
+            - https://www.ncbi.nlm.nih.gov/clinvar/variation/44815
+        relation: relatedMatch
+    members:
+      - id: ga4gh:VA.W6xsV-aFm9yT2Bic5cFAV2j0rll6KK5R
+        type: Allele
+        name: NM_004333.6:c.1799T>A
+        description: VRS variation of NM_004333.6:c.1799T>A, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+        digest: W6xsV-aFm9yT2Bic5cFAV2j0rll6KK5R
+        expression:
+          - syntax: hgvs.g
+            value: NC_000007.14:g.140753336A>T
+          - syntax: hgvs.c
+            value: NM_004333.6:c.1799T>A
+          - syntax: hgvs.p
+            value: NP_004324.2:p.Val600Glu
+        location:
+          id: ga4gh:SL.8HBKs9fzlT3tKWlM03REjkg_0Om6Y33U
+          description: Coding DNA (cDNA) position 1799 of the BRAF MANE Select coding transcript (refseq:NM_004333.6), corresponding to genomic position 140753336 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+          extensions:
+            - name: GRCh38 1-based, genomic position
+              value: chr7:140753336
+              description: Genomic position 140,753,336 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+            - name: GRCh38 1-based, inclusive interval
+              value: chr7:140753336-140753336
+              description: Genomic positions 140,753,336 to 140,753,336 on chromosome 7 (refseq:NC_000007.14, GRCh38); 1-based, inclusive interval notation.
+            - name: GRCh38 0-based, half-open interval
+              value: chr7:140753335-140753337
+              description: Genomic positions 140,753,335 to 140,753,336 on chromosome 7 (refseq:NC_000007.14, GRCh38); 0-based, half-open interval notation.
+          type: SequenceLocation
+          digest: 8HBKs9fzlT3tKWlM03REjkg_0Om6Y33U
+          sequenceReference:
+            id: refseq:NM_004333.6
+            name: NM_004333.6
+            description: The MANE Select (GRCh38) coding transcript for BRAF.
+            aliases:
+              - ga4gh:SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+            type: SequenceReference
+            refgetAccession: SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+            residueAlphabet: na
+          start: 2024
+          end: 2025
+          sequence: T
+        state:
+          type: LiteralSequenceExpression
+          sequence: A
+      - id: ga4gh:VA.GIOeMJX8rJ-q9ZGqmFRIUOGnXQ5NARht
+        type: Allele
+        name: NM_004333.6:c.1798_1799delinsAA
+        description: VRS variation of NM_004333.6:c.1798_1799delinsAA, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+        digest: GIOeMJX8rJ-q9ZGqmFRIUOGnXQ5NARht
+        expression:
+          - syntax: hgvs.g
+            value: NC_000007.14:g.140753336_140753337delinsTT
+          - syntax: hgvs.c
+            value: NM_004333.6:c.1798_1799delinsAA
+          - syntax: hgvs.p
+            value: NP_004324.2:p.Val600Lys
+        location:
+          id: ga4gh:SL.SXY8ShFrBAfSvtO_sXLMQKN3Ozc5awgh
+          description: Coding DNA (cDNA) positions 1798 to 1799 of the BRAF MANE Select coding transcript (refseq:NM_004333.6), corresponding to genomic positions 140753336 to 140753337 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+          extensions:
+            - name: GRCh38 1-based, inclusive interval
+              value: chr7:140753336-140753337
+              description: Genomic positions 140,753,336 to 140,753,337 on chromosome 7 (refseq:NC_000007.14, GRCh38); 1-based, inclusive interval notation.
+            - name: GRCh38 0-based, half-open interval
+              value: chr7:140753335-140753337
+              description: Genomic positions 140,753,335 to 140,753,337 on chromosome 7 (refseq:NC_000007.14, GRCh38); 0-based, half-open interval notation.
+          type: SequenceLocation
+          digest: SXY8ShFrBAfSvtO_sXLMQKN3Ozc5awgh
+          sequenceReference:
+            id: refseq:NM_004333.6
+            name: NM_004333.6
+            description: The MANE Select (GRCh38) coding transcript for BRAF.
+            aliases:
+              - ga4gh:SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+            type: SequenceReference
+            refgetAccession: SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+            residueAlphabet: na
+          start: 2023
+          end: 2025
+          sequence: GT
+        state:
+          type: LiteralSequenceExpression
+          sequence: AA
+      - id: ga4gh:VA.PEphL_4Hx5JYuJPMzgu0pRQIUcz_J9p0
+        type: Allele
+        name: NM_004333.6:c.1799T>G
+        description: VRS variation of NM_004333.6:c.1799T>G, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+        digest: PEphL_4Hx5JYuJPMzgu0pRQIUcz_J9p0
+        expression:
+          - syntax: hgvs.g
+            value: NC_000007.14:g.140753336A>C
+          - syntax: hgvs.c
+            value: NM_004333.6:c.1799T>G
+          - syntax: hgvs.p
+            value: NP_004324.2:p.Val600Gly
+        location:
+          id: ga4gh:SL.8HBKs9fzlT3tKWlM03REjkg_0Om6Y33U
+          description: Coding DNA (cDNA) positions 1799 of the BRAF MANE Select coding transcript (refseq:NM_004333.6), corresponding to genomic position 140753336 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+          extensions:
+            - name: GRCh38 1-based, genomic position
+              value: chr7:140753336
+              description: Genomic position 140,753,336 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+            - name: GRCh38 1-based, inclusive interval
+              value: chr7:140753336-140753336
+              description: Genomic positions 140,753,336 to 140,753,336 on chromosome 7 (refseq:NC_000007.14, GRCh38); 1-based, inclusive interval notation.
+            - name: GRCh38 0-based, half-open interval
+              value: chr7:140753335-140753336
+              description: Genomic positions 140,753,335 to 140,753,336 on chromosome 7 (refseq:NC_000007.14, GRCh38); 0-based, half-open interval notation.
+          type: SequenceLocation
+          digest: 8HBKs9fzlT3tKWlM03REjkg_0Om6Y33U
+          sequenceReference:
+            id: refseq:NM_004333.6
+            name: NM_004333.6
+            description: The MANE Select (GRCh38) coding transcript for BRAF.
+            aliases:
+              - ga4gh:SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+            type: SequenceReference
+            refgetAccession: SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+            residueAlphabet: na
+          start: 2024
+          end: 2025
+          sequence: T
+        state:
+          type: LiteralSequenceExpression
+          sequence: G
+      - id: ga4gh:VA.O3Wd-kD48Dl1ihRUuf4vVybLaXYKFXnk
+        name: NM_004333.6:c.1798G>A
+        description: VRS variation of NM_004333.6:c.1799T>A, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+        digest: O3Wd-kD48Dl1ihRUuf4vVybLaXYKFXnk
+        expression:
+          - syntax: hgvs.g
+            value: NC_000007.14:g.140753337C>T
+          - syntax: hgvs.c
+            value: NM_004333.6:c.1798G>A
+          - syntax: hgvs.p
+            value: NP_004324.2:p.Val600Met
+        type: Allele
+        location:
+          id: ga4gh:SL.1ReS370wzmC9PGTn13XrnG8Ot7UAKYuw
+          description: Coding DNA (cDNA) position 1798 of the BRAF MANE Select coding transcript (refseq:NM_004333.6), corresponding to genomic position 140753337 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+          extensions:
+            - name: GRCh38 1-based, genomic position
+              value: chr7:140753337
+              description: Genomic position 140,753,337 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+            - name: GRCh38 1-based, inclusive interval
+              value: chr7:140753337-140753337
+              description: Genomic positions 140,753,337 to 140,753,337 on chromosome 7 (refseq:NC_000007.14, GRCh38); 1-based, inclusive interval notation.
+            - name: GRCh38 0-based, half-open interval
+              value: chr7:140753336-140753337
+              description: Genomic positions 140,753,336 to 140,753,337 on chromosome 7 (refseq:NC_000007.14, GRCh38); 0-based, half-open interval notation.
+          type: SequenceLocation
+          digest: 1ReS370wzmC9PGTn13XrnG8Ot7UAKYuw
+          sequenceReference:
+            id: refseq:NM_004333.6
+            name: NM_004333.6
+            description: The MANE Select (GRCh38) coding transcript for BRAF.
+            aliases:
+              - ga4gh:SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+            type: SequenceReference
+            refgetAccession: SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+            residueAlphabet: na
+          start: 2024
+          end: 2025
+          sequence: G
+        state:
+          type: LiteralSequenceExpression
+          sequence: A
+      - id: ga4gh:VA.t97D17VsbiAa2U-znA-Qfx6DVInBd-_-
+        type: Allele
+        name: NM_004333.6:c.1798_1799delinsAG
+        description: VRS variation of NM_004333.6:c.1799T>A, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+        digest: t97D17VsbiAa2U-znA-Qfx6DVInBd-_-
+        expression:
+          - syntax: hgvs.g
+            value: NC_000007.14:g.140753336_140753337delinsTT
+          - syntax: hgvs.c
+            value: NM_004333.6:c.1798_1799delinsAG
+          - syntax: hgvs.p
+            value: NP_004324.2:p.Val600Arg
+        location:
+          id: ga4gh:SL.SXY8ShFrBAfSvtO_sXLMQKN3Ozc5awgh
+          description: Coding DNA (cDNA) positions 1798 to 1799 of the BRAF MANE Select coding transcript (refseq:NM_004333.6), corresponding to genomic positions 140753336 to 140753337 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+          extensions:
+            - name: GRCh38 1-based, inclusive interval
+              value: chr7:140753336-140753337
+              description: Genomic positions 140,753,336 to 140,753,337 on chromosome 7 (refseq:NC_000007.14, GRCh38); 1-based, inclusive interval notation.
+            - name: GRCh38 0-based, half-open interval
+              value: chr7:140753335-140753337
+              description: Genomic positions 140,753,335 to 140,753,337 on chromosome 7 (refseq:NC_000007.14, GRCh38); 0-based, half-open interval notation.
+          type: SequenceLocation
+          digest: SXY8ShFrBAfSvtO_sXLMQKN3Ozc5awgh
+          sequenceReference:
+            id: refseq:NM_004333.6
+            name: NM_004333.6
+            description: The MANE Select (GRCh38) coding transcript for BRAF.
+            aliases:
+              - ga4gh:SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+            type: SequenceReference
+            refgetAccession: SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+            residueAlphabet: na
+          start: 2023
+          end: 2025
+          sequence: GT
+        state:
+          type: LiteralSequenceExpression
+          sequence: AG
+    maturity: trial use

@@ -4,4 +4,4 @@
 
 **Computational Definition**
 
-...
+An example canonical allele.
