@@ -27,6 +27,8 @@ The CanonicalAllele is a :ref:`CategoricalVariant` with exactly one constraint:
 
 **Examples**
 
+The following are example implementations of that satisfy the CanonicalAllele recipe:
+
 .. collapse:: NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs)
 
    .. literalinclude:: ../../../schema/cat-vrs/json/example_canonicalAllele-ex1
@@ -58,6 +60,8 @@ The ProteinSequenceConsequence is a :ref:`CategoricalVariant` with exactly one c
    `translates_from` code. This constraint MUST refer to a protein variant for the `allele`.
 
 **Examples**
+
+The following are example implementations of that satisfy the ProteinSequenceConsequence recipe:
 
 .. collapse:: EGFR L858R
 
@@ -100,6 +104,8 @@ The CategoricalCNV is a :ref:`CategoricalVariant` with exactly two constraints:
 2. A :ref:`CopyChangeConstraint` or :ref:`CopyCountConstraint`.
 
 **Examples**
+
+The following are example implementations of that satisfy the CategoricalCNV recipe:
 
 .. collapse:: GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 with CopyCountConstraint
 

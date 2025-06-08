@@ -1419,7 +1419,7 @@ $defs:
           sequence: '*'
     maturity: trial use
 
-  example_proteinSequenceConsequence-ex3:
+  example_braf-v600:
     id: civic.vid:17
     type: CategoricalVariant
     name: BRAF V600
