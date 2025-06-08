@@ -142,4 +142,3 @@ The following are example implementations of that satisfy the CategoricalCNV rec
 .. raw:: html
 
    <div style="margin-top: 1em;"></div>
-
