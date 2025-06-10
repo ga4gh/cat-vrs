@@ -201,12 +201,8 @@ members:
     description: VRS variation of NM_004333.6:c.1799T>A, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
     digest: O3Wd-kD48Dl1ihRUuf4vVybLaXYKFXnk
     expression:
-      - syntax: hgvs.g
-        value: NC_000007.14:g.140753337C>T
       - syntax: hgvs.c
         value: NM_004333.6:c.1798G>A
-      - syntax: hgvs.p
-        value: NP_004324.2:p.Val600Met
     type: Allele
     location:
       id: ga4gh:SL.1ReS370wzmC9PGTn13XrnG8Ot7UAKYuw
