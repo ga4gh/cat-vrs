@@ -129,12 +129,8 @@ members:
     description: VRS variation of NM_004333.6:c.1798_1799delinsAA, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
     digest: GIOeMJX8rJ-q9ZGqmFRIUOGnXQ5NARht
     expression:
-      - syntax: hgvs.g
-        value: NC_000007.14:g.140753336_140753337delinsTT
       - syntax: hgvs.c
         value: NM_004333.6:c.1798_1799delinsAA
-      - syntax: hgvs.p
-        value: NP_004324.2:p.Val600Lys
     location:
       id: ga4gh:SL.SXY8ShFrBAfSvtO_sXLMQKN3Ozc5awgh
       description: Coding DNA (cDNA) positions 1798 to 1799 of the BRAF MANE Select coding transcript (refseq:NM_004333.6), corresponding to genomic positions 140753336 to 140753337 on chromosome 7 (refseq:NC_000007.14, GRCh38).
