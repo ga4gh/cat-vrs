@@ -91,12 +91,8 @@ members:
     description: VRS variation of NM_004333.6:c.1799T>A, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
     digest: W6xsV-aFm9yT2Bic5cFAV2j0rll6KK5R
     expression:
-      - syntax: hgvs.g
-        value: NC_000007.14:g.140753336A>T
       - syntax: hgvs.c
         value: NM_004333.6:c.1799T>A
-      - syntax: hgvs.p
-        value: NP_004324.2:p.Val600Glu
     location:
       id: ga4gh:SL.8HBKs9fzlT3tKWlM03REjkg_0Om6Y33U
       description: Coding DNA (cDNA) position 1799 of the BRAF MANE Select coding transcript (refseq:NM_004333.6), corresponding to genomic position 140753336 on chromosome 7 (refseq:NC_000007.14, GRCh38).
