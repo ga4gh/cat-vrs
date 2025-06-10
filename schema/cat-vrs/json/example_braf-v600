@@ -132,16 +132,8 @@
          "digest": "W6xsV-aFm9yT2Bic5cFAV2j0rll6KK5R",
          "expression": [
             {
-               "syntax": "hgvs.g",
-               "value": "NC_000007.14:g.140753336A>T"
-            },
-            {
                "syntax": "hgvs.c",
                "value": "NM_004333.6:c.1799T>A"
-            },
-            {
-               "syntax": "hgvs.p",
-               "value": "NP_004324.2:p.Val600Glu"
             }
          ],
          "location": {
@@ -194,16 +186,8 @@
          "digest": "GIOeMJX8rJ-q9ZGqmFRIUOGnXQ5NARht",
          "expression": [
             {
-               "syntax": "hgvs.g",
-               "value": "NC_000007.14:g.140753336_140753337delinsTT"
-            },
-            {
                "syntax": "hgvs.c",
                "value": "NM_004333.6:c.1798_1799delinsAA"
-            },
-            {
-               "syntax": "hgvs.p",
-               "value": "NP_004324.2:p.Val600Lys"
             }
          ],
          "location": {
@@ -251,16 +235,8 @@
          "digest": "PEphL_4Hx5JYuJPMzgu0pRQIUcz_J9p0",
          "expression": [
             {
-               "syntax": "hgvs.g",
-               "value": "NC_000007.14:g.140753336A>C"
-            },
-            {
                "syntax": "hgvs.c",
                "value": "NM_004333.6:c.1799T>G"
-            },
-            {
-               "syntax": "hgvs.p",
-               "value": "NP_004324.2:p.Val600Gly"
             }
          ],
          "location": {
@@ -312,16 +288,8 @@
          "digest": "O3Wd-kD48Dl1ihRUuf4vVybLaXYKFXnk",
          "expression": [
             {
-               "syntax": "hgvs.g",
-               "value": "NC_000007.14:g.140753337C>T"
-            },
-            {
                "syntax": "hgvs.c",
                "value": "NM_004333.6:c.1798G>A"
-            },
-            {
-               "syntax": "hgvs.p",
-               "value": "NP_004324.2:p.Val600Met"
             }
          ],
          "type": "Allele",
@@ -375,16 +343,8 @@
          "digest": "t97D17VsbiAa2U-znA-Qfx6DVInBd-_-",
          "expression": [
             {
-               "syntax": "hgvs.g",
-               "value": "NC_000007.14:g.140753336_140753337delinsTT"
-            },
-            {
                "syntax": "hgvs.c",
                "value": "NM_004333.6:c.1798_1799delinsAG"
-            },
-            {
-               "syntax": "hgvs.p",
-               "value": "NP_004324.2:p.Val600Arg"
             }
          ],
          "location": {
