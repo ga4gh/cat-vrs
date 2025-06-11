@@ -80,13 +80,7 @@ members:
       end:
         - 6014161
         - null
-    copyChange:
-      name: copy number gain
-      primaryCoding:
-        system: https://www.ebi.ac.uk/efo/
-        code: EFO:0030070
-        iris:
-          - https://www.ebi.ac.uk/ols4/ontologies/efo/classes?short_form=EFO_0030070
+    copyChange: gain
   - id: ga4gh:CX.XfVcSnSqR2oJHzBMueTrgkMWg_UgbuBL
     type: CopyNumberChange
     name: NC_000007.13:g.(?_5945462)_(6053792_?)dup
@@ -108,10 +102,4 @@ members:
       end:
         - 6053792
         - null
-    copyChange:
-      name: copy number gain
-      primaryCoding:
-        system: https://www.ebi.ac.uk/efo/
-        code: EFO:0030070
-        iris:
-          - https://www.ebi.ac.uk/ols4/ontologies/efo/classes?short_form=EFO_0030070
+    copyChange: gain
