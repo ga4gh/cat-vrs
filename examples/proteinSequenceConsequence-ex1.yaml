@@ -83,11 +83,19 @@ constraints:
           value: NP_005219.2:p.Leu858Arg
       location:
         id: ga4gh:SL.v0_edynH98OIu-0QPVT5anCSOriAFSDQ
+        description: Amino acid position 858 within the EGFR protein (refseq:NP_005219.2), which is the protein product of the MANE Select (GRCh38) coding transcript for EGFR (refseq:NM_005228.5), corresponding to leucine in the reference sequence.
         type: SequenceLocation
         digest: v0_edynH98OIu-0QPVT5anCSOriAFSDQ
         sequenceReference:
+          id: refseq:NP_005219.2
+          name: NP_005219.2
+          description: The protein product of the MANE Select (GRCh38) coding transcript for EGFR (refseq:NM_005228.5), corresponding to the RefSeq protein accession NP_005219.2.
+          aliases:
+            - ensembl:ENSP00000275493.2
+            - ga4gh:SQ.vyo55F6mA6n2LgN4cagcdRzOuh38V4mE
           type: SequenceReference
           refgetAccession: SQ.vyo55F6mA6n2LgN4cagcdRzOuh38V4mE
+          residueAlphabet: aa
         start: 857
         end: 858
         sequence: L
@@ -158,11 +166,30 @@ members:
         value: NP_005219.2:p.Leu858Arg
     location:
       id: ga4gh:SL.FYIfdQ3NyatgqPT_kKMfeIbt00559Izo
+      description: Genomic position 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38).
+      extensions:
+        - name: GRCh38 1-based, genomic position
+          value: chr7:55259515
+          description: Genomic position 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38).
+        - name: GRCh38 1-based, inclusive interval notation
+          value: chr1:55259515-55259515
+          description: Genomic positions 55,259,515 to 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38); 1-based, inclusive interval notation.
+        - name: GRCh38 0-based, half-open interval notation
+          value: chr1:55259514-55259515
+          description: Genomic positions 55,259,514 to 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38); 0-based, half-open interval notation.
       type: SequenceLocation
       digest: FYIfdQ3NyatgqPT_kKMfeIbt00559Izo
       sequenceReference:
+        id: refseq:NC_000007.13
+        name: NC_000007.13
+        description: Reference sequence for GRCh38 chromosome 7.
+        aliases:
+          - GRCh38:7
+          - GRCh38:chr7
+          - ga4gh:SQ.IW78mgV5Cqf6M24hy52hPjyyo5tCCd86
         type: SequenceReference
         refgetAccession: SQ.IW78mgV5Cqf6M24hy52hPjyyo5tCCd86
+        residueAlphabet: na
       start: 55259514
       end: 55259515
       sequence: AT
@@ -183,11 +210,29 @@ members:
         value: NP_005219.2:p.Leu858Arg
     location:
       id: ga4gh:SL.LREsUiEYvOrRhwXW1rG72kXFPegvkNzI
+      description: Coding DNA (cDNA) position 2573 of the EGFR MANE Select coding transcript (refseq:NM_005228.5), corresponding to genomic position 55259515 on chromosome 7 (refseq:NC_000007.13, GRCh38).
+      extensions:
+        - name: GRCh38 1-based, genomic position
+          value: chr7:55259515
+          description: Genomic position 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38).
+        - name: GRCh38 1-based, inclusive interval notation
+          value: chr7:55259515-55259515
+          description: Genomic positions 55,259,515 to 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38); 1-based, inclusive interval notation.
+        - name: GRCh38 0-based, half-open interval notation
+          value: chr7:55259514-55259515
+          description: Genomic positions 55,259,514 to 55,259,515 on chromosome 1 (refseq:NC_000007.13, GRCh38); 0-based, half-open interval notation.
       type: SequenceLocation
       digest: LREsUiEYvOrRhwXW1rG72kXFPegvkNzI
       sequenceReference:
+        id: refseq:NM_005228.5
+        name: NM_005228.5
+        description: The MANE Select (GRCh38) coding transcript for EGFR.
+        aliases:
+          - ensembl:ENST00000275493.7
+          - ga4gh:SQ.d_QsP29RWJi6bac7GOC9cJ9AO7s_HUMN
         type: SequenceReference
         refgetAccession: SQ.d_QsP29RWJi6bac7GOC9cJ9AO7s_HUMN
+        residueAlphabet: na
       start: 2833
       end: 2834
       sequence: T
@@ -208,11 +253,19 @@ members:
         value: NP_005219.2:p.Leu858Arg
     location:
       id: ga4gh:SL.v0_edynH98OIu-0QPVT5anCSOriAFSDQ
+      description: Amino acid position 858 of the RefSeq protein NP_005219.2, which is the protein product of the MANE Select (GRCh38) coding transcript for EGFR (refseq:NM_005228.5).
       type: SequenceLocation
       digest: v0_edynH98OIu-0QPVT5anCSOriAFSDQ
       sequenceReference:
+        id: refseq:NP_005219.2
+        name: NP_005219.2
+        description: The protein product of the MANE Select (GRCh38) coding transcript for EGFR (refseq:NM_005228.5), corresponding to the RefSeq protein accession NP_005219.2.
+        aliases:
+          - ensembl:ENSP00000275493.2
+          - ga4gh:SQ.vyo55F6mA6n2LgN4cagcdRzOuh38V4mE
         type: SequenceReference
         refgetAccession: SQ.vyo55F6mA6n2LgN4cagcdRzOuh38V4mE
+        residueAlphabet: aa
       start: 857
       end: 858
       sequence: L

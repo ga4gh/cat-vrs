@@ -1,7 +1,7 @@
 id: clinvar:55628
 type: CategoricalVariant
 name: NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter)
-description: ...
+description: An example categorical variant that models NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter) from ClinVar.
 aliases:
   - NM_007294.4:c.5558dup
   - NP_009225.1:p.Tyr1853Ter
@@ -59,11 +59,19 @@ constraints:
           value: NP_009225.1:p.Tyr1853Ter
       location:
         id: ga4gh:SL.bR3EOtSngkb9wNbixylsw0sNa_2HCga5
+        description: Amino acid position 1853 of the Refseq protein NP_009225.1, which is the protein product of the MANE Select (GRCh38) coding transcript for BRCA1 (refseq:NM_007294.4).
         type: SequenceLocation
         digest: bR3EOtSngkb9wNbixylsw0sNa_2HCga5
         sequenceReference:
+          id: refseq:NP_009225.1
+          name: NP_009225.1
+          description: The protein product of the MANE Select (GRCh38) coding transcript for BRCA1 (refseq:NM_007294.4), corresponding to the Refseq protein accession NP_009225.1.
+          aliases:
+            - ensembl:ENSP00000350283.3
+            - ga4gh:SQ.nUzIPnHMyQV52hzgBbKl5vlbSwx8M8_Y
           type: SequenceReference
           refgetAccession: SQ.nUzIPnHMyQV52hzgBbKl5vlbSwx8M8_Y
+          residueAlphabet: aa
         start: 1852
         end: 1853
         sequence: Y
@@ -112,11 +120,26 @@ members:
         value: NP_009225.1:p.Tyr1853Ter
     location:
       id: ga4gh:SL.El1CbTY3p0rvxxkf5qI3YdgTo46YIjwl
+      description: Genomic position 43,045,712 on chromosome 17 (refseq:NC_000017.11, GRCh38).
       type: SequenceLocation
+      extensions:
+        - name: GRCh38 1-based, genomic position
+          value: chr17:43045712
+          description: Genomic position 43,045,712 on chromosome 17 (refseq:NC_000017.11, GRCh38).
+        - name: GRCh38 1-based, inclusive interval notation
+          value: chr17:43045712-43045712
+          description: Genomic positions 43,045,712 to 43,045,712 on chromosome 17 (refseq:NC_000017.11, GRCh38); 1-based, inclusive interval notation.
+        - name: GRCh38 0-based, half-open interval notation
+          value: chr17:43045711-43045712
+          description: Genomic positions 43,045,711 to 43,045,712 on chromosome 17 (refseq:NC_000017.11, GRCh38); 0-based, half-open interval notation.
       digest: El1CbTY3p0rvxxkf5qI3YdgTo46YIjwl
       sequenceReference:
+        id: refseq:NC_000017.11
+        name: NC_000017.11
+        description: Reference sequence for GRCh38 chromosome 17
         type: SequenceReference
         refgetAccession: SQ.dLZ15tNO1Ur0IcGjwc3Sdi_0A6Yf4zm7
+        residueAlphabet: na
       start: 43045711
       end: 43045712
       sequence: T
@@ -141,11 +164,30 @@ members:
         value: NP_009225.1:p.Tyr1853Ter
     location:
       id: ga4gh:SL.bJxQ_soqGHGy4skIMKp6VLEB54XH32M8
+      description: Genomic position 41,197,729 on chromosome 17 (refseq:NC_000017.10, GRCh37).
       type: SequenceLocation
+      extensions:
+        - name: GRCh37 1-based, genomic position
+          value: chr17:41197729
+          description: Genomic position 41,197,729 on chromosome 17 (refseq:NC_000017.10, GRCh37).
+        - name: GRCh37 1-based, inclusive interval notation
+          value: chr17:41197729-41197729
+          description: Genomic position 41,197,729 to 41,197,729 on chromosome 17 (refseq:NC_000017.10, GRCh37); 1-based, inclusive interval notation.
+        - name: GRCh37 0-based, half-open interval notation
+          value: chr17:41197728-41197729
+          description: Genomic position 41,197,728 to 41,197,729 on chromosome 17 (refseq:NC_000017.10, GRCh37); 0-based, half-open interval notation.
       digest: bJxQ_soqGHGy4skIMKp6VLEB54XH32M8
       sequenceReference:
+        id: refseq:NC_000017.10
+        name: NC_000017.10
+        description: Reference sequence for GRCh37 chromosome 17.
+        aliases:
+          - GRCh37:17
+          - GRCh37:chr17
+          - ga4gh:SQ.AjWXsI7AkTK35XW9pgd3UbjpC3MAevlz
         type: SequenceReference
         refgetAccession: SQ.AjWXsI7AkTK35XW9pgd3UbjpC3MAevlz
+        residueAlphabet: na
       start: 41197728
       end: 41197729
       sequence: T
@@ -170,11 +212,19 @@ members:
         value: NP_009225.1:p.Tyr1853Ter
     location:
       id: ga4gh:SL.bR3EOtSngkb9wNbixylsw0sNa_2HCga5
+      description: Amino acid position 1853 of the Refseq protein NP_009225.1, which is the protein product of the MANE Select (GRCh38) coding transcript for BRCA1 (refseq:NM_007294.4).
       type: SequenceLocation
       digest: bR3EOtSngkb9wNbixylsw0sNa_2HCga5
       sequenceReference:
+        id: refseq:NP_009225.1
+        name: NP_009225.1
+        description: The protein product of the MANE Select (GRCh38) coding transcript for BRCA1 (refseq:NM_007294.4), corresponding to the Refseq protein accession NP_009225.1.
+        aliases:
+          - ensembl:ENSP00000350283.3
+          - ga4gh:SQ.nUzIPnHMyQV52hzgBbKl5vlbSwx8M8_Y
         type: SequenceReference
         refgetAccession: SQ.nUzIPnHMyQV52hzgBbKl5vlbSwx8M8_Y
+        residueAlphabet: aa
       start: 1852
       end: 1853
       sequence: Y
