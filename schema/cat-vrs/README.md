@@ -16,7 +16,7 @@ When a `make` command is executed, the MSP searches for files with a `-source.ya
 We created an `examples-source.yaml` file, headed with the following metadata, adapted from `recipes-source.yaml`.
 
     $schema: "https://json-schema.org/draft/2020-12/schema"
-    $id: "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0-ballot.2025-03.2/examples-source.yaml"
+    $id: "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0/examples-source.yaml"
     title: GA4GH-Cat-VRS-examples
     type: object
 
