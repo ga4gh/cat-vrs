@@ -1,8 +1,11 @@
 id: clingen:cacn42032202
 type: CategoricalVariant
 name: GRCh38 Xp22.31(chrX:6978350-7594949)x3
+description: An example categoricalCNV that uses CopyCountConstraint and uses ranges for start/end positions within the DefiningLocationConstraint.
 aliases:
   - NC_000023.11:g.(6978350_6996235)_(7564455_7594949)dup(2)
+  - GRCh37 (chrX:6896391_6914276-7482496_7512990)x3
+  - NC_000023.10:g.(6896391_6914276-7482496_7512990)dup(2)
 extensions:
   - name: cytogenetic location
     value: Xp22.31
@@ -11,10 +14,27 @@ constraints:
     copies: 3
   - type: DefiningLocationConstraint
     location:
+      id: ga4gh:SL.XyercAFM_APQwFaDuPcXG5lHa4wUpkiL
+      description: Genomic region between positions 6,978,350-7,594,949 on chromosome X (refseq:NC_000023.11, GRCh38), with breakpoints estimated within the intervals 6,978,350-6,996,235 and 7,564,455-7,594,949.
+      extensions:
+        - name: GRCh38 1-based, inclusive interval
+          value: chrX:(6978350–6996235)-(7564455–7594949)
+          description: Genomic region between positions 6,978,350-7,594,949 on chromosome X (refseq:NC_000023.11, GRCh38), with breakpoints estimated within the intervals 6,978,350-6,996,235 and 7,564,455-7,594,949; 1-based, inclusive interval notation.
+        - name: GRCh38 0-based, half-open interval
+          value: chrX:(6978349–6996235)-(7564454–7594949)
+          description: Genomic region between positions 6,978,349-7,594,949 on chromosome X (refseq:NC_000023.11, GRCh38), with breakpoints estimated within the intervals 6,978,349-6,996,235 and 7,564,454-7,594,949; 0-based, half-open interval notation.
       type: SequenceLocation
+      digest: XyercAFM_APQwFaDuPcXG5lHa4wUpkiL
       sequenceReference:
+        id: refseq:NC_000023.11
+        name: NC_000023.11
+        description: Reference sequence for GRCh38 chromosome X.
+        aliases:
+          - GRCh38:X
+          - GRCh38:chrX
+          - ga4gh:SQ.w0WZEvgJF0zf_P4yyTzjjv9oW1z61HHP
         type: SequenceReference
-        refgetAccession: SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO
+        refgetAccession: SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
       start:
         - 6978350
         - 6996235
@@ -37,7 +57,40 @@ mappings:
         - https://reg.clinicalgenome.org/redmine/projects/Registry/genboree_registry/by_canonicalid?canonicalid=CACN42032202
     relation: exactMatch
 members:
-  - type: CopyNumberChange
-    name: GRCh38 (chrX:6978350_6996235-7564455_7594949)x3
-  - type: CopyNumberChange
-    name: GRCh37 (chrX:6896391_6914276-7482496_7512990)x3
+  - id: ga4gh:CX.Xb6kSRqlCY2VS1QJeKxhWyGqPfpPigf3
+    type: CopyNumberCount
+    name: NC_000023.11:g.(6978350_6996235)_(7564455_7594949)dup(2)
+    description: VRS variation of NC_000023.11:g.(6978350_6996235)_(7564455_7594949)dup, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+    digest: Xb6kSRqlCY2VS1QJeKxhWyGqPfpPigf3
+    expressions:
+      - syntax: hgvs.g
+        value: NC_000023.11:g.(6978350_6996235)_(7564455_7594949)dup
+    location:
+      id: ga4gh:SL.XyercAFM_APQwFaDuPcXG5lHa4wUpkiL
+      description: Genomic region between positions 6,978,350-7,594,949 on chromosome X (refseq:NC_000023.11, GRCh38), with breakpoints estimated within the intervals 6,978,350-6,996,235 and 7,564,455-7,594,949.
+      extensions:
+        - name: GRCh38 1-based, inclusive interval
+          value: chrX:(6978350–6996235)-(7564455–7594949)
+          description: Genomic region between positions 6,978,350-7,594,949 on chromosome X (refseq:NC_000023.11, GRCh38), with breakpoints estimated within the intervals 6,978,350-6,996,235 and 7,564,455-7,594,949; 1-based, inclusive interval notation.
+        - name: GRCh38 0-based, half-open interval
+          value: chrX:(6978349–6996235)-(7564454–7594949)
+          description: Genomic region between positions 6,978,349-7,594,949 on chromosome X (refseq:NC_000023.11, GRCh38), with breakpoints estimated within the intervals 6,978,349-6,996,235 and 7,564,454-7,594,949; 0-based, half-open interval notation.
+      type: SequenceLocation
+      digest: XyercAFM_APQwFaDuPcXG5lHa4wUpkiL
+      sequenceReference:
+        id: refseq:NC_000023.11
+        name: NC_000023.11
+        description: Reference sequence for GRCh38 chromosome X.
+        aliases:
+          - GRCh38:X
+          - GRCh38:chrX
+          - ga4gh:SQ.w0WZEvgJF0zf_P4yyTzjjv9oW1z61HHP
+        type: SequenceReference
+        refgetAccession: SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
+      start:
+        - 6978350
+        - 6996235
+      end:
+        - 7564455
+        - 7594949
+    copies: 3

@@ -1,7 +1,7 @@
 id: clinvar:151061
 type: CategoricalVariant
 name: GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3
-description: ...
+description: An example categorical CNV that uses CopyChangeConstraint.
 aliases:
   - NC_000007.14:g.(?_5905831)_(6014161_?)dup
   - NC_000007.13:g.(?_5945462)_(6053792_?)dup
@@ -26,11 +26,28 @@ constraints:
   - type: DefiningLocationConstraint
     location:
       id: ga4gh:SL.LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
+      name: NC_000007.14:g.(?_5905831)_(6014161_?)
+      description: Genomic positions 5905831 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+      extensions:
+        - name: GRCh38 1-based, inclusive interval
+          value: chr7:5905831-6014161
+          description: Genomic positions 5905831 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38); 1-based, inclusive interval notation.
+        - name: GRCh38 0-based, half-open interval
+          value: chr7:5905830-6014161
+          description: Genomic positions 5905830 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38); 0-based, half-open interval notation.
       type: SequenceLocation
       digest: LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
       sequenceReference:
+        id: refseq:NC_000007.14
+        name: NC_000007.14
+        description: Reference sequence for GRCh38 chromosome 7.
+        aliases:
+          - GRCh38:7
+          - GRCh38:chr7
+          - ga4gh:SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
         type: SequenceReference
         refgetAccession: SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
+        residueAlphabet: na
       start:
         - null
         - 5905830
@@ -58,48 +75,79 @@ mappings:
       iris:
         - https://www.ncbi.nlm.nih.gov/dbvar/variants/nssv1610575/
     relation: relatedMatch
-# members:
-#   - id: ga4gh:CX.W8HqtDWeVQy_pq6fOSqnPlAcNnH9vvz4
-#     type: CopyNumberChange
-#     name: NC_000007.14:g.(?_5905831)_(6014161_?)dup
-#     description: VRS variation of NC_000007.14:g.(?_5905831)_(6014161_?)dup, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
-#     digest: W8HqtDWeVQy_pq6fOSqnPlAcNnH9vvz4
-#     expressions:
-#       - syntax: hgvs.g
-#         value: NC_000007.14:g.(?_5905831)_(6014161_?)dup
-#     location:
-#       id: ga4gh:SL.LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
-#       type: SequenceLocation
-#       digest: LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
-#       sequenceReference:
-#         type: SequenceReference
-#         refgetAccession: SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
-#       start:
-#         - null
-#         - 5905830
-#       end:
-#         - 6014161
-#         - null
-#     copyChange: copy number gain
-#   - id: ga4gh:CX.XfVcSnSqR2oJHzBMueTrgkMWg_UgbuBL
-#     type: CopyNumberChange
-#     name: NC_000007.13:g.(?_5945462)_(6053792_?)dup
-#     description: VRS variation of NC_000007.13:g.(?_5945462)_(6053792_?)dup, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
-#     digest: XfVcSnSqR2oJHzBMueTrgkMWg_UgbuBL
-#     expressions:
-#       - syntax: hgvs.g
-#         value: NC_000007.13:g.(?_5945462)_(6053792_?)dup
-#     location:
-#       id: ga4gh:SL.9wrSvk5-4mI6CmYrt6vImSzcLssLY3VJ
-#       type: SequenceLocation
-#       digest: 9wrSvk5-4mI6CmYrt6vImSzcLssLY3VJ
-#       sequenceReference:
-#         type: SequenceReference
-#         refgetAccession: SQ.IW78mgV5Cqf6M24hy52hPjyyo5tCCd86
-#       start:
-#         - null
-#         - 5945461
-#       end:
-#         - 6053792
-#         - null
-#     copyChange: copy number gain
+members:
+  - id: ga4gh:CX.W8HqtDWeVQy_pq6fOSqnPlAcNnH9vvz4
+    type: CopyNumberChange
+    name: NC_000007.14:g.(?_5905831)_(6014161_?)dup
+    description: VRS variation of NC_000007.14:g.(?_5905831)_(6014161_?)dup, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+    digest: W8HqtDWeVQy_pq6fOSqnPlAcNnH9vvz4
+    expressions:
+      - syntax: hgvs.g
+        value: NC_000007.14:g.(?_5905831)_(6014161_?)dup
+    location:
+      id: ga4gh:SL.LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
+      description: Genomic positions 5905831 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+      extensions:
+        - name: GRCh38 1-based, inclusive interval
+          value: chr7:5905831-6014161
+          description: Genomic positions 5905831 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38); 1-based, inclusive interval notation.
+        - name: GRCh38 0-based, half-open interval
+          value: chr7:5905830-6014161
+          description: Genomic positions 5905830 to 6014161 on chromosome 7 (refseq:NC_000007.14, GRCh38); 0-based, half-open interval notation.
+      type: SequenceLocation
+      digest: LChpEzYZaMug85TUqJUbT4MYgVk8vuQ7
+      sequenceReference:
+        id: refseq:NC_000007.14
+        name: NC_000007.14
+        description: Reference sequence for GRCh38 chromosome 7.
+        aliases:
+          - GRCh38:7
+          - GRCh38:chr7
+          - ga4gh:SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
+        type: SequenceReference
+        refgetAccession: SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
+      start:
+        - null
+        - 5905830
+      end:
+        - 6014161
+        - null
+    copyChange: gain
+  - id: ga4gh:CX.XfVcSnSqR2oJHzBMueTrgkMWg_UgbuBL
+    type: CopyNumberChange
+    name: NC_000007.13:g.(?_5945462)_(6053792_?)dup
+    description: VRS variation of NC_000007.13:g.(?_5945462)_(6053792_?)dup, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+    digest: XfVcSnSqR2oJHzBMueTrgkMWg_UgbuBL
+    expressions:
+      - syntax: hgvs.g
+        value: NC_000007.13:g.(?_5945462)_(6053792_?)dup
+    location:
+      id: ga4gh:SL.9wrSvk5-4mI6CmYrt6vImSzcLssLY3VJ
+      description: Genomic positions 5945462 to 6053792 on chromosome 7 (refseq:NC_000007.13, GRCh37).
+      extensions:
+        - name: GRCh37 1-based, inclusive interval
+          value: chr7:5945462-6053792
+          description: Genomic positions 5945462 to 6053792 on chromosome 7 (refseq:NC_000007.13, GRCh37); 1-based, inclusive interval notation.
+        - name: GRCh38 0-based, half-open interval
+          value: chr7:5945461-6053792
+          description: Genomic positions 5945461 to 6053792 on chromosome 7 (refseq:NC_000007.13, GRCh37); 0-based, half-open interval notation.
+      type: SequenceLocation
+      digest: 9wrSvk5-4mI6CmYrt6vImSzcLssLY3VJ
+      sequenceReference:
+        id: refseq:NC_000007.13
+        name: NC_000007.13
+        description: Reference sequence for GRCh37 chromosome 7.
+        aliases:
+          - GRCh37:7
+          - GRCh37:chr7
+          - ga4gh:SQ.IW78mgV5Cqf6M24hy52hPjyyo5tCCd86
+        type: SequenceReference
+        refgetAccession: SQ.IW78mgV5Cqf6M24hy52hPjyyo5tCCd86
+        residueAlphabet: na
+      start:
+        - null
+        - 5945461
+      end:
+        - 6053792
+        - null
+    copyChange: gain

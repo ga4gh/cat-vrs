@@ -25,6 +25,28 @@ The CanonicalAllele is a :ref:`CategoricalVariant` with exactly one constraint:
    `liftover_to` and `transcribed_to` codes. This constraint MUST refer to a genomic
    variant for the `allele`.
 
+**Examples**
+
+The following are example implementations of that satisfy the CanonicalAllele recipe:
+
+.. collapse:: NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs)
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_canonicalAllele-ex1
+      :language: json
+
+.. raw:: html
+
+   <div style="margin-top: 0.5em;"></div>
+
+.. collapse:: NC_000001.11:g.1699974C>G
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_canonicalAllele-ex2
+      :language: json
+
+.. raw:: html
+
+   <div style="margin-top: 1em;"></div>
+
 .. _ProteinSequenceConsequence:
 
 ProteinSequenceConsequence
@@ -37,6 +59,28 @@ The ProteinSequenceConsequence is a :ref:`CategoricalVariant` with exactly one c
 1. A :ref:`DefiningAlleleConstraint` with the `.relations` array containing only a
    `translation_of` code. This constraint MUST refer to a protein variant for the `allele`.
 
+**Examples**
+
+The following are example implementations of that satisfy the ProteinSequenceConsequence recipe:
+
+.. collapse:: EGFR L858R
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_proteinSequenceConsequence-ex1
+      :language: json
+
+.. raw:: html
+
+   <div style="margin-top: 0.5em;"></div>
+
+.. collapse:: NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter)
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_proteinSequenceConsequence-ex2
+      :language: json
+
+.. raw:: html
+
+   <div style="margin-top: 1em;"></div>
+
 .. _categorical-cnv:
 
 CategoricalCnv
@@ -48,4 +92,44 @@ The CategoricalCNV is a :ref:`CategoricalVariant` with exactly two constraints:
 
 1. A :ref:`DefiningLocationConstraint` with the `.relations` array containing only a
    `liftover_to` code.
-2. A :ref:`CopyChangeConstraint` or `CopyCountConstraint`.
+2. A :ref:`CopyChangeConstraint` or :ref:`CopyCountConstraint`.
+
+**Examples**
+
+The following are example implementations of that satisfy the CategoricalCNV recipe:
+
+.. collapse:: GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 with CopyCountConstraint
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_categoricalCnv-ex1
+      :language: json
+
+.. raw:: html
+
+   <div style="margin-top: 0.5em;"></div>
+
+.. collapse:: GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 with CopyChangeConstraint
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_categoricalCnv-ex2
+      :language: json
+
+.. raw:: html
+
+   <div style="margin-top: 0.5em;"></div>
+
+.. collapse:: GRCh38 Xp22.31(chrX:6978350-7594949)x3
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_categoricalCnv-ex3
+      :language: json
+
+.. raw:: html
+
+   <div style="margin-top: 0.5em;"></div>
+
+.. collapse:: TP53 Loss
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_categoricalCnv-ex4
+      :language: json
+
+.. raw:: html
+
+   <div style="margin-top: 1em;"></div>
