@@ -4,7 +4,7 @@
    "title": "DescribedVariant",
    "type": "object",
    "maturity": "draft",
-   "description": "A Categorical Variant object that may or may not be represented with constraints. This Recipe is used to validate  instances of the CategoricalVariant class, regardless of Recipes being satisfied. Implementers may choose  to represent Categorical Variants *without* any constraints while waiting for this specification to support a  means to model them.",
+   "description": "A Categorical Variant object that may or may not be represented with constraints. This Recipe is used to validate instances of the CategoricalVariant class, regardless of Recipes being satisfied. Implementers may choose to represent Categorical Variants *without* any constraints while waiting for this specification to support a means to model them.",
    "allOf": [
       {
          "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/CategoricalVariant"

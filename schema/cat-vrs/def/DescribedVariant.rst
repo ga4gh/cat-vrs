@@ -4,7 +4,7 @@
 
 **Computational Definition**
 
-A Categorical Variant object that may or may not be represented with constraints. This Recipe is used to validate  instances of the :ref:`CategoricalVariant` class, regardless of Recipes being satisfied. Implementers may choose  to represent Categorical Variants *without* any constraints while waiting for this specification to support a  means to model them.
+A Categorical Variant object that may or may not be represented with constraints. This Recipe is used to validate instances of the :ref:`CategoricalVariant` class, regardless of Recipes being satisfied. Implementers may choose to represent Categorical Variants *without* any constraints while waiting for this specification to support a means to model them.
 
 **Information Model**
 
