@@ -164,4 +164,3 @@ The following are example implementations of that satisfy the ProteinSequenceCon
 .. raw:: html
 
    <div style="margin-top: 1em;"></div>
-
