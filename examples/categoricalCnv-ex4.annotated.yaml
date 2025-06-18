@@ -57,12 +57,12 @@ constraints:
       # A primary coding for the concept.
       # A coding is structured representation of a code for a defined concept in a terminology or code system.
       primaryCoding:
-        - id: hgnc:11998
-          name: TP53
-          system: https://genenames.org
-          code: HGNC:11998
-          iris:
-            - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11998
+        id: hgnc:11998
+        name: TP53
+        system: https://genenames.org
+        code: HGNC:11998
+        iris:
+          - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11998
 
       # A list of extensions to the Entity, which allow for capture of information not directly supported by
       # elements defined in the model.
