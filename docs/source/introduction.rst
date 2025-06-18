@@ -13,7 +13,7 @@ Background and Problem Statement
 
 .. Variant interpretation
 
-Genomic medicine is the discipline of interpreting genomic information about an individual as part of their clinical care for diagnosis, prognosis, or therapeutic decision-making. Integral to the practice of genome interpretation is the collection of multiple lines of evidence from disparate genomic data resources to support or refute the clinical significance of evaluated variants. However, this process is rarely as straightforward as exact pattern matching.  The reason for this complication comes from a subtle but crucial difference between the information that the analyst posesses and the information to which evidence is typically attached in knowledgebases.
+Genomic medicine is the discipline of interpreting genomic information about an individual as part of their clinical care for diagnosis, prognosis, or therapeutic decision-making. Integral to the practice of genome interpretation is the collection of multiple lines of evidence from disparate genomic data resources to support or refute the clinical significance of evaluated variants. However, this process is rarely as straightforward as exact pattern matching.  The reason for this complication comes from a subtle but crucial difference between the information that the analyst possesses and the information to which evidence is typically attached in knowledgebases.
 
 .. Analyst has an assayed variant
 
@@ -48,9 +48,9 @@ Challenges to Unifying the Representation of Categorical Variants
 ..  CatVars are hard to pin down
 .. Why they arise
 
-Categorical variants arise organically and continuously in the course of genomics research.  When clinical studies are run and journal papers published, the results are typically not charactorized in terms of an exhaustive list of assayed variants to which the conclusions apply.  Rather, the domain of the conclusions are currently characterized in terms of a categorical variant, all of the individual assayed variants that fall into the same biological bucket.  Like all scientific abstractions, these models have several useful properties.  They describe insightful conclusions related to the biological events that underly a function common to a class of variants.  They also make useful predictions, namely that the same conclusions should apply to variants that weren't explicitly tested but ought to function in a similar way to those explicitly tested.  They thus allow us to generalize genomic knowledge.
+Categorical variants arise organically and continuously in the course of genomics research.  When clinical studies are run and journal papers published, the results are typically not characterized in terms of an exhaustive list of assayed variants to which the conclusions apply.  Rather, the domain of the conclusions are currently characterized in terms of a categorical variant, all of the individual assayed variants that fall into the same biological bucket.  Like all scientific abstractions, these models have several useful properties.  They describe insightful conclusions related to the biological events that underly a function common to a class of variants.  They also make useful predictions, namely that the same conclusions should apply to variants that weren't explicitly tested but ought to function in a similar way to those explicitly tested.  They thus allow us to generalize genomic knowledge.
 
-To return to the running example, the BRAF V600E categorical variant inlcudes as its members any of 2 single-nucleotide substitutions and 6 double-nucleotide substitions that convert a Valine codon into one coding for Glutamic acid. The Valine to Glutamic Acid amino acid substitution variant is also a member of that set.  Any other variant or series of variants that would have the net effect of substituting Glutamic acid for Valine in the same location of the resulting polypeptide chain is also a member of the same categorical variant.
+To return to the running example, the BRAF V600E categorical variant includes as its members any of 2 single-nucleotide substitutions and 6 double-nucleotide substitutions that convert a Valine codon into one coding for Glutamic acid. The Valine to Glutamic Acid amino acid substitution variant is also a member of that set.  Any other variant or series of variants that would have the net effect of substituting Glutamic acid for Valine in the same location of the resulting polypeptide chain is also a member of the same categorical variant.
 
 
 
@@ -66,7 +66,7 @@ While a single categorical variant may have many assayed variant members, the sa
     :alt: The figure depicts a single centralized assayed variant, with arrows radiating out to a number of categorical variants to which it is a member.  Among these, the assayed variant NC_000007.13:g.140453136A>T is a BRAF V600E variant, a BRAF gene variant, and a chromosome 7 variant.
 
 
-Because a single categorical variant may have many assayed variants as members, while a single assayed variant can be a member of many categorical variants, different categorical have complex heirarchical relationships with each other.  the figure below depicts some of the relationships between some of the categorical variants to which NC_000007.13:g.140453136A>T is a member.  For example, all BRAF V600E variants are also BRAF gene variants.  And all BRAF V600E variants and BRAF gene variants are chromosome 7 variants.  A BRAF V600E variant is also an inframe protein variant, which is itself a type of sequence variant.
+Because a single categorical variant may have many assayed variants as members, while a single assayed variant can be a member of many categorical variants, different categorical have complex hierarchical relationships with each other.  the figure below depicts some of the relationships between some of the categorical variants to which NC_000007.13:g.140453136A>T is a member.  For example, all BRAF V600E variants are also BRAF gene variants.  And all BRAF V600E variants and BRAF gene variants are chromosome 7 variants.  A BRAF V600E variant is also an inframe protein variant, which is itself a type of sequence variant.
 
 
 .. image:: images/relations-between-assayed-and-CatVars-and-CatVars-to-other-CatVars(1).png
@@ -78,22 +78,22 @@ Because a single categorical variant may have many assayed variants as members, 
 
 .. CatVar labels do not always denote the same thing across different KBs, and may even be redundant-specified
 
-To make categoricla variant matching even more complicated, it is often the case that identical labels across different resources in fact describe different categroical variants, as seen in the figure below where an ACT sequence has been inserted directly 3' of a ACTG sequence.  While this would not be considered a duplication variant in the HGVS nomenclature due to the intervening G base pair, it could appear in other resources as a duplication of the preceeding ACT sequence.  This implies that the catgorical variant descriptor "duplication" has different meanings across different resources.
+To make categorical variant matching even more complicated, it is often the case that identical labels across different resources in fact describe different categorical variants, as seen in the figure below where an ACT sequence has been inserted directly 3' of a ACTG sequence.  While this would not be considered a duplication variant in the HGVS nomenclature due to the intervening G base pair, it could appear in other resources as a duplication of the preceding ACT sequence.  This implies that the categorical variant descriptor "duplication" has different meanings across different resources.
 
 
 .. image:: images/CatVar-CatVar-matching.png
     :width: 80%
     :align: center
-    :alt: The figure depicts a hypothetical variant where an ACT sequence has been inserted directly 3' of a ACTG sequence.  While this would not be considered a duplication variant in the HGVS nomenclature due to the intervening G base pair, it could appear in other resources as a duplication of the preceeding ACT sequence, or alternately simply as an insertion of ACT.  This implies that the catgorical variant descriptor "duplication" has different meanings across different resources.
+    :alt: The figure depicts a hypothetical variant where an ACT sequence has been inserted directly 3' of a ACTG sequence.  While this would not be considered a duplication variant in the HGVS nomenclature due to the intervening G base pair, it could appear in other resources as a duplication of the preceding ACT sequence, or alternately simply as an insertion of ACT.  This implies that the categorical variant descriptor "duplication" has different meanings across different resources.
 
 
-On the other hand, it is also often the case that spurious ambiguity exists within resources.  The figure depicts a hypothetical case where compared to a reference sequence ACT, the variant sequence is ACCCCCT.  In HGVS, this variant could either validly be described as an insertion of 4 C nucleotides, or else a five repetitions of the single nucleotide sequence C.  This demonstrates spurious ambiguity of categorical variant descriptors, as both categorical variants desribe two sets with all and only the same member variants.
+On the other hand, it is also often the case that spurious ambiguity exists within resources.  The figure depicts a hypothetical case where compared to a reference sequence ACT, the variant sequence is ACCCCCT.  In HGVS, this variant could either validly be described as an insertion of 4 C nucleotides, or else a five repetitions of the single nucleotide sequence C.  This demonstrates spurious ambiguity of categorical variant descriptors, as both categorical variants describe two sets with all and only the same member variants.
 
 
 .. image:: images/CatVar-CatVar-spurious-ambiguity.png
     :width: 40%
     :align: center
-    :alt: The figure depicts a hypothetical case where compared to a reference sequence ACT, the variant sequence is ACCCCCT.  In HGVS, this variant could either be described as an insertion of 4 C nucleotides, or else a five repetitions of the single nucleotide sequence C.  This demonstrates spurious ambiguity of categorical variant descriptors, as both categorical variants desribe two sets with all and only the same member variants.
+    :alt: The figure depicts a hypothetical case where compared to a reference sequence ACT, the variant sequence is ACCCCCT.  In HGVS, this variant could either be described as an insertion of 4 C nucleotides, or else a five repetitions of the single nucleotide sequence C.  This demonstrates spurious ambiguity of categorical variant descriptors, as both categorical variants describe two sets with all and only the same member variants.
 
 
 
