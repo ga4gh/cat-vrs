@@ -13,6 +13,10 @@ tests:
     definition: CategoricalCnv
   - test_file: describedVariant-ex1.yaml
     definition: CategoricalVariant
+  - test_file: braf-v600.yaml
+    definition: DescribedVariant
+  - test_file: describedVariant-ex1.yaml
+    definition: DescribedVariant
   - test_file: proteinSequenceConsequence-ex1.yaml
     definition: ProteinSequenceConsequence
   - test_file: proteinSequenceConsequence-ex2.yaml
