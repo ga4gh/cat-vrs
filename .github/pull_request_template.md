@@ -9,5 +9,5 @@ Pull Request checklist:
 
 If the schema was contributed to:
 - [ ] Were the schema def/ and json/ files recompiled and committed? Run `cd schema; make all` from the root directory.
-- [ ] If constraints or recipes were added, have they been added to the readthedocs? To do so, you can revise the appropriate file within `docs/source/concepts/`. 
+- [ ] If constraints or recipes were added, have they been added to the readthedocs? To do so, you can revise the appropriate file within `docs/source/concepts/`.
 - [ ] Has documentation been regenerated and committed? Run `cd docs; make clean watch &` from the root directory to compile documentation.
