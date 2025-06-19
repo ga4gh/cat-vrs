@@ -100,37 +100,6 @@ The following are example implementations of that satisfy the CategoricalCNV rec
 
    <div style="margin-top: 1em;"></div>
 
-.. _DescribedVariant:
-
-Described Variant
-!!!!!!!!!!!!!!!
-
-.. include:: ../def/cat-vrs/DescribedVariant.rst
-
-The DescribedVariant is a :ref:`CategoricalVariant` object that may or may not be represented with constraints.
-
-**Examples**
-
-The following are example implementations of that satisfy the Described Variant recipe:
-
-.. collapse:: t(2;15)(q23.1;q25.3)
-
-   .. literalinclude:: ../../../schema/cat-vrs/json/example_describedVariant-ex1
-      :language: json
-
-.. raw:: html
-
-   <div style="margin-top: 0.5em;"></div>
-
-.. collapse:: BRAF V600
-
-   .. literalinclude:: ../../../schema/cat-vrs/json/example_braf-v600
-      :language: json
-
-.. raw:: html
-
-   <div style="margin-top: 1em;"></div>
-
 .. _ProteinSequenceConsequence:
 
 ProteinSequenceConsequence
