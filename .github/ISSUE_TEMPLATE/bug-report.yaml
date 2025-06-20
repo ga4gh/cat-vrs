@@ -1,0 +1,10 @@
+name: Bug Report
+description: Report a bug.
+labels: ["bug"]
+body:
+  - type: textarea
+    attributes:
+      label: Describe the bug
+      description: Provide a clear an concise description of what the bug is.
+    validations:
+      required: true
