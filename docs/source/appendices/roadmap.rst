@@ -1,7 +1,8 @@
-Cat-VRS Roadmap
+.. _roadmap:
+Product Roadmap
 !!!!!!!!!!!!!!!
 
-Cat-VRS is under active development.  More information on many of our ongoing, future, and past efforts are can be found below.
+Cat-VRS is under active development. A summary of many of our ongoing, future, and past efforts are found below. Additionally, progress on specific tasks can be monitored `on GitHub <https://github.com/orgs/ga4gh/projects/19>`_.
 
 .. Active.
 
@@ -14,9 +15,6 @@ Active
 * `Incorporate boolean logic into the constraint model to cover complex categorical variants <https://github.com/ga4gh/cat-vrs/issues/92>`_
 
 * `Implement all Trial Use classes in testbed <https://github.com/ga4gh/cat-vrs/issues/132>`_
-
-* `expand Cat-VRS examples <https://github.com/ga4gh/gks-portal/issues/19>`_ at `GA4GH pre-Connect Hackathon <https://github.com/ga4gh/gks-portal/issues?q=is%3Aissue%20state%3Aopen%20label%3AGA4GH-Connect-2025>`_
-
 
 .. Planned.
 
@@ -36,10 +34,11 @@ Planned
 Complete
 @@@@@@@@
 
+* 2025 Q2 (June) - `Expand Cat-VRS examples <https://github.com/ga4gh/cat-vrs/pull/147>`_.
 
-* 2025 Q2 (May) - `GA4GH Product Approval <https://github.com/ga4gh/cat-vrs/issues/95>`_
+* 2025 Q2 (May) - `GA4GH Product Approval <https://github.com/ga4gh/cat-vrs/issues/95>`_.
 
-* 2025 Q1 (Jan) - `Solicitation <https://docs.google.com/forms/d/1yNOvJdpp4byx1U4amZBsw72IdJZeSYLFX677HO0I3RY>`_ for `use cases and users projects <https://docs.google.com/spreadsheets/d/1N257x-PCKGZplcMVPE9j6412Ta4UyFVlXimG1l4q-Rw/edit?gid=0#gid=0>`_ for Cat-VRS implementation
+* 2025 Q1 (Jan) - `Solicitation <https://docs.google.com/forms/d/1yNOvJdpp4byx1U4amZBsw72IdJZeSYLFX677HO0I3RY>`_ for `use cases and users projects <https://docs.google.com/spreadsheets/d/1N257x-PCKGZplcMVPE9j6412Ta4UyFVlXimG1l4q-Rw/edit?gid=0#gid=0>`_ for Cat-VRS implementation.
 
 * 2025 Q1 (Jan) - v0.2 draft release of reference implementation; `cat-vrs-python <https://github.com/ga4gh/cat-vrs-python/releases>`_
 
