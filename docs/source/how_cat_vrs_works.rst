@@ -1,3 +1,5 @@
+.. _how-cat-vrs-works:
+
 How Cat-VRS Works
 !!!!!!!!!!!!
 

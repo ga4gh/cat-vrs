@@ -1,3 +1,5 @@
+.. _data-model:
+
 Data Model
 !!!!!!!!!!
 
