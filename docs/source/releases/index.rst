@@ -1,9 +1,16 @@
-.. `Releases`:
-
-1.0 (pre-releases)
+.. _releases:
+Releases
 !!!!!!!!!!!!!!!!!!
 
-1.0.0.04-2024.connect
-@@@@@@@@@@@@@@@@@@@@@
+.. note::
 
-Cat-VRS 1.0.0.04-2024.connect is the first release of the Cat-VRS for the GA4GH April 2024 Connect session in Ascona, Switzerland.
+    Cat-VRS follows the :ref:`maturity-model`, which includes our standard
+    Work Stream practices for :ref:`versioning`.
+
+    All planned and ongoing work may be found in the :ref:`roadmap`.
+
+.. toctree::
+   :maxdepth: 2
+
+   1.0
+

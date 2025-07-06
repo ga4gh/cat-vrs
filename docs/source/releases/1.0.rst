@@ -1,0 +1,9 @@
+.. _1.0:
+
+1.0
+!!!
+
+1.0.0
+@@@@@
+
+Cat-VRS 1.0.0 was the first public release of the Categorical Variation Representation Specification.
