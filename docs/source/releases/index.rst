@@ -13,4 +13,3 @@ Releases
    :maxdepth: 2
 
    1.0
-
