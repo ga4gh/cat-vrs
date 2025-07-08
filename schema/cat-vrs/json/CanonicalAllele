@@ -4,7 +4,7 @@
    "title": "CanonicalAllele",
    "type": "object",
    "maturity": "trial use",
-   "description": "A canonical allele is defined by an Allele that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid different underlying reference sequences. Congruent representations of an Allele often exist across different genome assemblies and associated cDNA transcript representations.",
+   "description": "A canonical allele is defined by an Allele that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid on different underlying reference sequences. Congruent representations of an Allele often exist across different genome assemblies and associated cDNA transcript representations.",
    "allOf": [
       {
          "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/CategoricalVariant"
