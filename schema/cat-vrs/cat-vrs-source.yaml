@@ -166,7 +166,7 @@ $defs:
     type: object
     description: >-
       The relative assessment of the change in copies that members of
-      this categorical variant satisfies.
+      this categorical variant satisfy.
     properties:
       type:
         extends: type
