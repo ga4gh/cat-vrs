@@ -4,7 +4,7 @@
    "title": "CopyChangeConstraint",
    "type": "object",
    "maturity": "draft",
-   "description": "The relative assessment of the change in copies that members of this categorical variant satisfies.",
+   "description": "The relative assessment of the change in copies that members of this categorical variant satisfy.",
    "properties": {
       "type": {
          "type": "string",

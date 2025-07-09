@@ -4,7 +4,7 @@
 
 **Computational Definition**
 
-The relative assessment of the change in copies that members of this categorical variant satisfies.
+The relative assessment of the change in copies that members of this categorical variant satisfy.
 
 **Information Model**
 
