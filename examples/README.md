@@ -56,7 +56,7 @@ This example applies the [DefiningAlleleConstraint](https://cat-vrs.readthedocs.
 This example applies the [DefiningAlleleConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#definingalleleconstraint) to represent it as a Categorical Variant. The Allele associated with the GRCh38 VRS Allele, "NC_000001.11:g.1699974C>G", as included within the `members` field, was used to populate the `allele` field.
 
 ## categoricalCNV-ex1
-[categoricalCNV-ex1](./categoricalCNV-ex1.yaml) represents [ClinVar entry 151061](https://www.ncbi.nlm.nih.gov/clinvar/variation/151061/?oq=151061&m=GRCh38%2Fhg38+7p22.1(chr7:5905831-6014161)x3) as a Categorical Variant. This example satisfies the [CategoricalCNV Recipe](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#categoricalcnv). Fields were populated as follows:
+[categoricalCNV-ex1](./categoricalCnv-ex1.yaml) represents [ClinVar entry 151061](https://www.ncbi.nlm.nih.gov/clinvar/variation/151061/?oq=151061&m=GRCh38%2Fhg38+7p22.1(chr7:5905831-6014161)x3) as a Categorical Variant. This example satisfies the [CategoricalCNV Recipe](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#categoricalcnv). Fields were populated as follows:
 
 - `id`: `clinvar:` followed by the listed Variation ID, "151061", contained within the Identifiers section of Variant Details.
 - `type`: specified as "CategoricalVariant", as required by [the specification](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#categorical-variant).
@@ -70,7 +70,7 @@ This example applies the [DefiningAlleleConstraint](https://cat-vrs.readthedocs.
 This example applies two constraints: [CopyCountConstraint](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#copycountconstraint) and [DefiningLocationConstraint](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#defininglocationconstraint). The `copies` field of CopyCountConstraint is set to "3", per the copies being specified as "x3" within the `name` field, as specified by ClinVar. The DefiningLocationConstraint includes the [VRS Sequence Location](https://cat-vrs.readthedocs.io/en/stable/concepts/imported/SequenceLocation.html#sequencelocation) from the NC_000007.14 CopyNumberChange included within `members`.
 
 ## categoricalCNV-ex2
-[categoricalCNV-ex2](./categoricalCNV-ex2.yaml) represents [ClinVar entry 151061](https://www.ncbi.nlm.nih.gov/clinvar/variation/151061/?oq=151061&m=GRCh38%2Fhg38+7p22.1(chr7:5905831-6014161)x3) as a Categorical Variant. This example satisfies the [CategoricalCNV Recipe](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#categoricalcnv).
+[categoricalCNV-ex2](./categoricalCnv-ex2.yaml) represents [ClinVar entry 151061](https://www.ncbi.nlm.nih.gov/clinvar/variation/151061/?oq=151061&m=GRCh38%2Fhg38+7p22.1(chr7:5905831-6014161)x3) as a Categorical Variant. This example satisfies the [CategoricalCNV Recipe](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#categoricalcnv).
 
 This example is identical to [categoricalCNV-ex1](./categoricalCNV-ex1.yaml), except that it applies [CopyChangeConstraint](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#copychangeconstraint) instead of [CopyCountConstraint](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#copycountconstraint). The `copyChange` field is populated as a mappableConcept, identical to the `copyChange` field within VRS variations listed under `members`.
 
