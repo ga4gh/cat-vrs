@@ -1,6 +1,6 @@
 id: civic.mpid:186
 type: CategoricalVariant
-name: BRCA2 loss of function variant
+name: BRCA2 loss of function variants
 description: An example categorical variant that uses FeatureContextConstraint and FunctionConstraint.
 constraints:
   - type: FeatureContextConstraint

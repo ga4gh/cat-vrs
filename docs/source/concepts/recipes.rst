@@ -140,3 +140,30 @@ The FunctionVariant is a :ref:`CategoricalVariant` with at least two constraints
 **Examples**
 
 The following are example implementations of that satisfy the FunctionVariant recipe:
+
+.. collapse:: NRAS functionally normal variants
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_functionVariant-ex1
+      :language: json
+
+.. raw:: html
+
+   <div style="margin-top: 0.5em;"></div>
+
+.. collapse:: BRCA2 loss of function variants
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_functionVariant-ex2
+      :language: json
+
+.. raw:: html
+
+   <div style="margin-top: 0.5em;"></div>
+
+.. collapse:: PIK3CA p.R38H
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_functionVariant-ex3
+      :language: json
+
+.. raw:: html
+
+   <div style="margin-top: 0.5em;"></div>

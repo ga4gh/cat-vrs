@@ -4,7 +4,7 @@
    "title": "example_functionVariant-ex2",
    "type": "CategoricalVariant",
    "id": "civic.mpid:186",
-   "name": "BRCA2 loss of function variant",
+   "name": "BRCA2 loss of function variants",
    "description": "An example categorical variant that uses FeatureContextConstraint and FunctionConstraint.",
    "constraints": [
       {
