@@ -22,6 +22,7 @@ A [constraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.ht
 | [CanonicalAllele](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#canonicalallele) | [canonicalAllele-ex1](#canonicalAllele-ex1), [canonicalAllele-ex2](#canonicalAllele-ex2) |
 | [ProteinSequenceConsequence](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#proteinsequenceconsequence) | [proteinSequenceConsequence-ex1](#proteinSequenceConsequence-ex1), [proteinSequenceConsequence-ex2](#proteinSequenceConsequence-ex2) |
 | [CategoricalCnv](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#categoricalcnv) | [categoricalCnv-ex1](#categoricalCnv-ex1), [categoricalCnv-ex2](#categoricalCnv-ex2) |
+| [FunctionVariant](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#functionvariant) | [functionVariant-ex1](#functionVariant-ex1), [functionVariant-ex2](#functionVariant-ex2), [functionVariant-ex3](#functionVariant-ex3) |
 
 # About each example
 Here, we provide examples of representing several types of variation from other knowledgebases as Categorical Variants. All example Categorical Variants will be modeled using fields required by the [Categorical Variant](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#categorical-variant) class within the specification.
