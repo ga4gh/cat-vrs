@@ -7,10 +7,11 @@ A [constraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.ht
 | Constraint | Representative example(s)                                                                                                                                                                                                      |
 |---|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [DefiningAlleleConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#definingalleleconstraint) | [canonicalAllele-ex1](#canonicalAllele-ex1), [canonicalAllele-ex2](#canonicalAllele-ex2), [proteinSequenceConsequence-ex1](#proteinSequenceConsequence-ex1), [proteinSequenceConsequence-ex2](#proteinSequenceConsequence-ex2) |
-| [DefiningLocationConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#defininglocationconstraint) | [categoricalCnv-ex1](#categoricalCnv-ex1), [categoricalCnv-ex2](#categoricalCnv-ex2), [braf-v600](#braf-v600), [tp53-copy-loss](#tp53-copy-loss)                                                                                                                                           |
+| [DefiningLocationConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#defininglocationconstraint) | [categoricalCnv-ex1](#categoricalCnv-ex1), [categoricalCnv-ex2](#categoricalCnv-ex2)                                                                                                                                           |
 | [CopyCountConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#copycountconstraint) | [categoricalCnv-ex1](#categoricalCnv-ex1), [categoricalCnv-ex3](#categoricalCnv-ex3)                                                                                                                                           |
-| [CopyChangeConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#copychangeconstraint) | [categoricalCnv-ex2](#categoricalCnv-ex2), [tp53-copy-loss](#tp53-copy-loss)                                                                                                                                                                                      |
-| [FeatureContextConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#featurecontextconstraint) | [tp53-copy-loss](#tp53-copy-loss)                                                                                                                                                                                      |
+| [CopyChangeConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#copychangeconstraint) | [categoricalCnv-ex2](#categoricalCnv-ex2)                                                                                                                                                                                      |
+| [FeatureContextConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#featurecontextconstraint) | [categoricalCnv-ex4](#categoricalCnv-ex4)                                                                                                                                                                                      |
+| [FunctionConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#functionconstraint) | [functionVariant-ex1](#functionVariant-ex1), [functionVariant-ex2](#functionVariant-ex2), [functionVariant-ex3](#functionVariant-ex3)                                                                                                                                                                                     |
 | None | [describedVariant-ex1](#describedVariant-ex1)                                                                                                                                                                                  |
 
 ## Examples by Recipe
@@ -21,7 +22,6 @@ A [constraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.ht
 | [CanonicalAllele](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#canonicalallele) | [canonicalAllele-ex1](#canonicalAllele-ex1), [canonicalAllele-ex2](#canonicalAllele-ex2) |
 | [ProteinSequenceConsequence](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#proteinsequenceconsequence) | [proteinSequenceConsequence-ex1](#proteinSequenceConsequence-ex1), [proteinSequenceConsequence-ex2](#proteinSequenceConsequence-ex2) |
 | [CategoricalCnv](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#categoricalcnv) | [categoricalCnv-ex1](#categoricalCnv-ex1), [categoricalCnv-ex2](#categoricalCnv-ex2) |
-| None | [braf-v600](#braf-v600), [tp53-copy-loss](#tp53-copy-loss) |
 
 # About each example
 Here, we provide examples of representing several types of variation from other knowledgebases as Categorical Variants. All example Categorical Variants will be modeled using fields required by the [Categorical Variant](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#categorical-variant) class within the specification.
@@ -88,6 +88,21 @@ Fields were otherwise populated identical to [categoricalCNV-ex1](./categoricalC
 
 This example applies two constraints: [CopyCountConstraint](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#copycountconstraint) and [DefiningLocationConstraint](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#defininglocationconstraint). The `copies` field of CopyCountConstraint is set to "3", per the copies being specified as "x3" within the `name` field, as specified by ClinGen. The DefiningLocationConstraint includes the [VRS Sequence Location](https://cat-vrs.readthedocs.io/en/stable/concepts/imported/SequenceLocation.html#sequencelocation) from the GRCh38 representation of this variant, as included within `members`. Unlike [categoricalCNV-ex1](./categoricalCnv-ex1.yaml) and [categoricalCNV-ex2](./categoricalCnv-ex2.yaml), this example includes ranges for the `start` and `end` positions.
 
+## categoricalCNV-ex4
+[categoricalCNV-ex4](./categoricalCnv-ex4.yaml) represents [TP53 Loss](https://civicdb.org/variants/4452/summary) as a Categorical Variant. This example satisfies the [CategoricalCNV Recipe](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#categoricalcnv). Fields were populated as follows:
+
+- `id`: `civic.vid:` followed by the variant id provided by CIViC, 4452, listed for the variant.
+- `type`: specified as "CategoricalVariant", as required by [the specification](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#categorical-variant).
+- `name`: The name of the variant, as provided by CIViC.
+- `description`: A plain text description of the variant.
+- `aliases`: "Copy Number Loss" was provided to clearly specify that this is a copy number event.
+- `extensions`: The value for extension named "cytogenetic location" was obtained from HGNC for TP53.
+- `mappings`: mapping to ClinGen's webpage for this variant.
+
+This example applies two constraints: [CopyChangeConstraint](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#copychangeconstraint) and [FeatureContextConstraint](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html). The `copyChange` field of CopyChangeConstraint uses "loss" to specify the category of copy change. FeatureContextConstraint represents the gene context with a primaryCoding to [HGNC](https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11998).
+
+We additionally created an [annotated](categoricalCnv-ex4.annotated.yaml) version of this example, detailing each field.
+
 ## describedVariant-ex1
 [describedVariant-ex1](./describedVariant-ex1.yaml) represents [ClinVar entry 1177130](https://www.ncbi.nlm.nih.gov/clinvar/variation/1177130/?oq=1177130&m=t(2%3B15)(q23.1%3Bq25.3)), t(2;15)(q23.1;q25.3). This example **does not include any constraints**. Implementers may choose to represent Categorical Variants in this way while waiting for the specification to support a means to model them. Given this, fields were populated as follows:
 
@@ -100,7 +115,33 @@ This example applies two constraints: [CopyCountConstraint](https://cat-vrs.read
 - `mappings`: was left empty because ClinVar does not provide any mappings within the Links section of this variant's Variant Details.
 - `members`: was left empty because [VRS](https://vrs.ga4gh.org/en/stable/) does not yet support translocations.
 
-## proteinSequenceConsequence-ex1.yaml
+## functionVariant-ex1
+[functionVariant-ex1](./functionVariant-ex1.yaml) represents _NRAS_ functionally normal variants, which closely resembles the [CIViC entry for NRAS Wild type](https://civicdb.org/molecular-profiles/4428/summary). This example satifies the [FunctionVariant Recipe](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#functionvariant). Fields were populated as follows:
+- `id`: `civic.mpid:` followed by the listed Molecular Profile ID, "4428", contained within the url for the genomic alteration. `id` stands for [Molecular Profile ID](https://docs.civicdb.org/en/latest/model/molecular_profiles/overview.html), CIViC's way to represent groups of genomic alterations.
+- `type`: specified as "CategoricalVariant", as required by [the specification](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#categorical-variant).
+- `name`: While CIViC represents Wild type _NRAS_ with this Molecular Profile, we instead name this example "NRAS functionally normal variants" to represent the set of _NRAS_ variants that are likely neutral.
+- `members`: The [VICC variant normalization](https://github.com/cancervariants/variation-normalization) was used to translate hgvs representations into [VRS variations](https://vrs.ga4gh.org/en/stable/). Specifically, the `/variation/to_vrs` endpoint was used to generate a [VRS Allele](https://cat-vrs.readthedocs.io/en/latest/concepts/imported/Allele.html#allele) for NM_002524.5(NRAS):c.170A>C(p.D57A), a variant [categorized as Likely Neutral by OncoKB](https://www.oncokb.org/gene/NRAS#tab=Biological).
+
+This example applies two constraints: [FeatureContextConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#featurecontextconstraint) and [FunctionConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#functionconstraint). Both the `featureContext` and `functionConsequence` properties are [MappableConcept](https://cat-vrs.ga4gh.org/en/latest/concepts/imported/MappableConcept.html)s, and include mappings to [NRAS (HGNC:7989)](https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:7989) and [functionally_normal (SO:0002219)](http://www.sequenceontology.org/browser/current_release/term/SO:0002219).
+
+## functionVariant-ex2
+[functionVariant-ex2](./functionVariant-ex2.yaml) represents _BRCA2_ loss of function variants, based on the [CIViC entry for BRCA2 Mutation with Loss Of Function Variant Type](https://civicdb.org/molecular-profiles/186/summary). This example satifies the [FunctionVariant Recipe](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#functionvariant). Fields were populated as follows:
+- `id`: `civic.mpid:` followed by the listed Molecular Profile ID, "186", contained within the url for the genomic alteration. `id` stands for [Molecular Profile ID](https://docs.civicdb.org/en/latest/model/molecular_profiles/overview.html), CIViC's way to represent groups of genomic alterations.
+- `type`: specified as "CategoricalVariant", as required by [the specification](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#categorical-variant).
+- `name`: "BRCA2 loss of function variants" to represent the set of _BRCA2_ variants that result in loss of function.
+
+This example applies two constraints: [FeatureContextConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#featurecontextconstraint) and [FunctionConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#functionconstraint). Both the `featureContext` and `functionConsequence` properties are [MappableConcept](https://cat-vrs.ga4gh.org/en/latest/concepts/imported/MappableConcept.html)s, and include mappings to [BRCA2 (HGNC:1101)](https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:1101) and [loss_of_function (SO:0002054)](http://www.sequenceontology.org/browser/current_release/term/SO:0002054).
+
+## functionVariant-ex3
+[functionVariant-ex3](./functionVariant-ex3.yaml) represents NM_006218.4(_PIK3CA_):c.113G>A(p.Arg38His), based on the [CIViC entry for _PIK3CA_ R38H](https://civicdb.org/molecular-profiles/1150/summary). This example satifies the [FunctionVariant Recipe](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#functionvariant) as a gain of function variant. Fields were populated as follows:
+- `id`: `civic.mpid:` followed by the listed Molecular Profile ID, "1150", contained within the url for the genomic alteration. `id` stands for [Molecular Profile ID](https://docs.civicdb.org/en/latest/model/molecular_profiles/overview.html), CIViC's way to represent groups of genomic alterations.
+- `type`: specified as "CategoricalVariant", as required by [the specification](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#categorical-variant).
+- `name`: "PIK3CA p.R38H" to follow the naming convention used by CIViC.
+- `members`: The [VICC variant normalization](https://github.com/cancervariants/variation-normalization) was used to translate hgvs representations into [VRS variations](https://vrs.ga4gh.org/en/stable/). Specifically, the `/variation/to_vrs` endpoint was used to generate a [VRS Allele](https://cat-vrs.readthedocs.io/en/latest/concepts/imported/Allele.html#allele) for NM_006218.4:c.113G>A.
+
+This example includes three constraints: [DefiningAlleleConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#definingalleleconstraint), [FeatureContextConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#featurecontextconstraint), and [FunctionConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#functionconstraint). Both the `featureContext` and `functionConsequence` properties are [MappableConcept](https://cat-vrs.ga4gh.org/en/latest/concepts/imported/MappableConcept.html)s, and include mappings to [PIK3CA (HGNC:8975)](https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:8975) and [gain_of_function (SO:0002053)](http://www.sequenceontology.org/browser/current_release/term/SO:0002053).
+
+## proteinSequenceConsequence-ex1
 [proteinSequenceConsequence-ex1](./proteinSequenceConsequence-ex1.yaml) represents [CIViC entry for EGFR L858R](https://civicdb.org/variants/33/summary) as a Categorical Variant. This example satisfies the [ProteinSequenceConsequence Recipe](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#proteinsequenceconsequence). Fields were populated as follows:
 
 - `id`: `civic.mpid:` followed by the listed Molecular Profile ID, "33", contained within the url for the genomic alteration. `mpid` within the `id` stands for [Molecular Profile ID](https://docs.civicdb.org/en/latest/model/molecular_profiles/overview.html), CIViC's way to represent groups of genomic alterations.
@@ -114,7 +155,7 @@ This example applies two constraints: [CopyCountConstraint](https://cat-vrs.read
 
 This example applies the [DefiningAlleleConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#definingalleleconstraint) to represent it as a Categorical Variant. The Allele associated with the hgvs.p representation, "NP_005219.2:p.Leu858Arg", as included within the `members` field, was used to populate the `allele` field.
 
-## proteinSequenceConsequence-ex2.yaml
+## proteinSequenceConsequence-ex2
 [proteinSequenceConsequence-ex2](./proteinSequenceConsequence-ex2.yaml) represents [ClinVar entry 55628](https://www.ncbi.nlm.nih.gov/clinvar/variation/55628/), NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter), as a Categorical Variant. This example satisfies the [ProteinSequenceConsequence Recipe](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#proteinsequenceconsequence). Fields were populated as follows:
 
 - `id`: `clinvar:` followed by the listed Variation ID, "55628", contained within the Identifiers section of Variant Details.
@@ -128,8 +169,8 @@ This example applies the [DefiningAlleleConstraint](https://cat-vrs.readthedocs.
 
 This example applies the [DefiningAlleleConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#definingalleleconstraint) to represent it as a Categorical Variant. The Allele associated with the MANE Select's representation, "NP_009225.1:p.Tyr1853Ter", as included within the `members` field, was used to populate the `allele` field.
 
-## braf-v600
-[braf-v600](./braf-v600.yaml) represents [CIViC entry 17](https://civicdb.org/variants/17/summary), BRAF V600, as a Categorical Variant. Fields were populated as follows:
+## proteinSequenceConsequence-ex3
+[proteinSequenceConsequence-ex3](./proteinSequenceConsequence-ex3.yaml) represents [CIViC entry 17](https://civicdb.org/variants/17/summary), BRAF V600, as a Categorical Variant. This example satisfies the [ProteinSequenceConsequence Recipe](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#proteinsequenceconsequence). Fields were populated as follows:
 
 - `id`: `civic.vid:` followed by the listed Variation ID, "17".
 - `type`: specified as "CategoricalVariant", as required by [the specification](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#categorical-variant).
@@ -142,19 +183,4 @@ This example applies the [DefiningAlleleConstraint](https://cat-vrs.readthedocs.
 
 This example applies the [DefiningLocationConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#defininglocationconstraint) to represent it as a Categorical Variant.
 
-We additionally created an [annotated](./braf-v600.annotated.yaml) version of this example, detailing each field.
-
-## tp53-copy-loss
-[tp53-copy-loss](./tp53-copy-loss.yaml) represents [TP53 Loss](https://civicdb.org/variants/4452/summary) as a Categorical Variant. Fields were populated as follows:
-
-- `id`: `civic.vid:` followed by the variant id provided by CIViC, 4452, listed for the variant.
-- `type`: specified as "CategoricalVariant", as required by [the specification](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#categorical-variant).
-- `name`: The name of the variant, as provided by CIViC.
-- `description`: A plain text description of the variant.
-- `aliases`: "Copy Number Loss" was provided to clearly specify that this is a copy number event.
-- `extensions`: The value for extension named "cytogenetic location" was obtained from HGNC for TP53.
-- `mappings`: mapping to ClinGen's webpage for this variant.
-
-This example applies two constraints: [CopyChangeConstraint](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#copychangeconstraint) and [FeatureContextConstraint](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html). The `copyChange` field of CopyChangeConstraint uses "loss" to specify the category of copy change. FeatureContextConstraint represents the gene context with a primaryCoding to [HGNC](https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11998).
-
-We additionally created an [annotated](tp53-copy-loss.annotated.yaml) version of this example, detailing each field.
+We additionally created an [annotated](proteinSequenceConsequence-ex3.annotated.yaml) version of this example, detailing each field.
