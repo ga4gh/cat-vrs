@@ -4,10 +4,12 @@ name: BRCA2 loss of function variant
 constraints:
   - type: FeatureContextConstraint
     featureContext:
-      conceptType: gene
+      id: hgnc:1101
+      conceptType: Gene
       name: BRCA2
       primaryCoding:
         id: hgnc:1101
+        name: BRCA2
         system: https://www.genenames.org
         code: HGNC:1101
         iris:

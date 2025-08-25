@@ -1,29 +1,12 @@
 tests:
-  # test that each example validates as a CategoricalVariant
-  - test_file: braf-v600.yaml
+  # Test that examples satisfy CategoricalVariant
+  - test_file: functionVariant-ex1.yaml
     definition: CategoricalVariant
-  - test_file: braf-v600.annotated.yaml
+  - test_file: functionVariant-ex2.yaml
     definition: CategoricalVariant
-  - test_file: canonicalAllele-ex1.yaml
-    definition: CategoricalVariant
-  - test_file: canonicalAllele-ex2.yaml
-    definition: CategoricalVariant
-  - test_file: categoricalCnv-ex1.yaml
-    definition: CategoricalVariant
-  - test_file: categoricalCnv-ex2.yaml
-    definition: CategoricalVariant
-  - test_file: categoricalCnv-ex3.yaml
-    definition: CategoricalVariant
-  - test_file: proteinSequenceConsequence-ex1.yaml
-    definition: CategoricalVariant
-  - test_file: proteinSequenceConsequence-ex2.yaml
-    definition: CategoricalVariant
-  - test_file: tp53-copy-loss.yaml
-    definition: CategoricalVariant
-  - test_file: tp53-copy-loss.annotated.yaml
+  - test_file: functionVariant-ex3.yaml
     definition: CategoricalVariant
 
-  # test that examples intended to satisfy Recipes validate appropriately
   - test_file: canonicalAllele-ex1.yaml
     definition: CanonicalAllele
   - test_file: canonicalAllele-ex2.yaml
@@ -32,9 +15,17 @@ tests:
     definition: CategoricalCnv
   - test_file: categoricalCnv-ex2.yaml
     definition: CategoricalCnv
-  - test_file: categoricalCnv-ex3.yaml
-    definition: CategoricalCnv
+  - test_file: describedVariant-ex1.yaml
+    definition: CategoricalVariant
   - test_file: proteinSequenceConsequence-ex1.yaml
     definition: ProteinSequenceConsequence
   - test_file: proteinSequenceConsequence-ex2.yaml
     definition: ProteinSequenceConsequence
+
+  # Recipe: FunctionVariant
+  - test_file: functionVariant-ex1.yaml
+    definition: FunctionVariant
+  - test_file: functionVariant-ex2.yaml
+    definition: FunctionVariant
+  - test_file: functionVariant-ex3.yaml
+    definition: FunctionVariant

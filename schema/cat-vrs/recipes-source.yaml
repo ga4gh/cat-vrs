@@ -118,13 +118,13 @@ $defs:
       - properties:
           constraints:
             description: >-
-              The constraints must contain exactly two items:
-              a FeatureContextConstraint and a FunctionConstraint.
+              The constraints must contain at least two items:
+              a FunctionConstraint and either a DefiningAlleleConstraint, DefiningLocationConstraint, or FeatureContextConstraint.
             minItems: 2
-            maxItems: 2
             contains:
               allOf:
                 - $ref: FunctionConstraint
+            contains:
               anyOf:
                 - $ref: DefiningAlleleConstraint
                 - $ref: DefiningLocationConstraint
