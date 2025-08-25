@@ -7,22 +7,22 @@ constraints:
       conceptType: gene
       name: NRAS
       primaryCoding:
-        - id: hgnc:7989
-          system: https://www.genenames.org
-          code: HGNC:7989
-          iris:
-            - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:7989
+        id: hgnc:7989
+        system: https://www.genenames.org
+        code: HGNC:7989
+        iris:
+          - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:7989
   - type: FunctionConstraint
     functionConsequence:
       id: SO:0002219
       name: functionally normal
       primaryCoding:
-        - id: SO:0002219
-          name: functionally_normal
-          system: http://www.sequenceontology.org
-          code: SO:0002219
-          iris:
-            - http://www.sequenceontology.org/browser/current_release/term/SO:0002219
+        id: SO:0002219
+        name: functionally_normal
+        system: http://www.sequenceontology.org
+        code: SO:0002219
+        iris:
+          - http://www.sequenceontology.org/browser/current_release/term/SO:0002219
     description: Function consequence described as functionally normal using Sequence Ontology.
 members:
   - id: ga4gh:VA.GSV_U1hzMrHMWEMEqj-22KMJ9KBjzg3G

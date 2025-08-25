@@ -58,10 +58,10 @@ constraints:
       id: SO:0002053
       name: gain of function
       primaryCoding:
-        - id: SO:0002053
-          name: gain_of_function
-          system: http://www.sequenceontology.org
-          code: SO:0002053
-          iris:
-            - http://www.sequenceontology.org/browser/current_release/term/SO:0002053
+        id: SO:0002053
+        name: gain_of_function
+        system: http://www.sequenceontology.org
+        code: SO:0002053
+        iris:
+          - http://www.sequenceontology.org/browser/current_release/term/SO:0002053
     description: Function consequence described as gain of function using Sequence Ontology.
