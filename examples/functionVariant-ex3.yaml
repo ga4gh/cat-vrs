@@ -1,0 +1,67 @@
+id: civic.mpid:1150
+type: CategoricalVariant
+name: PIK3CA p.R38H
+constraints:
+  - type: DefiningAlleleConstraint
+    allele: 
+      id: ga4gh:VA.gFYUMkeAme8HeNqcBIDPYIB45_xRa9Qi
+      type: Allele
+      name: NM_006218.4:c.113G>A
+      description: VRS Variation of NM_006218.4:c.113G>A, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+      digest: VA.gFYUMkeAme8HeNqcBIDPYIB45_xRa9Qi
+      expressions:
+      - syntax: hgvs.c
+        value: NM_006218.4:c.113G>A
+      location:
+        id: ga4gh:SL.rZhFJCEGRkU-G3EqaGuUpefj2bP94NLi
+        description: Coding DNA (cDNA) position 113 of the PIK3CA MANE Select coding transcript (refseq:NM_006218.4), corresponding to genomic position 179198938 on chromosome 3 (refseq:NC_000003.12, GRCh38).
+        extensions:
+          - name: GRCh38, 1-based, genomic position
+            value: chr3:179198938
+            description: Genomic position 179,198,938 on chromosome 3 (refseq:NC_000003.12, GRCh38).
+          - name: GRCh38, 1-based, inclusive interval notation
+            value: chr3:179198938-179198938
+            description: Genomic positions 179,198,938 to 179,198,938 on chromosome 3 (refseq:NC_000003.12, GRCh38).
+          - name: GRCh38, 0-based, half-open interval notation
+            value: chr3:179198937-179198938
+            description: Genomic positions 179,198,937 to 179,198,938 on chromosome 3 (refseq:NC_000003.12, GRCh38).
+        type: SequenceLocation
+        digest: ga4gh:SL.rZhFJCEGRkU-G3EqaGuUpefj2bP94NLi
+        sequenceReference:
+          id: refseq:NM_006218.4
+          name: NM_006218.4
+          description: The MANE Select (GRCh38) coding transcript for PIK3CA.
+          aliases:
+            - ensembl:ENST00000263967.4
+            - ga4gh:SQ.vV37R3hERpo6hA6RBsi9AaaMoY7ELvk9
+          type: SequenceReference
+          refgetAccession: SQ.vV37R3hERpo6hA6RBsi9AaaMoY7ELvk9
+          residueAlphabet: na
+        start: 435
+        end: 436
+        sequence: "G"
+      state:
+        type: LiteralSequenceExpression
+        sequence: A
+  - type: FeatureContextConstraint
+    featureContext:
+      conceptType: gene
+      name: PIK3CA
+      primaryCoding:
+        - id: hgnc:8975
+          system: https://www.genenames.org
+          code: HGNC:8975
+          iris:
+            - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:8975
+  - type: FunctionConstraint
+    functionConsequence: 
+      id: SO:0002053
+      name: gain of function
+      primaryCoding:
+        - id: SO:0002053
+          name: gain_of_function
+          system: http://www.sequenceontology.org
+          code: SO:0002053
+          iris:
+            - http://www.sequenceontology.org/browser/current_release/term/SO:0002053
+    description: Function consequence described as gain of function using Sequence Ontology.

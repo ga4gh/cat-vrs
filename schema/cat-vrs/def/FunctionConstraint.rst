@@ -4,7 +4,7 @@
 
 **Computational Definition**
 
-A classification of the effect on protein function that members of this categorical variant satisfy. # Alternatively, "A classification of the functional consequence that characterizes members of this categorical variant."
+A classification of the effect on protein function that members of this categorical variant satisfy.
 
 **Information Model**
 
