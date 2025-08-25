@@ -13,7 +13,7 @@ constraints:
           iris:
             - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:1101
   - type: FunctionConstraint
-    functionConsequence: 
+    functionConsequence:
       id: SO:0002054
       name: loss of function
       primaryCoding:

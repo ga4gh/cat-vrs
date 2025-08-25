@@ -77,6 +77,9 @@
                },
                {
                   "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/FeatureContextConstraint"
+               },
+               {
+                  "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/FunctionConstraint"
                }
             ]
          }

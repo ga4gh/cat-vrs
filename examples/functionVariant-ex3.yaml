@@ -3,7 +3,7 @@ type: CategoricalVariant
 name: PIK3CA p.R38H
 constraints:
   - type: DefiningAlleleConstraint
-    allele: 
+    allele:
       id: ga4gh:VA.gFYUMkeAme8HeNqcBIDPYIB45_xRa9Qi
       type: Allele
       name: NM_006218.4:c.113G>A
@@ -54,7 +54,7 @@ constraints:
           iris:
             - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:8975
   - type: FunctionConstraint
-    functionConsequence: 
+    functionConsequence:
       id: SO:0002053
       name: gain of function
       primaryCoding:
