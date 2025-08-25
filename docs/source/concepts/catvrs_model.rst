@@ -171,6 +171,8 @@ The following are example implementations of CopyChangeConstraint:
 
    <div style="margin-top: 1em;"></div>
 
+.. _FeatureContextConstraint:
+
 FeatureContextConstraint
 ########################
 
@@ -189,6 +191,8 @@ The following are example implementations of FeatureContextConstraint:
 .. raw:: html
 
    <div style="margin-top: 1em;"></div>
+
+.. _FunctionConstraint:
 
 FunctionConstraint
 ########################
