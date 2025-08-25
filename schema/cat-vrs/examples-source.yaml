@@ -943,6 +943,222 @@ $defs:
         value: Translocation
     maturity: trial use
 
+  example_functionVariant-ex1:
+    id: civic.mpid:4428
+    type: CategoricalVariant
+    name: NRAS functionally normal variants
+    description: An example categorical variant that uses FeatureContextConstraint and FunctionConstraint.
+    constraints:
+      - type: FeatureContextConstraint
+        featureContext:
+          id: hgnc:7989
+          conceptType: Gene
+          name: NRAS
+          primaryCoding:
+            id: hgnc:7989
+            name: NRAS
+            system: https://www.genenames.org
+            code: HGNC:7989
+            iris:
+              - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:7989
+      - type: FunctionConstraint
+        functionConsequence:
+          id: SO:0002219
+          name: functionally normal
+          primaryCoding:
+            id: SO:0002219
+            name: functionally_normal
+            system: http://www.sequenceontology.org
+            code: SO:0002219
+            iris:
+              - http://www.sequenceontology.org/browser/current_release/term/SO:0002219
+        description: Function consequence described as functionally normal using Sequence Ontology.
+    members:
+      - id: ga4gh:VA.GSV_U1hzMrHMWEMEqj-22KMJ9KBjzg3G
+        type: Allele
+        name: NM_002524.5:c.170A>C
+        description: VRS variation of NM_002524.5(NRAS):c.170A>C(p.D57A), generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+        digest: GSV_U1hzMrHMWEMEqj-22KMJ9KBjzg3G
+        expressions:
+          - syntax: hgvs.c
+            value: NM_002524.5:c.170A>C
+        location:
+          id: ga4gh:SL.giseM38uWBFp7prflNpHkr6HP_8xsCdj
+          description: Coding DNA (cDNA) position 170 of the NRAS MANE Select coding transcript (refseq:NM_002524.5), corresponding to genomic position 114713920 on chromosome 1 (refseq:NC_000001.11, GRCh38).
+          extensions:
+            - name: GRCh38, 1-based, genomic position
+              value: chr1:114713920
+              description: Genomic position 114,713,920 on chromosome 1 (refseq:NC_000001.11, GRCh38).
+            - name: GRCh38, 1-based, inclusive interval notation
+              value: chr1:114713920-114713920
+              description: Genomic position 114,713,920 to 114,713,920 on chromosome 1 (refseq:NC_000001.11, GRCh38).
+            - name: GRCh38, 0-based, half-open interval notation
+              value: chr1:114713919-114713920
+              description: Genomic position 114,713,919 to 114,713,920 on chromosome 1 (refseq:NC_000001.11, GRCh38).
+          type: SequenceLocation
+          digest: giseM38uWBFp7prflNpHkr6HP_8xsCdj
+          sequenceReference:
+            id: refseq:NM_002524.5
+            name: NM_002524.5
+            description: The MANE Select (GRCh38) coding transcript for NRAS.
+            aliases:
+              - ensembl:ENST00000369535.5
+              - ga4gh:SQ.sMBMPz32WlhQGTxBagnyMCUdy2OD2M--
+            type: SequenceReference
+            refgetAccession: SQ.sMBMPz32WlhQGTxBagnyMCUdy2OD2M--
+            residueAlphabet: na
+          start: 300
+          end: 301
+          sequence: A
+        state:
+          type: LiteralSequenceExpression
+          sequence: C
+    maturity: draft
+
+  example_functionVariant-ex2:
+    id: civic.mpid:186
+    type: CategoricalVariant
+    name: BRCA2 loss of function variant
+    description: An example categorical variant that uses FeatureContextConstraint and FunctionConstraint.
+    constraints:
+      - type: FeatureContextConstraint
+        featureContext:
+          id: hgnc:1101
+          conceptType: Gene
+          name: BRCA2
+          primaryCoding:
+            id: hgnc:1101
+            name: BRCA2
+            system: https://www.genenames.org
+            code: HGNC:1101
+            iris:
+              - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:1101
+      - type: FunctionConstraint
+        functionConsequence:
+          id: SO:0002054
+          name: loss of function
+          primaryCoding:
+            id: SO:0002054
+            name: loss_of_function_variant
+            system: http://www.sequenceontology.org
+            code: SO:0002054
+            iris:
+              - http://www.sequenceontology.org/browser/current_release/term/SO:0002054
+        description: Function consequence described as loss of function using Sequence Ontology.
+    maturity: draft
+
+  example_functionVariant-ex3:
+    id: civic.mpid:1150
+    type: CategoricalVariant
+    name: PIK3CA p.R38H
+    description: An example categorical variant that uses DefiningAlleleConstraint, FeatureContextConstraint, and FunctionConstraint.
+    constraints:
+      - type: DefiningAlleleConstraint
+        allele:
+          id: ga4gh:VA.gFYUMkeAme8HeNqcBIDPYIB45_xRa9Qi
+          type: Allele
+          name: NM_006218.4:c.113G>A
+          description: VRS Variation of NM_006218.4:c.113G>A, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+          digest: gFYUMkeAme8HeNqcBIDPYIB45_xRa9Qi
+          expressions:
+          - syntax: hgvs.c
+            value: NM_006218.4:c.113G>A
+          location:
+            id: ga4gh:SL.rZhFJCEGRkU-G3EqaGuUpefj2bP94NLi
+            description: Coding DNA (cDNA) position 113 of the PIK3CA MANE Select coding transcript (refseq:NM_006218.4), corresponding to genomic position 179198938 on chromosome 3 (refseq:NC_000003.12, GRCh38).
+            extensions:
+              - name: GRCh38, 1-based, genomic position
+                value: chr3:179198938
+                description: Genomic position 179,198,938 on chromosome 3 (refseq:NC_000003.12, GRCh38).
+              - name: GRCh38, 1-based, inclusive interval notation
+                value: chr3:179198938-179198938
+                description: Genomic positions 179,198,938 to 179,198,938 on chromosome 3 (refseq:NC_000003.12, GRCh38).
+              - name: GRCh38, 0-based, half-open interval notation
+                value: chr3:179198937-179198938
+                description: Genomic positions 179,198,937 to 179,198,938 on chromosome 3 (refseq:NC_000003.12, GRCh38).
+            type: SequenceLocation
+            digest: rZhFJCEGRkU-G3EqaGuUpefj2bP94NLi
+            sequenceReference:
+              id: refseq:NM_006218.4
+              name: NM_006218.4
+              description: The MANE Select (GRCh38) coding transcript for PIK3CA.
+              aliases:
+                - ensembl:ENST00000263967.4
+                - ga4gh:SQ.vV37R3hERpo6hA6RBsi9AaaMoY7ELvk9
+              type: SequenceReference
+              refgetAccession: SQ.vV37R3hERpo6hA6RBsi9AaaMoY7ELvk9
+              residueAlphabet: na
+            start: 435
+            end: 436
+            sequence: "G"
+          state:
+            type: LiteralSequenceExpression
+            sequence: A
+      - type: FeatureContextConstraint
+        featureContext:
+          id: hgnc:8975
+          conceptType: Gene
+          name: PIK3CA
+          primaryCoding:
+            id: hgnc:8975
+            system: https://www.genenames.org
+            code: HGNC:8975
+            iris:
+              - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:8975
+      - type: FunctionConstraint
+        functionConsequence:
+          id: SO:0002053
+          name: gain of function
+          primaryCoding:
+            id: SO:0002053
+            name: gain_of_function
+            system: http://www.sequenceontology.org
+            code: SO:0002053
+            iris:
+              - http://www.sequenceontology.org/browser/current_release/term/SO:0002053
+        description: Function consequence described as gain of function using Sequence Ontology.
+    members:
+    - id: ga4gh:VA.gFYUMkeAme8HeNqcBIDPYIB45_xRa9Qi
+      type: Allele
+      name: NM_006218.4:c.113G>A
+      description: VRS Variation of NM_006218.4:c.113G>A, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+      digest: gFYUMkeAme8HeNqcBIDPYIB45_xRa9Qi
+      expressions:
+      - syntax: hgvs.c
+        value: NM_006218.4:c.113G>A
+      location:
+        id: ga4gh:SL.rZhFJCEGRkU-G3EqaGuUpefj2bP94NLi
+        description: Coding DNA (cDNA) position 113 of the PIK3CA MANE Select coding transcript (refseq:NM_006218.4), corresponding to genomic position 179198938 on chromosome 3 (refseq:NC_000003.12, GRCh38).
+        extensions:
+          - name: GRCh38, 1-based, genomic position
+            value: chr3:179198938
+            description: Genomic position 179,198,938 on chromosome 3 (refseq:NC_000003.12, GRCh38).
+          - name: GRCh38, 1-based, inclusive interval notation
+            value: chr3:179198938-179198938
+            description: Genomic positions 179,198,938 to 179,198,938 on chromosome 3 (refseq:NC_000003.12, GRCh38).
+          - name: GRCh38, 0-based, half-open interval notation
+            value: chr3:179198937-179198938
+            description: Genomic positions 179,198,937 to 179,198,938 on chromosome 3 (refseq:NC_000003.12, GRCh38).
+        type: SequenceLocation
+        digest: rZhFJCEGRkU-G3EqaGuUpefj2bP94NLi
+        sequenceReference:
+          id: refseq:NM_006218.4
+          name: NM_006218.4
+          description: The MANE Select (GRCh38) coding transcript for PIK3CA.
+          aliases:
+            - ensembl:ENST00000263967.4
+            - ga4gh:SQ.vV37R3hERpo6hA6RBsi9AaaMoY7ELvk9
+          type: SequenceReference
+          refgetAccession: SQ.vV37R3hERpo6hA6RBsi9AaaMoY7ELvk9
+          residueAlphabet: na
+        start: 435
+        end: 436
+        sequence: "G"
+      state:
+        type: LiteralSequenceExpression
+        sequence: A
+    maturity: draft
+
   example_proteinSequenceConsequence-ex1:
     id: civic.mpid:33
     type: CategoricalVariant

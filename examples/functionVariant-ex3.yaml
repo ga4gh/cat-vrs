@@ -1,6 +1,7 @@
 id: civic.mpid:1150
 type: CategoricalVariant
 name: PIK3CA p.R38H
+description: An example categorical variant that uses DefiningAlleleConstraint, FeatureContextConstraint, and FunctionConstraint.
 constraints:
   - type: DefiningAlleleConstraint
     allele:

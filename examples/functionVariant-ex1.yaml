@@ -1,6 +1,7 @@
 id: civic.mpid:4428
 type: CategoricalVariant
 name: NRAS functionally normal variants
+description: An example categorical variant that uses FeatureContextConstraint and FunctionConstraint.
 constraints:
   - type: FeatureContextConstraint
     featureContext:
