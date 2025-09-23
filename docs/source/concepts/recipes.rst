@@ -89,15 +89,6 @@ The following are example implementations of that satisfy the CategoricalCNV rec
 
 .. raw:: html
 
-   <div style="margin-top: 0.5em;"></div>
-
-.. collapse:: TP53 Loss
-
-   .. literalinclude:: ../../../schema/cat-vrs/json/example_categoricalCnv-ex4
-      :language: json
-
-.. raw:: html
-
    <div style="margin-top: 1em;"></div>
 
 .. _ProteinSequenceConsequence:

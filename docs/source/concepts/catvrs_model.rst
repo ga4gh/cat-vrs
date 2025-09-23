@@ -134,7 +134,7 @@ The following are example implementations of CopyCountConstraint:
 
    .. literalinclude:: ../../../schema/cat-vrs/json/example_categoricalCnv-ex3
       :language: json
-      :lines: 21-23
+      :lines: 21-24
 
 .. raw:: html
 
@@ -163,9 +163,9 @@ The following are example implementations of CopyChangeConstraint:
 
 .. collapse:: Loss
 
-   .. literalinclude:: ../../../schema/cat-vrs/json/example_categoricalCnv-ex4
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_tp53-copy-loss
       :language: json
-      :lines: 44-47
+      :lines: 99-102
 
 .. raw:: html
 
@@ -182,9 +182,9 @@ The following are example implementations of FeatureContextConstraint:
 
 .. collapse:: Gene: TP53
 
-   .. literalinclude:: ../../../schema/cat-vrs/json/example_categoricalCnv-ex4
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_tp53-copy-loss
       :language: json
-      :lines: 19-43
+      :lines: 74-98
 
 .. raw:: html
 
