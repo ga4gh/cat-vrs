@@ -19,7 +19,7 @@ CanonicalAllele
 
 .. include:: ../def/cat-vrs/CanonicalAllele.rst
 
-The CanonicalAllele is a :ref:`CategoricalVariant` with at least one constraint:
+The CanonicalAllele is a :ref:`CategoricalVariant` with exactly one constraint:
 
 1. A :ref:`DefiningAlleleConstraint` with the `.relations` array containing both
    `liftover_to` and `transcribed_to` codes. This constraint MUST refer to a genomic
@@ -54,7 +54,7 @@ CategoricalCnv
 
 .. include:: ../def/cat-vrs/CategoricalCnv.rst
 
-The CategoricalCNV is a :ref:`CategoricalVariant` with at least two constraints:
+The CategoricalCNV is a :ref:`CategoricalVariant` with exactly two constraints:
 
 1. A :ref:`DefiningLocationConstraint` with the `.relations` array containing only a
    `liftover_to` code.
@@ -107,7 +107,7 @@ ProteinSequenceConsequence
 
 .. include:: ../def/cat-vrs/ProteinSequenceConsequence.rst
 
-The ProteinSequenceConsequence is a :ref:`CategoricalVariant` with at least one constraint:
+The ProteinSequenceConsequence is a :ref:`CategoricalVariant` with exactly one constraint:
 
 1. A :ref:`DefiningAlleleConstraint` with the `.relations` array containing only a
    `translation_of` code. This constraint MUST refer to a protein variant for the `allele`.
