@@ -128,7 +128,7 @@ This example applies the [DefiningAlleleConstraint](https://cat-vrs.readthedocs.
 
 This example applies the [DefiningAlleleConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#definingalleleconstraint) to represent it as a Categorical Variant. The Allele associated with the MANE Select's representation, "NP_009225.1:p.Tyr1853Ter", as included within the `members` field, was used to populate the `allele` field.
 
-## braf-v600.yaml
+## braf-v600
 [braf-v600](./braf-v600.yaml) represents [CIViC entry 17](https://civicdb.org/variants/17/summary), BRAF V600, as a Categorical Variant. Fields were populated as follows:
 
 - `id`: `civic.vid:` followed by the listed Variation ID, "17".
