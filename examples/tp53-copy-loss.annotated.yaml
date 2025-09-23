@@ -38,6 +38,46 @@ extensions:
 # of constraints to model common types of variation, found in schema/cat-vrs/recipes-source.yaml.
 
 constraints:
+  # The DefiningLocationConstraint describes variation relative to a VRS location
+  # The VRS location can be transcribed in full, or abbreviated with the notation vrs.json#/ga4gh:VA...
+  - type: DefiningLocationConstraint
+    location:
+      id: ga4gh:SL.u9R1nbh-BFBoRI8Ravn3yBBSvp-u10LW
+      description: Genomic region between positions 7,668,420 to 7,687,490 on chromosome 17 (refseq:NC_000017.11, GRCh38).
+      extensions:
+        - name: GRCh38 1-based, inclusive interval
+          value: chr17:(7668421–7687490)
+          description: Genomic region between positions 7,668,421 to 7,687,490 on chromosome 17 (refseq:NC_000017.11, GRCh38); 1-based, inclusive interval notation.
+        - name: GRCh38 0-based, half-open interval
+          value: chr17:(7668420–7687490)
+          description: Genomic region between positions 7,668,420 to 7,687,490 on chromosome 17 (refseq:NC_000017.11, GRCh38); 0-based, half-open interval notation.
+      type: SequenceLocation
+      digest: u9R1nbh-BFBoRI8Ravn3yBBSvp-u10LW
+      sequenceReference:
+        id: refseq:NC_000017.11
+        name: NC_000017.11
+        description: Reference sequence for GRCh38 chromosome 17.
+        aliases:
+          - GRCh38:17
+          - GRCh38:chr17
+          - ga4gh:SQ.dLZ15tNO1Ur0IcGjwc3Sdi_0A6Yf4zm7
+        type: SequenceReference
+        refgetAccession: SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
+      start:
+        - null
+        - 7668420
+      end:
+        - 7687490
+        - null
+    relations:
+      - primaryCoding:
+          code: liftover_to
+          system: ga4gh-gks-term:allele-relation
+    matchCharacteristic:
+      primaryCoding:
+        code: is_within
+        system: ga4gh-gks-term:location-match
+
   # The FeatureContextConstraint denotes the feature (e.g. gene, pseudogene, or sequence) that members of this
   # categorical variant are associated with.
   # the type should be "FeatureContextConstraint" and featureContext is a mappable concept.
@@ -45,10 +85,10 @@ constraints:
     featureContext:
       # This ‘id’ is unique within a given system, but may or may not be globally unique outside the system.
       # It is used within a system to reference an object from another.
-      # id is not intended or required ot be human-readible.  In this case it just happens to be so
+      # id is not intended or required ot be human-readable.  In this case it just happens to be so
       id: TP53
 
-      # A primary name for the concept (usually a human-readible one)
+      # A primary name for the concept (usually a human-readable one)
       name: TP53
 
       # The type of feature being denoted: gene, pseudogene, sequence, region, etc
