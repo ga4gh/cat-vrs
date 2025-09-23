@@ -14,7 +14,6 @@ tests:
     definition: CategoricalVariant
   - test_file: categoricalCnv-ex3.yaml
     definition: CategoricalVariant
-    definition: CategoricalVariant
   - test_file: proteinSequenceConsequence-ex1.yaml
     definition: CategoricalVariant
   - test_file: proteinSequenceConsequence-ex2.yaml
@@ -22,6 +21,7 @@ tests:
   - test_file: tp53-copy-loss.yaml
     definition: CategoricalVariant
   - test_file: tp53-copy-loss.annotated.yaml
+    definition: CategoricalVariant
 
   # test that examples intended to satisfy Recipes validate appropriately
   - test_file: canonicalAllele-ex1.yaml
