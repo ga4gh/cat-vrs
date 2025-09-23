@@ -58,8 +58,9 @@ $defs:
       - properties:
           constraints:
             minItems: 2
+            maxItems: 2
             description: >-
-              The constraints array must contain at least two items:
+              The constraints array must contain exactly two items:
               a DefiningLocationConstraint and either a CopyChangeConstraint
               or CopyCountConstraint.
             allOf:
