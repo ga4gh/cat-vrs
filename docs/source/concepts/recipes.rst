@@ -47,40 +47,6 @@ The following are example implementations of that satisfy the CanonicalAllele re
 
    <div style="margin-top: 1em;"></div>
 
-.. _ProteinSequenceConsequence:
-
-ProteinSequenceConsequence
-!!!!!!!!!!!!!!!!!!!!!!!!!!
-
-.. include:: ../def/cat-vrs/ProteinSequenceConsequence.rst
-
-The ProteinSequenceConsequence is a :ref:`CategoricalVariant` with exactly one constraint:
-
-1. A :ref:`DefiningAlleleConstraint` with the `.relations` array containing only a
-   `translation_of` code. This constraint MUST refer to a protein variant for the `allele`.
-
-**Examples**
-
-The following are example implementations of that satisfy the ProteinSequenceConsequence recipe:
-
-.. collapse:: EGFR L858R
-
-   .. literalinclude:: ../../../schema/cat-vrs/json/example_proteinSequenceConsequence-ex1
-      :language: json
-
-.. raw:: html
-
-   <div style="margin-top: 0.5em;"></div>
-
-.. collapse:: NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter)
-
-   .. literalinclude:: ../../../schema/cat-vrs/json/example_proteinSequenceConsequence-ex2
-      :language: json
-
-.. raw:: html
-
-   <div style="margin-top: 1em;"></div>
-
 .. _categorical-cnv:
 
 CategoricalCnv
@@ -123,11 +89,36 @@ The following are example implementations of that satisfy the CategoricalCNV rec
 
 .. raw:: html
 
+   <div style="margin-top: 1em;"></div>
+
+.. _ProteinSequenceConsequence:
+
+ProteinSequenceConsequence
+!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+.. include:: ../def/cat-vrs/ProteinSequenceConsequence.rst
+
+The ProteinSequenceConsequence is a :ref:`CategoricalVariant` with exactly one constraint:
+
+1. A :ref:`DefiningAlleleConstraint` with the `.relations` array containing only a
+   `translation_of` code. This constraint MUST refer to a protein variant for the `allele`.
+
+**Examples**
+
+The following are example implementations of that satisfy the ProteinSequenceConsequence recipe:
+
+.. collapse:: EGFR L858R
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_proteinSequenceConsequence-ex1
+      :language: json
+
+.. raw:: html
+
    <div style="margin-top: 0.5em;"></div>
 
-.. collapse:: TP53 Loss
+.. collapse:: NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter)
 
-   .. literalinclude:: ../../../schema/cat-vrs/json/example_categoricalCnv-ex4
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_proteinSequenceConsequence-ex2
       :language: json
 
 .. raw:: html

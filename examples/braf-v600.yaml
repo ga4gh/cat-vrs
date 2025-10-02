@@ -39,11 +39,11 @@ constraints:
       end: 600
       sequence: V
     relations:
-      primaryCoding:
-        code: translation_of
-        system: http://www.sequenceontology.org
-        iris:
-          - http://www.sequenceontology.org/browser/current_release/term/translation_of
+      - primaryCoding:
+          code: translation_of
+          system: http://www.sequenceontology.org
+          iris:
+            - http://www.sequenceontology.org/browser/current_release/term/translation_of
     matchCharacteristic:
       primaryCoding:
         code: is_within
@@ -51,35 +51,35 @@ constraints:
 mappings:
   - coding:
       system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
-      code: 13961
+      code: '13961'
       name: NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)
       iris:
         - https://www.ncbi.nlm.nih.gov/clinvar/variation/13961
     relation: relatedMatch
   - coding:
       system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
-      code: 375940
+      code: '375940'
       name: NM_004333.6(BRAF):c.1798_1799delinsAG (p.Val600Arg)
       iris:
         - https://www.ncbi.nlm.nih.gov/clinvar/variation/375940
     relation: relatedMatch
   - coding:
       system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
-      code: 375941
+      code: '375941'
       name: NM_004333.6(BRAF):c.1798_1799delinsAA (p.Val600Lys)
       iris:
         - https://www.ncbi.nlm.nih.gov/clinvar/variation/375941
     relation: relatedMatch
   - coding:
       system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
-      code: 40389
+      code: '40389'
       name: NM_004333.6(BRAF):c.1799T>G (p.Val600Gly)
       iris:
         - https://www.ncbi.nlm.nih.gov/clinvar/variation/40389
     relation: relatedMatch
   - coding:
       system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
-      code: 44815
+      code: '44815'
       name: NM_004333.6(BRAF):c.1798G>A (p.Val600Met)
       iris:
         - https://www.ncbi.nlm.nih.gov/clinvar/variation/44815
@@ -90,7 +90,7 @@ members:
     name: NM_004333.6:c.1799T>A
     description: VRS variation of NM_004333.6:c.1799T>A, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
     digest: W6xsV-aFm9yT2Bic5cFAV2j0rll6KK5R
-    expression:
+    expressions:
       - syntax: hgvs.c
         value: NM_004333.6:c.1799T>A
     location:
@@ -128,7 +128,7 @@ members:
     name: NM_004333.6:c.1798_1799delinsAA
     description: VRS variation of NM_004333.6:c.1798_1799delinsAA, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
     digest: GIOeMJX8rJ-q9ZGqmFRIUOGnXQ5NARht
-    expression:
+    expressions:
       - syntax: hgvs.c
         value: NM_004333.6:c.1798_1799delinsAA
     location:
@@ -163,7 +163,7 @@ members:
     name: NM_004333.6:c.1799T>G
     description: VRS variation of NM_004333.6:c.1799T>G, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
     digest: PEphL_4Hx5JYuJPMzgu0pRQIUcz_J9p0
-    expression:
+    expressions:
       - syntax: hgvs.c
         value: NM_004333.6:c.1799T>G
     location:
@@ -200,7 +200,7 @@ members:
     name: NM_004333.6:c.1798G>A
     description: VRS variation of NM_004333.6:c.1799T>A, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
     digest: O3Wd-kD48Dl1ihRUuf4vVybLaXYKFXnk
-    expression:
+    expressions:
       - syntax: hgvs.c
         value: NM_004333.6:c.1798G>A
     type: Allele
@@ -239,7 +239,7 @@ members:
     name: NM_004333.6:c.1798_1799delinsAG
     description: VRS variation of NM_004333.6:c.1799T>A, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
     digest: t97D17VsbiAa2U-znA-Qfx6DVInBd-_-
-    expression:
+    expressions:
       - syntax: hgvs.c
         value: NM_004333.6:c.1798_1799delinsAG
     location:
