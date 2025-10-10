@@ -14,6 +14,8 @@ tests:
     definition: CategoricalVariant
   - test_file: categoricalCnv-ex3.yaml
     definition: CategoricalVariant
+  - test_definition: describedVariant-ex1.yaml
+    definition: CategoricalVariant
   - test_file: proteinSequenceConsequence-ex1.yaml
     definition: CategoricalVariant
   - test_file: proteinSequenceConsequence-ex2.yaml
