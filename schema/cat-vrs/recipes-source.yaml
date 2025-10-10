@@ -108,26 +108,3 @@ $defs:
                                 system:
                                   const: http://www.sequenceontology.org
                       maxContains: 1
-
-    FunctionVariant:
-    maturity: draft
-    description: >-
-      A representation of the constraints for matching knowledge about function variants; e.g., gain-of-function or loss-of-function.
-    allOf:
-      - $ref: CategoricalVariant
-      - properties:
-          constraints:
-            description: >-
-              The constraints must contain at least two items:
-              a FunctionConstraint and either a DefiningAlleleConstraint, DefiningLocationConstraint, or FeatureContextConstraint.
-            minItems: 2
-            contains:
-              allOf:
-                - $ref: FunctionConstraint
-            contains:
-              anyOf:
-                - $ref: DefiningAlleleConstraint
-                - $ref: DefiningLocationConstraint
-                - $ref: FeatureContextConstraint
-        required:
-          - constraints
