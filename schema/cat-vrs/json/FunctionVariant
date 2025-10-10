@@ -12,9 +12,15 @@
       {
          "properties": {
             "constraints": {
-               "description": "The constraints must contain at least two items: a FunctionConstraint and either a DefiningAlleleConstraint, DefiningLocationConstraint, or FeatureContextConstraint.",
+               "description": "The constraints must contain exactly two items: a FeatureContextConstraint and a FunctionConstraint.",
                "minItems": 2,
+               "maxItems": 2,
                "contains": {
+                  "allOf": [
+                     {
+                        "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/FunctionConstraint"
+                     }
+                  ],
                   "anyOf": [
                      {
                         "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/DefiningAlleleConstraint"
