@@ -113,7 +113,7 @@ The following are example implementations of DefiningLocationConstraint:
 
    .. literalinclude:: ../../../schema/cat-vrs/json/example_braf-v600
       :language: json
-      :lines: 29-67
+      :lines: 29-68
 
 .. raw:: html
 
