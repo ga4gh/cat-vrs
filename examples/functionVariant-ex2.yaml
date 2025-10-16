@@ -1,0 +1,29 @@
+id: civic.mpid:186
+type: CategoricalVariant
+name: BRCA2 loss of function variants
+description: An example categorical variant that uses FeatureContextConstraint and FunctionConstraint.
+constraints:
+  - type: FeatureContextConstraint
+    featureContext:
+      id: hgnc:1101
+      conceptType: Gene
+      name: BRCA2
+      primaryCoding:
+        id: hgnc:1101
+        name: BRCA2
+        system: https://www.genenames.org
+        code: HGNC:1101
+        iris:
+          - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:1101
+  - type: FunctionConstraint
+    functionConsequence:
+      id: SO:0002054
+      name: loss of function
+      primaryCoding:
+        id: SO:0002054
+        name: loss_of_function_variant
+        system: http://www.sequenceontology.org
+        code: SO:0002054
+        iris:
+          - http://www.sequenceontology.org/browser/current_release/term/SO:0002054
+    description: Function consequence described as loss of function using Sequence Ontology.

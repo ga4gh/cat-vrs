@@ -14,6 +14,12 @@ tests:
     definition: CategoricalVariant
   - test_file: categoricalCnv-ex3.yaml
     definition: CategoricalVariant
+  - test_file: functionVariant-ex1.yaml
+    definition: CategoricalVariant
+  - test_file: functionVariant-ex2.yaml
+    definition: CategoricalVariant
+  - test_file: functionVariant-ex3.yaml
+    definition: CategoricalVariant
   - test_file: proteinSequenceConsequence-ex1.yaml
     definition: CategoricalVariant
   - test_file: proteinSequenceConsequence-ex2.yaml
@@ -34,6 +40,12 @@ tests:
     definition: CategoricalCnv
   - test_file: categoricalCnv-ex3.yaml
     definition: CategoricalCnv
+  - test_file: functionVariant-ex1.yaml
+    definition: FunctionVariant
+  - test_file: functionVariant-ex2.yaml
+    definition: FunctionVariant
+  - test_file: functionVariant-ex3.yaml
+    definition: FunctionVariant
   - test_file: proteinSequenceConsequence-ex1.yaml
     definition: ProteinSequenceConsequence
   - test_file: proteinSequenceConsequence-ex2.yaml

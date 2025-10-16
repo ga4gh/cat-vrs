@@ -72,6 +72,7 @@ $defs:
       - $ref: "#/$defs/CopyCountConstraint"
       - $ref: "#/$defs/CopyChangeConstraint"
       - $ref: "#/$defs/FeatureContextConstraint"
+      - $ref: "#/$defs/FunctionConstraint"
     heritableProperties:
       type:
         type: string
@@ -207,3 +208,27 @@ $defs:
         $refCurie: gks.core:MappableConcept
     required:
       - featureContext
+
+  FunctionConstraint:
+    maturity: draft
+    type: object
+    inherits: Constraint
+    description: >-
+      A classification of the protein functional consequence that characterizes members of this categorical variant.
+    properties:
+      type:
+        extends: type
+        const: FunctionConstraint
+        default: FunctionConstraint
+        description: 'MUST be "FunctionConstraint"'
+      functionConsequence:
+        description: >
+          The functional consequence of members of this categorical variant, as defined by an external ontology. We recommend using one of the defined terms from `The Sequence Ontology
+          <http://www.sequenceontology.org>`_. See Implementation Guidance for more details.
+        $refCurie: gks.core:MappableConcept
+      description:
+        description: >-
+          A free-text description of the function change.
+        type: string
+    required:
+      - functionConsequence

@@ -110,7 +110,7 @@ The following are example implementations of DefiningLocationConstraint:
 
    .. literalinclude:: ../../../schema/cat-vrs/json/example_braf-v600
       :language: json
-      :lines: 29-67
+      :lines: 29-68
 
 .. raw:: html
 
@@ -168,6 +168,8 @@ The following are example implementations of CopyChangeConstraint:
 
    <div style="margin-top: 1em;"></div>
 
+.. _FeatureContextConstraint:
+
 FeatureContextConstraint
 ########################
 
@@ -185,4 +187,86 @@ The following are example implementations of FeatureContextConstraint:
 
 .. raw:: html
 
+   <div style="margin-top: 0.5em;"></div>
+
+.. collapse:: Gene: NRAS
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_functionVariant-ex1
+      :language: json
+      :lines: 10-26
+
+.. raw:: html
+
+   <div style="margin-top: 0.5em;"></div>
+
+.. collapse:: Gene: BRCA2
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_functionVariant-ex2
+      :language: json
+      :lines: 10-26
+
+.. raw:: html
+
+   <div style="margin-top: 0.5em;"></div>
+
+.. collapse:: Gene: PIK3CA
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_functionVariant-ex3
+      :language: json
+      :lines: 68-83
+
+.. raw:: html
+
    <div style="margin-top: 1em;"></div>
+
+.. _FunctionConstraint:
+
+FunctionConstraint
+########################
+
+.. include:: ../def/cat-vrs/FunctionConstraint.rst
+
+**Examples**
+
+The following are example implementations of FunctionConstraint:
+
+.. collapse:: NRAS functionally normal variants
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_functionVariant-ex1
+      :language: json
+      :lines: 27-43
+
+.. raw:: html
+
+   <div style="margin-top: 0.5em;"></div>
+
+.. collapse:: BRCA2 loss of function variants
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_functionVariant-ex2
+      :language: json
+      :lines: 27-43
+
+.. raw:: html
+
+   <div style="margin-top: 0.5em;"></div>
+
+.. collapse:: PIK3CA p.R38H
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_functionVariant-ex3
+      :language: json
+      :lines: 84-100
+
+.. raw:: html
+
+   <div style="margin-top: 1em;"></div>
+
+**Implementation Guidance**
+
+The `functionConsequence` attribute is a :ref:`MappableConcept`, meaning that it should be represented using an externally defined ontology term. We recommend using one of the following defined terms from `The Sequence Ontology <http://www.sequenceontology.org>`_:
+
+* **dominant negative variant** (`SO:0002052 <http://www.sequenceontology.org/browser/current_release/term/SO:0002052>`_ - dominant_negative_variant): A variant where the mutated gene product adversely affects the other (wild type) gene product.
+* **functionally normal** (`SO:0002219 <http://www.sequenceontology.org/browser/current_release/term/SO:0002219>`_ - functionally_normal): A sequence variant in which the function of a gene product is retained with respect to a reference.
+* **gain of function** (`SO:0002053 <http://www.sequenceontology.org/browser/current_release/term/SO:0002053>`_ - gain_of_function_variant): A sequence variant whereby new or enhanced function is conferred on the gene product.
+* **loss of function** (`SO:0002054 <http://www.sequenceontology.org/browser/current_release/term/SO:0002054>`_ - loss_of_function_variant): A sequence variant whereby the gene product has diminished or abolished function.
+* **loss of heterozygosity** (`SO:0001786 <http://www.sequenceontology.org/browser/current_release/term/SO:0001786>`_ - loss_of_heterozygosity): A functional variant whereby the sequence alteration causes a loss of function of one allele of a gene.
+* **polypeptide partial loss of function** (`SO:0001561 <http://www.sequenceontology.org/browser/current_release/term/SO:0001561>`_ - polypeptide_partial_loss_of_function): A sequence variant that causes some but not all loss of polypeptide function with respect to a reference sequence.
