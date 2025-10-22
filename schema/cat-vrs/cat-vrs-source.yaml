@@ -232,3 +232,42 @@ $defs:
         type: string
     required:
       - functionConsequence
+
+  AdjacencyConstraint:
+    maturity: draft
+    type: object
+    inherits: Constraint
+    description: >-
+      Components that define a molecular adjacency of congruent elements.
+    properties:
+      type:
+        extends: type
+        const: AdjacencyConstraint
+        default: AdjacencyConstraint
+        description: 'MUST be AdjacencyConstraint'
+      linkerSequence:
+        type: object
+        oneOf:
+          - $refCurie: gks.core:iriReference
+          - $refCurie: vrs.LiteralSequenceExpression
+          - $refCurie: vrs.Location
+          - $refCurie: vrs.SequenceLengthExpression
+        description: The sequence found between the adjoined elements.
+      adjoinedElements:
+        type: array
+        description: >-
+          The elements of the adjacency.
+        minItems: 2
+        maxItems: 2
+        ordered: true
+        items:
+          oneOf:
+            - $refCurie: gks.core:iriReference
+            - $refCurie: gks.core:MappableConcept
+            - $refCurie: vrs.Location
+            - title: multipleKnownGeneElement
+              type: object
+              description: Represents one of a collection of known genes that can be involved in the adjacency.
+            - title: unknownElement
+              type: object
+              description: Represents an unknown adjacent element.
