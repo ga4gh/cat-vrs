@@ -34,7 +34,7 @@ constraints:
           system: entrez_url
           code: entrez:25
           iris:
-            - full url for ABL1 
+            - full url for ABL1
 members:
 - id: ...
   type: Adjacency
