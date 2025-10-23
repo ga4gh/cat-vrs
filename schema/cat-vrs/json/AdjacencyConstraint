@@ -1,0 +1,67 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0/json/AdjacencyConstraint",
+   "title": "AdjacencyConstraint",
+   "type": "object",
+   "maturity": "draft",
+   "description": "Components that define a molecular adjacency of congruent elements.",
+   "properties": {
+      "type": {
+         "type": "string",
+         "const": "AdjacencyConstraint",
+         "default": "AdjacencyConstraint",
+         "description": "MUST be AdjacencyConstraint"
+      },
+      "linker": {
+         "description": "The sequence found between the adjoined elements.",
+         "$ref": "/ga4gh/schema/vrs/2.0.1/json/SequenceExpression"
+      },
+      "adjoinedElements": {
+         "type": "array",
+         "description": "The elements of the adjacency.",
+         "minItems": 2,
+         "maxItems": 2,
+         "ordered": true,
+         "items": {
+            "oneOf": [
+               {
+                  "$ref": "/ga4gh/schema/gks-core/1.0.0/json/MappableConcept"
+               },
+               {
+                  "$ref": "/ga4gh/schema/gks-core/1.0.0/json/iriReference"
+               },
+               {
+                  "$ref": "/ga4gh/schema/vrs/2.0.1/json/Location"
+               },
+               {
+                  "const": "v",
+                  "description": "Represents one of a collection of known genes that can be involved in the adjacency.",
+                  "title": "multipleKnownGeneElement",
+                  "type": "object",
+                  "properties": {
+                     "knownElements": {
+                        "type": "array",
+                        "ordered": false,
+                        "items": {
+                           "$ref": "/ga4gh/schema/gks-core/1.0.0/json/MappableConcept"
+                        },
+                        "description": "Previously described known elements that satisfy the described adjacency. "
+                     }
+                  },
+                  "additionalProperties": false
+               },
+               {
+                  "const": "?",
+                  "description": "Represents an unknown adjacent element.",
+                  "title": "unknownElement",
+                  "type": "string"
+               }
+            ]
+         }
+      }
+   },
+   "required": [
+      "type"
+   ],
+   "additionalProperties": false
+}
