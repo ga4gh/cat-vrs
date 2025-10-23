@@ -45,7 +45,7 @@
                         "items": {
                            "$ref": "/ga4gh/schema/gks-core/1.0.0/json/MappableConcept"
                         },
-                        "description": "Previously described known elements that satisfy the described adjacency. "
+                        "description": "Previously described known elements that satisfy the described adjacency."
                      }
                   },
                   "additionalProperties": false
