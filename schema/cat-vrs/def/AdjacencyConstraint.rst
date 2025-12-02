@@ -22,20 +22,20 @@ Some AdjacencyConstraint attributes are inherited from :ref:`Constraint`.
       - Limits
       - Description
    *  - type
-      -
+      - 
       - string
       - 1..1
       - MUST be AdjacencyConstraint
    *  - linker
-      -
+      - 
       - :ref:`SequenceExpression`
       - 0..1
       - The sequence found between the adjoined elements.
    *  - adjoinedElements
-      -
+      - 
                         .. raw:: html
 
                             <span style="background-color: #B2DFEE; color: black; padding: 2px 6px; border: 1px solid black; border-radius: 3px; font-weight: bold; display: inline-block; margin-bottom: 5px;" title="Ordered">&#8595;</span>
-      - :ref:`iriReference` | :ref:`MappableConcept` | :ref:`Location` | object | string
+      - :ref:`iriReference` | :ref:`MappableConcept` | :ref:`Location` | _Not Specified_ | _Not Specified_
       - 2..2
       - The elements of the adjacency.

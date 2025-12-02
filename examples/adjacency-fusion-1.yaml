@@ -28,28 +28,24 @@ extensions:
     end: 133763062
 constraints:
   - type: AdjacencyConstraint
-    adjoinedMembers:
+    adjoinedElements:
       - id: ncbi:613
         conceptType: Gene
         name: BCR
         primaryCoding:
           id: ncbi:613
           name: BCR
-          system: "https://www.ncbi.nlm.nih.gov/gene"
+          system: https://www.ncbi.nlm.nih.gov/gene
           code: ncbi:613
           iris:
-            - "https://www.ncbi.nlm.nih.gov/gene/613"
+            - https://www.ncbi.nlm.nih.gov/gene/613
       - id: ncbi:25
         conceptType: Gene
         name: ABL1
         primaryCoding:
           id: ncbi:25
           name: ABL1
-          system: "https://www.ncbi.nlm.nih.gov/gene"
+          system: https://www.ncbi.nlm.nih.gov/gene
           code: ncbi:25
           iris:
-            - "https://www.ncbi.nlm.nih.gov/gene/25"
-members:
-- id: ...
-  type: Adjacency
-  description: VRS representation of Adjacency using VRS location of 5' and 3' CIViC coordinates
+            - https://www.ncbi.nlm.nih.gov/gene/25

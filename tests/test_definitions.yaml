@@ -1,5 +1,11 @@
 tests:
   # test that each example validates as a CategoricalVariant
+  - test_file: adjacency-fusion-1.yaml
+    definition: CategoricalVariant
+  - test_file: adjacency-fusion-2.yaml
+    definition: CategoricalVariant
+  - test_file: adjacency-fusion-3.yaml
+    definition: CategoricalVariant
   - test_file: braf-v600.yaml
     definition: CategoricalVariant
   - test_file: braf-v600.annotated.yaml

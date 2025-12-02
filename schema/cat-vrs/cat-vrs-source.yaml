@@ -261,20 +261,25 @@ $defs:
             - $refCurie: gks.core:iriReference
             - $refCurie: gks.core:MappableConcept
             - $refCurie: vrs:Location
-            - const: v
-              description: Represents one of a collection of known genes that can be involved in the adjacency.
-              title: multipleKnownGeneElement
-              type: object
-              properties:
-                knownElements:
-                  type: array
-                  ordered: false
-                  items:
-                    $refCurie: gks.core:MappableConcept
-                  description: >-
-                    Previously described known elements that satisfy the described adjacency.
-              additionalProperties: false
-            - const: "?"
-              description: Represents an unknown adjacent element.
-              title: unknownElement
-              type: string
+            - multipleKnownGeneElements:
+                description: Represents one of a collection of known genes that can be involved in the adjacency.
+                type: object
+                properties:
+                  name:
+                    const: v
+                  knownElements:
+                    type: array
+                    ordered: false
+                    items:
+                      $refCurie: gks.core:MappableConcept
+                    description: >-
+                      Previously described known elements that satisfy the described adjacency.
+                additionalProperties: false
+            - unknownGeneComponent:
+                description: Represents an unknown adjacent element.
+                type: string
+                properties:
+                  name:
+                    const: "?"
+    required:
+      - adjoinedElements

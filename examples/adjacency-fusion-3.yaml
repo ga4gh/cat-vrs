@@ -1,0 +1,22 @@
+id: civic.vid:5186
+type: CategoricalVariant
+name: ?::ZNF384(ncbi:171017)
+description: >-
+  An optional field to describe ?::ZNF384(ncbi:171017).
+aliases:
+  - ?::ZNF384(ncbi:171017)
+  - ZNF384 Fusion
+constraints:
+  - type: AdjacencyConstraint
+    adjoinedElements:
+      - id: ncbi:171017
+        conceptType: Gene
+        name: ZNF384
+        primaryCoding:
+          id: ncbi:171017
+          name: NTRK1
+          system: https://www.ncbi.nlm.nih.gov/gene
+          code: ncbi:171017
+          iris:
+            - https://www.ncbi.nlm.nih.gov/gene/171017
+      - name: ?

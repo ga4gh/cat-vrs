@@ -34,33 +34,42 @@
                   "$ref": "/ga4gh/schema/vrs/2.0.1/json/Location"
                },
                {
-                  "const": "v",
-                  "description": "Represents one of a collection of known genes that can be involved in the adjacency.",
-                  "title": "multipleKnownGeneElement",
-                  "type": "object",
-                  "properties": {
-                     "knownElements": {
-                        "type": "array",
-                        "ordered": false,
-                        "items": {
-                           "$ref": "/ga4gh/schema/gks-core/1.0.0/json/MappableConcept"
+                  "multipleKnownGeneElements": {
+                     "description": "Represents one of a collection of known genes that can be involved in the adjacency.",
+                     "type": "object",
+                     "properties": {
+                        "name": {
+                           "const": "v"
                         },
-                        "description": "Previously described known elements that satisfy the described adjacency."
-                     }
-                  },
-                  "additionalProperties": false
+                        "knownElements": {
+                           "type": "array",
+                           "ordered": false,
+                           "items": {
+                              "$ref": "/ga4gh/schema/gks-core/1.0.0/json/MappableConcept"
+                           },
+                           "description": "Previously described known elements that satisfy the described adjacency."
+                        }
+                     },
+                     "additionalProperties": false
+                  }
                },
                {
-                  "const": "?",
-                  "description": "Represents an unknown adjacent element.",
-                  "title": "unknownElement",
-                  "type": "string"
+                  "unknownGeneComponent": {
+                     "description": "Represents an unknown adjacent element.",
+                     "type": "string",
+                     "properties": {
+                        "name": {
+                           "const": "?"
+                        }
+                     }
+                  }
                }
             ]
          }
       }
    },
    "required": [
+      "adjoinedElements",
       "type"
    ],
    "additionalProperties": false

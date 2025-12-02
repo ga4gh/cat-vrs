@@ -1,0 +1,53 @@
+id: civic.fid:62026
+type: CategoricalVariant
+name: v::NTRK1(ncbi:4914)
+description: >-
+  An optional field to describe v::NTRK1(ncbi:4914).
+aliases:
+  - v::NTRK1
+  - NTRK1 fusion
+constraints:
+  - type: AdjacencyConstraint
+    adjoinedElements:
+      - id: ncbi:4941
+        conceptType: Gene
+        name: NRTK1
+        primaryCoding:
+          id: ncbi:4941
+          name: NTRK1
+          system: https://www.ncbi.nlm.nih.gov/gene
+          code: ncbi:4941
+          iris:
+            - https://www.ncbi.nlm.nih.gov/gene/4941
+      - name: v
+        knownElements:
+          - id: ncbi:6636
+            name: LMNA
+            system: https://www.ncbi.nlm.nih.gov/gene
+            code: ncbi:6636
+            iris:
+              - https://www.ncbi.nlm.nih.gov/gene/6636
+          - id: ncbi:10342
+            name: TFG
+            system: https://www.ncbi.nlm.nih.gov/gene
+            code: ncbi:10342
+            iris:
+              - https://www.ncbi.nlm.nih.gov/gene/10342
+          - id: ncbi:7157
+            name: TP53
+            system: https://www.ncbi.nlm.nih.gov/gene
+            code: ncbi:7157
+            iris:
+              - https://www.ncbi.nlm.nih.gov/gene/7157
+          - id: ncbi:7170
+            name: TPM3
+            system: https://www.ncbi.nlm.nih.gov/gene
+            code: ncbi:7170
+            iris:
+              - https://www.ncbi.nlm.nih.gov/gene/7170
+          - id: ncbi:7175
+            name: TPR
+            system: https://www.ncbi.nlm.nih.gov/gene
+            code: ncbi:7175
+            iris:
+              - https://www.ncbi.nlm.nih.gov/gene/7175
