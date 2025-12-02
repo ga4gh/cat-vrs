@@ -1,6 +1,6 @@
 id: civic.vid:1
 type: CategoricalVariant
-name: BCR(entrez:613)::ABL1(entrez:25)
+name: BCR(ncbi:613)::ABL1(ncbi:25)
 description: >-
   An optional field to describe BCR::ABL1
 aliases:
@@ -9,33 +9,47 @@ aliases:
   - BCR-ABL1
   - BCR--ABL1
   - BCR-ABL
-extension:
-- name: Fill in CIViC items later
-  value: ...
+extensions:
+- name: CIViC 5' Partner Representative Genomic Coordinates
+  value: 
+    reference_build: GRCh37
+    transcript: ENST00000305877.8
+    ensembl_version: 75
+    chromosome: '22'
+    start: 23522397
+    end: 23632600
+- name: CIViC 3' Partner Representative Genomic Coordinates
+  value:
+    reference_build: GRCh37
+    transcript: ENST00000318560.5
+    ensembl_version: 75
+    chromosome: '9'
+    start: 133729451
+    end: 133763062
 constraints:
   - type: AdjacencyConstraint
     adjoinedMembers:
-      - id: entrez:613
+      - id: ncbi:613
         conceptType: Gene
         name: BCR
         primaryCoding:
-          id: entrez:613
+          id: ncbi:613
           name: BCR
-          system: entrez_url
-          code: entrez:613
+          system: "https://www.ncbi.nlm.nih.gov/gene"
+          code: ncbi:613
           iris:
-            - full url for BCR
-      - id: entrez:25
+            - "https://www.ncbi.nlm.nih.gov/gene/613"
+      - id: ncbi:25
         conceptType: Gene
         name: ABL1
         primaryCoding:
-          id: entrez:25
+          id: ncbi:25
           name: ABL1
-          system: entrez_url
-          code: entrez:25
+          system: "https://www.ncbi.nlm.nih.gov/gene"
+          code: ncbi:25
           iris:
-            - full url for ABL1
+            - "https://www.ncbi.nlm.nih.gov/gene/25"
 members:
 - id: ...
   type: Adjacency
-  description: VRS representation of Adjacency using VRS location of 3' and 5' coordinates
+  description: VRS representation of Adjacency using VRS location of 5' and 3' CIViC coordinates
