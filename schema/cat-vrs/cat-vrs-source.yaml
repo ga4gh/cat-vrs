@@ -266,7 +266,7 @@ $defs:
                 type: object
                 properties:
                   name:
-                    const: v
+                    const: multipleKnownGeneElements
                   knownElements:
                     type: array
                     ordered: false
@@ -280,6 +280,6 @@ $defs:
                 type: string
                 properties:
                   name:
-                    const: "?"
+                    const: unknownGeneComponent
     required:
       - adjoinedElements
