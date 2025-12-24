@@ -11,7 +11,7 @@ aliases:
   - BCR-ABL
 extensions:
 - name: CIViC 5' Partner Representative Genomic Coordinates
-  value: 
+  value:
     reference_build: GRCh37
     transcript: ENST00000305877.8
     ensembl_version: 75
