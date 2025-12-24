@@ -31,7 +31,6 @@ Some FunctionConstraint attributes are inherited from :ref:`Constraint`.
       - :ref:`MappableConcept`
       - 1..1
       - The functional consequence of members of this categorical variant, as defined by an external ontology. We recommend using one of the defined terms from `The Sequence Ontology <http://www.sequenceontology.org>`_. See Implementation Guidance for more details.
-
    *  - description
       -
       - string

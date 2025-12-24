@@ -15,7 +15,7 @@
       "location": {
          "oneOf": [
             {
-               "$ref": "/ga4gh/schema/gks-core/1.0.0/json/iriReference"
+               "$ref": "/ga4gh/schema/gks-core/1.0/json/iriReference"
             },
             {
                "$ref": "/ga4gh/schema/vrs/2.0.1/json/SequenceLocation"
@@ -26,13 +26,13 @@
          "type": "array",
          "ordered": false,
          "items": {
-            "$ref": "/ga4gh/schema/gks-core/1.0.0/json/MappableConcept"
+            "$ref": "/ga4gh/schema/gks-core/1.0/json/MappableConcept"
          },
          "description": "Defined relationships from which members relate to the defining location."
       },
       "matchCharacteristic": {
          "description": "A characteristic of the location that is used to match the defining location to member locations.",
-         "$ref": "/ga4gh/schema/gks-core/1.0.0/json/MappableConcept"
+         "$ref": "/ga4gh/schema/gks-core/1.0/json/MappableConcept"
       }
    },
    "required": [

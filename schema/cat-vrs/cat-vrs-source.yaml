@@ -255,10 +255,7 @@ $defs:
           The elements of the adjacency.
         minItems: 2
         maxItems: 2
-        ordered:
-          oneOf:
-            - true
-            - false
+        ordered: true
         items:
           oneOf:
             - $refCurie: gks.core:iriReference
@@ -280,10 +277,15 @@ $defs:
                 additionalProperties: false
             - unknownGeneComponent:
                 description: Represents an unknown adjacent element.
-                type: string
+                type: object
                 properties:
                   name:
                     const: unknownGeneComponent
+      orderKnown:
+        type: boolean
+        description: >-
+          When orderKnown is true, the order of adjoinedElements is assumed to denote the 5' partner first and the 3' partner second.  If orderKnown is false, then the order of adjoinedElements assumed not in fact to be known, as in the case of a fusion where only one or both partners are known, but not their relative order.
+
     required:
       - adjoinedElements
-      - ordered
+      - orderKnown

@@ -25,10 +25,10 @@
          "items": {
             "oneOf": [
                {
-                  "$ref": "/ga4gh/schema/gks-core/1.0.0/json/MappableConcept"
+                  "$ref": "/ga4gh/schema/gks-core/1.0/json/MappableConcept"
                },
                {
-                  "$ref": "/ga4gh/schema/gks-core/1.0.0/json/iriReference"
+                  "$ref": "/ga4gh/schema/gks-core/1.0/json/iriReference"
                },
                {
                   "$ref": "/ga4gh/schema/vrs/2.0.1/json/Location"
@@ -39,13 +39,13 @@
                      "type": "object",
                      "properties": {
                         "name": {
-                           "const": "v"
+                           "const": "multipleKnownGeneElements"
                         },
                         "knownElements": {
                            "type": "array",
                            "ordered": false,
                            "items": {
-                              "$ref": "/ga4gh/schema/gks-core/1.0.0/json/MappableConcept"
+                              "$ref": "/ga4gh/schema/gks-core/1.0/json/MappableConcept"
                            },
                            "description": "Previously described known elements that satisfy the described adjacency."
                         }
@@ -56,20 +56,25 @@
                {
                   "unknownGeneComponent": {
                      "description": "Represents an unknown adjacent element.",
-                     "type": "string",
+                     "type": "object",
                      "properties": {
                         "name": {
-                           "const": "?"
+                           "const": "unknownGeneComponent"
                         }
                      }
                   }
                }
             ]
          }
+      },
+      "orderKnown": {
+         "type": "boolean",
+         "description": "When orderKnown is true, the order of adjoinedElements is assumed to denote the 5' partner first and the 3' partner second.  If orderKnown is false, then the order of adjoinedElements assumed not in fact to be known, as in the case of a fusion where only one or both partners are known, but not their relative order."
       }
    },
    "required": [
       "adjoinedElements",
+      "orderKnown",
       "type"
    ],
    "additionalProperties": false
