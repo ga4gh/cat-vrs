@@ -255,7 +255,10 @@ $defs:
           The elements of the adjacency.
         minItems: 2
         maxItems: 2
-        ordered: true
+        ordered:
+          oneOf:
+            - true
+            - false
         items:
           oneOf:
             - $refCurie: gks.core:iriReference
@@ -283,3 +286,4 @@ $defs:
                     const: unknownGeneComponent
     required:
       - adjoinedElements
+      - ordered
