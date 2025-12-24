@@ -124,7 +124,6 @@ $defs:
             contains:
               allOf:
                 - $ref: FunctionConstraint
-            contains:
               anyOf:
                 - $ref: DefiningAlleleConstraint
                 - $ref: DefiningLocationConstraint
