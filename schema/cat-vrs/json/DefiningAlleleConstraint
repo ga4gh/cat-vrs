@@ -15,7 +15,7 @@
       "allele": {
          "oneOf": [
             {
-               "$ref": "/ga4gh/schema/gks-core/1.x/json/iriReference"
+               "$ref": "/ga4gh/schema/gks-core/1.0.0/json/iriReference"
             },
             {
                "$ref": "/ga4gh/schema/vrs/2.0.1/json/Allele"
@@ -26,7 +26,7 @@
          "type": "array",
          "ordered": false,
          "items": {
-            "$ref": "/ga4gh/schema/gks-core/1.x/json/MappableConcept"
+            "$ref": "/ga4gh/schema/gks-core/1.0.0/json/MappableConcept"
          },
          "description": "Defined relationships from which members relate to the defining allele."
       }

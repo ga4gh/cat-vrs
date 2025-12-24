@@ -14,7 +14,7 @@
       },
       "functionConsequence": {
          "description": "The functional consequence of members of this categorical variant, as defined by an external ontology. We recommend using one of the defined terms from [The Sequence Ontology](http://www.sequenceontology.org). See Implementation Guidance for more details. ",
-         "$ref": "/ga4gh/schema/gks-core/1.x/json/MappableConcept"
+         "$ref": "/ga4gh/schema/gks-core/1.0.0/json/MappableConcept"
       },
       "description": {
          "description": "A free-text description of the function change.",
