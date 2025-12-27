@@ -21,9 +21,9 @@ Decisions are labeled based on their maturity status based on the :ref:`maturity
 Because maturity is a function of (1) the breadth of model adoption and (2) expected stability, rather than a function of how fundamental a concept is to the model, the maturity status property is entirely orthogonal to the impact of a decision on Cat-VRS.
 
 
-.. contents:: Page contents
+.. contents::
    :local:
-   :depth: 2
+   :depth: 1
 
 
 .. major_impact
@@ -34,7 +34,8 @@ Major Impact
 
 .. hyperintensional_catvars
 
-**Treatment of CatVars as ((Hyper)intensional) Set-Theoretic Objects**
+Treatment of CatVars as ((Hyper)intensional) Set-Theoretic Objects
+==================================================================
 
 **Decision:**
 The group decided to model categorical variants as `hyperintensional <https://plato.stanford.edu/entries/hyperintensionality/>`_ set objects to address the complexities of categorical data representation.
@@ -69,7 +70,8 @@ For example, an extensional set describing *BRAF*  p.V600E would need to include
 
 .. constraint_model
 
-**Adoption of a Constraint-Based Model Instead of a Fixed Top-Down Typology of Data Classes**
+Adoption of a Constraint-Based Model Instead of a Fixed Top-Down Typology of Data Classes
+=========================================================================================
 
 **Decision:**
 The group decided to use a `constraint-based model <https://github.com/ga4gh/cat-vrs/discussions/22>`_, defining categorical variants dynamically in a bottom-up fashion based on set constraints rather than in a rigid top-down hierarchy of variant types.
@@ -103,7 +105,8 @@ Medium Impact
 
 .. constraint_array_of_anded_elements
 
-**Constraints as an Array of implicitly ANDed elements**
+Constraints as an Array of implicitly ANDed elements
+====================================================
 
 **Decision:**
 The group decided that the individual *constraints* in the array of the constraints property are to be treated as implicitly ANDed together, and that no other boolean relations should be used in the context of the *CategoricalVariant* data class.
@@ -121,7 +124,8 @@ One property of the base *CategoricalVariant* class in the constraint model is c
 
 .. including_recipes
 
-**Including Recipes in the Cat-VRS Specification**
+Including Recipes in the Cat-VRS Specification
+==============================================
 
 **Decision:**
 The group decided to include recipes in Cat-VRS which illustrate representation of genomic variant types under the constraint model.
@@ -139,7 +143,8 @@ It is intended that implementations of Cat-VRS will allow for variants to be sea
 
 .. machine_readable_spec
 
-**Machine Readable Specifications**
+Machine Readable Specifications
+===============================
 
 **Decision:**
 The group decided to adopt several repository and organizational conventions to ensure a single source of truth during development and ensure that the schema is readily computable:
@@ -161,7 +166,8 @@ These decisions bring Cat-VRS development in line with accepted best practices i
 
 .. separating_copycount_and_copychange
 
-**Separating CopyNumberConstraint into CopyCountConstraint and CopyChangeConstraint**
+Separating CopyNumberConstraint into CopyCountConstraint and CopyChangeConstraint
+=================================================================================
 
 **Decision:**
 The original model had a single copy number constraint, which was later split into two distinct constraints: the *CopyCountConstraint* (absolute copy numbers) and *CopyChangeConstraint* (relative changes such as amplifications and deletions).
@@ -182,7 +188,8 @@ Separating these two constraints ensures greater precision in representing categ
 
 .. separating_definingallele_and_defininglocation
 
-**Separating DefiningContextConstraint into DefiningAlelleConstraint and DefiningLocationConstraint**
+Separating DefiningContextConstraint into DefiningAlelleConstraint and DefiningLocationConstraint
+=================================================================================================
 
 **Decision:**
 The group decided to split up the single combined *DefiningContextConstraint* into a *DefiningAlleleConstraint* and separate *DefiningLocationConstraint*.
@@ -196,22 +203,19 @@ This decision was driven by three primary considerations: (1) the need for great
 
 #. **Compatibility with existing genomic standards:** Existing GKS standards like VRS and knowledgebases like ClinVar treat sequence (location-state) variants and location variants separately. A single *DefiningContextConstraint* was somewhat misaligned with these models, making interoperability more challenging.
 
-
 Splitting this constraint allows the model to explicitly define variants based on location, sequence, or both while allowing for smoother integration across implementations by mirroring representation in other well established resources.
 
 **Citations:**
 
 *  `2024-11-19 meeting minutes <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.hd9lu8gw3jh9>`_, this was primarily discussed in person during a pre-conference hackathon before ASHG
 
-
-
 .. using_gks_maturity_model
 
-**Utilization of semantic versioning and the GKS maturity model**
+Utilization of semantic versioning and the GKS maturity model
+=============================================================
 
 **Decision:**
 The group decided to adopt standard semantic versioning practices and to indicate data class maturity in compliance with the :ref:`maturity-model`.
-
 
 **Rationale:**
 
@@ -219,21 +223,17 @@ These decisions bring Cat-VRS in compliance with generally accepted best practic
 
 **Citations:**
 
-
 *  `2023-10-25 meeting minutes <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.8xxp7lqoun48>`_
 
 *  `2023-10-11 meeting minutes <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.cmwm638mk3jb>`_
 
-
-
 .. generalizing_genecontextconstraint
 
-**Generalization of GeneContextConstriant into FeatureContextConstraint**
+Generalization of GeneContextConstriant into FeatureContextConstraint
+=====================================================================
 
 **Decision:**
 The specification originally proposed a *GeneContextConstraint* to capture variation knowledge tied to a specific gene, but this constraint was later broadened into a *FeatureContextConstraint* to include regulatory elements, pseudogenes, and other sequence-related features.
-
-
 
 **Rationale:**
 
@@ -259,7 +259,8 @@ Minor Impact
 
 .. relations_and_mappings
 
-**Distinction between Relations and Mappings**
+Distinction between Relations and Mappings
+==========================================
 
 **Decision:**
 Relations refer to structured transformations to the underlying variant, such as translating a transcript sequence into an amino acid sequence. Mappings refer to homomorphisms of coded variant concepts between different codings systems and ontologies, for example, mapping the property of protein gain-of-function EFO code to that of a protein hypermorphism in SO.
@@ -280,7 +281,8 @@ The group followed existing practices in other GKS standards for relations and m
 
 .. members_are_non-exhaustive
 
-**Inclusion of Members as non-exhaustive array of contextual variants**
+Inclusion of Members as non-exhaustive array of contextual variants
+===================================================================
 
 **Decision:**
 Items in the *members* property constitute representative examples of GA4GH Variation Representation Specification (VRS) Variations that satisfy the constraints of a given categorical variant. It is neither required nor expected for *members* to contain an exhaustive list of representative VRS variants.
@@ -301,7 +303,8 @@ Because catvars are `defined by their properties (constraints), <https://docs.go
 
 .. name_as_a_non-required_field
 
-**Name as a non-required field**
+Name as a non-required field
+============================
 
 **Decision:**
 The *name* property in the *CategoricalVariant* class is an optional (but not required) field for *CategoricalVariant*.
@@ -314,7 +317,8 @@ The *name* property is a string field, and is intended to hold a *name* for a ca
 
 .. profiles_to_recipes
 
-**Renaming “Profiles” to “Recipes” to represent standard categorical variants templates**
+Renaming “Profiles” to “Recipes” to represent standard categorical variants templates
+=====================================================================================
 
 **Decision:**
 :ref:`recipes` were originally called Profiles, but the group decided to change the name to the current Recipes.
@@ -332,7 +336,8 @@ The term `profile is already used within the Variant Annotation Specification (V
 
 .. function_variants_mullers_morphs
 
-**Handling of Function Variants using Müller's Morphs**
+Handling of Function Variants using Müller's Morphs
+===================================================
 
 **Decision:**
 The classification of functional impact on protein structure in the FunctionConstraint was standardized using terms like hypermorphic, amorphic, neomorphic, and antimorphic (based on `Müller’s morphs <https://en.wikipedia.org/wiki/Muller%27s_morphs>`_), rather than terms like "gain-of-function" or "loss-of-function".
@@ -343,8 +348,6 @@ This approach provides a more structured, ontology code-backed classification. A
 
 We recognize that this terminology is inconsistent with current colloquial use of gain-of-function and loss-of-function descriptors. `A Discussion <https://github.com/ga4gh/cat-vrs/discussions/54>`_ was created on the Cat-VRS GitHub repository on October 6th, 2024 to promote discussion around this design decision. This decision will further be interrogated when this constraint is nominated to Trial Use as part of a GKS review ballot.
 
-
-
 **Citations:**
 
 *  `"Terminology for function changes" GitHub Discussion <https://github.com/ga4gh/cat-vrs/discussions/23>`_
@@ -354,38 +357,32 @@ We recognize that this terminology is inconsistent with current colloquial use o
 *  `“Handling Function Variants” GitHub Issue <https://github.com/ga4gh/cat-vrs/issues/14>`_
 *  `“Generalizing Canonical allele and Categorical CNV to handle function / expression variants” GitHub Issue <https://github.com/ga4gh/cat-vrs/discussions/16>`_
 
-
-
-
-
 .. mappable_concepts_for_relations
 
-**Integration of Mappable Concepts for Variant Relations**
+Integration of Mappable Concepts for Variant Relations
+======================================================
 
 **Decision:**
 For the relations property in the DefiningAlleleConstraint and DefiningLocationConstraint, the group decided to remove the explicit enum of possible relation methods (such as translates_to and translates_from) and instead refer to the :ref:`MappableConcept` data class.
 
-
-
 **Rationale:**
 This decision was made for a number of reasons: First, it is more consistent with `DRY <https://en.wikipedia.org/wiki/Don%27t_repeat_yourself>`_ best practices to have a single mechanism to handle relations rather than repeating lists of them multiple times throughout the specification. Second, the *gks.core:MappableConcept* class is a general-purpose data structure that holds codings of a concept and maps them to codings within other systems within a standardized way. Therefore, regardless of which coded methods are used by an implementation to relate one version of a variant to another, containerizing these coded methods in the *gks.core:MappableConcept* should make them easier to map to other coding systems.
-
 
 **Citations:**
 
 *  `“Should relation or relations be renamed?” GitHub discussion <https://github.com/ga4gh/cat-vrs/discussions/100>`_
 *  `2025-02-05 meeting minutes <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.ujjbabr6rnl>`_
 
-
-
-
-
 .. Error_Handling
 
-**Error handling is intentionally unspecified and delegated to implementation.**
+Error handling is intentionally unspecified and delegated to implementation.
+============================================================================
+
 Cat-VRS provides foundational data types that enable significant flexibility.  Except where required by this specification, implementations may choose whether and how to validate data.  For example, implementations MAY choose to validate that particular combinations of objects are compatible, but such validation is not required.
 
-
 .. Text_Case
+
+Text casing
+===========
 
 **Cat-VRS uses** `PascalCase (a.k.a. CamelCaps) <https://simple.wikipedia.org/wiki/CamelCase>`__ **to represent compound words and** `snake_case <https://simple.wikipedia.org/wiki/Snake_case>`__ **to represent compound file names** Although the schema is currently JSON-based (which would typically use camelCase), Cat-VRS itself is intended to be neutral with respect to languages and database.
