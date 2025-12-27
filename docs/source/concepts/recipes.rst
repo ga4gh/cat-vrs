@@ -34,18 +34,10 @@ The following are example implementations of that satisfy the CanonicalAllele re
    .. literalinclude:: ../../../schema/cat-vrs/json/example_canonicalAllele-ex1
       :language: json
 
-.. raw:: html
-
-   <div style="margin-top: 0.5em;"></div>
-
 .. collapse:: NC_000001.11:g.1699974C>G
 
    .. literalinclude:: ../../../schema/cat-vrs/json/example_canonicalAllele-ex2
       :language: json
-
-.. raw:: html
-
-   <div style="margin-top: 1em;"></div>
 
 .. _categorical-cnv:
 
@@ -69,27 +61,15 @@ The following are example implementations of that satisfy the CategoricalCNV rec
    .. literalinclude:: ../../../schema/cat-vrs/json/example_categoricalCnv-ex1
       :language: json
 
-.. raw:: html
-
-   <div style="margin-top: 0.5em;"></div>
-
 .. collapse:: GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 with CopyChangeConstraint
 
    .. literalinclude:: ../../../schema/cat-vrs/json/example_categoricalCnv-ex2
       :language: json
 
-.. raw:: html
-
-   <div style="margin-top: 0.5em;"></div>
-
 .. collapse:: GRCh38 Xp22.31(chrX:6978350-7594949)x3
 
    .. literalinclude:: ../../../schema/cat-vrs/json/example_categoricalCnv-ex3
       :language: json
-
-.. raw:: html
-
-   <div style="margin-top: 1em;"></div>
 
 .. _ProteinSequenceConsequence:
 
@@ -112,18 +92,10 @@ The following are example implementations of that satisfy the ProteinSequenceCon
    .. literalinclude:: ../../../schema/cat-vrs/json/example_proteinSequenceConsequence-ex1
       :language: json
 
-.. raw:: html
-
-   <div style="margin-top: 0.5em;"></div>
-
 .. collapse:: NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter)
 
    .. literalinclude:: ../../../schema/cat-vrs/json/example_proteinSequenceConsequence-ex2
       :language: json
-
-.. raw:: html
-
-   <div style="margin-top: 1em;"></div>
 
 .. _FunctionVariant:
 
@@ -146,24 +118,12 @@ The following are example implementations of that satisfy the FunctionVariant re
    .. literalinclude:: ../../../schema/cat-vrs/json/example_functionVariant-ex1
       :language: json
 
-.. raw:: html
-
-   <div style="margin-top: 0.5em;"></div>
-
 .. collapse:: BRCA2 loss of function variants
 
    .. literalinclude:: ../../../schema/cat-vrs/json/example_functionVariant-ex2
       :language: json
 
-.. raw:: html
-
-   <div style="margin-top: 0.5em;"></div>
-
 .. collapse:: PIK3CA p.R38H
 
    .. literalinclude:: ../../../schema/cat-vrs/json/example_functionVariant-ex3
       :language: json
-
-.. raw:: html
-
-   <div style="margin-top: 0.5em;"></div>
