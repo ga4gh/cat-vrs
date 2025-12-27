@@ -21,17 +21,9 @@ Decisions are labeled based on their maturity status based on the :ref:`maturity
 Because maturity is a function of (1) the breadth of model adoption and (2) expected stability, rather than a function of how fundamental a concept is to the model, the maturity status property is entirely orthogonal to the impact of a decision on Cat-VRS.
 
 
-.. toctree::
-   :maxdepth: 3
-   :includehidden:
-
-   major_impact
-   medium_impact
-   minor_impact
-   general_principles
-
-
-
+.. contents:: Page contents
+   :local:
+   :depth: 2
 
 
 .. major_impact
