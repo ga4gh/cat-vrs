@@ -41,19 +41,11 @@ The following are example implementations of DefiningAlleleConstraint:
       :language: json
       :lines: 83-172
 
-.. raw:: html
-
-   <div style="margin-top: 0.5em;"></div>
-
 .. collapse:: NC_000001.11:g.1699974C>G
 
    .. literalinclude:: ../../../schema/cat-vrs/json/example_canonicalAllele-ex2
       :language: json
       :lines: 37-112
-
-.. raw:: html
-
-   <div style="margin-top: 0.5em;"></div>
 
 .. collapse:: EGFR L858R
 
@@ -61,19 +53,11 @@ The following are example implementations of DefiningAlleleConstraint:
       :language: json
       :lines: 99-150
 
-.. raw:: html
-
-   <div style="margin-top: 0.5em;"></div>
-
 .. collapse:: NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter)
 
    .. literalinclude:: ../../../schema/cat-vrs/json/example_proteinSequenceConsequence-ex2
       :language: json
       :lines: 69-132
-
-.. raw:: html
-
-   <div style="margin-top: 1em;"></div>
 
 .. _DefiningLocationConstraint:
 

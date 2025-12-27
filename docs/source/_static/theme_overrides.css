@@ -71,3 +71,11 @@ div.figure div.legend p:last-child {
 span.std-term::after {
     content: " 🛈"
 }
+
+details {
+    margin-top: 0.5em;
+}
+
+details:last-child {
+    margin-bottom: 1.0em;
+}
