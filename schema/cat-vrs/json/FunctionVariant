@@ -14,19 +14,32 @@
             "constraints": {
                "description": "The constraints must contain at least two items: a FunctionConstraint and either a DefiningAlleleConstraint, DefiningLocationConstraint, or FeatureContextConstraint.",
                "minItems": 2,
-               "contains": {
-                  "anyOf": [
-                     {
-                        "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/DefiningAlleleConstraint"
-                     },
-                     {
-                        "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/DefiningLocationConstraint"
-                     },
-                     {
-                        "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/FeatureContextConstraint"
+               "allOf": [
+                  {
+                     "contains": {
+                        "allOf": [
+                           {
+                              "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/FunctionConstraint"
+                           }
+                        ]
                      }
-                  ]
-               }
+                  },
+                  {
+                     "contains": {
+                        "anyOf": [
+                           {
+                              "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/DefiningAlleleConstraint"
+                           },
+                           {
+                              "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/DefiningLocationConstraint"
+                           },
+                           {
+                              "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/FeatureContextConstraint"
+                           }
+                        ]
+                     }
+                  }
+               ]
             }
          },
          "required": [
