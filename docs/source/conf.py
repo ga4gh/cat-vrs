@@ -41,7 +41,7 @@ def _parse_release_as_version(rls):
 # -- Project information -----------------------------------------------------
 
 project = "GA4GH Categorical Variation Representation Specification"
-copyright = "2023-%Y, GA4GH CatVRS Contributors"
+copyright = "2023-%Y, GA4GH CatVRS Contributors."
 author = "Committers"
 master_doc = "index"
 # N.B. RTD ignores these values. :-/
