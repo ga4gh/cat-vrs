@@ -28,6 +28,7 @@ extensions:
     end: 133763062
 constraints:
   - type: AdjacencyConstraint
+    orderKnown: true
     adjoinedElements:
       - id: ncbi:613
         conceptType: Gene
@@ -49,4 +50,3 @@ constraints:
           code: ncbi:25
           iris:
             - https://www.ncbi.nlm.nih.gov/gene/25
-    orderKnown: true

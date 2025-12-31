@@ -40,6 +40,16 @@ Here, we provide examples of representing several types of variation from other 
 
 This example applies the [AdjacencyConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#adjacencyconstraint) to represent it as a Categorical Variant. Both genes are modeled as mappable concepts, using the NCBI gene id provided by CIViC.
 
+## adjacencyFusion-ex2
+[adjacencyFusion-ex2.yaml](./adjacencyFusion-ex2.yaml) represents [CIViC feature id 62026: v::_NTRK1_ Fusion](https://civicdb.org/features/62026/summary) as a Categorical Variant. Fields were populated as follows:
+- `id`: `civic.fid:` followed by the listed Feature ID, "62026", contained within the URL for the genomic alteration. `fid` within the `id` stands for [Feature ID](https://civicdb.org/features/home), CIViC's way to represent genomic features.
+- `type`: specified as "CategoricalVariant", as required by [the specification](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#categorical-variant).
+- `name`: The human readable label given to the genomic alteration by CIViC, "v::NTRK1", with Gene identifiers per the [VICC Fusion](https://fusions.cancervariants.org/en/latest/information_model.html) representation recommendation. CIViC provided NCBI identifiers for the genes, so we used those.
+- `description`: CIViC does not provide a longform description of "v::NTRK1", so this field was left preallocated with the following text: "An optional field to describe v::NTRK1(hgnc:8031)".
+- `aliases`: CIViC does not provide any aliases for this fusion. Thus, we added `v::NTRK1` and `NTRK1 fusion` to the aliases as examples.
+
+This example applies the [AdjacencyConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#adjacencyconstraint) to represent it as a Categorical Variant. CIViC lists multiple possible fusion partners for the 5' partner, and _NTRK1_ as the 3' partner. Thus, the 5' partner is listed within the `adjoinedElements` array as `multipleKnownGeneElements` with `knownElements` including all known elements cataloged in [COSMIC Fusion](https://cancer.sanger.ac.uk/cosmic/fusion) with _NTRK1_ listed as a partner. The 3' partner includes _NTRK1_ as a mappable concept.
+
 ## canonicalAllele-ex1
 [canonicalAllele-ex1](./canonicalAllele-ex1.yaml) represents [ClinVar entry 662001](https://www.ncbi.nlm.nih.gov/clinvar/variation/662001/?oq=662001&m=NM_004958.4(MTOR):c.5992_5993del%20(p.Met1998fs)), NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs), as a Categorical Variant. This example satisfies the [CanonicalAllele Recipe](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#canonicalallele). Fields were populated as follows:
 

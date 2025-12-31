@@ -1,0 +1,74 @@
+id: civic.fid:62026
+type: CategoricalVariant
+name: v::NTRK1(hgnc:8031)
+description: >-
+  An optional field to describe v::NTRK1(hgnc:8031).
+aliases:
+  - v::NTRK1
+  - NTRK1 fusion
+constraints:
+  - type: AdjacencyConstraint
+    orderKnown: true
+    adjoinedElements:
+      - name: multipleKnownGeneElements
+        knownElements:
+          - id: hgnc:6636
+            conceptType: Gene
+            name: LMNA
+            primaryCoding:
+              id: hgnc:6636
+              name: LMNA
+              system: https://genenames.org
+              code: HGNC:6636
+              iris:
+                - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:6636
+          - id: hgnc:11758
+            conceptType: Gene
+            name: TFG
+            primaryCoding:
+              id: hgnc:11758
+              name: TFG
+              system: https://genenames.org
+              code: HGNC:11758
+              iris:
+                - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11758
+          - id: hgnc:11998
+            conceptType: Gene
+            name: TP53
+            primaryCoding:
+              id: hgnc:11998
+              name: TP53
+              system: https://genenames.org
+              code: HGNC:11998
+              iris:
+                - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11998
+          - id: hgnc:12012
+            conceptType: Gene
+            name: TPM3
+            primaryCoding:
+              id: hgnc:12012
+              name: TPM3
+              system: https://genenames.org
+              code: HGNC:12012
+              iris:
+                - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:12012
+          - id: hgnc:12017
+            conceptType: Gene
+            name: TPR
+            primaryCoding:
+              id: hgnc:12017
+              name: TPR
+              system: https://genenames.org
+              code: HGNC:12017
+              iris:
+                - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:12017
+      - id: hgnc:8031
+        conceptType: Gene
+        name: NTRK1
+        primaryCoding:
+          id: hgnc:8031
+          name: NTRK1
+          system: https://genenames.org
+          code: HGNC:8031
+          iris:
+            - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:7230

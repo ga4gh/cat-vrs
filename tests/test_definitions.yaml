@@ -2,6 +2,8 @@ tests:
   # test that each example validates as a CategoricalVariant
   - test_file: adjacencyFusion-ex1.yaml
     definition: CategoricalVariant
+  - test_file: adjacencyFusion-ex2.yaml
+    definition: CategoricalVariant
   - test_file: braf-v600.yaml
     definition: CategoricalVariant
   - test_file: braf-v600.annotated.yaml
