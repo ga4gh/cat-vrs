@@ -37,7 +37,7 @@ constraints:
           id: ncbi:613
           name: BCR
           system: https://www.ncbi.nlm.nih.gov/gene
-          code: ncbi:613
+          code: "613"
           iris:
             - https://www.ncbi.nlm.nih.gov/gene/613
       - id: ncbi:25
@@ -47,6 +47,6 @@ constraints:
           id: ncbi:25
           name: ABL1
           system: https://www.ncbi.nlm.nih.gov/gene
-          code: ncbi:25
+          code: "25"
           iris:
             - https://www.ncbi.nlm.nih.gov/gene/25
