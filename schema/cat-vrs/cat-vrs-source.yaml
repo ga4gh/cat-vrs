@@ -245,7 +245,7 @@ $defs:
         extends: type
         const: AdjacencyConstraint
         default: AdjacencyConstraint
-        description: 'MUST be AdjacencyConstraint'
+        description: 'MUST be "AdjacencyConstraint"'
       linker:
         $refCurie: vrs:SequenceExpression
         description: The sequence found between the adjoined elements.
@@ -261,6 +261,7 @@ $defs:
             - $refCurie: gks.core:iriReference
             - $refCurie: gks.core:MappableConcept
             - $refCurie: vrs:Location
+            - $refCurie: vrs.Terminus
             - multipleKnownGeneElements:
                 description: Represents one of a collection of known genes that can be involved in the adjacency.
                 type: object
@@ -284,8 +285,7 @@ $defs:
       orderKnown:
         type: boolean
         description: >-
-          When orderKnown is true, the order of adjoinedElements is assumed to denote the 5' partner first and the 3' partner second.  If orderKnown is false, then the order of adjoinedElements assumed not in fact to be known, as in the case of a fusion where only one or both partners are known, but not their relative order.
-
+          When orderKnown is true, the order of adjoinedElements is assumed to denote the 5' partner first and the 3' partner second. If orderKnown is false, then the order of adjoinedElements assumed not in fact to be known, as in the case of a fusion where only one or both partners are known, but not their relative order.
     required:
       - adjoinedElements
       - orderKnown
