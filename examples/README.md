@@ -8,6 +8,7 @@ A [constraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.ht
 |---|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | [DefiningAlleleConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#definingalleleconstraint) | [canonicalAllele-ex1](#canonicalAllele-ex1), [canonicalAllele-ex2](#canonicalAllele-ex2), [proteinSequenceConsequence-ex1](#proteinSequenceConsequence-ex1), [proteinSequenceConsequence-ex2](#proteinSequenceConsequence-ex2) |
 | [DefiningLocationConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#defininglocationconstraint) | [categoricalCnv-ex1](#categoricalCnv-ex1), [categoricalCnv-ex2](#categoricalCnv-ex2), [braf-v600](#braf-v600), [tp53-copy-loss](#tp53-copy-loss)                                                                                                                                           |
+| [AdjacencyConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#adjacencyconstraint) | [adjacencyFusion-ex1](#adjacencyfusion-ex1) |
 | [CopyCountConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#copycountconstraint) | [categoricalCnv-ex1](#categoricalCnv-ex1), [categoricalCnv-ex3](#categoricalCnv-ex3)                                                                                                                                           |
 | [CopyChangeConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#copychangeconstraint) | [categoricalCnv-ex2](#categoricalCnv-ex2), [tp53-copy-loss](#tp53-copy-loss)                                                                                                                                                                                      |
 | [FeatureContextConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#featurecontextconstraint) | [tp53-copy-loss](#tp53-copy-loss)                                                                                                                                                                                      |
@@ -27,6 +28,17 @@ A [constraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.ht
 
 # About each example
 Here, we provide examples of representing several types of variation from other knowledgebases as Categorical Variants. All example Categorical Variants will be modeled using fields required by the [Categorical Variant](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#categorical-variant) class within the specification.
+
+## adjacencyFusion-ex1
+[adjacencyFusion-ex1.yaml](./adjacencyFusion-ex1.yaml) represents [CIViC variant id 1: _BCR_::_ABL1_ Fusion](https://civicdb.org/variants/1/summary) as a Categorical Variant. Fields were populated as follows:
+- `id`: `civic.vid:` followed by the listed Variant ID, "1", contained within the URL for the genomic alteration. `vid` within the `id` stands for [Variant ID](https://civicdb.org/variants/home), CIViC's way to represent variants.
+- `type`: specified as "CategoricalVariant", as required by [the specification](https://cat-vrs.readthedocs.io/en/stable/concepts/catvrs_model.html#categorical-variant).
+- `name`: The human readable label given to the genomic alteration by CIViC, "BCR::ABL1", with Gene identifiers per the [VICC Fusion](https://fusions.cancervariants.org/en/latest/information_model.html) representation recommendation. CIViC provided NCBI identifiers for the genes, so we used those.
+- `description`: CIViC does not provide a longform description of "BCR::ABL1", so this field was left preallocated with the following text: "An optional field to describe BCR::ABL1".
+- `aliases`: All aliases for _BCR_::_ABL1_ as provided by CIViC.
+- `extensions`: The `5'` and `3' Partner Representative Genomic Coordinates` provided by CIViC for _BCR_::_ABL1_.
+
+This example applies the [AdjacencyConstraint](https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#adjacencyconstraint) to represent it as a Categorical Variant. Both genes are modeled as mappable concepts, using the NCBI gene id provided by CIViC.
 
 ## canonicalAllele-ex1
 [canonicalAllele-ex1](./canonicalAllele-ex1.yaml) represents [ClinVar entry 662001](https://www.ncbi.nlm.nih.gov/clinvar/variation/662001/?oq=662001&m=NM_004958.4(MTOR):c.5992_5993del%20(p.Met1998fs)), NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs), as a Categorical Variant. This example satisfies the [CanonicalAllele Recipe](https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html#canonicalallele). Fields were populated as follows:

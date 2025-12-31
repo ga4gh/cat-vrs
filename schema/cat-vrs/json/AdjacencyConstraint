@@ -10,7 +10,7 @@
          "type": "string",
          "const": "AdjacencyConstraint",
          "default": "AdjacencyConstraint",
-         "description": "MUST be AdjacencyConstraint"
+         "description": "MUST be \"AdjacencyConstraint\""
       },
       "linker": {
          "description": "The sequence found between the adjoined elements.",
@@ -25,51 +25,68 @@
          "items": {
             "oneOf": [
                {
-                  "$ref": "/ga4gh/schema/gks-core/1.0/json/MappableConcept"
-               },
-               {
-                  "$ref": "/ga4gh/schema/gks-core/1.0/json/iriReference"
+                  "$ref": "/ga4gh/schema/gks-core/1.0.0/json/iriReference"
                },
                {
                   "$ref": "/ga4gh/schema/vrs/2.0.1/json/Location"
                },
                {
-                  "multipleKnownGeneElements": {
-                     "description": "Represents one of a collection of known genes that can be involved in the adjacency.",
-                     "type": "object",
-                     "properties": {
-                        "name": {
-                           "const": "multipleKnownGeneElements"
-                        },
-                        "knownElements": {
-                           "type": "array",
-                           "ordered": false,
-                           "items": {
-                              "$ref": "/ga4gh/schema/gks-core/1.0/json/MappableConcept"
-                           },
-                           "description": "Previously described known elements that satisfy the described adjacency."
-                        }
-                     },
-                     "additionalProperties": false
-                  }
+                  "$ref": "/ga4gh/schema/vrs/2.0.1/json/Terminus"
                },
                {
-                  "unknownGeneComponent": {
-                     "description": "Represents an unknown adjacent element.",
-                     "type": "object",
-                     "properties": {
-                        "name": {
-                           "const": "unknownGeneComponent"
+                  "allOf": [
+                     {
+                        "$ref": "/ga4gh/schema/gks-core/1.0.0/json/MappableConcept"
+                     },
+                     {
+                        "type": "object",
+                        "properties": {
+                           "conceptType": {
+                              "constant": "Gene",
+                              "default": "Gene",
+                              "description": "Must be \"Gene\""
+                           }
+                        },
+                        "required": [
+                           "conceptType"
+                        ]
+                     }
+                  ]
+               },
+               {
+                  "type": "object",
+                  "description": "Represents one of a collection of known genes that can be involved in the adjacency.",
+                  "properties": {
+                     "name": {
+                        "const": "multipleKnownGeneElements"
+                     },
+                     "knownElements": {
+                        "type": "array",
+                        "description": "Previously described known elements that satisfy the described adjacency.",
+                        "ordered": false,
+                        "items": {
+                           "$ref": "/ga4gh/schema/gks-core/1.0.0/json/MappableConcept"
                         }
                      }
-                  }
+                  },
+                  "additionalProperties": false
+               },
+               {
+                  "type": "object",
+                  "description": "Represents an unknown adjacent element.",
+                  "properties": {
+                     "name": {
+                        "const": "unknownGeneComponent"
+                     }
+                  },
+                  "additionalProperties": false
                }
             ]
          }
       },
       "orderKnown": {
          "type": "boolean",
-         "description": "When orderKnown is true, the order of adjoinedElements is assumed to denote the 5' partner first and the 3' partner second.  If orderKnown is false, then the order of adjoinedElements assumed not in fact to be known, as in the case of a fusion where only one or both partners are known, but not their relative order."
+         "description": "When orderKnown is true, the order of adjoinedElements is assumed to denote the 5' partner first and the 3' partner second. If orderKnown is false, then the order of adjoinedElements assumed not in fact to be known, as in the case of a fusion where only one or both partners are known, but not their relative order."
       }
    },
    "required": [

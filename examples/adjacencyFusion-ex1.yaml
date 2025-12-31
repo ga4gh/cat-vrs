@@ -10,7 +10,7 @@ aliases:
   - BCR--ABL1
   - BCR-ABL
 extensions:
-- name: CIViC 5' Partner Representative Genomic Coordinates
+- name: CIViC `
   value:
     reference_build: GRCh37
     transcript: ENST00000305877.8
@@ -49,3 +49,4 @@ constraints:
           code: ncbi:25
           iris:
             - https://www.ncbi.nlm.nih.gov/gene/25
+    orderKnown: true

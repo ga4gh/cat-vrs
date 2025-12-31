@@ -259,29 +259,37 @@ $defs:
         items:
           oneOf:
             - $refCurie: gks.core:iriReference
-            - $refCurie: gks.core:MappableConcept
+            - allOf:
+              - $refCurie: gks.core:MappableConcept
+              - type: object
+                properties:
+                  conceptType:
+                    constant: Gene
+                    default: Gene
+                    description: 'Must be "Gene"'
+                required:
+                  - conceptType
             - $refCurie: vrs:Location
-            - $refCurie: vrs.Terminus
-            - multipleKnownGeneElements:
-                description: Represents one of a collection of known genes that can be involved in the adjacency.
-                type: object
-                properties:
-                  name:
-                    const: multipleKnownGeneElements
-                  knownElements:
-                    type: array
-                    ordered: false
-                    items:
-                      $refCurie: gks.core:MappableConcept
-                    description: >-
-                      Previously described known elements that satisfy the described adjacency.
-                additionalProperties: false
-            - unknownGeneComponent:
-                description: Represents an unknown adjacent element.
-                type: object
-                properties:
-                  name:
-                    const: unknownGeneComponent
+            - $refCurie: vrs:Terminus
+            - type: object
+              description: Represents one of a collection of known genes that can be involved in the adjacency.
+              properties:
+                name:
+                  const: multipleKnownGeneElements
+                knownElements:
+                  type: array
+                  description: >-
+                    Previously described known elements that satisfy the described adjacency.
+                  ordered: false
+                  items:
+                    $refCurie: gks.core:MappableConcept
+              additionalProperties: false
+            - type: object
+              description: Represents an unknown adjacent element.
+              properties:
+                name:
+                  const: unknownGeneComponent
+              additionalProperties: false
       orderKnown:
         type: boolean
         description: >-
