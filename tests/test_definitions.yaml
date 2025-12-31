@@ -4,6 +4,8 @@ tests:
     definition: CategoricalVariant
   - test_file: adjacencyFusion-ex2.yaml
     definition: CategoricalVariant
+  - test_file: adjacencyFusion-ex3.yaml
+    definition: CategoricalVariant
   - test_file: braf-v600.yaml
     definition: CategoricalVariant
   - test_file: braf-v600.annotated.yaml
