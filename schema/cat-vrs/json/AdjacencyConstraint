@@ -25,6 +25,15 @@
          "items": {
             "oneOf": [
                {
+                  "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/MultipleKnownGeneElements"
+               },
+               {
+                  "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/UnknownGeneElement"
+               },
+               {
+                  "$ref": "/ga4gh/schema/gks-core/1.0.0/json/MappableConcept"
+               },
+               {
                   "$ref": "/ga4gh/schema/gks-core/1.0.0/json/iriReference"
                },
                {
@@ -32,54 +41,6 @@
                },
                {
                   "$ref": "/ga4gh/schema/vrs/2.0.1/json/Terminus"
-               },
-               {
-                  "allOf": [
-                     {
-                        "$ref": "/ga4gh/schema/gks-core/1.0.0/json/MappableConcept"
-                     },
-                     {
-                        "type": "object",
-                        "properties": {
-                           "conceptType": {
-                              "constant": "Gene",
-                              "default": "Gene",
-                              "description": "Must be \"Gene\""
-                           }
-                        },
-                        "required": [
-                           "conceptType"
-                        ]
-                     }
-                  ]
-               },
-               {
-                  "type": "object",
-                  "description": "Represents one of a collection of known genes that can be involved in the adjacency.",
-                  "properties": {
-                     "name": {
-                        "const": "multipleKnownGeneElements"
-                     },
-                     "knownElements": {
-                        "type": "array",
-                        "description": "Previously described known elements that satisfy the described adjacency.",
-                        "ordered": false,
-                        "items": {
-                           "$ref": "/ga4gh/schema/gks-core/1.0.0/json/MappableConcept"
-                        }
-                     }
-                  },
-                  "additionalProperties": false
-               },
-               {
-                  "type": "object",
-                  "description": "Represents an unknown adjacent element.",
-                  "properties": {
-                     "name": {
-                        "const": "unknownGeneComponent"
-                     }
-                  },
-                  "additionalProperties": false
                }
             ]
          }

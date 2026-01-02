@@ -10,7 +10,7 @@ constraints:
   - type: AdjacencyConstraint
     orderKnown: true
     adjoinedElements:
-      - name: unknownGeneComponent
+      - type: UnknownGeneElement
       - id: ncbi:171017
         conceptType: Gene
         name: ZNF384

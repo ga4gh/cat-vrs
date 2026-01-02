@@ -10,7 +10,7 @@ constraints:
   - type: AdjacencyConstraint
     orderKnown: true
     adjoinedElements:
-      - name: multipleKnownGeneElements
+      - type: MultipleKnownGeneElements
         knownElements:
           - id: hgnc:6636
             conceptType: Gene
