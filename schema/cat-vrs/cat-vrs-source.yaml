@@ -293,7 +293,7 @@ $defs:
             - $refCurie: gks.core:MappableConcept
             - type: object
               properties:
-                conceptType: 
+                conceptType:
                   type: string
                   const: Gene
                   default: Gene
@@ -317,4 +317,6 @@ $defs:
         const: UnknownGeneElement
         default: UnknownGeneElement
         description: Must be "UnknownGeneElement"
+    required:
+      - type
     additionalProperties: false
