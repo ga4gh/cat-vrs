@@ -1,7 +1,7 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0/json/adjacencyFusion-ex1",
-   "title": "adjacencyFusion-ex1",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0/json/example_adjacencyFusion-ex1",
+   "title": "example_adjacencyFusion-ex1",
    "type": "CategoricalVariant",
    "maturity": "draft",
    "id": "civic.vid:1",
