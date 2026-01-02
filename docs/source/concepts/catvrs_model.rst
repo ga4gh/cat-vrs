@@ -116,6 +116,35 @@ The following are example implementations of DefiningLocationConstraint:
 
    <div style="margin-top: 1em;"></div>
 
+.. _AdjacencyConstraint:
+
+AdjacencyConstraint
+###################
+
+.. include:: ../def/cat-vrs/AdjacencyConstraint.rst
+
+**Examples**
+
+The following are example implementations of AdjacencyConstraint:
+
+.. collapse:: BCR(ncbi:613)::ABL1(ncbi:25)
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_adjacencyFusion-ex1
+      :language: json
+      :lines: 42-75
+
+.. collapse:: v::NTRK1(hgnc:8031)
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_adjacencyFusion-ex2
+      :language: json
+      :lines: 15-109
+
+.. collapse:: ?::ZNF384(ncbi:171017)
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_adjacencyFusion-ex3
+      :language: json
+      :lines: 15-37
+
 .. _CopyCountConstraint:
 
 CopyCountConstraint

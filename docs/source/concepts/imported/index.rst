@@ -17,9 +17,11 @@ VRS
    CopyNumberCount
    CopyNumberChange
    Location
+   SequenceExpression
    SequenceLocation
    Expression
    Range
+   Terminus
 
 GKS Core
 !!!!!!!!
