@@ -286,20 +286,10 @@ $defs:
         description: MUST be "MultipleKnownGeneElements"
       knownElements:
         type: array
-        description: Previously described known elements that satisfy the described adjacency.
+        description: Previously described known elements that satisfy the described adjacency. Each item is a MappableConcept with conceptType="Gene".
         ordered: false
         items:
-          allOf:
-            - $refCurie: gks.core:MappableConcept
-            - type: object
-              properties:
-                conceptType:
-                  type: string
-                  const: Gene
-                  default: Gene
-                  description: Must be "Gene"
-              required:
-                - conceptType
+          $refCurie: gks.core:MappableConcept
     required:
       - type
       - knownElements
