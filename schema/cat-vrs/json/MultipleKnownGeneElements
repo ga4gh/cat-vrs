@@ -48,12 +48,31 @@
          "description": "Previously described known elements that satisfy the described adjacency.",
          "ordered": false,
          "items": {
-            "$ref": "/ga4gh/schema/gks-core/1.0.0/json/MappableConcept"
+            "allOf": [
+               {
+                  "$ref": "/ga4gh/schema/gks-core/1.0.0/json/MappableConcept"
+               },
+               {
+                  "type": "object",
+                  "properties": {
+                     "conceptType": {
+                        "type": "string",
+                        "const": "Gene",
+                        "default": "Gene",
+                        "description": "Must be \"Gene\""
+                     }
+                  },
+                  "required": [
+                     "conceptType"
+                  ]
+               }
+            ]
          }
       }
    },
-   "additionalProperties": false,
    "required": [
+      "knownElements",
       "type"
-   ]
+   ],
+   "additionalProperties": false
 }

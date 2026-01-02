@@ -44,8 +44,8 @@
          "default": "UnknownGeneElement"
       }
    },
-   "additionalProperties": false,
    "required": [
       "type"
-   ]
+   ],
+   "additionalProperties": false
 }

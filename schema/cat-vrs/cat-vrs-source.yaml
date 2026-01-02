@@ -289,7 +289,20 @@ $defs:
         description: Previously described known elements that satisfy the described adjacency.
         ordered: false
         items:
-          $refCurie: gks.core:MappableConcept
+          allOf:
+            - $refCurie: gks.core:MappableConcept
+            - type: object
+              properties:
+                conceptType: 
+                  type: string
+                  const: Gene
+                  default: Gene
+                  description: Must be "Gene"
+              required:
+                - conceptType
+    required:
+      - type
+      - knownElements
     additionalProperties: false
 
   UnknownGeneElement:
