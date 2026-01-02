@@ -1946,7 +1946,7 @@ $defs:
           sequence: AG
     maturity: trial use
 
-  adjacencyFusion-ex1:
+  example_adjacencyFusion-ex1:
     maturity: draft
     id: civic.vid:1
     type: CategoricalVariant
@@ -2038,7 +2038,7 @@ $defs:
             residueAlphabet: na
           start: 130793814
 
-  adjacencyFusion-ex2:
+  example_adjacencyFusion-ex2:
     maturity: draft
     id: civic.fid:62026
     type: CategoricalVariant
@@ -2115,7 +2115,7 @@ $defs:
               iris:
                 - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:7230
 
-  adjacencyFusion-ex3:
+  example_adjacencyFusion-ex3:
     maturity: draft
     id: civic.vid:5186
     type: CategoricalVariant
