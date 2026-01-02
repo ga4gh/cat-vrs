@@ -54,7 +54,7 @@ members:
 - id: ga4gh:AJ.lAkiipqq-hri92Ay1Wlq0kA7AshRmnfG
   type: Adjacency
   name: CTX_CHR9_083932BC
-  description: BCR and ABL1 translocation from gnomAD SVs v4.1.0 (https://gnomad.broadinstitute.org/variant/CTX_CHR9_083932BC?dataset=gnomad_sv_r4). 
+  description: BCR and ABL1 translocation from gnomAD SVs v4.1.0 (https://gnomad.broadinstitute.org/variant/CTX_CHR9_083932BC?dataset=gnomad_sv_r4).
   digest: lAkiipqq-hri92Ay1Wlq0kA7AshRmnfG
   adjoinedSequences:
     - id: ga4gh:SL.0QMCq74r4SiBvt6MHSMvZOjDNOr0gDg0
