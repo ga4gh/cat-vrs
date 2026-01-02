@@ -2052,7 +2052,7 @@ $defs:
       - type: AdjacencyConstraint
         orderKnown: true
         adjoinedElements:
-          - name: multipleKnownGeneElements
+          - type: MultipleKnownGeneElements
             knownElements:
               - id: hgnc:6636
                 conceptType: Gene
@@ -2129,7 +2129,7 @@ $defs:
       - type: AdjacencyConstraint
         orderKnown: true
         adjoinedElements:
-          - name: unknownGeneComponent
+          - type: UnknownGeneElement
           - id: ncbi:171017
             conceptType: Gene
             name: ZNF384
