@@ -1945,3 +1945,198 @@ $defs:
           type: LiteralSequenceExpression
           sequence: AG
     maturity: trial use
+
+  adjacencyFusion-ex1:
+    maturity: draft
+    id: civic.vid:1
+    type: CategoricalVariant
+    name: BCR(ncbi:613)::ABL1(ncbi:25)
+    description: >-
+      An optional field to describe BCR::ABL1
+    aliases:
+      - BCR::ABL1
+      - t(9;22)(q34;q11)
+      - BCR-ABL1
+      - BCR--ABL1
+      - BCR-ABL
+    extensions:
+    - name: CIViC 5' Partner Representative Genomic Coordinates
+      value:
+        reference_build: GRCh37
+        transcript: ENST00000305877.8
+        ensembl_version: 75
+        chromosome: '22'
+        start: 23522397
+        end: 23632600
+    - name: CIViC 3' Partner Representative Genomic Coordinates
+      value:
+        reference_build: GRCh37
+        transcript: ENST00000318560.5
+        ensembl_version: 75
+        chromosome: '9'
+        start: 133729451
+        end: 133763062
+    constraints:
+      - type: AdjacencyConstraint
+        orderKnown: true
+        adjoinedElements:
+          - id: ncbi:613
+            conceptType: Gene
+            name: BCR
+            primaryCoding:
+              id: ncbi:613
+              name: BCR
+              system: https://www.ncbi.nlm.nih.gov/gene
+              code: "613"
+              iris:
+                - https://www.ncbi.nlm.nih.gov/gene/613
+          - id: ncbi:25
+            conceptType: Gene
+            name: ABL1
+            primaryCoding:
+              id: ncbi:25
+              name: ABL1
+              system: https://www.ncbi.nlm.nih.gov/gene
+              code: "25"
+              iris:
+                - https://www.ncbi.nlm.nih.gov/gene/25
+    members:
+    - id: ga4gh:AJ.lAkiipqq-hri92Ay1Wlq0kA7AshRmnfG
+      type: Adjacency
+      name: CTX_CHR9_083932BC
+      description: BCR and ABL1 translocation from gnomAD SVs v4.1.0 (https://gnomad.broadinstitute.org/variant/CTX_CHR9_083932BC?dataset=gnomad_sv_r4). 
+      digest: lAkiipqq-hri92Ay1Wlq0kA7AshRmnfG
+      adjoinedSequences:
+        - id: ga4gh:SL.0QMCq74r4SiBvt6MHSMvZOjDNOr0gDg0
+          type: SequenceLocation
+          digest: 0QMCq74r4SiBvt6MHSMvZOjDNOr0gDg0
+          sequenceReference:
+            id: refseq:NC_000022.11
+            type: SequenceReference
+            name: NC_000022.11
+            description: Reference sequence for GRCh38 chromosome 22.
+            aliases:
+              - GRCh38:22
+              - GRCh38:chr22
+              - ga4gh:SQ.7B7SHsmchAR0dFcDCuSFjJAo7tX87krQ
+            refgetAccession: SQ.7B7SHsmchAR0dFcDCuSFjJAo7tX87krQ
+            residueAlphabet: na
+          end: 23291251
+        - id: ga4gh:SL.PB5cBee9zjyj9jsGTMbyp2eYFjtN4aZd
+          type: SequenceLocation
+          digest: PB5cBee9zjyj9jsGTMbyp2eYFjtN4aZd
+          sequenceReference:
+            id: refseq:NC_000009.12
+            type: SequenceReference
+            name: NC_000009.12
+            description: Reference sequence for GRCh38 chromosome 9.
+            aliases:
+              - GRCh38:9
+              - GRCh38:chr9
+              - ga4gh:SQ.KEO-4XBcm1cxeo_DIQ8_ofqGUkp4iZhI
+            refgetAccession: SQ.KEO-4XBcm1cxeo_DIQ8_ofqGUkp4iZhI
+            residueAlphabet: na
+          start: 130793814
+
+  adjacencyFusion-ex2:
+    maturity: draft
+    id: civic.fid:62026
+    type: CategoricalVariant
+    name: v::NTRK1(hgnc:8031)
+    description: >-
+      An optional field to describe v::NTRK1(hgnc:8031).
+    aliases:
+      - v::NTRK1
+      - NTRK1 fusion
+    constraints:
+      - type: AdjacencyConstraint
+        orderKnown: true
+        adjoinedElements:
+          - name: multipleKnownGeneElements
+            knownElements:
+              - id: hgnc:6636
+                conceptType: Gene
+                name: LMNA
+                primaryCoding:
+                  id: hgnc:6636
+                  name: LMNA
+                  system: https://genenames.org
+                  code: HGNC:6636
+                  iris:
+                    - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:6636
+              - id: hgnc:11758
+                conceptType: Gene
+                name: TFG
+                primaryCoding:
+                  id: hgnc:11758
+                  name: TFG
+                  system: https://genenames.org
+                  code: HGNC:11758
+                  iris:
+                    - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11758
+              - id: hgnc:11998
+                conceptType: Gene
+                name: TP53
+                primaryCoding:
+                  id: hgnc:11998
+                  name: TP53
+                  system: https://genenames.org
+                  code: HGNC:11998
+                  iris:
+                    - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11998
+              - id: hgnc:12012
+                conceptType: Gene
+                name: TPM3
+                primaryCoding:
+                  id: hgnc:12012
+                  name: TPM3
+                  system: https://genenames.org
+                  code: HGNC:12012
+                  iris:
+                    - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:12012
+              - id: hgnc:12017
+                conceptType: Gene
+                name: TPR
+                primaryCoding:
+                  id: hgnc:12017
+                  name: TPR
+                  system: https://genenames.org
+                  code: HGNC:12017
+                  iris:
+                    - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:12017
+          - id: hgnc:8031
+            conceptType: Gene
+            name: NTRK1
+            primaryCoding:
+              id: hgnc:8031
+              name: NTRK1
+              system: https://genenames.org
+              code: HGNC:8031
+              iris:
+                - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:7230
+
+  adjacencyFusion-ex3:
+    maturity: draft
+    id: civic.vid:5186
+    type: CategoricalVariant
+    name: ?::ZNF384(ncbi:171017)
+    description: >-
+      An optional field to describe ?::ZNF384(ncbi:171017).
+    aliases:
+      - ?::ZNF384
+      - ZNF384 Fusion
+    constraints:
+      - type: AdjacencyConstraint
+        orderKnown: true
+        adjoinedElements:
+          - name: unknownGeneComponent
+          - id: ncbi:171017
+            conceptType: Gene
+            name: ZNF384
+            primaryCoding:
+              id: ncbi:171017
+              name: NTRK1
+              system: https://www.ncbi.nlm.nih.gov/gene
+              code: "171017"
+              iris:
+                - https://www.ncbi.nlm.nih.gov/gene/171017
