@@ -10,7 +10,7 @@ aliases:
   - BCR--ABL1
   - BCR-ABL
 extensions:
-- name: CIViC `
+- name: CIViC 5' Partner Representative Genomic Coordinates
   value:
     reference_build: GRCh37
     transcript: ENST00000305877.8
@@ -50,3 +50,40 @@ constraints:
           code: "25"
           iris:
             - https://www.ncbi.nlm.nih.gov/gene/25
+members:
+- id: ga4gh:AJ.lAkiipqq-hri92Ay1Wlq0kA7AshRmnfG
+  type: Adjacency
+  name: CTX_CHR9_083932BC
+  description: BCR and ABL1 translocation from gnomAD SVs v4.1.0 (https://gnomad.broadinstitute.org/variant/CTX_CHR9_083932BC?dataset=gnomad_sv_r4)
+  digest: lAkiipqq-hri92Ay1Wlq0kA7AshRmnfG
+  adjoinedSequences:
+    - id: ga4gh:SL.0QMCq74r4SiBvt6MHSMvZOjDNOr0gDg0
+      type: SequenceLocation
+      digest: 0QMCq74r4SiBvt6MHSMvZOjDNOr0gDg0
+      sequenceReference:
+        id: refseq:NC_000022.11
+        type: SequenceReference
+        name: NC_000022.11
+        description: Reference sequence for GRCh38 chromosome 22.
+        aliases:
+          - GRCh38:22
+          - GRCh38:chr22
+          - ga4gh:SQ.7B7SHsmchAR0dFcDCuSFjJAo7tX87krQ
+        refgetAccession: SQ.7B7SHsmchAR0dFcDCuSFjJAo7tX87krQ
+        residueAlphabet: na
+      end: 23291251
+    - id: ga4gh:SL.PB5cBee9zjyj9jsGTMbyp2eYFjtN4aZd
+      type: SequenceLocation
+      digest: PB5cBee9zjyj9jsGTMbyp2eYFjtN4aZd
+      sequenceReference:
+        id: refseq:NC_000009.12
+        type: SequenceReference
+        name: NC_000009.12
+        description: Reference sequence for GRCh38 chromosome 9.
+        aliases:
+          - GRCh38:9
+          - GRCh38:chr9
+          - ga4gh:SQ.KEO-4XBcm1cxeo_DIQ8_ofqGUkp4iZhI
+        refgetAccession: SQ.KEO-4XBcm1cxeo_DIQ8_ofqGUkp4iZhI
+        residueAlphabet: na
+      start: 130793814
