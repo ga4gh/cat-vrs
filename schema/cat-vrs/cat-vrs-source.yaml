@@ -277,7 +277,7 @@ $defs:
     inherits: gks-core:Entity
     type: object
     # Protected class of: AdjacencyConstraint
-    description: Represents one of a collection of known genes that can be involved in the adjacency.
+    description: Represents a non-exhaustive collection of known genes that can be involved in the adjacency.
     properties:
       type:
         extends: type
@@ -297,7 +297,7 @@ $defs:
     inherits: gks-core:Entity
     type: object
     # Protected class of: AdjacencyConstraint
-    description: Represents an unknown adjacent gene element.
+    description: Represents an unknown gene element that satisfies the described adjacency.
     properties:
       type:
         extends: type

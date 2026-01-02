@@ -4,7 +4,7 @@
    "title": "MultipleKnownGeneElements",
    "type": "object",
    "maturity": "draft",
-   "description": "Represents one of a collection of known genes that can be involved in the adjacency.",
+   "description": "Represents a non-exhaustive collection of known genes that can be involved in the adjacency.",
    "properties": {
       "id": {
          "type": "string",

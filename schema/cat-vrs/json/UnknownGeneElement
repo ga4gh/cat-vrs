@@ -4,7 +4,7 @@
    "title": "UnknownGeneElement",
    "type": "object",
    "maturity": "draft",
-   "description": "Represents an unknown adjacent gene element.",
+   "description": "Represents an unknown gene element that satisfies the described adjacency.",
    "properties": {
       "id": {
          "type": "string",

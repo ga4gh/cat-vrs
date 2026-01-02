@@ -19,6 +19,10 @@ VRS
    Location
    SequenceExpression
    SequenceLocation
+   SequenceReference
+   LiteralSequenceExpression
+   ReferenceLengthExpression
+   LengthExpression
    Expression
    Range
    Terminus
