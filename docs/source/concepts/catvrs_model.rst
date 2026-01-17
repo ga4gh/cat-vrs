@@ -127,7 +127,7 @@ AdjacencyConstraint
 
 The following are example implementations of AdjacencyConstraint:
 
-.. collapse:: BCR(ncbi:613)::ABL1(ncbi:25)
+.. collapse:: BCR(NM_004327.4)::ABL1(NM_005157.6)
 
    .. literalinclude:: ../../../schema/cat-vrs/json/example_adjacencyFusion-ex1
       :language: json
@@ -144,6 +144,10 @@ The following are example implementations of AdjacencyConstraint:
    .. literalinclude:: ../../../schema/cat-vrs/json/example_adjacencyFusion-ex3
       :language: json
       :lines: 15-37
+
+.. raw:: html
+
+   <div style="margin-top: 1em;"></div>
 
 .. _CopyCountConstraint:
 
