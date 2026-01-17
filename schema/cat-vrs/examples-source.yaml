@@ -2001,42 +2001,40 @@ $defs:
               iris:
                 - https://www.ncbi.nlm.nih.gov/gene/25
     members:
-    - id: ga4gh:AJ.lAkiipqq-hri92Ay1Wlq0kA7AshRmnfG
+    - id: ga4gh:AJ.KMisuH8wK4gWBigo1o4DHarzi_Xm5g9f
       type: Adjacency
-      name: CTX_CHR9_083932BC
-      description: BCR and ABL1 translocation from gnomAD SVs v4.1.0 (https://gnomad.broadinstitute.org/variant/CTX_CHR9_083932BC?dataset=gnomad_sv_r4).
-      digest: lAkiipqq-hri92Ay1Wlq0kA7AshRmnfG
+      name: BCR(NM_004327.4)::ABL1(NM_005157.6) gene fusion.
+      description: Example BCR(NM_004327.4)::ABL1(NM_005157.6) gene fusion using illustrative transcript breakpoint coordinates.
+      digest: KMisuH8wK4gWBigo1o4DHarzi_Xm5g9f
       adjoinedSequences:
-        - id: ga4gh:SL.0QMCq74r4SiBvt6MHSMvZOjDNOr0gDg0
+        - id: ga4gh:SL.SgudSwN0DssFbctqKs05wWDxBFJiFD4G
           type: SequenceLocation
-          digest: 0QMCq74r4SiBvt6MHSMvZOjDNOr0gDg0
+          digest: SgudSwN0DssFbctqKs05wWDxBFJiFD4G
           sequenceReference:
-            id: refseq:NC_000022.11
+            id: refseq:NM_004327.4
             type: SequenceReference
-            name: NC_000022.11
-            description: Reference sequence for GRCh38 chromosome 22.
+            name: BCR(NM_004327.4)
+            description: BCR MANE Select transcript.
             aliases:
-              - GRCh38:22
-              - GRCh38:chr22
-              - ga4gh:SQ.7B7SHsmchAR0dFcDCuSFjJAo7tX87krQ
-            refgetAccession: SQ.7B7SHsmchAR0dFcDCuSFjJAo7tX87krQ
+              - ensembl:ENST00000305877.13
+              - ga4gh:SQ.kpytJsXw3BwLC3oBSjHQS1kwxs4WO3I3
+            refgetAccession: SQ.kpytJsXw3BwLC3oBSjHQS1kwxs4WO3I3
             residueAlphabet: na
-          end: 23291251
-        - id: ga4gh:SL.PB5cBee9zjyj9jsGTMbyp2eYFjtN4aZd
+          end: 3533
+        - id: ga4gh:SL.vrnSNKA1YzeUjl5JlZ5wjHOTMKkXk_sQ
           type: SequenceLocation
-          digest: PB5cBee9zjyj9jsGTMbyp2eYFjtN4aZd
+          digest: vrnSNKA1YzeUjl5JlZ5wjHOTMKkXk_sQ
           sequenceReference:
-            id: refseq:NC_000009.12
+            id: refseq:NM_005157.6
             type: SequenceReference
-            name: NC_000009.12
-            description: Reference sequence for GRCh38 chromosome 9.
+            name: ABL1(NM_005157.6)
+            description: ABL1 MANE Select transcript.
             aliases:
-              - GRCh38:9
-              - GRCh38:chr9
-              - ga4gh:SQ.KEO-4XBcm1cxeo_DIQ8_ofqGUkp4iZhI
-            refgetAccession: SQ.KEO-4XBcm1cxeo_DIQ8_ofqGUkp4iZhI
+              - ensembl:ENST00000318560.6
+              - ga4gh:SQ.w8Qg3x-PQ2akJrJQeGEN-_eBUMo1H1CL
+            refgetAccession: SQ.w8Qg3x-PQ2akJrJQeGEN-_eBUMo1H1CL
             residueAlphabet: na
-          start: 130793814
+          start: 460
 
   example_adjacencyFusion-ex2:
     maturity: draft
@@ -2050,10 +2048,11 @@ $defs:
       - NTRK1 fusion
     constraints:
       - type: AdjacencyConstraint
-        orderKnown: true
+        orderKnown: false
         adjoinedElements:
-          - type: MultipleKnownGeneElements
-            knownElements:
+          - type: ConceptSet
+            membershipOperator: OR
+            concepts:
               - id: hgnc:6636
                 conceptType: Gene
                 name: LMNA
