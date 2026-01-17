@@ -8,10 +8,11 @@ aliases:
   - NTRK1 fusion
 constraints:
   - type: AdjacencyConstraint
-    orderKnown: true
+    orderKnown: false
     adjoinedElements:
-      - type: MultipleKnownGeneElements
-        knownElements:
+      - type: ConceptSet
+        membershipOperator: OR
+        concepts:
           - id: hgnc:6636
             conceptType: Gene
             name: LMNA

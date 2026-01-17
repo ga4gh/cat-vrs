@@ -69,11 +69,11 @@ $defs:
     oneOf:
       - $ref: "#/$defs/DefiningAlleleConstraint"
       - $ref: "#/$defs/DefiningLocationConstraint"
+      - $ref: "#/$defs/AdjacencyConstraint"
+      - $ref: "#/$defs/FeatureContextConstraint"
       - $ref: "#/$defs/CopyCountConstraint"
       - $ref: "#/$defs/CopyChangeConstraint"
-      - $ref: "#/$defs/FeatureContextConstraint"
       - $ref: "#/$defs/FunctionConstraint"
-      - $ref: "#/$defs/AdjacencyConstraint"
     heritableProperties:
       type:
         type: string
@@ -246,9 +246,6 @@ $defs:
         const: AdjacencyConstraint
         default: AdjacencyConstraint
         description: 'MUST be "AdjacencyConstraint"'
-      linker:
-        $refCurie: vrs:SequenceExpression
-        description: The sequence found between the adjoined elements.
       adjoinedElements:
         type: array
         description: >-
@@ -260,10 +257,13 @@ $defs:
           oneOf:
             - $refCurie: gks.core:iriReference
             - $refCurie: gks.core:MappableConcept
+            - $refCurie: gks.core:ConceptSet
             - $refCurie: vrs:Location
             - $refCurie: vrs:Terminus
-            - $ref: "#/$defs/MultipleKnownGeneElements"
             - $ref: "#/$defs/UnknownGeneElement"
+      linker:
+        $refCurie: vrs:SequenceExpression
+        description: The sequence found between the adjoined elements.
       orderKnown:
         type: boolean
         description: >-
@@ -271,29 +271,6 @@ $defs:
     required:
       - adjoinedElements
       - orderKnown
-
-  MultipleKnownGeneElements:
-    maturity: draft
-    inherits: gks-core:Entity
-    type: object
-    # Protected class of: AdjacencyConstraint
-    description: Represents a non-exhaustive collection of known genes that can be involved in the adjacency.
-    properties:
-      type:
-        extends: type
-        const: MultipleKnownGeneElements
-        default: MultipleKnownGeneElements
-        description: MUST be "MultipleKnownGeneElements"
-      knownElements:
-        type: array
-        description: Previously described known elements that satisfy the described adjacency. Each item is a MappableConcept with conceptType="Gene".
-        ordered: false
-        items:
-          $refCurie: gks.core:MappableConcept
-    required:
-      - type
-      - knownElements
-    additionalProperties: false
 
   UnknownGeneElement:
     maturity: draft

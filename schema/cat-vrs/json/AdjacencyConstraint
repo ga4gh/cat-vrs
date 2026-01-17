@@ -12,10 +12,6 @@
          "default": "AdjacencyConstraint",
          "description": "MUST be \"AdjacencyConstraint\""
       },
-      "linker": {
-         "description": "The sequence found between the adjoined elements.",
-         "$ref": "/ga4gh/schema/vrs/2.0.1/json/SequenceExpression"
-      },
       "adjoinedElements": {
          "type": "array",
          "description": "The elements of the adjacency.",
@@ -25,10 +21,10 @@
          "items": {
             "oneOf": [
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/MultipleKnownGeneElements"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/UnknownGeneElement"
                },
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/UnknownGeneElement"
+                  "$ref": "/ga4gh/schema/gks-core/1.1.0/json/ConceptSet"
                },
                {
                   "$ref": "/ga4gh/schema/gks-core/1.1.0/json/MappableConcept"
@@ -44,6 +40,10 @@
                }
             ]
          }
+      },
+      "linker": {
+         "description": "The sequence found between the adjoined elements.",
+         "$ref": "/ga4gh/schema/vrs/2.0.1/json/SequenceExpression"
       },
       "orderKnown": {
          "type": "boolean",
