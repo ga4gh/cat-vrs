@@ -4,7 +4,7 @@
    "title": "GeneFusion",
    "type": "object",
    "maturity": "draft",
-   "description": "A representation of the joining of two genes resulting in a chimeric transcript and/or novel interaction between a rearranged regulatory elements with the expression of a partner gene product (a regulatory fusion). ",
+   "description": "A representation of the joining of two genes resulting in a chimeric transcript and/or novel interaction between a rearranged regulatory elements with the expression of a partner gene product (a regulatory fusion).",
    "allOf": [
       {
          "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/CategoricalVariant"
