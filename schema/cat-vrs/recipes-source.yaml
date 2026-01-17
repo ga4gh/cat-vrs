@@ -5,9 +5,11 @@ type: object
 
 imports:
   cat-vrs: ./cat-vrs-source.yaml
+  gks-core: ../gks-core/gks-core-source.yaml
+  vrs: ../vrs/vrs-source.yaml
 
 namespaces:
-  gks.core: /ga4gh/schema/gks-core/1.0.0/json/
+  gks.core: /ga4gh/schema/gks-core/1.1.0/json/
   vrs: /ga4gh/schema/vrs/2.0.1/json/
 
 $defs:
@@ -129,5 +131,31 @@ $defs:
                 - $ref: DefiningAlleleConstraint
                 - $ref: DefiningLocationConstraint
                 - $ref: FeatureContextConstraint
+        required:
+          - constraints
+
+  GeneFusion:
+    maturity: draft
+    description: >-
+      A representation of the joining of two genes resulting in a chimeric transcript and/or novel interaction between a rearranged regulatory elements with the expression of a partner gene product (a regulatory fusion). 
+    allOf:
+      - $ref: CategoricalVariant
+      - properties:
+          constraints:
+            description: >-
+              The constraints must contain at least one item of an Adjacency Constraint.
+            minItems: 1
+            contains:
+              allOf:
+                - $ref: AdjacencyConstraint
+                - properties: 
+                    adjoinedElements:
+                      contains:
+                        anyOf:
+                          - $refCurie: gks.core:iriReference
+                          - $refCurie: gks.core:MappableConcept
+                          - $refCurie: gks.core:ConceptSet
+                          - $refCurie: vrs:Location
+                          - $ref: UnknownGeneElement
         required:
           - constraints

@@ -52,6 +52,12 @@ tests:
     definition: FunctionVariant
   - test_file: functionVariant-ex3.yaml
     definition: FunctionVariant
+  - test_file: adjacencyFusion-ex1.yaml
+    definition: GeneFusion
+  - test_file: adjacencyFusion-ex2.yaml
+    definition: GeneFusion
+  - test_file: adjacencyFusion-ex3.yaml
+    definition: GeneFusion
   - test_file: proteinSequenceConsequence-ex1.yaml
     definition: ProteinSequenceConsequence
   - test_file: proteinSequenceConsequence-ex2.yaml
