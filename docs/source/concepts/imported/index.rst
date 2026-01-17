@@ -38,6 +38,7 @@ GKS Core
    Extension
    MappableConcept
    ConceptMapping
+   ConceptSet
    Coding
    code
    iriReference
