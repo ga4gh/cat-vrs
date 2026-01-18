@@ -22,3 +22,14 @@ class and types from VRS 2.0 and GKS Core 1.0 that support the Cat-VRS data mode
     Recipes/index
     Constraints/index
     imported/index
+
+.. _CategoricalVariant:
+
+Categorical Variant
+###################
+
+The Categorical Variant class is the primary class in Cat-VRS. It
+depends on one or more Constraint elements to create a complete
+description of a categorical variant.
+
+.. include:: ../def/cat-vrs/CategoricalVariant.rst
