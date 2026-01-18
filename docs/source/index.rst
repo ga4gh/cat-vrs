@@ -26,6 +26,7 @@ Caveat emptor.
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :includehidden:
 
    introduction
