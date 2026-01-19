@@ -9,6 +9,7 @@ aliases:
   - BCR-ABL1
   - BCR--ABL1
   - BCR-ABL
+  - BCR(hgnc:1014)::ABL1(hgnc:76)
 extensions:
 - name: CIViC 5' Partner Representative Genomic Coordinates
   value:
@@ -53,8 +54,8 @@ constraints:
 members:
 - id: ga4gh:AJ.KMisuH8wK4gWBigo1o4DHarzi_Xm5g9f
   type: Adjacency
-  name: BCR(NM_004327.4)::ABL1(NM_005157.6) gene fusion.
-  description: Example BCR(NM_004327.4)::ABL1(NM_005157.6) gene fusion using illustrative transcript breakpoint coordinates.
+  name: NM_004327.4:r.1_3533::NM_005157.6:r.461_5766 gene fusion.
+  description: Example BCR::ABL1 gene fusion, NM_004327.4:r.1_3533::NM_005157.6:r.461_5766, using illustrative transcript breakpoint coordinates.
   digest: KMisuH8wK4gWBigo1o4DHarzi_Xm5g9f
   adjoinedSequences:
     - id: ga4gh:SL.SgudSwN0DssFbctqKs05wWDxBFJiFD4G
@@ -63,7 +64,7 @@ members:
       sequenceReference:
         id: refseq:NM_004327.4
         type: SequenceReference
-        name: BCR(NM_004327.4)
+        name: NM_004327.4
         description: BCR MANE Select transcript.
         aliases:
           - ensembl:ENST00000305877.13
@@ -77,7 +78,7 @@ members:
       sequenceReference:
         id: refseq:NM_005157.6
         type: SequenceReference
-        name: ABL1(NM_005157.6)
+        name: NM_005157.6
         description: ABL1 MANE Select transcript.
         aliases:
           - ensembl:ENST00000318560.6
