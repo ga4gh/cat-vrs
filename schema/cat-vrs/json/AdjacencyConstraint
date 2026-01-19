@@ -1,0 +1,59 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0/json/AdjacencyConstraint",
+   "title": "AdjacencyConstraint",
+   "type": "object",
+   "maturity": "draft",
+   "description": "Components that define a molecular adjacency of congruent elements.",
+   "properties": {
+      "type": {
+         "type": "string",
+         "const": "AdjacencyConstraint",
+         "default": "AdjacencyConstraint",
+         "description": "MUST be \"AdjacencyConstraint\""
+      },
+      "adjoinedElements": {
+         "type": "array",
+         "description": "The elements of the adjacency.",
+         "minItems": 2,
+         "maxItems": 2,
+         "ordered": true,
+         "items": {
+            "oneOf": [
+               {
+                  "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/UnknownGeneElement"
+               },
+               {
+                  "$ref": "/ga4gh/schema/gks-core/1.1.0/json/ConceptSet"
+               },
+               {
+                  "$ref": "/ga4gh/schema/gks-core/1.1.0/json/MappableConcept"
+               },
+               {
+                  "$ref": "/ga4gh/schema/gks-core/1.1.0/json/iriReference"
+               },
+               {
+                  "$ref": "/ga4gh/schema/vrs/2.0.1/json/Location"
+               },
+               {
+                  "$ref": "/ga4gh/schema/vrs/2.0.1/json/Terminus"
+               }
+            ]
+         }
+      },
+      "linker": {
+         "description": "The sequence found between the adjoined elements.",
+         "$ref": "/ga4gh/schema/vrs/2.0.1/json/SequenceExpression"
+      },
+      "orderKnown": {
+         "type": "boolean",
+         "description": "When orderKnown is true, the order of adjoinedElements is assumed to denote the 5' partner first and the 3' partner second. If orderKnown is false, then the order of adjoinedElements assumed not in fact to be known, as in the case of a fusion where only one or both partners are known, but not their relative order."
+      }
+   },
+   "required": [
+      "adjoinedElements",
+      "orderKnown",
+      "type"
+   ],
+   "additionalProperties": false
+}

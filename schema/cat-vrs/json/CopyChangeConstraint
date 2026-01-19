@@ -1,0 +1,35 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0/json/CopyChangeConstraint",
+   "title": "CopyChangeConstraint",
+   "type": "object",
+   "maturity": "draft",
+   "description": "The relative assessment of the change in copies that members of this categorical variant satisfy.",
+   "properties": {
+      "type": {
+         "type": "string",
+         "const": "CopyChangeConstraint",
+         "default": "CopyChangeConstraint",
+         "description": "MUST be \"CopyChangeConstraint\""
+      },
+      "copyChange": {
+         "description": "The relative assessment of the change in copies that members of this categorical variant satisfies.",
+         "type": "string",
+         "enum": [
+            "complete genomic loss",
+            "high-level loss",
+            "low-level loss",
+            "loss",
+            "regional base ploidy",
+            "gain",
+            "low-level gain",
+            "high-level gain"
+         ]
+      }
+   },
+   "required": [
+      "copyChange",
+      "type"
+   ],
+   "additionalProperties": false
+}

@@ -183,7 +183,7 @@ A GeneFusion is a :ref:`CategoricalVariant` with at least one constraint:
 
 The following are example implementations of that satisfy the GeneFusion recipe:
 
-.. collapse:: BCR(ncbi:613)::ABL1(ncbi:25)
+.. collapse:: BCR(NM_004327.4)::ABL1(NM_005157.6)
 
    .. literalinclude:: ../../../schema/cat-vrs/json/example_adjacencyFusion-ex1
       :language: json

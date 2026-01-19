@@ -1,0 +1,32 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0/json/CopyCountConstraint",
+   "title": "CopyCountConstraint",
+   "type": "object",
+   "maturity": "trial use",
+   "description": "The exact or range of copies that members of this categorical variant must satisfy.",
+   "properties": {
+      "type": {
+         "type": "string",
+         "const": "CopyCountConstraint",
+         "default": "CopyCountConstraint",
+         "description": "MUST be \"CopyCountConstraint\""
+      },
+      "copies": {
+         "description": "The precise value or range of copies members of this categorical variant must satisfy.",
+         "oneOf": [
+            {
+               "$ref": "/ga4gh/schema/vrs/2.0.1/json/Range"
+            },
+            {
+               "type": "integer"
+            }
+         ]
+      }
+   },
+   "required": [
+      "copies",
+      "type"
+   ],
+   "additionalProperties": false
+}
