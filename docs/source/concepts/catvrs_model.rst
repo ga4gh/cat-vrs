@@ -149,6 +149,16 @@ The following are example implementations of AdjacencyConstraint:
 
    <div style="margin-top: 1em;"></div>
 
+**Implementation Guidance**
+
+The Adjacency Constraint is similar to `VRS' Adjacency class <https://vrs.ga4gh.org/en/stable/concepts/MolecularVariation/Adjacency.html>`_, except that the `adjoinedElements` field supports data types in addition to :ref:`iriReference` and :ref:`Location`. 
+
+We recommend following the `Variant Interpretation for Cancer Consortium's Gene Fusion Specification <https://fusions.cancervariants.org/en/latest/>`_ when modeling a :ref:`GeneFusion` using this constraint. Specifically by:
+
+* Representing `Named Gene Components <https://fusions.cancervariants.org/en/latest/nomenclature.html#named-gene-component>`_ as a :ref:`MappableConcept` with the `conceptType` field set to "Gene"; the `Gene Normalizer <https://gene-normalizer.readthedocs.io>`_ can help. 
+* Representing `Multiple Possible Gene Components <https://fusions.cancervariants.org/en/latest/nomenclature.html#multiple-possible-gene-component>`_ as a :ref:`ConceptSet` with the `membershipOperator` field set to "OR".
+* Representing an `Unknown Gene Component` as a :ref:`UnknownGeneElement`. 
+
 .. _CopyCountConstraint:
 
 CopyCountConstraint

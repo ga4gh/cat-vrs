@@ -168,6 +168,8 @@ The following are example implementations of that satisfy the FunctionVariant re
 
    <div style="margin-top: 1em;"></div>
 
+.. _GeneFusion:
+
 GeneFusion
 !!!!!!!!!!!
 
@@ -175,7 +177,7 @@ GeneFusion
 
 A GeneFusion is a :ref:`CategoricalVariant` with at least one constraint:
 
-1. An :ref:`AdjacencyConstraint` with the `adjoinedElements` array containing either :ref:`iriReference`, :ref:`MappableConcept`, :ref:`ConceptSet`, :ref:`Location`, or an :ref:`UnknownGeneElement` as elements.
+1. An :ref:`AdjacencyConstraint` with the `adjoinedElements` array containing either an :ref:`iriReference`, :ref:`MappableConcept`, :ref:`ConceptSet`, :ref:`Location`, or an :ref:`UnknownGeneElement` as elements.
 
 **Examples**
 
