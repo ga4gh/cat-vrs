@@ -157,7 +157,7 @@ We recommend following the `Variant Interpretation for Cancer Consortium's Gene 
 
 * Representing `Named Gene Components <https://fusions.cancervariants.org/en/latest/nomenclature.html#named-gene-component>`_ as a :ref:`MappableConcept` with the `conceptType` field set to "Gene"; the `Gene Normalizer <https://gene-normalizer.readthedocs.io>`_ can help.
 * Representing `Multiple Possible Gene Components <https://fusions.cancervariants.org/en/latest/nomenclature.html#multiple-possible-gene-component>`_ as a :ref:`ConceptSet` with the `membershipOperator` field set to "OR". This is interpreted as a **non-exhaustive** list.
-* Representing an `Unknown Gene Component` as a :ref:`UnknownGeneElement`.
+* Representing an `Unknown Gene Component <https://fusions.cancervariants.org/en/latest/nomenclature.html#unknown-gene-component>`_ as a :ref:`UnknownGeneElement`.
 
 .. _CopyCountConstraint:
 
