@@ -3,13 +3,10 @@
 Data Model
 !!!!!!!!!!
 
-At the Cat-VRS top of the Cat-VRS data model is the Categorical Variant class.
-The Categorical Variant is composed of one or more constraints that define The
-Categorical Variant. The Constraint subclasses are used to define what we refer
-to as **Recipes**. Recipes are pre-defined Categorical Variants with specific
-constraints that represent standard categorical variants that have been identified.
+At the Cat-VRS top of the Cat-VRS data model is the Categorical Variant class. The Categorical Variant is composed of one or more :ref:`Constraints` that define The Categorical Variant. The Constraint subclasses are used to define what we refer to as :ref:`Recipes`. Recipes are pre-defined Categorical Variants with specific constraints that represent standard categorical variants that have been identified.
+
 The following sections describe the Cat-VRS base classes (Categorical Variant and
-Constraint subclasses), the standard recipes, and the additional *Imported* data
+Constraint subclasses), the standard recipes, and the additional :ref:`Imported <imported>` data
 class and types from VRS 2.0 and GKS Core 1.0 that support the Cat-VRS data model.
 
 - :ref:`Constraints`: models that describe categorical variation and constraints
