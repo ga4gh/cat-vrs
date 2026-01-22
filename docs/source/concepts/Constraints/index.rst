@@ -1,13 +1,11 @@
 .. _constraints:
 
-.. _constraint:
-
 Constraints
 !!!!!!!!!!!
 
-The *Constraint* class is an abstract class that is the parent of all other constraint classes.  A constraint is a rule or set of rules that a variant must satisfy to qualify as a valid member of the CategoricalVariant. Constraint subclasses are only used in CategoricalVariant objects.
+Constraints define rules or sets of rules that a :ref:`Categorical Variant <CategoricalVariant>` must satisfy to qualify as a valid member of the Categorical Variant.
 
-.. include::  ../../def/cat-vrs/Constraint.rst
+See :ref:`Constraint` for the abstract base class.
 
 **Subclasses**
 
