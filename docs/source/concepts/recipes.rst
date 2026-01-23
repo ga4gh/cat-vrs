@@ -100,7 +100,7 @@ The following are example implementations of that satisfy the ProteinSequenceCon
 .. _FunctionVariant:
 
 FunctionVariant
-!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!
 
 .. include:: ../def/cat-vrs/FunctionVariant.rst
 

@@ -19,7 +19,6 @@ adoption of the standard.
    concepts/index
    impl-guide/index
    releases/index
-   roadmap/index
    appendices/index
 
 .. image:: images/cat-vrs-transparent-bg.png
