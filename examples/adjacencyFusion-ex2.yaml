@@ -24,7 +24,7 @@ constraints:
 extensions:
   - name: Known Gene Elements
     description: Known gene elements that may satisfy this Categorical Variant. Please specify if this array is exhaustive or non-exhaustive, and if it is subject to change.
-    value: 
+    value:
       type: ConceptSet
       membershipOperator: OR
       concepts:
