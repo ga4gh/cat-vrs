@@ -137,7 +137,7 @@ The following are example implementations of AdjacencyConstraint:
 
    .. literalinclude:: ../../../schema/cat-vrs/json/example_adjacencyFusion-ex2
       :language: json
-      :lines: 15-38
+      :lines: 15-37
 
 .. collapse:: ?::ZNF384(ncbi:171017)
 
