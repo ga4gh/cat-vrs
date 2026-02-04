@@ -31,7 +31,7 @@ Some AdjacencyConstraint attributes are inherited from :ref:`Constraint`.
                         .. raw:: html
 
                             <span style="background-color: #B2DFEE; color: black; padding: 2px 6px; border: 1px solid black; border-radius: 3px; font-weight: bold; display: inline-block; margin-bottom: 5px;" title="Ordered">&#8595;</span>
-      - :ref:`iriReference` | :ref:`MappableConcept` | :ref:`ConceptSet` | :ref:`Location` | :ref:`Terminus` | :ref:`UnknownGeneElement`
+      - :ref:`iriReference` | :ref:`MappableConcept` | :ref:`Location` | :ref:`Terminus` | :ref:`UnspecifiedElement`
       - 2..2
       - The elements of the adjacency.
    *  - linker

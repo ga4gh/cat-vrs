@@ -257,10 +257,9 @@ $defs:
           oneOf:
             - $refCurie: gks.core:iriReference
             - $refCurie: gks.core:MappableConcept
-            - $refCurie: gks.core:ConceptSet
             - $refCurie: vrs:Location
             - $refCurie: vrs:Terminus
-            - $ref: "#/$defs/UnknownGeneElement"
+            - $ref: "#/$defs/UnspecifiedElement"
       linker:
         $refCurie: vrs:SequenceExpression
         description: The sequence found between the adjoined elements.
@@ -272,18 +271,18 @@ $defs:
       - adjoinedElements
       - orderKnown
 
-  UnknownGeneElement:
+  UnspecifiedElement:
     maturity: draft
     inherits: gks-core:Entity
     type: object
     # Protected class of: AdjacencyConstraint
-    description: Represents an unknown gene element that satisfies the described adjacency.
+    description: Represents an unspecified element that satisfies the described adjacency.
     properties:
       type:
         extends: type
-        const: UnknownGeneElement
-        default: UnknownGeneElement
-        description: Must be "UnknownGeneElement"
+        const: UnspecifiedElement
+        default: UnspecifiedElement
+        description: Must be "UnspecifiedElement"
     required:
       - type
     additionalProperties: false

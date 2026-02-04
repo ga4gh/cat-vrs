@@ -1,10 +1,10 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0/json/UnknownGeneElement",
-   "title": "UnknownGeneElement",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0/json/UnspecifiedElement",
+   "title": "UnspecifiedElement",
    "type": "object",
    "maturity": "draft",
-   "description": "Represents an unknown gene element that satisfies the described adjacency.",
+   "description": "Represents an unspecified element that satisfies the described adjacency.",
    "properties": {
       "id": {
          "type": "string",
@@ -38,10 +38,10 @@
       },
       "type": {
          "type": "string",
-         "description": "Must be \"UnknownGeneElement\"",
+         "description": "Must be \"UnspecifiedElement\"",
          "$comment": "MUST be the name of a concrete class from the data model.",
-         "const": "UnknownGeneElement",
-         "default": "UnknownGeneElement"
+         "const": "UnspecifiedElement",
+         "default": "UnspecifiedElement"
       }
    },
    "required": [

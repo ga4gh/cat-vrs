@@ -4,11 +4,11 @@
 
 **Computational Definition**
 
-Represents an unknown gene element that satisfies the described adjacency.
+Represents an unspecified element that satisfies the described adjacency.
 
 **Information Model**
 
-Some UnknownGeneElement attributes are inherited from :ref:`gks-core:Entity`.
+Some UnspecifiedElement attributes are inherited from :ref:`gks-core:Entity`.
 
 .. list-table::
    :class: clean-wrap
@@ -56,4 +56,4 @@ Some UnknownGeneElement attributes are inherited from :ref:`gks-core:Entity`.
       -
       - string
       - 1..1
-      - Must be "UnknownGeneElement"
+      - Must be "UnspecifiedElement"

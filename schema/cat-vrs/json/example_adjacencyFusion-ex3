@@ -17,7 +17,7 @@
          "orderKnown": true,
          "adjoinedElements": [
             {
-               "type": "UnknownGeneElement"
+               "type": "UnspecifiedElement"
             },
             {
                "id": "ncbi:171017",

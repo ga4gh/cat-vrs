@@ -154,8 +154,7 @@ $defs:
                         anyOf:
                           - $refCurie: gks.core:iriReference
                           - $refCurie: gks.core:MappableConcept
-                          - $refCurie: gks.core:ConceptSet
                           - $refCurie: vrs:Location
-                          - $ref: UnknownGeneElement
+                          - $ref: UnspecifiedElement
         required:
           - constraints

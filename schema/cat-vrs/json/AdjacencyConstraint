@@ -21,10 +21,7 @@
          "items": {
             "oneOf": [
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/UnknownGeneElement"
-               },
-               {
-                  "$ref": "/ga4gh/schema/gks-core/1.1.0/json/ConceptSet"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/UnspecifiedElement"
                },
                {
                   "$ref": "/ga4gh/schema/gks-core/1.1.0/json/MappableConcept"
