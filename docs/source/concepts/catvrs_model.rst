@@ -137,7 +137,7 @@ The following are example implementations of AdjacencyConstraint:
 
    .. literalinclude:: ../../../schema/cat-vrs/json/example_adjacencyFusion-ex2
       :language: json
-      :lines: 15-109
+      :lines: 15-38
 
 .. collapse:: ?::ZNF384(ncbi:171017)
 
@@ -156,8 +156,8 @@ The Adjacency Constraint is similar to `VRS' Adjacency class <https://vrs.ga4gh.
 We recommend following the `Variant Interpretation for Cancer Consortium's Gene Fusion Specification <https://fusions.cancervariants.org/en/latest/>`_ when modeling a :ref:`GeneFusion` using this constraint. Specifically by:
 
 * Representing `Named Gene Components <https://fusions.cancervariants.org/en/latest/nomenclature.html#named-gene-component>`_ as a :ref:`MappableConcept` with the `conceptType` field set to "Gene"; the `Gene Normalizer <https://gene-normalizer.readthedocs.io>`_ can help.
-* Representing `Multiple Possible Gene Components <https://fusions.cancervariants.org/en/latest/nomenclature.html#multiple-possible-gene-component>`_ as a :ref:`ConceptSet` with the `membershipOperator` field set to "OR". This is interpreted as a **non-exhaustive** list.
-* Representing an `Unknown Gene Component <https://fusions.cancervariants.org/en/latest/nomenclature.html#unknown-gene-component>`_ as a :ref:`UnknownGeneElement`.
+* Representing `Multiple Possible Gene Components <https://fusions.cancervariants.org/en/latest/nomenclature.html#multiple-possible-gene-component>`_ as a :ref:`UnspecifiedElement` within the Adjacency Constraint. An exhaustive or non-exhaustive list of possible elements can be included as an :ref:`Extension`. We recommend setting the value to be a :ref:`ConceptSet` with the `membershipOperator` field set to "OR". 
+* Representing an `Unknown Gene Component <https://fusions.cancervariants.org/en/latest/nomenclature.html#unknown-gene-component>`_ as a :ref:`UnspecifiedElement`.
 
 .. _CopyCountConstraint:
 
