@@ -290,7 +290,7 @@ $defs:
         const: FunctionalDomain
         default: FunctionalDomain
         description: Must be "FunctionalDomain"
-      location: 
+      location:
         $refCurie: vrs:Location
         description: >-
           A Sequence Location for the domain.

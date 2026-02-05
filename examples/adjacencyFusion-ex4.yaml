@@ -24,7 +24,7 @@ constraints:
     functionalDomains:
       - name: FGFR2 protein product (refseq:NP_000132.3) protein tyrosine kinase domain
         type: FunctionalDomain
-        location: 
+        location:
           id: ga4gh:SL.6VpekQsGUz74aAgQ0RklrrgJVwYNK8xx
           type: SequenceLocation
           description: Amino acid positions 456 - 768 within the FGFR2 protein (refseq:NP_000132.3), which is the protein product of the MANE Select coding transcript for FGFR2 (refseq:NM_000141.5). This sequence corresponds to the catalytic domain of the Protein Tyrosine Kinase.
