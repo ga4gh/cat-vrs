@@ -208,4 +208,13 @@ The following are example implementations of that satisfy the GeneFusion recipe:
 
 .. raw:: html
 
+   <div style="margin-top: 0.5em;"></div>
+
+.. collapse:: FGFR2(hgnc:3689)::v
+
+   .. literalinclude:: ../../../schema/cat-vrs/json/example_adjacencyFusion-ex4
+      :language: json
+
+.. raw:: html
+
    <div style="margin-top: 1em;"></div>

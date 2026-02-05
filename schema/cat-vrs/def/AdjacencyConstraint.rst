@@ -34,6 +34,14 @@ Some AdjacencyConstraint attributes are inherited from :ref:`Constraint`.
       - :ref:`iriReference` | :ref:`MappableConcept` | :ref:`Location` | :ref:`Terminus` | :ref:`UnspecifiedElement`
       - 2..2
       - The elements of the adjacency.
+   *  - functionalDomains
+      -
+                        .. raw:: html
+
+                            <span style="background-color: #B2DFEE; color: black; padding: 2px 6px; border: 1px solid black; border-radius: 3px; font-weight: bold; display: inline-block; margin-bottom: 5px;" title="Unordered">&#8942;</span>
+      - :ref:`FunctionalDomain`
+      - 0..m
+      - Functional domains whose presence or absence is required to satisfy the adjacency.
    *  - linker
       -
       - :ref:`SequenceExpression`

@@ -1,10 +1,10 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0/json/UnspecifiedElement",
-   "title": "UnspecifiedElement",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0/json/FunctionalDomain",
+   "title": "FunctionalDomain",
    "type": "object",
    "maturity": "draft",
-   "description": "Represents an unspecified element that satisfies the described adjacency.",
+   "description": "A sequence location whose presence or absence is used to define an adjacency.",
    "properties": {
       "id": {
          "type": "string",
@@ -38,14 +38,28 @@
       },
       "type": {
          "type": "string",
-         "description": "Must be \"UnspecifiedElement\"",
+         "description": "Must be \"FunctionalDomain\"",
          "$comment": "MUST be the name of a concrete class from the data model.",
-         "const": "UnspecifiedElement",
-         "default": "UnspecifiedElement"
+         "const": "FunctionalDomain",
+         "default": "FunctionalDomain"
+      },
+      "location": {
+         "description": "A Sequence Location for the domain.",
+         "$ref": "/ga4gh/schema/vrs/2.0.1/json/Location"
+      },
+      "status": {
+         "type": "string",
+         "description": "MUST be either \"preserved\" or \"lost\"",
+         "enum": [
+            "lost",
+            "preserved"
+         ]
       }
    },
-   "additionalProperties": false,
    "required": [
+      "location",
+      "status",
       "type"
-   ]
+   ],
+   "additionalProperties": false
 }
