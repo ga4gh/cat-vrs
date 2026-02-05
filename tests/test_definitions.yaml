@@ -6,6 +6,8 @@ tests:
     definition: CategoricalVariant
   - test_file: adjacencyFusion-ex3.yaml
     definition: CategoricalVariant
+  - test_file: adjacencyFusion-ex4.yaml
+    definition: CategoricalVariant
   - test_file: braf-v600.yaml
     definition: CategoricalVariant
   - test_file: braf-v600.annotated.yaml
@@ -57,6 +59,8 @@ tests:
   - test_file: adjacencyFusion-ex2.yaml
     definition: GeneFusion
   - test_file: adjacencyFusion-ex3.yaml
+    definition: GeneFusion
+  - test_file: adjacencyFusion-ex4.yaml
     definition: GeneFusion
   - test_file: proteinSequenceConsequence-ex1.yaml
     definition: ProteinSequenceConsequence
