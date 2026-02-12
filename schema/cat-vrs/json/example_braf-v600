@@ -1,6 +1,6 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0/json/example_braf-v600",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.1/json/example_braf-v600",
    "title": "example_braf-v600",
    "type": "CategoricalVariant",
    "id": "civic.vid:17",
