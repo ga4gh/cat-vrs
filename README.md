@@ -1,6 +1,6 @@
 # Categorical Variation Representation Specification (Cat-VRS)
 
-[![Read the Docs](https://img.shields.io/readthedocs/vr-spec/1.1)](https://cat-vrs.readthedocs.io/en/latest/)
+[![Read the Docs](https://img.shields.io/readthedocs/cat-vrs)](https://cat-vrs.readthedocs.io/en/latest/)
 
 **Cat-VRS 1.0.0 Trial Use Review November 2024 - join in [here](https://github.com/ga4gh/cat-vrs/discussions/86)**!
 
