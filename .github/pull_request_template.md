@@ -1,4 +1,4 @@
-## Link to the corresponding Issue.
+## Link to the corresponding Issue
 
 ## Summary of the Pull Request.
 
