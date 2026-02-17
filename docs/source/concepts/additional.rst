@@ -10,7 +10,7 @@ Below are the additional data types used by the Cat-VRS models.
 FunctionalDomain
 ##################
 
-The FunctionalDomain class is an available item to populate the `functionalDomains` property within the :ref:`AdjacencyConstraint`. It is intended to represent `Functional Domains <https://fusions.cancervariants.org/en/latest/information_model.html#categorical-elementst>`_ from the VICC Gene Fusion Specification.
+The FunctionalDomain class is an available item to populate the `functionalDomains` property within the :ref:`AdjacencyConstraint`. It is intended to represent `Functional Domains <https://fusions.cancervariants.org/en/latest/information_model.html#categorical-elements>`_ from the VICC Gene Fusion Specification.
 
 .. include:: ../def/cat-vrs/FunctionalDomain.rst
 
