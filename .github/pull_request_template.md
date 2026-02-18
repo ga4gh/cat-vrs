@@ -13,5 +13,5 @@
 - [ ] The schema `def/` and `json/` files have been recompiled and committed (Run `cd schema; make all` from the root directory).
 - [ ] Tests have been created or updated.
 - [ ] Schema changes have been documented (existing files updated or new files created in `docs/source/`).
-- [ ] Any new `.rst` files have been registered in the documentation structure.
+- [ ] Any new schema definition `.rst` files have been registered in the documentation structure.
 - [ ] Documentation has been regenerated and committed (Run `cd docs; make clean watch &` from the root directory to compile documentation).
