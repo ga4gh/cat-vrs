@@ -17,9 +17,15 @@ VRS
    CopyNumberCount
    CopyNumberChange
    Location
+   SequenceExpression
    SequenceLocation
+   SequenceReference
+   LiteralSequenceExpression
+   ReferenceLengthExpression
+   LengthExpression
    Expression
    Range
+   Terminus
 
 GKS Core
 !!!!!!!!
@@ -32,6 +38,7 @@ GKS Core
    Extension
    MappableConcept
    ConceptMapping
+   ConceptSet
    Coding
    code
    iriReference
