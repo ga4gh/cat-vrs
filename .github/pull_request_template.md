@@ -1,14 +1,17 @@
-Link to the corresponding Issue.
+## Link to the corresponding Issue
 
-Summary of the Pull Request.
+## Summary of the Pull Request
 
-Pull Request checklist:
-- [ ] Does the title of this Pull Request reference the corresponding Issue?
-- [ ] Is the branch validating against pre-commit hooks? Run `pre-commit run --all-files` from the root directory.
-- [ ] Is the branch passing tests? Run `pytest tests/` from the root directory.
+## Pull Request checklist
 
-If the schema or examples were contributed to:
-- [ ] Were the schema def/ and json/ files recompiled and committed? Run `cd schema; make all` from the root directory.
-- [ ] If constraints or recipes were added, have they been added to the readthedocs? To do so, you can revise the appropriate file within `docs/source/concepts/`.
-- [ ] Has documentation been regenerated and committed? Run `cd docs; make clean watch &` from the root directory to compile documentation.
-- [ ] Have tests been created or updated?
+### Required
+- [ ] The title of this Pull Request accurately reflects the scope and content of the linked Issue.
+- [ ] The branch passes all pre-commit hooks (Run `pre-commit run --all-files` from the root directory).
+- [ ] The branch passes all tests (Run `pytest tests/` from the root directory).
+
+### Required if the schema or examples were contributed to
+- [ ] The schema `def/` and `json/` files have been recompiled and committed (Run `cd schema; make all` from the root directory).
+- [ ] Tests have been created or updated.
+- [ ] Schema changes have been documented (existing files updated or new files created in `docs/source/`).
+- [ ] Any new schema definition `.rst` files have been registered in the documentation structure.
+- [ ] Documentation has been regenerated and committed (Run `cd docs; make clean watch &` from the root directory to compile documentation).

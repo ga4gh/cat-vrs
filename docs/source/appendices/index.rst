@@ -1,4 +1,5 @@
 .. _appendices:
+
 Appendices
 !!!!!!!!!!
 
@@ -8,3 +9,4 @@ Appendices
    maturity_model
    design_decisions
    roadmap
+   hyperintensional_catvars
