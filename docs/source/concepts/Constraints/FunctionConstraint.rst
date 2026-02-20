@@ -18,29 +18,17 @@ The following are example implementations of FunctionConstraint:
       :language: json
       :lines: 27-43
 
-.. raw:: html
-
-   <div style="margin-top: 0.5em;"></div>
-
 .. collapse:: BRCA2 loss of function variants
 
    .. literalinclude:: ../../../../schema/cat-vrs/json/example_functionVariant-ex2
       :language: json
       :lines: 27-43
 
-.. raw:: html
-
-   <div style="margin-top: 0.5em;"></div>
-
 .. collapse:: PIK3CA p.R38H
 
    .. literalinclude:: ../../../../schema/cat-vrs/json/example_functionVariant-ex3
       :language: json
       :lines: 84-100
-
-.. raw:: html
-
-   <div style="margin-top: 1em;"></div>
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@

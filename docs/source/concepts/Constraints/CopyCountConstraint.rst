@@ -18,9 +18,5 @@ The following are example implementations of CopyCountConstraint:
       :language: json
       :lines: 21-24
 
-.. raw:: html
-
-   <div style="margin-top: 1em;"></div>
-
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@

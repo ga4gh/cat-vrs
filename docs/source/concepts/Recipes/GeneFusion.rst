@@ -21,36 +21,20 @@ The following are example implementations of that satisfy the Gene Fusion recipe
    .. literalinclude:: ../../../schema/cat-vrs/json/example_adjacencyFusion-ex1
       :language: json
 
-.. raw:: html
-
-   <div style="margin-top: 0.5em;"></div>
-
 .. collapse:: v::NTRK1(hgnc:8031)
 
    .. literalinclude:: ../../../schema/cat-vrs/json/example_adjacencyFusion-ex2
       :language: json
-
-.. raw:: html
-
-   <div style="margin-top: 0.5em;"></div>
 
 .. collapse:: ?::ZNF384(ncbi:171017)
 
    .. literalinclude:: ../../../schema/cat-vrs/json/example_adjacencyFusion-ex3
       :language: json
 
-.. raw:: html
-
-   <div style="margin-top: 0.5em;"></div>
-
 .. collapse:: FGFR2(hgnc:3689)::v
 
    .. literalinclude:: ../../../schema/cat-vrs/json/example_adjacencyFusion-ex4
       :language: json
-
-.. raw:: html
-
-   <div style="margin-top: 1em;"></div>
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@
