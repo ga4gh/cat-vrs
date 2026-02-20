@@ -12,6 +12,7 @@ See :ref:`Constraint` for the abstract base class.
 .. toctree::
    :titlesonly:
 
+   AdjacencyConstraint
    CopyChangeConstraint
    CopyCountConstraint
    DefiningAlleleConstraint

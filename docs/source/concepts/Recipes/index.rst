@@ -18,4 +18,5 @@ shared with the community on the |catvrs_discussion| board.
    CanonicalAllele
    CategoricalCnv
    FunctionVariant
+   GeneFusion
    ProteinSequenceConsequence
