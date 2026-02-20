@@ -1,0 +1,63 @@
+id: civic.vid:2202
+type: CategoricalVariant
+name: FGFR2(hgnc:3689)::v
+description: >-
+  An FGFR2 gene fusion, where the FGFR2 kinase domain is required to remain intact to satisfy the constraints of this categorical variant.
+aliases:
+  - FGFR2::v
+  - FGFR2 fusion
+constraints:
+  - type: AdjacencyConstraint
+    orderKnown: true
+    adjoinedElements:
+      - id: hgnc:3689
+        conceptType: Gene
+        name: FGFR2
+        primaryCoding:
+          id: hgnc:3689
+          name: FGFR2
+          system: https://genenames.org
+          code: HGNC:3689
+          iris:
+            - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:3689
+      - type: UnspecifiedElement
+    functionalDomains:
+      - name: FGFR2 protein product (refseq:NP_000132.3) protein tyrosine kinase domain
+        type: FunctionalDomain
+        location:
+          id: ga4gh:SL.6VpekQsGUz74aAgQ0RklrrgJVwYNK8xx
+          type: SequenceLocation
+          description: Amino acid positions 456 - 768 within the FGFR2 protein (refseq:NP_000132.3), which is the protein product of the MANE Select coding transcript for FGFR2 (refseq:NM_000141.5). This sequence corresponds to the catalytic domain of the Protein Tyrosine Kinase.
+          digest: 6VpekQsGUz74aAgQ0RklrrgJVwYNK8xx
+          sequenceReference:
+            id: refseq:NP_000132.3
+            type: SequenceReference
+            name: NP_000132.3
+            description: The protein product of the MANE Select coding transcript for FGFR2 (refseq:NM_000141.5), corresponding to the RefSeq protein accession NP_000132.3.
+            aliases:
+              - ensembl:ENSP00000351276.5
+              - ga4gh:SQ.hAWsXlUEul8pcUbRmOHRQ6osiUdGIiWs
+            refgetAccession: SQ.hAWsXlUEul8pcUbRmOHRQ6osiUdGIiWs
+            residueAlphabet: aa
+          start: 455
+          end: 768
+        status: preserved
+      - name: FGFR2(refseq:NM_000141.5) kinase domain
+        type: FunctionalDomain
+        location:
+          id: ga4gh:SL.511EV3zYjlFNE3CEUMfu9YtuO7q6mOoG
+          description: Positions 1999 - 2937 of the FGFR2 MANE Select transcript (refseq:NM_000141.5), corresponding to FGFR2's kinase domain on the product protein (refseq:NP_000132.3).
+          type: SequenceLocation
+          digest: 511EV3zYjlFNE3CEUMfu9YtuO7q6mOoG
+          sequenceReference:
+            id: refseq:NM_000141.5
+            name: NM_000141.5
+            description: The MANE Select coding transcript for FGFR2.
+            aliases:
+              - ga4gh:SQ.MHz9sixiWHMnZDi0pTaEqEM6nf08v2Vu
+            type: SequenceReference
+            refgetAccession: SQ.MHz9sixiWHMnZDi0pTaEqEM6nf08v2Vu
+            residueAlphabet: na
+          start: 1998
+          end: 2937
+        status: preserved

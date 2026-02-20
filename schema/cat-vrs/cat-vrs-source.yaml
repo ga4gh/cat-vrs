@@ -9,7 +9,7 @@ imports:
   vrs: ../vrs/vrs-source.yaml
 
 namespaces:
-  gks.core: /ga4gh/schema/gks-core/1.0.0/json/
+  gks.core: /ga4gh/schema/gks-core/1.1.0/json/
   vrs: /ga4gh/schema/vrs/2.0.1/json/
 
 $defs:
@@ -69,9 +69,10 @@ $defs:
     oneOf:
       - $ref: "#/$defs/DefiningAlleleConstraint"
       - $ref: "#/$defs/DefiningLocationConstraint"
+      - $ref: "#/$defs/AdjacencyConstraint"
+      - $ref: "#/$defs/FeatureContextConstraint"
       - $ref: "#/$defs/CopyCountConstraint"
       - $ref: "#/$defs/CopyChangeConstraint"
-      - $ref: "#/$defs/FeatureContextConstraint"
       - $ref: "#/$defs/FunctionConstraint"
     heritableProperties:
       type:
@@ -232,3 +233,87 @@ $defs:
         type: string
     required:
       - functionConsequence
+
+  AdjacencyConstraint:
+    maturity: draft
+    type: object
+    inherits: Constraint
+    description: >-
+      Components that define a molecular adjacency of congruent elements.
+    properties:
+      type:
+        extends: type
+        const: AdjacencyConstraint
+        default: AdjacencyConstraint
+        description: 'MUST be "AdjacencyConstraint"'
+      adjoinedElements:
+        type: array
+        description: >-
+          The elements of the adjacency.
+        minItems: 2
+        maxItems: 2
+        ordered: true
+        items:
+          oneOf:
+            - $refCurie: gks.core:iriReference
+            - $refCurie: gks.core:MappableConcept
+            - $refCurie: vrs:Location
+            - $refCurie: vrs:Terminus
+            - $ref: "#/$defs/UnspecifiedElement"
+      functionalDomains:
+        type: array
+        description: >-
+          Functional domains whose presence or absence is required to satisfy the adjacency.
+        ordered: false
+        items:
+          $ref: "#/$defs/FunctionalDomain"
+      linker:
+        $refCurie: vrs:SequenceExpression
+        description: The sequence found between the adjoined elements.
+      orderKnown:
+        type: boolean
+        description: >-
+          When orderKnown is true, the order of adjoinedElements is assumed to denote the 5' partner first and the 3' partner second. If orderKnown is false, then the order of adjoinedElements assumed not in fact to be known, as in the case of a fusion where only one or both partners are known, but not their relative order. This field is redundant and may be set to true when using Sequence Locations and following the VRS 2 Adjacency model, as the order is implied by the usage of start and end on respective adjoinedElements.
+    required:
+      - adjoinedElements
+      - orderKnown
+
+  FunctionalDomain:
+    maturity: draft
+    inherits: gks-core:Entity
+    type: object
+    # Protected class of: AdjacencyConstraint
+    description: A sequence location whose presence or absence is used to define an adjacency.
+    properties:
+      type:
+        extends: type
+        const: FunctionalDomain
+        default: FunctionalDomain
+        description: Must be "FunctionalDomain"
+      location:
+        $refCurie: vrs:Location
+        description: >-
+          A Sequence Location for the domain.
+      status:
+        type: string
+        description: MUST be either "preserved" or "lost"
+        enum:
+          - lost
+          - preserved
+    required:
+      - location
+      - status
+
+  UnspecifiedElement:
+    maturity: draft
+    inherits: gks-core:Entity
+    type: object
+    # Protected class of: AdjacencyConstraint
+    description: Represents an unspecified element that satisfies the described adjacency.
+    properties:
+      type:
+        extends: type
+        const: UnspecifiedElement
+        default: UnspecifiedElement
+        description: Must be "UnspecifiedElement"
+    additionalProperties: false

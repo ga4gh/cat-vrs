@@ -12,12 +12,13 @@ class and types from VRS 2.0 and GKS Core 1.0 that support the Cat-VRS data mode
 - :ref:`Constraints`: models that describe categorical variation and constraints
 - :ref:`Recipes`: models that describe categorical variation recipes with specific constraints
 - :ref:`imported`: imported data types and classes that support the above models
+- :ref:`additionalDataTypes`: additional data types that support Constraints and Recipes
 
 .. toctree::
     :hidden:
 
-    Recipes/index
-    Constraints/index
-    imported/index
     CategoricalVariant
     Constraint
+    Constraints/index
+    Recipes/index
+    imported/index
