@@ -11,6 +11,7 @@ adoption of the standard.
 
 .. toctree::
    :maxdepth: 2
+   :hidden:
    :includehidden:
 
    introduction
