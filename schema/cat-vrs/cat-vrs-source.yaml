@@ -77,6 +77,8 @@ $defs:
     heritableProperties:
       type:
         type: string
+        description: >-
+          MUST be set to the name of the concrete Constraint subtype.
     heritableRequired:
       - type
 
