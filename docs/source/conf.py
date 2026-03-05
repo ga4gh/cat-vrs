@@ -39,6 +39,12 @@ def _parse_release_as_version(rls):
 
 
 # -- Project information -----------------------------------------------------
+print("RTD env:", {
+    "RTD_VERSION": os.environ.get("READTHEDOCS_VERSION"),
+    "RTD_VERSION_TYPE": os.environ.get("READTHEDOCS_VERSION_TYPE"),
+    "RTD_GIT_IDENTIFIER": os.environ.get("READTHEDOCS_GIT_IDENTIFIER"),
+    "RTD_GIT_COMMIT_HASH": os.environ.get("READTHEDOCS_GIT_COMMIT_HASH")
+})
 
 project = "GA4GH Categorical Variation Representation Specification"
 copyright = "2023-%Y, GA4GH CatVRS Contributors."
@@ -47,8 +53,20 @@ master_doc = "index"
 # N.B. RTD ignores these values. :-/
 release = _get_git_tag()
 version = _parse_release_as_version(release)
-# Automatically use the RTD branch/tag as the GitHub version
-github_version = os.environ.get("READTHEDOCS_GIT_IDENTIFIER", "main")
+
+# Generate GitHub version depending on the Readthedocs Version
+# - stable: will use the tag name
+# - latest: will use the corresponding branch name
+# - other branch versions: will use the branch name
+# - PR previews: will use the commit hash
+if os.environ.get("READTHEDOCS"):
+    identifier = os.environ.get("READTHEDOCS_GIT_IDENTIFIER")
+    if identifier and identifier.isdigit():
+        github_version = os.environ.get("READTHEDOCS_GIT_COMMIT_HASH", "main")
+    else:
+        github_version = identifier or os.environ.get("READTHEDOCS_GIT_COMMIT_HASH", "main")
+else:
+    github_version = "main"
 
 # -- Schema doc paths --------------------------------------------------------
 
