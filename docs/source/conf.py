@@ -48,7 +48,7 @@ master_doc = "index"
 release = _get_git_tag()
 version = _parse_release_as_version(release)
 # Automatically use the RTD branch/tag as the GitHub version
-github_version = os.environ.get("READTHEDOCS_VERSION", "main")
+github_version = os.environ.get("READTHEDOCS_GIT_IDENTIFIER", "main")
 
 # -- Schema doc paths --------------------------------------------------------
 
