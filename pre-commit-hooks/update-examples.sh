@@ -11,7 +11,7 @@ if git diff --quiet json/ README.md; then
   echo "No changes to source files in $EXAMPLES_DIR."
 else
   echo "Source files updated in $EXAMPLES_DIR, adding changes to commit."
-  git add $(git ls-files --modified json/ README.md)
+  git add $(git ls-files --modified *.yaml json/ README.md)
 fi
 
 exit 0

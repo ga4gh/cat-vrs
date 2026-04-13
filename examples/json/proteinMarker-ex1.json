@@ -2,7 +2,7 @@
   "id": "pr:p03372",
   "type": "CategoricalVariant",
   "description": "An estrogen receptor that is encoded in the genome of human.",
-  "label": "Estrogen receptor",
+  "name": "Estrogen receptor",
   "constraints": [
     {
       "type": "FeatureContextConstraint",

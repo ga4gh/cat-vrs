@@ -19,4 +19,4 @@ repos:
         name: Update json and README example files
         entry: pre-commit-hooks/update-examples.sh
         language: system
-        files: ^examples/(.*\.yaml|README\.md)$
+        files: ^examples/.*\.yaml$
