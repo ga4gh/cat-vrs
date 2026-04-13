@@ -9,7 +9,7 @@ Cat-VRS development consists of two parts, with two interconnected GitHub repos
 
 - https://github.com/ga4gh/cat-vrs-python is used for the development of the reference implementation, in python.
 
-For most new users, the best way to get started with Cat-VRS is to explore the `cat-vrs-python notebooks <https://github.com/ga4gh/cat-vrs-python/tree/main/notebooks/>`_. There, you will find tutorials for assembling variants in VRS, translating between variant namespaces with SeqRepo, and other topics.
+For most new users, the best way to get started with Cat-VRS is to explore the `cat-vrs-python notebooks <https://github.com/ga4gh/cat-vrs-python/tree/main/notebooks/>`_.
 
 Next, many users may want to start prototyping their own software with some sample data.  There are a number of example datasets available in both YAML and JSON at `<https://github.com/ga4gh/cat-vrs/tree/main/examples>`_.
 
