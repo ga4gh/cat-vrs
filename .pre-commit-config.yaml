@@ -15,8 +15,10 @@ repos:
         entry: pre-commit-hooks/update-json-def-files.sh
         language: system
         files: ^schema/.*/.*-source.yaml$
+        require_serial: true
       - id: update-example-files
         name: Update json and README example files
         entry: pre-commit-hooks/update-examples.sh
         language: system
         files: ^examples/.*\.yaml$
+        require_serial: true
