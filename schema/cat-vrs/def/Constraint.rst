@@ -24,4 +24,4 @@ Constraints are used to construct an intensional semantics of categorical varian
       -
       - string
       - 1..1
-      -
+      - MUST be set to the name of the concrete Constraint subtype.

@@ -8,9 +8,9 @@
    "properties": {
       "type": {
          "type": "string",
+         "description": "MUST be \"FeatureContextConstraint\"",
          "const": "FeatureContextConstraint",
-         "default": "FeatureContextConstraint",
-         "description": "MUST be \"FeatureContextConstraint\""
+         "default": "FeatureContextConstraint"
       },
       "featureContext": {
          "description": "A feature identifier.",

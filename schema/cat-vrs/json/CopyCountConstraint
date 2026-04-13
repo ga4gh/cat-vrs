@@ -8,9 +8,9 @@
    "properties": {
       "type": {
          "type": "string",
+         "description": "MUST be \"CopyCountConstraint\"",
          "const": "CopyCountConstraint",
-         "default": "CopyCountConstraint",
-         "description": "MUST be \"CopyCountConstraint\""
+         "default": "CopyCountConstraint"
       },
       "copies": {
          "description": "The precise value or range of copies members of this categorical variant must satisfy.",
