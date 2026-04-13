@@ -19,4 +19,4 @@ A Constraint is a rule or set of rules that must be satisfied for a CategoricalV
 | DefiningLocationConstraint | [BRAF V600](json/braf-v600.annotated.json), [BRAF V600](json/braf-v600.json), [GRCh38 Xp22.31(chrX:6978350-7594949)x3](json/categoricalCnv-ex3.json), [GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3](json/categoricalCnv-ex1.json), [GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3](json/categoricalCnv-ex2.json), [TP53 Loss](json/tp53-copy-loss.annotated.json), [TP53 Loss](json/tp53-copy-loss.json) |
 | FeatureContextConstraint | [BRCA2 loss of function variants](json/functionVariant-ex2.json), [NRAS functionally normal variants](json/functionVariant-ex1.json), [PIK3CA p.R38H](json/functionVariant-ex3.json), [TP53 Loss](json/tp53-copy-loss.annotated.json), [TP53 Loss](json/tp53-copy-loss.json) |
 | FunctionConstraint | [BRCA2 loss of function variants](json/functionVariant-ex2.json), [NRAS functionally normal variants](json/functionVariant-ex1.json), [PIK3CA p.R38H](json/functionVariant-ex3.json) |
-None | [t(2;15)(q23.1;q25.3)](json/describedVariant-ex1.json)
+| None | [t(2;15)(q23.1;q25.3)](json/describedVariant-ex1.json) |

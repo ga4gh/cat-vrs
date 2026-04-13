@@ -76,7 +76,7 @@ def main():
         )
         lines.append(f"| {constraint_type} | {links} |")
 
-    lines.append("None | [t(2;15)(q23.1;q25.3)](json/describedVariant-ex1.json)")
+    lines.append("| None | [t(2;15)(q23.1;q25.3)](json/describedVariant-ex1.json) |")
     lines.append("")  # trailing newline
 
     output_file.write_text("\n".join(lines))
