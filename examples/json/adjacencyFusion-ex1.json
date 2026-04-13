@@ -1,0 +1,121 @@
+{
+  "id": "civic.vid:1",
+  "type": "CategoricalVariant",
+  "name": "BCR(ncbi:613)::ABL1(ncbi:25)",
+  "description": "An optional field to describe BCR::ABL1",
+  "aliases": [
+    "BCR::ABL1",
+    "t(9;22)(q34;q11)",
+    "BCR-ABL1",
+    "BCR--ABL1",
+    "BCR-ABL",
+    "BCR(hgnc:1014)::ABL1(hgnc:76)"
+  ],
+  "extensions": [
+    {
+      "name": "CIViC 5' Partner Representative Genomic Coordinates",
+      "value": {
+        "reference_build": "GRCh37",
+        "transcript": "ENST00000305877.8",
+        "ensembl_version": 75,
+        "chromosome": "22",
+        "start": 23522397,
+        "end": 23632600
+      }
+    },
+    {
+      "name": "CIViC 3' Partner Representative Genomic Coordinates",
+      "value": {
+        "reference_build": "GRCh37",
+        "transcript": "ENST00000318560.5",
+        "ensembl_version": 75,
+        "chromosome": "9",
+        "start": 133729451,
+        "end": 133763062
+      }
+    }
+  ],
+  "constraints": [
+    {
+      "type": "AdjacencyConstraint",
+      "orderKnown": true,
+      "adjoinedElements": [
+        {
+          "id": "ncbi:613",
+          "conceptType": "Gene",
+          "name": "BCR",
+          "primaryCoding": {
+            "id": "ncbi:613",
+            "name": "BCR",
+            "system": "https://www.ncbi.nlm.nih.gov/gene",
+            "code": "613",
+            "iris": [
+              "https://www.ncbi.nlm.nih.gov/gene/613"
+            ]
+          }
+        },
+        {
+          "id": "ncbi:25",
+          "conceptType": "Gene",
+          "name": "ABL1",
+          "primaryCoding": {
+            "id": "ncbi:25",
+            "name": "ABL1",
+            "system": "https://www.ncbi.nlm.nih.gov/gene",
+            "code": "25",
+            "iris": [
+              "https://www.ncbi.nlm.nih.gov/gene/25"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "members": [
+    {
+      "id": "ga4gh:AJ.KMisuH8wK4gWBigo1o4DHarzi_Xm5g9f",
+      "type": "Adjacency",
+      "name": "NM_004327.4:r.1_3533::NM_005157.6:r.461_5766 gene fusion.",
+      "description": "Example BCR::ABL1 gene fusion, NM_004327.4:r.1_3533::NM_005157.6:r.461_5766, using illustrative transcript breakpoint coordinates.",
+      "digest": "KMisuH8wK4gWBigo1o4DHarzi_Xm5g9f",
+      "adjoinedSequences": [
+        {
+          "id": "ga4gh:SL.SgudSwN0DssFbctqKs05wWDxBFJiFD4G",
+          "type": "SequenceLocation",
+          "digest": "SgudSwN0DssFbctqKs05wWDxBFJiFD4G",
+          "sequenceReference": {
+            "id": "refseq:NM_004327.4",
+            "type": "SequenceReference",
+            "name": "NM_004327.4",
+            "description": "BCR MANE Select transcript.",
+            "aliases": [
+              "ensembl:ENST00000305877.13",
+              "ga4gh:SQ.kpytJsXw3BwLC3oBSjHQS1kwxs4WO3I3"
+            ],
+            "refgetAccession": "SQ.kpytJsXw3BwLC3oBSjHQS1kwxs4WO3I3",
+            "residueAlphabet": "na"
+          },
+          "end": 3533
+        },
+        {
+          "id": "ga4gh:SL.vrnSNKA1YzeUjl5JlZ5wjHOTMKkXk_sQ",
+          "type": "SequenceLocation",
+          "digest": "vrnSNKA1YzeUjl5JlZ5wjHOTMKkXk_sQ",
+          "sequenceReference": {
+            "id": "refseq:NM_005157.6",
+            "type": "SequenceReference",
+            "name": "NM_005157.6",
+            "description": "ABL1 MANE Select transcript.",
+            "aliases": [
+              "ensembl:ENST00000318560.6",
+              "ga4gh:SQ.w8Qg3x-PQ2akJrJQeGEN-_eBUMo1H1CL"
+            ],
+            "refgetAccession": "SQ.w8Qg3x-PQ2akJrJQeGEN-_eBUMo1H1CL",
+            "residueAlphabet": "na"
+          },
+          "start": 460
+        }
+      ]
+    }
+  ]
+}

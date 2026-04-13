@@ -2,7 +2,7 @@
 .DELETE_ON_ERROR:
 
 BUILD_DIR := build
-YAML_DIR := yaml
+YAML_DIR := .
 JSON_DIR := json
 
 vpath %.tag $(BUILD_DIR)
@@ -27,3 +27,4 @@ $(JSON_DIR):
 clean:
 	rm -f $(BUILD_DIR)/*.tag
 	rm -f $(JSON_DIR)/*.json
+
