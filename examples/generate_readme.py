@@ -65,7 +65,7 @@ def main():
         "",
         "A Constraint is a rule or set of rules that must be satisfied for a CategoricalVariant to be considered valid. Constraint sub classes are only used in CategoricalVariant objects.",
         "",
-        "| Constraint | Representative Example(s) |",
+        "| Constraint | Representative examples |",
         "| --- | --- |",
     ]
 

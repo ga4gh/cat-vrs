@@ -19,7 +19,7 @@ $(BUILD_DIR):
 $(JSON_DIR):
 	mkdir -p $(JSON_DIR)
 
-%.tag: $(YAML_DIR)/%.yaml | $(JSON_DIR)
+%.tag: $(YAML_DIR)/%.yaml | $(JSON_DIR) $(BUILD_DIR)
 	@python -c "import sys, yaml, json; json.dump(yaml.safe_load(sys.stdin), sys.stdout, indent=2)" \
 		< $< > $(JSON_DIR)/$*.json
 	@echo "" >> $(JSON_DIR)/$*.json
