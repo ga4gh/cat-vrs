@@ -1,6 +1,6 @@
 # Examples - Categorical Variant Representation Specification
 
-This README is automatically generated from the [Makefile](./Makefile). Please edit examples in YAML. When ready to compile, run the Makefile to generate JSON versions and this README. From this directory:
+This README is automatically generated from the [Makefile](./Makefile) and [an accompanying Python script](./generate_readme.py). Please edit examples in YAML. When ready to compile, run the Makefile to generate JSON versions and this README. From this directory:
 
 ```bash
 make all
