@@ -1,5 +1,6 @@
 .SECONDARY:
 .DELETE_ON_ERROR:
+.PHONY: README.md
 
 BUILD_DIR := build
 YAML_DIR := .
@@ -10,7 +11,7 @@ vpath %.tag $(BUILD_DIR)
 SOURCES := $(wildcard $(YAML_DIR)/*.yaml)
 TAGS := $(notdir $(SOURCES:.yaml=.tag))
 
-all: $(BUILD_DIR) $(TAGS)
+all: $(BUILD_DIR) $(TAGS) README.md
 
 $(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)
@@ -24,7 +25,10 @@ $(JSON_DIR):
 	@echo "" >> $(JSON_DIR)/$*.json
 	@touch $(BUILD_DIR)/$@
 
+README.md: $(TAGS)
+	@python generate_readme.py
+
 clean:
 	rm -f $(BUILD_DIR)/*.tag
 	rm -f $(JSON_DIR)/*.json
-
+	rm -f README.md
