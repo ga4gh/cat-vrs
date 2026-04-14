@@ -900,14 +900,14 @@ $defs:
         featureContext:
           id: TP53
           name: TP53
-          conceptType: gene
+          conceptType: Gene
           primaryCoding:
-            - id: hgnc:11998
-              name: TP53
-              system: https://genenames.org
-              code: HGNC:11998
-              iris:
-                - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11998
+            id: hgnc:11998
+            name: TP53
+            system: https://genenames.org
+            code: HGNC:11998
+            iris:
+              - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11998
           extensions:
             - name: cytogenetic location
               value: 17p13.1

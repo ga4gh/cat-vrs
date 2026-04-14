@@ -92,7 +92,7 @@ constraints:
       name: TP53
 
       # The type of feature being denoted: gene, pseudogene, sequence, region, etc
-      conceptType: gene
+      conceptType: Gene
 
       # A primary coding for the concept.
       # A coding is structured representation of a code for a defined concept in a terminology or code system.
