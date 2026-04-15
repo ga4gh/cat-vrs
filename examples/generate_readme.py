@@ -33,7 +33,7 @@ def main():
         if not name:
             print(f"Warning: no 'name' field in {json_file}, skipping.", file=sys.stderr)
             continue
-        
+
         constraints = data.get("constraints", [])
         if constraints:
             for constraint in constraints:
