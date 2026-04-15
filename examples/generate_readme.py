@@ -19,6 +19,7 @@ def main():
 
     # Map each constraint type to a sorted list of (name, filename) tuples
     constraint_to_examples = defaultdict(list)
+    no_constraint_to_examples: list[tuple[str, str]] = []
 
     for json_file in sorted(json_dir.glob("*.json")):
         with json_file.open() as f:
@@ -29,20 +30,24 @@ def main():
                 continue
 
         name = data.get("name")
-        constraints = data.get("constraints", [])
-
         if not name:
             print(f"Warning: no 'name' field in {json_file}, skipping.", file=sys.stderr)
             continue
-
-        for constraint in constraints:
-            constraint_type = constraint.get("type")
-            if constraint_type:
-                constraint_to_examples[constraint_type].append((name, json_file.name))
+        
+        constraints = data.get("constraints", [])
+        if constraints:
+            for constraint in constraints:
+                constraint_type = constraint.get("type")
+                if constraint_type:
+                    constraint_to_examples[constraint_type].append((name, json_file.name))
+        else:
+            no_constraint_to_examples.append((name, json_file.name))
 
     # Sort examples within each constraint alphabetically by name
     for constraint_type in constraint_to_examples:
         constraint_to_examples[constraint_type].sort(key=lambda x: x[0])
+    if no_constraint_to_examples:
+        no_constraint_to_examples = sorted(no_constraint_to_examples, key=lambda x: x[0])
 
     # Build Markdown
     lines = [
@@ -76,7 +81,10 @@ def main():
         )
         lines.append(f"| {constraint_type} | {links} |")
 
-    lines.append("| None | [t(2;15)(q23.1;q25.3)](json/describedVariant-ex1.json) |")
+    links = ", ".join(
+        f"[{name}](json/{filename})" for name, filename in no_constraint_to_examples
+    )
+    lines.append(f"| None | {links} |")
     lines.append("")  # trailing newline
 
     output_file.write_text("\n".join(lines))
