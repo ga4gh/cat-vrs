@@ -33,7 +33,7 @@ If you already cloned the repo, but forgot to include `--recurse-submodules` you
 
 ## Contributing to the schema
 
-Cat-VRS uses [cat-vrs-source.yaml](./schema/cat-vrs/cat-vrs-source.yaml) as the source document for JSON Schema.
+Cat-VRS uses [cat-vrs-source.yaml](./schema/cat-vrs/cat-vrs-source.yaml) and [recipes-sources.yaml](./schema/cat-vrs/recipes-source.yaml) as the source documents for JSON Schema.
 
 To create the corresponding def and json files after making changes to the source document, from the root directory:
 
@@ -44,7 +44,7 @@ After regenerating the corresponding def and json files from your changes, [vali
 
 ## Contributing to the docs
 
-The Cat-VRS specification documentation is written in reStructuredText and located in [docs/source](docs/source/). Commits to this repo are built automatically at <https://cat-vrs.readthedocs.io/en/latest/index.html>.
+The Cat-VRS specification documentation is written in reStructuredText and located in [docs/source](docs/source/). Commits to this repository are built automatically at <https://cat-vrs.readthedocs.io/en/latest/index.html>.
 
 To build documentation locally, you must install [entr](https://eradman.com/entrproject/):
 
@@ -55,18 +55,18 @@ Then from the root directory:
     cd docs
     make clean watch &
 
-Then, open [docs/build/html/index.html](./docs/build/html/index.html). The above make command should build docs when source changes. (Some types of changes require recleaning and building.)
+Changes can by viewed locally by opening [docs/build/html/index.html](./docs/build/html/index.html). The above make command should build docs when source changes. (Some types of changes require recleaning and building.)
 
-Changes to descriptions of schema classes or recipes and new classes, constraints, and recipes should be made to [docs/source/concepts/](./docs/source/concepts) and committed to be reflected within the [readthedocs](https://cat-vrs.readthedocs.io/en/latest/index.html) online.
+Changes to descriptions of schema classes or recipes and new classes, constraints, and recipes should be made to [docs/source/concepts/](./docs/source/concepts) and committed to be reflected within the [ReadtheDocs](https://cat-vrs.readthedocs.io/en/latest/index.html) online.
 
 ## Contributing to examples
 
-The Cat-VRS repository contains several [examples](./examples/) of representing Categorical Variants in the specification. Like other source files of the specification's schema, these are primarily written in [YAML](./examples/yaml) and converted to [JSON](./examples/json/). To compile changes, from the root directory:
+The Cat-VRS repository contains several [examples](./examples/) of representing categorical variants in the specification. Like other source files of the specification's schema, these are primarily written in [YAML](./examples/yaml) and converted to [JSON](./examples/json/). To compile changes, from the root directory:
 
     cd examples
     make all
 
-New examples should be included on relevant concept pages within our [documentation](#contributing-to-the-docs) and added to our [tests](README.md#testing) within the repository's [test definitions](./tests/test_definitions.yaml).
+New examples should be included on relevant concept pages within our [documentation](README.md#contributing-to-the-docs) and added to our [tests](README.md#testing) within the repository's [test definitions](./tests/test_definitions.yaml).
 
 ## Testing and validation
 
