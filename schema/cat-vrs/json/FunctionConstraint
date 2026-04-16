@@ -8,9 +8,9 @@
    "properties": {
       "type": {
          "type": "string",
+         "description": "MUST be \"FunctionConstraint\"",
          "const": "FunctionConstraint",
-         "default": "FunctionConstraint",
-         "description": "MUST be \"FunctionConstraint\""
+         "default": "FunctionConstraint"
       },
       "functionConsequence": {
          "description": "The functional consequence of members of this categorical variant, as defined by an external ontology. We recommend using one of the defined terms from [The Sequence Ontology](http://www.sequenceontology.org). See Implementation Guidance for more details. ",

@@ -1,0 +1,350 @@
+{
+  "id": "clinvar:55628",
+  "type": "CategoricalVariant",
+  "name": "NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter)",
+  "description": "An example categorical variant that models NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter) from ClinVar.",
+  "aliases": [
+    "NM_007294.4:c.5558dup",
+    "NP_009225.1:p.Tyr1853Ter",
+    "NP_009225.1:p.Y1853*",
+    "NM_007294.4(BRCA1):c.5558dup (p.Y1853*)",
+    "NC_000017.11:g.43045712dup",
+    "NC_000017.10:g.41197729dup",
+    "NC_000017.11:43045711:T:TT"
+  ],
+  "extensions": [
+    {
+      "name": "cytogenetic location",
+      "value": "17q21.31"
+    },
+    {
+      "name": "clinvar variation type",
+      "value": "Duplication"
+    },
+    {
+      "name": "hgvs list",
+      "value": [
+        {
+          "nucleotideExpression": {
+            "syntax": "hgvs.g",
+            "value": "NC_000017.11:g.43045712dup"
+          },
+          "nucleotideType": "genomic"
+        },
+        {
+          "nucleotideExpression": {
+            "syntax": "hgvs.g",
+            "value": "NC_000017.10:g.41197729dup"
+          },
+          "nucleotideType": "genomic"
+        },
+        {
+          "nucleotideExpression": {
+            "syntax": "hgvs.c",
+            "value": "NM_007294.4:c.5558dup"
+          },
+          "nucleotideType": "coding",
+          "maneSelect": true,
+          "proteinExpression": {
+            "syntax": "hgvs.p",
+            "value": "NP_009225.1:p.Tyr1853Ter"
+          },
+          "molecularConsequence": {
+            "name": "stop_gained",
+            "system": "http://www.sequenceontology.org/browser/",
+            "systemVersion": "release_2.5.3",
+            "code": "SO:0001587",
+            "iris": [
+              "http://www.sequenceontology.org/browser/release_2.5.3/term/SO:0001587"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "type": "DefiningAlleleConstraint",
+      "allele": {
+        "id": "ga4gh:VA.BfZ-RbjStWkafMsFBcoSL0f4aAjHJU4n",
+        "type": "Allele",
+        "name": "NP_009225.1:p.Tyr1853Ter",
+        "description": "VRS variation of NP_009225.1:p.Tyr1853Ter, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).",
+        "digest": "BfZ-RbjStWkafMsFBcoSL0f4aAjHJU4n",
+        "expressions": [
+          {
+            "syntax": "hgvs.g",
+            "value": "NC_000017.11:g.43045712dup"
+          },
+          {
+            "syntax": "hgvs.g",
+            "value": "NC_000017.10:g.41197729dup"
+          },
+          {
+            "syntax": "hgvs.c",
+            "value": "NM_007294.4:c.5558dup"
+          },
+          {
+            "syntax": "hgvs.p",
+            "value": "NP_009225.1:p.Tyr1853Ter"
+          }
+        ],
+        "location": {
+          "id": "ga4gh:SL.bR3EOtSngkb9wNbixylsw0sNa_2HCga5",
+          "description": "Amino acid position 1853 of the Refseq protein NP_009225.1, which is the protein product of the MANE Select (GRCh38) coding transcript for BRCA1 (refseq:NM_007294.4).",
+          "type": "SequenceLocation",
+          "digest": "bR3EOtSngkb9wNbixylsw0sNa_2HCga5",
+          "sequenceReference": {
+            "id": "refseq:NP_009225.1",
+            "name": "NP_009225.1",
+            "description": "The protein product of the MANE Select (GRCh38) coding transcript for BRCA1 (refseq:NM_007294.4), corresponding to the Refseq protein accession NP_009225.1.",
+            "aliases": [
+              "ensembl:ENSP00000350283.3",
+              "ga4gh:SQ.nUzIPnHMyQV52hzgBbKl5vlbSwx8M8_Y"
+            ],
+            "type": "SequenceReference",
+            "refgetAccession": "SQ.nUzIPnHMyQV52hzgBbKl5vlbSwx8M8_Y",
+            "residueAlphabet": "aa"
+          },
+          "start": 1852,
+          "end": 1853,
+          "sequence": "Y"
+        },
+        "state": {
+          "type": "LiteralSequenceExpression",
+          "sequence": "*"
+        }
+      },
+      "relations": [
+        {
+          "primaryCoding": {
+            "code": "translation_of",
+            "system": "http://www.sequenceontology.org",
+            "iris": [
+              "http://www.sequenceontology.org/browser/current_release/term/translation_of"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "mappings": [
+    {
+      "coding": {
+        "system": "https://www.ncbi.nlm.nih.gov/clinvar",
+        "code": "55628",
+        "iris": [
+          "https://www.ncbi.nlm.nih.gov/clinvar/variation/55628/"
+        ]
+      },
+      "relation": "exactMatch"
+    },
+    {
+      "coding": {
+        "system": "https://reg.clinicalgenome.org/",
+        "code": "CA003713",
+        "iris": [
+          "https://reg.clinicalgenome.org/redmine/projects/registry/genboree_registry/by_caid?caid=CA003713"
+        ]
+      },
+      "relation": "relatedMatch"
+    },
+    {
+      "coding": {
+        "system": "https://www.ncbi.nlm.nih.gov/snp",
+        "code": "rs80357629",
+        "iris": [
+          "https://www.ncbi.nlm.nih.gov/snp/rs80357629"
+        ]
+      },
+      "relation": "relatedMatch"
+    }
+  ],
+  "members": [
+    {
+      "id": "ga4gh:VA.ju31SHNY7xeTI244BcOS7J78dIek46xL",
+      "type": "Allele",
+      "name": "NC_000017.11:g.43045712dup",
+      "description": "VRS variation of NC_000017.11:g.43045712dup, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).",
+      "digest": "ju31SHNY7xeTI244BcOS7J78dIek46xL",
+      "expressions": [
+        {
+          "syntax": "hgvs.g",
+          "value": "NC_000017.11:g.43045712dup"
+        },
+        {
+          "syntax": "hgvs.g",
+          "value": "NC_000017.10:g.41197729dup"
+        },
+        {
+          "syntax": "hgvs.c",
+          "value": "NM_007294.4:c.5558dup"
+        },
+        {
+          "syntax": "hgvs.p",
+          "value": "NP_009225.1:p.Tyr1853Ter"
+        }
+      ],
+      "location": {
+        "id": "ga4gh:SL.El1CbTY3p0rvxxkf5qI3YdgTo46YIjwl",
+        "description": "Genomic position 43,045,712 on chromosome 17 (refseq:NC_000017.11, GRCh38).",
+        "type": "SequenceLocation",
+        "extensions": [
+          {
+            "name": "GRCh38 1-based, genomic position",
+            "value": "chr17:43045712",
+            "description": "Genomic position 43,045,712 on chromosome 17 (refseq:NC_000017.11, GRCh38)."
+          },
+          {
+            "name": "GRCh38 1-based, inclusive interval notation",
+            "value": "chr17:43045712-43045712",
+            "description": "Genomic positions 43,045,712 to 43,045,712 on chromosome 17 (refseq:NC_000017.11, GRCh38); 1-based, inclusive interval notation."
+          },
+          {
+            "name": "GRCh38 0-based, half-open interval notation",
+            "value": "chr17:43045711-43045712",
+            "description": "Genomic positions 43,045,711 to 43,045,712 on chromosome 17 (refseq:NC_000017.11, GRCh38); 0-based, half-open interval notation."
+          }
+        ],
+        "digest": "El1CbTY3p0rvxxkf5qI3YdgTo46YIjwl",
+        "sequenceReference": {
+          "id": "refseq:NC_000017.11",
+          "name": "NC_000017.11",
+          "description": "Reference sequence for GRCh38 chromosome 17",
+          "type": "SequenceReference",
+          "refgetAccession": "SQ.dLZ15tNO1Ur0IcGjwc3Sdi_0A6Yf4zm7",
+          "residueAlphabet": "na"
+        },
+        "start": 43045711,
+        "end": 43045712,
+        "sequence": "T"
+      },
+      "state": {
+        "type": "ReferenceLengthExpression",
+        "length": 2,
+        "sequence": "TT",
+        "repeatSubunitLength": 1
+      }
+    },
+    {
+      "id": "ga4gh:VA.UPNFCFuk1_6v7IzYbbQTV_PsYJ9WOwSa",
+      "type": "Allele",
+      "name": "NC_000017.10:g.41197729dup",
+      "description": "VRS variation of NC_000017.10:g.41197729dup, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).",
+      "digest": "UPNFCFuk1_6v7IzYbbQTV_PsYJ9WOwSa",
+      "expressions": [
+        {
+          "syntax": "hgvs.g",
+          "value": "NC_000017.11:g.43045712dup"
+        },
+        {
+          "syntax": "hgvs.g",
+          "value": "NC_000017.10:g.41197729dup"
+        },
+        {
+          "syntax": "hgvs.c",
+          "value": "NM_007294.4:c.5558dup"
+        },
+        {
+          "syntax": "hgvs.p",
+          "value": "NP_009225.1:p.Tyr1853Ter"
+        }
+      ],
+      "location": {
+        "id": "ga4gh:SL.bJxQ_soqGHGy4skIMKp6VLEB54XH32M8",
+        "description": "Genomic position 41,197,729 on chromosome 17 (refseq:NC_000017.10, GRCh37).",
+        "type": "SequenceLocation",
+        "extensions": [
+          {
+            "name": "GRCh37 1-based, genomic position",
+            "value": "chr17:41197729",
+            "description": "Genomic position 41,197,729 on chromosome 17 (refseq:NC_000017.10, GRCh37)."
+          },
+          {
+            "name": "GRCh37 1-based, inclusive interval notation",
+            "value": "chr17:41197729-41197729",
+            "description": "Genomic position 41,197,729 to 41,197,729 on chromosome 17 (refseq:NC_000017.10, GRCh37); 1-based, inclusive interval notation."
+          },
+          {
+            "name": "GRCh37 0-based, half-open interval notation",
+            "value": "chr17:41197728-41197729",
+            "description": "Genomic position 41,197,728 to 41,197,729 on chromosome 17 (refseq:NC_000017.10, GRCh37); 0-based, half-open interval notation."
+          }
+        ],
+        "digest": "bJxQ_soqGHGy4skIMKp6VLEB54XH32M8",
+        "sequenceReference": {
+          "id": "refseq:NC_000017.10",
+          "name": "NC_000017.10",
+          "description": "Reference sequence for GRCh37 chromosome 17.",
+          "aliases": [
+            "GRCh37:17",
+            "GRCh37:chr17",
+            "ga4gh:SQ.AjWXsI7AkTK35XW9pgd3UbjpC3MAevlz"
+          ],
+          "type": "SequenceReference",
+          "refgetAccession": "SQ.AjWXsI7AkTK35XW9pgd3UbjpC3MAevlz",
+          "residueAlphabet": "na"
+        },
+        "start": 41197728,
+        "end": 41197729,
+        "sequence": "T"
+      },
+      "state": {
+        "type": "ReferenceLengthExpression",
+        "length": 2,
+        "sequence": "TT",
+        "repeatSubunitLength": 1
+      }
+    },
+    {
+      "id": "ga4gh:VA.BfZ-RbjStWkafMsFBcoSL0f4aAjHJU4n",
+      "type": "Allele",
+      "name": "NP_009225.1:p.Tyr1853Ter",
+      "description": "VRS variation of NP_009225.1:p.Tyr1853Ter, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).",
+      "digest": "BfZ-RbjStWkafMsFBcoSL0f4aAjHJU4n",
+      "expressions": [
+        {
+          "syntax": "hgvs.g",
+          "value": "NC_000017.11:g.43045712dup"
+        },
+        {
+          "syntax": "hgvs.g",
+          "value": "NC_000017.10:g.41197729dup"
+        },
+        {
+          "syntax": "hgvs.c",
+          "value": "NM_007294.4:c.5558dup"
+        },
+        {
+          "syntax": "hgvs.p",
+          "value": "NP_009225.1:p.Tyr1853Ter"
+        }
+      ],
+      "location": {
+        "id": "ga4gh:SL.bR3EOtSngkb9wNbixylsw0sNa_2HCga5",
+        "description": "Amino acid position 1853 of the Refseq protein NP_009225.1, which is the protein product of the MANE Select (GRCh38) coding transcript for BRCA1 (refseq:NM_007294.4).",
+        "type": "SequenceLocation",
+        "digest": "bR3EOtSngkb9wNbixylsw0sNa_2HCga5",
+        "sequenceReference": {
+          "id": "refseq:NP_009225.1",
+          "name": "NP_009225.1",
+          "description": "The protein product of the MANE Select (GRCh38) coding transcript for BRCA1 (refseq:NM_007294.4), corresponding to the Refseq protein accession NP_009225.1.",
+          "aliases": [
+            "ensembl:ENSP00000350283.3",
+            "ga4gh:SQ.nUzIPnHMyQV52hzgBbKl5vlbSwx8M8_Y"
+          ],
+          "type": "SequenceReference",
+          "refgetAccession": "SQ.nUzIPnHMyQV52hzgBbKl5vlbSwx8M8_Y",
+          "residueAlphabet": "aa"
+        },
+        "start": 1852,
+        "end": 1853,
+        "sequence": "Y"
+      },
+      "state": {
+        "type": "LiteralSequenceExpression",
+        "sequence": "*"
+      }
+    }
+  ]
+}

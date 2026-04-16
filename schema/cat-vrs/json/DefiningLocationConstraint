@@ -8,9 +8,9 @@
    "properties": {
       "type": {
          "type": "string",
+         "description": "MUST be \"DefiningLocationConstraint\"",
          "const": "DefiningLocationConstraint",
-         "default": "DefiningLocationConstraint",
-         "description": "MUST be \"DefiningLocationConstraint\""
+         "default": "DefiningLocationConstraint"
       },
       "location": {
          "oneOf": [

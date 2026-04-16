@@ -8,9 +8,9 @@
    "properties": {
       "type": {
          "type": "string",
+         "description": "MUST be \"DefiningAlleleConstraint\"",
          "const": "DefiningAlleleConstraint",
-         "default": "DefiningAlleleConstraint",
-         "description": "MUST be \"DefiningAlleleConstraint\""
+         "default": "DefiningAlleleConstraint"
       },
       "allele": {
          "oneOf": [

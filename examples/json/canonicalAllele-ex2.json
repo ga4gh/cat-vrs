@@ -1,0 +1,295 @@
+{
+  "id": "clingen:CA415424538",
+  "type": "CategoricalVariant",
+  "name": "NC_000001.11:g.1699974C>G",
+  "description": "An example canonical allele.",
+  "aliases": [
+    "NC_000001.11:g.1699974C>G",
+    "NC_000001.10:g.1631413C>G"
+  ],
+  "extensions": [
+    {
+      "name": "cytogenetic location",
+      "value": "1p36.33"
+    },
+    {
+      "name": "hgvs list",
+      "value": [
+        {
+          "nucleotideExpression": {
+            "syntax": "hgvs.g",
+            "value": "NC_000001.11:g.1699974C>G"
+          }
+        },
+        {
+          "nucleotideExpression": {
+            "syntax": "hgvs.g",
+            "value": "NC_000001.10:g.1631413C>G"
+          }
+        }
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "type": "DefiningAlleleConstraint",
+      "allele": {
+        "id": "ga4gh:VA.WjRY1EXgci6Nd0M2yI86Ue_OOnfnb-Ss",
+        "type": "Allele",
+        "name": "NC_000001.11:g.1699974C>G",
+        "description": "VRS Allele of NC_000001.11:g.1699974C>G, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).",
+        "digest": "WjRY1EXgci6Nd0M2yI86Ue_OOnfnb-Ss",
+        "expressions": [
+          {
+            "syntax": "hgvs.g",
+            "value": "NC_000001.11:g.1699974C>G"
+          }
+        ],
+        "location": {
+          "id": "ga4gh:SL.YmbtK6FLqlk2bLjpFwH-y7k4RLq_t7L3",
+          "description": "Genomic position 1699974 on chromosome 1 (refseq:NC_000001.11, GRCh38).",
+          "extensions": [
+            {
+              "name": "GRCh38 1-based, genomic position",
+              "value": "chr1:1699974",
+              "description": "Genomic position 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38)."
+            },
+            {
+              "name": "GRCh38 1-based, inclusive interval notation",
+              "value": "chr1:1699974-1699974",
+              "description": "Genomic positions 1,699,974 to 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38); 1-based, inclusive interval notation."
+            },
+            {
+              "name": "GRCh38 0-based, half-open interval notation",
+              "value": "chr1:1699973-1699974",
+              "description": "Genomic positions 1,699,973 to 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38); 0-based, half-open interval notation."
+            }
+          ],
+          "type": "SequenceLocation",
+          "digest": "YmbtK6FLqlk2bLjpFwH-y7k4RLq_t7L3",
+          "sequenceReference": {
+            "id": "refseq:NC_000001.11",
+            "name": "NC_000001.11",
+            "description": "Reference sequence for GRCh38 chromosome 1.",
+            "aliases": [
+              "GRCh38:1",
+              "GRCh38:chr1",
+              "ga4gh:SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO"
+            ],
+            "type": "SequenceReference",
+            "refgetAccession": "SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO",
+            "residueAlphabet": "na"
+          },
+          "start": 1699973,
+          "end": 1699974,
+          "sequence": "C"
+        },
+        "state": {
+          "type": "LiteralSequenceExpression",
+          "sequence": "G"
+        }
+      },
+      "relations": [
+        {
+          "primaryCoding": {
+            "code": "liftover_to",
+            "system": "ga4gh-gks-term:allele-relation"
+          }
+        },
+        {
+          "primaryCoding": {
+            "code": "transcribed_to",
+            "system": "http://www.sequenceontology.org",
+            "iris": [
+              "http://www.sequenceontology.org/browser/current_release/term/transcribed_to"
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "mappings": [
+    {
+      "coding": {
+        "system": "https://reg.clinicalgenome.org/",
+        "code": "CA415424538",
+        "iris": [
+          "https://reg.clinicalgenome.org/redmine/projects/registry/genboree_registry/by_caid?caid=CA415424538"
+        ]
+      },
+      "relation": "exactMatch"
+    },
+    {
+      "coding": {
+        "system": "https://www.ncbi.nlm.nih.gov/snp/",
+        "code": "rs1391950675",
+        "iris": [
+          "https://www.ncbi.nlm.nih.gov/snp/rs1391950675"
+        ]
+      },
+      "relation": "relatedMatch"
+    },
+    {
+      "coding": {
+        "system": "https://gnomad.broadinstitute.org",
+        "code": "1-1631413-C-G",
+        "iris": [
+          "https://gnomad.broadinstitute.org/variant/1-1631413-C-G?dataset=gnomad_r2_1"
+        ],
+        "extensions": [
+          {
+            "name": "dataset",
+            "value": "gnomad_r2_1"
+          }
+        ]
+      },
+      "relation": "relatedMatch"
+    },
+    {
+      "coding": {
+        "system": "https://gnomad.broadinstitute.org",
+        "code": "1-1699974-C-G",
+        "iris": [
+          "https://gnomad.broadinstitute.org/variant/1-1699974-C-G?dataset=gnomad_r3"
+        ],
+        "extensions": [
+          {
+            "name": "dataset",
+            "value": "gnomad_r3"
+          }
+        ]
+      },
+      "relation": "relatedMatch"
+    },
+    {
+      "coding": {
+        "system": "https://gnomad.broadinstitute.org",
+        "code": "chr1-1699974-C-G",
+        "iris": [
+          "https://gnomad.broadinstitute.org/variant/chr1-1699974-C-G?dataset=gnomad_r4"
+        ],
+        "extensions": [
+          {
+            "name": "dataset",
+            "value": "gnomad_r4"
+          }
+        ]
+      },
+      "relation": "relatedMatch"
+    }
+  ],
+  "members": [
+    {
+      "id": "ga4gh:VA.WjRY1EXgci6Nd0M2yI86Ue_OOnfnb-Ss",
+      "type": "Allele",
+      "name": "NC_000001.11:g.1699974C>G",
+      "description": "VRS variation of NC_000001.11:g.1699974C>G, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).",
+      "digest": "WjRY1EXgci6Nd0M2yI86Ue_OOnfnb-Ss",
+      "expressions": [
+        {
+          "syntax": "hgvs.g",
+          "value": "NC_000001.11:g.1699974C>G"
+        }
+      ],
+      "location": {
+        "id": "ga4gh:SL.YmbtK6FLqlk2bLjpFwH-y7k4RLq_t7L3",
+        "description": "Genomic position 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38).",
+        "type": "SequenceLocation",
+        "extensions": [
+          {
+            "name": "GRCh38 1-based, genomic position",
+            "value": "chr1:1699974",
+            "description": "Genomic position 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38)."
+          },
+          {
+            "name": "GRCh38 1-based, inclusive interval notation",
+            "value": "chr1:1699974-1699974",
+            "description": "Genomic positions 1,699,974 to 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38); 1-based, inclusive interval notation."
+          },
+          {
+            "name": "GRCh38 0-based, half-open interval notation",
+            "value": "chr1:1699973-1699974",
+            "description": "Genomic positions 1,699,973 to 1,699,974 on chromosome 1 (refseq:NC_000001.11, GRCh38); 0-based, half-open interval notation."
+          }
+        ],
+        "digest": "YmbtK6FLqlk2bLjpFwH-y7k4RLq_t7L3",
+        "sequenceReference": {
+          "id": "refseq:NC_000001.11",
+          "name": "NC_000001.11",
+          "description": "Reference sequence for GRCh38 chromosome 1.",
+          "aliases": [
+            "GRCh38:1",
+            "GRCh38:chr1",
+            "ga4gh:SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO"
+          ],
+          "type": "SequenceReference",
+          "refgetAccession": "SQ.Ya6Rs7DHhDeg7YaOSg1EoNi3U_nQ9SvO",
+          "residueAlphabet": "na"
+        },
+        "start": 1699973,
+        "end": 1699974,
+        "sequence": "C"
+      },
+      "state": {
+        "type": "LiteralSequenceExpression",
+        "sequence": "G"
+      }
+    },
+    {
+      "id": "ga4gh:VA.WW0r6Dh-z_ftn9yS-i0f1Y62JNCpVed2",
+      "type": "Allele",
+      "name": "NC_000001.10:g.1631413C>G",
+      "description": "VRS variation of NC_000001.10:g.1631413C>G, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).",
+      "digest": "WW0r6Dh-z_ftn9yS-i0f1Y62JNCpVed2",
+      "expressions": [
+        {
+          "syntax": "hgvs.g",
+          "value": "NC_000001.10:g.1631413C>G"
+        }
+      ],
+      "location": {
+        "id": "ga4gh:SL.QsC4TgLsfR6-TatBj1sVKAgfv9bGYSxb",
+        "description": "Genomic position 1,631,413 on chromosome 1 (refseq:NC_000001.10, GRCh37).",
+        "type": "SequenceLocation",
+        "extensions": [
+          {
+            "name": "GRCh37 1-based, genomic position",
+            "value": "chr1:1631413",
+            "description": "Genomic position 1,631,413 on chromosome 1 (refseq:NC_000001.10, GRCh37)."
+          },
+          {
+            "name": "GRCh37 1-based, inclusive interval notation",
+            "value": "chr1:1631413-1631413",
+            "description": "Genomic positions 1,631,413 to 1,631,413 on chromosome 1 (refseq:NC_000001.10, GRCh37); 1-based, inclusive interval notation."
+          },
+          {
+            "name": "GRCh37 0-based, half-open interval notation",
+            "value": "chr1:1631412-1631413",
+            "description": "Genomic positions 1,631,412 to 1,631,413 on chromosome 1 (refseq:NC_000001.10, GRCh37); 0-based, half-open interval notation."
+          }
+        ],
+        "digest": "QsC4TgLsfR6-TatBj1sVKAgfv9bGYSxb",
+        "sequenceReference": {
+          "id": "refseq:NC_000001.10",
+          "name": "NC_000001.10",
+          "description": "Reference sequence for GRCh37 chromosome 1.",
+          "aliases": [
+            "GRCh37.1",
+            "GRCh37:chr1",
+            "ga4gh:SQ.S_KjnFVz-FE7M0W6yoaUDgYxLPc1jyWU"
+          ],
+          "type": "SequenceReference",
+          "refgetAccession": "SQ.S_KjnFVz-FE7M0W6yoaUDgYxLPc1jyWU",
+          "residueAlphabet": "na"
+        },
+        "start": 1631412,
+        "end": 1631413,
+        "sequence": "C"
+      },
+      "state": {
+        "type": "LiteralSequenceExpression",
+        "sequence": "G"
+      }
+    }
+  ]
+}

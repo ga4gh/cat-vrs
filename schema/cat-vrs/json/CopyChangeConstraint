@@ -8,9 +8,9 @@
    "properties": {
       "type": {
          "type": "string",
+         "description": "MUST be \"CopyChangeConstraint\"",
          "const": "CopyChangeConstraint",
-         "default": "CopyChangeConstraint",
-         "description": "MUST be \"CopyChangeConstraint\""
+         "default": "CopyChangeConstraint"
       },
       "copyChange": {
          "description": "The relative assessment of the change in copies that members of this categorical variant satisfies.",

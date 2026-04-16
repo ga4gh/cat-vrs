@@ -13,7 +13,7 @@ for DIR in $DIRS; do
     echo "No changes to source files in $DIR."
   else
     echo "Source files updated in $DIR, adding changes to commit."
-    git add $(git ls-files --modified json def)
+    git add $(git ls-files --modified *.yaml json/ def/)
   fi
 done
 

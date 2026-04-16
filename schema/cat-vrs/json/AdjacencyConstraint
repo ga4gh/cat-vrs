@@ -8,9 +8,9 @@
    "properties": {
       "type": {
          "type": "string",
+         "description": "MUST be \"AdjacencyConstraint\"",
          "const": "AdjacencyConstraint",
-         "default": "AdjacencyConstraint",
-         "description": "MUST be \"AdjacencyConstraint\""
+         "default": "AdjacencyConstraint"
       },
       "adjoinedElements": {
          "type": "array",

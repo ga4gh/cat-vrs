@@ -16,6 +16,7 @@ adoption of the standard.
 
    introduction
    how_cat_vrs_works
+   quickstart
    getting_involved
    concepts/index
    impl-guide/index
