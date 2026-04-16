@@ -27,7 +27,7 @@ Planned
 
 * Maturity Dashboard
 
-* cDNA Variant Recipe 
+* cDNA Variant Recipe
 
 * Oncogenicity Constraint
 
