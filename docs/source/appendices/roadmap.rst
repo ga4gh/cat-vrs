@@ -27,21 +27,21 @@ Planned
 
 * Maturity Dashboard
 
-* cDNA Variant Recipe
+* cDNA Variant Recipe 
 
 * Oncogenicity Constraint
 
 * Pathogenicity Constraint
 
-* Complex Categorical Variants to represent e.g. Haplotypes, and PGx star alleles
+* Complex Categorical Variants to represent e.g. Haplotypes, and PGx Star Alleles
 
 * Support for systemic biomarker variants, such as TMB, MSI, or phosphorylation
 
-* Recipe-based Guides and Tutorials for a more intuitive introduction to Cat-VRs documentation
+* `Recipe-based Guides and Tutorials for a more intuitive introduction to Cat-VRs documentation <https://github.com/ga4gh/cat-vrs/issues/222>`_
 
-* Add plain-language Glossary-of-Terms to the ReadTheDocs documentation
+* `Add plain-language Glossary-of-Terms to the ReadTheDocs documentation <https://github.com/ga4gh/cat-vrs/issues/137>`_
 
-* Add plain-language (in addition to computational), intuitive descriptions for all data classes
+* `Add plain-language (in addition to computational), intuitive descriptions for all data classes <https://github.com/ga4gh/cat-vrs/issues/196>`_
 
 .. Complete.
 
