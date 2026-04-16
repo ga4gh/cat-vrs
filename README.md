@@ -40,7 +40,7 @@ To create the corresponding def and json files after making changes to the sourc
     cd schema
     make all
 
-After regenerating the corresponding def and json files from your changes, [validate your changes locally](README.md#testing) by running the updated schema against the current [examples/](./examples).
+After regenerating the corresponding def and json files from your changes, [validate your changes locally](#testing-and-validation) by running the updated schema against the current [examples/](./examples).
 
 ## Contributing to the docs
 
@@ -57,7 +57,7 @@ Then from the root directory:
 
 Changes can by viewed locally by opening [docs/build/html/index.html](./docs/build/html/index.html). The above make command should build docs when source changes. (Some types of changes require recleaning and building.)
 
-Changes to descriptions of schema classes or recipes and new classes, constraints, and recipes should be made to [docs/source/concepts/](./docs/source/concepts) and committed to be reflected within the [ReadtheDocs](https://cat-vrs.readthedocs.io/en/latest/index.html) online.
+Changes to descriptions of schema classes or recipes and new classes, constraints, and recipes should be made to [docs/source/concepts/](./docs/source/concepts) and committed to be reflected within the [Read the Docs](https://cat-vrs.readthedocs.io/en/latest/index.html) online.
 
 ## Contributing to examples
 
@@ -66,7 +66,7 @@ The Cat-VRS repository contains several [examples](./examples/) of representing 
     cd examples
     make all
 
-New examples should be included on relevant concept pages within our [documentation](README.md#contributing-to-the-docs) and added to our [tests](README.md#testing) within the repository's [test definitions](./tests/test_definitions.yaml).
+New examples should be included on relevant concept pages within our [documentation](#contributing-to-the-docs) and added to our [tests](#testing-and-validation) within the repository's [test definitions](./tests/test_definitions.yaml).
 
 ## Testing and validation
 
