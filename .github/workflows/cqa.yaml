@@ -11,7 +11,7 @@ jobs:
           - "end-of-file-fixer"
           - "mixed-line-ending"
           - "update-json-def-files"
-          - "update-examples"
+          - "update-example-files"
     steps:
       - uses: actions/checkout@v4
 
