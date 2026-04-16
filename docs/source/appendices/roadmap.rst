@@ -25,23 +25,23 @@ Active
 Planned
 @@@@@@@
 
-* 2026 Q2 - Maturity Dashboard
+* Maturity Dashboard
 
-* 2026 Q2 - cDNA Variant Recipe
+* cDNA Variant Recipe
 
-* 2026 Q3 - Oncogenicity Constraint
+* Oncogenicity Constraint
 
-* 2026 Q3 - Pathogenicity Constraint
+* Pathogenicity Constraint
 
-* 2026 Q4 - Complex Categrical Variants to represent e.g. haplotypes, and PGx star alleles
+* Complex Categorical Variants to represent e.g. Haplotypes, and PGx star alleles
 
-* 2026 Q4 - Support for systemic biomarker variants, such as TMB, MSI, or phosphorylation
+* Support for systemic biomarker variants, such as TMB, MSI, or phosphorylation
 
-* As soon as bandwidth allows - Recipe-based Guides and Tutorials for a more intuitive introduction to Cat-VRs documentation
+* Recipe-based Guides and Tutorials for a more intuitive introduction to Cat-VRs documentation
 
-* As soon as bandwidth allows - Add plain-language Glossary-of-Terms to the ReadTheDocs documentation
+* Add plain-language Glossary-of-Terms to the ReadTheDocs documentation
 
-* As soon as bandwidth allows - Add plain-language (in addition to computational), intuitive descriptions for all data classes
+* Add plain-language (in addition to computational), intuitive descriptions for all data classes
 
 .. Complete.
 
