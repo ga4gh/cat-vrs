@@ -57,7 +57,7 @@ Then from the root directory:
 
 Changes can by viewed locally by opening [docs/build/html/index.html](./docs/build/html/index.html). The above make command should build docs when source changes. (Some types of changes require recleaning and building.)
 
-Changes to descriptions of schema classes or recipes and new classes, constraints, and recipes should be made to [docs/source/concepts/](./docs/source/concepts) and committed to be reflected within the [Read the Docs](https://cat-vrs.readthedocs.io/en/latest/index.html) online.
+New classes, Constraints, and Recipes as well changes to descriptions of them should be made to [docs/source/concepts/](./docs/source/concepts) and committed to be reflected within the [Read the Docs](https://cat-vrs.readthedocs.io/en/latest/index.html).
 
 ## Contributing to examples
 
