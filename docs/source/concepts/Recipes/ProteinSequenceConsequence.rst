@@ -19,12 +19,12 @@ The following are example implementations of that satisfy the CanonicalAllele re
 
 .. collapse:: NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs)
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_canonicalAllele-ex1
+   .. literalinclude:: ../../../../examples/json/canonicalAllele-ex1.json
       :language: json
 
 .. collapse:: NC_000001.11:g.1699974C>G
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_canonicalAllele-ex2
+   .. literalinclude:: ../../../../examples/json/canonicalAllele-ex2.json
       :language: json
 
 Implementation Guidance

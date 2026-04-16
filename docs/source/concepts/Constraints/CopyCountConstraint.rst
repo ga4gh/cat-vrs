@@ -14,9 +14,9 @@ The following are example implementations of CopyCountConstraint:
 
 .. collapse:: 3 copies
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_categoricalCnv-ex3
+   .. literalinclude:: ../../../../examples/json/categoricalCnv-ex3.json
       :language: json
-      :lines: 21-24
+      :lines: 18-21
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@
