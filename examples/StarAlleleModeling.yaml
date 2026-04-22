@@ -1,0 +1,111 @@
+id: SAS.NUDT15
+version: 2026.04.21
+gene: ... # come back to this
+sequenceReference:
+    'NC_000013.11': 
+        type: SequenceReference 
+        refgetAccession: 'ga4gh:SQ.???' # come back to this
+permittedLocations:
+    'ga4gh:SL.???747': 
+        type: SequenceLocation
+        start: 48037747
+        end: 48037748
+        sequenceReference: "#/sequenceReference/NC_000013.11"
+    'ga4gh:SL.???748':
+      location:
+        id: SL... # come back to this
+        type: SequenceLocation
+        start: 48037748
+        end: 48037749
+        sequenceReference: "#/sequenceReference/NC_000013.11"
+permittedAlleles:
+    'ga4gh:VA.??747T=': #come back to this
+        location: '#/permittedLocations/ga4gh:SL.???747'
+        state:
+            type: LiteralSequenceExpression
+            sequence: "T"
+    'ga4gh:VA.??747TC': #come back to this
+        location: '#/permittedLocations/ga4gh:SL.???747'
+        state:
+            type: LiteralSequenceExpression
+            sequence: "C"
+    'ga4gh:VA.??748G=': #come back to this
+        location: '#/permittedLocations/ga4gh:SL.???748'
+        state:
+            type: LiteralSequenceExpression
+            sequence: "G"
+    'ga4gh:VA.??748GC': #come back to this
+        location: '#/permittedLocations/ga4gh:SL.???748'
+        state:
+            type: LiteralSequenceExpression
+            sequence: "C"
+    'ga4gh:VA.??Rep3': #come back to this
+        location: 
+        state:
+            type: ReferenceLengthExpression
+            length: 19
+            repeatSubunitLength: 19
+            sequence: GGAGTCGGAGTCGGAGTCG
+    'ga4gh:VA.??Rep2': #come back to this
+        location: #come back to this
+        state:
+            type: ReferenceLengthExpression
+            length: 13
+            repeatSubunitLength: 6
+            sequence: GGAGTCGGAGTCG
+    'ga4gh:VA.??Rep4': 
+        location: #come back to this
+        state:
+            type: ReferenceLengthExpression
+            length: 25
+            repeatSubunitLength: 19
+            sequence: GGAGTCGGAGTCGGAGTCGGAGTCG
+      ... # add in rest
+starAlleles:
+    "NUDT15.*1":  # come back to this
+        type: CategoricalVariant
+        constraints:
+          - type: CisPhasedBlockConstraint # not a thing
+            members:
+            - type: DefiningAlleleConstraint
+                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??747T='
+            - type: DefiningAlleleConstraint
+                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??748G='
+            - type: DefiningAlleleConstraint
+                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??Rep3'
+    "NUDT15.*9": # come back to this
+        type: CategoricalVariant
+        constraints:
+          - type: CisPhasedBlockConstraint # not a thing
+            members:
+              - type: DefiningAlleleConstraint
+                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??747T='
+              - type: DefiningAlleleConstraint
+                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??748G='
+              - type: DefiningAlleleConstraint
+                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??Rep2'
+    "NUDT15.*10": # come back to this
+        constraints:
+          - type: CisPhasedBlockConstraint # not a thing
+            members:
+              - type: DefiningAlleleConstraint
+                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??747T='
+              - type: DefiningAlleleConstraint
+                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??748GC'
+              - type: DefiningAlleleConstraint
+                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??Rep3'
+    "NUDT15.*3": # come back to this
+        constraints:
+          - type: CisPhasedBlockConstraint # not a thing
+            members:
+              - type: DefiningAlleleConstraint
+                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??747T='
+              - type: DefiningAlleleConstraint
+                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??748GC'
+              - type: LogicalConstraint
+                operation: 'OR'
+                members:
+                  - type: DefiningAlleleConstraint
+                    allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??Rep3'
+                  - type: DefiningAlleleConstraint
+                    allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??Rep4'
