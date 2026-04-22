@@ -26,11 +26,7 @@ The following are example implementations of Copy Change Constraint:
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@
-The `copyChange` attribute uses a value set derived from the the `Experimental Factor Ontology (EFO) <https://www.ebi.ac.uk/efo/>`_. Any of the following **bolded terms** can be used to populate this attribute:
-
-Implementation Guidance
-@@@@@@@@@@@@@@@@@@@@@@@
-The `copyChange` attribute uses a value set derived from the `Experimental Factor Ontology (EFO) <https://www.ebi.ac.uk/efo/>`_. Any of the following **bolded terms** can be used to populate this attribute:
+The `copyChange` attribute uses a value set derived from the `Experimental Factor Ontology (EFO) <https://www.ebi.ac.uk/efo/>`_. Any of the following **bolded Terms** can be used to populate this attribute:
 
 .. list-table::
    :header-rows: 1
