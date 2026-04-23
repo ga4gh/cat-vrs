@@ -14,21 +14,21 @@ The following are example implementations of FunctionConstraint:
 
 .. collapse:: NRAS functionally normal variants
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_functionVariant-ex1
+   .. literalinclude:: ../../../../examples/json/functionVariant-ex1.json
       :language: json
-      :lines: 27-43
+      :lines: 24-40
 
 .. collapse:: BRCA2 loss of function variants
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_functionVariant-ex2
+   .. literalinclude:: ../../../../examples/json/functionVariant-ex2.json
       :language: json
-      :lines: 27-43
+      :lines: 24-40
 
 .. collapse:: PIK3CA p.R38H
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_functionVariant-ex3
+   .. literalinclude:: ../../../../examples/json/functionVariant-ex3.json
       :language: json
-      :lines: 84-100
+      :lines: 81-97
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@

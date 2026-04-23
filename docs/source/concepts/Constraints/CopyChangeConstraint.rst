@@ -14,15 +14,15 @@ The following are example implementations of Copy Change Constraint:
 
 .. collapse:: Gain
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_categoricalCnv-ex2
+   .. literalinclude:: ../../../../examples/json/categoricalCnv-ex2.json
       :language: json
-      :lines: 43-46
+      :lines: 40-43
 
 .. collapse:: Loss
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_tp53-copy-loss
+   .. literalinclude:: ../../../../examples/json/tp53-copy-loss.json
       :language: json
-      :lines: 99-102
+      :lines: 94-97
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@

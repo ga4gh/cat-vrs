@@ -55,8 +55,8 @@ def main():
         "",
         (
             "This README is automatically generated from the [Makefile](./Makefile) and [an accompanying Python script](./generate_readme.py). "
-            "Please edit examples in YAML. "
-            "When ready to compile, run the Makefile to generate both the JSON versions and this README. "
+            "**Please edit examples in [YAML](./yaml/)** "
+            "When ready to compile, run the Makefile to generate both the [JSON versions](./json/) and this README. "
             "From this directory:\n"
             "\n"
             "```bash\n"
