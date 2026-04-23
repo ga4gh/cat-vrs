@@ -7,7 +7,7 @@ Annotated examples of Cat-VRS categorical variant representations.
 
 .. rubric:: By Constraint
 
-.. list-table:: 
+.. list-table::
    :header-rows: 1
 
    * - Constraint
