@@ -10,32 +10,55 @@ Cat-VRS is under active development. A summary of many of our ongoing, future, a
 Active
 @@@@@@
 
-
-* Implement additional constraints, including the `CopyChangeConstraint <https://github.com/ga4gh/cat-vrs/issues/88>`_, the `FeatureContextConstraint <https://github.com/ga4gh/cat-vrs/issues/98>`_, and the `FunctionConstraint <https://github.com/ga4gh/cat-vrs/discussions/54>`_.
-
 * `Incorporate boolean logic into the constraint model to cover complex categorical variants <https://github.com/ga4gh/cat-vrs/issues/92>`_
 
 * `Implement all Trial Use classes in testbed <https://github.com/ga4gh/cat-vrs/issues/132>`_
+
+* `“Call to Action” manuscript: <https://docs.google.com/document/d/1IRo2JlgIPERZeT35wFAUuldWvhk7LRM7hvAhZ98hRro/edit?tab=t.0#heading=h.llb8raw1flsa>`_ brief introduction and landscape analysis of categorical variants - Preprint available, Journal submission ready
+
+* `Pilot integration of Cat-VRS into Beacon v3 / VLM <https://docs.google.com/document/d/1bMFrDKHrRgwlLpIRzj74vFxytaum9Ma3FbcQt-e-Ots/edit?tab=t.0#heading=h.5pmmfwujuect>`_
+
+* Computational Notebook-based examples and implementation guides (substantial progress made during the `2026 pre-connect GKS Hackathon <https://github.com/ga4gh/cat-vrs/pull/219>`_)
 
 .. Planned.
 
 Planned
 @@@@@@@
 
-* 2025 Q3 - `Trial Use Review Ballot <https://github.com/ga4gh/cat-vrs/discussions/86>`_ for additional constraint classes (copy change, feature context, and function)
+* Maturity Dashboard
 
-* 2025 Q3 - `“Call to Action” manuscript: <https://docs.google.com/document/d/1IRo2JlgIPERZeT35wFAUuldWvhk7LRM7hvAhZ98hRro/edit?tab=t.0#heading=h.llb8raw1flsa>`_ brief introduction and landscape analysis of categorical variants
+* cDNA Variant Recipe
 
-* Representation of `fusions <https://github.com/ga4gh/cat-vrs/discussions/55>`_ and expression variants
+* Oncogenicity Constraint
 
-* Explore forward compatibility for integration into Beacon v3 / VLM (e.g. parameterization)
+* Pathogenicity Constraint
+
+* Complex Categorical Variants to represent e.g. Haplotypes, and PGx Star Alleles
+
+* Support for systemic biomarker variants, such as TMB, MSI, or phosphorylation
+
+* `Recipe-based Guides and Tutorials for a more intuitive introduction to Cat-VRs documentation <https://github.com/ga4gh/cat-vrs/issues/222>`_
+
+* `Add plain-language Glossary-of-Terms to the ReadTheDocs documentation <https://github.com/ga4gh/cat-vrs/issues/137>`_
+
+* `Add plain-language (in addition to computational), intuitive descriptions for all data classes <https://github.com/ga4gh/cat-vrs/issues/196>`_
 
 .. Complete.
 
 Complete
 @@@@@@@@
 
+* 2026 Q1 (March) - New recipes for Function variants and Fusions.
+
+* 2026 Q1 (March) - Representation of `fusions <https://github.com/ga4gh/cat-vrs/discussions/55>`_ via an AdjacencyConstraint and FunctionConstraint
+
+* 2026 Q1 (February) - Implement additional constraints, including the `CopyChangeConstraint <https://github.com/ga4gh/cat-vrs/issues/88>`_, the `FeatureContextConstraint <https://github.com/ga4gh/cat-vrs/issues/98>`_, and the `FunctionConstraint <https://github.com/ga4gh/cat-vrs/discussions/54>`_.
+
+* 2025 Q3 (December) - `Trial Use Review Ballot <https://github.com/ga4gh/cat-vrs/discussions/86>`_ for additional constraint classes (copy change, feature context)
+
 * 2025 Q2 (June) - `Expand Cat-VRS examples <https://github.com/ga4gh/cat-vrs/pull/147>`_.
+
+* 2025 Q2 (June) - `Cat-VRS v1.0 public release <https://www.ga4gh.org/news_item/ga4gh-approves-two-new-products-categorical-variation-representation-specification-cat-vrs-and-variant-annotation-specification-va-spec/>`_
 
 * 2025 Q2 (May) - `GA4GH Product Approval <https://github.com/ga4gh/cat-vrs/issues/95>`_.
 
