@@ -10,6 +10,7 @@ Definition and Information Model
 
 Examples
 @@@@@@@@
+
 The following are example implementations of Copy Change Constraint:
 
 .. collapse:: Gain
@@ -26,7 +27,8 @@ The following are example implementations of Copy Change Constraint:
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@
-The `copyChange` attribute uses a value set derived from the `Experimental Factor Ontology (EFO) <https://www.ebi.ac.uk/efo/>`_, with definitions reproduced from EFO. Any of the following **Name** values can be used to populate this attribute:
+
+The `copyChange` attribute is required and uses a value set derived from the `Experimental Factor Ontology (EFO) <https://www.ebi.ac.uk/efo/>`_, with definitions reproduced from EFO. Any of the following **Name** values can be used to populate this attribute:
 
 .. list-table::
    :header-rows: 1

@@ -10,6 +10,7 @@ Definition and Information Model
 
 Examples
 @@@@@@@@
+
 The following are example implementations of CopyCountConstraint:
 
 .. collapse:: 3 copies
@@ -20,3 +21,5 @@ The following are example implementations of CopyCountConstraint:
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@
+
+The `copies` attribute is required and can be populated with either an integer or :ref:`Range`. Range supports the use of ``null`` for either bound to represent an indefinite value.
