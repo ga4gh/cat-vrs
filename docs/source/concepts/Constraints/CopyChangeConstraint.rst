@@ -1,5 +1,7 @@
 .. _CopyChangeConstraint:
 
+.. |indent| unicode:: U+00A0 U+00A0 U+00A0
+
 Copy Change Constraint
 !!!!!!!!!!!!!!!!!!!!!!
 
@@ -42,11 +44,11 @@ The `copyChange` attribute is required and uses a value set derived from the `Ex
      - `EFO:0030070 <http://www.ebi.ac.uk/efo/EFO_0030070>`_
      - Assessment of genomic copy number gain.
      - copy number gain
-   * - **high-level gain**
+   * - |indent| **high-level gain**
      - `EFO:0030072 <http://www.ebi.ac.uk/efo/EFO_0030072>`_
      - Assessment of high-level genomic copy number gain.
      - high-level copy number gain
-   * - **low-level gain**
+   * - |indent| **low-level gain**
      - `EFO:0030071 <http://www.ebi.ac.uk/efo/EFO_0030071>`_
      - Assessment of low-level genomic copy number gain.
      - low-level copy number gain
@@ -58,15 +60,15 @@ The `copyChange` attribute is required and uses a value set derived from the `Ex
      - `EFO:0030067 <http://www.ebi.ac.uk/efo/EFO_0030067>`_
      - Assessment of genomic copy number loss.
      - copy number loss
-   * - **low-level loss**
+   * - |indent| **low-level loss**
      - `EFO:0030068 <http://www.ebi.ac.uk/efo/EFO_0030068>`_
      - Assessment of low-level genomic copy number loss.
      - low-level copy number loss
-   * - **high-level loss**
+   * - |indent| **high-level loss**
      - `EFO:0020073 <http://www.ebi.ac.uk/efo/EFO_0020073>`_
      - Assessment of high-level genomic copy number loss.
      - high-level copy number loss
-   * - **complete genomic loss**
+   * - |indent| |indent| **complete genomic loss**
      - `EFO:0030069 <http://www.ebi.ac.uk/efo/EFO_0030069>`_
      - Assessment of complete genomic deletion.
      - complete genomic deletion
