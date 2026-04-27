@@ -38,7 +38,23 @@ The following are example implementations of AdjacencyConstraint:
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@
-The Adjacency Constraint is similar to `VRS' Adjacency class <https://vrs.ga4gh.org/en/stable/concepts/MolecularVariation/Adjacency.html>`_, except that the `adjoinedElements` field supports data types in addition to :ref:`iriReference` and :ref:`Location`.
+The Adjacency Constraint is similar to `VRS' Adjacency class <https://vrs.ga4gh.org/en/stable/concepts/MolecularVariation/Adjacency.html>`_, except that the `adjoinedElements` field supports data types in addition to :ref:`iriReference` and :ref:`Location`. Specifically:
+
+* :ref:`MappableConcept` to include an element that represents as Gene.
+* :ref:`Terminus` to include an element that represents the end of a molecule.
+* :ref:`UnspecifiedElement` to include an element that is otherwise unspecified. For example, if an assay is unable to determine a fusion partner.
+
+Genes
+#####
+
+We recommend specifying *conceptType* as "Gene" and using a symbol from the `HUGO Gene Nomenclature Committee (HGNC) <https://www.genenames.org>`_ as a :ref:`primaryCoding <Coding>`.
+
+The `Gene Normalizer <https://gene-normalizer.readthedocs.io>`_ is Python package and public REST instance that can be used to obtain :ref:`Codings <Coding>` and :ref:`Concept Mappings <ConceptMapping>` of gene concepts based on `Ensembl, NCBI Gene, HGNC, and other data sources <https://gene-normalizer.readthedocs.io/latest/normalizing_data/sources.html>`_.
+
+VRS Sequence Locations
+######################
+
+
 
 We recommend following the `Variant Interpretation for Cancer Consortium's Gene Fusion Specification <https://fusions.cancervariants.org/en/latest/>`_ when modeling a :ref:`GeneFusion` using this constraint. Specifically by:
 
