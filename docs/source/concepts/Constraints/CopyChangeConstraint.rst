@@ -30,7 +30,12 @@ The following are example implementations of Copy Change Constraint:
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@
 
-The `copyChange` attribute is required and uses a value set derived from the `Experimental Factor Ontology (EFO) <https://www.ebi.ac.uk/efo/>`_, with definitions reproduced from EFO. Any of the following **Name** values can be used to populate this attribute:
+This Constraint is used when constructing a :ref:`Categorical Copy Number Variant <CategoricalCnv>` when a copy number variation is classified into a category. If looking to express the copy number variation as an integer or range, consider instead applying the :ref:`Copy Count Constraint <CopyCountConstraint>`.
+
+copyChange
+##########
+
+The *copyChange* attribute is required and uses a value set derived from the `Experimental Factor Ontology (EFO) <https://www.ebi.ac.uk/efo/>`_, with definitions reproduced from EFO. The EFO describes these categories hierarchically; subtypes are indicated by indentation in the table below. Broadly, a copy number amplification or gain should be represented using **gain** or one of its subtypes, and a copy number deletion or loss should be represented using **loss** or one of its subtypes. When the source data does not distinguish between subtypes, the parent term (for example, **loss**) should be preferred over a more specific subtype. Any of the following **Name** values can be used to populate this attribute:
 
 .. list-table::
    :header-rows: 1
