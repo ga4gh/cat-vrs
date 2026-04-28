@@ -30,7 +30,7 @@ The following are example implementations of Copy Change Constraint:
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@
 
-This Constraint is used when constructing a :ref:`Categorical Copy Number Variant <CategoricalCnv>` when a copy number variation is classified into a category. If looking to express the copy number variation as an integer or range, consider instead applying the :ref:`Copy Count Constraint <CopyCountConstraint>`.
+This Constraint is used when constructing a :ref:`Categorical Copy Number Variant <CategoricalCnv>` when a copy number variation is classified into a category. If looking to express the copy number variation as an integer or :ref:`Range`, consider instead applying the :ref:`Copy Count Constraint <CopyCountConstraint>`.
 
 copyChange
 ##########
