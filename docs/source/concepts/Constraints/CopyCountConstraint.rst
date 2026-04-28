@@ -22,4 +22,9 @@ The following are example implementations of CopyCountConstraint:
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@
 
-The `copies` attribute is required and can be populated with either an integer or :ref:`Range`. Range supports the use of ``null`` for either bound to represent an indefinite value.
+This Constraint is used when constructing a :ref:`Categorical Copy Number Variant <CategoricalCnv>` when a copy number variation is expressed as an integer or :ref:`Range`. If looking to express the copy number variation as a category, consider instead applying the :ref:`Copy Change Constraint <CopyChangeConstraint>`.
+
+copies
+######
+
+The *copies* attribute is required and can be populated with either an integer or :ref:`Range`. Range supports the use of ``null`` for either bound to represent an indefinite value.
