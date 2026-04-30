@@ -67,9 +67,23 @@ starAlleles:
         constraints:
           - type: CisPhasedBlockConstraint # not a thing
             members:
-            - '#/permittedAlleles/ga4gh:ga4gh:VA.??747T='
-            - '#/permittedAlleles/ga4gh:ga4gh:VA.??748G='
-            - '#/permittedAlleles/ga4gh:ga4gh:VA.??Rep3'
+              - type: Allele
+                location: '#/permittedLocations/ga4gh:SL.???747'
+                state:
+                    type: LiteralSequenceExpression
+                    sequence: "T"
+              - type: Allele
+                location: '#/permittedLocations/ga4gh:SL.???748'
+                state:
+                    type: LiteralSequenceExpression
+                    sequence: "G"
+              - type: Allele
+                location: '...' # come back to this later
+                state:
+                    type: ReferenceLengthExpression
+                    length: 19
+                    repeatSubunitLength: 19
+                    sequence: GGAGTCGGAGTCGGAGTCG
     "NUDT15.*9": # come back to this
         type: CategoricalVariant
         constraints:
