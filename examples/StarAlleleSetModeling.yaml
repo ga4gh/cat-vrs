@@ -1,11 +1,9 @@
-id: SAS.NUDT15
-version: 2026.04.21
 gene: ... # come back to this
 sequenceReference:
     'NC_000013.11': 
         type: SequenceReference 
         refgetAccession: 'ga4gh:SQ.???' # come back to this
-locations:
+location:
     'ga4gh:SL.???747': 
         type: SequenceLocation
         start: 48037747
@@ -17,25 +15,25 @@ locations:
         type: SequenceLocation
         start: 48037748
         end: 48037749
-        sequenceReference: "#/sequenceReference/NC_000013.11"
-alleles:
+        sequenceReference: "#/sequenceReference/NC_000013.11"       
+allele:
     'ga4gh:VA.??747T=': #come back to this
-        location: '#/permittedLocations/ga4gh:SL.???747'
+        location: '#/location/ga4gh:SL.???747'
         state:
             type: LiteralSequenceExpression
             sequence: "T"
     'ga4gh:VA.??747TC': #come back to this
-        location: '#/permittedLocations/ga4gh:SL.???747'
+        location: '#/location/ga4gh:SL.???747'
         state:
             type: LiteralSequenceExpression
             sequence: "C"
     'ga4gh:VA.??748G=': #come back to this
-        location: '#/permittedLocations/ga4gh:SL.???748'
+        location: '#/location/ga4gh:SL.???748'
         state:
             type: LiteralSequenceExpression
             sequence: "G"
     'ga4gh:VA.??748GC': #come back to this
-        location: '#/permittedLocations/ga4gh:SL.???748'
+        location: '#/location/ga4gh:SL.???748'
         state:
             type: LiteralSequenceExpression
             sequence: "C"
@@ -61,6 +59,77 @@ alleles:
             repeatSubunitLength: 19
             sequence: GGAGTCGGAGTCGGAGTCGGAGTCG
       ... # add in rest
+
+
+## this master star allele set which can be versioned is really a star allele model IMO, but it has the addition of a version and gene that is shared by all starAlleles it defines
+starAlleleSet: 
+    'SAS.NUDT15': 
+        id: SAS.NUDT15
+        version: 2026.04.21    # super important!
+        gene: NUDT15
+        starMap:
+            - location: '#/location/ga4gh:SL.???747'
+              alleles:
+                  - '#/allele/ga4gh:ga4gh:VA.??747T='
+                  - '#/allele/ga4gh:ga4gh:ga4gh:VA.??747TC'
+            - location: '#/location/ga4gh:SL.???748'
+              alleles:
+                  - '#/allele/ga4gh:ga4gh:...
+                  - '#/allele/ga4gh:ga4gh:...
+                    
+
+# if we could define these starAlleles so the MUST reference the same starAlleleSet for every element within that would be the best approach. not sure my approach below gets us all the way there.
+starAlleles: 
+    'NUDT15.*1':  # come back to this
+        # since these are versioned I think of them more as versioned domain entities yet to be defined for reference by the community, they are NOT CisPhaseBlocks until they are observed. 
+        
+        type: CategoricalVariant     ## this should represent the type of object not a generalized thing IMO
+        categoricalVariantType: StarAllele ## like this
+
+        # defining star allele set 
+        starAlleleSet: '#/starAlleleSet/SAS.NUDT15'
+
+        # using the starmap entries to determine if an incoming observed CisPhaseBlock has NO members that fall outside the starMap would create a match
+        # additionally we could add an attribute to say which starMap locations are "Required" to be met to meet the minimal viable definition of the star allele!
+
+        ## I think we want to have the starMap constraints below be directly referencing the starAlleleSet.starMap values
+        starMap:
+            # referencing by array position is suboptimal but I can't figure a better solution just yet.
+            - location: '#/starAlleleSet/SAS.NUDT15/starMap[0]/location'
+              alleles: 
+                  # like the starmap.alleles in the starAlleleSet, any of the elements in this list would satisfy the condition that this starMap entry is satisified.
+                  - '#/starAlleleSet/SAS.NUDT15/starMap[0]/allele[0]'
+
+
+            --- END changes here for now
+                
+              - type: Allele
+                location: '#/permittedLocations/ga4gh:SL.???747'
+                state:
+                    type: LiteralSequenceExpression
+                    sequence: "T"
+              - type: Allele
+                location: '#/permittedLocations/ga4gh:SL.???748'
+                state:
+                    type: LiteralSequenceExpression
+                    sequence: "G"
+              - type: Allele
+                location: '...' # come back to this later
+                state:
+                    type: ReferenceLengthExpression
+                    length: 19
+                    repeatSubunitLength: 19
+                    sequence: GGAGTCGGAGTCGGAGTCG
+
+
+
+
+
+
+
+
+
+
 starAlleles:
     "NUDT15.*1":  # come back to this
         type: CategoricalVariant
