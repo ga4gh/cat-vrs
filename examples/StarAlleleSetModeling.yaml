@@ -5,7 +5,7 @@ sequenceReference:
     'NC_000013.11': 
         type: SequenceReference 
         refgetAccession: 'ga4gh:SQ.???' # come back to this
-permittedLocations:
+locations:
     'ga4gh:SL.???747': 
         type: SequenceLocation
         start: 48037747
@@ -18,7 +18,7 @@ permittedLocations:
         start: 48037748
         end: 48037749
         sequenceReference: "#/sequenceReference/NC_000013.11"
-permittedAlleles:
+alleles:
     'ga4gh:VA.??747T=': #come back to this
         location: '#/permittedLocations/ga4gh:SL.???747'
         state:
@@ -67,12 +67,9 @@ starAlleles:
         constraints:
           - type: CisPhasedBlockConstraint # not a thing
             members:
-            - type: DefiningAlleleConstraint
-                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??747T='
-            - type: DefiningAlleleConstraint
-                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??748G='
-            - type: DefiningAlleleConstraint
-                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??Rep3'
+            - '#/permittedAlleles/ga4gh:ga4gh:VA.??747T='
+            - '#/permittedAlleles/ga4gh:ga4gh:VA.??748G='
+            - '#/permittedAlleles/ga4gh:ga4gh:VA.??Rep3'
     "NUDT15.*9": # come back to this
         type: CategoricalVariant
         constraints:
