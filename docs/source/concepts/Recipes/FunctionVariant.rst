@@ -19,17 +19,17 @@ The following are example implementations of that satisfy the FunctionVariant re
 
 .. collapse:: NRAS functionally normal variants
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_functionVariant-ex1
+   .. literalinclude:: ../../../../examples/json/functionVariant-ex1.json
       :language: json
 
 .. collapse:: BRCA2 loss of function variants
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_functionVariant-ex2
+   .. literalinclude:: ../../../../examples/json/functionVariant-ex2.json
       :language: json
 
 .. collapse:: PIK3CA p.R38H
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_functionVariant-ex3
+   .. literalinclude:: ../../../../examples/json/functionVariant-ex3.json
       :language: json
 
 Implementation Guidance

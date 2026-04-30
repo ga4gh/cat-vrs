@@ -14,27 +14,27 @@ The following are example implementations of DefiningAlleleConstraint:
 
 .. collapse:: NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs)
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_canonicalAllele-ex1
+   .. literalinclude:: ../../../../examples/json/canonicalAllele-ex1.json
       :language: json
-      :lines: 83-172
+      :lines: 80-169
 
 .. collapse:: NC_000001.11:g.1699974C>G
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_canonicalAllele-ex2
+   .. literalinclude:: ../../../../examples/json/canonicalAllele-ex2.json
       :language: json
-      :lines: 37-112
+      :lines: 34-109
 
 .. collapse:: EGFR L858R
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_proteinSequenceConsequence-ex1
+   .. literalinclude:: ../../../../examples/json/proteinSequenceConsequence-ex1.json
       :language: json
-      :lines: 99-150
+      :lines: 96-147
 
 .. collapse:: NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter)
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_proteinSequenceConsequence-ex2
+   .. literalinclude:: ../../../../examples/json/proteinSequenceConsequence-ex2.json
       :language: json
-      :lines: 69-132
+      :lines: 66-129
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@

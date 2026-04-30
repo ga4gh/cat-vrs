@@ -3,7 +3,7 @@
 .PHONY: README.md
 
 BUILD_DIR := build
-YAML_DIR := .
+YAML_DIR := yaml
 JSON_DIR := json
 
 vpath %.tag $(BUILD_DIR)

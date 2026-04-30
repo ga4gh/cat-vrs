@@ -10,7 +10,7 @@ schema_path = root_path / "schema"
 catvrs_schema_path = schema_path / "cat-vrs"
 
 test_path = root_path / 'tests'
-fixtures_path = root_path / 'examples'
+fixtures_path = root_path / 'examples' / 'yaml'
 
 ga4gh_re = re.compile(r'.*\/ga4gh\/schema\/([\w\-\.]+)\/[\w\.]+\/(.*)$')
 
