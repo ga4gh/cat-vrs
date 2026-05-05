@@ -7,7 +7,7 @@
    "description": "A representation of the constraints for matching knowledge about CNVs.",
    "allOf": [
       {
-         "$ref": "/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.1/json/CategoricalVariant"
+         "$ref": "/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.3/json/CategoricalVariant"
       },
       {
          "properties": {
@@ -20,7 +20,7 @@
                      "contains": {
                         "allOf": [
                            {
-                              "$ref": "/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.1/json/DefiningLocationConstraint"
+                              "$ref": "/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.3/json/DefiningLocationConstraint"
                            },
                            {
                               "properties": {
@@ -47,10 +47,10 @@
                      "contains": {
                         "oneOf": [
                            {
-                              "$ref": "/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.1/json/CopyCountConstraint"
+                              "$ref": "/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.3/json/CopyCountConstraint"
                            },
                            {
-                              "$ref": "/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.1/json/CopyChangeConstraint"
+                              "$ref": "/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.3/json/CopyChangeConstraint"
                            }
                         ]
                      }

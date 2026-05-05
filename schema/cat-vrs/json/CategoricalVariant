@@ -1,6 +1,6 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.1/json/CategoricalVariant",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.3/json/CategoricalVariant",
    "title": "CategoricalVariant",
    "type": "object",
    "maturity": "trial use",
@@ -64,22 +64,22 @@
          "items": {
             "oneOf": [
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.1/json/CopyChangeConstraint"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.3/json/CopyChangeConstraint"
                },
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.1/json/CopyCountConstraint"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.3/json/CopyCountConstraint"
                },
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.1/json/DefiningAlleleConstraint"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.3/json/DefiningAlleleConstraint"
                },
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.1/json/DefiningLocationConstraint"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.3/json/DefiningLocationConstraint"
                },
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.1/json/FeatureContextConstraint"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.3/json/FeatureContextConstraint"
                },
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.1/json/FunctionConstraint"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.1.0-snapshot.2026-02.3/json/FunctionConstraint"
                }
             ]
          }
