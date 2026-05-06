@@ -1,8 +1,7 @@
 id: civic.vid:5186
 type: CategoricalVariant
 name: ?::ZNF384(ncbi:171017)
-description: >-
-  An optional field to describe ?::ZNF384(ncbi:171017).
+description:
 aliases:
   - ?::ZNF384
   - ZNF384 Fusion

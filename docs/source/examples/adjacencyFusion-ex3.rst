@@ -1,30 +1,57 @@
 :orphan:
+
 .. _AdjacencyFusionEx3:
 
 ?::ZNF384(ncbi:171017)
 !!!!!!!!!!!!!!!!!!!!!!
 
-**Source**: `CIViC variant id 5186: ?::ZNF384 Fusion <https://civicdb.org/variants/5186/summary>`_
+.. rubric:: Source
 
-**Recipes that this example satisfies**: None
+`CIViC variant id 5186: ?::ZNF384 Fusion <https://civicdb.org/variants/5186/summary>`_
 
-.. rubric:: Attributes
+.. rubric:: :ref:`Recipes` that example satisfies
 
-- ``id``: civic.vid:5186, where vid stands for Variant ID, derived from the Variant ID contained within the CIViC URL for this genomic alteration.
-- ``type``: CategoricalVariant, as required by the specification.
-- ``name``: ?::ZNF384(ncbi:171017), the human-readable label given to the fusion by CIViC, with gene identifiers per the VICC Fusion representation recommendation. CIViC provided NCBI identifiers for the genes, so those were used.
-- ``description``: "An optional field to describe ?::ZNF384(ncbi:171017)", a placeholder since CIViC does not provide a longform description for this fusion.
-- ``aliases``: CIViC provides "ZNF384 Fusion" as an alias for this fusion; ?::ZNF384 was also added as an example alias.
-- ``extensions``: No extensions are included in this example.
-- ``mappings``: No mappings are included in this example.
+None
 
-.. rubric:: Constraints
+.. rubric:: Properties
 
-:ref:`Adjacency Constraint <AdjacencyConstraint>`: The ``adjoinedElements`` array specifies an ``UnspecifiedElement`` for the unknown 5' partner and ZNF384 (ncbi:171017) as a mappable concept for the 3' partner. The ``orderKnown`` field is set to true to indicate that ZNF384 is the known 3' partner in this fusion.
+.. list-table::
+   :header-rows: 1
+   :widths: 20 40 40
+
+   * - Field
+     - Value
+     - Description
+   * - ``id``
+     - civic.vid:5186
+     - CIViC Variant ID from the source URL
+   * - ``type``
+     - CategoricalVariant
+     - Required by the specification
+   * - ``name``
+     - ?::ZNF384(ncbi:171017)
+     - Human-readable label; NCBI identifiers used per VICC Fusion recommendation
+   * - ``description``
+     - --
+     - No description text included
+   * - ``aliases``
+     - ZNF384 Fusion, ?::ZNF384
+     - CIViC provides "ZNF384 Fusion" as an alias
+   * - ``extensions``
+     - --
+     - No :ref:`extensions <Extension>` included
+   * - ``mappings``
+     - --
+     - No :ref:`mappings <ConceptMapping>` included
+
+.. rubric:: :ref:`Constraints`
+
+:ref:`Adjacency Constraint <AdjacencyConstraint>`
+   The ``adjoinedElements`` array specifies an :ref:`Unspecified Element <UnspecifiedElement>` for the unknown 5' partner and ZNF384 (ncbi:171017) as a mappable concept for the 3' partner. The ``orderKnown`` field is set to true to indicate that ZNF384 is the known 3' partner in this fusion.
 
 .. rubric:: Members
 
-This example does not include members.
+This example does not include :ref:`Members <CategoricalVariant>` .
 
 .. rubric:: Full example: JSON
 

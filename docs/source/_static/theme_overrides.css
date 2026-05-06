@@ -1,23 +1,23 @@
 /* override table width restrictions */
 @media screen and (min-width: 767px) {
 
-   table.clean-wrap td {
-      /* !important prevents the common CSS stylesheets from overriding
+    table.clean-wrap td {
+        /* !important prevents the common CSS stylesheets from overriding
          this as on RTD they are loaded after this stylesheet */
-      white-space: normal !important;
-   }
+        white-space: normal !important;
+    }
 
-   table.clean-wrap {
-      overflow: visible !important;
-   }
+    table.clean-wrap {
+        overflow: visible !important;
+    }
 }
 
 
 
 h2 {
     color: #2980B9;
-    border-top:  #2980B9 thin solid;
-    border-bottom:  #2980B9 thin solid;
+    border-top: #2980B9 thin solid;
+    border-bottom: #2980B9 thin solid;
 }
 
 h3 {
@@ -78,4 +78,9 @@ details {
 
 details:last-child {
     margin-bottom: 1.0em;
+}
+
+dl.simple>dt,
+dl>dt {
+    font-weight: normal;
 }
