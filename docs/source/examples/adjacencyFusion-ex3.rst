@@ -2,6 +2,8 @@
 
 .. _AdjacencyFusionEx3:
 
+:doc:`← Back to Examples </examples/index>`
+
 ?::ZNF384(ncbi:171017)
 !!!!!!!!!!!!!!!!!!!!!!
 
@@ -9,40 +11,32 @@
 
 `CIViC variant id 5186: ?::ZNF384 Fusion <https://civicdb.org/variants/5186/summary>`_
 
-.. rubric:: :ref:`Recipes` that example satisfies
+.. rubric:: :ref:`Recipes` that this example satisfies
 
 None
 
 .. rubric:: Properties
 
-.. list-table::
-   :header-rows: 1
-   :widths: 20 40 40
+``id``: civic.vid:5186
+   CIViC Variant ID from the source URL.
 
-   * - Field
-     - Value
-     - Description
-   * - ``id``
-     - civic.vid:5186
-     - CIViC Variant ID from the source URL
-   * - ``type``
-     - CategoricalVariant
-     - Required by the specification
-   * - ``name``
-     - ?::ZNF384(ncbi:171017)
-     - Human-readable label; NCBI identifiers used per VICC Fusion recommendation
-   * - ``description``
-     - --
-     - No description text included
-   * - ``aliases``
-     - ZNF384 Fusion, ?::ZNF384
-     - CIViC provides "ZNF384 Fusion" as an alias
-   * - ``extensions``
-     - --
-     - No :ref:`extensions <Extension>` included
-   * - ``mappings``
-     - --
-     - No :ref:`mappings <ConceptMapping>` included
+``type``: CategoricalVariant
+   This value is required by the specification for all :ref:`Categorical Variant <CategoricalVariant>` objects.
+
+``name``: ?::ZNF384(ncbi:171017)
+   Human-readable label; NCBI identifiers used per VICC Fusion recommendation.
+
+``description``: null
+   No description text included.
+
+``aliases``: ZNF384 Fusion, ?::ZNF384
+   CIViC provides "ZNF384 Fusion" as an alias.
+
+``extensions``: null
+   No :ref:`extensions <Extension>` included.
+
+``mappings``: null
+   No :ref:`mappings <ConceptMapping>` included.
 
 .. rubric:: :ref:`Constraints`
 

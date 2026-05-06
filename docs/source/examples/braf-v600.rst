@@ -1,26 +1,47 @@
 :orphan:
+
 .. _BrafV600:
+
+:doc:`← Back to Examples </examples/index>`
 
 BRAF V600
 !!!!!!!!!
 
-**Source**: `CIViC variant id 17: BRAF V600 <https://civicdb.org/variants/17/summary>`_
+.. rubric:: Source
 
-**Recipes that this example satisfies**: None
+`CIViC variant id 17: BRAF V600 <https://civicdb.org/variants/17/summary>`_
 
-.. rubric:: Attributes
+.. rubric:: :ref:`Recipes` that this example satisfies
 
-- ``id``: civic.vid:17, where vid stands for Variant ID, derived from the Variant ID contained within the CIViC URL for this genomic alteration.
-- ``type``: CategoricalVariant, as required by the specification.
-- ``name``: BRAF V600, the human-readable name for this variant.
-- ``description``: A summary of the categorical variant noting that BRAF V600 variants are missense amino acid substitutions that result in a change at valine 600, with V600E being the most common and V600K, V600M, V600R, and V600G also observed.
-- ``aliases``: Representations with the MANE Select transcript for BRAF: NM_004333.6(BRAF) V600 and NM_004333.6 V600.
-- ``extensions``: The CIViC Representative Variant Coordinates are included, specifying GRCh37 genomic coordinates on chromosome 7.
-- ``mappings``: A set of ClinVar variants corresponding to amino acid substitutions at BRAF V600 are included as relatedMatch mappings: V600E (c.1799T>A), V600R (c.1798_1799delinsAG), V600K (c.1798_1799delinsAA), V600G (c.1799T>G), and V600M (c.1798G>A).
+None
 
-.. rubric:: Constraints
+.. rubric:: Properties
 
-:ref:`Defining Location Constraint <DefiningLocationConstraint>`: The defining location is amino acid position 600 within the BRAF protein (refseq:NP_004324.2), the protein product of the MANE Select coding transcript for BRAF (refseq:NM_004333.6), corresponding to valine in the reference sequence. The ``matchCharacteristic`` is set to is_within, meaning any variant whose affected residue falls within this position satisfies the constraint.
+``id``: civic.vid:17
+   CIViC Variant ID, where vid stands for Variant ID, derived from the Variant ID contained within the CIViC URL for this genomic alteration.
+
+``type``: CategoricalVariant
+   As required by the specification.
+
+``name``: BRAF V600
+   Human-readable name for this variant.
+
+``description``: BRAF V600 variants are missense amino acid substitutions that result in a change at valine 600, with V600E being the most common and V600K, V600M, V600R, and V600G also observed
+   A summary of the categorical variant.
+
+``aliases``: NM_004333.6(BRAF) V600, NM_004333.6 V600
+   Representations with the MANE Select transcript for BRAF.
+
+``extensions``: CIViC Representative Variant Coordinates
+   GRCh37 genomic coordinates on chromosome 7.
+
+``mappings``: V600E (c.1799T>A), V600R (c.1798_1799delinsAG), V600K (c.1798_1799delinsAA), V600G (c.1799T>G), V600M (c.1798G>A)
+   ClinVar variants corresponding to amino acid substitutions at BRAF V600, included as relatedMatch mappings.
+
+.. rubric:: :ref:`Constraints`
+
+:ref:`Defining Location Constraint <DefiningLocationConstraint>`
+   The defining location is amino acid position 600 within the BRAF protein (refseq:NP_004324.2), the protein product of the MANE Select coding transcript for BRAF (refseq:NM_004333.6), corresponding to valine in the reference sequence. The ``matchCharacteristic`` is set to is_within, meaning any variant whose affected residue falls within this position satisfies the constraint.
 
 .. rubric:: Members
 

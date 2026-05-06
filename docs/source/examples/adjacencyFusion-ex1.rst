@@ -1,26 +1,47 @@
 :orphan:
+
 .. _AdjacencyFusionEx1:
+
+:doc:`← Back to Examples </examples/index>`
 
 BCR(ncbi:613)::ABL1(ncbi:25)
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-**Source**: `CIViC variant id 1: BCR::ABL1 Fusion <https://civicdb.org/variants/1/summary>`_
+.. rubric:: Source
 
-**Recipes that this example satisfies**: :ref:`Gene Fusion <GeneFusion>`
+`CIViC variant id 1: BCR::ABL1 Fusion <https://civicdb.org/variants/1/summary>`_
 
-.. rubric:: Attributes
+.. rubric:: :ref:`Recipes` that this example satisfies
 
-- ``id``: "civic.vid:1", where vid stands for Variant ID, derived from the Variant ID contained within the CIViC URL for this genomic alteration.
-- ``type``: "CategoricalVariant", as required by the specification.
-- ``name``: "BCR(ncbi:613)::ABL1(ncbi:25)", which is the human-readable label given to the fusion by CIViC, with gene identifiers per the VICC Fusion representation recommendation. CIViC provided NCBI identifiers for both genes, so those were used.
-- ``description``: "An optional field to describe BCR::ABL1" was used as a placeholder since CIViC does not provide a longform description for this fusion.
-- ``aliases``: All aliases for BCR::ABL1 were provided as aliases, as provided by CIViC.
-- ``extensions``: The 5' and 3' Partner Representative Genomic Coordinates for BCR::ABL1, as provided by CIViC.
-- ``mappings``: No mappings are included in this example.
+:ref:`Gene Fusion <GeneFusion>`
 
-.. rubric:: Constraints
+.. rubric:: Properties
 
-:ref:`Adjacency Constraint <AdjacencyConstraint>`: Both BCR and ABL1 are modeled as mappable concepts within the ``adjoinedElements`` array, using the NCBI gene identifiers provided by CIViC (ncbi:613 for BCR and ncbi:25 for ABL1). The ``orderKnown`` field is set to true to indicate that the 5'-to-3' orientation of the fusion partners is known.
+``id``: civic.vid:1
+   CIViC Variant ID, where vid stands for Variant ID, derived from the Variant ID contained within the CIViC URL for this genomic alteration.
+
+``type``: CategoricalVariant
+   This value is required by the specification for all :ref:`Categorical Variant <CategoricalVariant>` objects.
+
+``name``: BCR(ncbi:613)::ABL1(ncbi:25)
+   Human-readable label given to the fusion by CIViC, with gene identifiers per the VICC Fusion representation recommendation. CIViC provided NCBI identifiers for both genes, so those were used.
+
+``description``: null
+   This field was left blank because CIViC does not provide a longform description for this fusion.
+
+``aliases``: BCR::ABL1, t(9;22)(q34;q11), BCR-ABL1, BCR--ABL1, BCR-ABL, BCR(hgnc:1014)::ABL1(hgnc:76)
+   All aliases, as provided by CIViC, were included.
+
+``extensions``: CIViC 5' and 3' Partner Representative Genomic Coordinates for BCR::ABL1
+   CIViC provided these values within the variant object, so we included them here as :ref:`extensions <Extension>` to because the :ref:`data model <data-model>` does not explicitly support them.
+
+``mappings``: null
+   No mappings are included in this example.
+
+.. rubric:: :ref:`Constraints`
+
+:ref:`Adjacency Constraint <AdjacencyConstraint>`
+   Both BCR and ABL1 are modeled as mappable concepts within the ``adjoinedElements`` array, using the NCBI gene identifiers provided by CIViC (ncbi:613 for BCR and ncbi:25 for ABL1). The ``orderKnown`` field is set to true to indicate that the 5'-to-3' orientation of the fusion partners is known.
 
 .. rubric:: Members
 
