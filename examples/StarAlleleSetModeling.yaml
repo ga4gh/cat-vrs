@@ -65,9 +65,9 @@ allele:
 starAlleleSet: 
     'SAS.NUDT15': 
         id: SAS.NUDT15
-        version: 2026.04.21    # super important!
+        version: 2026.04.21
         gene: NUDT15
-        starMap:
+        referenceMap: # this is the only inherent property
             - location: '#/location/ga4gh:SL.???747'
               alleles:
                   - '#/allele/ga4gh:ga4gh:VA.??747T='
@@ -87,18 +87,18 @@ starAlleles:
         categoricalVariantType: StarAllele ## like this
 
         # defining star allele set 
-        starAlleleSet: '#/starAlleleSet/SAS.NUDT15'
+        starAlleleSet: 'ga4gh:SAS.NUDT15' # referencing the star allele set that defines the starMap for this star allele.
 
         # using the starmap entries to determine if an incoming observed CisPhaseBlock has NO members that fall outside the starMap would create a match
         # additionally we could add an attribute to say which starMap locations are "Required" to be met to meet the minimal viable definition of the star allele!
 
         ## I think we want to have the starMap constraints below be directly referencing the starAlleleSet.starMap values
-        starMap:
+        setConstraints:
             # referencing by array position is suboptimal but I can't figure a better solution just yet.
-            - location: '#/starAlleleSet/SAS.NUDT15/starMap[0]/location'
+            - location: 'ga4gh:SL.???747'
               alleles: 
                   # like the starmap.alleles in the starAlleleSet, any of the elements in this list would satisfy the condition that this starMap entry is satisified.
-                  - '#/starAlleleSet/SAS.NUDT15/starMap[0]/allele[0]'
+                  - 'ga4gh:VA.??747T='
 
 
             --- END changes here for now
