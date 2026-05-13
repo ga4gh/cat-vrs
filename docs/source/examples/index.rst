@@ -19,7 +19,7 @@ Annotated examples of Cat-VRS categorical variant representations.
        | :ref:`v::NTRK1(hgnc:8031) <AdjacencyFusionEx2>`
    * - :ref:`Copy Change <CopyChangeConstraint>`
      - | :ref:`GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 <CategoricalCnvEx2>`
-       | :ref:`TP53 Loss <Tp53CopyLossAnnotated>`
+       | :ref:`TP53 Loss (annotated) <Tp53CopyLossAnnotated>`
        | :ref:`TP53 Loss <Tp53CopyLoss>`
    * - :ref:`Copy Count <CopyCountConstraint>`
      - | :ref:`GRCh38 Xp22.31(chrX:6978350-7594949)x3 <CategoricalCnvEx3>`

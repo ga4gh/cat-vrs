@@ -47,7 +47,7 @@ None
 
 .. rubric:: Members
 
-The ``members`` field includes five VRS Allele objects generated using the VICC Variation Normalizer from the hgvs.c representations of *BRAF*:
+The ``members`` field includes five VRS Allele objects generated using the `VICC Variation Normalizer <https://github.com/cancervariants/variation-normalization>`_ from the hgvs.c representations of *BRAF*:
 
 - V600E (NM_004333.6:c.1799T>A)
 - V600K (NM_004333.6:c.1798_1799delinsAA)

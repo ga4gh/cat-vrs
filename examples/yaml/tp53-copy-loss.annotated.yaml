@@ -10,7 +10,7 @@ id: civic.id:4452
 type: CategoricalVariant
 
 # name: A primary name for the entity.
-name: TP53 Loss
+name: TP53 Loss (annotated)
 
 # description: A free-text description of the entity
 description: TP53 Copy Number Loss is a categorical copy-number variant resulting from the deletion of one copy of the TP53 gene.

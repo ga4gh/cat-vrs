@@ -45,7 +45,7 @@ NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs)
 
 .. rubric:: Members
 
-The ``members`` field includes two VRS Allele objects generated using the VICC Variation Normalizer from the hgvs.g and hgvs.c MANE Select representations of this variant: NC_000001.11:g.11128044_11128045del (GRCh38 genomic) and NM_004958.4:c.5992_5993del (MANE Select coding, on the MTOR MANE Select transcript refseq:NM_004958.4).
+The ``members`` field includes two VRS Allele objects generated using the `VICC Variation Normalizer <https://github.com/cancervariants/variation-normalization>`_ from the hgvs.g and hgvs.c MANE Select representations of this variant: NC_000001.11:g.11128044_11128045del (GRCh38 genomic) and NM_004958.4:c.5992_5993del (MANE Select coding, on the MTOR MANE Select transcript refseq:NM_004958.4).
 
 .. rubric:: Full example: JSON
 

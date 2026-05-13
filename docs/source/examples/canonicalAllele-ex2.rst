@@ -45,7 +45,7 @@ NC_000001.11:g.1699974C>G
 
 .. rubric:: Members
 
-The ``members`` field includes two VRS Allele objects generated using the VICC Variation Normalizer from the hgvs.g representations of this variant on GRCh38 (NC_000001.11:g.1699974C>G) and GRCh37 (NC_000001.10:g.1631413C>G), respectively.
+The ``members`` field includes two VRS Allele objects generated using the `VICC Variation Normalizer <https://github.com/cancervariants/variation-normalization>`_ from the hgvs.g representations of this variant on GRCh38 (NC_000001.11:g.1699974C>G) and GRCh37 (NC_000001.10:g.1631413C>G), respectively.
 
 .. rubric:: Full example: JSON
 

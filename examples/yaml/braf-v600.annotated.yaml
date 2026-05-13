@@ -18,7 +18,7 @@ id: civic.vid:17
 type: CategoricalVariant
 
 # name: A primary name for the entity. This is intended to be human-readable.
-name: BRAF V600
+name: BRAF V600 (annotated)
 
 # description: A free-text description of the entity
 description: >-
