@@ -41,9 +41,7 @@ None
 .. rubric:: :ref:`Constraints`
 
 :ref:`Defining Location Constraint <DefiningLocationConstraint>`
-  The defining location is amino acid position 600 within the *BRAF* protein (refseq:NP_004324.2), the protein product of the MANE Select coding transcript for *BRAF* (refseq:NM_004333.6), corresponding to valine in the reference sequence.
-
-  The ``matchCharacteristic`` is set to "is_within", meaning any variant whose affected residue falls within this position satisfies the constraint.
+  The defining location is amino acid position 600 within the *BRAF* protein (refseq:NP_004324.2), the protein product of the MANE Select coding transcript for *BRAF* (refseq:NM_004333.6), corresponding to valine in the reference sequence. The ``matchCharacteristic`` is set to "is_within", meaning any variant whose affected residue falls within this position satisfies the constraint.
 
 .. rubric:: Members
 

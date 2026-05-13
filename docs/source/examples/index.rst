@@ -34,8 +34,8 @@ Annotated examples of Cat-VRS categorical variant representations.
      - | :ref:`BRAF V600 (annotated) <BrafV600Annotated>`
        | :ref:`BRAF V600 <BrafV600>`
        | :ref:`GRCh38 Xp22.31(chrX:6978350-7594949)x3 <CategoricalCnvEx3>`
-       | :ref:`GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 <CategoricalCnvEx1>`
-       | :ref:`GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 <CategoricalCnvEx2>`
+       | :ref:`GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 (copy count) <CategoricalCnvEx1>`
+       | :ref:`GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 (copy change) <CategoricalCnvEx2>`
        | :ref:`TP53 Loss (annotated) <Tp53CopyLossAnnotated>`
        | :ref:`TP53 Loss <Tp53CopyLoss>`
    * - :ref:`Feature Context <FeatureContextConstraint>`
