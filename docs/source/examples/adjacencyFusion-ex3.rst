@@ -13,35 +13,35 @@
 
 .. rubric:: :ref:`Recipes` that this example satisfies
 
-None
+:ref:`Gene Fusion <GeneFusion>`
 
 .. rubric:: Properties
 
 ``id``: civic.vid:5186
-   CIViC Variant ID from the source URL.
+  CIViC Variant ID from the source URL.
 
 ``type``: CategoricalVariant
-   This value is required by the specification for all :ref:`Categorical Variant <CategoricalVariant>` objects.
+  This value is required by the specification for all :ref:`Categorical Variant <CategoricalVariant>` objects.
 
 ``name``: ?::ZNF384(ncbi:171017)
-   Human-readable label; NCBI identifiers used per VICC Fusion recommendation.
+  Human-readable label; NCBI identifiers used per VICC Fusion recommendation.
 
-``description``: null
-   No description text included.
+``description``: An optional field to describe this Categorical Variant.
+  This field was populated with an example value because CIViC does not provide a longform description.
 
 ``aliases``: ZNF384 Fusion, ?::ZNF384
-   CIViC provides "ZNF384 Fusion" as an alias.
+  CIViC provides "ZNF384 Fusion" as an alias.
 
 ``extensions``: null
-   No :ref:`extensions <Extension>` included.
+  No :ref:`extensions <Extension>` included.
 
 ``mappings``: null
-   No :ref:`mappings <ConceptMapping>` included.
+  No :ref:`mappings <ConceptMapping>` included.
 
 .. rubric:: :ref:`Constraints`
 
 :ref:`Adjacency Constraint <AdjacencyConstraint>`
-   The ``adjoinedElements`` array specifies an :ref:`Unspecified Element <UnspecifiedElement>` for the unknown 5' partner and ZNF384 (ncbi:171017) as a mappable concept for the 3' partner. The ``orderKnown`` field is set to true to indicate that ZNF384 is the known 3' partner in this fusion.
+  The ``adjoinedElements`` array specifies an :ref:`Unspecified Element <UnspecifiedElement>` for the unknown 5' partner and *ZNF384* (ncbi:171017) as a mappable concept for the 3' partner. The ``orderKnown`` field is set to true to indicate that *ZNF384* is the known 3' partner in this fusion.
 
 .. rubric:: Members
 
@@ -50,9 +50,9 @@ This example does not include :ref:`Members <CategoricalVariant>` .
 .. rubric:: Full example: JSON
 
 .. literalinclude:: ../../../examples/json/adjacencyFusion-ex3.json
-   :language: json
+  :language: json
 
 .. rubric:: Full example: YAML
 
 .. literalinclude:: ../../../examples/yaml/adjacencyFusion-ex3.yaml
-   :language: yaml
+  :language: yaml

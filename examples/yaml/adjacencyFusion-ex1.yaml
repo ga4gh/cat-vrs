@@ -1,8 +1,7 @@
 id: civic.vid:1
 type: CategoricalVariant
 name: BCR(ncbi:613)::ABL1(ncbi:25)
-description: >-
-  An optional field to describe BCR::ABL1
+description: An optional field to describe this Categorical Variant.
 aliases:
   - BCR::ABL1
   - t(9;22)(q34;q11)
