@@ -3,7 +3,9 @@
 Examples
 !!!!!!!!
 
-Annotated examples of Cat-VRS categorical variant representations.
+Each example's page details where the example was sourced from, how each property was populated, and includes both JSON and YAML versions of the example inline.
+
+In addition, :ref:`BRAF V600 (annotated) <BrafV600Annotated>` and :ref:`TP53 Loss (annotated) <Tp53CopyLossAnnotated>` have been written with inline comments in the YAML version of the example. They may be particularly helpful when initiating to this specification.
 
 .. rubric:: By Constraint
 
@@ -19,7 +21,6 @@ Annotated examples of Cat-VRS categorical variant representations.
        | :ref:`v::NTRK1(hgnc:8031) <AdjacencyFusionEx2>`
    * - :ref:`Copy Change <CopyChangeConstraint>`
      - | :ref:`GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 <CategoricalCnvEx2>`
-       | :ref:`TP53 Loss (annotated) <Tp53CopyLossAnnotated>`
        | :ref:`TP53 Loss <Tp53CopyLoss>`
    * - :ref:`Copy Count <CopyCountConstraint>`
      - | :ref:`GRCh38 Xp22.31(chrX:6978350-7594949)x3 <CategoricalCnvEx3>`
@@ -31,18 +32,15 @@ Annotated examples of Cat-VRS categorical variant representations.
        | :ref:`NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter) <ProteinSequenceConsequenceEx2>`
        | :ref:`PIK3CA p.R38H <FunctionVariantEx3>`
    * - :ref:`Defining Location <DefiningLocationConstraint>`
-     - | :ref:`BRAF V600 (annotated) <BrafV600Annotated>`
-       | :ref:`BRAF V600 <BrafV600>`
+     - | :ref:`BRAF V600 <BrafV600>`
        | :ref:`GRCh38 Xp22.31(chrX:6978350-7594949)x3 <CategoricalCnvEx3>`
        | :ref:`GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 (copy count) <CategoricalCnvEx1>`
        | :ref:`GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 (copy change) <CategoricalCnvEx2>`
-       | :ref:`TP53 Loss (annotated) <Tp53CopyLossAnnotated>`
        | :ref:`TP53 Loss <Tp53CopyLoss>`
    * - :ref:`Feature Context <FeatureContextConstraint>`
      - | :ref:`BRCA2 loss of function variants <FunctionVariantEx2>`
        | :ref:`NRAS functionally normal variants <FunctionVariantEx1>`
        | :ref:`PIK3CA p.R38H <FunctionVariantEx3>`
-       | :ref:`TP53 Loss (annotated) <Tp53CopyLossAnnotated>`
        | :ref:`TP53 Loss <Tp53CopyLoss>`
    * - :ref:`Function <FunctionConstraint>`
      - | :ref:`BRCA2 loss of function variants <FunctionVariantEx2>`
