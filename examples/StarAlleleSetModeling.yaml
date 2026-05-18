@@ -1,24 +1,47 @@
 gene: ... # come back to this
+
+
 sequenceReference:
-    'NC_000013.11': 
-        type: SequenceReference 
-        refgetAccession: 'ga4gh:SQ.???' # come back to this
+    'NC_000013.11':
+        type: SequenceReference
+        refgetAccession: 'ga4gh:SQ._0wi-qoDrvram155UmcSC-zA5ZK4fpLT'
+
+# There may be a unintended assumption that the location ids create a 1-to-1 mapping of the columns in the star allele definition table.
+# If we think there's utility in having a column-wise association between the locations and the star allele definition table columns,
+# then we might consider using the column numbers as the ids.  This would allow us to have a more compact representation of the
+# star allele set definition table, and we could use the column numbers to reference the locations in the starMap
+# and starAllele definitions.  -- consider how important it is to have the starMap and starAlleleSet be row/col aligned in their computational form.
+# NOTE 1 - I believe it is possible that there may be more than one location id per column since the normalization can result
+# in multiple locations being represented by a single column in the star allele definition table.  If that is the case, we
+# would need to have a more complex mapping of the column numbers to the location ids.
+# NOTE 2 - also be aware that new columns can be inserted in the definition table over time since they are ordered by the start position.
 location:
-    'ga4gh:SL.???747': 
+    'ga4gh:SL.???747':   # column B (rs769369441)
+        id: # up for discussion - come back to this
         type: SequenceLocation
         start: 48037747
         end: 48037748
         sequenceReference: "#/sequenceReference/NC_000013.11"
-    'ga4gh:SL.???748':
-      location:
-        id: SL... # come back to this
+    'ga4gh:SL.???748':   # column C
+        id: SL.HLz8ZSGs...
         type: SequenceLocation
         start: 48037748
         end: 48037749
         sequenceReference: "#/sequenceReference/NC_000013.11"
-    'ga4gh:SL.???Rep': 
+    'ga4gh:SL.nBEeX_KA':  # column D in allele definition table
+        id: SL.nBEeX_KA...
         type: SequenceLocation
+        start: 48037782
+        end: 48037801
         sequenceReference: "#/sequenceReference/NC_000013.11"
+    # adding in col Q so that we can differentiate between *1 and *3 properly.
+    'ga4gh:SL.UpTKp0U4L':  # column Q in allele definition table
+        id: ga4gh:SL.UpTKp0U4L...
+        type: SequenceLocation
+        start: 48045718
+        end: 48045719
+        sequenceReference: "#/sequenceReference/NC_000013.11"
+
 allele:
     'ga4gh:VA.??747T=': #come back to this
         location: 'ga4gh:SL.???747'
@@ -40,41 +63,51 @@ allele:
         state:
             type: LiteralSequenceExpression
             sequence: "C"
-    'ga4gh:VA.??Rep3': #come back to this
-        location: 'ga4gh:SL.???Rep'
+    'ga4gh:VA.??Rep3': #repeat [3] same as ref
+        location: '#/location/ga4gh:SL.nBEeX_KA...'
         state:
             type: ReferenceLengthExpression
             length: 19
             repeatSubunitLength: 19
             sequence: GGAGTCGGAGTCGGAGTCG
-    'ga4gh:VA.??Rep2': #come back to this
-        location: 'ga4gh:SL.???Rep'
+    'ga4gh:VA.??Rep2': #deletion of one repeat [2]
+        location: '#/location/ga4gh:SL.nBEeX_KA...'
         state:
             type: ReferenceLengthExpression
             length: 13
             repeatSubunitLength: 6
             sequence: GGAGTCGGAGTCG
-    'ga4gh:VA.??Rep4': 
-        location: 'ga4gh:SL.???Rep'
+    'ga4gh:VA.??Rep4':  # insertion of one repeat [4]
+        location: '#/location/ga4gh:SL.nBEeX_KA...'
         state:
             type: ReferenceLengthExpression
             length: 25
-            repeatSubunitLength: 19
+            repeatSubunitLength: 6
             sequence: GGAGTCGGAGTCGGAGTCGGAGTCG
+    'g.48045719C=' :
+        location: '#/location/ga4gh:SL.UpTKp0U4L'
+        state:
+            type: LiteralSequenceExpression
+            sequence: "C"
+    'g.48045719C>T' :
+        location: '#/location/ga4gh:SL.UpTKp0U4L'
+        state:
+            type: LiteralSequenceExpression
+            sequence: "T"
       ... # add in rest
 
 
 ## this master star allele set which can be versioned is really a star allele model IMO, but it has the addition of a version and gene that is shared by all starAlleles it defines
-starAlleleSet: 
-    'SAS.NUDT15': 
+starAlleleSet:
+    'SAS.NUDT15':
         id: SAS.NUDT15
         version: 2026.04.21
         gene: NUDT15
         referenceMap: # this is the only inherent property
             - location: '#/location/ga4gh:SL.???747'
               alleles:
-                  - '#/allele/ga4gh:ga4gh:VA.??747T='
-                  - '#/allele/ga4gh:ga4gh:ga4gh:VA.??747TC'
+                  - '#/allele/ga4gh:VA.??747T='
+                  - '#/allele/ga4gh:VA.??747TC'
             - location: '#/location/ga4gh:SL.???748'
               alleles:
                   - '#/allele/ga4gh:ga4gh:VA.??748G='
@@ -97,8 +130,8 @@ starAlleles:
         ## I think we want to have the constraints below be directly referencing the starAlleleSet.starMap values
         setConstraints:
             # referencing by array position is suboptimal but I can't figure a better solution just yet.
-            - location: 'ga4gh:SL.???747'
-              alleles: 
+            - location: '#/location/ga4gh:SL.???747'
+              alleles:
                   # like the starmap.alleles in the starAlleleSet, any of the elements in this list would satisfy the condition that this starMap entry is satisified.
                   - 'ga4gh:VA.??747T='
             - location: 'ga4gh:SL.???748'
