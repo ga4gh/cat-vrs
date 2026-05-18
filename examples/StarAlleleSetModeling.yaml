@@ -117,14 +117,18 @@ starAlleleSet:
                   - '#/allele/ga4gh:ga4gh:VA.??Rep2'
                   - '#/allele/ga4gh:ga4gh:VA.??Rep3'
                   - '#/allele/ga4gh:ga4gh:VA.??Rep4'
-                    
+            - location: '#/location/ga4gh:SL.UpTKp0U4L'
+              alleles:
+                  - '#/allele/ga4gh:g.48045719C='
+                  - '#/allele/ga4gh:g.48045719C>T'
+
 # if we could define these starAlleles so the MUST reference the same starAlleleSet for every element within that would be the best approach. not sure my approach below gets us all the way there.
-starAlleles: 
-    'NUDT15.*1':        
+starAlleles:
+    'NUDT15.*1':
         type: CategoricalVariant
         categoricalVariantType: StarAllele
 
-        # defining star allele set 
+        # defining star allele set
         starAlleleSet: '#/starAlleleSet/SAS.NUDT15' # referencing the star allele set that defines the permitted values for this star allele.
 
         ## I think we want to have the constraints below be directly referencing the starAlleleSet.starMap values
@@ -140,6 +144,9 @@ starAlleles:
             - location: '#/location/ga4gh:SL.???Rep' # come back to this later
               alleles:
                   - 'ga4gh:VA.??Rep3'
+            - location: '#/location/ga4gh:SL.UpTKp0U4L'
+              alleles:
+                  - 'ga4gh:g.48045719C='
     'NUDT15.*3': # come back to this
         type: CategoricalVariant
         categoricalVariantType: StarAllele
@@ -155,6 +162,9 @@ starAlleles:
               alleles:
                   - 'ga4gh:VA.??Rep3'
                   - 'ga4gh:VA.??Rep4'
+            - location: '#/location/ga4gh:SL.UpTKp0U4L'
+              alleles:
+                  - 'ga4gh:g.48045719C>T'
     'NUDT15.*9': # come back to this
         type: CategoricalVariant
         categoricalVariantType: StarAllele
@@ -169,6 +179,9 @@ starAlleles:
             - location: '#/location/ga4gh:SL.???Rep' # come back to this later
               alleles:
                   - 'ga4gh:VA.??Rep2'
+            - location: '#/location/ga4gh:SL.UpTKp0U4L'
+              alleles:
+                  - 'ga4gh:g.48045719C='
     'NUDT15.*10': # come back to this
         type: CategoricalVariant
         categoricalVariantType: StarAllele
@@ -183,3 +196,6 @@ starAlleles:
             - location: '#/location/ga4gh:SL.???Rep' # come back to this later
               alleles:
                   - 'ga4gh:VA.??Rep3'
+            - location: '#/location/ga4gh:SL.UpTKp0U4L'
+              alleles:
+                  - 'ga4gh:g.48045719C='
