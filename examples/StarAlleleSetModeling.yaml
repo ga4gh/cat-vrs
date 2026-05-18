@@ -15,44 +15,47 @@ location:
         type: SequenceLocation
         start: 48037748
         end: 48037749
-        sequenceReference: "#/sequenceReference/NC_000013.11"       
+        sequenceReference: "#/sequenceReference/NC_000013.11"
+    'ga4gh:SL.???Rep': 
+        type: SequenceLocation
+        sequenceReference: "#/sequenceReference/NC_000013.11"
 allele:
     'ga4gh:VA.??747T=': #come back to this
-        location: '#/location/ga4gh:SL.???747'
+        location: 'ga4gh:SL.???747'
         state:
             type: LiteralSequenceExpression
             sequence: "T"
     'ga4gh:VA.??747TC': #come back to this
-        location: '#/location/ga4gh:SL.???747'
+        location: 'ga4gh:SL.???747'
         state:
             type: LiteralSequenceExpression
             sequence: "C"
     'ga4gh:VA.??748G=': #come back to this
-        location: '#/location/ga4gh:SL.???748'
+        location: 'ga4gh:SL.???748'
         state:
             type: LiteralSequenceExpression
             sequence: "G"
     'ga4gh:VA.??748GC': #come back to this
-        location: '#/location/ga4gh:SL.???748'
+        location: 'ga4gh:SL.???748'
         state:
             type: LiteralSequenceExpression
             sequence: "C"
     'ga4gh:VA.??Rep3': #come back to this
-        location: 
+        location: 'ga4gh:SL.???Rep'
         state:
             type: ReferenceLengthExpression
             length: 19
             repeatSubunitLength: 19
             sequence: GGAGTCGGAGTCGGAGTCG
     'ga4gh:VA.??Rep2': #come back to this
-        location: #come back to this
+        location: 'ga4gh:SL.???Rep'
         state:
             type: ReferenceLengthExpression
             length: 13
             repeatSubunitLength: 6
             sequence: GGAGTCGGAGTCG
     'ga4gh:VA.??Rep4': 
-        location: #come back to this
+        location: 'ga4gh:SL.???Rep'
         state:
             type: ReferenceLengthExpression
             length: 25
@@ -74,118 +77,76 @@ starAlleleSet:
                   - '#/allele/ga4gh:ga4gh:ga4gh:VA.??747TC'
             - location: '#/location/ga4gh:SL.???748'
               alleles:
-                  - '#/allele/ga4gh:ga4gh:...
-                  - '#/allele/ga4gh:ga4gh:...
+                  - '#/allele/ga4gh:ga4gh:VA.??748G='
+                  - '#/allele/ga4gh:ga4gh:VA.??748GC'
+            - location: '#/location/ga4gh:SL.???Rep'
+              alleles:
+                  - '#/allele/ga4gh:ga4gh:VA.??Rep2'
+                  - '#/allele/ga4gh:ga4gh:VA.??Rep3'
+                  - '#/allele/ga4gh:ga4gh:VA.??Rep4'
                     
-
 # if we could define these starAlleles so the MUST reference the same starAlleleSet for every element within that would be the best approach. not sure my approach below gets us all the way there.
 starAlleles: 
-    'NUDT15.*1':  # come back to this
-        # since these are versioned I think of them more as versioned domain entities yet to be defined for reference by the community, they are NOT CisPhaseBlocks until they are observed. 
-        
-        type: CategoricalVariant     ## this should represent the type of object not a generalized thing IMO
-        categoricalVariantType: StarAllele ## like this
+    'NUDT15.*1':        
+        type: CategoricalVariant
+        categoricalVariantType: StarAllele
 
         # defining star allele set 
-        starAlleleSet: 'ga4gh:SAS.NUDT15' # referencing the star allele set that defines the starMap for this star allele.
+        starAlleleSet: '#/starAlleleSet/SAS.NUDT15' # referencing the star allele set that defines the permitted values for this star allele.
 
-        # using the starmap entries to determine if an incoming observed CisPhaseBlock has NO members that fall outside the starMap would create a match
-        # additionally we could add an attribute to say which starMap locations are "Required" to be met to meet the minimal viable definition of the star allele!
-
-        ## I think we want to have the starMap constraints below be directly referencing the starAlleleSet.starMap values
+        ## I think we want to have the constraints below be directly referencing the starAlleleSet.starMap values
         setConstraints:
             # referencing by array position is suboptimal but I can't figure a better solution just yet.
             - location: 'ga4gh:SL.???747'
               alleles: 
                   # like the starmap.alleles in the starAlleleSet, any of the elements in this list would satisfy the condition that this starMap entry is satisified.
                   - 'ga4gh:VA.??747T='
-
-
-            --- END changes here for now
-                
-              - type: Allele
-                location: '#/permittedLocations/ga4gh:SL.???747'
-                state:
-                    type: LiteralSequenceExpression
-                    sequence: "T"
-              - type: Allele
-                location: '#/permittedLocations/ga4gh:SL.???748'
-                state:
-                    type: LiteralSequenceExpression
-                    sequence: "G"
-              - type: Allele
-                location: '...' # come back to this later
-                state:
-                    type: ReferenceLengthExpression
-                    length: 19
-                    repeatSubunitLength: 19
-                    sequence: GGAGTCGGAGTCGGAGTCG
-
-
-
-
-
-
-
-
-
-
-starAlleles:
-    "NUDT15.*1":  # come back to this
+            - location: 'ga4gh:SL.???748'
+              alleles:
+                  - 'ga4gh:VA.??748G='
+            - location: '#/location/ga4gh:SL.???Rep' # come back to this later
+              alleles:
+                  - 'ga4gh:VA.??Rep3'
+    'NUDT15.*3': # come back to this
         type: CategoricalVariant
-        constraints:
-          - type: CisPhasedBlockConstraint # not a thing
-            members:
-              - type: Allele
-                location: '#/permittedLocations/ga4gh:SL.???747'
-                state:
-                    type: LiteralSequenceExpression
-                    sequence: "T"
-              - type: Allele
-                location: '#/permittedLocations/ga4gh:SL.???748'
-                state:
-                    type: LiteralSequenceExpression
-                    sequence: "G"
-              - type: Allele
-                location: '...' # come back to this later
-                state:
-                    type: ReferenceLengthExpression
-                    length: 19
-                    repeatSubunitLength: 19
-                    sequence: GGAGTCGGAGTCGGAGTCG
-    "NUDT15.*9": # come back to this
+        categoricalVariantType: StarAllele
+        starAlleleSet: '#/starAlleleSet/SAS.NUDT15' # referencing the star allele set that defines the permitted values for this star allele.
+        setConstraints:
+            - location: 'ga4gh:SL.???747'
+              alleles:
+                  - 'ga4gh:VA.??747T='
+            - location: 'ga4gh:SL.???748'
+              alleles:
+                  - 'ga4gh:VA.??748G='
+            - location: '#/location/ga4gh:SL.???Rep' # come back to this later
+              alleles:
+                  - 'ga4gh:VA.??Rep3'
+                  - 'ga4gh:VA.??Rep4'
+    'NUDT15.*9': # come back to this
         type: CategoricalVariant
-        constraints:
-          - type: CisPhasedBlockConstraint # not a thing
-            members:
-              - type: DefiningAlleleConstraint
-                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??747T='
-              - type: DefiningAlleleConstraint
-                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??748G='
-              - type: DefiningAlleleConstraint
-                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??Rep2'
-    "NUDT15.*10": # come back to this
-        constraints:
-          - type: CisPhasedBlockConstraint # not a thing
-            members:
-              - type: DefiningAlleleConstraint
-                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??747T='
-              - type: DefiningAlleleConstraint
-                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??748GC'
-              - type: DefiningAlleleConstraint
-                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??Rep3'
-    "NUDT15.*3": # come back to this
-        constraints:
-          - type: CisPhasedBlockConstraint # not a thing
-            members:
-              - type: DefiningAlleleConstraint
-                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??747T='
-              - type: DefiningAlleleConstraint
-                allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??748GC'
-              - type: LogicalConstraint
-                operation: 'OR'
-                members:
-                  - type: DefiningAlleleConstraint
-                    allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??Rep3'
-                  - type: DefiningAlleleConstraint
-                    allele: '#/permittedAlleles/ga4gh:ga4gh:VA.??Rep4'
+        categoricalVariantType: StarAllele
+        starAlleleSet: '#/starAlleleSet/SAS.NUDT15' # referencing the star allele set that defines the permitted values for this star allele.
+        setConstraints:
+            - location: 'ga4gh:SL.???747'
+              alleles:
+                  - 'ga4gh:VA.??747T='
+            - location: 'ga4gh:SL.???748'
+              alleles:
+                  - 'ga4gh:VA.??748G='
+            - location: '#/location/ga4gh:SL.???Rep' # come back to this later
+              alleles:
+                  - 'ga4gh:VA.??Rep2'
+    'NUDT15.*10': # come back to this
+        type: CategoricalVariant
+        categoricalVariantType: StarAllele
+        starAlleleSet: '#/starAlleleSet/SAS.NUDT15'
+        setConstraints:
+            - location: 'ga4gh:SL.???747'
+              alleles:
+                  - 'ga4gh:VA.??747TC'
+            - location: 'ga4gh:SL.???748'
+              alleles:
+                  - 'ga4gh:VA.??748G='
+            - location: '#/location/ga4gh:SL.???Rep' # come back to this later
+              alleles:
+                  - 'ga4gh:VA.??Rep3'
