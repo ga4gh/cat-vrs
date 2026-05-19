@@ -10,31 +10,19 @@ Definition and Information Model
 
 Examples
 @@@@@@@@
-The following are example implementations of AdjacencyConstraint:
 
-.. collapse:: BCR(ncbi:613)::ABL1(ncbi:25)
+The following :ref:`example Categorical Variants <Examples>` utilize this :ref:`Constraint`:
 
-   .. literalinclude:: ../../../../examples/json/adjacencyFusion-ex1.json
-      :language: json
-      :lines: 39-72
+- :ref:`BCR(ncbi:613)::ABL1(ncbi:25) <AdjacencyFusionEx1>`
+- :ref:`v::NTRK1(hgnc:8031) <AdjacencyFusionEx2>`
+- :ref:`?::ZNF384(ncbi:171017) <AdjacencyFusionEx3>`
+- :ref:`FGFR2(hgnc:3689)::v <AdjacencyFusionEx4>`
 
-.. collapse:: v::NTRK1(hgnc:8031)
+A representative example of this Constraint, from :ref:`BCR(ncbi:613)::ABL1(ncbi:25) <AdjacencyFusionEx1>`:
 
-   .. literalinclude:: ../../../../examples/json/adjacencyFusion-ex2.json
-      :language: json
-      :lines: 11-33
-
-.. collapse:: ?::ZNF384(ncbi:171017)
-
-   .. literalinclude:: ../../../../examples/json/adjacencyFusion-ex3.json
-      :language: json
-      :lines: 11-33
-
-.. collapse:: FGFR2(hgnc:3689)::v
-
-   .. literalinclude:: ../../../../examples/json/adjacencyFusion-ex4.json
-      :language: json
-      :lines: 11-84
+.. literalinclude:: ../../../../examples/json/adjacencyFusion-ex1.json
+  :language: json
+  :lines: 39-72
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@

@@ -1,7 +1,7 @@
 {
   "id": "clinvar:151061",
   "type": "CategoricalVariant",
-  "name": "GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3",
+  "name": "GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 (copy count)",
   "description": "An example categorical CNV that uses CopyCountConstraint.",
   "aliases": [
     "NC_000007.14:g.(?_5905831)_(6014161_?)dup",

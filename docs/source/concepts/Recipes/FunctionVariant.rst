@@ -15,22 +15,12 @@ The FunctionVariant is a :ref:`CategoricalVariant` with at least two constraints
 
 Examples
 @@@@@@@@
-The following are example implementations of that satisfy the FunctionVariant recipe:
 
-.. collapse:: NRAS functionally normal variants
+The following :ref:`example Categorical Variants <Examples>` satisfy this :ref:`Recipe <Recipes>`:
 
-   .. literalinclude:: ../../../../examples/json/functionVariant-ex1.json
-      :language: json
-
-.. collapse:: BRCA2 loss of function variants
-
-   .. literalinclude:: ../../../../examples/json/functionVariant-ex2.json
-      :language: json
-
-.. collapse:: PIK3CA p.R38H
-
-   .. literalinclude:: ../../../../examples/json/functionVariant-ex3.json
-      :language: json
+- :ref:`BRCA2 loss of function variants <FunctionVariantEx2>`
+- :ref:`NRAS functionally normal variants <FunctionVariantEx1>`
+- :ref:`PIK3CA p.R38H <FunctionVariantEx3>`
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@

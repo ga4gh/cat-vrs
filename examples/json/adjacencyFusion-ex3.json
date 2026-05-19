@@ -2,7 +2,7 @@
   "id": "civic.vid:5186",
   "type": "CategoricalVariant",
   "name": "?::ZNF384(ncbi:171017)",
-  "description": "An optional field to describe ?::ZNF384(ncbi:171017).",
+  "description": "An optional field to describe this Categorical Variant.",
   "aliases": [
     "?::ZNF384",
     "ZNF384 Fusion"
