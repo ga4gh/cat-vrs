@@ -38,7 +38,7 @@ functionConsequence
 ###################
 
 The *functionConsequence* attribute is required and is a :ref:`MappableConcept`, meaning that it should be
-represented using a term from an externally defined ontology. We recommend using descendant terms of the `functional effect variant <https://www.ebi.ac.uk/ols4/ontologies/so/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FSO_0001536?lang=en>`_ concept from the `Sequence Ontology <https://www.ebi.ac.uk/ols4/ontologies/so>`_, such as:
+represented using a term from an externally defined ontology. We recommend using descendant terms of the `functional effect variant <https://www.ebi.ac.uk/ols4/ontologies/so/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FSO_0001536?lang=en>`_ concept in the `Sequence Ontology <https://www.ebi.ac.uk/ols4/ontologies/so>`_, such as:
 
 .. list-table::
    :header-rows: 1
