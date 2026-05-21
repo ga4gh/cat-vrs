@@ -11,13 +11,16 @@ Definition and Information Model
 Examples
 @@@@@@@@
 
-The following are example implementations of CopyCountConstraint:
+The following :ref:`example Categorical Variants <Examples>` utilize this :ref:`Constraint`:
 
-.. collapse:: 3 copies
+- :ref:`GRCh38 Xp22.31(chrX:6978350-7594949)x3 <CategoricalCnvEx3>`
+- :ref:`GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 <CategoricalCnvEx1>`
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_categoricalCnv-ex3
-      :language: json
-      :lines: 21-24
+A representative example of this Constraint, from :ref:`GRCh38 Xp22.31(chrX:6978350-7594949)x3 <CategoricalCnvEx3>`:
+
+.. literalinclude:: ../../../../examples/json/categoricalCnv-ex3.json
+  :language: json
+  :lines: 18-21
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@

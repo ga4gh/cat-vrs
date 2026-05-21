@@ -1,7 +1,7 @@
 {
   "id": "civic.id:4452",
   "type": "CategoricalVariant",
-  "name": "TP53 Loss",
+  "name": "TP53 Loss (annotated)",
   "description": "TP53 Copy Number Loss is a categorical copy-number variant resulting from the deletion of one copy of the TP53 gene.",
   "aliases": [
     "TP53 Copy Number Loss",

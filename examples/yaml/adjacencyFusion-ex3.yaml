@@ -1,0 +1,22 @@
+id: civic.vid:5186
+type: CategoricalVariant
+name: ?::ZNF384(ncbi:171017)
+description: An optional field to describe this Categorical Variant.
+aliases:
+  - ?::ZNF384
+  - ZNF384 Fusion
+constraints:
+  - type: AdjacencyConstraint
+    orderKnown: true
+    adjoinedElements:
+      - type: UnspecifiedElement
+      - id: ncbi:171017
+        conceptType: Gene
+        name: ZNF384
+        primaryCoding:
+          id: ncbi:171017
+          name: ZNF384
+          system: https://www.ncbi.nlm.nih.gov/gene
+          code: "171017"
+          iris:
+            - https://www.ncbi.nlm.nih.gov/gene/171017

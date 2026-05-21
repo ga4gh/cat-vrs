@@ -16,17 +16,11 @@ A CanonicalAllele is a :ref:`CategoricalVariant` with exactly one constraint:
 
 Examples
 @@@@@@@@
-The following are example implementations of that satisfy the CanonicalAllele recipe:
 
-.. collapse:: NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs)
+The following :ref:`example Categorical Variants <Examples>` satisfy this :ref:`Recipe <Recipes>`:
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_canonicalAllele-ex1
-      :language: json
-
-.. collapse:: NC_000001.11:g.1699974C>G
-
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_canonicalAllele-ex2
-      :language: json
+- :ref:`NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs) <CanonicalAlleleEx1>`
+- :ref:`NC_000001.11:g.1699974C>G <CanonicalAlleleEx2>`
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@

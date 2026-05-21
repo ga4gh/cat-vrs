@@ -14,27 +14,13 @@ A GeneFusion is a :ref:`CategoricalVariant` with at least one constraint:
 
 Examples
 @@@@@@@@
-The following are example implementations of that satisfy the Gene Fusion recipe:
 
-.. collapse:: BCR(ncbi:613)::ABL1(ncbi:25)
+The following :ref:`example Categorical Variants <Examples>` satisfy this :ref:`Recipe <Recipes>`:
 
-   .. literalinclude:: ../../../schema/cat-vrs/json/example_adjacencyFusion-ex1
-      :language: json
-
-.. collapse:: v::NTRK1(hgnc:8031)
-
-   .. literalinclude:: ../../../schema/cat-vrs/json/example_adjacencyFusion-ex2
-      :language: json
-
-.. collapse:: ?::ZNF384(ncbi:171017)
-
-   .. literalinclude:: ../../../schema/cat-vrs/json/example_adjacencyFusion-ex3
-      :language: json
-
-.. collapse:: FGFR2(hgnc:3689)::v
-
-   .. literalinclude:: ../../../schema/cat-vrs/json/example_adjacencyFusion-ex4
-      :language: json
+- :ref:`?::ZNF384(ncbi:171017) <AdjacencyFusionEx3>`
+- :ref:`BCR(ncbi:613)::ABL1(ncbi:25) <AdjacencyFusionEx1>`
+- :ref:`FGFR2(hgnc:3689)::v <AdjacencyFusionEx4>`
+- :ref:`v::NTRK1(hgnc:8031) <AdjacencyFusionEx2>`
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@

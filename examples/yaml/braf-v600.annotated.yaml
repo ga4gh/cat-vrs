@@ -1,0 +1,319 @@
+# Categorical Variants are described using the Cat-VRS data model, here:
+# https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html
+
+# While Categorical Variants can be defined using any combination of constraints, the Cat-VRS development team
+# is generating common types of Categorical Variants, named "recipes", and these can be found here:
+# https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html
+
+# Here, we describe the Protein Sequence Consequence Categorical Variant for BRAF V600 variants,
+# referenced from CIViC: https://civicdb.org/variants/17/summary
+
+# id: The ‘logical’ identifier of the Entity in the system of record, e.g. a UUID.
+# This ‘id’ is unique within a given system, but may or may not be globally unique outside the system.
+# Within these examples, we are using the nomenclature {originating resource}:{identifier that they are using}
+# Given the URL https://civicdb.org/variants/17/summary, we will use the id of civic.vid:17
+id: civic.vid:17
+
+# type: All Categorical Variants must be of type 'CategoricalVariant'. This specifies the data type of the object.
+type: CategoricalVariant
+
+# name: A primary name for the entity. This is intended to be human-readable.
+name: BRAF V600 (annotated)
+
+# description: A free-text description of the entity
+description: >-
+  BRAF V600 variants are missense amino acid substitutions that result in Valine changed.
+  V600E is the most common substitution, but V600K, V600M, V600R, and V600G have also been observed.
+
+# aliases: Alternative names of the Categorical Variant. For most examples, we have filled in hgvs representations
+# within aliases but hgvs requires an alternate allele to be specified, which we cannot do here. Thus we've just added
+# a version of the name with the MANE Select transcript specified.
+aliases:
+  - NM_004333.6(BRAF) V600
+  - NM_004333.6 V600
+
+# extensions: A list of extensions to the Entity, that allow for capture of information not directly
+# supported by elements defined in the model.
+# The decision of how to structure extensions are left to implementers, though we recommend documenting an
+# implementation's use of extensions in the Standard Operating Procedure to promote ease of use.
+extensions:
+  - name: CIViC Representative Variant Coordinates
+    value:
+      chromosome: '7'
+      start: 140453136
+      stop: 140453137
+      reference_bases: ''
+      variant_bases: ''
+      representative_transcript:  ENST00000288602.6
+      ensembl_version: 75
+      reference_build: GRCh37
+
+# constraints: A rule or set of rules that must be satisfied for a Categorical Variant to be considered valid.
+# The currently implemented constraints can be viewed online, here:
+# https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#constraint
+# They also can be viewed within the source yaml file, located at schema/cat-vrs/cat-vrs-source.yaml, within this
+# GitHub repository.
+# For each categorical variant there may be 0 to n constraints.
+constraints:
+  # The DefiningLocationConstraint describes variation relative to a VRS location
+  # The VRS location can be transcribed in full, or abbreviated with the notation vrs.json#/ga4gh:VA...
+  - type: DefiningLocationConstraint
+    location:
+      id: ga4gh:SL.1ReS370wzmC9PGTn13XrnG8Ot7UAKYuw
+      description: Amino acid position 600 within the BRAF protein (refseq:NP_004324.2), which is the protein product of the MANE Select (GRCh38) coding transcript for BRAF (refseq:NM_004333.6), corresponding to valine in the reference sequence.
+      type: SequenceLocation
+      digest: 1ReS370wzmC9PGTn13XrnG8Ot7UAKYuw
+      sequenceReference:
+        id: refseq:NP_004324.2
+        name: NP_004324.2
+        description: The protein product of the MANE Select (GRCh38) coding transcript for BRAF (refseq:NM_004333.6), corresponding to the Refseq protein accession NP_004324.2.
+        aliases:
+          - ensembl:ENSP00000288602.6
+          - ga4gh:SQ.cQvw4UsHHRRlogxbWCB8W-mKD4AraM9y
+        type: SequenceReference
+        refgetAccession: SQ.cQvw4UsHHRRlogxbWCB8W-mKD4AraM9y
+        residueAlphabet: aa
+      start: 599
+      end: 600
+      sequence: V
+    relations:
+      - primaryCoding:
+          code: translation_of
+          system: http://www.sequenceontology.org
+          iris:
+            - http://www.sequenceontology.org/browser/current_release/term/translation_of
+    matchCharacteristic:
+      primaryCoding:
+        code: is_within
+        system: ga4gh-gks-term:location-match
+
+# mappings: A list of mappings to concepts in terminologies or code systems.
+# Each mapping should include a coding and a relation.
+# Usually, this is intended to describe relations to concepts in other websites or systems
+# For example, linking out to clinvar or dbSNP. These mappings are taken from
+mappings:
+  - coding:
+      system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
+      code: '13961'
+      name: NM_004333.6(BRAF):c.1799T>A (p.Val600Glu)
+      iris:
+        - https://www.ncbi.nlm.nih.gov/clinvar/variation/13961
+    relation: relatedMatch
+  - coding:
+      system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
+      code: '375940'
+      name: NM_004333.6(BRAF):c.1798_1799delinsAG (p.Val600Arg)
+      iris:
+        - https://www.ncbi.nlm.nih.gov/clinvar/variation/375940
+    relation: relatedMatch
+  - coding:
+      system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
+      code: '375941'
+      name: NM_004333.6(BRAF):c.1798_1799delinsAA (p.Val600Lys)
+      iris:
+        - https://www.ncbi.nlm.nih.gov/clinvar/variation/375941
+    relation: relatedMatch
+  - coding:
+      system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
+      code: '40389'
+      name: NM_004333.6(BRAF):c.1799T>G (p.Val600Gly)
+      iris:
+        - https://www.ncbi.nlm.nih.gov/clinvar/variation/40389
+    relation: relatedMatch
+  - coding:
+      system: https://www.ncbi.nlm.nih.gov/clinvar/variation/
+      code: '44815'
+      name: NM_004333.6(BRAF):c.1798G>A (p.Val600Met)
+      iris:
+        - https://www.ncbi.nlm.nih.gov/clinvar/variation/44815
+    relation: relatedMatch
+
+# members: A non-exhaustive list of VRS variation Constraints that satisfy the constraints of this categorical variant.
+# Here, we are describing VRS alleles that satisfy BRAF V600
+# The VariantNormalizer is a useful API tool to retrieve VRS Alleles based on HGVS representation
+# https://normalize.cancervariants.org/variation
+members:
+  - id: ga4gh:VA.W6xsV-aFm9yT2Bic5cFAV2j0rll6KK5R
+    type: Allele
+    name: NM_004333.6:c.1799T>A
+    description: VRS variation of NM_004333.6:c.1799T>A, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+    digest: W6xsV-aFm9yT2Bic5cFAV2j0rll6KK5R
+    expressions:
+      - syntax: hgvs.c
+        value: NM_004333.6:c.1799T>A
+    location:
+      id: ga4gh:SL.8HBKs9fzlT3tKWlM03REjkg_0Om6Y33U
+      description: Coding DNA (cDNA) position 1799 of the BRAF MANE Select coding transcript (refseq:NM_004333.6), corresponding to genomic position 140753336 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+      extensions:
+        - name: GRCh38 1-based, genomic position
+          value: chr7:140753336
+          description: Genomic position 140,753,336 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+        - name: GRCh38 1-based, inclusive interval
+          value: chr7:140753336-140753336
+          description: Genomic positions 140,753,336 to 140,753,336 on chromosome 7 (refseq:NC_000007.14, GRCh38); 1-based, inclusive interval notation.
+        - name: GRCh38 0-based, half-open interval
+          value: chr7:140753335-140753337
+          description: Genomic positions 140,753,335 to 140,753,336 on chromosome 7 (refseq:NC_000007.14, GRCh38); 0-based, half-open interval notation.
+      type: SequenceLocation
+      digest: 8HBKs9fzlT3tKWlM03REjkg_0Om6Y33U
+      sequenceReference:
+        id: refseq:NM_004333.6
+        name: NM_004333.6
+        description: The MANE Select (GRCh38) coding transcript for BRAF.
+        aliases:
+          - ga4gh:SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+        type: SequenceReference
+        refgetAccession: SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+        residueAlphabet: na
+      start: 2024
+      end: 2025
+      sequence: T
+    state:
+      type: LiteralSequenceExpression
+      sequence: A
+  - id: ga4gh:VA.GIOeMJX8rJ-q9ZGqmFRIUOGnXQ5NARht
+    type: Allele
+    name: NM_004333.6:c.1798_1799delinsAA
+    description: VRS variation of NM_004333.6:c.1798_1799delinsAA, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+    digest: GIOeMJX8rJ-q9ZGqmFRIUOGnXQ5NARht
+    expressions:
+      - syntax: hgvs.c
+        value: NM_004333.6:c.1798_1799delinsAA
+    location:
+      id: ga4gh:SL.SXY8ShFrBAfSvtO_sXLMQKN3Ozc5awgh
+      description: Coding DNA (cDNA) positions 1798 to 1799 of the BRAF MANE Select coding transcript (refseq:NM_004333.6), corresponding to genomic positions 140753336 to 140753337 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+      extensions:
+        - name: GRCh38 1-based, inclusive interval
+          value: chr7:140753336-140753337
+          description: Genomic positions 140,753,336 to 140,753,337 on chromosome 7 (refseq:NC_000007.14, GRCh38); 1-based, inclusive interval notation.
+        - name: GRCh38 0-based, half-open interval
+          value: chr7:140753335-140753337
+          description: Genomic positions 140,753,335 to 140,753,337 on chromosome 7 (refseq:NC_000007.14, GRCh38); 0-based, half-open interval notation.
+      type: SequenceLocation
+      digest: SXY8ShFrBAfSvtO_sXLMQKN3Ozc5awgh
+      sequenceReference:
+        id: refseq:NM_004333.6
+        name: NM_004333.6
+        description: The MANE Select (GRCh38) coding transcript for BRAF.
+        aliases:
+          - ga4gh:SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+        type: SequenceReference
+        refgetAccession: SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+        residueAlphabet: na
+      start: 2023
+      end: 2025
+      sequence: GT
+    state:
+      type: LiteralSequenceExpression
+      sequence: AA
+  - id: ga4gh:VA.PEphL_4Hx5JYuJPMzgu0pRQIUcz_J9p0
+    type: Allele
+    name: NM_004333.6:c.1799T>G
+    description: VRS variation of NM_004333.6:c.1799T>G, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+    digest: PEphL_4Hx5JYuJPMzgu0pRQIUcz_J9p0
+    expressions:
+      - syntax: hgvs.c
+        value: NM_004333.6:c.1799T>G
+    location:
+      id: ga4gh:SL.8HBKs9fzlT3tKWlM03REjkg_0Om6Y33U
+      description: Coding DNA (cDNA) positions 1799 of the BRAF MANE Select coding transcript (refseq:NM_004333.6), corresponding to genomic position 140753336 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+      extensions:
+        - name: GRCh38 1-based, genomic position
+          value: chr7:140753336
+          description: Genomic position 140,753,336 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+        - name: GRCh38 1-based, inclusive interval
+          value: chr7:140753336-140753336
+          description: Genomic positions 140,753,336 to 140,753,336 on chromosome 7 (refseq:NC_000007.14, GRCh38); 1-based, inclusive interval notation.
+        - name: GRCh38 0-based, half-open interval
+          value: chr7:140753335-140753336
+          description: Genomic positions 140,753,335 to 140,753,336 on chromosome 7 (refseq:NC_000007.14, GRCh38); 0-based, half-open interval notation.
+      type: SequenceLocation
+      digest: 8HBKs9fzlT3tKWlM03REjkg_0Om6Y33U
+      sequenceReference:
+        id: refseq:NM_004333.6
+        name: NM_004333.6
+        description: The MANE Select (GRCh38) coding transcript for BRAF.
+        aliases:
+          - ga4gh:SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+        type: SequenceReference
+        refgetAccession: SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+        residueAlphabet: na
+      start: 2024
+      end: 2025
+      sequence: T
+    state:
+      type: LiteralSequenceExpression
+      sequence: G
+  - id: ga4gh:VA.O3Wd-kD48Dl1ihRUuf4vVybLaXYKFXnk
+    name: NM_004333.6:c.1798G>A
+    description: VRS variation of NM_004333.6:c.1799T>A, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+    digest: O3Wd-kD48Dl1ihRUuf4vVybLaXYKFXnk
+    expressions:
+      - syntax: hgvs.c
+        value: NM_004333.6:c.1798G>A
+    type: Allele
+    location:
+      id: ga4gh:SL.1ReS370wzmC9PGTn13XrnG8Ot7UAKYuw
+      description: Coding DNA (cDNA) position 1798 of the BRAF MANE Select coding transcript (refseq:NM_004333.6), corresponding to genomic position 140753337 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+      extensions:
+        - name: GRCh38 1-based, genomic position
+          value: chr7:140753337
+          description: Genomic position 140,753,337 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+        - name: GRCh38 1-based, inclusive interval
+          value: chr7:140753337-140753337
+          description: Genomic positions 140,753,337 to 140,753,337 on chromosome 7 (refseq:NC_000007.14, GRCh38); 1-based, inclusive interval notation.
+        - name: GRCh38 0-based, half-open interval
+          value: chr7:140753336-140753337
+          description: Genomic positions 140,753,336 to 140,753,337 on chromosome 7 (refseq:NC_000007.14, GRCh38); 0-based, half-open interval notation.
+      type: SequenceLocation
+      digest: 1ReS370wzmC9PGTn13XrnG8Ot7UAKYuw
+      sequenceReference:
+        id: refseq:NM_004333.6
+        name: NM_004333.6
+        description: The MANE Select (GRCh38) coding transcript for BRAF.
+        aliases:
+          - ga4gh:SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+        type: SequenceReference
+        refgetAccession: SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+        residueAlphabet: na
+      start: 2024
+      end: 2025
+      sequence: G
+    state:
+      type: LiteralSequenceExpression
+      sequence: A
+  - id: ga4gh:VA.t97D17VsbiAa2U-znA-Qfx6DVInBd-_-
+    type: Allele
+    name: NM_004333.6:c.1798_1799delinsAG
+    description: VRS variation of NM_004333.6:c.1799T>A, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+    digest: t97D17VsbiAa2U-znA-Qfx6DVInBd-_-
+    expressions:
+      - syntax: hgvs.c
+        value: NM_004333.6:c.1798_1799delinsAG
+    location:
+      id: ga4gh:SL.SXY8ShFrBAfSvtO_sXLMQKN3Ozc5awgh
+      description: Coding DNA (cDNA) positions 1798 to 1799 of the BRAF MANE Select coding transcript (refseq:NM_004333.6), corresponding to genomic positions 140753336 to 140753337 on chromosome 7 (refseq:NC_000007.14, GRCh38).
+      extensions:
+        - name: GRCh38 1-based, inclusive interval
+          value: chr7:140753336-140753337
+          description: Genomic positions 140,753,336 to 140,753,337 on chromosome 7 (refseq:NC_000007.14, GRCh38); 1-based, inclusive interval notation.
+        - name: GRCh38 0-based, half-open interval
+          value: chr7:140753335-140753337
+          description: Genomic positions 140,753,335 to 140,753,337 on chromosome 7 (refseq:NC_000007.14, GRCh38); 0-based, half-open interval notation.
+      type: SequenceLocation
+      digest: SXY8ShFrBAfSvtO_sXLMQKN3Ozc5awgh
+      sequenceReference:
+        id: refseq:NM_004333.6
+        name: NM_004333.6
+        description: The MANE Select (GRCh38) coding transcript for BRAF.
+        aliases:
+          - ga4gh:SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+        type: SequenceReference
+        refgetAccession: SQ.aKMPEJgmlZXt_F6gRY5cUG3THH2n-GUa
+        residueAlphabet: na
+      start: 2023
+      end: 2025
+      sequence: GT
+    state:
+      type: LiteralSequenceExpression
+      sequence: AG

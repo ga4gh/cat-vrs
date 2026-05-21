@@ -12,6 +12,7 @@ VRS
 .. toctree::
    :titlesonly:
 
+   Adjacency
    Allele
    CopyNumberCount
    CopyNumberChange

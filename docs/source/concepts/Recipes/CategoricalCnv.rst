@@ -16,22 +16,14 @@ A CategoricalCNV is a :ref:`CategoricalVariant` with exactly two constraints:
 
 Examples
 @@@@@@@@
-The following are example implementations of that satisfy the CanonicalAllele recipe:
 
-.. collapse:: GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 with CopyCountConstraint
+The following :ref:`example Categorical Variants <Examples>` satisfy this :ref:`Recipe <Recipes>`:
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_categoricalCnv-ex1
-      :language: json
-
-.. collapse:: GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 with CopyChangeConstraint
-
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_categoricalCnv-ex2
-      :language: json
-
-.. collapse:: GRCh38 Xp22.31(chrX:6978350-7594949)x3
-
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_categoricalCnv-ex3
-      :language: json
+- :ref:`GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 <CategoricalCnvEx1>`
+  - This example utilizes the :ref:`Copy Count Constraint <CopyCountConstraint>`
+- :ref:`GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 <CategoricalCnvEx2>`
+  - This example utilizes the :ref:`Copy Change Constraint <CopyChangeConstraint>`
+- :ref:`GRCh38 Xp22.31(chrX:6978350-7594949)x3 <CategoricalCnvEx3>`
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@

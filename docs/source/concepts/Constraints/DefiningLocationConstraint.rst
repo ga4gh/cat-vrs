@@ -10,25 +10,20 @@ Definition and Information Model
 
 Examples
 @@@@@@@@
-The following are example implementations of DefiningLocationConstraint:
 
-.. collapse:: GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3
+The following :ref:`example Categorical Variants <Examples>` utilize this :ref:`Constraint`:
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_categoricalCnv-ex1
-      :language: json
-      :lines: 47-102
+- :ref:`BRAF V600 <BrafV600>`
+- :ref:`GRCh38 Xp22.31(chrX:6978350-7594949)x3 <CategoricalCnvEx3>`
+- :ref:`GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 (copy count) <CategoricalCnvEx1>`
+- :ref:`GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 (copy change) <CategoricalCnvEx2>`
+- :ref:`TP53 Loss <Tp53CopyLoss>`
 
-.. collapse:: GRCh38 Xp22.31(chrX:6978350-7594949)x3
+A representative example of this Constraint, from :ref:`GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 (copy count) <CategoricalCnvEx1>`:
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_categoricalCnv-ex3
-      :language: json
-      :lines: 25-79
-
-.. collapse:: BRAF V600
-
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_braf-v600
-      :language: json
-      :lines: 29-68
+.. literalinclude:: ../../../../examples/json/categoricalCnv-ex1.json
+  :language: json
+  :lines: 44-99
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@

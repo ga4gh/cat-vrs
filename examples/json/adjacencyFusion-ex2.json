@@ -2,7 +2,7 @@
   "id": "civic.fid:62026",
   "type": "CategoricalVariant",
   "name": "v::NTRK1(hgnc:8031)",
-  "description": "An optional field to describe v::NTRK1(hgnc:8031).",
+  "description": "An optional field to describe this Categorical Variant.",
   "aliases": [
     "v::NTRK1",
     "NTRK1 fusion"

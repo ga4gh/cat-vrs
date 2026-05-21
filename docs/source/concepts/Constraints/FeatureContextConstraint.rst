@@ -11,31 +11,18 @@ Definition and Information Model
 Examples
 @@@@@@@@
 
-The following are example implementations of FeatureContextConstraint:
+The following :ref:`example Categorical Variants <Examples>` utilize this :ref:`Constraint`:
 
-.. collapse:: Gene: TP53
+- :ref:`BRCA2 loss of function variants <FunctionVariantEx2>`
+- :ref:`NRAS functionally normal variants <FunctionVariantEx1>`
+- :ref:`PIK3CA p.R38H <FunctionVariantEx3>`
+- :ref:`TP53 Loss <Tp53CopyLoss>`
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_tp53-copy-loss
-      :language: json
-      :lines: 74-98
+A representative example of this Constraint, from :ref:`TP53 Loss <Tp53CopyLoss>`:
 
-.. collapse:: Gene: NRAS
-
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_functionVariant-ex1
-      :language: json
-      :lines: 10-26
-
-.. collapse:: Gene: BRCA2
-
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_functionVariant-ex2
-      :language: json
-      :lines: 10-26
-
-.. collapse:: Gene: PIK3CA
-
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_functionVariant-ex3
-      :language: json
-      :lines: 68-83
+.. literalinclude:: ../../../../examples/json/tp53-copy-loss.json
+  :language: json
+  :lines: 71-92
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@

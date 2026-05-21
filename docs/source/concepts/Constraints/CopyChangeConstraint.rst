@@ -13,19 +13,16 @@ Definition and Information Model
 Examples
 @@@@@@@@
 
-The following are example implementations of Copy Change Constraint:
+The following :ref:`example Categorical Variants <Examples>` utilize this :ref:`Constraint`:
 
-.. collapse:: Gain
+- :ref:`GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 <CategoricalCnvEx2>`
+- :ref:`TP53 Loss <Tp53CopyLoss>`
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_categoricalCnv-ex2
-      :language: json
-      :lines: 43-46
+A representative example of this Constraint, from :ref:`GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 <CategoricalCnvEx2>`:
 
-.. collapse:: Loss
-
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_tp53-copy-loss
-      :language: json
-      :lines: 99-102
+.. literalinclude:: ../../../../examples/json/categoricalCnv-ex2.json
+  :language: json
+  :lines: 40-43
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@

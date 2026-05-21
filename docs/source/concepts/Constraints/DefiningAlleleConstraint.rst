@@ -10,31 +10,20 @@ Definition and Information Model
 
 Examples
 @@@@@@@@
-The following are example implementations of DefiningAlleleConstraint:
 
-.. collapse:: NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs)
+The following :ref:`example Categorical Variants <Examples>` utilize this :ref:`Constraint`:
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_canonicalAllele-ex1
-      :language: json
-      :lines: 83-172
+- :ref:`NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs) <CanonicalAlleleEx1>`
+- :ref:`NC_000001.11:g.1699974C>G <CanonicalAlleleEx2>`
+- :ref:`EGFR L858R <ProteinSequenceConsequenceEx1>`
+- :ref:`NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter) <ProteinSequenceConsequenceEx2>`
+- :ref:`PIK3CA p.R38H <FunctionVariantEx3>`
 
-.. collapse:: NC_000001.11:g.1699974C>G
+A representative example of this Constraint, from :ref:`NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs) <CanonicalAlleleEx1>`:
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_canonicalAllele-ex2
-      :language: json
-      :lines: 37-112
-
-.. collapse:: EGFR L858R
-
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_proteinSequenceConsequence-ex1
-      :language: json
-      :lines: 99-150
-
-.. collapse:: NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter)
-
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_proteinSequenceConsequence-ex2
-      :language: json
-      :lines: 69-132
+.. literalinclude:: ../../../../examples/json/canonicalAllele-ex1.json
+  :language: json
+  :lines: 80-169
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@

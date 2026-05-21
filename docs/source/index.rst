@@ -20,6 +20,7 @@ adoption of the standard.
    getting_involved
    concepts/index
    impl-guide/index
+   examples/index
    releases/index
    appendices/index
 

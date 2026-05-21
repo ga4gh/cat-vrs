@@ -1,7 +1,7 @@
 {
   "id": "civic.vid:17",
   "type": "CategoricalVariant",
-  "name": "BRAF V600",
+  "name": "BRAF V600 (annotated)",
   "description": "BRAF V600 variants are missense amino acid substitutions that result in Valine changed. V600E is the most common substitution, but V600K, V600M, V600R, and V600G have also been observed.",
   "aliases": [
     "NM_004333.6(BRAF) V600",

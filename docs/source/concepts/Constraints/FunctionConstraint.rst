@@ -10,25 +10,18 @@ Definition and Information Model
 
 Examples
 @@@@@@@@
-The following are example implementations of FunctionConstraint:
 
-.. collapse:: NRAS functionally normal variants
+The following :ref:`example Categorical Variants <Examples>` utilize this :ref:`Constraint`:
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_functionVariant-ex1
-      :language: json
-      :lines: 27-43
+- :ref:`BRCA2 loss of function variants <FunctionVariantEx2>`
+- :ref:`NRAS functionally normal variants <FunctionVariantEx1>`
+- :ref:`PIK3CA p.R38H <FunctionVariantEx3>`
 
-.. collapse:: BRCA2 loss of function variants
+A representative example of this Constraint, from :ref:`NRAS functionally normal variants <FunctionVariantEx1>`:
 
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_functionVariant-ex2
-      :language: json
-      :lines: 27-43
-
-.. collapse:: PIK3CA p.R38H
-
-   .. literalinclude:: ../../../../schema/cat-vrs/json/example_functionVariant-ex3
-      :language: json
-      :lines: 84-100
+.. literalinclude:: ../../../../examples/json/functionVariant-ex1.json
+  :language: json
+  :lines: 24-40
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@
