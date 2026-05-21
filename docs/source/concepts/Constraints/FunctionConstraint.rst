@@ -38,9 +38,7 @@ functionConsequence
 ###################
 
 The *functionConsequence* attribute is required and is a :ref:`MappableConcept`, meaning that it should be
-represented using a term from an externally defined ontology. We recommend using one of the following
-defined terms from the `Sequence Ontology <https://www.ebi.ac.uk/ols4/ontologies/so>`_, with definitions
-reproduced from SO:
+represented using a term from an externally defined ontology. We recommend using descendant terms of the `functional effect variant <https://www.ebi.ac.uk/ols4/ontologies/so/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FSO_0001536?lang=en>`_ concept from the `Sequence Ontology <https://www.ebi.ac.uk/ols4/ontologies/so>`_, such as:
 
 .. list-table::
    :header-rows: 1
@@ -66,10 +64,6 @@ reproduced from SO:
      - `SO:0001786 <https://www.ebi.ac.uk/ols4/ontologies/so/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FSO_0001786>`_
      - A functional variant whereby the sequence alteration causes a loss of function of one allele of a gene.
      - loss_of_heterozygosity
-   * - **polypeptide partial loss of function**
-     - `SO:0001561 <https://www.ebi.ac.uk/ols4/ontologies/so/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FSO_0001561>`_
-     - A sequence variant that causes some but not all loss of polypeptide function with respect to a reference sequence.
-     - polypeptide_partial_loss_of_function
    * - **functionally normal**
      - `SO:0002219 <https://www.ebi.ac.uk/ols4/ontologies/so/classes/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FSO_0002219>`_
      - A sequence variant in which the function of a gene product is retained with respect to a reference.
