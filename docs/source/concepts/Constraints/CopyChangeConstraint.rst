@@ -54,10 +54,6 @@ The *copyChange* attribute is required and uses a value set derived from the `Ex
      - `EFO:0030071 <http://www.ebi.ac.uk/efo/EFO_0030071>`_
      - Assessment of low-level genomic copy number gain.
      - low-level copy number gain
-   * - **regional base ploidy**
-     - `EFO:0030064 <http://www.ebi.ac.uk/efo/EFO_0030064>`_
-     - Copy number assessment of regional base ploidy.
-     - regional base ploidy
    * - **loss**
      - `EFO:0030067 <http://www.ebi.ac.uk/efo/EFO_0030067>`_
      - Assessment of genomic copy number loss.
@@ -74,3 +70,7 @@ The *copyChange* attribute is required and uses a value set derived from the `Ex
      - `EFO:0030069 <http://www.ebi.ac.uk/efo/EFO_0030069>`_
      - Assessment of complete genomic deletion.
      - complete genomic deletion
+   * - **regional base ploidy**
+     - `EFO:0030064 <http://www.ebi.ac.uk/efo/EFO_0030064>`_
+     - Copy number assessment of regional base ploidy.
+     - regional base ploidy
