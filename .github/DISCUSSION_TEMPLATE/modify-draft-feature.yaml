@@ -1,0 +1,135 @@
+name: Modify Draft Feature
+description: Propose a modification to an existing draft-maturity product feature.
+labels: ["draft feature modification"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Before you submit
+        Use this template to propose a modification to an existing **draft-maturity** product feature.
+
+        **Versioning:** Changes to draft features result in a **patch version increment** per the [GKS Product Development process](https://www.ga4gh.org/document/tasc-technical-specification-development/).
+
+        **Decision-makers:** Feature Developers and Product Leads. This proposal will be shared with the community for a minimum 1-week review period via the Cat-VRS Slack channel, community calls, e-mail list, and directly reaching out to registered implementers.
+
+  - type: input
+    id: feature-name
+    attributes:
+      label: Feature being modified
+      description: Name of the draft feature in Cat-VRS that you are proposing to modify.
+      placeholder: For example, DefiningAlleleConstraint
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem statement and rationale
+      description: What problem or limitation in the current draft feature motivates this change? Please include use cases.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-change
+    attributes:
+      label: Proposed change
+      description: Describe the modification you are proposing. Be specific about what would change in the specification.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: change-nature
+    attributes:
+      label: Nature of change
+      description: Is this change backwards-compatible with existing draft implementations?
+      options:
+        - Backwards-compatible (existing implementations remain valid)
+        - Backwards-incompatible (existing implementations would need to be updated)
+        - Unsure
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Example Categorical Variant — before and after
+      description: Provide an example Categorical Variant as currently defined, and as it would look under the proposed change.
+      placeholder: |
+        **Before:**
+        ```yaml
+
+        ```
+
+        **After:**
+        ```yaml
+
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What alternative approaches did you consider, and why is this approach preferred? This supports the design documentation required by the GKS product development process.
+    validations:
+      required: false
+
+  - type: textarea
+    id: original-feature-links
+    attributes:
+      label: Links to original feature Discussion / Issue
+      description: Link to the GitHub Discussion or Issue where this draft feature was originally proposed or developed, for traceability.
+      placeholder: "e.g., https://github.com/ga4gh/cat-vrs/discussions/123"
+    validations:
+      required: false
+
+  - type: input
+    id: associated-issue
+    attributes:
+      label: Associated Issue
+      description: Link to the GitHub Issue tracking this modification (create one if it does not exist).
+      placeholder: "e.g., https://github.com/ga4gh/cat-vrs/issues/456"
+    validations:
+      required: false
+
+  - type: input
+    id: associated-pr
+    attributes:
+      label: Associated Pull Request
+      description: Link to the Pull Request implementing this modification (if already created).
+      placeholder: "e.g., https://github.com/ga4gh/cat-vrs/pull/789"
+    validations:
+      required: false
+
+  - type: textarea
+    id: feedback-timeline
+    attributes:
+      label: Timeline for feedback
+      description: "Proposed start and end dates for community feedback. Minimum review period: 1 week after presentation on a community call."
+      placeholder: |
+        Start: e.g., 2026-07-01 (community call date)
+        End: e.g., 2026-07-08
+    validations:
+      required: false
+
+  - type: textarea
+    id: implementers
+    attributes:
+      label: Registered implementers using this feature
+      description: |
+        List any registered implementers who are currently using this draft feature as implemented today.
+        Has each implementer been contacted about this proposed modification?
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: community-notification
+    attributes:
+      label: Community notification checklist
+      description: Check each item as it is completed during the review period.
+      options:
+        - label: Registered implementers personally contacted
+        - label: Posted on the Cat-VRS / GKS Slack channel
+        - label: Shared on a community call
+        - label: Email sent to the mailing list

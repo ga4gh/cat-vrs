@@ -1,0 +1,117 @@
+name: Propose New Feature
+description: Propose a new product feature for Cat-VRS.
+labels: ["new feature proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Before you submit
+        Use this template to propose a new product feature (data class, property, protocol, or algorithm) for Cat-VRS.
+
+        **Versioning:** New draft features result in a **patch version increment** per the [GKS Product Development process](https://www.ga4gh.org/document/tasc-technical-specification-development/).
+
+        **Decision-makers:** Feature Developers and Product Leads. After submission, Product Leads will schedule this proposal for a community call, where requirements gathering and implementer recruitment will begin. At least two implementers (one open) must commit to the feature before development begins.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Provide a concise description of the proposed feature.
+    validations:
+      required: true
+
+  - type: textarea
+    id: justification
+    attributes:
+      label: Justification and use cases
+      description: Why should this feature be developed? Describe the real-world use cases that motivate it, across multiple environments where possible.
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-spec-example
+    attributes:
+      label: Use cases modeled with the current specification
+      description: Show how you would attempt to represent these use cases using the current Cat-VRS specification.
+      placeholder: |
+        ```yaml
+
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-spec-gap
+    attributes:
+      label: Why the current specification cannot support these use cases
+      description: Explain the specific limitation or gap in the current specification that this feature would address.
+    validations:
+      required: true
+
+  - type: textarea
+    id: open-questions
+    attributes:
+      label: Anticipated open questions and design decisions
+      description: List questions or design choices that are likely to require community consensus during development of this feature.
+    validations:
+      required: false
+
+  - type: input
+    id: issue
+    attributes:
+      label: Associated GitHub Issue
+      description: Link to the GitHub Issue for developing this feature, if one exists.
+      placeholder: "https://github.com/ga4gh/cat-vrs/issues"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## Implementer support
+        After this proposal is discussed on a community call, interested implementers are asked to fill out the fields below. At least two implementers (at least one open) must commit before development can begin. At least one must contribute feature developer effort.
+
+        If your implementation has not been previously registered, please also complete the [GKS Product Implementer Form](https://docs.google.com/forms/d/e/1FAIpQLSfVKA6LmeDNYxH7ssnyk0ifRtLCgQKlZfoUzXxzO-h6JkX0og/viewform?usp=sf_link).
+
+  - type: textarea
+    id: implementer-support
+    attributes:
+      label: Implementer responses
+      description: |
+        Each interested implementer should add an entry below with:
+        1. Name of implementer and implementation (or link to previously registered implementation)
+        2. Which feature(s) from this proposal will be used
+        3. Whether they will contribute feature developer effort
+        4. The specific use case this feature will support in their implementation
+        5. Required scope of feature development to support their use case
+      placeholder: |
+        **Implementer:**
+        **Implementation:**
+        **Feature(s) to be used:**
+        **Contributing developer effort:** Yes / No
+        **Use case:**
+        **Required scope:**
+    validations:
+      required: false
+
+  - type: textarea
+    id: feedback-timeline
+    attributes:
+      label: Timeline for feedback
+      description: "Proposed start and end dates for community feedback. Minimum review period: 1 week after presentation on a community call."
+      placeholder: |
+        Start: e.g., 2026-07-01 (community call date)
+        End: e.g., 2026-07-08
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: community-notification
+    attributes:
+      label: Community notification checklist
+      description: Check each item as it is completed during the review period.
+      options:
+        - label: Posted on the Cat-VRS / GKS Slack channel
+        - label: Shared on a community call
+        - label: Email sent to the mailing list
