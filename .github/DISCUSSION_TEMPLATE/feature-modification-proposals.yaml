@@ -1,0 +1,142 @@
+title: Propose modifying a feature at draft maturity
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Before you submit
+        Use this template to propose a modification to an existing product feature.
+
+        Ideally, this proposal should should be supported by all registered implementers that are using this feature.
+
+        If your implementation has not been previously registered with the [Genomic Knowledge Standards Work Stream](https://ga4gh.github.io/gks.github.io/), please complete the [GKS Product Implementer Form](https://docs.google.com/forms/d/e/1FAIpQLSfVKA6LmeDNYxH7ssnyk0ifRtLCgQKlZfoUzXxzO-h6JkX0og/viewform?usp=sf_link).
+
+  - type: input
+    id: feature-name
+    attributes:
+      label: Feature name and maturity
+      description: Name of the feature and current maturity within the specification that you are proposing to modify.
+      placeholder: For example, DefiningAlleleConstraint (Trial use)
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem statement and rationale
+      description: What problem or limitation in the current draft feature motivates this change? Please include use cases.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-change
+    attributes:
+      label: Proposed change
+      description: Describe the modification you are proposing. Be specific about what would change in the specification.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: change-nature
+    attributes:
+      label: Nature of change
+      description: Is this change backwards-compatible with existing draft implementations?
+      options:
+        - Backwards-compatible (existing implementations remain valid)
+        - Backwards-incompatible (existing implementations would need to be updated)
+        - Unsure
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Example categorical variant(s) — before and after
+      description: Provide at least one example of a categorical variant, both how it would be represented with the current specification and what how it may be represented based on the proposed change.
+      placeholder: |
+        **Current:**
+        ```yaml
+
+        ```
+
+        **After:**
+        ```yaml
+
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What alternative approaches did you consider, and why is this approach preferred? This supports the design documentation required by the GKS product development process.
+    validations:
+      required: false
+
+  - type: textarea
+    id: open-questions
+    attributes:
+      label: Anticipated open questions and design decisions
+      description: List questions or design choices that are likely to arise during the development of this feature.
+    validations:
+      required: false
+
+  - type: textarea
+    id: original-feature-links
+    attributes:
+      label: Links to original feature Discussion(s) or Issue(s)
+      description: Links to the GitHub Discussion or Issues where this feature was originally proposed or developed, for traceability.
+      placeholder: "e.g., https://github.com/ga4gh/cat-vrs/discussions/123"
+    validations:
+      required: false
+
+  - type: input
+    id: associated-issue
+    attributes:
+      label: Associated Issue
+      description: Link to the GitHub Issue tracking this modification (create one once development has been agreed upon, if it does not exist already).
+      placeholder: "e.g., https://github.com/ga4gh/cat-vrs/issues/456"
+    validations:
+      required: false
+
+  - type: input
+    id: associated-pr
+    attributes:
+      label: Associated Pull Request
+      description: Link to the Pull Request implementing this modification (if already created).
+      placeholder: "e.g., https://github.com/ga4gh/cat-vrs/pull/789"
+    validations:
+      required: false
+
+  - type: textarea
+    id: feedback-timeline
+    attributes:
+      label: Timeline for feedback
+      description: "Proposed start and end dates for community feedback. Minimum review period: 1 week after presentation on a community call. _This field is typically completed once review begins of an initial version of this feature_."
+      placeholder: |
+        Start: 2026-07-01 (community call date)
+        End: 2026-07-08
+    validations:
+      required: false
+
+  - type: textarea
+    id: implementers
+    attributes:
+      label: Registered implementers using this feature
+      description: |
+        List any known registered implementers who are currently using this feature as implemented today. Has each implementer been contacted about this proposed modification?
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: development-checklist
+    attributes:
+      label: Development progress checklist
+      description: "Check each item as it is completed during the development process. For more details, see the [GA4GH Technical Specification Development documentation](https://www.ga4gh.org/document/tasc-technical-specification-development/). _This field is typically completed once review begins of an initial version of this feature_."
+      options:
+        - label: Feature modification idea discussed on a community call
+        - label: Initial draft of modification completed
+        - label: Review period started and community notified
+        - label: Branch for feature merged
+        - label: Specification version incremented and release published
