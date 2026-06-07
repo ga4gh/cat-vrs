@@ -2,7 +2,7 @@
 
 **Goal:** Let content developers focus on writing — not ReST syntax or build issues.
 
-**Branch:** `1.0` (main)
+**Base branch:** `v1` (development)
 **Date:** 2026-06-07
 
 ---
@@ -18,6 +18,34 @@
 
 ---
 
+## Current State (v1 branch)
+
+- **74 hand-authored RST files** across `docs/source/`
+- Sphinx 8.1.3 with `sphinx-rtd-theme` 3.0.2 and `sphinx_toolbox` 3.9.0
+- Python 3.12 (both RTD and CI)
+- Single requirements file: `.requirements.txt` (used by both RTD and local dev)
+- `conf.py` already excludes `def/**` (generated schema definition files)
+- CI: `cqa.yaml` (pre-commit hooks including `update-json-def-files` and
+  `update-example-files`) + `tests.yml` (pytest) — but no doc build check
+- Local preview: `make watch` uses `entr` (no browser live-reload)
+
+### RST file breakdown
+
+| Directory | Count | Description |
+|-----------|-------|-------------|
+| `docs/source/` (top-level) | 6 | index, introduction, how_cat_vrs_works, getting_involved, quickstart |
+| `docs/source/concepts/` | 3 | CategoricalVariant, Constraint, additional |
+| `docs/source/concepts/Constraints/` | 8 | 7 constraint types + index |
+| `docs/source/concepts/Recipes/` | 6 | 5 recipe types + index |
+| `docs/source/concepts/imported/` | 24 | VRS/gks-core imported concepts + index |
+| `docs/source/examples/` | 18 | Example walkthroughs + index |
+| `docs/source/impl-guide/` | 1 | index |
+| `docs/source/releases/` | 2 | 1.0 release notes + index |
+| `docs/source/appendices/` | 4 | design decisions, hyperintensional, roadmap + index |
+| **Total** | **74** | |
+
+---
+
 ## Step 1: Add `sphinx-autobuild` for Live Preview
 
 **Problem:** The current `make watch` target uses `entr` (which must be installed
@@ -29,12 +57,7 @@ serves a live-reloading local site.
 
 ### Changes
 
-**`docs/source/requirements.txt`** — add:
-```
-sphinx-autobuild
-```
-
-**`.requirements.txt`** — add:
+**`.requirements.txt`** — add to the ReadtheDocs section:
 ```
 sphinx-autobuild
 ```
@@ -85,15 +108,15 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Set up Python 3.11
+      - name: Set up Python 3.12
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.12"
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r docs/source/requirements.txt
+          pip install -r .requirements.txt
 
       - name: Build docs (warnings as errors)
         run: |
@@ -123,23 +146,14 @@ retaining full Sphinx power.
 
 ### 3a. Install and configure MyST
 
-**`docs/source/requirements.txt`** — add:
-```
-myst-parser
-```
-
-**`.requirements.txt`** — add:
+**`.requirements.txt`** — add to the ReadtheDocs section:
 ```
 myst-parser
 ```
 
 **`docs/source/conf.py`** — update extensions:
 ```python
-extensions = [
-    'sphinx.ext.todo',
-    'sphinx_toolbox.collapse',
-    'myst_parser',
-]
+extensions = ["sphinx.ext.todo", "sphinx_toolbox.collapse", "myst_parser"]
 ```
 
 Add MyST configuration:
@@ -154,13 +168,13 @@ myst_enable_extensions = [
 # Allow both .rst and .md source files
 source_suffix = {
     '.rst': 'restructuredtext',
-    '.md': 'myst-nb' if 'myst_nb' in extensions else 'myst',
+    '.md': 'myst',
 }
 ```
 
-Update `exclude_patterns` if needed to exclude the plan file:
+Update `exclude_patterns` to exclude this plan file:
 ```python
-exclude_patterns = ['MIGRATION_PLAN.md']
+exclude_patterns = ["def/**", "MIGRATION_PLAN.md"]
 ```
 
 ### 3b. Convert RST files to Markdown
@@ -169,32 +183,24 @@ Use the `rst-to-myst` tool for automated conversion:
 
 ```bash
 pip install rst-to-myst
-# Convert all hand-authored RST files
-rst2myst convert docs/source/index.rst
-rst2myst convert docs/source/introduction.rst
-rst2myst convert docs/source/how_cat_vrs_works.rst
-rst2myst convert docs/source/getting_involved.rst
-# ... and so on for all 31 files
+
+# Convert all hand-authored RST files (74 total)
+find docs/source -name '*.rst' | while read f; do
+    rst2myst convert "$f"
+done
 ```
 
-**Files to convert (31 total):**
+**Files to convert (74 total across these directories):**
 
-- `docs/source/index.rst`
-- `docs/source/introduction.rst`
-- `docs/source/how_cat_vrs_works.rst`
-- `docs/source/getting_involved.rst`
-- `docs/source/concepts/index.rst`
-- `docs/source/concepts/catvrs_model.rst`
-- `docs/source/concepts/recipes.rst`
-- `docs/source/concepts/imported/index.rst`
-- `docs/source/concepts/imported/*.rst` (15 files)
-- `docs/source/impl-guide/index.rst`
-- `docs/source/releases/index.rst`
-- `docs/source/releases/1.0.rst`
-- `docs/source/appendices/index.rst`
-- `docs/source/appendices/design_decisions.rst`
-- `docs/source/appendices/hyperintensional_catvars.rst`
-- `docs/source/appendices/roadmap.rst`
+- `docs/source/*.rst` — 6 top-level pages
+- `docs/source/concepts/*.rst` — 3 concept pages
+- `docs/source/concepts/Constraints/*.rst` — 8 constraint pages
+- `docs/source/concepts/Recipes/*.rst` — 6 recipe pages
+- `docs/source/concepts/imported/*.rst` — 24 imported concept pages
+- `docs/source/examples/*.rst` — 18 example pages
+- `docs/source/impl-guide/*.rst` — 1 page
+- `docs/source/releases/*.rst` — 2 pages
+- `docs/source/appendices/*.rst` — 4 pages
 
 **Post-conversion manual review checklist:**
 
@@ -202,8 +208,11 @@ rst2myst convert docs/source/getting_involved.rst
 - [ ] Cross-references (`:ref:`, `:doc:`) work
 - [ ] Image directives render properly
 - [ ] Tables render correctly
-- [ ] The `.. todo::` directives converted to `{todo}` or `` ```{todo} `` blocks
-- [ ] Collapse blocks (`.. collapse::`) converted correctly
+- [ ] `.. todo::` directives converted to `` ```{todo} `` blocks
+- [ ] `.. collapse::` blocks converted correctly
+- [ ] `.. include::` directives for `def/` files still work
+- [ ] Example pages with code blocks render correctly
+- [ ] CI doc build (step 2) passes with zero warnings
 
 ### 3c. Migrate `rst_epilog` substitutions
 
@@ -255,21 +264,22 @@ using `myst_parser`.
 
 ### 3d. Update `sphinx-autobuild` watch patterns
 
-After migration, update the `livehtml` target to also watch `.md` files (it does
-this by default, but verify).
+After migration, `sphinx-autobuild` watches `.md` files by default — verify this
+works.
 
 ### 3e. Coexistence with generated RST
 
-If the schema build (`y2t` via `ga4gh.gks.metaschema`) generates `.rst`
-definition files in the future (e.g., in a `def/` directory), these can remain
-as RST. Sphinx handles mixed `.rst` + `.md` projects natively. Only hand-authored
-content files need to be Markdown.
+The schema build (`y2t` via `ga4gh.gks.metaschema`) generates `.rst` definition
+files in the `def/` directory. These remain as RST — `conf.py` already excludes
+them from direct processing via `exclude_patterns = ["def/**"]` but they are
+still available for `.. include::` directives. Sphinx handles mixed `.rst` + `.md`
+projects natively. Only hand-authored content files need to be Markdown.
 
 ---
 
 ## Step 4: Prose Linting with Vale (Optional)
 
-**Problem:** Inconsistent terminology, passive voice, and style drift across 31+
+**Problem:** Inconsistent terminology, passive voice, and style drift across 74+
 content files. Especially important for a GA4GH specification where precise
 language matters.
 
@@ -291,8 +301,7 @@ BasedOnStyles = Vale, Google, write-good
 BasedOnStyles = Vale, Google, write-good
 ```
 
-**`.github/workflows/cqa.yaml`** — add a Vale step (or create a separate
-workflow):
+**`.github/workflows/cqa.yaml`** — add a Vale job:
 ```yaml
   vale:
     runs-on: ubuntu-latest
@@ -313,11 +322,10 @@ doesn't flag them.
 
 | File | Steps |
 |------|-------|
-| `docs/source/requirements.txt` | 1, 3a |
 | `.requirements.txt` | 1, 3a |
 | `docs/Makefile` | 1 |
 | `docs/source/conf.py` | 3a, 3c |
-| `docs/source/*.rst` (31 files) | 3b (convert to `.md`) |
+| `docs/source/*.rst` (74 files) | 3b (convert to `.md`) |
 | `docs/source/rst_epilog` | 3c (keep or migrate) |
 | `.github/workflows/docs.yml` | 2 (new) |
 | `.vale.ini` | 4 (new, optional) |
@@ -347,7 +355,8 @@ own branch and PR. Step 4 can follow at any time.
 | `rst-to-myst` doesn't convert all directives perfectly | Manual review checklist in step 3b; CI doc build (step 2) catches errors |
 | `sphinx_toolbox.collapse` may not work in MyST | Test early; MyST supports `{directive}` syntax for all Sphinx directives |
 | `rst_epilog` substitutions don't work in `.md` files | MyST parser does support `rst_epilog`; test and fall back to `myst_substitutions` |
-| ReadTheDocs build differs from local build | CI step 2 mirrors the RTD build closely; test with `--builder html` |
+| `.. include::` of `def/*.rst` files from `.md` pages | MyST supports `{include}` directive; test with generated def files |
+| ReadTheDocs build differs from local build | CI step 2 mirrors the RTD build; uses same `.requirements.txt` and Python 3.12 |
 | Other GA4GH repos reference specific `.rst` URLs | RTD redirects can handle old URLs; or keep URL paths the same (MyST files can use the same names) |
 
 ---
@@ -367,3 +376,5 @@ own branch and PR. Step 4 can follow at any time.
 | Substitution | `\|name\|` | `{{name}}` |
 | Code block | `.. code-block:: json` | ` ```json ` |
 | TODO | `.. todo::` | `` ```{todo} `` |
+| Collapse | `.. collapse:: title` | `` ```{collapse} title `` |
+| Include | `.. include:: path` | `` ```{include} path `` |
