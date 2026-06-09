@@ -69,7 +69,7 @@ relations
 The *relations* attribute is optional and is a :ref:`MappableConcept`, meaning that it should be
 represented using a term from a defined ontology. Relation terms describe how *members* of a :ref:`Categorical Variant <CategoricalVariant>` relate to the Defining :ref:`Sequence Location <SequenceLocation>`.
 
-.. note:: *relations* are **not** definitional and thus do not alter the scope of the Categorical Variant's definition. In other words, they do not restrict or expand which variants satisfy the Categorical Variant's constraints. However, they **are** definitional for some :ref:`Recipes <Recipes>`.
+.. note:: *relations* **are not** definitional and thus do not alter the scope of the Categorical Variant's definition. In other words, they do not restrict or expand which variants satisfy the Categorical Variant's constraints. However, they **are** definitional for some :ref:`Recipes <Recipes>`.
 
 The following relation terms are some to consider using with this Constraint:
 
@@ -92,7 +92,11 @@ matchCharacteristic
 ###################
 
 The *matchCharacteristic* attribute is required and is a :ref:`MappableConcept`, meaning that it should be
-represented using a term from an externally defined ontology. This attribute is used to describe *how* members' Sequence Location relates to the Defining Sequence Location. We recommend using one of the terms from either the the `Sequence Ontology <https://www.ebi.ac.uk/ols4/ontologies/so>`_ and the `Relations Ontology <https://www.ebi.ac.uk/ols4/ontologies/ro>`_:
+represented using a term from an externally defined ontology. This attribute is used to describe *how* members' Sequence Location relates to the Defining Sequence Location.
+
+.. note:: *matchCharacteristics* **are** definitional and thus do alter the scope of the Categorical Variant's definition. In other words, they do restrict or expand which variants satisfy the Categorical Variant's constraints.
+
+We recommend using one of the following terms from the `Sequence Ontology <https://www.ebi.ac.uk/ols4/ontologies/so>`_ and the `Relations Ontology <https://www.ebi.ac.uk/ols4/ontologies/ro>`_:
 
 .. list-table::
    :header-rows: 1
