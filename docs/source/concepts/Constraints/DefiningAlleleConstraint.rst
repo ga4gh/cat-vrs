@@ -93,7 +93,7 @@ If you are modeling a genomic ``Allele``, members may be **the Defining Allele i
      - How the ``member`` relates to the Categorical Variant
    * - ga4gh-gks-term:self
      - Use when the ``member`` is the Defining ``Allele`` itself.
-   * - ga4gh-gks-term:liftover_of
+   * - ga4gh-gks-term:liftover_to
      - Use when the ``member`` is the "same" genomic DNA variant, as represented on another reference genome.
    * - `SO:transcribed_from <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523transcribed_from>`_
      - Use when the ``member`` is an RNA (pre-mRNA) or mRNA ``Allele`` that is transcribed from the Defining Allele.
