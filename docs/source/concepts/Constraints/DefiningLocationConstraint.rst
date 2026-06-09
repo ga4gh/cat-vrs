@@ -96,7 +96,7 @@ represented using a term from an externally defined ontology. This attribute is 
 
 .. list-table::
    :header-rows: 1
-   :widths: 20 20 60
+   :widths: 25 25 50
 
    * - :ref:`Coding <Coding>`
      - Name
