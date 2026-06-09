@@ -105,7 +105,7 @@ If you are modeling a genomic ``Allele``, members may be **the Defining Allele i
 RNA (pre-mRNA)
 ==============
 
-If you are modeling an RNA (pre-mRNA) ``Allele``, members may be **the Defining Allele itself**, a **projection of** the Defining Allele on another RNA (pre-mRNA) or mRNA transcript, a genomic ``Allele`` that is **transcribed to** the Defining Allele, or a protein ``Allele`` that is a **translation of** the Defining Allele.
+If you are modeling an RNA (pre-mRNA) ``Allele``, members may be **the Defining Allele itself**, a **projection of** the Defining Allele on another RNA (pre-mRNA) transcript, a genomic ``Allele`` that is **transcribed to** the Defining Allele, a mRNA ``Allele`` that is **processed from** the Defining Allele, or a protein ``Allele`` that is a **translation of** the Defining Allele.
 
 .. list-table::
    :header-rows: 1
@@ -116,7 +116,7 @@ If you are modeling an RNA (pre-mRNA) ``Allele``, members may be **the Defining 
    * - ga4gh-gks-term:self
      - if the member is the Defining ``Allele`` itself.
    * - ga4gh-gks-term:projection_of
-     - if the member is the "same" genomic RNA (pre-mRNA) variant, as represented on another RNA (pre-mRNA) transcript.
+     - if the member is the "same" RNA (pre-mRNA) variant, as represented on another RNA (pre-mRNA) transcript.
    * - `SO:transcribed_to <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523transcribed_to>`_
      - if the member is a genomic ``Allele`` that is transcribed to the Defining Allele.
    * - `SO:processed_from <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523processed_from>`_
@@ -127,7 +127,7 @@ If you are modeling an RNA (pre-mRNA) ``Allele``, members may be **the Defining 
 mRNA
 ====
 
-If you are modeling an mRNA ``Allele``, members may be **the Defining Allele itself**, a **projection of** the Defining Allele on another mRNA transcript, a genomic ``Allele`` that is **transcribed to** the Defining Allele, an RNA (pre-RNA) ``Allele`` that is **processed into** the Defining Allele, or a protein ``Allele`` that is a **translation of** the Defining Allele.
+If you are modeling an mRNA ``Allele``, members may be **the Defining Allele itself**, a **projection of** the Defining Allele on another mRNA transcript, a genomic ``Allele`` that is **transcribed to** the Defining Allele, an RNA (pre-mRNA) ``Allele`` that is **processed into** the Defining Allele, or a protein ``Allele`` that is a **translation of** the Defining Allele.
 
 .. list-table::
    :header-rows: 1
@@ -138,18 +138,18 @@ If you are modeling an mRNA ``Allele``, members may be **the Defining Allele its
    * - ga4gh-gks-term:self
      - if the member is the Defining ``Allele`` itself.
    * - ga4gh-gks-term:projection_of
-     - if the member is the "same" mRNA variant, as represented on another RNA or mRNA transcript.
+     - if the member is the "same" mRNA variant, as represented on another mRNA transcript.
    * - `SO:transcribed_to <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523transcribed_to>`_
      - if the member is a genomic ``Allele`` that is transcribed to the Defining Allele.
    * - `SO:processed_into <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523processed_into>`_
      - if the member is an RNA (pre-mRNA) ``Allele`` that is processed into the Defining Allele.
    * - `SO:translation_of <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523translation_of>`_
-     - if the member is a protein ``Allele`` originating from the Defining Allele.
+     - if the member is a protein ``Allele`` that is a translation of the Defining Allele.
 
 protein
 =======
 
-If you are modeling a protein sequence ``Allele``, members may be **the Defining Allele itself**, a **projection of** the Defining ``Allele`` on another protein isoform, a genomic ``Allele`` that is **transcribed to** the Defining Allele, or an RNA or mRNA ``Allele`` that is a **translates to** the Defining Allele.
+If you are modeling a protein sequence ``Allele``, members may be **the Defining Allele itself**, a **projection of** the Defining ``Allele`` on another protein isoform, a genomic ``Allele`` that is **transcribed to** the Defining Allele, or an RNA or mRNA ``Allele`` that is **translates to** the Defining Allele.
 
 .. list-table::
    :header-rows: 1
@@ -162,6 +162,6 @@ If you are modeling a protein sequence ``Allele``, members may be **the Defining
    * - ga4gh-gks-term:projection_of
      - if the member is the "same" protein sequence variant, as represented on another protein isoform.
    * - `SO:transcribed_to <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523transcribed_to>`_
-     - if the member is a genomic ``Allele`` that transcribes to the Defining Allele.
+     - if the member is a genomic ``Allele`` that is transcribed to the Defining Allele.
    * - `SO:translates_to <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523translates_to>`_
      - if the member is an RNA or mRNA ``Allele`` that translates to the Defining Allele.
