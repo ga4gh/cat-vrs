@@ -26,6 +26,7 @@ A representative example of this Constraint, from :ref:`BCR(ncbi:613)::ABL1(ncbi
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@
+
 The Adjacency Constraint is similar to `VRS' Adjacency class <https://vrs.ga4gh.org/en/stable/concepts/MolecularVariation/Adjacency.html>`_, except that the `adjoinedElements` field supports data types in addition to :ref:`iriReference` and :ref:`Location`. Specifically:
 
 * :ref:`MappableConcept` to include an element that represents as Gene.
@@ -42,10 +43,32 @@ The `Gene Normalizer <https://gene-normalizer.readthedocs.io>`_ is Python packag
 VRS Sequence Locations
 ######################
 
+We recommend the following resources for constructing :ref:`Sequence Location <SequenceLocation>` objects:
 
+- `vrs-python <https://github.com/ga4gh/vrs-python>`_ is a Python package and reference implementation for `VRS <https://vrs.ga4gh.org>`_ that can be used to generate a VRS digest for a given sequence location.
+- `SeqRepo <https://github.com/biocommons/biocommons.seqrepo>`_ provides access to reference
+  sequences and can be used to obtain :ref:`Sequence Reference <SequenceReference>` information, such as names and aliases, when constructing Allele objects directly.
 
-We recommend following the `Variant Interpretation for Cancer Consortium's Gene Fusion Specification <https://fusions.cancervariants.org/en/latest/>`_ when modeling a :ref:`GeneFusion` using this constraint. Specifically by:
+.. note:: While neither the *moleculeType* nor *residueAlphabet* are required attributes for a :ref:`Sequence Reference <SequenceReference>`, we strongly recommend populating them within your implementation to clearly communicate to users what type of sequence your ``Location`` exists upon. Consider the following values, depending on the type of ``Location`` expressed:
 
-* Representing `Named Gene Components <https://fusions.cancervariants.org/en/latest/nomenclature.html#named-gene-component>`_ as a :ref:`MappableConcept` with the `conceptType` field set to "Gene"; the `Gene Normalizer <https://gene-normalizer.readthedocs.io>`_ can help.
-* Representing `Multiple Possible Gene Components <https://fusions.cancervariants.org/en/latest/nomenclature.html#multiple-possible-gene-component>`_ as a :ref:`UnspecifiedElement` within the Adjacency Constraint. An exhaustive or non-exhaustive list of possible elements can be included as an :ref:`Extension`. We recommend setting the value to be a :ref:`ConceptSet` with the `membershipOperator` field set to "OR".
-* Representing an `Unknown Gene Component <https://fusions.cancervariants.org/en/latest/nomenclature.html#unknown-gene-component>`_ as a :ref:`UnspecifiedElement`.
+.. list-table::
+   :header-rows: 1
+   :widths: 40 30 30
+
+   * - Location type
+     - moleculeType
+     - residueAlphabet
+   * - Nucleotide
+     - genomic
+     - na
+   * - RNA
+     - RNA
+     - na
+   * - mRNA
+     - mRNA
+     - na
+   * - Protein
+     - protein
+     - aa
+
+For additional Implementation Guidance, please visit `VRS' page for the Sequence Location concept <https://vrs.ga4gh.org/en/latest/concepts/LocationAndReference/SequenceLocation.html>`_.
