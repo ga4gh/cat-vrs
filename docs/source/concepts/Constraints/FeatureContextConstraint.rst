@@ -28,7 +28,9 @@ Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@
 
 The `featureContext` attribute is required and is a :ref:`MappableConcept`, meaning that it should be
-represented using a term from an externally defined ontology. Implementers use this constraint to represent genes, but it can also be used to represent protein markers, variant consequences, and other genomic features.
+represented using a term from an externally defined ontology.
+
+.. note:: Implementers use this constraint to represent genes, but it can also be used to represent protein markers, variant consequences, and other genomic features. If you are using this constraint for uses other than to represent genes, please `let us know <https://github.com/ga4gh/cat-vrs/discussions/new?category=show-and-tell>`_!
 
 Genes
 #####
