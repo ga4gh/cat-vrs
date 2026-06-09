@@ -140,7 +140,7 @@ If you are modeling an mRNA ``Allele``, members may be **the Defining Allele its
    * - `SO:transcribed_to <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523transcribed_to>`_
      - if the member is a genomic ``Allele`` that transcribes to the Defining Allele.
    * - `SO:translation_of <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523translation_of>`_
-     - if the member is a protein ``Allele`` originating from the Defining Allele..
+     - if the member is a protein ``Allele`` originating from the Defining Allele.
 
 protein
 =======
