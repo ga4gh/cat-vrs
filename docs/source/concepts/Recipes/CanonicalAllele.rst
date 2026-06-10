@@ -49,6 +49,7 @@ We recommend the following resources for constructing VRS Allele objects:
 - The `Variant Normalizer <https://variation-normalizer.readthedocs.io>`_ is a Python package and
   public REST instance that translates plain-text HGVS expressions into `Normalized VRS Allele
   objects <https://vrs.ga4gh.org/en/latest/conventions/normalization.html#allele-normalization>`_. Genomic coordinates default to GRCh38 unless otherwise specified.
+- `vrs-python <https://github.com/ga4gh/vrs-python>`_ is a Python package and reference implementation for `VRS <https://vrs.ga4gh.org>`_ that can be used to generate a VRS digest for an Allele, Sequence Location, and Sequence Reference.
 - `SeqRepo <https://github.com/biocommons/biocommons.seqrepo>`_ provides access to reference
   sequences and can be used to obtain :ref:`Sequence Reference <SequenceReference>` information, such as names and aliases, when constructing Allele objects directly.
 
@@ -58,10 +59,10 @@ We recommend the following resources for constructing VRS Allele objects:
    :header-rows: 1
    :widths: 30 35 35
 
-   * - Allele type
+   * - Sequence reference type
      - moleculeType
      - residueAlphabet
-   * - Genomic DNA
+   * - Genomic
      - genomic
      - na
 
@@ -75,12 +76,6 @@ When modeling a Canonical Allele, *members* may be populated with VRS ``Allele``
 - An RNA (pre-mRNA) or RNA ``Allele`` **transcribed from** the Defining Allele
 - A protein ``Allele`` that is a **translation of** the Defining Allele.
 
-As is the case with constructing VRS ``Allele`` objects for the Defining Allele, we recommend the following resources for constructing VRS Allele objects:
+As is the case with constructing VRS ``Allele`` objects for the Defining Allele, we recommend the `Variant Normalizer <https://variation-normalizer.readthedocs.io>`_, `vrs-python <https://github.com/ga4gh/vrs-python>`_, and `SeqRepo <https://github.com/biocommons/biocommons.seqrepo>`_ as resources for constructing VRS Allele objects. Likewise, we recommend populating both the *molecularType* and *residueAlphabet* attributes of the :ref:`Sequence Reference <SequenceReference>` for any ``Allele`` listed as a member.
 
-- The `Variant Normalizer <https://variation-normalizer.readthedocs.io>`_ is a Python package and
-  public REST instance that translates plain-text HGVS expressions into `Normalized VRS Allele
-  objects <https://vrs.ga4gh.org/en/latest/conventions/normalization.html#allele-normalization>`_. Genomic coordinates default to GRCh38 unless otherwise specified.
-- `SeqRepo <https://github.com/biocommons/biocommons.seqrepo>`_ provides access to reference
-  sequences and can be used to obtain :ref:`Sequence Reference <SequenceReference>` information, such as names and aliases, when constructing Allele objects directly.
-
-Likewise, we recommend populating both the *molecularType* and *residueAlphabet* attributes of any ``Allele`` listed as a member.
+.. include:: ../../_includes/_guidance_generate_sequence_location_box.rst

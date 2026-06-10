@@ -6,20 +6,25 @@ We recommend using one of the following terms from the `Sequence Ontology <https
 
 .. list-table::
    :header-rows: 1
-   :widths: 25 25 50
+   :widths: 20 20 20 40
 
-   * - :ref:`Coding <Coding>`
+   * - :ref:`Code <Coding>`
+     - System
      - Name
-     - Use case
+     - Rationale
    * - skos:exactMatch
+     -
      - exactMatch
      - Use when the ``member``'s ``Sequence Location`` exactly matches the Defining ``Sequence Location`` itself.
    * - `RO:0000050 <https://www.ebi.ac.uk/ols4/ontologies/flopo/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000050?lang=en>`_
+     -
      - part of
      - Use when the ``members``'s ``Sequence Location`` is entirely within the Defining ``Sequence Location``, a narrow match.
    * - `RO:0000051 <https://www.ebi.ac.uk/ols4/ontologies/flopo/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0000051?lang=en>`_
+     -
      - has part
      - Use when the ``members``'s ``Sequence Location`` entirely contains the Defining ``Sequence Location``, a broad match.
    * - `RO:0002151 <https://www.ebi.ac.uk/ols4/ontologies/flopo/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252FBFO_0002151?lang=en>`_
+     -
      - partially overlaps
      - Use when the ``members``'s ``Sequence Location`` partially overlaps with the Defining ``Sequence Location``, a broad match.

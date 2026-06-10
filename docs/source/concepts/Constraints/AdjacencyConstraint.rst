@@ -43,4 +43,6 @@ The `Gene Normalizer <https://gene-normalizer.readthedocs.io>`_ is Python packag
 VRS Sequence Locations
 ######################
 
-.. include:: ../../_includes/_guidance_sequence_location.rst
+.. include:: ../../_includes/_guidance_generate_sequence_location_text.rst
+
+.. include:: ../../_includes/_guidance_generate_sequence_location_box.rst

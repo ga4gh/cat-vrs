@@ -46,7 +46,9 @@ Categorical Variants that are intended to represent Categorical Copy Number Vari
 
 .. include:: ../../_includes/_guidance_match_characteristic_sequence_location.rst
 
-.. include:: ../../_includes/_guidance_generate_sequence_location.rst
+.. include:: ../../_includes/_guidance_generate_sequence_location_text.rst
+
+.. include:: ../../_includes/_guidance_generate_sequence_location_box.rst
 
 Members
 #######
