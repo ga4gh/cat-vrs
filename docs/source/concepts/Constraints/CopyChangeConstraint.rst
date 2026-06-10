@@ -1,7 +1,5 @@
 .. _CopyChangeConstraint:
 
-.. |indent| unicode:: U+00A0 U+00A0 U+00A0
-
 Copy Change Constraint
 !!!!!!!!!!!!!!!!!!!!!!
 

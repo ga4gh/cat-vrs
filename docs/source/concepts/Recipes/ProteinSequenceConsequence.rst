@@ -10,7 +10,7 @@ Definition and Information Model
 
 A ProteinSequenceConsequence is a :ref:`CategoricalVariant` with exactly one constraint:
 
-1. A :ref:`DefiningAlleleConstraint` with the `.relations` array containing only a
+1. A :ref:`Defining Allele Constraint <DefiningAlleleConstraint>` with the `.relations` array containing only a
    `translation_of` code. This constraint MUST refer to a protein variant for the `allele`.
 
 Examples
@@ -27,7 +27,7 @@ Implementation Guidance
 Constraints
 ###########
 
-Categorical Variants that are intended to represent Protein Sequence Consequences must **only** contain the :ref:`Defining Allele Constraint <DefiningAlleleConstraint>`, with an ``Allele`` on a protein :ref:`Sequence Reference` and the following **required** :ref:`codings <Coding>` specified as *relations*:
+Categorical Variants that are intended to represent Protein Sequence Consequences must **only** contain the :ref:`Defining Allele Constraint <DefiningAlleleConstraint>`, with an ``Allele`` on a protein :ref:`Sequence Reference <SequenceReference>` and the following **required** :ref:`codings <Coding>` specified as *relations*:
 
 .. include:: ../../_includes/_guidance_ga4gh_gks_term_warning.rst
 
@@ -40,7 +40,7 @@ Categorical Variants that are intended to represent Protein Sequence Consequence
       - Rationale
     * - translation_of
       - `http://www.sequenceontology.org <https://www.ebi.ac.uk/ols4/ontologies/so>`_
-      - To specify that VRS :ref:`Alleles` that are listed as *members* may be a translation of the Defining ``Allele``.
+      - To specify that VRS :ref:`Alleles <Allele>` that are listed as *members* may be a translation of the Defining ``Allele``.
 
 .. include:: ../../_includes/_guidance_construct_allele_objects.rst
 

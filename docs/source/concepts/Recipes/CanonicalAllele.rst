@@ -28,7 +28,7 @@ Implementation Guidance
 Constraints
 ###########
 
-Categorical Variants that are intended to represent Canonical Alleles must **only** contain the :ref:`Defining Allele Constraint <DefiningAlleleConstraint>`, with an ``Allele`` on a genomic :ref:`Sequence Reference` and the following **required** :ref:`codings <Coding>` specified as *relations*:
+Categorical Variants that are intended to represent Canonical Alleles must **only** contain the :ref:`Defining Allele Constraint <DefiningAlleleConstraint>`, with an ``Allele`` on a genomic :ref:`Sequence Reference <SequenceReference>` and the following **required** :ref:`codings <Coding>` specified as *relations*:
 
 .. include:: ../../_includes/_guidance_ga4gh_gks_term_warning.rst
 
@@ -41,10 +41,10 @@ Categorical Variants that are intended to represent Canonical Alleles must **onl
       - Rationale
     * - liftover_to
       - ga4gh-gks-term:allele-relation
-      - To specify that VRS :ref:`Alleles` that are listed as *members* may be a liftover of the Defining ``Allele``.
+      - To specify that VRS :ref:`Alleles <Allele>` that are listed as *members* may be a liftover of the Defining ``Allele``.
     * - transcribed_to
       - `http://www.sequenceontology.org <https://www.ebi.ac.uk/ols4/ontologies/so>`_
-      - To specify that VRS :ref:`Alleles` that are listed as *members* may be transcribed from the Defining Allele.
+      - To specify that VRS :ref:`Alleles <Allele>` that are listed as *members* may be transcribed from the Defining Allele.
 
 .. include:: ../../_includes/_guidance_construct_allele_objects.rst
 
