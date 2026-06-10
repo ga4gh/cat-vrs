@@ -34,25 +34,20 @@ Categorical Variants that are intended to represent Function Variants must conta
 
 .. include:: ../../_includes/_guidance_function_consequence.rst
 
-Second, a :ref:`VRS Allele <Allele>` or :ref:`Sequence Location <SequenceLocation>` can be associated with the Categorical Variant using a :ref:`Defining Allele <DefiningAlleleConstraint>` or :ref:`Defining Location <DefiningLocationConstraint>` Constraint, respectively. We recommend the following resources for constructing VRS objects:
+Second, a :ref:`VRS Allele <Allele>` or :ref:`Sequence Location <SequenceLocation>` can be associated with the Categorical Variant using a :ref:`Defining Allele <DefiningAlleleConstraint>` or :ref:`Defining Location <DefiningLocationConstraint>` Constraint, respectively.
 
-- The `Variant Normalizer <https://variation-normalizer.readthedocs.io>`_ is a Python package and
-  public REST instance that translates plain-text HGVS expressions into `Normalized VRS Allele
-  objects <https://vrs.ga4gh.org/en/latest/conventions/normalization.html#allele-normalization>`_. Genomic coordinates default to GRCh38 unless otherwise specified.
-- `vrs-python <https://github.com/ga4gh/vrs-python>`_ is a Python package and reference implementation for `VRS <https://vrs.ga4gh.org>`_ that can be used to generate a VRS digest for an Allele, Sequence Location, and Sequence Reference, and other VRS concepts.
-- `SeqRepo <https://github.com/biocommons/biocommons.seqrepo>`_ provides access to reference
-  sequences and can be used to obtain :ref:`Sequence Reference <SequenceReference>` information, such as names and aliases, when constructing Sequence Reference objects directly.
+.. include:: ../../_includes/_guidance_construct_allele_objects.rst
 
-.. note:: While neither the *moleculeType* nor *residueAlphabet* are required attributes for a :ref:`Sequence Reference <SequenceReference>`, we strongly recommend populating them within your implementation to clearly communicate to users what type of sequence your ``Allele`` exists on. Consider the following values, depending on the type of ``Allele`` expressed:
+.. note:: While neither the *moleculeType* nor *residueAlphabet* are required attributes for a :ref:`Sequence Reference <SequenceReference>`, we strongly recommend populating them within your implementation to clearly communicate to users what type of sequence your ``SequenceReference`` exists on. Consider the following values, depending on the type of ``SequenceReference`` expressed:
 
 .. list-table::
    :header-rows: 1
    :widths: 40 30 30
 
-   * - Allele type
+   * - Sequence reference type
      - moleculeType
      - residueAlphabet
-   * - Genomic DNA
+   * - Genomic
      - genomic
      - na
    * - RNA (pre-mRNA)
@@ -79,6 +74,6 @@ When modeling a Function Variant, *members* may be populated with VRS :ref:`Alle
 - The :ref:`Allele <Allele>` specified within the :ref:`Defining Allele Constraint <DefiningAlleleConstraint>`.
 - The :ref:`Sequence Location <SequenceLocation>` specified within the :ref:`Defining Location Constraint <DefiningLocationConstraint>`, and the associated *matchCharacteristic*.
 
-As is the case with constructing VRS objects for usage within Constraints, we recommend the `Variant Normalizer <https://variation-normalizer.readthedocs.io>`_, `vrs-python <https://github.com/ga4gh/vrs-python>`_, and `SeqRepo <https://github.com/biocommons/biocommons.seqrepo>`_ as resources for constructing VRS objects. Likewise, we recommend populating both the *molecularType* and *residueAlphabet* attributes of the :ref:`Sequence Reference <SequenceReference>` for any ``Allele`` or ``Location`` listed as a member.
+As is the case with constructing VRS objects for usage within Constraints, we recommend the `Variant Normalizer <https://variation-normalizer.readthedocs.io>`_, `vrs-python <https://github.com/ga4gh/vrs-python>`_, and `SeqRepo <https://github.com/biocommons/biocommons.seqrepo>`_ as resources for constructing VRS objects. Likewise, we recommend populating both the *moleculeType* and *residueAlphabet* attributes of the :ref:`Sequence Reference <SequenceReference>` for any ``Allele`` or ``Location`` listed as a member.
 
 .. warning:: If representing a Function Variant with only a Feature Context Constraint to represent a gene, *members* may also be added based on the gene's associated Sequence Location. Gene representation is an area of discussion amongst Genomic Knowledge Standards broadly.

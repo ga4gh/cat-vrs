@@ -33,14 +33,9 @@ This Constraint is used to describe a Categorical Variant using a VRS :ref:`Alle
 allele
 ######
 
-The *allele* attribute is required and must be a valid VRS :ref:`Allele` object. Constructing a VRS Allele requires a :ref:`SequenceLocation` and a sequence state. We recommend the following resources for constructing VRS Allele objects:
+The *allele* attribute is required and must be a valid VRS :ref:`Allele` object. Constructing a VRS Allele requires a :ref:`SequenceLocation` and a sequence state.
 
-- The `Variant Normalizer <https://variation-normalizer.readthedocs.io>`_ is a Python package and
-  public REST instance that translates plain-text HGVS expressions into `Normalized VRS Allele
-  objects <https://vrs.ga4gh.org/en/latest/conventions/normalization.html#allele-normalization>`_. Genomic coordinates default to GRCh38 unless otherwise specified.
-- `vrs-python <https://github.com/ga4gh/vrs-python>`_ is a Python package and reference implementation for `VRS <https://vrs.ga4gh.org>`_ that can be used to generate a VRS digest for an Allele, Sequence Location, and Sequence Reference, and other VRS concepts.
-- `SeqRepo <https://github.com/biocommons/biocommons.seqrepo>`_ provides access to reference
-  sequences and can be used to obtain :ref:`Sequence Reference <SequenceReference>` information, such as names and aliases, when constructing Sequence Reference objects directly.
+.. include:: ../../_includes/_guidance_construct_allele_objects.rst
 
 .. note:: While neither the *moleculeType* nor *residueAlphabet* are required attributes for a :ref:`Sequence Reference <SequenceReference>`, we strongly recommend populating them within your implementation to clearly communicate to users what type of sequence your ``Allele`` exists on. Consider the following values, depending on the type of ``Allele`` expressed:
 
@@ -75,11 +70,11 @@ relations
 The *relations* attribute is optional and is a :ref:`MappableConcept`, meaning that it should be
 represented using a term from a defined ontology. Relation terms describe how *members* of a :ref:`Categorical Variant <CategoricalVariant>` relate to the Defining :ref:`Allele`.
 
-.. note:: *relations* are **not** definitional and thus do not alter the scope of the Categorical Variant's definition. In other words, they do not restrict or expand which variants satisfy the Categorical Variant's constraints. However, they **are** definitional for some :ref:`Recipes <Recipes>`.
+.. note:: *relations* **are not** definitional and thus do not alter the scope of the Categorical Variant's definition. In other words, they do not restrict or expand which variants satisfy the Categorical Variant's constraints. However, they **are** definitional for some :ref:`Recipes <Recipes>`.
 
 The following relation terms are some to consider using with this Constraint, depending on the ``Allele`` molecule type represented and which :ref:`Recipe(s) <Recipes>` you intend to satisfy:
 
-.. warning:: Some relation-terms are based on the system ``ga4gh-gks-term``. This is an internally controlled ontology for use specifically with the Categorical Variant Representation Specification.
+.. include:: ../../_includes/_guidance_ga4gh_gks_term_warning.rst
 
 genomic
 =======
@@ -150,7 +145,7 @@ If you are modeling an mRNA ``Allele``, members may be **the Defining Allele its
 protein
 =======
 
-If you are modeling a protein sequence ``Allele``, members may be **the Defining Allele itself**, a **projection of** the Defining ``Allele`` on another protein isoform, a genomic ``Allele`` that is **transcribed to** the Defining Allele, or an RNA or mRNA ``Allele`` that is **translates to** the Defining Allele.
+If you are modeling a protein sequence ``Allele``, members may be **the Defining Allele itself**, a **projection of** the Defining ``Allele`` on another protein isoform, a genomic ``Allele`` that is **transcribed to** the Defining Allele, or an RNA or mRNA ``Allele`` that **translates to** the Defining Allele.
 
 .. list-table::
    :header-rows: 1

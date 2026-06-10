@@ -33,6 +33,8 @@ Constraints
 
 Categorical Variants that are intended to represent Categorical Copy Number Variants must **only** contain two constraints. While the choice of using a :ref:`Copy Change Constraint <CopyChangeConstraint>` or :ref:`Copy Count Constraint <CopyCountConstraint>` will depend on the type of Copy Number Variant intended to be expressed, the :ref:`Defining Location Constraint <DefiningLocationConstraint>` is **required** to contain the following :ref:`coding <Coding>` as a *relations*:
 
+.. include:: ../../_includes/_guidance_ga4gh_gks_term_warning.rst
+
 .. list-table::
     :header-rows: 1
     :widths: 25 25 50
@@ -41,7 +43,7 @@ Categorical Variants that are intended to represent Categorical Copy Number Vari
       - System
       - Rationale
     * - liftover_to
-      - gks-gks-term:allele-relation
+      - ga4gh-gks-term:allele-relation
       - To specify that VRS objects that are listed as *members* may have a Sequence Location that is a liftover to another reference genome of the Defining ``Sequence Location``.
 
 .. include:: ../../_includes/_guidance_match_characteristic_sequence_location.rst

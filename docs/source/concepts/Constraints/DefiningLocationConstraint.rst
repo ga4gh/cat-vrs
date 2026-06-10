@@ -33,35 +33,11 @@ This Constraint is used to describe a Categorical Variant using a VRS :ref:`Sequ
 location
 ########
 
-The *location* attribute is required and must be a valid VRS :ref:`Sequence Location <SequenceLocation>`. We recommend the following resources for constructing :ref:`Sequence Location <SequenceLocation>` objects:
+The *location* attribute is required and must be a valid VRS :ref:`Sequence Location <SequenceLocation>`.
 
-- `vrs-python <https://github.com/ga4gh/vrs-python>`_ is a Python package and reference implementation for `VRS <https://vrs.ga4gh.org>`_ that can be used to generate a VRS digest for a given sequence location.
-- `SeqRepo <https://github.com/biocommons/biocommons.seqrepo>`_ provides access to reference
-  sequences and can be used to obtain :ref:`Sequence Reference <SequenceReference>` information, such as names and aliases, when constructing Sequence Reference objects directly.
+.. include:: ../../_includes/_guidance_generate_sequence_location_text.rst
 
-.. note:: While neither the *moleculeType* nor *residueAlphabet* are required attributes for a :ref:`Sequence Reference <SequenceReference>`, we strongly recommend populating them within your implementation to clearly communicate to users what type of sequence your ``Location`` exists upon. Consider the following values, depending on the type of ``Location`` expressed:
-
-.. list-table::
-   :header-rows: 1
-   :widths: 40 30 30
-
-   * - Location type
-     - moleculeType
-     - residueAlphabet
-   * - Nucleotide
-     - genomic
-     - na
-   * - RNA
-     - RNA
-     - na
-   * - mRNA
-     - mRNA
-     - na
-   * - Protein
-     - protein
-     - aa
-
-For additional Implementation Guidance, please visit `VRS' page for the Sequence Location concept <https://vrs.ga4gh.org/en/latest/concepts/LocationAndReference/SequenceLocation.html>`_.
+.. include:: ../../_includes/_guidance_generate_sequence_location_box.rst
 
 relations
 #########
@@ -73,7 +49,7 @@ represented using a term from a defined ontology. Relation terms describe how *m
 
 The following relation terms are some to consider using with this Constraint:
 
-.. warning:: Some relation-terms are based on the system ``ga4gh-gks-term``. This is an internally controlled ontology for use specifically with the Categorical Variant Representation Specification.
+.. include:: ../../_includes/_guidance_ga4gh_gks_term_warning.rst
 
 .. list-table::
    :header-rows: 1
