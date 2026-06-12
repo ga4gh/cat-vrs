@@ -1,0 +1,60 @@
+title: Title
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > [!IMPORTANT]
+        > Use this template to propose a new feature for the specification.
+        >
+        > If your implementation has not been previously registered with the [Genomic Knowledge Standards Work Stream](https://ga4gh.github.io/gks.github.io/), please complete the [GKS Product Implementer Form](https://docs.google.com/forms/d/e/1FAIpQLSfVKA6LmeDNYxH7ssnyk0ifRtLCgQKlZfoUzXxzO-h6JkX0og/viewform?usp=sf_link).
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Provide a concise description of the proposed feature.
+    validations:
+      required: true
+
+  - type: textarea
+    id: justification
+    attributes:
+      label: Justification and use cases
+      description: Why should this feature be developed? Describe the use case(s) that motivate it, ideally with examples from implementers requesting the feature.
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: Example categorical variant(s) — before and after
+      description: Provide at least one example of a categorical variant, both how it would be represented with the current specification and what how it may be represented based on the proposed change.
+      placeholder: |
+        **Current:**
+        ```yaml
+
+        ```
+
+        **After:**
+        ```yaml
+
+        ```
+    validations:
+      required: true
+
+  - type: textarea
+    id: open-questions
+    attributes:
+      label: Anticipated open questions and design decisions
+      description: List questions or design choices that are likely to arise during the development of this feature.
+    validations:
+      required: false
+
+  - type: textarea
+    id: priority
+    attributes:
+      label: Priority
+      description: How soon do you need this change? Is this a Blocking (need in 0 -3 months), Near term (3 - 6 months), Mid term (6 - 12 months), or Future (12+ months) need?
+    validations:
+      required: false

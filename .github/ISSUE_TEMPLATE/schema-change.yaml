@@ -1,0 +1,40 @@
+name: Schema change
+description: Track the development of a change to the schema, such as a new Constraint or Recipe.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > [!IMPORTANT]
+        > **This template is for schema changes only**. It should [follow a Discussion](https://github.com/ga4gh/cat-vrs/blob/v1/CONTRIBUTING.md) on the topic of this change.
+        >
+        > To open a new Discussion:
+        > - [Propose a modification to an existing specification feature](https://github.com/brendanreardon/cat-vrs-discussion-templates/discussions/new?category=feature-modifications)
+        > - [Propose a new specification feature](https://github.com/brendanreardon/cat-vrs-discussion-templates/discussions/new?category=feature-proposals)
+
+  - type: textarea
+    attributes:
+      label: Description
+      description: Provide a clear and concise description of the change that is being developed.
+    validations:
+      required: true
+
+  - type: input
+    id: associated-discussion
+    attributes:
+      label: Associated Discussion
+      description: Link to the GitHub Discussion that resulted in this Issue.
+      placeholder: "e.g., https://github.com/ga4gh/cat-vrs/discussions/54"
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Contribution
+      description: Can you contribute to the development of this change?
+      options:
+        - "Yes, I can create a PR for this change."
+        - "Yes, but I can only provide ideas and feedback."
+        - "No, I cannot contribute."
+    validations:
+      required: false
