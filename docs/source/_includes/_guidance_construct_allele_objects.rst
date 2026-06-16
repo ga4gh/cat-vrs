@@ -1,6 +1,6 @@
 We recommend the following resources for constructing VRS objects:
 
-- The `Variant Normalizer <https://variation-normalizer.readthedocs.io>`_ is a Python package and
+- The `Variant Normalizer <https://github.com/cancervariants/variation-normalization/>`_ is a Python package and
   public REST instance that translates plain-text HGVS expressions into `Normalized VRS Allele
   objects <https://vrs.ga4gh.org/en/latest/conventions/normalization.html#allele-normalization>`_.
   Genomic coordinates default to GRCh38 unless otherwise specified.
