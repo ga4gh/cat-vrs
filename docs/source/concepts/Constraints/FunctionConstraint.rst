@@ -28,7 +28,7 @@ Implementation Guidance
 
 This Constraint is used in two circumstances:
 
-1. To annotate a :ref:`Canonical Allele <CanonicalAllele>`, :ref:`Categorical Copy Number Variant <CategoricalCnv>`, :ref:`Gene Fusion <GeneFusion>`, or :ref:`Protein Sequence Consequence <ProteinSequenceConsequence>` Categorical Variant with a known functional impact.
+1. To define a :ref:`Canonical Allele <CanonicalAllele>`, :ref:`Categorical Copy Number Variant <CategoricalCnv>`, :ref:`Gene Fusion <GeneFusion>`, or :ref:`Protein Sequence Consequence <ProteinSequenceConsequence>` Categorical Variant with a known functional impact.
 
    .. note:: If your implementation also uses the `Variant Annotation Specification <https://va-spec.ga4gh.org/en/stable/#>`_, consider associating the Categorical Variant with a Genomic Knowledge Statement based on an `Experimental Variant Functional Impact <https://va-spec.ga4gh.org/en/stable/va-standard-profiles/base-profiles/proposition-profiles.html#experimental-variant-functional-impact-proposition>`_.
 
