@@ -79,7 +79,7 @@ The following relation terms are some to consider using with this Constraint, de
 genomic
 =======
 
-If you are modeling a genomic ``Allele``, members may be **the Defining Allele itself**, a **liftover of** the Defining Allele on another reference genome, an RNA or mRNA ``Allele`` **transcribed from** the Defining Allele, or a protein ``Allele`` that is a **translation of** the Defining Allele.
+If you are modeling a genomic ``Allele``, members may be **the Defining Allele itself**, the Defining Allele after **liftover to** another reference genome, an RNA or mRNA ``Allele`` **transcribed from** the Defining Allele, or a protein ``Allele`` that is a **translation of** the Defining Allele.
 
 .. list-table::
    :header-rows: 1
