@@ -43,7 +43,7 @@ Categorical Variants that are intended to represent Categorical Copy Number Vari
       - System
       - Rationale
     * - liftover_to
-      - ga4gh-gks-term:allele-relation
+      - ga4gh-gks-term:allele-relation:allele-relation
       - To specify that VRS objects that are listed as *members* may have a Sequence Location that is a liftover to another reference genome of the Defining ``Sequence Location``.
 
 .. include:: ../../_includes/_guidance_match_characteristic_sequence_location.rst

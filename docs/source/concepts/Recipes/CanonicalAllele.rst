@@ -40,7 +40,7 @@ Categorical Variants that are intended to represent Canonical Alleles must **onl
       - System
       - Rationale
     * - liftover_to
-      - ga4gh-gks-term:allele-relation
+      - ga4gh-gks-term:allele-relation:allele-relation
       - To specify that VRS :ref:`Alleles <Allele>` that are listed as *members* may be a liftover of the Defining ``Allele``.
     * - transcribed_to
       - `http://www.sequenceontology.org <https://www.ebi.ac.uk/ols4/ontologies/so>`_

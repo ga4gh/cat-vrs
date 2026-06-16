@@ -57,11 +57,11 @@ The following relation terms are some to consider using with this Constraint:
 
    * - :ref:`Coding <Coding>`
      - How the ``member`` relates to the Categorical Variant
-   * - ga4gh-gks-term:self
+   * - ga4gh-gks-term:allele-relation:self
      - Use when the ``member`` is the Defining ``Sequence Location`` itself.
-   * - ga4gh-gks-term:liftover_of
+   * - ga4gh-gks-term:allele-relation:liftover_to
      - Use when the ``member`` is the "same" genomic Sequence Location, as represented on another reference genome.
-   * - ga4gh-gks-term:projection_of
+   * - ga4gh-gks-term:allele-relation:projection_of
      - Use when the ``member`` is the "same" RNA (pre-mRNA), mRNA, or protein Sequence Location, as represented on another transcript or protein isoform.
 
 matchCharacteristic

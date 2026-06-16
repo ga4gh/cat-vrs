@@ -109,9 +109,9 @@ If you are modeling an RNA (pre-mRNA) ``Allele``, members may be **the Defining 
 
    * - :ref:`Coding <Coding>`
      - How the ``member`` relates to the Categorical Variant
-   * - ga4gh-gks-term:self
+   * - ga4gh-gks-term:allele-relation:self
      - Use when the ``member`` is the Defining ``Allele`` itself.
-   * - ga4gh-gks-term:projection_of
+   * - ga4gh-gks-term:allele-relation:projection_of
      - Use when the ``member`` is the "same" RNA (pre-mRNA) variant, as represented on another RNA (pre-mRNA) transcript.
    * - `SO:transcribed_to <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523transcribed_to>`_
      - Use when the ``member`` is a genomic ``Allele`` that is transcribed to the Defining Allele.
@@ -131,9 +131,9 @@ If you are modeling an mRNA ``Allele``, members may be **the Defining Allele its
 
    * - :ref:`Coding <Coding>`
      - How the ``member`` relates to the Categorical Variant
-   * - ga4gh-gks-term:self
+   * - ga4gh-gks-term:allele-relation:self
      - Use when the ``member`` is the Defining ``Allele`` itself.
-   * - ga4gh-gks-term:projection_of
+   * - ga4gh-gks-term:allele-relation:projection_of
      - Use when the ``member`` is the "same" mRNA variant, as represented on another mRNA transcript.
    * - `SO:transcribed_to <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523transcribed_to>`_
      - Use when the ``member`` is a genomic ``Allele`` that is transcribed to the Defining Allele.
@@ -153,9 +153,9 @@ If you are modeling a protein sequence ``Allele``, members may be **the Defining
 
    * - :ref:`Coding <Coding>`
      - How the ``member`` relates to the Defining Allele
-   * - ga4gh-gks-term:self
+   * - ga4gh-gks-term:allele-relation:self
      - Use when the ``member`` is the Defining ``Allele`` itself.
-   * - ga4gh-gks-term:projection_of
+   * - ga4gh-gks-term:allele-relation:projection_of
      - Use when the ``member`` is the "same" protein sequence variant, as represented on another protein isoform.
    * - `SO:transcribed_to <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523transcribed_to>`_
      - Use when the ``member`` is a genomic ``Allele`` that is transcribed to the Defining Allele.
