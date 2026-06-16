@@ -41,7 +41,7 @@ body:
 
         ```
     validations:
-      required: true
+      required: false
 
   - type: textarea
     id: open-questions
