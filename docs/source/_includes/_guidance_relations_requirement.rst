@@ -1,0 +1,1 @@
+.. note:: Specific *relations* may be required to satisfy certain :ref:`Recipes <Recipes>`; currently the :ref:`Canonical Allele <CanonicalAllele>`, :ref:`Categorical CNV <CategoricalCNV>`, and :ref:`Protein Sequence Consequence <ProteinSequenceConsequence>`.

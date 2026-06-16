@@ -45,7 +45,7 @@ relations
 The *relations* attribute is optional and is a :ref:`MappableConcept`, meaning that it should be
 represented using a term from a defined ontology. Relation terms describe how *members* of a :ref:`Categorical Variant <CategoricalVariant>` relate to the Defining :ref:`Sequence Location <SequenceLocation>`.
 
-.. note:: *relations* **are not** definitional and thus do not alter the scope of the Categorical Variant's definition. In other words, they do not restrict or expand which variants satisfy the Categorical Variant's constraints. However, they **are** definitional for some :ref:`Recipes <Recipes>`.
+.. include:: ../../_includes/_guidance_relations_requirement.rst
 
 The following relation terms are some to consider using with this Constraint:
 
