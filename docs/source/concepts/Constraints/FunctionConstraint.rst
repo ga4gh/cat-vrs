@@ -32,7 +32,7 @@ This Constraint is used in two circumstances:
 
    .. note:: If your implementation also uses the `Variant Annotation Specification <https://va-spec.ga4gh.org/en/stable/#>`_, consider associating the Categorical Variant with a Genomic Knowledge Statement based on an `Experimental Variant Functional Impact <https://va-spec.ga4gh.org/en/stable/va-standard-profiles/base-profiles/proposition-profiles.html#experimental-variant-functional-impact-proposition>`_.
 
-2. When broadly defining a Categorical Variant that can be satisfied by many possible variants, as long as they are described using this Constraint and the same associated definition. For example, *BRCA2* loss of function variants, as shown in the Examples.
+2. When broadly defining a Categorical Variant that can be satisfied by many possible variants, as long as they are described using this Constraint and the same associated definition. For example, *BRCA2* loss of function variants, as :ref:`shown in the Examples <FunctionVariantEx2>`.
 
 functionConsequence
 ###################

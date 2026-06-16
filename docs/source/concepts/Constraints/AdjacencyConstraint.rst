@@ -33,7 +33,7 @@ The Adjacency Constraint is similar to `VRS' Adjacency class <https://vrs.ga4gh.
 * :ref:`Terminus` to include an element that represents the end of a molecule.
 * :ref:`UnspecifiedElement` to include an element that is otherwise unspecified. For example, if an assay is unable to determine a fusion partner.
 
-.. note:: While `registered implementers <https://docs.google.com/forms/d/e/1FAIpQLSfVKA6LmeDNYxH7ssnyk0ifRtLCgQKlZfoUzXxzO-h6JkX0og/viewform>`_ use :ref:`MappableConcept` elements to represent Genes within their usage of the Adjacency Constraint, a Mappable Concept could also be used to represent specific regions of the genome (for example, a kinase domain). However, in these circumstances, we recommend that you resolve to a :ref:`VRS Sequence Location <SequenceLocation>` if possible.
+.. note:: While `registered implementers <https://docs.google.com/forms/d/e/1FAIpQLSfVKA6LmeDNYxH7ssnyk0ifRtLCgQKlZfoUzXxzO-h6JkX0og/viewform>`_ use :ref:`MappableConcept` elements to represent Genes within their usage of the Adjacency Constraint, a Mappable Concept could also be used to represent specific regions of the genome (for example, a kinase domain). However, in these circumstances, we recommend representing the region using a :ref:`VRS Sequence Location <SequenceLocation>`, if possible.
 
 Genes
 #####
