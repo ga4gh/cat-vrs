@@ -38,7 +38,12 @@ We recommend following the `Variant Interpretation for Cancer Consortium's Gene 
 Members
 #######
 
-When modeling a Gene Fusion, *members* may be populated with VRS :ref:`Adjacency` objects, where the *adjoinedSequences* property can be populated with two :ref:`iriReferences <iriReference>` or :ref:`Sequence Locations <Location>`. VRS' `Implementation Guidance for Adjacency objects <https://vrs.ga4gh.org/en/latest/concepts/MolecularVariation/Adjacency.html>`_ contains guidance on sequence locations and directionality, normalization, and linker sequences.
+When modeling a Gene Fusion, *members* may be populated with VRS :ref:`Adjacency` objects, where the *adjoinedSequences* property can be populated with two VRS objects that are either:
+
+- :ref:`iriReferences <iriReference>`
+- :ref:`Sequence Locations <Location>`
+
+VRS' `Implementation Guidance for Adjacency objects <https://vrs.ga4gh.org/en/latest/concepts/MolecularVariation/Adjacency.html>`_ contains guidance on sequence locations and directionality, normalization, and linker sequences.
 
 .. include:: ../../_includes/_guidance_generate_sequence_location_text.rst
 
