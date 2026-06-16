@@ -34,7 +34,7 @@ We recommend following the `Variant Interpretation for Cancer Consortium (VICC)'
 * Representing `Multiple Possible Gene Components <https://fusions.cancervariants.org/en/latest/nomenclature.html#multiple-possible-gene-component>`_ as an :ref:`UnspecifiedElement` within the Adjacency Constraint. An exhaustive or non-exhaustive list of possible elements can be included as an :ref:`Extension`. We recommend setting the value to be a :ref:`ConceptSet` with the `membershipOperator` field set to "OR".
 * Representing an `Unknown Gene Component <https://fusions.cancervariants.org/en/latest/nomenclature.html#unknown-gene-component>`_ as an :ref:`UnspecifiedElement`.
 
-While they do not currently utilize Cat-VRS, the VICC `FUSOR <https://github.com/cancervariants/fusor>` and `FUSOR-Builder <https://github.com/cancervariants/fusion-builder>` tools can assist with representing Gene Fusions according to the VICC Gene Fusion Specification.
+While they do not currently utilize Cat-VRS, the VICC `FUSOR <https://github.com/cancervariants/fusor>` and `Fusion-Builder <https://github.com/cancervariants/fusion-builder>` tools can assist with representing Gene Fusions according to the VICC Gene Fusion Specification.
 
 Members
 #######
