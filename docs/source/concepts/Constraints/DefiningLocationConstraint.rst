@@ -60,9 +60,9 @@ The following relation terms are some to consider using with this Constraint:
    * - ga4gh-gks-term:allele-relation:self
      - Use when the ``member`` is the Defining ``Sequence Location`` itself.
    * - ga4gh-gks-term:allele-relation:liftover_to
-     - Use when the ``member`` is the "same" genomic Sequence Location, as represented on another reference genome.
+     - Use when the ``member`` represents the equivalent genomic Sequence Location on another reference genome.
    * - ga4gh-gks-term:allele-relation:projection_of
-     - Use when the ``member`` is the "same" RNA (pre-mRNA), mRNA, or protein Sequence Location, as represented on another transcript or protein isoform.
+     - Use when the ``member`` represents the equivalent RNA (pre-mRNA), mRNA, or protein Sequence Location on another transcript or protein isoform.
 
 matchCharacteristic
 ###################
