@@ -1,3 +1,1 @@
-.. warning:: Some relation terms use the system ``ga4gh-gks-term``. This is an internally
-   controlled vocabulary used specifically within the Categorical Variant Representation
-   Specification.
+.. warning:: Some terms use the system ``ga4gh-gks-term``. This is an internally controlled vocabulary used specifically within the Categorical Variant Representation Specification. We may add more terms in the future. If you would like to recommend a new term, please `open a Discussion <https://github.com/ga4gh/cat-vrs/discussions/new/choose>`_ to suggest one!
