@@ -6,11 +6,11 @@ body:
     attributes:
       value: |
         > [!IMPORTANT]
-        > **This template is for schema changes only**. It should [follow a Discussion](https://github.com/ga4gh/cat-vrs/blob/v1/CONTRIBUTING.md) on the topic of this change.
+        > **This template is for schema changes only**. It should [follow a Discussion](https://github.com/ga4gh/cat-vrs/blob/v1/CONTRIBUTING.md##discussions) on the topic of this change.
         >
         > To open a new Discussion:
-        > - [Propose a modification to an existing specification feature](https://github.com/brendanreardon/cat-vrs-discussion-templates/discussions/new?category=feature-modifications)
-        > - [Propose a new specification feature](https://github.com/brendanreardon/cat-vrs-discussion-templates/discussions/new?category=feature-proposals)
+        > - [Propose a modification to an existing specification feature](https://github.com/ga4gh/cat-vrs/discussions/new?category=feature-modifications)
+        > - [Propose a new specification feature](https://github.com/ga4gh/cat-vrs/discussions/new?category=feature-proposals)
 
   - type: textarea
     attributes:
