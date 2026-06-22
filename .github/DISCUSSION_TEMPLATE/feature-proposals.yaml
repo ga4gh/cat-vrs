@@ -55,6 +55,6 @@ body:
     id: priority
     attributes:
       label: Priority
-      description: How soon do you need this change? Is this a Blocking (need in 0 -3 months), Near term (3 - 6 months), Mid term (6 - 12 months), or Future (12+ months) need?
+      description: How soon do you need this change? Is this a Blocking (need in 0 - 3 months), Near term (3 - 6 months), Mid term (6 - 12 months), or Future (12+ months) need?
     validations:
       required: false
