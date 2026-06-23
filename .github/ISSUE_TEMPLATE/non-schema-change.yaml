@@ -1,0 +1,31 @@
+name: Non-schema change
+description: Suggest a change to documentation, examples, or tests.
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        > [!IMPORTANT]
+        > **This template is for non-schema changes only** — such as documentation, examples, or tests.
+        >
+        > For schema-related changes, please open a Discussion instead:
+        > - [Propose a modification to an existing specification feature](https://github.com/ga4g/cat-vrs/discussions/new?category=feature-modifications)
+        > - [Propose a new specification feature](https://github.com/ga4gh/cat-vrs/discussions/new?category=feature-proposals)
+
+  - type: textarea
+    attributes:
+      label: Description
+      description: Provide a clear and concise description of the change that you are requesting.
+    validations:
+      required: true
+
+  - type: dropdown
+    attributes:
+      label: Contribution
+      description: Can you contribute to the development of this change?
+      options:
+        - "Yes, I can create a PR for this change."
+        - "Yes, but I can only provide ideas and feedback."
+        - "No, I cannot contribute."
+    validations:
+      required: false

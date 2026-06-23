@@ -1,1 +1,8 @@
 blank_issues_enabled: true
+contact_links:
+  - name: Feature modifications
+    url: https://github.com/ga4gh/cat-vrs/discussions/new?category=feature-modifications
+    about: Propose a change to an existing Cat-VRS feature. Opens a new Discussion.
+  - name: Feature proposals
+    url: https://github.com/ga4gh/cat-vrs/discussions/new?category=feature-proposals
+    about: Propose an addition to Cat-VRS. Opens a new Discussion.
