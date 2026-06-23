@@ -24,3 +24,140 @@ A representative example of this Constraint, from :ref:`NM_004958.4(MTOR):c.5992
 .. literalinclude:: ../../../../examples/json/canonicalAllele-ex1.json
   :language: json
   :lines: 80-169
+
+Implementation Guidance
+@@@@@@@@@@@@@@@@@@@@@@@
+
+This Constraint is used to describe a Categorical Variant using a VRS :ref:`Allele` object, such as defining a :ref:`Canonical Allele <CanonicalAllele>` or :ref:`Protein Sequence Consequence <ProteinSequenceConsequence>`.
+
+allele
+######
+
+The *allele* attribute is required and must be a valid VRS :ref:`Allele` object. Constructing a VRS Allele requires a :ref:`SequenceLocation` and a sequence state.
+
+.. include:: ../../_includes/_guidance_construct_allele_objects.rst
+
+.. note:: While neither the *moleculeType* nor *residueAlphabet* are required attributes for a :ref:`Sequence Reference <SequenceReference>`, we strongly recommend populating them within your implementation to clearly communicate to users what type of sequence your ``Allele`` exists on. Consider the following values, depending on the type of ``Allele`` expressed:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 20 30 25 25
+
+   * - Allele type
+     - Recipe
+     - moleculeType
+     - residueAlphabet
+   * - Genomic DNA
+     - :ref:`Canonical Allele <CanonicalAllele>`
+     - genomic
+     - na
+   * - RNA
+     -
+     - RNA
+     - na
+   * - mRNA
+     -
+     - mRNA
+     - na
+   * - Protein
+     - :ref:`Protein Sequence Consequence <ProteinSequenceConsequence>`
+     - protein
+     - aa
+
+relations
+#########
+
+The *relations* attribute is optional and is a :ref:`MappableConcept`, meaning that it should be
+represented using a term from a defined ontology. Relation terms describe how *members* of a :ref:`Categorical Variant <CategoricalVariant>` relate to the Defining :ref:`Allele`.
+
+.. include:: ../../_includes/_guidance_relations_requirement.rst
+
+The following relation terms are some to consider using with this Constraint, depending on the ``Allele`` molecule type represented and which :ref:`Recipe(s) <Recipes>` you intend to satisfy:
+
+.. include:: ../../_includes/_guidance_ga4gh_gks_term_warning.rst
+
+genomic
+=======
+
+If you are modeling a genomic ``Allele``, members may be **the Defining Allele itself**, the Defining Allele after **liftover to** another reference genome, an RNA or mRNA ``Allele`` **transcribed from** the Defining Allele, or a protein ``Allele`` that is a **translation of** the Defining Allele.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 35 65
+
+   * - :ref:`Coding <Coding>`
+     - How the ``member`` relates to the Categorical Variant
+   * - ga4gh-gks-term:allele-relation:self
+     - Use when the ``member`` is the Defining ``Allele`` itself.
+   * - ga4gh-gks-term:allele-relation:liftover_to
+     - Use when the ``member`` represents the equivalent genomic DNA variant on another reference genome.
+   * - `SO:transcribed_from <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523transcribed_from>`_
+     - Use when the ``member`` is an RNA (pre-mRNA) or mRNA ``Allele`` that is transcribed from the Defining Allele.
+   * - `SO:translation_of <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523translation_of>`_
+     - Use when the ``member`` is a protein ``Allele`` that is a translation of the Defining Allele.
+
+.. warning:: The specification currently incorrectly lists the directionality of the liftover term in the :ref:`Canonical Allele <CanonicalAllele>` Recipe.
+
+RNA (pre-mRNA)
+==============
+
+If you are modeling an RNA (pre-mRNA) ``Allele``, members may be **the Defining Allele itself**, a **projection of** the Defining Allele on another RNA (pre-mRNA) transcript, a genomic ``Allele`` that is **transcribed to** the Defining Allele, a mRNA ``Allele`` that is **processed from** the Defining Allele, or a protein ``Allele`` that is a **translation of** the Defining Allele.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 35 65
+
+   * - :ref:`Coding <Coding>`
+     - How the ``member`` relates to the Categorical Variant
+   * - ga4gh-gks-term:allele-relation:self
+     - Use when the ``member`` is the Defining ``Allele`` itself.
+   * - ga4gh-gks-term:allele-relation:projection_of
+     - Use when the ``member`` represents the equivalent RNA (pre-mRNA) variant on another RNA (pre-mRNA) transcript.
+   * - `SO:transcribed_to <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523transcribed_to>`_
+     - Use when the ``member`` is a genomic ``Allele`` that is transcribed to the Defining Allele.
+   * - `SO:processed_from <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523processed_from>`_
+     - Use when the ``member`` is an mRNA ``Allele`` that is processed from the RNA (pre-mRNA) Allele.
+   * - `SO:translation_of <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523translation_of>`_
+     - Use when the ``member`` is a protein ``Allele`` that is a translation of the Defining Allele.
+
+mRNA
+====
+
+If you are modeling an mRNA ``Allele``, members may be **the Defining Allele itself**, a **projection of** the Defining Allele on another mRNA transcript, a genomic ``Allele`` that is **transcribed to** the Defining Allele, an RNA (pre-mRNA) ``Allele`` that is **processed into** the Defining Allele, or a protein ``Allele`` that is a **translation of** the Defining Allele.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 35 65
+
+   * - :ref:`Coding <Coding>`
+     - How the ``member`` relates to the Categorical Variant
+   * - ga4gh-gks-term:allele-relation:self
+     - Use when the ``member`` is the Defining ``Allele`` itself.
+   * - ga4gh-gks-term:allele-relation:projection_of
+     - Use when the ``member`` represents the equivalent mRNA variant on another mRNA transcript.
+   * - `SO:transcribed_to <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523transcribed_to>`_
+     - Use when the ``member`` is a genomic ``Allele`` that is transcribed to the Defining Allele.
+   * - `SO:processed_into <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523processed_into>`_
+     - Use when the ``member`` is an RNA (pre-mRNA) ``Allele`` that is processed into the Defining Allele.
+   * - `SO:translation_of <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523translation_of>`_
+     - Use when the ``member`` is a protein ``Allele`` that is a translation of the Defining Allele.
+
+protein
+=======
+
+If you are modeling a protein sequence ``Allele``, members may be **the Defining Allele itself**, a **projection of** the Defining ``Allele`` on another protein isoform, a genomic ``Allele`` that is **transcribed to** the Defining Allele, or an RNA or mRNA ``Allele`` that **translates to** the Defining Allele.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 35 65
+
+   * - :ref:`Coding <Coding>`
+     - How the ``member`` relates to the Defining Allele
+   * - ga4gh-gks-term:allele-relation:self
+     - Use when the ``member`` is the Defining ``Allele`` itself.
+   * - ga4gh-gks-term:allele-relation:projection_of
+     - Use when the ``member`` represents the equivalent protein sequence variant on another protein isoform.
+   * - `SO:transcribed_to <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523transcribed_to>`_
+     - Use when the ``member`` is a genomic ``Allele`` that is transcribed to the Defining Allele.
+   * - `SO:translates_to <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523translates_to>`_
+     - Use when the ``member`` is an RNA or mRNA ``Allele`` that translates to the Defining Allele.

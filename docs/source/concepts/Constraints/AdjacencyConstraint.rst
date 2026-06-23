@@ -26,10 +26,23 @@ A representative example of this Constraint, from :ref:`BCR(ncbi:613)::ABL1(ncbi
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@
-The Adjacency Constraint is similar to `VRS' Adjacency class <https://vrs.ga4gh.org/en/stable/concepts/MolecularVariation/Adjacency.html>`_, except that the `adjoinedElements` field supports data types in addition to :ref:`iriReference` and :ref:`Location`.
 
-We recommend following the `Variant Interpretation for Cancer Consortium's Gene Fusion Specification <https://fusions.cancervariants.org/en/latest/>`_ when modeling a :ref:`GeneFusion` using this constraint. Specifically by:
+The Adjacency Constraint is similar to `VRS' Adjacency class <https://vrs.ga4gh.org/en/stable/concepts/MolecularVariation/Adjacency.html>`_, except that the `adjoinedElements` field supports data types in addition to :ref:`iriReference` and :ref:`Location`. Specifically:
 
-* Representing `Named Gene Components <https://fusions.cancervariants.org/en/latest/nomenclature.html#named-gene-component>`_ as a :ref:`MappableConcept` with the `conceptType` field set to "Gene"; the `Gene Normalizer <https://gene-normalizer.readthedocs.io>`_ can help.
-* Representing `Multiple Possible Gene Components <https://fusions.cancervariants.org/en/latest/nomenclature.html#multiple-possible-gene-component>`_ as a :ref:`UnspecifiedElement` within the Adjacency Constraint. An exhaustive or non-exhaustive list of possible elements can be included as an :ref:`Extension`. We recommend setting the value to be a :ref:`ConceptSet` with the `membershipOperator` field set to "OR".
-* Representing an `Unknown Gene Component <https://fusions.cancervariants.org/en/latest/nomenclature.html#unknown-gene-component>`_ as a :ref:`UnspecifiedElement`.
+* :ref:`MappableConcept` to include an element that represents a Gene.
+* :ref:`Terminus` to include an element that represents the end of a molecule.
+* :ref:`UnspecifiedElement` to include an element that is otherwise unspecified. For example, if an assay is unable to determine a fusion partner.
+
+.. note:: While `registered implementers <https://docs.google.com/forms/d/e/1FAIpQLSfVKA6LmeDNYxH7ssnyk0ifRtLCgQKlZfoUzXxzO-h6JkX0og/viewform>`_ use :ref:`MappableConcept` elements to represent Genes within their usage of the Adjacency Constraint, a Mappable Concept could also be used to represent specific regions of the genome (for example, a kinase domain). However, in these circumstances, we recommend representing the region using a :ref:`VRS Sequence Location <SequenceLocation>`, if possible.
+
+Genes
+#####
+
+.. include:: ../../_includes/_guidance_feature_context_genes.rst
+
+VRS Sequence Locations
+######################
+
+.. include:: ../../_includes/_guidance_generate_sequence_location_text.rst
+
+.. include:: ../../_includes/_guidance_generate_sequence_location_box.rst

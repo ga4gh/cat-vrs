@@ -1,7 +1,7 @@
 .. _FunctionConstraint:
 
 Function Constraint
-!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!
 
 Definition and Information Model
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -25,11 +25,16 @@ A representative example of this Constraint, from :ref:`NRAS functionally normal
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@
-The `functionConsequence` attribute is a :ref:`MappableConcept`, meaning that it should be represented using an externally defined ontology term. We recommend using one of the following defined terms from `The Sequence Ontology <http://www.sequenceontology.org>`_:
 
-* **dominant negative variant** (`SO:0002052 <http://www.sequenceontology.org/browser/current_release/term/SO:0002052>`_ - dominant_negative_variant): A variant where the mutated gene product adversely affects the other (wild type) gene product.
-* **functionally normal** (`SO:0002219 <http://www.sequenceontology.org/browser/current_release/term/SO:0002219>`_ - functionally_normal): A sequence variant in which the function of a gene product is retained with respect to a reference.
-* **gain of function** (`SO:0002053 <http://www.sequenceontology.org/browser/current_release/term/SO:0002053>`_ - gain_of_function_variant): A sequence variant whereby new or enhanced function is conferred on the gene product.
-* **loss of function** (`SO:0002054 <http://www.sequenceontology.org/browser/current_release/term/SO:0002054>`_ - loss_of_function_variant): A sequence variant whereby the gene product has diminished or abolished function.
-* **loss of heterozygosity** (`SO:0001786 <http://www.sequenceontology.org/browser/current_release/term/SO:0001786>`_ - loss_of_heterozygosity): A functional variant whereby the sequence alteration causes a loss of function of one allele of a gene.
-* **polypeptide partial loss of function** (`SO:0001561 <http://www.sequenceontology.org/browser/current_release/term/SO:0001561>`_ - polypeptide_partial_loss_of_function): A sequence variant that causes some but not all loss of polypeptide function with respect to a reference sequence.
+This Constraint is used in two circumstances:
+
+1. To define a :ref:`Canonical Allele <CanonicalAllele>`, :ref:`Categorical Copy Number Variant <CategoricalCnv>`, :ref:`Gene Fusion <GeneFusion>`, or :ref:`Protein Sequence Consequence <ProteinSequenceConsequence>` Categorical Variant with a known functional impact.
+
+   .. note:: If your implementation also uses the `Variant Annotation Specification <https://va-spec.ga4gh.org/en/stable/#>`_, consider associating the Categorical Variant with a Genomic Knowledge Statement based on an `Experimental Variant Functional Impact <https://va-spec.ga4gh.org/en/stable/va-standard-profiles/base-profiles/proposition-profiles.html#experimental-variant-functional-impact-proposition>`_.
+
+2. When broadly defining a Categorical Variant that can be satisfied by many possible variants, as long as they are described using this Constraint and the same associated definition. For example, *BRCA2* loss of function variants, as :ref:`shown in the Examples <FunctionVariantEx2>`.
+
+functionConsequence
+###################
+
+.. include:: ../../_includes/_guidance_function_consequence.rst

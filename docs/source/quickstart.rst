@@ -1,4 +1,4 @@
-.. `QuickStart`:
+.. _QuickStart:
 
 Quick Start
 !!!!!!!!!!!
