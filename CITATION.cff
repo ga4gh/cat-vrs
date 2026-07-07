@@ -1,0 +1,62 @@
+cff-version: 1.2.0
+message: >-
+  If you use GA4GH Categorical Variation Representation Specification (Cat-VRS),
+  please cite it using the metadata from this file.
+title: GA4GH Categorical Variation Representation Specification
+authors:
+  - name: GA4GH Cat-VRS Contributors
+license: Apache-2.0
+repository-code: 'https://github.com/ga4gh/cat-vrs'
+url: 'https://cat-vrs.ga4gh.org/'
+abstract: >-
+  The Categorical Variation Representation Specification (Cat-VRS, pronounced
+  “cat verse”) is a specification developed by the Global Alliance for Genomics
+  and Health (GA4GH) to provide a standard for the representation of categorical
+  variant concepts in genomics knowledgebases, and improve genomic knowledge
+  search, curation, and harmonization. The specification consists of a JSON
+  Schema for representing classes of categorical variation, conventions to
+  maximize the utility of the schema, and a python implementation that promotes
+  adoption of the standard.
+keywords:
+  - GA4GH
+  - genomics
+  - variant annotation
+  - variant interpretation
+  - genomic knowledge standards
+  - clinical genomics
+  - information model
+preferred-citation:
+  type: article
+  title: "The GA4GH Categorical Variation Representation Specification: A Unified Computational Framework for Reasoning over Genomic Variant Categories"
+  authors:
+    - family-names: "Puthawala"
+      given-names: "Daniel"
+    - family-names: "Reardon"
+      given-names: "Brendan"
+    - family-names: "Babb"
+      given-names: "Lawrence"
+    - family-names: "Kuzma"
+      given-names: "Kori"
+    - family-names: "Stevenson"
+      given-names: "James S."
+    - family-names: "Goar"
+      given-names: "Wesley A."
+    - family-names: "Dolin"
+      given-names: "Robert H."
+    - family-names: "Freimuth"
+      given-names: "Robert R."
+    - family-names: "Procknow"
+      given-names: "Catherine"
+    - family-names: "Pitel"
+      given-names: "Beth"
+    - family-names: "Kundu"
+      given-names: "Parijat"
+    - family-names: "Rampersad"
+      given-names: "Akash"
+    - family-names: "Van Allen"
+      given-names: "Eliezer"
+    - family-names: "Wagner"
+      given-names: "Alex H."
+  journal: "bioRxiv"
+  year: 2026
+  doi: "10.64898/2026.02.10.705161"
