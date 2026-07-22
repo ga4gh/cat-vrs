@@ -46,6 +46,7 @@ constraints:
         sequence: A
   - type: FeatureContextConstraint
     featureContext:
+      type: MappableConcept
       id: hgnc:8975
       conceptType: Gene
       name: PIK3CA
@@ -57,6 +58,7 @@ constraints:
           - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:8975
   - type: FunctionConstraint
     functionConsequence:
+      type: MappableConcept
       id: SO:0002053
       name: gain of function
       primaryCoding:

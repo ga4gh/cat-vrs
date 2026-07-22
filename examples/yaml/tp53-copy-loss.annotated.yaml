@@ -70,10 +70,12 @@ constraints:
         - 7687490
         - null
     relations:
-      - primaryCoding:
+      - type: MappableConcept
+        primaryCoding:
           code: liftover_to
           system: ga4gh-gks-term:allele-relation
     matchCharacteristic:
+      type: MappableConcept
       primaryCoding:
         code: is_within
         system: ga4gh-gks-term:location-match
@@ -86,6 +88,7 @@ constraints:
       # This ‘id’ is unique within a given system, but may or may not be globally unique outside the system.
       # It is used within a system to reference an object from another.
       # id is not intended or required ot be human-readable.  In this case it just happens to be so
+      type: MappableConcept
       id: TP53
 
       # A primary name for the concept (usually a human-readable one)

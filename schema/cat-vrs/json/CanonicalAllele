@@ -1,13 +1,13 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0/json/CanonicalAllele",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/CanonicalAllele",
    "title": "CanonicalAllele",
    "type": "object",
    "maturity": "trial use",
    "description": "A canonical allele is defined by an Allele that is representative of a collection of congruent Alleles, each of which depict the same nucleic acid on different underlying reference sequences. Congruent representations of an Allele often exist across different genome assemblies and associated cDNA transcript representations.",
    "allOf": [
       {
-         "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/CategoricalVariant"
+         "$ref": "/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/CategoricalVariant"
       },
       {
          "properties": {
@@ -17,7 +17,7 @@
                "contains": {
                   "allOf": [
                      {
-                        "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/DefiningAlleleConstraint"
+                        "$ref": "/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/DefiningAlleleConstraint"
                      },
                      {
                         "type": "object",

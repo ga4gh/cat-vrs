@@ -39,12 +39,14 @@ constraints:
       end: 600
       sequence: V
     relations:
-      - primaryCoding:
+      - type: MappableConcept
+        primaryCoding:
           code: translation_of
           system: http://www.sequenceontology.org
           iris:
             - http://www.sequenceontology.org/browser/current_release/term/translation_of
     matchCharacteristic:
+      type: MappableConcept
       primaryCoding:
         code: is_within
         system: ga4gh-gks-term:location-match

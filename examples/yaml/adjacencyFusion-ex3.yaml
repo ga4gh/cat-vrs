@@ -10,7 +10,8 @@ constraints:
     orderKnown: true
     adjoinedElements:
       - type: UnspecifiedElement
-      - id: ncbi:171017
+      - type: MappableConcept
+        id: ncbi:171017
         conceptType: Gene
         name: ZNF384
         primaryCoding:

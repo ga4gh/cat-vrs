@@ -65,6 +65,7 @@
     {
       "type": "FeatureContextConstraint",
       "featureContext": {
+        "type": "MappableConcept",
         "id": "hgnc:8975",
         "conceptType": "Gene",
         "name": "PIK3CA",
@@ -81,6 +82,7 @@
     {
       "type": "FunctionConstraint",
       "functionConsequence": {
+        "type": "MappableConcept",
         "id": "SO:0002053",
         "name": "gain of function",
         "primaryCoding": {

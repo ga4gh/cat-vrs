@@ -5,6 +5,7 @@ description: An example categorical variant that uses FeatureContextConstraint a
 constraints:
   - type: FeatureContextConstraint
     featureContext:
+      type: MappableConcept
       id: hgnc:1101
       conceptType: Gene
       name: BRCA2
@@ -17,6 +18,7 @@ constraints:
           - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:1101
   - type: FunctionConstraint
     functionConsequence:
+      type: MappableConcept
       id: SO:0002054
       name: loss of function
       primaryCoding:

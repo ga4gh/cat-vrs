@@ -13,6 +13,7 @@
       "orderKnown": true,
       "adjoinedElements": [
         {
+          "type": "MappableConcept",
           "id": "hgnc:3689",
           "conceptType": "Gene",
           "name": "FGFR2",

@@ -41,6 +41,7 @@
       "orderKnown": true,
       "adjoinedElements": [
         {
+          "type": "MappableConcept",
           "id": "ncbi:613",
           "conceptType": "Gene",
           "name": "BCR",
@@ -55,6 +56,7 @@
           }
         },
         {
+          "type": "MappableConcept",
           "id": "ncbi:25",
           "conceptType": "Gene",
           "name": "ABL1",
