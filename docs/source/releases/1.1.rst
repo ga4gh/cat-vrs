@@ -1,0 +1,39 @@
+.. _1.0:
+
+1.0
+!!!
+
+1.1.0
+@@@@@
+
+* docs: fix some typos by @jsstevenson in https://github.com/ga4gh/cat-vrs/pull/153
+* #109: Adding Issue and Pull Request templates by @brendanreardon in https://github.com/ga4gh/cat-vrs/pull/156
+* docs: fix some typos by @jsstevenson in https://github.com/ga4gh/cat-vrs/pull/160
+* #96 and #101: Documentation updates: Implementation Guide, Releases, and Roadmap by @brendanreardon in https://github.com/ga4gh/cat-vrs/pull/158
+* #131: Adjust CODEOWNERS file by @brendanreardon in https://github.com/ga4gh/cat-vrs/pull/163
+* #154: Not all examples were being tested by @brendanreardon in https://github.com/ga4gh/cat-vrs/pull/155
+* #170: fix `Constraint` description by @jsstevenson in https://github.com/ga4gh/cat-vrs/pull/175
+* #14: Draft FunctionConstraint and FunctionVariant Recipe by @brendanreardon in https://github.com/ga4gh/cat-vrs/pull/164
+* docs: (#149) remove html margin-top blocks by @jsstevenson in https://github.com/ga4gh/cat-vrs/pull/183
+* fixed contains line of function variant recipe by @DanielPuthawala in https://github.com/ga4gh/cat-vrs/pull/180
+* #190 Docs: remove disclaimer by @brendanreardon in https://github.com/ga4gh/cat-vrs/pull/192
+* docs: fix build warnings by @jsstevenson in https://github.com/ga4gh/cat-vrs/pull/182
+* Docs: auto update copyright year, aligned copyright text with other GKS products by @brendanreardon in https://github.com/ga4gh/cat-vrs/pull/185
+* Issue 197: Removed duplicate requirements.txt files by @brendanreardon in https://github.com/ga4gh/cat-vrs/pull/198
+* fix: use correct img.shields.io link for docs badge by @korikuzma in https://github.com/ga4gh/cat-vrs/pull/204
+* docs: update pull request template for improved clarity and formatting by @SalemBajjali in https://github.com/ga4gh/cat-vrs/pull/200
+* 177 adjacency constraint by @DanielPuthawala in https://github.com/ga4gh/cat-vrs/pull/178
+* Issue 191: Align readthedocs with VRS and VA-Spec style of one concept per page by @brendanreardon in https://github.com/ga4gh/cat-vrs/pull/195
+* #208: add description for type in Constraint.heritableProperties by @kushagramodanwal in https://github.com/ga4gh/cat-vrs/pull/209
+* #212: Updated hardcoded github_version in docs/source/conf.py by @brendanreardon in https://github.com/ga4gh/cat-vrs/pull/213
+* #212: Update github_version for "stable" readthedocs version by @brendanreardon in https://github.com/ga4gh/cat-vrs/pull/214
+* #205: add GKS Think Tank information to Getting Involved page by @kushagramodanwal in https://github.com/ga4gh/cat-vrs/pull/210
+* Updating Cat-VRS Quickstart documentation by @brendanreardon in https://github.com/ga4gh/cat-vrs/pull/219
+* #159: Move examples out of schema directory by @brendanreardon in https://github.com/ga4gh/cat-vrs/pull/223
+* #206 roadmap update by @brendanreardon in https://github.com/ga4gh/cat-vrs/pull/225
+* Added calzone assets by @brendanreardon in https://github.com/ga4gh/cat-vrs/pull/227
+* #189 Add full example pages to the readthedocs by @brendanreardon in https://github.com/ga4gh/cat-vrs/pull/229
+* Discussion templates for proposing a new feature or modifying an existing one by @brendanreardon in https://github.com/ga4gh/cat-vrs/pull/237
+* #207 Implementation Guidance for all concepts by @brendanreardon in https://github.com/ga4gh/cat-vrs/pull/232
+* chore: add citation file by @jsstevenson in https://github.com/ga4gh/cat-vrs/pull/244
+* chore: add citation file by @brendanreardon in https://github.com/ga4gh/cat-vrs/pull/245
