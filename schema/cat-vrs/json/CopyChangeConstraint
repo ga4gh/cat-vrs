@@ -1,6 +1,6 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0/json/CopyChangeConstraint",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/CopyChangeConstraint",
    "title": "CopyChangeConstraint",
    "type": "object",
    "maturity": "draft",

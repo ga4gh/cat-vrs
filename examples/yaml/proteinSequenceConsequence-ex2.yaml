@@ -79,7 +79,8 @@ constraints:
         type: LiteralSequenceExpression
         sequence: '*'
     relations:
-      - primaryCoding:
+      - type: MappableConcept
+        primaryCoding:
           code: translation_of
           system: http://www.sequenceontology.org
           iris:

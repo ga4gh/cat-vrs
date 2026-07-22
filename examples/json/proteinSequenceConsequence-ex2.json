@@ -117,6 +117,7 @@
       },
       "relations": [
         {
+          "type": "MappableConcept",
           "primaryCoding": {
             "code": "translation_of",
             "system": "http://www.sequenceontology.org",

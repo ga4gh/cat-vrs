@@ -38,15 +38,18 @@ constraints:
         - 7687490
         - null
     relations:
-      - primaryCoding:
+      - type: MappableConcept
+        primaryCoding:
           code: liftover_to
           system: ga4gh-gks-term:allele-relation
     matchCharacteristic:
+      type: MappableConcept
       primaryCoding:
         code: is_within
         system: ga4gh-gks-term:location-match
   - type: FeatureContextConstraint
     featureContext:
+      type: MappableConcept
       id: hgnc:11998
       name: TP53
       conceptType: Gene

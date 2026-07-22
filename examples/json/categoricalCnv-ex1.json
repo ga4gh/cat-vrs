@@ -84,6 +84,7 @@
       },
       "relations": [
         {
+          "type": "MappableConcept",
           "primaryCoding": {
             "code": "liftover_to",
             "system": "ga4gh-gks-term:allele-relation"
@@ -91,6 +92,7 @@
         }
       ],
       "matchCharacteristic": {
+        "type": "MappableConcept",
         "primaryCoding": {
           "code": "is_within",
           "system": "ga4gh-gks-term:location-match"

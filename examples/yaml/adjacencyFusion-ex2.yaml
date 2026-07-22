@@ -10,7 +10,8 @@ constraints:
     orderKnown: false
     adjoinedElements:
       - type: UnspecifiedElement
-      - id: hgnc:8031
+      - type: MappableConcept
+        id: hgnc:8031
         conceptType: Gene
         name: NTRK1
         primaryCoding:
@@ -27,7 +28,8 @@ extensions:
       type: ConceptSet
       membershipOperator: OR
       concepts:
-        - id: hgnc:6636
+        - type: MappableConcept
+          id: hgnc:6636
           conceptType: Gene
           name: LMNA
           primaryCoding:
@@ -37,7 +39,8 @@ extensions:
             code: HGNC:6636
             iris:
               - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:6636
-        - id: hgnc:11758
+        - type: MappableConcept
+          id: hgnc:11758
           conceptType: Gene
           name: TFG
           primaryCoding:
@@ -47,7 +50,8 @@ extensions:
             code: HGNC:11758
             iris:
               - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11758
-        - id: hgnc:11998
+        - type: MappableConcept
+          id: hgnc:11998
           conceptType: Gene
           name: TP53
           primaryCoding:
@@ -57,7 +61,8 @@ extensions:
             code: HGNC:11998
             iris:
               - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11998
-        - id: hgnc:12012
+        - type: MappableConcept
+          id: hgnc:12012
           conceptType: Gene
           name: TPM3
           primaryCoding:
@@ -67,7 +72,8 @@ extensions:
             code: HGNC:12012
             iris:
               - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:12012
-        - id: hgnc:12017
+        - type: MappableConcept
+          id: hgnc:12017
           conceptType: Gene
           name: TPR
           primaryCoding:

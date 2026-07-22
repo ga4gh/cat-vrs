@@ -30,7 +30,8 @@ constraints:
   - type: AdjacencyConstraint
     orderKnown: true
     adjoinedElements:
-      - id: ncbi:613
+      - type: MappableConcept
+        id: ncbi:613
         conceptType: Gene
         name: BCR
         primaryCoding:
@@ -40,7 +41,8 @@ constraints:
           code: "613"
           iris:
             - https://www.ncbi.nlm.nih.gov/gene/613
-      - id: ncbi:25
+      - type: MappableConcept
+        id: ncbi:25
         conceptType: Gene
         name: ABL1
         primaryCoding:
