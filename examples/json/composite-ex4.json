@@ -266,7 +266,6 @@
     {
       "type": "CategoricalVariantCriterion",
       "subject": {
-        "id": null,
         "type": "CategoricalVariant",
         "name": "NRAS exon 2 codon 13",
         "constraints": [
@@ -378,7 +377,6 @@
     {
       "type": "CategoricalVariantCriterion",
       "subject": {
-        "id": null,
         "type": "CategoricalVariant",
         "name": "NRAS exon 4 codon 117",
         "constraints": [
@@ -416,7 +414,6 @@
     {
       "type": "CategoricalVariantCriterion",
       "subject": {
-        "id": null,
         "type": "CategoricalVariant",
         "name": "NRAS exon 4 codon 146",
         "constraints": [
@@ -451,5 +448,6 @@
       },
       "presence": "absent"
     }
-  ]
+  ],
+  "operator": "AND"
 }

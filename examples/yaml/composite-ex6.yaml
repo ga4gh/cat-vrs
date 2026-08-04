@@ -109,10 +109,14 @@ elements:
             id: hgnc:6973
             type: MappableConcept
             name: MDM2
-            system: https://genenames.org
-            code: HGNC:6973
-            iris:
-              - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:6973
+            conceptType: Gene
+            primaryCoding:
+              id: hgnc:6973
+              name: MDM2
+              system: https://genenames.org
+              code: HGNC:6973
+              iris:
+                - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:6973
         - type: CopyChangeConstraint
           copyChange: gain
     presence: present

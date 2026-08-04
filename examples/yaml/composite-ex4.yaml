@@ -195,7 +195,6 @@ elements:
     presence: absent
   - type: CategoricalVariantCriterion
     subject:
-      id:
       type: CategoricalVariant
       name: NRAS exon 2 codon 13
       constraints:
@@ -277,7 +276,6 @@ elements:
     presence: absent
   - type: CategoricalVariantCriterion
     subject:
-      id:
       type: CategoricalVariant
       name: NRAS exon 4 codon 117
       constraints:
@@ -305,7 +303,6 @@ elements:
     presence: absent
   - type: CategoricalVariantCriterion
     subject:
-      id:
       type: CategoricalVariant
       name: NRAS exon 4 codon 146
       constraints:
@@ -331,3 +328,4 @@ elements:
               code: is_within
               system: ga4gh-gks-term:location-match
     presence: absent
+operator: AND

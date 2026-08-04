@@ -79,7 +79,8 @@
           },
           "presence": "absent"
         }
-      ]
+      ],
+      "operator": "AND"
     },
     {
       "id": "catvrs.composite.example:1.1",
@@ -153,7 +154,8 @@
           },
           "presence": "present"
         }
-      ]
+      ],
+      "operator": "AND"
     },
     {
       "id": "catvrs.composite.example:1.2",
@@ -227,7 +229,8 @@
           },
           "presence": "present"
         }
-      ]
+      ],
+      "operator": "AND"
     }
   ],
   "operator": "OR"

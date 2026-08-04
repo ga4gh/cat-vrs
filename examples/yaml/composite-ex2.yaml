@@ -56,6 +56,7 @@ elements:
                   iris:
                     - https://www.uniprot.org/uniprotkb/P06401
         presence: absent
+    operator: AND
   - id: catvrs.composite.example:1.1
     type: CompositeCategoricalVariant
     name: Estrogen Receptor Negative, Progesterone Receptor Positive
@@ -107,6 +108,7 @@ elements:
                   iris:
                     - https://www.uniprot.org/uniprotkb/P06401
         presence: present
+    operator: AND
   - id: catvrs.composite.example:1.2
     type: CompositeCategoricalVariant
     name: Estrogen Receptor Positive, Progesterone Receptor Positive
@@ -158,4 +160,5 @@ elements:
                   iris:
                     - https://www.uniprot.org/uniprotkb/P06401
         presence: present
+    operator: AND
 operator: OR
