@@ -9,6 +9,19 @@ from collections import defaultdict
 from pathlib import Path
 
 
+def collect_constraint_types(data: dict) -> set[str]:
+    """Collect constraint types for a CategoricalVariant or CompositeCategoricalVariant."""
+    if data.get("type") == "CompositeCategoricalVariant":
+        types: set[str] = set()
+        for element in data.get("elements", []):
+            if element.get("type") == "CategoricalVariantCriterion":
+                types |= collect_constraint_types(element.get("subject", {}))
+            elif element.get("type") == "CompositeCategoricalVariant":
+                types |= collect_constraint_types(element)
+        return types
+    return {c.get("type") for c in data.get("constraints", []) if c.get("type")}
+
+
 def main():
     json_dir = Path("json")
     output_file = Path("README.md")
@@ -34,12 +47,10 @@ def main():
             print(f"Warning: no 'name' field in {json_file}, skipping.", file=sys.stderr)
             continue
 
-        constraints = data.get("constraints", [])
-        if constraints:
-            for constraint in constraints:
-                constraint_type = constraint.get("type")
-                if constraint_type:
-                    constraint_to_examples[constraint_type].append((name, json_file.name))
+        constraint_types = collect_constraint_types(data)
+        if constraint_types:
+            for constraint_type in constraint_types:
+                constraint_to_examples[constraint_type].append((name, json_file.name))
         else:
             no_constraint_to_examples.append((name, json_file.name))
 
