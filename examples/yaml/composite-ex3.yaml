@@ -1,0 +1,44 @@
+id: catvrs.composite.example:3
+type: CompositeCategoricalVariant
+name: KIT p.D817V negative
+description: An optional field to describe this Composite Categorical Variant.
+elements:
+  - type: CategoricalVariantCriterion
+    subject:
+      id: civic.vid:65
+      type: CategoricalVariant
+      name: NM_000222.2(KIT):c.2447A>T(p.Asp816Val)
+      description: An optional field to describe this Categorical Variant.
+      aliases:
+        - KIT D816V
+        - NP_000213.1:p.Asp816Val
+      constraints:
+        - type: DefiningAlleleConstraint
+          allele:
+            id: ga4gh:VA.nhiDwIq1klrGm3wtWO4a4BiS0jdW79Wd
+            type: Allele
+            name: NP_000213.1:p.Asp816Val
+            description: VRS variation of NP_000213.1:p.Asp816Val, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+            digest: nhiDwIq1klrGm3wtWO4a4BiS0jdW79Wd
+            expressions:
+              - syntax: hgvs.p
+                value: NP_000213.1:p.Asp816Val
+            location:
+              id: ga4gh:SL.FDPpCHrDqH_pR10oxpHZ17tyGhZXVnsj
+              description: Amino acid position 816 of the Refseq protein NP_000213.1, which is the protein product of the coding transcript for KIT (NM_000222.2).
+              type: SequenceLocation
+              digest: FDPpCHrDqH_pR10oxpHZ17tyGhZXVnsj
+              sequenceReference:
+                id: refseq:NP_000213.1
+                name: NP_000213.1
+                description: The protein product of the KIT (NM_000222.2) coding transcript, corresponding to the Refseq protein accession NP_000213.1.
+                type: SequenceReference
+                refgetAccession: SQ.TcMVFj5kDODDWpiy1d_1-3_gOf4BYaAB
+                residueAlphabet: aa
+              start: 815
+              end: 816
+            state:
+              type: LiteralSequenceExpression
+              sequence: V
+    presence: absent
+operator: AND

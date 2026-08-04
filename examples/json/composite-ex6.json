@@ -1,0 +1,178 @@
+{
+  "id": "catvrs.composite.example:5",
+  "type": "CompositeCategoricalVariant",
+  "name": "TP53 wild type and MDM2 amplification",
+  "description": "An optional field to describe this Composite Categorical Variant.",
+  "elements": [
+    {
+      "type": "CategoricalVariantCriterion",
+      "subject": {
+        "type": "CategoricalVariant",
+        "name": "TP53",
+        "constraints": [
+          {
+            "type": "DefiningLocationConstraint",
+            "location": {
+              "id": "ga4gh:SL.u9R1nbh-BFBoRI8Ravn3yBBSvp-u10LW",
+              "description": "Genomic region between positions 7,668,420 to 7,687,490 on chromosome 17 (refseq:NC_000017.11, GRCh38).",
+              "extensions": [
+                {
+                  "name": "GRCh38 1-based, inclusive interval",
+                  "value": "chr17:(7668421\u20137687490)",
+                  "description": "Genomic region between positions 7,668,421 to 7,687,490 on chromosome 17 (refseq:NC_000017.11, GRCh38); 1-based, inclusive interval notation."
+                },
+                {
+                  "name": "GRCh38 0-based, half-open interval",
+                  "value": "chr17:(7668420\u20137687490)",
+                  "description": "Genomic region between positions 7,668,420 to 7,687,490 on chromosome 17 (refseq:NC_000017.11, GRCh38); 0-based, half-open interval notation."
+                }
+              ],
+              "type": "SequenceLocation",
+              "digest": "u9R1nbh-BFBoRI8Ravn3yBBSvp-u10LW",
+              "sequenceReference": {
+                "id": "refseq:NC_000017.11",
+                "name": "NC_000017.11",
+                "description": "Reference sequence for GRCh38 chromosome 17.",
+                "aliases": [
+                  "GRCh38:17",
+                  "GRCh38:chr17",
+                  "ga4gh:SQ.dLZ15tNO1Ur0IcGjwc3Sdi_0A6Yf4zm7"
+                ],
+                "type": "SequenceReference",
+                "refgetAccession": "SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul"
+              },
+              "start": [
+                null,
+                7668420
+              ],
+              "end": [
+                7687490,
+                null
+              ]
+            },
+            "relations": [
+              {
+                "type": "MappableConcept",
+                "primaryCoding": {
+                  "code": "liftover_to",
+                  "system": "ga4gh-gks-term:allele-relation"
+                }
+              }
+            ],
+            "matchCharacteristic": {
+              "type": "MappableConcept",
+              "primaryCoding": {
+                "code": "is_within",
+                "system": "ga4gh-gks-term:location-match"
+              }
+            }
+          },
+          {
+            "type": "FeatureContextConstraint",
+            "featureContext": {
+              "type": "MappableConcept",
+              "id": "hgnc:11998",
+              "name": "TP53",
+              "conceptType": "Gene",
+              "primaryCoding": {
+                "id": "hgnc:11998",
+                "name": "TP53",
+                "system": "https://genenames.org",
+                "code": "HGNC:11998",
+                "iris": [
+                  "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11998"
+                ]
+              },
+              "extensions": [
+                {
+                  "name": "cytogenetic location",
+                  "value": "17p13.1"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "presence": "absent"
+    },
+    {
+      "type": "CategoricalVariantCriterion",
+      "subject": {
+        "type": "CategoricalVariant",
+        "name": "MDM2 amplification",
+        "constraints": [
+          {
+            "type": "DefiningLocationConstraint",
+            "location": {
+              "id": "ga4gh:SL.6jtLoeWjL2d7ev-k_M7gxzr7U5L4iec8",
+              "description": "Genomic region between positions 68,808,177 to 68,845,544 on chromosome 12 (refseq:NC_000012.12, GRCh38).",
+              "extensions": [
+                {
+                  "name": "GRCh38 1-based, inclusive interval",
+                  "value": "chr12:(68808178\u201368845544)",
+                  "description": "Genomic region between positions 68,808,178 to 68,845,544 on chromosome 12 (refseq:NC_000012.12, GRCh38); 1-based, inclusive interval notation."
+                },
+                {
+                  "name": "GRCh38 0-based, half-open interval",
+                  "value": "chr12:(68808177\u201368845544)",
+                  "description": "Genomic region between positions 68,808,177 to 68,845,544 on chromosome 12 (refseq:NC_000012.12, GRCh38); 0-based, half-open interval notation."
+                }
+              ],
+              "type": "SequenceLocation",
+              "digest": "6jtLoeWjL2d7ev-k_M7gxzr7U5L4iec8",
+              "sequenceReference": {
+                "id": "refseq:NC_000012.12",
+                "name": "NC_000012.12",
+                "description": "Reference sequence for GRCh38 chromosome 17.",
+                "aliases": [
+                  "GRCh38:12",
+                  "GRCh38:chr12",
+                  "ga4gh:SQ.6wlJpONE3oNb4D69ULmEXhqyDZ4vwNfl"
+                ],
+                "type": "SequenceReference",
+                "refgetAccession": "SQ.6wlJpONE3oNb4D69ULmEXhqyDZ4vwNfl"
+              },
+              "start": 68808176,
+              "end": 68845544
+            },
+            "relations": [
+              {
+                "type": "MappableConcept",
+                "primaryCoding": {
+                  "code": "liftover_to",
+                  "system": "ga4gh-gks-term:allele-relation"
+                }
+              }
+            ],
+            "matchCharacteristic": {
+              "type": "MappableConcept",
+              "primaryCoding": {
+                "code": "is_within",
+                "system": "ga4gh-gks-term:location-match"
+              }
+            }
+          },
+          {
+            "type": "FeatureContextConstraint",
+            "featureContext": {
+              "id": "hgnc:6973",
+              "type": "MappableConcept",
+              "name": "MDM2",
+              "system": "https://genenames.org",
+              "code": "HGNC:6973",
+              "iris": [
+                "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:6973"
+              ]
+            }
+          },
+          {
+            "type": "CopyChangeConstraint",
+            "copyChange": "gain"
+          }
+        ]
+      },
+      "presence": "present"
+    }
+  ],
+  "operator": "AND"
+}

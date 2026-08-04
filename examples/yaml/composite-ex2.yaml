@@ -1,0 +1,161 @@
+id: catvrs.composite.example:1
+type: CompositeCategoricalVariant
+name: Hormone Receptor Positive
+aliases:
+  - HR+
+description: An optional field to describe this Composite Categorical Variant.
+elements:
+  - id: catvrs.composite.example:1.0
+    type: CompositeCategoricalVariant
+    name: Estrogen Receptor Positive, Progesterone Receptor Negative
+    description: An optional field to describe this Composite Categorical Variant.
+    elements:
+      - type: CategoricalVariantCriterion
+        subject:
+          id: uniprot:P03372
+          type: CategoricalVariant
+          name: Estrogen receptor
+          description: An optional field to describe this Categorical Variant.
+          aliases:
+            - ESR1_HUMAN
+          constraints:
+            - type: FeatureContextConstraint
+              featureContext:
+                id: uniprot:P03372
+                type: MappableConcept
+                name: ESR1_HUMAN
+                conceptType: Protein product
+                primaryCoding:
+                  id: uniprot:P03372
+                  name: ESR1_HUMAN
+                  system: https://www.uniprot.org/
+                  code: P03372
+                  iris:
+                    - https://www.uniprot.org/uniprotkb/P03372
+        presence: present
+      - type: CategoricalVariantCriterion
+        subject:
+          id: uniprot:P06401
+          type: CategoricalVariant
+          name: Progesterone receptor
+          description: An optional field to describe this Categorical Variant.
+          aliases:
+            - PRGR_HUMAN
+          constraints:
+            - type: FeatureContextConstraint
+              featureContext:
+                id: uniprot:P06401
+                type: MappableConcept
+                name: PRGR_HUMAN
+                conceptType: Protein product
+                primaryCoding:
+                  id: uniprot:P06401
+                  name: PRGR_HUMAN
+                  system: https://www.uniprot.org/
+                  code: P06401
+                  iris:
+                    - https://www.uniprot.org/uniprotkb/P06401
+        presence: absent
+  - id: catvrs.composite.example:1.1
+    type: CompositeCategoricalVariant
+    name: Estrogen Receptor Negative, Progesterone Receptor Positive
+    description: An optional field to describe this Composite Categorical Variant.
+    elements:
+      - type: CategoricalVariantCriterion
+        subject:
+          id: uniprot:P03372
+          type: CategoricalVariant
+          name: Estrogen receptor
+          description: An optional field to describe this Categorical Variant.
+          aliases:
+            - ESR1_HUMAN
+          constraints:
+            - type: FeatureContextConstraint
+              featureContext:
+                id: uniprot:P03372
+                type: MappableConcept
+                name: ESR1_HUMAN
+                conceptType: Protein product
+                primaryCoding:
+                  id: uniprot:P03372
+                  name: ESR1_HUMAN
+                  system: https://www.uniprot.org/
+                  code: P03372
+                  iris:
+                    - https://www.uniprot.org/uniprotkb/P03372
+        presence: absent
+      - type: CategoricalVariantCriterion
+        subject:
+          id: uniprot:P06401
+          type: CategoricalVariant
+          name: Progesterone receptor
+          description: An optional field to describe this Categorical Variant.
+          aliases:
+            - PRGR_HUMAN
+          constraints:
+            - type: FeatureContextConstraint
+              featureContext:
+                id: uniprot:P06401
+                type: MappableConcept
+                name: PRGR_HUMAN
+                conceptType: Protein product
+                primaryCoding:
+                  id: uniprot:P06401
+                  name: PRGR_HUMAN
+                  system: https://www.uniprot.org/
+                  code: P06401
+                  iris:
+                    - https://www.uniprot.org/uniprotkb/P06401
+        presence: present
+  - id: catvrs.composite.example:1.2
+    type: CompositeCategoricalVariant
+    name: Estrogen Receptor Positive, Progesterone Receptor Positive
+    description: An optional field to describe this Composite Categorical Variant.
+    elements:
+      - type: CategoricalVariantCriterion
+        subject:
+          id: uniprot:P03372
+          type: CategoricalVariant
+          name: Estrogen receptor
+          description: An optional field to describe this Categorical Variant.
+          aliases:
+            - ESR1_HUMAN
+          constraints:
+            - type: FeatureContextConstraint
+              featureContext:
+                id: uniprot:P03372
+                type: MappableConcept
+                name: ESR1_HUMAN
+                conceptType: Protein product
+                primaryCoding:
+                  id: uniprot:P03372
+                  name: ESR1_HUMAN
+                  system: https://www.uniprot.org/
+                  code: P03372
+                  iris:
+                    - https://www.uniprot.org/uniprotkb/P03372
+        presence: present
+      - type: CategoricalVariantCriterion
+        subject:
+          id: uniprot:P06401
+          type: CategoricalVariant
+          name: Progesterone receptor
+          description: An optional field to describe this Categorical Variant.
+          aliases:
+            - PRGR_HUMAN
+          constraints:
+            - type: FeatureContextConstraint
+              featureContext:
+                id: uniprot:P06401
+                type: MappableConcept
+                name: PRGR_HUMAN
+                conceptType: Protein product
+                primaryCoding:
+                  id: uniprot:P06401
+                  name: PRGR_HUMAN
+                  system: https://www.uniprot.org/
+                  code: P06401
+                  iris:
+                    - https://www.uniprot.org/uniprotkb/P06401
+        presence: present
+operator: OR

@@ -1,0 +1,164 @@
+{
+  "id": "catvrs.composite.example:1",
+  "type": "CompositeCategoricalVariant",
+  "name": "BCR(ncbi:613)::ABL1(ncbi:25) and ABL1(ncbi:25) p.T315I",
+  "description": "An optional field to describe this Composite Categorical Variant.",
+  "elements": [
+    {
+      "type": "CategoricalVariantCriterion",
+      "subject": {
+        "id": "civic.vid:1",
+        "type": "CategoricalVariant",
+        "name": "BCR(ncbi:613)::ABL1(ncbi:25)",
+        "description": "An optional field to describe this Categorical Variant.",
+        "aliases": [
+          "BCR::ABL1",
+          "t(9;22)(q34;q11)",
+          "BCR-ABL1",
+          "BCR--ABL1",
+          "BCR-ABL",
+          "BCR(hgnc:1014)::ABL1(hgnc:76)"
+        ],
+        "constraints": [
+          {
+            "type": "AdjacencyConstraint",
+            "orderKnown": true,
+            "adjoinedElements": [
+              {
+                "type": "MappableConcept",
+                "id": "ncbi:613",
+                "conceptType": "Gene",
+                "name": "BCR",
+                "primaryCoding": {
+                  "id": "ncbi:613",
+                  "name": "BCR",
+                  "system": "https://www.ncbi.nlm.nih.gov/gene",
+                  "code": "613",
+                  "iris": [
+                    "https://www.ncbi.nlm.nih.gov/gene/613"
+                  ]
+                }
+              },
+              {
+                "type": "MappableConcept",
+                "id": "ncbi:25",
+                "conceptType": "Gene",
+                "name": "ABL1",
+                "primaryCoding": {
+                  "id": "ncbi:25",
+                  "name": "ABL1",
+                  "system": "https://www.ncbi.nlm.nih.gov/gene",
+                  "code": "25",
+                  "iris": [
+                    "https://www.ncbi.nlm.nih.gov/gene/25"
+                  ]
+                }
+              }
+            ]
+          }
+        ],
+        "members": [
+          {
+            "id": "ga4gh:AJ.KMisuH8wK4gWBigo1o4DHarzi_Xm5g9f",
+            "type": "Adjacency",
+            "name": "NM_004327.4:r.1_3533::NM_005157.6:r.461_5766 gene fusion.",
+            "description": "Example BCR::ABL1 gene fusion, NM_004327.4:r.1_3533::NM_005157.6:r.461_5766, using illustrative transcript breakpoint coordinates.",
+            "digest": "KMisuH8wK4gWBigo1o4DHarzi_Xm5g9f",
+            "adjoinedSequences": [
+              {
+                "id": "ga4gh:SL.SgudSwN0DssFbctqKs05wWDxBFJiFD4G",
+                "type": "SequenceLocation",
+                "digest": "SgudSwN0DssFbctqKs05wWDxBFJiFD4G",
+                "sequenceReference": {
+                  "id": "refseq:NM_004327.4",
+                  "type": "SequenceReference",
+                  "name": "NM_004327.4",
+                  "description": "BCR MANE Select transcript.",
+                  "aliases": [
+                    "ensembl:ENST00000305877.13",
+                    "ga4gh:SQ.kpytJsXw3BwLC3oBSjHQS1kwxs4WO3I3"
+                  ],
+                  "refgetAccession": "SQ.kpytJsXw3BwLC3oBSjHQS1kwxs4WO3I3",
+                  "residueAlphabet": "na"
+                },
+                "end": 3533
+              },
+              {
+                "id": "ga4gh:SL.vrnSNKA1YzeUjl5JlZ5wjHOTMKkXk_sQ",
+                "type": "SequenceLocation",
+                "digest": "vrnSNKA1YzeUjl5JlZ5wjHOTMKkXk_sQ",
+                "sequenceReference": {
+                  "id": "refseq:NM_005157.6",
+                  "type": "SequenceReference",
+                  "name": "NM_005157.6",
+                  "description": "ABL1 MANE Select transcript.",
+                  "aliases": [
+                    "ensembl:ENST00000318560.6",
+                    "ga4gh:SQ.w8Qg3x-PQ2akJrJQeGEN-_eBUMo1H1CL"
+                  ],
+                  "refgetAccession": "SQ.w8Qg3x-PQ2akJrJQeGEN-_eBUMo1H1CL",
+                  "residueAlphabet": "na"
+                },
+                "start": 460
+              }
+            ]
+          }
+        ]
+      },
+      "presence": "present"
+    },
+    {
+      "type": "CategoricalVariantCriterion",
+      "subject": {
+        "id": "civic.vid:2",
+        "type": "CategoricalVariant",
+        "name": "NM_007313.2(ABL1):c.1001C>T(p.Thr315Ile)",
+        "description": "An optional field to describe this Categorical Variant.",
+        "aliases": [
+          "ABL1 p.T315I"
+        ],
+        "constraints": [
+          {
+            "type": "DefiningAlleleConstraint",
+            "allele": {
+              "id": "ga4gh:VA.D6NzpWXKqBnbcZZrXNSXj4tMUwROKbsQ",
+              "type": "Allele",
+              "name": "NP_005148.2:p.Thr315Ile",
+              "description": "VRS variation of NP_005148.2:p.Thr315Ile, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).",
+              "digest": "D6NzpWXKqBnbcZZrXNSXj4tMUwROKbsQ",
+              "expressions": [
+                {
+                  "syntax": "hgvs.p",
+                  "value": "NP_005148.2:p.Thr315Ile"
+                }
+              ],
+              "location": {
+                "id": "ga4gh:SL.jGElwyBPYNWI-BkFFHKfgLJynt9zuNPs",
+                "description": "Amino acid position 315 of the Refseq protein NP_005148.2, which is the protein product of the coding transcript for ABL1 (NM_007313.2).",
+                "type": "SequenceLocation",
+                "digest": "jGElwyBPYNWI-BkFFHKfgLJynt9zuNPs",
+                "sequenceReference": {
+                  "id": "refseq:NP_005148.2",
+                  "name": "NP_005148.2",
+                  "description": "The protein product of the ABL1 (NM_007313.2) coding transcript, corresponding to the Refseq protein accession NP_005148.2.",
+                  "type": "SequenceReference",
+                  "refgetAccession": "SQ.dmFigTG-0fY6I54swb7PoDuxCeT6O3Wg",
+                  "residueAlphabet": "aa"
+                },
+                "start": 314,
+                "end": 315,
+                "sequence": "T"
+              },
+              "state": {
+                "type": "LiteralSequenceExpression",
+                "sequence": "I"
+              }
+            }
+          }
+        ]
+      },
+      "presence": "present"
+    }
+  ],
+  "operator": "AND"
+}

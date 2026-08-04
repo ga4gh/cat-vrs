@@ -1,0 +1,333 @@
+id: catvrs.composite.example:4
+type: CompositeCategoricalVariant
+name: KRAS (codons 12, 13, 59, 61, 117, 146) and NRAS (codons 12, 13, 59, 61, 117, 146) wild type
+description: >-
+  The US Food and Drug Administration defines RAS wild type for eligibility criteria of Vectibix as "..the absence of a RAS mutation in exon 2 (codons 12 and 13), exon 3 (codons 59 and 61), and exon 4 (codons 117 and 146) of both KRAS and NRAS". We model this Composite Categorical Variant as the Sequence Location for all of these specified codons being absent.
+elements:
+  - type: CategoricalVariantCriterion
+    subject:
+      type: CategoricalVariant
+      name: KRAS exon 2 codon 12
+      constraints:
+        - type: DefiningLocationConstraint
+          location:
+            id: ga4gh:SL.ovJR3lKrIflg4zDUU3Q-XH715XkwgTJl
+            type: SequenceLocation
+            description: Amino acid position 12 of the Refseq protein NP_004976.2, which is the protein product of the MANE Select coding transcript for KRAS (NM_004985.5).
+            digest: ovJR3lKrIflg4zDUU3Q-XH715XkwgTJl
+            sequenceReference:
+              id: refseq:NP_004976.2
+              type: SequenceReference
+              name: NP_004976.2
+              description: The protein product of the KRAS (NM_004985.5) MANE Select coding transcript, corresponding to the Refseq protein accession NP_004976.2.
+              refgetAccession: SQ.fytWhQSNGnA-86vDiQCxTSzgkk_WfQRS
+              residueAlphabet: aa
+            start: 11
+            end: 12
+            sequence: G
+          matchCharacteristic:
+            type: MappableConcept
+            primaryCoding:
+              code: is_within
+              system: ga4gh-gks-term:location-match
+    presence: absent
+  - type: CategoricalVariantCriterion
+    subject:
+      type: CategoricalVariant
+      name: KRAS exon 2 codon 13
+      constraints:
+        - type: DefiningLocationConstraint
+          location:
+            id: ga4gh:SL.BzexUaDshWa2nr_nxvUlpYNG4IHgxz1
+            type: SequenceLocation
+            description: Amino acid position 13 of the Refseq protein NP_004976.2, which is the protein product of the MANE Select coding transcript for KRAS (NM_004985.5).
+            digest: BzexUaDshWa2nr_nxvUlpYNG4IHgxz1B
+            sequenceReference:
+              id: refseq:NP_004976.2
+              type: SequenceReference
+              name: NP_004976.2
+              description: The protein product of the KRAS (NM_004985.5) MANE Select coding transcript, corresponding to the Refseq protein accession NP_004976.2.
+              refgetAccession: SQ.fytWhQSNGnA-86vDiQCxTSzgkk_WfQRS
+              residueAlphabet: aa
+            start: 12
+            end: 13
+            sequence: G
+          matchCharacteristic:
+            type: MappableConcept
+            primaryCoding:
+              code: is_within
+              system: ga4gh-gks-term:location-match
+    presence: absent
+  - type: CategoricalVariantCriterion
+    subject:
+      type: CategoricalVariant
+      name: KRAS exon 3 codon 59
+      constraints:
+        - type: DefiningLocationConstraint
+          location:
+            id: ga4gh:SL.R5gA2PLhRFOavGxpJIHEc-iSdrSHbNCE
+            type: SequenceLocation
+            description: Amino acid position 59 of the Refseq protein NP_004976.2, which is the protein product of the MANE Select coding transcript for KRAS (NM_004985.5).
+            digest: R5gA2PLhRFOavGxpJIHEc-iSdrSHbNCE
+            sequenceReference:
+              id: refseq:NP_004976.2
+              type: SequenceReference
+              name: NP_004976.2
+              description: The protein product of the KRAS (NM_004985.5) MANE Select coding transcript, corresponding to the Refseq protein accession NP_004976.2.
+              refgetAccession: SQ.fytWhQSNGnA-86vDiQCxTSzgkk_WfQRS
+              residueAlphabet: aa
+            start: 58
+            end: 59
+            sequence: T
+          matchCharacteristic:
+            type: MappableConcept
+            primaryCoding:
+              code: is_within
+              system: ga4gh-gks-term:location-match
+    presence: absent
+  - type: CategoricalVariantCriterion
+    subject:
+      type: CategoricalVariant
+      name: KRAS exon 3 codon 61
+      constraints:
+        - type: DefiningLocationConstraint
+          location:
+            id: ga4gh:SL.cZ9H-rOn8YlqzfspR6s4xuByHpqW0LHb
+            type: SequenceLocation
+            description: Amino acid position 61 of the Refseq protein NP_004976.2, which is the protein product of the MANE Select coding transcript for KRAS (NM_004985.5).
+            digest: cZ9H-rOn8YlqzfspR6s4xuByHpqW0LHb
+            sequenceReference:
+              id: refseq:NP_004976.2
+              type: SequenceReference
+              name: NP_004976.2
+              description: The protein product of the KRAS (NM_004985.5) MANE Select coding transcript, corresponding to the Refseq protein accession NP_004976.2.
+              refgetAccession: SQ.fytWhQSNGnA-86vDiQCxTSzgkk_WfQRS
+              residueAlphabet: aa
+            start: 60
+            end: 61
+            sequence: Q
+          matchCharacteristic:
+            type: MappableConcept
+            primaryCoding:
+              code: is_within
+              system: ga4gh-gks-term:location-match
+    presence: absent
+  - type: CategoricalVariantCriterion
+    subject:
+      type: CategoricalVariant
+      name: KRAS exon 4 codon 117
+      constraints:
+        - type: DefiningLocationConstraint
+          location:
+            id: ga4gh:SL.bStNqQNYJ4RnGRO12hr26Kxv_r0Dupll
+            type: SequenceLocation
+            description: Amino acid position 117 of the Refseq protein NP_004976.2, which is the protein product of the MANE Select coding transcript for KRAS (NM_004985.5).
+            digest: bStNqQNYJ4RnGRO12hr26Kxv_r0Dupll
+            sequenceReference:
+              id: refseq:NP_004976.2
+              type: SequenceReference
+              name: NP_004976.2
+              description: The protein product of the KRAS (NM_004985.5) MANE Select coding transcript, corresponding to the Refseq protein accession NP_004976.2.
+              refgetAccession: SQ.fytWhQSNGnA-86vDiQCxTSzgkk_WfQRS
+              residueAlphabet: aa
+            start: 116
+            end: 117
+            sequence: K
+          matchCharacteristic:
+            type: MappableConcept
+            primaryCoding:
+              code: is_within
+              system: ga4gh-gks-term:location-match
+    presence: absent
+  - type: CategoricalVariantCriterion
+    subject:
+      type: CategoricalVariant
+      name: KRAS exon 4 codon 146
+      constraints:
+        - type: DefiningLocationConstraint
+          location:
+            id: ga4gh:SL.5mByo5otBGUCvocdfBO4tfEUWd-PEcdC
+            type: SequenceLocation
+            description: Amino acid position 146 of the Refseq protein NP_004976.2, which is the protein product of the MANE Select coding transcript for KRAS (NM_004985.5).
+            digest: 5mByo5otBGUCvocdfBO4tfEUWd-PEcdC
+            sequenceReference:
+              id: refseq:NP_004976.2
+              type: SequenceReference
+              name: NP_004976.2
+              description: The protein product of the KRAS (NM_004985.5) MANE Select coding transcript, corresponding to the Refseq protein accession NP_004976.2.
+              refgetAccession: SQ.fytWhQSNGnA-86vDiQCxTSzgkk_WfQRS
+              residueAlphabet: aa
+            start: 145
+            end: 146
+            sequence: A
+          matchCharacteristic:
+            type: MappableConcept
+            primaryCoding:
+              code: is_within
+              system: ga4gh-gks-term:location-match
+    presence: absent
+  - type: CategoricalVariantCriterion
+    subject:
+      type: CategoricalVariant
+      name: NRAS exon 2 codon 12
+      constraints:
+        - type: DefiningLocationConstraint
+          location:
+            id: ga4gh:SL.bjLwzqDNlAKLn0nHJdmYQoQpsq8Maob5
+            type: SequenceLocation
+            description: Amino acid position 12 of the Refseq protein NP_002515.1, which is the protein product of the MANE Select coding transcript for NRAS (NM_002524.5).
+            digest: bjLwzqDNlAKLn0nHJdmYQoQpsq8Maob5
+            sequenceReference:
+              id: refseq:NP_002515.1
+              type: SequenceReference
+              name: NP_002515.1
+              description: The protein product of the NRAS (NM_002524.5) MANE Select coding transcript, corresponding to the Refseq protein accession NP_002515.1.
+              refgetAccession: SQ.974-EgvIQKi6ptqsI6XUZthCv-Py3S18
+              residueAlphabet: aa
+            start: 11
+            end: 12
+            sequence: G
+          matchCharacteristic:
+            type: MappableConcept
+            primaryCoding:
+              code: is_within
+              system: ga4gh-gks-term:location-match
+    presence: absent
+  - type: CategoricalVariantCriterion
+    subject:
+      id:
+      type: CategoricalVariant
+      name: NRAS exon 2 codon 13
+      constraints:
+        - type: DefiningLocationConstraint
+          location:
+            id: ga4gh:SL.NHnKuGjGj3fgNXIz8vZqirV-Xpt31HaK
+            type: SequenceLocation
+            description: Amino acid position 13 of the Refseq protein NP_002515.1, which is the protein product of the MANE Select coding transcript for NRAS (NM_002524.5).
+            digest: NHnKuGjGj3fgNXIz8vZqirV-Xpt31HaK
+            sequenceReference:
+              id: refseq:NP_002515.1
+              type: SequenceReference
+              name: NP_002515.1
+              description: The protein product of the NRAS (NM_002524.5) MANE Select coding transcript, corresponding to the Refseq protein accession NP_002515.1.
+              refgetAccession: SQ.974-EgvIQKi6ptqsI6XUZthCv-Py3S18
+              residueAlphabet: aa
+            start: 12
+            end: 13
+            sequence: G
+          matchCharacteristic:
+            type: MappableConcept
+            primaryCoding:
+              code: is_within
+              system: ga4gh-gks-term:location-match
+    presence: absent
+  - type: CategoricalVariantCriterion
+    subject:
+      type: CategoricalVariant
+      name: NRAS exon 3 codon 59
+      constraints:
+        - type: DefiningLocationConstraint
+          location:
+            id: ga4gh:SL.PVCGwShD96rnULv9Q7EHjAbv-SumtIh7
+            type: SequenceLocation
+            description: Amino acid position 59 of the Refseq protein NP_002515.1, which is the protein product of the MANE Select coding transcript for NRAS (NM_002524.5).
+            digest: PVCGwShD96rnULv9Q7EHjAbv-SumtIh7
+            sequenceReference:
+              id: refseq:NP_002515.1
+              type: SequenceReference
+              name: NP_002515.1
+              description: The protein product of the NRAS (NM_002524.5) MANE Select coding transcript, corresponding to the Refseq protein accession NP_002515.1.
+              refgetAccession: SQ.974-EgvIQKi6ptqsI6XUZthCv-Py3S18
+              residueAlphabet: aa
+            start: 58
+            end: 59
+            sequence: A
+          matchCharacteristic:
+            type: MappableConcept
+            primaryCoding:
+              code: is_within
+              system: ga4gh-gks-term:location-match
+    presence: absent
+  - type: CategoricalVariantCriterion
+    subject:
+      type: CategoricalVariant
+      name: NRAS exon 3 codon 61
+      constraints:
+        - type: DefiningLocationConstraint
+          location:
+            id: ga4gh:SL.h9GUOAwTHOwzdimw1F8DSnIcZDhaLlLS
+            type: SequenceLocation
+            description: Amino acid position 61 of the Refseq protein NP_002515.1, which is the protein product of the MANE Select coding transcript for NRAS (NM_002524.5).
+            digest: h9GUOAwTHOwzdimw1F8DSnIcZDhaLlLS
+            sequenceReference:
+              id: refseq:NP_002515.1
+              type: SequenceReference
+              name: NP_002515.1
+              description: The protein product of the NRAS (NM_002524.5) MANE Select coding transcript, corresponding to the Refseq protein accession NP_002515.1.
+              refgetAccession: SQ.974-EgvIQKi6ptqsI6XUZthCv-Py3S18
+              residueAlphabet: aa
+            start: 60
+            end: 61
+            sequence: Q
+          matchCharacteristic:
+            type: MappableConcept
+            primaryCoding:
+              code: is_within
+              system: ga4gh-gks-term:location-match
+    presence: absent
+  - type: CategoricalVariantCriterion
+    subject:
+      id:
+      type: CategoricalVariant
+      name: NRAS exon 4 codon 117
+      constraints:
+        - type: DefiningLocationConstraint
+          location:
+            id: ga4gh:SL.KItR4ej8KHIPZLNRGt8BfzvfHhqi_9HU
+            type: SequenceLocation
+            description: Amino acid position 117 of the Refseq protein NP_002515.1, which is the protein product of the MANE Select coding transcript for NRAS (NM_002524.5).
+            digest: KItR4ej8KHIPZLNRGt8BfzvfHhqi_9HU
+            sequenceReference:
+              id: refseq:NP_002515.1
+              type: SequenceReference
+              name: NP_002515.1
+              description: The protein product of the NRAS (NM_002524.5) MANE Select coding transcript, corresponding to the Refseq protein accession NP_002515.1.
+              refgetAccession: SQ.974-EgvIQKi6ptqsI6XUZthCv-Py3S18
+              residueAlphabet: aa
+            start: 116
+            end: 117
+            sequence: K
+          matchCharacteristic:
+            type: MappableConcept
+            primaryCoding:
+              code: is_within
+              system: ga4gh-gks-term:location-match
+    presence: absent
+  - type: CategoricalVariantCriterion
+    subject:
+      id:
+      type: CategoricalVariant
+      name: NRAS exon 4 codon 146
+      constraints:
+        - type: DefiningLocationConstraint
+          location:
+            id: ga4gh:SL.-s6L7rAWUcxPTm49aFEGkSl3n5m0TSJi
+            type: SequenceLocation
+            description: Amino acid position 146 of the Refseq protein NP_002515.1, which is the protein product of the MANE Select coding transcript for NRAS (NM_002524.5).
+            digest: -s6L7rAWUcxPTm49aFEGkSl3n5m0TSJi
+            sequenceReference:
+              id: refseq:NP_002515.1
+              type: SequenceReference
+              name: NP_002515.1
+              description: The protein product of the NRAS (NM_002524.5) MANE Select coding transcript, corresponding to the Refseq protein accession NP_002515.1.
+              refgetAccession: SQ.974-EgvIQKi6ptqsI6XUZthCv-Py3S18
+              residueAlphabet: aa
+            start: 145
+            end: 146
+            sequence: A
+          matchCharacteristic:
+            type: MappableConcept
+            primaryCoding:
+              code: is_within
+              system: ga4gh-gks-term:location-match
+    presence: absent
