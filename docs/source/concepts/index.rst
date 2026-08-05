@@ -14,7 +14,7 @@ In addition to the base Cat-VRS classes (:ref:`Categorical Variant <CategoricalV
 - :ref:`Constraints`: models that describe categorical variation and constraints
 - :ref:`Recipes`: models that describe categorical variation recipes with specific constraints
 - :ref:`Additional <additional>`: classes that support composing and assertion of Categorical Variants
-- :ref:`Imported <imported>`: imported data types and classes that support the specification
+- :ref:`Imported <imported>`: imported classes and data types that support the specification
 
 .. toctree::
     :hidden:
