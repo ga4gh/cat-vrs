@@ -1,6 +1,6 @@
 id: catvrs.composite.example:3
 type: CompositeCategoricalVariant
-name: KIT p.D817V negative
+name: KIT p.D816V negative
 description: An optional field to describe this Composite Categorical Variant.
 elements:
   - type: CategoricalVariantCriterion
