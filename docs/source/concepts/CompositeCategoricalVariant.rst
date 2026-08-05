@@ -10,13 +10,13 @@ or nested Composite Categorical Variants, using a boolean ``operator``
 <CategoricalVariant>` to be composed into more complex categorical
 expressions, such as combined biomarker or fusion+mutation statuses.
 
-Definition and Information Model
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+.. rubric:: Definition and Information Model
+   :class: rubric-h2
 
 .. include:: ../def/cat-vrs/CompositeCategoricalVariant.rst
 
-Examples
-@@@@@@@@
+.. rubric:: Examples
+   :class: rubric-h2
 
 The following examples utilize this class:
 
@@ -27,7 +27,7 @@ The following examples utilize this class:
 - :ref:`TP53 wild type <CompositeEx5>`
 - :ref:`TP53 wild type and MDM2 amplification <CompositeEx6>`
 
-Implementation Guidance
-@@@@@@@@@@@@@@@@@@@@@@@
+.. rubric:: Implementation Guidance
+   :class: rubric-h2
 
 Each element of a Composite Categorical Variant's ``elements`` list must be either a :ref:`Categorical Variant Criterion <CategoricalVariantCriterion>` or another Composite Categorical Variant, allowing composite expressions to be nested arbitrarily deep. Refer to :ref:`Categorical Variant Criterion <CategoricalVariantCriterion>` for how individual Categorical Variants are asserted present or absent within a composite expression.
