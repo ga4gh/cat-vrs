@@ -3,14 +3,17 @@
 Data Model
 !!!!!!!!!!
 
-At the top of the Cat-VRS data model is the :ref:`Categorical Variant <CategoricalVariant>` class. The Categorical Variant is composed of one or more :ref:`Constraints <constraints>` that define the Categorical Variant. The Constraint subclasses are used to define what we refer to as :ref:`Recipes`. Recipes are pre-defined Categorical Variants with specific constraints that represent standard categorical variants that have been identified.
+The foundational class of the Cat-VRS data model is the :ref:`Categorical Variant <CategoricalVariant>` class. The Categorical Variant is composed of one or more :ref:`Constraints <constraints>` that define it.
 
-The following sections describe the Cat-VRS base classes (:ref:`Categorical Variant <CategoricalVariant>` and
-:ref:`Constraint <constraint>`), :ref:`Constraint subclasses <constraints>`, the standard :ref:`Recipes`, and the additional :ref:`Imported <imported>` data
-class and types from VRS 2.0 and GKS Core 1.0 that support the Cat-VRS data model.
+The Constraint subclasses are used to define :ref:`Recipes`, which are pre-defined Categorical Variants with specific Constraints that represent common categories of genomic variation.
+
+Categorical Variants can be specified with a :ref:`Criterion <CategoricalVariantCriterion>`, which asserts whether each is present or absent, in order to combine them into :ref:`Composite Categorical Variants <CompositeCategoricalVariant>`. This supports representing the co-occurrence of multiple Categorical Variants, the negation of a single one, or more complex logical expressions through nesting Composite Categorical Variants.
+
+In addition to the base Cat-VRS classes (:ref:`Categorical Variant <CategoricalVariant>`, :ref:`Composite Categorical Variant <CompositeCategoricalVariant>`, and :ref:`Constraint <constraint>`), the following sections describe models that constitute the specification:
 
 - :ref:`Constraints`: models that describe categorical variation and constraints
 - :ref:`Recipes`: models that describe categorical variation recipes with specific constraints
+- :ref:`additionalCatVrsClasses`: additional classes that support composing and asserting Categorical Variants
 - :ref:`imported`: imported data types and classes that support the above models
 - :ref:`additionalDataTypes`: additional data types that support Constraints and Recipes
 
@@ -18,7 +21,9 @@ class and types from VRS 2.0 and GKS Core 1.0 that support the Cat-VRS data mode
     :hidden:
 
     CategoricalVariant
+    CompositeCategoricalVariant
     Constraint
     Constraints/index
     Recipes/index
-    imported/index
+    Additional/index
+    Imported/index

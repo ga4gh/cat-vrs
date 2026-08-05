@@ -3,12 +3,8 @@
 Composite Categorical Variant
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-The Composite Categorical Variant class is a logical expression that combines
-one or more :ref:`Categorical Variant Criteria <CategoricalVariantCriterion>`,
-or nested Composite Categorical Variants, using a boolean ``operator``
-(``AND`` / ``OR``). It allows multiple :ref:`Categorical Variants
-<CategoricalVariant>` to be composed into more complex categorical
-expressions to represent their co-occurrence.
+The Composite Categorical Variant class is a logical expression that combines one or more :ref:`Categorical Variant Criteria <CategoricalVariantCriterion>`, or nested Composite Categorical Variants, using a boolean *operator*
+(``AND`` / ``OR``). This allows multiple :ref:`Categorical Variant Criteria <CategoricalVariantCriterion>` to be composed into more complex categorical expressions, such as representing the co-occurrence of the underlying :ref:`Categorical Variants <CategoricalVariant>`.
 
 .. rubric:: Definition and Information Model
    :class: rubric-h2
@@ -30,4 +26,17 @@ The following examples utilize this class:
 .. rubric:: Implementation Guidance
    :class: rubric-h2
 
-Each element of a Composite Categorical Variant's ``elements`` list must be either a :ref:`Categorical Variant Criterion <CategoricalVariantCriterion>` or another Composite Categorical Variant, allowing composite expressions to be nested arbitrarily deep. Refer to :ref:`Categorical Variant Criterion <CategoricalVariantCriterion>` for how individual Categorical Variants are asserted present or absent within a composite expression.
+Composite Categorical Variants may be nested arbitrarily deep. Refer to :ref:`Categorical Variant Criterion <CategoricalVariantCriterion>` for how individual Categorical Variants are asserted present or absent within a composite expression.
+
+The *operator* specifies how the included *elements* are combined to define the Composite Categorical Variant. Either of the following **Name** values can be used to populate this attribute:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 25 75
+
+   * - Name
+     - Description
+   * - **AND**
+     - All elements must be satisfied.
+   * - **OR**
+     - At least one element must be satisfied.
