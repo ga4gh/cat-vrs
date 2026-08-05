@@ -233,5 +233,19 @@
       "operator": "AND"
     }
   ],
-  "operator": "OR"
+  "operator": "OR",
+  "mappings": [
+    {
+      "coding": {
+        "id": "ncit:C101267",
+        "name": "Hormone Receptor Positive",
+        "system": "https://evsexplore.semantics.cancer.gov",
+        "code": "C101267",
+        "iris": [
+          "https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C101267"
+        ]
+      },
+      "relation": "exactMatch"
+    }
+  ]
 }

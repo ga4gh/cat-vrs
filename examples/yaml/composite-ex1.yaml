@@ -1,6 +1,6 @@
 id: catvrs.composite.example:1
 type: CompositeCategoricalVariant
-name: BCR(ncbi:613)::ABL1(ncbi:25) and ABL1(ncbi:25) p.T315I
+name: BCR::ABL1 and ABL1 p.T315I
 description: An optional field to describe this Composite Categorical Variant.
 elements:
   - type: CategoricalVariantCriterion

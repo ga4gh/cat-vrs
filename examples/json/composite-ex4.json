@@ -1,7 +1,7 @@
 {
   "id": "catvrs.composite.example:4",
   "type": "CompositeCategoricalVariant",
-  "name": "KRAS (codons 12, 13, 59, 61, 117, 146) and NRAS (codons 12, 13, 59, 61, 117, 146) wild type",
+  "name": "KRAS and NRAS wild type",
   "description": "The US Food and Drug Administration defines RAS wild type for eligibility criteria of Vectibix as \"..the absence of a RAS mutation in exon 2 (codons 12 and 13), exon 3 (codons 59 and 61), and exon 4 (codons 117 and 146) of both KRAS and NRAS\". We model this Composite Categorical Variant as the Sequence Location for all of these specified codons being absent.",
   "elements": [
     {
