@@ -26,9 +26,9 @@ The following examples utilize this class:
 .. rubric:: Implementation Guidance
    :class: rubric-h2
 
-Composite Categorical Variants may be nested arbitrarily deep. Refer to :ref:`Categorical Variant Criterion <CategoricalVariantCriterion>` for how individual Categorical Variants are asserted present or absent within a composite expression.
+The *elements* attribute is required and may be populated with either :ref:`Categorical Variant Criterion <CategoricalVariantCriterion>`, to express an individual :ref:`Categorical Variant <CategoricalVariant>` as being present or absent within the composite, or a nested Composite Categorical Variant.
 
-The *operator* specifies how the included *elements* are combined to define the Composite Categorical Variant. Either of the following **Name** values can be used to populate this attribute:
+The *operator* attribute is also required and specifies how the included *elements* are combined to define the Composite Categorical Variant. Either of the following **Name** values can be used to populate this attribute:
 
 .. list-table::
    :header-rows: 1
