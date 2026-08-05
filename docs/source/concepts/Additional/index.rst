@@ -1,4 +1,4 @@
-.. _additional-classes:
+.. _additional:
 
 Additional Data Classes
 !!!!!!!!!!!!!!!!!!!!!!!
