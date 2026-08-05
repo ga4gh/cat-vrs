@@ -8,7 +8,7 @@ one or more :ref:`Categorical Variant Criteria <CategoricalVariantCriterion>`,
 or nested Composite Categorical Variants, using a boolean ``operator``
 (``AND`` / ``OR``). It allows multiple :ref:`Categorical Variants
 <CategoricalVariant>` to be composed into more complex categorical
-expressions, such as combined biomarker or fusion+mutation statuses.
+expressions to represent their co-occurrence.
 
 .. rubric:: Definition and Information Model
    :class: rubric-h2
