@@ -1,5 +1,5 @@
 {
-  "id": "catvrs.composite.example:5",
+  "id": "catvrs.composite.example:6",
   "type": "CompositeCategoricalVariant",
   "name": "TP53 wild type and MDM2 amplification",
   "description": "An optional field to describe this Composite Categorical Variant.",

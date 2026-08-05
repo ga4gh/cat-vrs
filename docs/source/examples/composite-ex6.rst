@@ -9,7 +9,7 @@ TP53 wild type and MDM2 amplification
 
 .. rubric:: Source
 
-.. TODO: no source citation identified yet -- confirm whether one should be added (e.g. a clinical trial or guideline eligibility criterion combining TP53 wild type with MDM2 amplification), or whether this is a synthetic example with no external source.
+Illustrating the use of :ref:`Composite Categorical Variants<CompositeCategoricalVariant>` to show *TP53* wild type co-occurring with an *MDM2* amplification was requested at the `2026-07-21 <https://github.com/ga4gh/cat-vrs/discussions/241#discussioncomment-17716783>`_ Cat-VRS community meeting.
 
 .. rubric:: :ref:`Constraints`
 
@@ -21,10 +21,8 @@ This :ref:`CompositeCategoricalVariant` utilizes the following Constraints:
 
 .. rubric:: Properties
 
-``id``: catvrs.composite.example:5
+``id``: catvrs.composite.example:6
   This identifier was arbitrarily set for the purposes of this documentation.
-
-.. TODO: this ``id`` (``catvrs.composite.example:5``) duplicates the ``id`` used in composite-ex5.yaml. Confirm the intended, non-colliding identifier scheme across these examples (this file, being example 6, likely should use ``catvrs.composite.example:6``).
 
 ``type``: CompositeCategoricalVariant
   This value is required by the specification for all :ref:`Composite Categorical Variant <CompositeCategoricalVariant>` objects.
