@@ -30,7 +30,9 @@ The *subject* attribute is required and must be a valid :ref:`Categorical Varian
 presence
 ########
 
-The *presence* attribute asserts whether the *subject* is required to be ``present`` or ``absent`` for the parent :ref:`Composite Categorical Variant <CompositeCategoricalVariant>` to be satisfied. Either of the following **Name** values can be used to populate this attribute:
+The *presence* attribute asserts whether the *subject* is required to be ``present`` or ``absent`` for the parent :ref:`Composite Categorical Variant <CompositeCategoricalVariant>` to be satisfied. Specifying the *subject* as ``absent`` is equivalent to adding a ``NOT`` qualifier.
+
+Either of the following **Name** values can be used to populate this attribute:
 
 .. list-table::
    :header-rows: 1
