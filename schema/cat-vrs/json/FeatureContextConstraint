@@ -1,6 +1,6 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0/json/FeatureContextConstraint",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/v1/json/FeatureContextConstraint",
    "title": "FeatureContextConstraint",
    "type": "object",
    "maturity": "draft",
@@ -14,7 +14,7 @@
       },
       "featureContext": {
          "description": "A feature identifier.",
-         "$ref": "/ga4gh/schema/gks-core/1.1.0/json/MappableConcept"
+         "$ref": "/ga4gh/schema/gks-core/1.2.0-ballot.2026-07.1/json/MappableConcept"
       }
    },
    "required": [

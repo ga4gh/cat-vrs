@@ -103,7 +103,8 @@ constraints:
         type: LiteralSequenceExpression
         sequence: R
     relations:
-      - primaryCoding:
+      - type: MappableConcept
+        primaryCoding:
           code: translation_of
           system: http://www.sequenceontology.org
           iris:

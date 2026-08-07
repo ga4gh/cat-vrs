@@ -10,7 +10,8 @@ constraints:
   - type: AdjacencyConstraint
     orderKnown: true
     adjoinedElements:
-      - id: hgnc:3689
+      - type: MappableConcept
+        id: hgnc:3689
         conceptType: Gene
         name: FGFR2
         primaryCoding:

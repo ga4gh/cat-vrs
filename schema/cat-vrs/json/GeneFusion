@@ -1,13 +1,13 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0/json/GeneFusion",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/v1/json/GeneFusion",
    "title": "GeneFusion",
    "type": "object",
    "maturity": "draft",
    "description": "A representation of the joining of two genes resulting in a chimeric transcript and/or novel interaction between a rearranged regulatory elements with the expression of a partner gene product (a regulatory fusion).",
    "allOf": [
       {
-         "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/CategoricalVariant"
+         "$ref": "/ga4gh/schema/cat-vrs/v1/json/CategoricalVariant"
       },
       {
          "properties": {
@@ -17,7 +17,7 @@
                "contains": {
                   "allOf": [
                      {
-                        "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/AdjacencyConstraint"
+                        "$ref": "/ga4gh/schema/cat-vrs/v1/json/AdjacencyConstraint"
                      },
                      {
                         "properties": {
@@ -25,16 +25,16 @@
                               "contains": {
                                  "anyOf": [
                                     {
-                                       "$ref": "/ga4gh/schema/gks-core/1.1.0/json/iriReference"
+                                       "$ref": "/ga4gh/schema/gks-core/1.2.0-ballot.2026-07.1/json/iriReference"
                                     },
                                     {
-                                       "$ref": "/ga4gh/schema/gks-core/1.1.0/json/MappableConcept"
+                                       "$ref": "/ga4gh/schema/gks-core/1.2.0-ballot.2026-07.1/json/MappableConcept"
                                     },
                                     {
-                                       "$ref": "/ga4gh/schema/vrs/2.0.1/json/Location"
+                                       "$ref": "/ga4gh/schema/vrs/2.1.0-ballot.2026-07.1/json/Location"
                                     },
                                     {
-                                       "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/UnspecifiedElement"
+                                       "$ref": "/ga4gh/schema/cat-vrs/v1/json/UnspecifiedElement"
                                     }
                                  ]
                               }

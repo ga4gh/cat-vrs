@@ -60,10 +60,12 @@ constraints:
         type: LiteralSequenceExpression
         sequence: G
     relations:
-      - primaryCoding:
+      - type: MappableConcept
+        primaryCoding:
           code: liftover_to
           system: ga4gh-gks-term:allele-relation
-      - primaryCoding:
+      - type: MappableConcept
+        primaryCoding:
           code: transcribed_to
           system: http://www.sequenceontology.org
           iris:

@@ -1,13 +1,13 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0/json/FunctionVariant",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/v1/json/FunctionVariant",
    "title": "FunctionVariant",
    "type": "object",
    "maturity": "draft",
    "description": "A representation of the constraints for matching knowledge about function variants; e.g., gain-of-function or loss-of-function.",
    "allOf": [
       {
-         "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/CategoricalVariant"
+         "$ref": "/ga4gh/schema/cat-vrs/v1/json/CategoricalVariant"
       },
       {
          "properties": {
@@ -19,7 +19,7 @@
                      "contains": {
                         "allOf": [
                            {
-                              "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/FunctionConstraint"
+                              "$ref": "/ga4gh/schema/cat-vrs/v1/json/FunctionConstraint"
                            }
                         ]
                      }
@@ -28,13 +28,13 @@
                      "contains": {
                         "anyOf": [
                            {
-                              "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/DefiningAlleleConstraint"
+                              "$ref": "/ga4gh/schema/cat-vrs/v1/json/DefiningAlleleConstraint"
                            },
                            {
-                              "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/DefiningLocationConstraint"
+                              "$ref": "/ga4gh/schema/cat-vrs/v1/json/DefiningLocationConstraint"
                            },
                            {
-                              "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/FeatureContextConstraint"
+                              "$ref": "/ga4gh/schema/cat-vrs/v1/json/FeatureContextConstraint"
                            }
                         ]
                      }

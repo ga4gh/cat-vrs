@@ -48,6 +48,7 @@
       },
       "relations": [
         {
+          "type": "MappableConcept",
           "primaryCoding": {
             "code": "translation_of",
             "system": "http://www.sequenceontology.org",
@@ -58,6 +59,7 @@
         }
       ],
       "matchCharacteristic": {
+        "type": "MappableConcept",
         "primaryCoding": {
           "code": "is_within",
           "system": "ga4gh-gks-term:location-match"

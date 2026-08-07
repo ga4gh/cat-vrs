@@ -16,6 +16,7 @@
           "type": "UnspecifiedElement"
         },
         {
+          "type": "MappableConcept",
           "id": "ncbi:171017",
           "conceptType": "Gene",
           "name": "ZNF384",

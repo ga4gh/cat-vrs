@@ -7,6 +7,7 @@
     {
       "type": "FeatureContextConstraint",
       "featureContext": {
+        "type": "MappableConcept",
         "id": "hgnc:7989",
         "conceptType": "Gene",
         "name": "NRAS",
@@ -24,6 +25,7 @@
     {
       "type": "FunctionConstraint",
       "functionConsequence": {
+        "type": "MappableConcept",
         "id": "SO:0002219",
         "name": "functionally normal",
         "primaryCoding": {

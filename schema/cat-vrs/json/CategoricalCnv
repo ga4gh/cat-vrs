@@ -1,13 +1,13 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.0.0/json/CategoricalCnv",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/v1/json/CategoricalCnv",
    "title": "CategoricalCnv",
    "type": "object",
    "maturity": "draft",
    "description": "A representation of the constraints for matching knowledge about CNVs.",
    "allOf": [
       {
-         "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/CategoricalVariant"
+         "$ref": "/ga4gh/schema/cat-vrs/v1/json/CategoricalVariant"
       },
       {
          "properties": {
@@ -20,7 +20,7 @@
                      "contains": {
                         "allOf": [
                            {
-                              "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/DefiningLocationConstraint"
+                              "$ref": "/ga4gh/schema/cat-vrs/v1/json/DefiningLocationConstraint"
                            },
                            {
                               "properties": {
@@ -47,10 +47,10 @@
                      "contains": {
                         "oneOf": [
                            {
-                              "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/CopyCountConstraint"
+                              "$ref": "/ga4gh/schema/cat-vrs/v1/json/CopyCountConstraint"
                            },
                            {
-                              "$ref": "/ga4gh/schema/cat-vrs/1.0.0/json/CopyChangeConstraint"
+                              "$ref": "/ga4gh/schema/cat-vrs/v1/json/CopyChangeConstraint"
                            }
                         ]
                      }
