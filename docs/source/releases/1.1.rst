@@ -1,0 +1,53 @@
+.. _1.1:
+
+1.1
+!!!
+
+1.1.0
+@@@@@
+
+Version 1.1.0 is the second release of the Categorical Variant Representation Specification. Since 1.0.0, we have introduced two new data classes, enhanced our documentation and repository tooling, and published a preprint on the specification.
+
+News
+####
+
+- The Categorical Variant Representation Specification manuscript has been submitted. Please cite `our preprint<https://www.biorxiv.org/content/10.64898/2026.02.10.705161>_`.
+
+Minor changes
+#############
+
+The following **product features** at **trial use** were modified:
+
+- :ref:`Defining Allele Constraint <DefiningAlleleConstraint>` `relations` property is a :ref:`Mappable Concept<MappableConcept>`, and now requires the *type* field.
+- :ref:`Defining Location Constraint <DefiningLocationConstraint>` `relations` and `matchCharacteristic` properties are :ref:`Mappble Concepts<MappableConcept>`, and now require the *type* field.
+
+Patch changes
+#############
+
+The following **product features** at **draft** maturity were introduced:
+
+* :ref:`Adjacency Constraint <AdjacencyConstraint>` and :ref:`Gene Fusion <GeneFusion>` Recipe (`#178 <https://github.com/ga4gh/cat-vrs/pull/178>`_)
+* :ref:`Function Constraint<FunctionConstraint>` and :ref:`Function Variant<FunctionVariant>` Recipe (`#164 <https://github.com/ga4gh/cat-vrs/pull/164>`_)
+
+The following **supporting** changes were made to Cat-VRS that do not impact Cat-VRS schemas:
+
+* Documentation updates:
+  * `Each concept now has their own page <data-model>` (`#195 <https://github.com/ga4gh/cat-vrs/pull/195>`_)
+  * `Examples now have their own page <Examples>` (`#223 <https://github.com/ga4gh/cat-vrs/pull/223>`_, `#229 <https://github.com/ga4gh/cat-vrs/pull/229>`_)
+  * `GKS Think Tank <>`_ now included on Getting Involved page (`#210 <https://github.com/ga4gh/cat-vrs/pull/210>`_)
+  * Highlight Read the Docs versions within documentation (`#213 <https://github.com/ga4gh/cat-vrs/pull/213>`_, `#214 <https://github.com/ga4gh/cat-vrs/pull/214>`_)
+  * Implementation guidance was written for all concepts (`#158 <https://github.com/ga4gh/cat-vrs/pull/158>`_, `#232 <https://github.com/ga4gh/cat-vrs/pull/232>`)
+  * Updated :ref:`Quickstart` (`#219 <https://github.com/ga4gh/cat-vrs/pull/219>`_)
+  * Updated Read the Docs display (`#183 <https://github.com/ga4gh/cat-vrs/pull/183>`_, `#185 <https://github.com/ga4gh/cat-vrs/pull/185>`_, `#192 <https://github.com/ga4gh/cat-vrs/pull/192>_`, `#227 <https://github.com/ga4gh/cat-vrs/pull/227>`_)
+  * Updated :ref:`Roadmap <roadmap>` (`#225 <https://github.com/ga4gh/cat-vrs/pull/225>`)
+* Editorial changes to documentation:
+  * Typo fixes (`#153<https://github.com/ga4gh/cat-vrs/pull/153>`_, `#160<https://github.com/ga4gh/cat-vrs/pull/160>`_)
+  * Revisions to data class descriptions (`#175 <https://github.com/ga4gh/cat-vrs/pull/175>`_, `#180 <https://github.com/ga4gh/cat-vrs/pull/180>`_, `#209 <https://github.com/ga4gh/cat-vrs/pull/209>`_)
+* Testing enhancements:
+  * Added all examples to test suite (`#155<https://github.com/ga4gh/cat-vrs/pull/155>`_)
+  * Resolved many Read the Docs build warnings (`#182 <https://github.com/ga4gh/cat-vrs/pull/182>`_)
+* Various updates to help manage the specification's `GitHub repository<https://github.com/ga4gh/cat-vrs>`_:
+  * Added README badges (`#204 <https://github.com/ga4gh/cat-vrs/pull/204>`_ `#244 <https://github.com/ga4gh/cat-vrs/pull/244>`_, `#245 <https://github.com/ga4gh/cat-vrs/pull/244>`_)
+  * Added repository templates (`#156 <https://github.com/ga4gh/cat-vrs/pull/156>_`, `#200 <https://github.com/ga4gh/cat-vrs/pull/200>`_, `#237 <https://github.com/ga4gh/cat-vrs/pull/237>`_)
+  * Adjust CODEOWNERS file (`#163 <https://github.com/ga4gh/cat-vrs/pull/163>`_)
+  * Removed duplicate requirements.txt file (`#198 <https://github.com/ga4gh/cat-vrs/pull/198>`_)
