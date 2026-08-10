@@ -6,4 +6,24 @@
 1.0.0
 @@@@@
 
-Cat-VRS 1.0.0 was the first public release of the Categorical Variation Representation Specification.
+Cat-VRS 1.0.0 was the first public release of the Categorical Variation Representation Specification. Browse our :ref:`Data Model <data-model>` and see our :ref:`Getting Involved <getting-involved>` page to learn how to contribute to this developing product.
+
+The following **product features** at **trial use** :ref:`maturity <maturity-model>` were introduced:
+
+- :ref:`Categorical Variant <CategoricalVariant>`
+- :ref:`Constraint <Constraint>`
+
+  - :ref:`Copy Count Constraint <CopyCountConstraint>`
+  - :ref:`Defining Allele Constraint <DefiningAlleleConstraint>`
+  - :ref:`DefiningLocationConstraint <DefiningLocationConstraint>`
+
+- :ref:`Recipes <Recipes>`:
+
+  - :ref:`Canonical Allele <CanonicalAllele>`
+  - :ref:`Protein Sequence Consequence <ProteinSequenceConsequence>`
+
+The following **product features** at **draft** :ref:`maturity <maturity-model>` were introduced:
+
+- :ref:`Categorical Copy Number Variant <CategoricalCnv>`
+- :ref:`Copy Change Constraint <CopyChangeConstraint>`
+- :ref:`Feature Context Constraint <FeatureContextConstraint>`

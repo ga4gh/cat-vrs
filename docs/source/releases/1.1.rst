@@ -16,7 +16,7 @@ News
 Minor changes
 #############
 
-The following **product features** at **trial use** were modified:
+The following **product features** at **trial use** :ref:`maturity <maturity-model>` were modified:
 
 - :ref:`Defining Allele Constraint <DefiningAlleleConstraint>` `relations` property is a :ref:`Mappable Concept<MappableConcept>`, and now requires the *type* field (`#246 <https://github.com/ga4gh/cat-vrs/pull/246>`_)
 - :ref:`Defining Location Constraint <DefiningLocationConstraint>` `relations` and `matchCharacteristic` properties are :ref:`Mappable Concepts<MappableConcept>`, and now require the *type* field (`#246 <https://github.com/ga4gh/cat-vrs/pull/246>`_)
@@ -24,7 +24,7 @@ The following **product features** at **trial use** were modified:
 Patch changes
 #############
 
-The following **product features** at **draft** maturity were introduced:
+The following **product features** at **draft** :ref:`maturity <maturity-model>` were introduced:
 
 * :ref:`Adjacency Constraint <AdjacencyConstraint>` and :ref:`Gene Fusion <GeneFusion>` Recipe (`#178 <https://github.com/ga4gh/cat-vrs/pull/178>`_)
 * :ref:`Function Constraint<FunctionConstraint>` and :ref:`Function Variant<FunctionVariant>` Recipe (`#164 <https://github.com/ga4gh/cat-vrs/pull/164>`_)
