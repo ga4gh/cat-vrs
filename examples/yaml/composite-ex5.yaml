@@ -1,0 +1,67 @@
+id: catvrs.composite.example:5
+type: CompositeCategoricalVariant
+name: TP53 wild type
+description: An optional field to describe this Composite Categorical Variant.
+elements:
+  - type: CategoricalVariantCriterion
+    subject:
+      type: CategoricalVariant
+      name: TP53
+      constraints:
+      - type: DefiningLocationConstraint
+        location:
+          id: ga4gh:SL.u9R1nbh-BFBoRI8Ravn3yBBSvp-u10LW
+          description: Genomic region between positions 7,668,420 to 7,687,490 on chromosome 17 (refseq:NC_000017.11, GRCh38).
+          extensions:
+            - name: GRCh38 1-based, inclusive interval
+              value: chr17:(7668421–7687490)
+              description: Genomic region between positions 7,668,421 to 7,687,490 on chromosome 17 (refseq:NC_000017.11, GRCh38); 1-based, inclusive interval notation.
+            - name: GRCh38 0-based, half-open interval
+              value: chr17:(7668420–7687490)
+              description: Genomic region between positions 7,668,420 to 7,687,490 on chromosome 17 (refseq:NC_000017.11, GRCh38); 0-based, half-open interval notation.
+          type: SequenceLocation
+          digest: u9R1nbh-BFBoRI8Ravn3yBBSvp-u10LW
+          sequenceReference:
+            id: refseq:NC_000017.11
+            name: NC_000017.11
+            description: Reference sequence for GRCh38 chromosome 17.
+            aliases:
+              - GRCh38:17
+              - GRCh38:chr17
+              - ga4gh:SQ.dLZ15tNO1Ur0IcGjwc3Sdi_0A6Yf4zm7
+            type: SequenceReference
+            refgetAccession: SQ.F-LrLMe1SRpfUZHkQmvkVKFEGaoDeHul
+          start:
+            - null
+            - 7668420
+          end:
+            - 7687490
+            - null
+        relations:
+          - type: MappableConcept
+            primaryCoding:
+              code: liftover_to
+              system: ga4gh-gks-term:allele-relation
+        matchCharacteristic:
+          type: MappableConcept
+          primaryCoding:
+            code: is_within
+            system: ga4gh-gks-term:location-match
+      - type: FeatureContextConstraint
+        featureContext:
+          type: MappableConcept
+          id: hgnc:11998
+          name: TP53
+          conceptType: Gene
+          primaryCoding:
+            id: hgnc:11998
+            name: TP53
+            system: https://genenames.org
+            code: HGNC:11998
+            iris:
+              - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:11998
+          extensions:
+            - name: cytogenetic location
+              value: 17p13.1
+    presence: absent
+operator: AND

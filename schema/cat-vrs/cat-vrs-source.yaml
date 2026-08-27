@@ -280,6 +280,10 @@ $defs:
       - adjoinedElements
       - orderKnown
 
+  # =============================================================================
+  # Additional Data Types
+  # =============================================================================
+
   FunctionalDomain:
     maturity: draft
     inherits: gks-core:Entity
@@ -318,4 +322,83 @@ $defs:
         const: UnspecifiedElement
         default: UnspecifiedElement
         description: Must be "UnspecifiedElement"
+    additionalProperties: false
+
+  # =============================================================================
+  # Composite Categorical Variants
+  # =============================================================================
+
+  CompositeCategoricalVariant:
+    type: object
+    inherits: gks-core:Entity
+    maturity: draft
+    description: >-
+      A logical expression that combines one or more Categorical Variant Criteria, or
+      nested Composite Categorical Variants, using a boolean operator.
+    properties:
+      type:
+        extends: type
+        const: CompositeCategoricalVariant
+        default: CompositeCategoricalVariant
+        description: 'MUST be "CompositeCategoricalVariant"'
+      elements:
+        type: array
+        description: >-
+          The Categorical Variant Criterion and/or nested Composite Categorical
+          Variants joined by `operator`.
+        items:
+          oneOf:
+            - $ref: "#/$defs/CategoricalVariantCriterion"
+            - $ref: "#/$defs/CompositeCategoricalVariant"
+        minItems: 1
+        ordered: false
+      operator:
+        type: string
+        description: Operator used to join the included elements.
+        oneOf:
+          - const: AND
+            description: All elements must be satisfied.
+          - const: OR
+            description: At least one element must be satisfied.
+      mappings:
+        type: array
+        ordered: false
+        items:
+          $refCurie: gks.core:ConceptMapping
+        description: >-
+          A list of mappings to concepts in terminologies or code systems. Each mapping should
+          include a coding and a relation.
+    required:
+      - type
+      - name
+      - elements
+      - operator
+    additionalProperties: false
+
+  CategoricalVariantCriterion:
+    type: object
+    inherits: gks-core:Element
+    maturity: draft
+    description: An assertion that a Categorical Variant is required to be present or absent.
+    properties:
+      type:
+        type: string
+        const: CategoricalVariantCriterion
+        default: CategoricalVariantCriterion
+        description: 'MUST be "CategoricalVariantCriterion"'
+      subject:
+        $ref: "#/$defs/CategoricalVariant"
+        description: The subject Categorical Variant of this criterion.
+      presence:
+        type: string
+        description: Whether the subject Categorical Variant is asserted to be present or absent.
+        oneOf:
+          - const: present
+            description: The subject Categorical Variant is present.
+          - const: absent
+            description: The subject Categorical Variant is absent.
+    required:
+      - type
+      - subject
+      - presence
     additionalProperties: false

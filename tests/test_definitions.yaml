@@ -37,6 +37,19 @@ tests:
   - test_file: tp53-copy-loss.annotated.yaml
     definition: CategoricalVariant
 
+  - test_file: composite-ex1.yaml
+    definition: CompositeCategoricalVariant
+  - test_file: composite-ex2.yaml
+    definition: CompositeCategoricalVariant
+  - test_file: composite-ex3.yaml
+    definition: CompositeCategoricalVariant
+  - test_file: composite-ex4.yaml
+    definition: CompositeCategoricalVariant
+  - test_file: composite-ex5.yaml
+    definition: CompositeCategoricalVariant
+  - test_file: composite-ex6.yaml
+    definition: CompositeCategoricalVariant
+
   # test that examples intended to satisfy Recipes validate appropriately
   - test_file: canonicalAllele-ex1.yaml
     definition: CanonicalAllele
