@@ -24,10 +24,10 @@
                   "$ref": "/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/UnspecifiedElement"
                },
                {
-                  "$ref": "/ga4gh/schema/gks-core/1.2.0-ballot.2026-07.1/json/MappableConcept"
+                  "$ref": "/ga4gh/schema/gkm-core/1.2.0-ballot.2026-07.1/json/MappableConcept"
                },
                {
-                  "$ref": "/ga4gh/schema/gks-core/1.2.0-ballot.2026-07.1/json/iriReference"
+                  "$ref": "/ga4gh/schema/gkm-core/1.2.0-ballot.2026-07.1/json/iriReference"
                },
                {
                   "$ref": "/ga4gh/schema/vrs/2.1.0-ballot.2026-07.1/json/Location"

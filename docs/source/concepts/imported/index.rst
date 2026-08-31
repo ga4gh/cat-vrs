@@ -4,7 +4,7 @@ Imported Data Types & Classes
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 The following data types classes are used by Cat-VRS but maintained by either the `VRS subgroup <https://vrs.ga4gh.org>`_
-or across the `GKS Work Stream as core data classes <https://github.com/ga4gh/gks-core>`_.
+or across the `GKS Work Stream as core data classes <https://github.com/ga4gh/gkm-core>`_.
 
 VRS
 !!!
@@ -23,7 +23,7 @@ VRS
    Terminus
    Variation
 
-GKS Core
+GKM Core
 !!!!!!!!
 
 .. toctree::

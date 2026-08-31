@@ -8,7 +8,7 @@ Represents an unspecified element that satisfies the described adjacency.
 
 **Information Model**
 
-Some UnspecifiedElement attributes are inherited from :ref:`gks-core:Entity`.
+Some UnspecifiedElement attributes are inherited from :ref:`gkm-core:Entity`.
 
 .. list-table::
    :class: clean-wrap

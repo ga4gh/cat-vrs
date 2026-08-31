@@ -8,7 +8,7 @@ A sequence location whose presence or absence is used to define an adjacency.
 
 **Information Model**
 
-Some FunctionalDomain attributes are inherited from :ref:`gks-core:Entity`.
+Some FunctionalDomain attributes are inherited from :ref:`gkm-core:Entity`.
 
 .. list-table::
    :class: clean-wrap
