@@ -1,6 +1,6 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/AdjacencyConstraint",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/v1/json/AdjacencyConstraint",
    "title": "AdjacencyConstraint",
    "type": "object",
    "maturity": "draft",
@@ -21,7 +21,7 @@
          "items": {
             "oneOf": [
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/UnspecifiedElement"
+                  "$ref": "/ga4gh/schema/cat-vrs/v1/json/UnspecifiedElement"
                },
                {
                   "$ref": "/ga4gh/schema/gkm-core/1.2.0-ballot.2026-07.1/json/MappableConcept"
@@ -43,7 +43,7 @@
          "description": "Functional domains whose presence or absence is required to satisfy the adjacency.",
          "ordered": false,
          "items": {
-            "$ref": "/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/FunctionalDomain"
+            "$ref": "/ga4gh/schema/cat-vrs/v1/json/FunctionalDomain"
          }
       },
       "linker": {
