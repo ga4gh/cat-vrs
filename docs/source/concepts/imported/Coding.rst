@@ -3,4 +3,4 @@
 Coding
 !!!!!!
 
-.. include::  ../../def/gks-core/Coding.rst
+.. include::  ../../def/gkm-core/Coding.rst

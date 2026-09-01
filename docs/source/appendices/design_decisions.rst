@@ -201,7 +201,7 @@ This decision was driven by three primary considerations: (1) the need for great
 
 #. **Improved flexibility for structural variant and copy number variation representation:** Many structural variants do not have a clear allele-level definition. Instead, they may be defined by their genomic location, sequence change, or a combination of the two.
 
-#. **Compatibility with existing genomic standards:** Existing GKS standards like VRS and knowledgebases like ClinVar treat sequence (location-state) variants and location variants separately. A single *DefiningContextConstraint* was somewhat misaligned with these models, making interoperability more challenging.
+#. **Compatibility with existing genomic standards:** Existing GKM standards like VRS and knowledgebases like ClinVar treat sequence (location-state) variants and location variants separately. A single *DefiningContextConstraint* was somewhat misaligned with these models, making interoperability more challenging.
 
 Splitting this constraint allows the model to explicitly define variants based on location, sequence, or both while allowing for smoother integration across implementations by mirroring representation in other well established resources.
 
@@ -268,7 +268,7 @@ Relations refer to structured transformations to the underlying variant, such as
 
 **Rationale:**
 
-The group followed existing practices in other GKS standards for relations and mappings adapted to the problem domain of catvar and catvar properties.
+The group followed existing practices in other GKM standards for relations and mappings adapted to the problem domain of catvar and catvar properties.
 
 **Citations:**
 
@@ -276,7 +276,7 @@ The group followed existing practices in other GKS standards for relations and m
 
 *  `2025-02-04 meeting minutes <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.ujjbabr6rnl>`_
 
-*  GKS Core: `ConceptMapping <https://cat-vrs.readthedocs.io/en/latest/concepts/imported/ConceptMapping.html#conceptmapping>`_ and `MappableConcept <https://cat-vrs.readthedocs.io/en/latest/concepts/imported/MappableConcept.html#mappableconcept>`_
+*  GKM Core: `ConceptMapping <https://cat-vrs.readthedocs.io/en/latest/concepts/imported/ConceptMapping.html#conceptmapping>`_ and `MappableConcept <https://cat-vrs.readthedocs.io/en/latest/concepts/imported/MappableConcept.html#mappableconcept>`_
 
 
 .. members_are_non-exhaustive
@@ -366,7 +366,7 @@ Integration of Mappable Concepts for Variant Relations
 For the relations property in the DefiningAlleleConstraint and DefiningLocationConstraint, the group decided to remove the explicit enum of possible relation methods (such as translates_to and translates_from) and instead refer to the :ref:`MappableConcept` data class.
 
 **Rationale:**
-This decision was made for a number of reasons: First, it is more consistent with `DRY <https://en.wikipedia.org/wiki/Don%27t_repeat_yourself>`_ best practices to have a single mechanism to handle relations rather than repeating lists of them multiple times throughout the specification. Second, the *gks.core:MappableConcept* class is a general-purpose data structure that holds codings of a concept and maps them to codings within other systems within a standardized way. Therefore, regardless of which coded methods are used by an implementation to relate one version of a variant to another, containerizing these coded methods in the *gks.core:MappableConcept* should make them easier to map to other coding systems.
+This decision was made for a number of reasons: First, it is more consistent with `DRY <https://en.wikipedia.org/wiki/Don%27t_repeat_yourself>`_ best practices to have a single mechanism to handle relations rather than repeating lists of them multiple times throughout the specification. Second, the *gkm.core:MappableConcept* class is a general-purpose data structure that holds codings of a concept and maps them to codings within other systems within a standardized way. Therefore, regardless of which coded methods are used by an implementation to relate one version of a variant to another, containerizing these coded methods in the *gkm.core:MappableConcept* should make them easier to map to other coding systems.
 
 **Citations:**
 

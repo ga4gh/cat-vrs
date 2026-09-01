@@ -1,6 +1,6 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/v1/json/CategoricalVariant",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/CategoricalVariant",
    "title": "CategoricalVariant",
    "type": "object",
    "maturity": "trial use",
@@ -31,7 +31,7 @@
          "type": "array",
          "ordered": false,
          "items": {
-            "$ref": "/ga4gh/schema/gks-core/1.2.0-ballot.2026-07.1/json/Extension"
+            "$ref": "/ga4gh/schema/gkm-core/1.2.0-ballot.2026-07.1/json/Extension"
          },
          "description": "A list of extensions to the Entity, that allow for capture of information not directly supported by elements defined in the model.",
          "$comment": "Extension objects have a key-value data structure that allows definition of custom fields in the data itself. Extensions are not expected to be natively understood, but may be used for pre-negotiated exchange of message attributes between systems."
@@ -50,7 +50,7 @@
          "items": {
             "oneOf": [
                {
-                  "$ref": "/ga4gh/schema/gks-core/1.2.0-ballot.2026-07.1/json/iriReference"
+                  "$ref": "/ga4gh/schema/gkm-core/1.2.0-ballot.2026-07.1/json/iriReference"
                },
                {
                   "$ref": "/ga4gh/schema/vrs/2.1.0-ballot.2026-07.1/json/Variation"
@@ -64,25 +64,25 @@
          "items": {
             "oneOf": [
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/v1/json/AdjacencyConstraint"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/AdjacencyConstraint"
                },
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/v1/json/CopyChangeConstraint"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/CopyChangeConstraint"
                },
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/v1/json/CopyCountConstraint"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/CopyCountConstraint"
                },
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/v1/json/DefiningAlleleConstraint"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/DefiningAlleleConstraint"
                },
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/v1/json/DefiningLocationConstraint"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/DefiningLocationConstraint"
                },
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/v1/json/FeatureContextConstraint"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/FeatureContextConstraint"
                },
                {
-                  "$ref": "/ga4gh/schema/cat-vrs/v1/json/FunctionConstraint"
+                  "$ref": "/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/FunctionConstraint"
                }
             ]
          }
@@ -91,7 +91,7 @@
          "type": "array",
          "ordered": false,
          "items": {
-            "$ref": "/ga4gh/schema/gks-core/1.2.0-ballot.2026-07.1/json/ConceptMapping"
+            "$ref": "/ga4gh/schema/gkm-core/1.2.0-ballot.2026-07.1/json/ConceptMapping"
          },
          "description": "A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation."
       }

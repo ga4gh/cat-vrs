@@ -1,15 +1,15 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://w3id.org/ga4gh/schema/cat-vrs/v1/recipes-source.yaml"
+$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/recipes-source.yaml"
 title: GA4GH-Cat-VRS-Recipe-Definitions
 type: object
 
 imports:
   cat-vrs: ./cat-vrs-source.yaml
-  gks-core: ../gks-core/gks-core-source.yaml
+  gkm-core: ../gkm-core/gkm-core-source.yaml
   vrs: ../vrs/vrs-source.yaml
 
 namespaces:
-  gks.core: /ga4gh/schema/gks-core/1.2.0-ballot.2026-07.1/json/
+  gkm.core: /ga4gh/schema/gkm-core/1.2.0-ballot.2026-07.1/json/
   vrs: /ga4gh/schema/vrs/2.1.0-ballot.2026-07.1/json/
 
 $defs:
@@ -153,8 +153,8 @@ $defs:
                     adjoinedElements:
                       contains:
                         anyOf:
-                          - $refCurie: gks.core:iriReference
-                          - $refCurie: gks.core:MappableConcept
+                          - $refCurie: gkm.core:iriReference
+                          - $refCurie: gkm.core:MappableConcept
                           - $refCurie: vrs:Location
                           - $ref: UnspecifiedElement
         required:

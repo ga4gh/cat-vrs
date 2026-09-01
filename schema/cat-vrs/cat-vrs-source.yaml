@@ -1,15 +1,15 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://w3id.org/ga4gh/schema/cat-vrs/v1/cat-vrs-source.yaml"
+$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/cat-vrs-source.yaml"
 title: GA4GH-Cat-VRS-Definitions
 type: object
 strict: true
 
 imports:
-  gks-core: ../gks-core/gks-core-source.yaml
+  gkm-core: ../gkm-core/gkm-core-source.yaml
   vrs: ../vrs/vrs-source.yaml
 
 namespaces:
-  gks.core: /ga4gh/schema/gks-core/1.2.0-ballot.2026-07.1/json/
+  gkm.core: /ga4gh/schema/gkm-core/1.2.0-ballot.2026-07.1/json/
   vrs: /ga4gh/schema/vrs/2.1.0-ballot.2026-07.1/json/
 
 $defs:
@@ -20,7 +20,7 @@ $defs:
 
   CategoricalVariant:
     type: object
-    inherits: gks-core:Entity
+    inherits: gkm-core:Entity
     maturity: trial use
     description: >-
       A representation of a categorically-defined domain for variation, in which individual
@@ -40,7 +40,7 @@ $defs:
         items:
           oneOf:
             - $refCurie: vrs:Variation
-            - $refCurie: gks.core:iriReference
+            - $refCurie: gkm.core:iriReference
       constraints:
         type: array
         ordered: false
@@ -50,7 +50,7 @@ $defs:
         type: array
         ordered: false
         items:
-          $refCurie: gks.core:ConceptMapping
+          $refCurie: gkm.core:ConceptMapping
         description: >-
           A list of mappings to concepts in terminologies or code systems. Each mapping should
           include a coding and a relation.
@@ -98,12 +98,12 @@ $defs:
       allele:
         oneOf:
           - $refCurie: vrs:Allele
-          - $refCurie: gks.core:iriReference
+          - $refCurie: gkm.core:iriReference
       relations:
         type: array
         ordered: false
         items:
-          $refCurie: gks.core:MappableConcept
+          $refCurie: gkm.core:MappableConcept
         description: >-
           Defined relationships from which members relate to the defining allele.
     required:
@@ -125,16 +125,16 @@ $defs:
       location:
         oneOf:
           - $refCurie: vrs:SequenceLocation
-          - $refCurie: gks.core:iriReference
+          - $refCurie: gkm.core:iriReference
       relations:
         type: array
         ordered: false
         items:
-          $refCurie: gks.core:MappableConcept
+          $refCurie: gkm.core:MappableConcept
         description: >-
           Defined relationships from which members relate to the defining location.
       matchCharacteristic:
-        $refCurie: gks.core:MappableConcept
+        $refCurie: gkm.core:MappableConcept
         description: >-
           A characteristic of the location that is used to match the defining location to member locations.
     required:
@@ -208,7 +208,7 @@ $defs:
         description: 'MUST be "FeatureContextConstraint"'
       featureContext:
         description: A feature identifier.
-        $refCurie: gks.core:MappableConcept
+        $refCurie: gkm.core:MappableConcept
     required:
       - featureContext
 
@@ -228,7 +228,7 @@ $defs:
         description: >
           The functional consequence of members of this categorical variant, as defined by an external ontology. We recommend using one of the defined terms from `The Sequence Ontology
           <http://www.sequenceontology.org>`_. See Implementation Guidance for more details.
-        $refCurie: gks.core:MappableConcept
+        $refCurie: gkm.core:MappableConcept
       description:
         description: >-
           A free-text description of the function change.
@@ -257,8 +257,8 @@ $defs:
         ordered: true
         items:
           oneOf:
-            - $refCurie: gks.core:iriReference
-            - $refCurie: gks.core:MappableConcept
+            - $refCurie: gkm.core:iriReference
+            - $refCurie: gkm.core:MappableConcept
             - $refCurie: vrs:Location
             - $refCurie: vrs:Terminus
             - $ref: "#/$defs/UnspecifiedElement"
@@ -282,7 +282,7 @@ $defs:
 
   FunctionalDomain:
     maturity: draft
-    inherits: gks-core:Entity
+    inherits: gkm-core:Entity
     type: object
     # Protected class of: AdjacencyConstraint
     description: A sequence location whose presence or absence is used to define an adjacency.
@@ -308,7 +308,7 @@ $defs:
 
   UnspecifiedElement:
     maturity: draft
-    inherits: gks-core:Entity
+    inherits: gkm-core:Entity
     type: object
     # Protected class of: AdjacencyConstraint
     description: Represents an unspecified element that satisfies the described adjacency.
