@@ -1,6 +1,6 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/FunctionConstraint",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.1.0/json/FunctionConstraint",
    "title": "FunctionConstraint",
    "type": "object",
    "maturity": "draft",
@@ -14,7 +14,7 @@
       },
       "functionConsequence": {
          "description": "The functional consequence of members of this categorical variant, as defined by an external ontology. We recommend using one of the defined terms from [The Sequence Ontology](http://www.sequenceontology.org). See Implementation Guidance for more details. ",
-         "$ref": "/ga4gh/schema/gkm-core/1.2.0-ballot.2026-07.1/json/MappableConcept"
+         "$ref": "/ga4gh/schema/gkm-core/1.2.0/json/MappableConcept"
       },
       "description": {
          "description": "A free-text description of the function change.",
