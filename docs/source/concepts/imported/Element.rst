@@ -1,7 +1,7 @@
 .. _Element:
-.. _gks-core:Element:
+.. _gkm-core:Element:
 
 Element
 !!!!!!!
 
-.. include::  ../../def/gks-core/Element.rst
+.. include::  ../../def/gkm-core/Element.rst

@@ -7,7 +7,7 @@ At the top of the Cat-VRS data model is the :ref:`Categorical Variant <Categoric
 
 The following sections describe the Cat-VRS base classes (:ref:`Categorical Variant <CategoricalVariant>` and
 :ref:`Constraint <constraint>`), :ref:`Constraint subclasses <constraints>`, the standard :ref:`Recipes`, and the additional :ref:`Imported <imported>` data
-class and types from VRS 2.0 and GKS Core 1.0 that support the Cat-VRS data model.
+class and types from VRS 2.0 and GKM Core 1.0 that support the Cat-VRS data model.
 
 - :ref:`Constraints`: models that describe categorical variation and constraints
 - :ref:`Recipes`: models that describe categorical variation recipes with specific constraints

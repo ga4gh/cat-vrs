@@ -8,7 +8,7 @@ A representation of a categorically-defined domain for variation, in which indiv
 
 **Information Model**
 
-Some CategoricalVariant attributes are inherited from :ref:`gks-core:Entity`.
+Some CategoricalVariant attributes are inherited from :ref:`gkm-core:Entity`.
 
 .. list-table::
    :class: clean-wrap

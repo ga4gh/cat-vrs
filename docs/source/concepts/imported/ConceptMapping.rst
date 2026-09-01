@@ -3,4 +3,4 @@
 ConceptMapping
 !!!!!!!!!!!!!!
 
-.. include::  ../../def/gks-core/ConceptMapping.rst
+.. include::  ../../def/gkm-core/ConceptMapping.rst

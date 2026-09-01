@@ -1,7 +1,7 @@
 .. _Entity:
-.. _gks-core:Entity:
+.. _gkm-core:Entity:
 
 Entity
 !!!!!!
 
-.. include::  ../../def/gks-core/Entity.rst
+.. include::  ../../def/gkm-core/Entity.rst

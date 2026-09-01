@@ -3,4 +3,4 @@
 ConceptSet
 !!!!!!!!!!!
 
-.. include::  ../../def/gks-core/ConceptSet.rst
+.. include::  ../../def/gkm-core/ConceptSet.rst
