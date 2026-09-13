@@ -1,4 +1,5 @@
 .. _data-model:
+.. _classDiagram:
 
 Data Model
 !!!!!!!!!!
@@ -22,3 +23,4 @@ class and types from VRS 2.0 and GKM Core 1.0 that support the Cat-VRS data mode
     Constraints/index
     Recipes/index
     imported/index
+    additional

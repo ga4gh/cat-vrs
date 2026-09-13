@@ -1,6 +1,7 @@
-.. note:: This data class is at a **trial use** maturity level and may \
-    change in future releases. Maturity \
-    levels are described in the :ref:`maturity-model`.
+.. admonition:: Trial Use
+    :class: note
+
+    May change in future releases. See |maturity-model|.
 
 **Computational Definition**
 
@@ -31,3 +32,5 @@ Some CopyCountConstraint attributes are inherited from :ref:`Constraint`.
       - integer | :ref:`Range`
       - 1..1
       - The precise value or range of copies members of this categorical variant must satisfy.
+
+**Used in:** :ref:`CategoricalCnv`

@@ -3,4 +3,4 @@
 Extension
 !!!!!!!!!
 
-.. include::  ../../def/gkm-core/Extension.rst
+.. include::  ../../def/cat-vrs/Extension.rst

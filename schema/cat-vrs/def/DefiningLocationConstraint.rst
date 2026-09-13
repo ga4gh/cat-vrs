@@ -1,6 +1,7 @@
-.. note:: This data class is at a **trial use** maturity level and may \
-    change in future releases. Maturity \
-    levels are described in the :ref:`maturity-model`.
+.. admonition:: Trial Use
+    :class: note
+
+    May change in future releases. See |maturity-model|.
 
 **Computational Definition**
 
@@ -44,3 +45,5 @@ Some DefiningLocationConstraint attributes are inherited from :ref:`Constraint`.
       - :ref:`MappableConcept`
       - 1..1
       - A characteristic of the location that is used to match the defining location to member locations.
+
+**Used in:** :ref:`CategoricalCnv`, :ref:`FunctionVariant`

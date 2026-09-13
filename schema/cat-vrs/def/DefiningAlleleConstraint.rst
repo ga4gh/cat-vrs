@@ -1,6 +1,7 @@
-.. note:: This data class is at a **trial use** maturity level and may \
-    change in future releases. Maturity \
-    levels are described in the :ref:`maturity-model`.
+.. admonition:: Trial Use
+    :class: note
+
+    May change in future releases. See |maturity-model|.
 
 **Computational Definition**
 
@@ -39,3 +40,5 @@ Some DefiningAlleleConstraint attributes are inherited from :ref:`Constraint`.
       - :ref:`MappableConcept`
       - 0..m
       - Defined relationships from which members relate to the defining allele.
+
+**Used in:** :ref:`CanonicalAllele`, :ref:`FunctionVariant`, :ref:`ProteinSequenceConsequence`

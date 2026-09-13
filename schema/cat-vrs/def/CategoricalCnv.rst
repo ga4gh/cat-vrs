@@ -1,6 +1,7 @@
-.. warning:: This data class is at a **draft** maturity level and may \
-    change significantly in future releases. Maturity \
-    levels are described in the :ref:`maturity-model`.
+.. admonition:: Draft
+    :class: warning
+
+    May change significantly in future releases. See |maturity-model|.
 
 **Computational Definition**
 
@@ -8,6 +9,7 @@ A representation of the constraints for matching knowledge about CNVs.
 
 **Information Model**
 
+This class refines :ref:`CategoricalVariant`.
 
 .. list-table::
    :class: clean-wrap
@@ -20,3 +22,63 @@ A representation of the constraints for matching knowledge about CNVs.
       - Type
       - Limits
       - Description
+   *  - id
+      -
+      - string
+      - 0..1
+      - The 'logical' identifier of the Entity in the system of record, e.g. a UUID.  This 'id' is unique within a given system, but may or may not be globally unique outside the system. It is used within a system to reference an object from another.
+   *  - type
+      -
+      - string
+      - 1..1
+      - MUST be "CategoricalVariant"
+   *  - name
+      -
+      - string
+      - 1..1
+      - A primary name for the entity.
+   *  - description
+      -
+      - string
+      - 0..1
+      - A free-text description of the Entity.
+   *  - aliases
+      -
+                        .. raw:: html
+
+                            <span style="background-color: #B2DFEE; color: black; padding: 2px 6px; border: 1px solid black; border-radius: 3px; font-weight: bold; display: inline-block; margin-bottom: 5px;" title="Unordered">&#8942;</span>
+      - string
+      - 0..m
+      - Alternative name(s) for the Entity.
+   *  - extensions
+      -
+                        .. raw:: html
+
+                            <span style="background-color: #B2DFEE; color: black; padding: 2px 6px; border: 1px solid black; border-radius: 3px; font-weight: bold; display: inline-block; margin-bottom: 5px;" title="Unordered">&#8942;</span>
+      - :ref:`Extension`
+      - 0..m
+      - A list of extensions to the Entity, that allow for capture of information not directly supported by elements defined in the model.
+   *  - members
+      -
+                        .. raw:: html
+
+                            <span style="background-color: #B2DFEE; color: black; padding: 2px 6px; border: 1px solid black; border-radius: 3px; font-weight: bold; display: inline-block; margin-bottom: 5px;" title="Unordered">&#8942;</span>
+      - :ref:`Variation` | :ref:`iriReference`
+      - 0..m
+      - A non-exhaustive list of VRS Variations that satisfy the constraints of this categorical variant.
+   *  - constraints *(refined)*
+      -
+                        .. raw:: html
+
+                            <span style="background-color: #B2DFEE; color: black; padding: 2px 6px; border: 1px solid black; border-radius: 3px; font-weight: bold; display: inline-block; margin-bottom: 5px;" title="Unordered">&#8942;</span>
+      - :ref:`DefiningLocationConstraint` + :ref:`CopyCountConstraint` | :ref:`CopyChangeConstraint`
+      - 2..2
+      - The constraints array must contain exactly two items: a DefiningLocationConstraint and either a CopyChangeConstraint or CopyCountConstraint.
+   *  - mappings
+      -
+                        .. raw:: html
+
+                            <span style="background-color: #B2DFEE; color: black; padding: 2px 6px; border: 1px solid black; border-radius: 3px; font-weight: bold; display: inline-block; margin-bottom: 5px;" title="Unordered">&#8942;</span>
+      - :ref:`ConceptMapping`
+      - 0..m
+      - A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation.

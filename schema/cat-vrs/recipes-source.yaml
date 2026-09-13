@@ -1,7 +1,8 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://w3id.org/ga4gh/schema/cat-vrs/v1/recipes-source.yaml"
+$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.1.1-ballot.2026-09.1/recipes-source.yaml"
 title: GA4GH-Cat-VRS-Recipe-Definitions
 type: object
+strict: true
 
 imports:
   cat-vrs: ./cat-vrs-source.yaml
@@ -9,8 +10,8 @@ imports:
   vrs: ../vrs/vrs-source.yaml
 
 namespaces:
-  gkm.core: /ga4gh/schema/gkm-core/1.2.0-ballot.2026-07.1/json/
-  vrs: /ga4gh/schema/vrs/2.1.0-ballot.2026-07.1/json/
+  gkm.core: /ga4gh/schema/gkm-core/1.2.1-ballot.2026-09.1/json/
+  vrs: /ga4gh/schema/vrs/2.1.1-ballot.2026-09.1/json/
 
 $defs:
   ProteinSequenceConsequence:
@@ -27,12 +28,10 @@ $defs:
             contains:
               allOf:
                 - $ref: DefiningAlleleConstraint
-                - type: object
-                  properties:
+                - properties:
                     relations:
                       allOf:
                         - contains:
-                            type: object
                             properties:
                               primaryCoding:
                                 code:
@@ -57,12 +56,10 @@ $defs:
             contains:
               allOf:
                 - $ref: DefiningAlleleConstraint
-                - type: object
-                  properties:
+                - properties:
                     relations:
                       allOf:
                         - contains:
-                            type: object
                             properties:
                               primaryCoding:
                                 code:
@@ -70,7 +67,6 @@ $defs:
                                 system:
                                   const: ga4gh-gks-term:allele-relation
                         - contains:
-                            type: object
                             properties:
                               primaryCoding:
                                 code:

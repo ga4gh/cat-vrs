@@ -1,5 +1,5 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://w3id.org/ga4gh/schema/cat-vrs/v1/cat-vrs-source.yaml"
+$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.1.1-ballot.2026-09.1/cat-vrs-source.yaml"
 title: GA4GH-Cat-VRS-Definitions
 type: object
 strict: true
@@ -9,8 +9,8 @@ imports:
   vrs: ../vrs/vrs-source.yaml
 
 namespaces:
-  gkm.core: /ga4gh/schema/gkm-core/1.2.0-ballot.2026-07.1/json/
-  vrs: /ga4gh/schema/vrs/2.1.0-ballot.2026-07.1/json/
+  gkm.core: /ga4gh/schema/gkm-core/1.2.1-ballot.2026-09.1/json/
+  vrs: /ga4gh/schema/vrs/2.1.1-ballot.2026-09.1/json/
 
 $defs:
 
@@ -19,7 +19,6 @@ $defs:
   # =============================================================================
 
   CategoricalVariant:
-    type: object
     inherits: gkm-core:Entity
     maturity: trial use
     description: >-
@@ -27,7 +26,6 @@ $defs:
       Constraintual variation instances may be members of the domain.
     properties:
       type:
-        extends: type
         const: CategoricalVariant
         default: CategoricalVariant
         description: 'MUST be "CategoricalVariant"'
@@ -64,6 +62,7 @@ $defs:
 
   Constraint:
     maturity: trial use
+    abstract: true
     description: >-
       Constraints are used to construct an intensional semantics of categorical variant types.
     oneOf:
@@ -74,24 +73,22 @@ $defs:
       - $ref: "#/$defs/CopyCountConstraint"
       - $ref: "#/$defs/CopyChangeConstraint"
       - $ref: "#/$defs/FunctionConstraint"
-    heritableProperties:
+    properties:
       type:
         type: string
         description: >-
           MUST be set to the name of the concrete Constraint subtype.
-    heritableRequired:
+    required:
       - type
 
   DefiningAlleleConstraint:
     maturity: trial use
-    type: object
     inherits: Constraint
     description: >-
       The defining allele and its associated relationships that are congruent
       with member variants.
     properties:
       type:
-        extends: type
         const: DefiningAlleleConstraint
         default: DefiningAlleleConstraint
         description: 'MUST be "DefiningAlleleConstraint"'
@@ -111,14 +108,12 @@ $defs:
 
   DefiningLocationConstraint:
     maturity: trial use
-    type: object
     inherits: Constraint
     description: >-
       The defining location and its associated relationships that are congruent
       with member locations.
     properties:
       type:
-        extends: type
         const: DefiningLocationConstraint
         default: DefiningLocationConstraint
         description: 'MUST be "DefiningLocationConstraint"'
@@ -144,13 +139,11 @@ $defs:
   CopyCountConstraint:
     maturity: trial use
     inherits: Constraint
-    type: object
     description:
       The exact or range of copies that members of this categorical
       variant must satisfy.
     properties:
       type:
-        extends: type
         const: CopyCountConstraint
         default: CopyCountConstraint
         description: 'MUST be "CopyCountConstraint"'
@@ -167,13 +160,11 @@ $defs:
   CopyChangeConstraint:
     maturity: draft
     inherits: Constraint
-    type: object
     description: >-
       The relative assessment of the change in copies that members of
       this categorical variant satisfy.
     properties:
       type:
-        extends: type
         const: CopyChangeConstraint
         default: CopyChangeConstraint
         description: 'MUST be "CopyChangeConstraint"'
@@ -196,13 +187,11 @@ $defs:
 
   FeatureContextConstraint:
     maturity: draft
-    type: object
     inherits: Constraint
     description: >-
       The feature that members of this categorical variant are associated with.
     properties:
       type:
-        extends: type
         const: FeatureContextConstraint
         default: FeatureContextConstraint
         description: 'MUST be "FeatureContextConstraint"'
@@ -214,13 +203,11 @@ $defs:
 
   FunctionConstraint:
     maturity: draft
-    type: object
     inherits: Constraint
     description: >-
       A classification of the protein functional consequence that characterizes members of this categorical variant.
     properties:
       type:
-        extends: type
         const: FunctionConstraint
         default: FunctionConstraint
         description: 'MUST be "FunctionConstraint"'
@@ -238,13 +225,11 @@ $defs:
 
   AdjacencyConstraint:
     maturity: draft
-    type: object
     inherits: Constraint
     description: >-
       Components that define a molecular adjacency of congruent elements.
     properties:
       type:
-        extends: type
         const: AdjacencyConstraint
         default: AdjacencyConstraint
         description: 'MUST be "AdjacencyConstraint"'
@@ -256,7 +241,12 @@ $defs:
         maxItems: 2
         ordered: true
         items:
-          oneOf:
+          # anyOf (not oneOf): the permitted element types are distinguished by their
+          # `type` const, but abstract imported bases (e.g. vrs:Location) are rendered
+          # open under the metaschema 0.4.1 convention and so can also validate an
+          # object of another branch (e.g. a MappableConcept). anyOf avoids the
+          # spurious oneOf "matches more than one schema" ambiguity.
+          anyOf:
             - $refCurie: gkm.core:iriReference
             - $refCurie: gkm.core:MappableConcept
             - $refCurie: vrs:Location
@@ -283,12 +273,10 @@ $defs:
   FunctionalDomain:
     maturity: draft
     inherits: gkm-core:Entity
-    type: object
     # Protected class of: AdjacencyConstraint
     description: A sequence location whose presence or absence is used to define an adjacency.
     properties:
       type:
-        extends: type
         const: FunctionalDomain
         default: FunctionalDomain
         description: Must be "FunctionalDomain"
@@ -309,13 +297,10 @@ $defs:
   UnspecifiedElement:
     maturity: draft
     inherits: gkm-core:Entity
-    type: object
     # Protected class of: AdjacencyConstraint
     description: Represents an unspecified element that satisfies the described adjacency.
     properties:
       type:
-        extends: type
         const: UnspecifiedElement
         default: UnspecifiedElement
         description: Must be "UnspecifiedElement"
-    additionalProperties: false

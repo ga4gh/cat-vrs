@@ -1,6 +1,7 @@
-.. warning:: This data class is at a **draft** maturity level and may \
-    change significantly in future releases. Maturity \
-    levels are described in the :ref:`maturity-model`.
+.. admonition:: Draft
+    :class: warning
+
+    May change significantly in future releases. See |maturity-model|.
 
 **Computational Definition**
 
@@ -31,3 +32,5 @@ Some CopyChangeConstraint attributes are inherited from :ref:`Constraint`.
       - string
       - 1..1
       - The relative assessment of the change in copies that members of this categorical variant satisfies.
+
+**Used in:** :ref:`CategoricalCnv`

@@ -7,9 +7,8 @@ Constraints define rules or sets of rules that a :ref:`Categorical Variant <Cate
 
 See :ref:`Constraint` for the abstract base class.
 
-**Subclasses**
-
 .. toctree::
+   :hidden:
    :titlesonly:
 
    AdjacencyConstraint
