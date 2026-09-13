@@ -241,12 +241,7 @@ $defs:
         maxItems: 2
         ordered: true
         items:
-          # anyOf (not oneOf): the permitted element types are distinguished by their
-          # `type` const, but abstract imported bases (e.g. vrs:Location) are rendered
-          # open under the metaschema 0.4.1 convention and so can also validate an
-          # object of another branch (e.g. a MappableConcept). anyOf avoids the
-          # spurious oneOf "matches more than one schema" ambiguity.
-          anyOf:
+          oneOf:
             - $refCurie: gkm.core:iriReference
             - $refCurie: gkm.core:MappableConcept
             - $refCurie: vrs:Location
