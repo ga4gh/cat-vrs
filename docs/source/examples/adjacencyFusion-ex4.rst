@@ -38,7 +38,7 @@ FGFR2(hgnc:3689)::v
 ``mappings``: null
   No :ref:`mappings <ConceptMapping>` included.
 
-.. rubric:: :ref:`Constraints`
+.. rubric:: :ref:`Constraints <Constraint>`
 
 :ref:`Adjacency Constraint <AdjacencyConstraint>`
   *FGFR2* (hgnc:3689) is modeled as a mappable concept as the 5' partner within the ``adjoinedElements`` array, with an :ref:`Unspecified Element <UnspecifiedElement>` serving as the unknown 3' partner. The ``orderKnown`` field is set to true. Additionally, the ``functionalDomains`` field specifies two domains that must carry a preserved status: the FGFR2 protein tyrosine kinase domain (amino acids 456–768 of the protein product NP_000132.3), and the kinase domain on the MANE Select coding transcript (positions 1999–2937 of NM_000141.5). Any variant satisfying this categorical variant must leave both of these domains intact.

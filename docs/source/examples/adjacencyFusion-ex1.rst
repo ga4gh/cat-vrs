@@ -38,7 +38,7 @@ BCR(ncbi:613)::ABL1(ncbi:25)
 ``mappings``: null
   No :ref:`mappings <ConceptMapping>` included.
 
-.. rubric:: :ref:`Constraints`
+.. rubric:: :ref:`Constraints <Constraint>`
 
 :ref:`Adjacency Constraint <AdjacencyConstraint>`
   Both *BCR* and *ABL1* are modeled as mappable concepts within the ``adjoinedElements`` array, using the NCBI gene identifiers provided by CIViC (ncbi:613 for *BCR* and ncbi:25 for *ABL1*). The ``orderKnown`` field is set to true to indicate that the 5'-to-3' orientation of the fusion partners is known.
