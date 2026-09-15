@@ -33,7 +33,7 @@ BCR(ncbi:613)::ABL1(ncbi:25)
   All aliases, as provided by CIViC, were included.
 
 ``extensions``: CIViC 5' and 3' Partner Representative Genomic Coordinates for BCR::ABL1
-  CIViC provided these values within the variant object, so we included them here as :ref:`extensions <Extension>` to because the :ref:`data model <data-model>` does not explicitly support them.
+  CIViC provided these values within the variant object, so we included them here as :ref:`extensions <Extension>` to because the :ref:`model <data-model>` does not explicitly support them.
 
 ``mappings``: null
   No :ref:`mappings <ConceptMapping>` included.
