@@ -65,6 +65,14 @@ $defs:
     abstract: true
     description: >-
       Constraints are used to construct an intensional semantics of categorical variant types.
+    oneOf:
+      - $ref: "#/$defs/DefiningAlleleConstraint"
+      - $ref: "#/$defs/DefiningLocationConstraint"
+      - $ref: "#/$defs/AdjacencyConstraint"
+      - $ref: "#/$defs/FeatureContextConstraint"
+      - $ref: "#/$defs/CopyCountConstraint"
+      - $ref: "#/$defs/CopyChangeConstraint"
+      - $ref: "#/$defs/FunctionConstraint"
     properties:
       type:
         type: string
@@ -233,12 +241,7 @@ $defs:
         maxItems: 2
         ordered: true
         items:
-          # anyOf (not oneOf): the permitted element types are distinguished by their
-          # `type`, but VRS deliberately renders its abstract bases (e.g. vrs:Location)
-          # as open subtype unions for third-party extension, so such a base can also
-          # validate an object of another branch (e.g. a MappableConcept). anyOf avoids
-          # the spurious oneOf "matches more than one schema" ambiguity.
-          anyOf:
+          oneOf:
             - $refCurie: gkm.core:iriReference
             - $refCurie: gkm.core:MappableConcept
             - $refCurie: vrs:Location

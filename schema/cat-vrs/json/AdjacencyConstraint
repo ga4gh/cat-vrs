@@ -19,7 +19,7 @@
          "maxItems": 2,
          "ordered": true,
          "items": {
-            "anyOf": [
+            "oneOf": [
                {
                   "$ref": "/ga4gh/schema/gkm-core/1.2.1-ballot.2026-09.1/json/iriReference"
                },

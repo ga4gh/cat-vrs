@@ -7,27 +7,8 @@
 @@@@@
 
 Version 1.1.1 is a **patch** release that modernizes the Cat-VRS build pipeline and
-refreshes its imported dependencies. It is a patch — not a minor — release because the
-schema changes are non-breaking (they only widen what validates) and there are no
-breaking changes to any **trial use** :ref:`maturity <maturity-model>` classes. There are
-no additions or removals to the set of Cat-VRS product features.
-
-Patch changes
-#############
-
-Two abstract compositions were opened, aligning with VRS's convention of leaving abstract
-base classes open for third-party extension. Both changes are non-breaking — they only
-widen what validates, so every previously valid instance remains valid:
-
-- :ref:`Constraint` (**trial use**): the abstract base no longer composes its concrete
-  subtypes through a ``oneOf`` discriminator and is left open. The concrete Constraint
-  subtypes still ``inherit`` from it and are otherwise unchanged.
-- :ref:`Adjacency Constraint <AdjacencyConstraint>` (**draft**): the ``adjoinedElements``
-  item schema uses ``anyOf`` instead of ``oneOf``. VRS renders its abstract base classes
-  (e.g. :ref:`Location`) as open subtype unions, under which an element intended as another
-  branch (such as a :ref:`MappableConcept`) can also validate; ``anyOf`` avoids a spurious
-  "matches more than one schema" error. This also affects the :ref:`Gene Fusion <GeneFusion>`
-  recipe.
+refreshes its imported dependencies. There are no changes to the set of Cat-VRS product
+features or to the Cat-VRS class schemas.
 
 Dependencies
 ############
