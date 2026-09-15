@@ -9,7 +9,6 @@ A change that occurs in a protein sequence as a result of genomic changes. Due t
 
 **Information Model**
 
-This class refines :ref:`CategoricalVariant`.
 
 .. list-table::
    :class: clean-wrap
@@ -66,7 +65,7 @@ This class refines :ref:`CategoricalVariant`.
       - :ref:`Variation` | :ref:`iriReference`
       - 0..m
       - A non-exhaustive list of VRS Variations that satisfy the constraints of this categorical variant.
-   *  - constraints *(refined)*
+   *  - constraints
       -
                         .. raw:: html
 

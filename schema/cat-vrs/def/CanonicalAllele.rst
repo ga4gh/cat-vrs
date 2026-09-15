@@ -9,7 +9,6 @@ A canonical allele is defined by an :ref:`Allele` that is representative of a co
 
 **Information Model**
 
-This class refines :ref:`CategoricalVariant`.
 
 .. list-table::
    :class: clean-wrap
@@ -66,7 +65,7 @@ This class refines :ref:`CategoricalVariant`.
       - :ref:`Variation` | :ref:`iriReference`
       - 0..m
       - A non-exhaustive list of VRS Variations that satisfy the constraints of this categorical variant.
-   *  - constraints *(refined)*
+   *  - constraints
       -
                         .. raw:: html
 

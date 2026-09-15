@@ -1,5 +1,5 @@
 # Schema validation
-ga4gh.gkm.metaschema == 0.4.1
+ga4gh.gkm.metaschema == 0.4.5
 jsonschema
 pyyaml
 referencing

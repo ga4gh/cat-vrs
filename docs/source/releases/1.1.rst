@@ -3,6 +3,50 @@
 1.1
 !!!
 
+1.1.1
+@@@@@
+
+Version 1.1.1 is a **patch** release that modernizes the Cat-VRS build pipeline and
+refreshes its imported dependencies. It is a patch — not a minor — release because there
+are no breaking changes to any **trial use** :ref:`maturity <maturity-model>` classes;
+the only schema change is to the **draft** :ref:`Adjacency Constraint <AdjacencyConstraint>`.
+There are no additions or removals to the set of Cat-VRS product features.
+
+Patch changes
+#############
+
+The following **product feature** at **draft** :ref:`maturity <maturity-model>` was modified:
+
+- :ref:`Adjacency Constraint <AdjacencyConstraint>`: the ``adjoinedElements`` item schema
+  uses ``anyOf`` instead of ``oneOf``. The permitted element types are still distinguished
+  by their ``type``, but VRS renders its abstract base classes (e.g. :ref:`Location`) as
+  open subtype unions for third-party extension, under which an element intended as another
+  branch (such as a :ref:`MappableConcept`) can also validate. ``anyOf`` avoids a spurious
+  "matches more than one schema" error while preserving the intended set of permitted
+  element types. This also affects the :ref:`Gene Fusion <GeneFusion>` recipe.
+
+Dependencies
+############
+
+- The Cat-VRS schema identifier (``$id``) is now
+  ``https://w3id.org/ga4gh/schema/cat-vrs/1.1.1/...``.
+- Imported schemas were updated to :ref:`VRS <imported>` ``2.1.1`` and GKM Core ``1.2.1``.
+
+Supporting changes
+##################
+
+The following **supporting** changes were made to Cat-VRS that do not impact the
+Cat-VRS data model:
+
+- Adopted the modernized GKM metaschema processor (``ga4gh.gkm.metaschema`` 0.4.5), with
+  which the source YAMLs are compiled (``source2classes`` / ``source2splitjs`` / ``y2t``).
+  Cross-schema references in the recipe definitions now use explicit ``$refCurie``
+  (e.g. ``cat-vrs:CategoricalVariant``), as required by the stricter 0.4.x processor.
+- Cat-VRS now generates and owns the documentation definitions for its imported VRS and
+  GKM Core classes locally, rather than depending on the submodule's pre-generated
+  definitions. Imported VRS class pages now link to the full definition in the latest
+  `VRS specification <https://vrs.ga4gh.org/en/latest/>`_.
+
 1.1.0
 @@@@@
 
@@ -58,31 +102,3 @@ The following **supporting** changes were made to Cat-VRS that do not impact Cat
   * Added repository templates (`#156 <https://github.com/ga4gh/cat-vrs/pull/156>`_, `#200 <https://github.com/ga4gh/cat-vrs/pull/200>`_, `#237 <https://github.com/ga4gh/cat-vrs/pull/237>`_)
   * Adjust CODEOWNERS file (`#163 <https://github.com/ga4gh/cat-vrs/pull/163>`_)
   * Removed duplicate requirements.txt file (`#198 <https://github.com/ga4gh/cat-vrs/pull/198>`_)
-
-1.1.1-ballot.2026-09
-@@@@@@@@@@@@@@@@@@@@@
-
-Version 1.1.1-ballot.2026-09 is a ballot release that modernizes the Cat-VRS build
-pipeline and refreshes its imported dependencies. There are no changes to the set of
-Cat-VRS product features or to the Cat-VRS class schemas.
-
-Dependencies
-############
-
-- The Cat-VRS schema identifier (``$id``) is now
-  ``https://w3id.org/ga4gh/schema/cat-vrs/1.1.1-ballot.2026-09.1/...``.
-- Imported schemas were updated to the 2026-09 ballot line:
-  :ref:`VRS <imported>` ``2.1.1-ballot.2026-09.1`` and GKM Core ``1.2.1-ballot.2026-09.1``.
-
-Supporting changes
-##################
-
-The following **supporting** changes were made to Cat-VRS that do not impact the
-Cat-VRS data model:
-
-- Adopted the modernized GKM metaschema processor (``ga4gh.gkm.metaschema`` 0.4.1), with
-  which the source YAMLs are compiled (``source2classes`` / ``source2splitjs`` / ``y2t``).
-- Cat-VRS now generates and owns the documentation definitions for its imported VRS and
-  GKM Core classes locally, rather than depending on the submodule's pre-generated
-  definitions. Imported VRS class pages now link to the full definition in the latest
-  `VRS specification <https://vrs.ga4gh.org/en/latest/>`_.
