@@ -65,14 +65,6 @@ $defs:
     abstract: true
     description: >-
       Constraints are used to construct an intensional semantics of categorical variant types.
-    oneOf:
-      - $ref: "#/$defs/DefiningAlleleConstraint"
-      - $ref: "#/$defs/DefiningLocationConstraint"
-      - $ref: "#/$defs/AdjacencyConstraint"
-      - $ref: "#/$defs/FeatureContextConstraint"
-      - $ref: "#/$defs/CopyCountConstraint"
-      - $ref: "#/$defs/CopyChangeConstraint"
-      - $ref: "#/$defs/FunctionConstraint"
     properties:
       type:
         type: string
