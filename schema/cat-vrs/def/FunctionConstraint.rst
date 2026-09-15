@@ -38,4 +38,6 @@ Some FunctionConstraint attributes are inherited from :ref:`Constraint`.
       - 0..1
       - A free-text description of the function change.
 
+**Inherits:** :ref:`Constraint`
+
 **Used in:** :ref:`FunctionVariant`

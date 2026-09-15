@@ -83,4 +83,6 @@ Some CategoricalVariant attributes are inherited from :ref:`gkm-core:Entity`.
       - 0..m
       - A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation.
 
+**Inherits:** :ref:`Entity`
+
 **Used in:** :ref:`CanonicalAllele`, :ref:`CategoricalCnv`, :ref:`FunctionVariant`, :ref:`GeneFusion`, :ref:`ProteinSequenceConsequence`

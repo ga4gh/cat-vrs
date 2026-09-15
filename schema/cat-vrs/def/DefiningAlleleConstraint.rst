@@ -41,4 +41,6 @@ Some DefiningAlleleConstraint attributes are inherited from :ref:`Constraint`.
       - 0..m
       - Defined relationships from which members relate to the defining allele.
 
+**Inherits:** :ref:`Constraint`
+
 **Used in:** :ref:`CanonicalAllele`, :ref:`FunctionVariant`, :ref:`ProteinSequenceConsequence`

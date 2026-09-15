@@ -1,5 +1,5 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.1.1-ballot.2026-09.1/cat-vrs-source.yaml"
+$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.2.0-ballot.2026-09.1/cat-vrs-source.yaml"
 title: GA4GH-Cat-VRS-Definitions
 type: object
 strict: true
@@ -9,8 +9,8 @@ imports:
   vrs: ../vrs/vrs-source.yaml
 
 namespaces:
-  gkm.core: /ga4gh/schema/gkm-core/1.2.1-ballot.2026-09.1/json/
-  vrs: /ga4gh/schema/vrs/2.1.1-ballot.2026-09.1/json/
+  gkm.core: /ga4gh/schema/gkm-core/1.3.0-ballot.2026-09.1/json/
+  vrs: /ga4gh/schema/vrs/2.2.0-ballot.2026-09.1/json/
 
 $defs:
 
@@ -63,16 +63,9 @@ $defs:
   Constraint:
     maturity: trial use
     abstract: true
+    sealed: true
     description: >-
       Constraints are used to construct an intensional semantics of categorical variant types.
-    oneOf:
-      - $ref: "#/$defs/DefiningAlleleConstraint"
-      - $ref: "#/$defs/DefiningLocationConstraint"
-      - $ref: "#/$defs/AdjacencyConstraint"
-      - $ref: "#/$defs/FeatureContextConstraint"
-      - $ref: "#/$defs/CopyCountConstraint"
-      - $ref: "#/$defs/CopyChangeConstraint"
-      - $ref: "#/$defs/FunctionConstraint"
     properties:
       type:
         type: string
@@ -80,6 +73,8 @@ $defs:
           MUST be set to the name of the concrete Constraint subtype.
     required:
       - type
+    discriminator:
+      propertyName: type
 
   DefiningAlleleConstraint:
     maturity: trial use
