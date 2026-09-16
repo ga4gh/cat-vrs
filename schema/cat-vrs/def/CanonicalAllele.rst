@@ -81,3 +81,5 @@ A canonical allele is defined by an :ref:`Allele` that is representative of a co
       - :ref:`ConceptMapping`
       - 0..m
       - A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation.
+
+**Composes:** :ref:`CategoricalVariant`

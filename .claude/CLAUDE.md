@@ -20,7 +20,7 @@ edit the source YAML and regenerate.
   and `schema/cat-vrs/def/*.rst` (per-class doc includes).
 - **Generator = the MSP** (metaschema processor): the `ga4gh.gkm.metaschema` pip package
   (renamed from `ga4gh.gks.metaschema`), pinned in `.requirements.txt` (currently
-  `== 0.4.5`, PyPI). Its console scripts `source2classes`, `source2splitjs`, `y2t` are
+  `== 0.4.7`, PyPI). Its console scripts `source2classes`, `source2splitjs`, `y2t` are
   invoked by `schema/cat-vrs/Makefile`. Not vendored here — see
   [ga4gh/gks-metaschema](https://github.com/ga4gh/gks-metaschema).
 
@@ -65,24 +65,27 @@ The MSP (0.4.x) is strict: a bare `$ref: SomeClass` to another schema is an erro
 `gkm.core:` namespaces likewise back `$refCurie: vrs:...` / `gkm.core:...`. `inherits:` uses
 the import alias (`gkm-core:Entity`, `Constraint`).
 
-## 0.4.x convention & the anyOf/oneOf gotcha
+## 0.4.x convention: abstract, sealed, anyOf/oneOf
 
-- Abstract classes: `abstract: true`, left **open** (no `additionalProperties`/
-  `unevaluatedProperties`). Concrete classes: **closed** (processor injects
+- Abstract classes: `abstract: true`. Concrete classes: **closed** (processor injects
   `type: object`/closure — drop explicit `type: object` from concrete sources).
 - No `extends:`; no `heritableProperties`/`heritableRequired` — use plain
   `properties`/`required` on the base; a subtype just re-declares a narrowed property.
-- **anyOf vs oneOf:** VRS deliberately renders its abstract bases (e.g. `vrs:Location`,
-  `vrs:Variation`) as **open** subtype unions for third-party extension, so such a base can
-  also validate an object of another branch. Any Cat-VRS union that mixes an abstract
-  imported base with another object type (e.g. `AdjacencyConstraint.adjoinedElements`:
-  `Location` + `MappableConcept`) must use **`anyOf`, not `oneOf`** — otherwise validation
-  fails with "matches more than one schema".
+- **`sealed: true`** on an abstract base makes the processor auto-generate a **closed**
+  `oneOf` of its concrete subtypes plus a `type` discriminator (pair it with
+  `discriminator: propertyName: type`). Cat-VRS's `Constraint` is sealed this way — do
+  **not** hand-write the subtype `oneOf`. VRS seals its abstract bases too, so they
+  discriminate by `type`.
+- **anyOf vs oneOf gotcha:** this only bites when an abstract imported base is rendered
+  **open** (no discriminator). Then a union mixing it with another object type (e.g.
+  `AdjacencyConstraint.adjoinedElements`: `Location` + `MappableConcept`) needs `anyOf` to
+  avoid "matches more than one schema". VRS has oscillated between open and sealed; while
+  its bases discriminate (current), `oneOf` is safe — re-verify `make test` after any vrs bump.
 
 ## Bumping vrs / gkm-core / the MSP
 
 ```bash
-git submodule update --remote submodules/vrs      # tracks .gitmodules branch (2.1.1-ballot.2026-09)
+git submodule update --remote submodules/vrs      # tracks .gitmodules branch (2.2.0-ballot.2026-09)
 git -C submodules/vrs submodule update --init --recursive   # nested gkm-core, from INSIDE vrs
 ```
 - GOTCHA: `--remote` uses the branch in LOCAL `.git/config`, which can be stale — if it
@@ -131,14 +134,13 @@ Sphinx/rST under `docs/source/`; must build **warning-free** (`cd docs && make h
 
 ## Versioning & release notes
 
-- Ballot `$id` tokens look like `cat-vrs/1.1.1-ballot.2026-09.1`; deps track the matching
-  vrs/gkm-core ballot tokens.
+- Ballot `$id` tokens look like `cat-vrs/1.2.0-ballot.2026-09.1`; deps track the matching
+  ballot tokens (currently vrs `2.2.0-ballot.2026-09.1`, gkm-core `1.3.0-ballot.2026-09.1`).
 - **Maturity/semver:** a breaking change to a **trial use** class → *minor*; changes to
-  **draft** classes or non-breaking changes → *patch*. (e.g. the `oneOf`→`anyOf` above is
-  non-breaking + draft → patch.)
-- `docs/source/releases/`: the `1.1` page lists sub-releases **most-recent-first**
-  (1.1.1 above 1.1.0). Release notes **preview the finalized version** — drop `-ballot.2026-09`
-  tokens so they read as they will at release.
+  **draft** classes or non-breaking changes → *patch*.
+- `docs/source/releases/`: one page per minor line (`1.2`, `1.1`, `1.0`), listed
+  **most-recent-first** in `index.rst` and within each page. Release notes **preview the
+  finalized version** — drop `-ballot.2026-09` tokens so they read as they will at release.
 
 ## Golden workflow for any schema/docs change
 

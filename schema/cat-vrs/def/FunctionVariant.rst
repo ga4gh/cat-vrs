@@ -81,3 +81,5 @@ A representation of the constraints for matching knowledge about function varian
       - :ref:`ConceptMapping`
       - 0..m
       - A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation.
+
+**Composes:** :ref:`CategoricalVariant`
