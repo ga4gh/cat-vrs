@@ -20,7 +20,7 @@ edit the source YAML and regenerate.
   and `schema/cat-vrs/def/*.rst` (per-class doc includes).
 - **Generator = the MSP** (metaschema processor): the `ga4gh.gkm.metaschema` pip package
   (renamed from `ga4gh.gks.metaschema`), pinned in `.requirements.txt` (currently
-  `== 0.4.7`, PyPI). Its console scripts `source2classes`, `source2splitjs`, `y2t` are
+  `== 0.4.8`, PyPI). Its console scripts `source2classes`, `source2splitjs`, `y2t` are
   invoked by `schema/cat-vrs/Makefile`. Not vendored here — see
   [ga4gh/gks-metaschema](https://github.com/ga4gh/gks-metaschema).
 

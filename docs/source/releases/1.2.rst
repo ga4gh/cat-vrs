@@ -33,7 +33,7 @@ Supporting changes
 The following **supporting** changes were made to Cat-VRS that do not impact the
 Cat-VRS data model:
 
-- Adopted the modernized GKM metaschema processor (``ga4gh.gkm.metaschema`` 0.4.7), with
+- Adopted the modernized GKM metaschema processor (``ga4gh.gkm.metaschema`` 0.4.8), with
   which the source YAMLs are compiled (``source2classes`` / ``source2splitjs`` / ``y2t``).
   Cross-schema references in the recipe definitions now use explicit ``$refCurie``
   (e.g. ``cat-vrs:CategoricalVariant``), as required by the stricter 0.4.x processor.
