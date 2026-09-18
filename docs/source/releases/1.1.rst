@@ -3,6 +3,61 @@
 1.1
 !!!
 
+1.1.1
+@@@@@
+
+Version 1.1.1 is a **patch** release that modernizes the Cat-VRS build pipeline and
+advances its imported dependencies to the 2026-09 ballot line (:ref:`VRS <imported>`
+``2.1.1`` and GKM Core ``1.3.0``). No change alters which instances validate against a
+**trial use** :ref:`maturity <maturity-model>` class, and there are no additions or
+removals to the set of Cat-VRS product features.
+
+Patch changes
+#############
+
+The following **product features** at **trial use** :ref:`maturity <maturity-model>` were
+modified without changing which instances validate:
+
+- :ref:`Constraint`: the abstract base is now declared ``sealed``. The metaschema processor
+  renders it as a closed union of its concrete subtypes with a ``type`` discriminator
+  (matching the VRS abstract-class convention). The derived union is the same seven
+  concrete subtypes that 1.1.0 listed by hand, and every subtype already required
+  ``type``. :ref:`CategoricalVariant` ``constraints`` now references :ref:`Constraint`
+  directly, which resolves to the same set.
+- :ref:`Canonical Allele <CanonicalAllele>` (and the **draft**
+  :ref:`Categorical CNV <CategoricalCnv>`) recipe now declares
+  ``unevaluatedProperties: false``. Both recipes already inherited closure from
+  :ref:`CategoricalVariant`, so the set of valid instances is unchanged.
+
+Dependencies
+############
+
+- The Cat-VRS schema identifier (``$id``) is now
+  ``https://w3id.org/ga4gh/schema/cat-vrs/1.1.1/...``.
+- Imported schemas were advanced to :ref:`VRS <imported>` ``2.1.1`` and GKM Core ``1.3.0``.
+  The only data-model change in GKM Core 1.3.0, a new optional
+  ``ConceptSet.conceptSetType``, does not reach Cat-VRS: Cat-VRS uses
+  :ref:`MappableConcept`, which 1.3.0 leaves unchanged, but not :ref:`ConceptSet`.
+
+Supporting changes
+##################
+
+The following **supporting** changes were made to Cat-VRS that do not impact the
+Cat-VRS data model:
+
+- Adopted the modernized GKM metaschema processor (``ga4gh.gkm.metaschema`` 0.4.8), with
+  which the source YAMLs are compiled (``source2classes`` / ``source2splitjs`` / ``y2t``).
+  Cross-schema references in the recipe definitions now use explicit ``$refCurie``
+  (e.g. ``cat-vrs:CategoricalVariant``), as required by the stricter 0.4.x processor.
+- Cat-VRS now generates and owns the documentation definitions for its imported VRS and
+  GKM Core classes locally, rather than depending on the submodule's pre-generated
+  definitions. Imported VRS class pages link to the full definition in the latest
+  `VRS specification <https://vrs.ga4gh.org/en/latest/>`_.
+- Renamed the "Data Model" documentation section to "Model" (consistent with VRS) and
+  consolidated the :ref:`Constraint` documentation onto a single index page.
+- The pre-commit CI job now checks out submodules, matching the local hook, so schema
+  regeneration is verified in CI.
+
 1.1.0
 @@@@@
 

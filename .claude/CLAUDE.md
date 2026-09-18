@@ -134,7 +134,7 @@ Sphinx/rST under `docs/source/`; must build **warning-free** (`cd docs && make h
 
 ## Versioning & release notes
 
-- Ballot `$id` tokens look like `cat-vrs/1.2.0-ballot.2026-09.1`; deps track the matching
+- Ballot `$id` tokens look like `cat-vrs/1.1.1-ballot.2026-09.1`; deps track the matching
   ballot tokens (currently vrs `2.1.1-ballot.2026-09.1`, gkm-core `1.3.0-ballot.2026-09.1`).
 - **Maturity/semver:** a breaking change to a **trial use** class → *minor*; changes to
   **draft** classes or non-breaking changes → *patch*.
