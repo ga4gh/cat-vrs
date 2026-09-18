@@ -85,7 +85,7 @@ the import alias (`gkm-core:Entity`, `Constraint`).
 ## Bumping vrs / gkm-core / the MSP
 
 ```bash
-git submodule update --remote submodules/vrs      # tracks .gitmodules branch (2.2.0-ballot.2026-09)
+git submodule update --remote submodules/vrs      # tracks .gitmodules branch (2.1.1-ballot.2026-09)
 git -C submodules/vrs submodule update --init --recursive   # nested gkm-core, from INSIDE vrs
 ```
 - GOTCHA: `--remote` uses the branch in LOCAL `.git/config`, which can be stale — if it
@@ -135,7 +135,7 @@ Sphinx/rST under `docs/source/`; must build **warning-free** (`cd docs && make h
 ## Versioning & release notes
 
 - Ballot `$id` tokens look like `cat-vrs/1.2.0-ballot.2026-09.1`; deps track the matching
-  ballot tokens (currently vrs `2.2.0-ballot.2026-09.1`, gkm-core `1.3.0-ballot.2026-09.1`).
+  ballot tokens (currently vrs `2.1.1-ballot.2026-09.1`, gkm-core `1.3.0-ballot.2026-09.1`).
 - **Maturity/semver:** a breaking change to a **trial use** class → *minor*; changes to
   **draft** classes or non-breaking changes → *patch*.
 - `docs/source/releases/`: one page per minor line (`1.2`, `1.1`, `1.0`), listed

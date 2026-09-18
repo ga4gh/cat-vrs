@@ -42,7 +42,7 @@
       },
       "location": {
          "description": "A Sequence Location for the domain.",
-         "$ref": "/ga4gh/schema/vrs/2.2.0-ballot.2026-09.1/json/Location"
+         "$ref": "/ga4gh/schema/vrs/2.1.1-ballot.2026-09.1/json/Location"
       },
       "status": {
          "type": "string",
