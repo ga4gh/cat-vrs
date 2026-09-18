@@ -38,7 +38,7 @@ NC_000001.11:g.1699974C>G
 ``mappings``: ClinGen, dbSNP, gnomAD (v2, v3, and v4)
   Mappings to ClinGen's webpage, dbSNP, and gnomAD v2, v3, and v4 are included from the Linked Data section of ClinGen's page for this Canonical Allele.
 
-.. rubric:: :ref:`Constraints`
+.. rubric:: :ref:`Constraints <Constraint>`
 
 :ref:`Defining Allele Constraint <DefiningAlleleConstraint>`
   The ``allele`` field is populated with the VRS Allele corresponding to the GRCh38 genomic representation NC_000001.11:g.1699974C>G, as included within ``members``. The constraint includes relations specifying liftover and transcription relationships between the alleles.

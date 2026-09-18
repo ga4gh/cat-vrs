@@ -40,6 +40,16 @@ To create the corresponding def and json files after making changes to the sourc
     cd schema
     make all
 
+These commands are powered by the GA4GH metaschema processor
+([ga4gh/gks-metaschema](https://github.com/ga4gh/gks-metaschema)), which defines the
+`*-source.yaml` dialect and generates the split JSON Schema and RST `def` files from it
+(via the `source2classes`, `source2splitjs`, and `y2t` console scripts invoked by `make all`).
+It is pinned in [.requirements.txt](./.requirements.txt). See that repo for details on how
+source documents are processed.
+
+> _Note: A custom pre-commit hook runs these commands automatically after you stage a
+> source document._
+
 After regenerating the corresponding def and json files from your changes, [validate your changes locally](#testing-and-validation) by running the updated schema against the current [examples/](./examples).
 
 ## Contributing to the docs

@@ -2,7 +2,7 @@ The *matchCharacteristic* attribute is required within a Defining Location Const
 
 .. note:: *matchCharacteristics* **are** definitional and thus do alter the scope of the Categorical Variant's definition. In other words, they do restrict which variants satisfy the Categorical Variant's constraints.
 
-.. include:: ../../_includes/_guidance_ga4gh_gks_term_warning.rst
+.. include:: /_includes/_guidance_ga4gh_gks_term_warning.rst
 
 .. list-table::
    :header-rows: 1

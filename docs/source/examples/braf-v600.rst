@@ -38,7 +38,7 @@ None
 ``mappings``: V600E (c.1799T>A), V600R (c.1798_1799delinsAG), V600K (c.1798_1799delinsAA), V600G (c.1799T>G), V600M (c.1798G>A)
   ClinVar variants corresponding to amino acid substitutions at BRAF V600 were included as relatedMatch mappings.
 
-.. rubric:: :ref:`Constraints`
+.. rubric:: :ref:`Constraints <Constraint>`
 
 :ref:`Defining Location Constraint <DefiningLocationConstraint>`
   The defining location is amino acid position 600 within the *BRAF* protein (refseq:NP_004324.2), the protein product of the MANE Select coding transcript for *BRAF* (refseq:NM_004333.6), corresponding to valine in the reference sequence. The ``matchCharacteristic`` is set to "is_within", meaning any variant whose affected residue falls within this position satisfies the constraint.

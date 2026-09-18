@@ -1,31 +1,44 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/v1/json/Constraint",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.1.1-ballot.2026-09.1/json/Constraint",
    "title": "Constraint",
    "type": "object",
    "maturity": "trial use",
+   "abstract": true,
    "description": "Constraints are used to construct an intensional semantics of categorical variant types.",
+   "properties": {
+      "type": {
+         "type": "string",
+         "description": "MUST be set to the name of the concrete Constraint subtype."
+      }
+   },
+   "required": [
+      "type"
+   ],
+   "discriminator": {
+      "propertyName": "type"
+   },
    "oneOf": [
       {
-         "$ref": "/ga4gh/schema/cat-vrs/v1/json/AdjacencyConstraint"
+         "$ref": "/ga4gh/schema/cat-vrs/1.1.1-ballot.2026-09.1/json/AdjacencyConstraint"
       },
       {
-         "$ref": "/ga4gh/schema/cat-vrs/v1/json/CopyChangeConstraint"
+         "$ref": "/ga4gh/schema/cat-vrs/1.1.1-ballot.2026-09.1/json/CopyChangeConstraint"
       },
       {
-         "$ref": "/ga4gh/schema/cat-vrs/v1/json/CopyCountConstraint"
+         "$ref": "/ga4gh/schema/cat-vrs/1.1.1-ballot.2026-09.1/json/CopyCountConstraint"
       },
       {
-         "$ref": "/ga4gh/schema/cat-vrs/v1/json/DefiningAlleleConstraint"
+         "$ref": "/ga4gh/schema/cat-vrs/1.1.1-ballot.2026-09.1/json/DefiningAlleleConstraint"
       },
       {
-         "$ref": "/ga4gh/schema/cat-vrs/v1/json/DefiningLocationConstraint"
+         "$ref": "/ga4gh/schema/cat-vrs/1.1.1-ballot.2026-09.1/json/DefiningLocationConstraint"
       },
       {
-         "$ref": "/ga4gh/schema/cat-vrs/v1/json/FeatureContextConstraint"
+         "$ref": "/ga4gh/schema/cat-vrs/1.1.1-ballot.2026-09.1/json/FeatureContextConstraint"
       },
       {
-         "$ref": "/ga4gh/schema/cat-vrs/v1/json/FunctionConstraint"
+         "$ref": "/ga4gh/schema/cat-vrs/1.1.1-ballot.2026-09.1/json/FunctionConstraint"
       }
    ]
 }

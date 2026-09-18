@@ -27,7 +27,7 @@ A representative example of this Constraint, from :ref:`BCR(ncbi:613)::ABL1(ncbi
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@
 
-The Adjacency Constraint is similar to `VRS' Adjacency class <https://vrs.ga4gh.org/en/stable/concepts/MolecularVariation/Adjacency.html>`_, except that the `adjoinedElements` field supports data types in addition to :ref:`iriReference` and :ref:`Location`. Specifically:
+The Adjacency Constraint is similar to `VRS' Adjacency class <https://vrs.ga4gh.org/en/latest/concepts/MolecularVariation/Adjacency.html>`_, except that the `adjoinedElements` field supports data types in addition to :ref:`iriReference` and :ref:`Location`. Specifically:
 
 * :ref:`MappableConcept` to include an element that represents a Gene.
 * :ref:`Terminus` to include an element that represents the end of a molecule.

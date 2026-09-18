@@ -3,4 +3,4 @@
 Coding
 !!!!!!
 
-.. include::  ../../def/gkm-core/Coding.rst
+.. include::  ../../def/cat-vrs/Coding.rst

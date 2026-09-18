@@ -1,6 +1,11 @@
-.. note:: This data class is at a **trial use** maturity level and may \
-    change in future releases. Maturity \
-    levels are described in the :ref:`maturity-model`.
+.. admonition:: Trial Use
+    :class: note
+
+    May change in future releases. See |maturity-model|.
+
+**Abstract Class** — not instantiated directly; concrete subclasses inherit its attributes.
+
+**Sealed** — Constraint has a closed, exhaustive set of concrete subclasses; every one is listed below. No other subclass is permitted, and a conforming instance must be exactly one of these types.
 
 **Computational Definition**
 
@@ -25,3 +30,18 @@ Constraints are used to construct an intensional semantics of categorical varian
       - string
       - 1..1
       - MUST be set to the name of the concrete Constraint subtype.
+
+This class must match **one of** the following:
+
+* :ref:`AdjacencyConstraint`
+* :ref:`CopyChangeConstraint`
+* :ref:`CopyCountConstraint`
+* :ref:`DefiningAlleleConstraint`
+* :ref:`DefiningLocationConstraint`
+* :ref:`FeatureContextConstraint`
+* :ref:`FunctionConstraint`
+
+
+**Subclasses:** :ref:`AdjacencyConstraint`, :ref:`CopyChangeConstraint`, :ref:`CopyCountConstraint`, :ref:`DefiningAlleleConstraint`, :ref:`DefiningLocationConstraint`, :ref:`FeatureContextConstraint`, :ref:`FunctionConstraint`
+
+**Used in:** :ref:`CategoricalVariant`

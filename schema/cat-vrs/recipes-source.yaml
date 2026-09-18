@@ -1,7 +1,8 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://w3id.org/ga4gh/schema/cat-vrs/v1/recipes-source.yaml"
+$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.1.1-ballot.2026-09.1/recipes-source.yaml"
 title: GA4GH-Cat-VRS-Recipe-Definitions
 type: object
+strict: true
 
 imports:
   cat-vrs: ./cat-vrs-source.yaml
@@ -9,8 +10,9 @@ imports:
   vrs: ../vrs/vrs-source.yaml
 
 namespaces:
-  gkm.core: /ga4gh/schema/gkm-core/1.2.0-ballot.2026-07.1/json/
-  vrs: /ga4gh/schema/vrs/2.1.0-ballot.2026-07.1/json/
+  cat-vrs: /ga4gh/schema/cat-vrs/1.1.1-ballot.2026-09.1/json/
+  gkm.core: /ga4gh/schema/gkm-core/1.3.0-ballot.2026-09.1/json/
+  vrs: /ga4gh/schema/vrs/2.1.1-ballot.2026-09.1/json/
 
 $defs:
   ProteinSequenceConsequence:
@@ -21,18 +23,16 @@ $defs:
       The protein sequence consequence, like a :ref:`CanonicalAllele`, is defined by an
       :ref:`Allele` that is representative of a collection of congruent Protein Alleles that share the same altered codon(s).
     allOf:
-      - $ref: CategoricalVariant
+      - $refCurie: cat-vrs:CategoricalVariant
       - properties:
           constraints:
             contains:
               allOf:
-                - $ref: DefiningAlleleConstraint
-                - type: object
-                  properties:
+                - $refCurie: cat-vrs:DefiningAlleleConstraint
+                - properties:
                     relations:
                       allOf:
                         - contains:
-                            type: object
                             properties:
                               primaryCoding:
                                 code:
@@ -49,20 +49,18 @@ $defs:
       Congruent representations of an Allele often exist across different genome assemblies and associated
       cDNA transcript representations.
     allOf:
-      - $ref: CategoricalVariant
+      - $refCurie: cat-vrs:CategoricalVariant
       - properties:
           constraints:
             minItems: 1
             maxItems: 1
             contains:
               allOf:
-                - $ref: DefiningAlleleConstraint
-                - type: object
-                  properties:
+                - $refCurie: cat-vrs:DefiningAlleleConstraint
+                - properties:
                     relations:
                       allOf:
                         - contains:
-                            type: object
                             properties:
                               primaryCoding:
                                 code:
@@ -70,7 +68,6 @@ $defs:
                                 system:
                                   const: ga4gh-gks-term:allele-relation
                         - contains:
-                            type: object
                             properties:
                               primaryCoding:
                                 code:
@@ -84,7 +81,7 @@ $defs:
     description: >-
       A representation of the constraints for matching knowledge about CNVs.
     allOf:
-      - $ref: CategoricalVariant
+      - $refCurie: cat-vrs:CategoricalVariant
       - properties:
           constraints:
             minItems: 2
@@ -96,7 +93,7 @@ $defs:
             allOf:
               - contains:
                   allOf:
-                    - $ref: DefiningLocationConstraint
+                    - $refCurie: cat-vrs:DefiningLocationConstraint
                     - properties:
                         relations:
                           contains:
@@ -108,15 +105,15 @@ $defs:
                                   const: ga4gh-gks-term:allele-relation
               - contains:
                   oneOf:
-                    - $ref: CopyCountConstraint
-                    - $ref: CopyChangeConstraint
+                    - $refCurie: cat-vrs:CopyCountConstraint
+                    - $refCurie: cat-vrs:CopyChangeConstraint
 
   FunctionVariant:
     maturity: draft
     description: >-
       A representation of the constraints for matching knowledge about function variants; e.g., gain-of-function or loss-of-function.
     allOf:
-      - $ref: CategoricalVariant
+      - $refCurie: cat-vrs:CategoricalVariant
       - properties:
           constraints:
             description: >-
@@ -126,12 +123,12 @@ $defs:
             allOf:
               - contains:
                   allOf:
-                    - $ref: FunctionConstraint
+                    - $refCurie: cat-vrs:FunctionConstraint
               - contains:
                   anyOf:
-                    - $ref: DefiningAlleleConstraint
-                    - $ref: DefiningLocationConstraint
-                    - $ref: FeatureContextConstraint
+                    - $refCurie: cat-vrs:DefiningAlleleConstraint
+                    - $refCurie: cat-vrs:DefiningLocationConstraint
+                    - $refCurie: cat-vrs:FeatureContextConstraint
         required:
           - constraints
 
@@ -140,7 +137,7 @@ $defs:
     description: >-
       A representation of the joining of two genes resulting in a chimeric transcript and/or novel interaction between a rearranged regulatory elements with the expression of a partner gene product (a regulatory fusion).
     allOf:
-      - $ref: CategoricalVariant
+      - $refCurie: cat-vrs:CategoricalVariant
       - properties:
           constraints:
             description: >-
@@ -148,7 +145,7 @@ $defs:
             minItems: 1
             contains:
               allOf:
-                - $ref: AdjacencyConstraint
+                - $refCurie: cat-vrs:AdjacencyConstraint
                 - properties:
                     adjoinedElements:
                       contains:
@@ -156,6 +153,6 @@ $defs:
                           - $refCurie: gkm.core:iriReference
                           - $refCurie: gkm.core:MappableConcept
                           - $refCurie: vrs:Location
-                          - $ref: UnspecifiedElement
+                          - $refCurie: cat-vrs:UnspecifiedElement
         required:
           - constraints

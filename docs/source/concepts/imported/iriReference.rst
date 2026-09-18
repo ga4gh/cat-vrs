@@ -3,4 +3,4 @@
 iriReference
 !!!!!!!!!!!!
 
-.. include::  ../../def/gkm-core/iriReference.rst
+.. include::  ../../def/cat-vrs/iriReference.rst
