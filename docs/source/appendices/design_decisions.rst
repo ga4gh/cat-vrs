@@ -93,7 +93,7 @@ This approach provides flexibility in defining catvars across diverse genomic ap
 
 *  `“Constraint name consistency” GitHub Issue <https://github.com/ga4gh/cat-vrs/issues/66>`_
 
-*  `Cat-VRS Model: Categorical Variant <https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html>`_
+*  :ref:`Categorical Variant <CategoricalVariant>`
 
 
 
@@ -138,7 +138,7 @@ It is intended that implementations of Cat-VRS will allow for variants to be sea
 
 *  `2024-11-06 meeting minutes <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.6uib69olrqg5>`_
 
-*  `CatVRS Data Model: Recipes <https://cat-vrs.readthedocs.io/en/latest/concepts/recipes.html>`_
+*  :ref:`Recipes`
 
 
 .. machine_readable_spec
@@ -276,7 +276,7 @@ The group followed existing practices in other GKM standards for relations and m
 
 *  `2025-02-04 meeting minutes <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.ujjbabr6rnl>`_
 
-*  GKM Core: `ConceptMapping <https://cat-vrs.readthedocs.io/en/latest/concepts/imported/ConceptMapping.html#conceptmapping>`_ and `MappableConcept <https://cat-vrs.readthedocs.io/en/latest/concepts/imported/MappableConcept.html#mappableconcept>`_
+*  GKM Core: :ref:`ConceptMapping` and :ref:`MappableConcept`
 
 
 .. members_are_non-exhaustive
@@ -298,7 +298,7 @@ Because catvars are `defined by their properties (constraints), <https://docs.go
 
 *  `2024-04-16 meeting minutes <https://docs.google.com/document/d/1oI4ir4OzXFvhZNbMVEX-RHGAQ-d2K4lAKP-7lf-uzPc/edit?tab=t.0#heading=h.cexaqt7e0bcy>`_
 
-*  `Cat-VRS Model: Categorical Variant class <https://cat-vrs.readthedocs.io/en/latest/concepts/catvrs_model.html#categorical-variant>`_
+*  :ref:`Categorical Variant class <CategoricalVariant>`
 
 
 .. name_as_a_non-required_field
