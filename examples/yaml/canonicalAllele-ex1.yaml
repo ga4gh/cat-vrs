@@ -102,7 +102,7 @@ constraints:
       - type: MappableConcept
         primaryCoding:
           code: liftover_to
-          system: ga4gh-gks-term:allele-relation
+          system: ga4gh-gkm-term:allele-relation
       - type: MappableConcept
         primaryCoding:
           code: transcribed_to

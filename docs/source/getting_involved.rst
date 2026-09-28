@@ -3,20 +3,19 @@
 Getting Involved
 @@@@@@@@@@@@@@@@
 
-Cat-VRS is driven by community involvement. This product is early in development, and need your input and expertise to make the best and most helpful tool we can. Here are a few ways that you
-can get involved:
+Cat-VRS is driven by community involvement. This product is early in development, and need your input and expertise to make the best and most helpful tool we can. Here are a few ways that you can get involved:
 
 
-* `Join the group through GA4GH <https://www.ga4gh.org/get-involved/join-our-community/join/>`_ to receive regular updates on our progress.
+* `Join the Genomic Knowledge Standards (GKS) Genomic Knowledge Model (GKM) group through GA4GH <https://www.ga4gh.org/get-involved/join-our-community/join/>`_ to receive regular updates on our progress.
 
 * Join our twice-monthly meetings. The schedule for upcoming meetings can be found `on the product website in GA4GH <https://www.ga4gh.org/product/categorical-variation-catvar/>`_.
 
     * Scroll to the bottom and click on "Meetings".
     * We currently meet every month on the 1st Wednesday from 20:00-21:00 UTC and the 3rd Tuesday from 13:00 - 14:00 UTC, to allow for participation from collaborators across the globe.
 
-* Join the `#GKS-categorical-variation channel <https://ga4gh.slack.com/archives/C05UKK8DML7>`_ on GA4GH's Slack.
+* Join the `#gkm-community channel <https://ga4gh.slack.com/archives/C0BUWNC2PQV>`_ on GA4GH's Slack.
 
-* Participate in the GA4GH Genomic Knowledge Standards (GKS) Work Stream Think Tank meetings, where Cat-VRS issues and specification topics are often discussed. Information about GKS and participation opportunities is available on the `Genomic Knowledge Standards Work Stream page <https://www.ga4gh.org/work_stream/genomic-knowledge-standards/>`_.
+* Participate in the GA4GH GKS Work Stream Think Tank meetings, where Cat-VRS issues and specification topics are often discussed. Information about GKS and participation opportunities is available on the `Genomic Knowledge Standards Work Stream page <https://www.ga4gh.org/work_stream/genomic-knowledge-standards/>`_.
 
 * Read the machine readable schema definitions, participate in Discussions, and raise Issues in the `Cat-VRS GitHub repository <https://github.com/ga4gh/cat-vrs>`_.
 

@@ -32,7 +32,7 @@
                                                 "const": "liftover_to"
                                              },
                                              "system": {
-                                                "const": "ga4gh-gks-term:allele-relation"
+                                                "const": "ga4gh-gkm-term:allele-relation"
                                              }
                                           }
                                        }

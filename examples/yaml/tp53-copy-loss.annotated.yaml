@@ -73,12 +73,12 @@ constraints:
       - type: MappableConcept
         primaryCoding:
           code: liftover_to
-          system: ga4gh-gks-term:allele-relation
+          system: ga4gh-gkm-term:allele-relation
     matchCharacteristic:
       type: MappableConcept
       primaryCoding:
         code: is_within
-        system: ga4gh-gks-term:location-match
+        system: ga4gh-gkm-term:location-match
 
   # The FeatureContextConstraint denotes the feature (e.g. gene, pseudogene, or sequence) that members of this
   # categorical variant are associated with.
