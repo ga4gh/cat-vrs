@@ -29,7 +29,7 @@ Constraints
 
 Categorical Variants that are intended to represent Protein Sequence Consequences must **only** contain the :ref:`Defining Allele Constraint <DefiningAlleleConstraint>`, with an ``Allele`` on a protein :ref:`Sequence Reference <SequenceReference>` and the following **required** :ref:`codings <Coding>` specified as *relations*:
 
-.. include:: ../../_includes/_guidance_ga4gh_gks_term_warning.rst
+.. include:: ../../_includes/_guidance_ga4gh_gkm_term_warning.rst
 
 .. list-table::
     :header-rows: 1

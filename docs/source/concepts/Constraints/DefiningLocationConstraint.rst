@@ -49,7 +49,7 @@ represented using a term from a defined ontology. Relation terms describe how *m
 
 The following relation terms are some to consider using with this Constraint:
 
-.. include:: ../../_includes/_guidance_ga4gh_gks_term_warning.rst
+.. include:: ../../_includes/_guidance_ga4gh_gkm_term_warning.rst
 
 .. list-table::
    :header-rows: 1
