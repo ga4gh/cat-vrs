@@ -10,5 +10,5 @@ The *matchCharacteristic* attribute is required within a Defining Location Const
 
    * - :ref:`Coding <Coding>`
      - Rationale
-   * - ga4gh-gks-term:location-match:is_within
+   * - ga4gh-gkm-term:location-match:is_within
      - Used when the ``member``'s ``Sequence Location`` is entirely within the Defining ``Sequence Location`` . A narrow match.
