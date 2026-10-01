@@ -9,11 +9,14 @@ representation of :ref:`Variation` state.
 Unlike :ref:`SequenceReference`, a sequence expression represents the
 content of a sequence, instead of representing a sequence by reference.
 
-.. include::  ../../def/vrs/SequenceExpression.rst
+.. note::
+   This class is imported from VRS. Its full documentation can be found in the
+   latest VRS specification at `vrs.ga4gh.org <https://vrs.ga4gh.org/en/latest/concepts/SequenceExpression/index.html>`__.
 
-**Subclasses**
+.. include::  ../../def/cat-vrs/SequenceExpression.rst
 
 .. toctree::
+    :hidden:
     :titlesonly:
 
     LiteralSequenceExpression

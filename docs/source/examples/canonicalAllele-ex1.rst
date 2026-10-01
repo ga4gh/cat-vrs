@@ -38,7 +38,7 @@ NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs)
 ``mappings``: ClinVar, VarSome, and dbSNP
   Mappings to ClinVar's page for the variant, ClinGen, VarSome, and dbSNP are included from the Links section of ClinVar's Variant Details.
 
-.. rubric:: :ref:`Constraints`
+.. rubric:: :ref:`Constraints <Constraint>`
 
 :ref:`Defining Allele Constraint <DefiningAlleleConstraint>`
   The ``allele`` field is populated with the VRS Allele corresponding to the MANE Select coding representation NM_004958.4:c.5992_5993del, as included within ``members``. The constraint includes relations specifying liftover and transcription relationships between the alleles.n.

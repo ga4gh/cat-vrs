@@ -66,3 +66,6 @@ tests:
     definition: ProteinSequenceConsequence
   - test_file: proteinSequenceConsequence-ex2.yaml
     definition: ProteinSequenceConsequence
+  # A Categorical Variant modeled without constraints (see describedVariant-ex1 docs page)
+  - test_file: describedVariant-ex1.yaml
+    definition: CategoricalVariant

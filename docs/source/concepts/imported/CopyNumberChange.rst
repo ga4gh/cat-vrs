@@ -3,4 +3,8 @@
 Copy Number Change
 !!!!!!!!!!!!!!!!!!
 
-.. include::  ../../def/vrs/CopyNumberChange.rst
+.. note::
+   This class is imported from VRS. Its full documentation can be found in the
+   latest VRS specification at `vrs.ga4gh.org <https://vrs.ga4gh.org/en/latest/concepts/SystemicVariation/CopyNumberChange.html>`__.
+
+.. include::  ../../def/cat-vrs/CopyNumberChange.rst

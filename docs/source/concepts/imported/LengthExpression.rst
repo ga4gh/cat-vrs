@@ -15,7 +15,11 @@ but unknown sequence content, typically as determined by molecular weight assays
 Definition and Information Model
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-.. include::  ../../def/vrs/LengthExpression.rst
+.. note::
+   This class is imported from VRS. Its full documentation can be found in the
+   latest VRS specification at `vrs.ga4gh.org <https://vrs.ga4gh.org/en/latest/concepts/SequenceExpression/LengthExpression.html>`__.
+
+.. include::  ../../def/cat-vrs/LengthExpression.rst
 
 Example
 @@@@@@@

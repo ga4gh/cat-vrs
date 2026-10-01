@@ -74,7 +74,7 @@ represented using a term from a defined ontology. Relation terms describe how *m
 
 The following relation terms are some to consider using with this Constraint, depending on the ``Allele`` molecule type represented and which :ref:`Recipe(s) <Recipes>` you intend to satisfy:
 
-.. include:: ../../_includes/_guidance_ga4gh_gks_term_warning.rst
+.. include:: ../../_includes/_guidance_ga4gh_gkm_term_warning.rst
 
 genomic
 =======

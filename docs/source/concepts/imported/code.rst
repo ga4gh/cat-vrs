@@ -3,4 +3,4 @@
 code
 !!!!
 
-.. include::  ../../def/gkm-core/code.rst
+.. include::  ../../def/cat-vrs/code.rst

@@ -3,4 +3,4 @@
 ConceptSet
 !!!!!!!!!!!
 
-.. include::  ../../def/gkm-core/ConceptSet.rst
+.. include::  ../../def/cat-vrs/ConceptSet.rst
