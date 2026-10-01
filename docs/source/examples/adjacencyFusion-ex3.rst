@@ -38,7 +38,7 @@
 ``mappings``: null
   No :ref:`mappings <ConceptMapping>` included.
 
-.. rubric:: :ref:`Constraints`
+.. rubric:: :ref:`Constraints <Constraint>`
 
 :ref:`Adjacency Constraint <AdjacencyConstraint>`
   The ``adjoinedElements`` array specifies an :ref:`Unspecified Element <UnspecifiedElement>` for the unknown 5' partner and *ZNF384* (ncbi:171017) as a mappable concept for the 3' partner. The ``orderKnown`` field is set to true to indicate that *ZNF384* is the known 3' partner in this fusion.

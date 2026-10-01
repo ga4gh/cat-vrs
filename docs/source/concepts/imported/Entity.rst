@@ -4,4 +4,4 @@
 Entity
 !!!!!!
 
-.. include::  ../../def/gkm-core/Entity.rst
+.. include::  ../../def/cat-vrs/Entity.rst

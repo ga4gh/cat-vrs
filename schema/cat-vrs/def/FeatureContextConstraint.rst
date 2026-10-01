@@ -1,6 +1,7 @@
-.. warning:: This data class is at a **draft** maturity level and may \
-    change significantly in future releases. Maturity \
-    levels are described in the :ref:`maturity-model`.
+.. admonition:: Draft
+    :class: warning
+
+    May change significantly in future releases. See |maturity-model|.
 
 **Computational Definition**
 
@@ -31,3 +32,7 @@ Some FeatureContextConstraint attributes are inherited from :ref:`Constraint`.
       - :ref:`MappableConcept`
       - 1..1
       - A feature identifier.
+
+**Inherits:** :ref:`Constraint`
+
+**Used in:** :ref:`FunctionVariant`

@@ -3,4 +3,4 @@
 MappableConcept
 !!!!!!!!!!!!!!!
 
-.. include::  ../../def/gkm-core/MappableConcept.rst
+.. include::  ../../def/cat-vrs/MappableConcept.rst

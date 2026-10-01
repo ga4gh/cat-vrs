@@ -38,7 +38,7 @@ v::NTRK1(hgnc:8031)
 ``mappings``: null
   No :ref:`mappings <ConceptMapping>` included.
 
-.. rubric:: :ref:`Constraints`
+.. rubric:: :ref:`Constraints <Constraint>`
 
 :ref:`Adjacency Constraint <AdjacencyConstraint>`
   The ``adjoinedElements`` array specifies an ``UnspecifiedElement`` for the uncharacterized fusion partner and *NTRK1* (hgnc:8031) as a mappable concept for the known partner. The ``orderKnown`` field is set to false to reflect that the 5'-to-3' orientation between the partners has not been established.

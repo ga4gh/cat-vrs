@@ -14,13 +14,24 @@ VRS
 
    Adjacency
    Allele
-   CopyNumberCount
+   CisPhasedBlock
    CopyNumberChange
+   CopyNumberCount
+   DerivativeMolecule
    Expression
+   Ga4ghIdentifiableObject
    Location
+   MolecularVariation
    Range
+   RelativeAllele
+   RelativeSequenceLocation
+   residue
    SequenceExpression
+   SequenceOffsetLocation
+   sequenceString
+   SystemicVariation
    Terminus
+   TraversalBlock
    Variation
 
 GKM Core
