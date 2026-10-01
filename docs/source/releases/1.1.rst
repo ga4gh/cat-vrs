@@ -7,8 +7,8 @@
 @@@@@
 
 Version 1.1.1 is a **patch** release that modernizes the Cat-VRS build pipeline and
-advances its imported dependencies to the 2026-09 ballot line (:ref:`VRS <imported>`
-``2.1.1`` and GKM Core ``1.3.0``). No change alters which instances validate against a
+advances its imported dependencies (:ref:`VRS <imported>` ``2.1.1`` and GKM Core
+``1.3.0``). No change alters which instances validate against a
 **trial use** :ref:`maturity <maturity-model>` class, and there are no additions or
 removals to the set of Cat-VRS product features.
 
@@ -35,8 +35,9 @@ Dependencies
 - The Cat-VRS schema identifier (``$id``) is now
   ``https://w3id.org/ga4gh/schema/cat-vrs/1.1.1/...``.
 - Imported schemas were advanced to :ref:`VRS <imported>` ``2.1.1`` and GKM Core ``1.3.0``.
-  The only data-model change in GKM Core 1.3.0, a new optional
-  ``ConceptSet.conceptSetType``, does not reach Cat-VRS: Cat-VRS uses
+  The only data-model changes in GKM Core 1.3.0 — a new optional
+  ``ConceptSet.conceptSetType`` field and ``iriReference`` as a new allowed
+  ``ConceptSet.concepts`` member — do not reach Cat-VRS: Cat-VRS uses
   :ref:`MappableConcept`, which 1.3.0 leaves unchanged, but not :ref:`ConceptSet`.
 
 Supporting changes
