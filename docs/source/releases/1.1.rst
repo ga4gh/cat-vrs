@@ -8,7 +8,9 @@
 
 Version 1.1.1 is a **patch** release that modernizes the Cat-VRS build pipeline and
 advances its imported dependencies (:ref:`VRS <imported>` ``2.1.1`` and GKM Core
-``1.3.0``). No change alters which instances validate against a
+``1.3.0``). It also renames the Cat-VRS controlled vocabulary for relation and
+match-characteristic terms from ``ga4gh-gks-term`` to ``ga4gh-gkm-term``.
+No change alters which instances validate against a
 **trial use** :ref:`maturity <maturity-model>` class, and there are no additions or
 removals to the set of Cat-VRS product features.
 
@@ -24,10 +26,24 @@ modified without changing which instances validate:
   concrete subtypes that 1.1.0 listed by hand, and every subtype already required
   ``type``. :ref:`CategoricalVariant` ``constraints`` now references :ref:`Constraint`
   directly, which resolves to the same set.
-- :ref:`Canonical Allele <CanonicalAllele>` (and the **draft**
-  :ref:`Categorical CNV <CategoricalCnv>`) recipe now declares
-  ``unevaluatedProperties: false``. Both recipes already inherited closure from
+- The :ref:`Canonical Allele <CanonicalAllele>` and
+  :ref:`Protein Sequence Consequence <ProteinSequenceConsequence>` recipes (and the
+  **draft** :ref:`Categorical CNV <CategoricalCnv>`, :ref:`Gene Fusion <GeneFusion>`,
+  and :ref:`Function Variant <FunctionVariant>` recipes) now declare
+  ``unevaluatedProperties: false``. Every recipe already inherited closure from
   :ref:`CategoricalVariant`, so the set of valid instances is unchanged.
+- The Cat-VRS controlled vocabulary is renamed from ``ga4gh-gks-term`` to
+  ``ga4gh-gkm-term``, following the GKS to GKM rename
+  (`#263 <https://github.com/ga4gh/cat-vrs/pull/263>`_). This changes the ``system``
+  recommended for *relations* and *matchCharacteristic* terms (for example
+  ``ga4gh-gkm-term:allele-relation`` and ``ga4gh-gkm-term:location-match``) in the
+  :ref:`Defining Allele Constraint <DefiningAlleleConstraint>` and
+  :ref:`Defining Location Constraint <DefiningLocationConstraint>` guidance, in the
+  :ref:`Canonical Allele <CanonicalAllele>` recipe (and the **draft**
+  :ref:`Categorical CNV <CategoricalCnv>` recipe), and in the examples. The schemas
+  do not enforce the ``system`` of these terms, so the set of valid instances is
+  unchanged, but data written to the 1.1.0 guidance carries the earlier
+  ``ga4gh-gks-term`` value.
 
 Dependencies
 ############
