@@ -3,7 +3,7 @@
 Categorical Variant Criterion
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-A Categorical Variant Criterion is used as an element within a :ref:`Composite Categorical Variant <CompositeCategoricalVariant>` to assert that its subject :ref:`Categorical Variant <CategoricalVariant>` is present or absent.
+A Categorical Variant Criterion is used as an element within a :ref:`Composite Categorical Variant <CompositeCategoricalVariant>` to specify that its subject :ref:`Categorical Variant <CategoricalVariant>` is present or absent.
 
 Definition and Information Model
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -13,9 +13,11 @@ Definition and Information Model
 Examples
 @@@@@@@@
 
+Here, we hide the constraint and members elements. Please see :ref:`BCR::ABL1 and ABL1 p.T315I <CompositeEx1>` or other :ref:`Composite Categorical Variant examples <Examples>` for more details.
+
 .. literalinclude:: ../../../../examples/json/composite-ex1.json
   :language: json
-  :lines: 1-16
+  :lines: 7-12,22,59,60,106-109
 
 Implementation Guidance
 @@@@@@@@@@@@@@@@@@@@@@@
@@ -30,7 +32,7 @@ The *subject* attribute is required and must be a valid :ref:`Categorical Varian
 presence
 ########
 
-The *presence* attribute asserts whether the *subject* is required to be ``present`` or ``absent`` for the parent :ref:`Composite Categorical Variant <CompositeCategoricalVariant>` to be satisfied. Specifying the *subject* as ``absent`` is equivalent to adding a ``NOT`` qualifier.
+The *presence* attribute specifies whether the *subject* is required to be ``present`` or ``absent`` for the parent :ref:`Composite Categorical Variant <CompositeCategoricalVariant>` to be satisfied. Specifying the *subject* as ``absent`` is equivalent to adding a ``NOT`` qualifier.
 
 Either of the following **Name** values can be used to populate this attribute:
 
