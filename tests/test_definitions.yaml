@@ -49,6 +49,10 @@ tests:
     definition: CompositeCategoricalVariant
   - test_file: composite-ex6.yaml
     definition: CompositeCategoricalVariant
+  - test_file: compound-het-1.yaml
+    definition: CompositeCategoricalVariant
+  - test_file: compound-het-2.yaml
+    definition: CompositeCategoricalVariant
 
   # test that examples intended to satisfy Recipes validate appropriately
   - test_file: canonicalAllele-ex1.yaml
@@ -79,3 +83,7 @@ tests:
     definition: ProteinSequenceConsequence
   - test_file: proteinSequenceConsequence-ex2.yaml
     definition: ProteinSequenceConsequence
+  - test_file: compound-het-1.yaml
+    definition: CompoundHeterozygote
+  - test_file: compound-het-2.yaml
+    definition: CompoundHeterozygote

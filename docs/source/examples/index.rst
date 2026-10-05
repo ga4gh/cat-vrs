@@ -57,3 +57,8 @@ In addition, :ref:`BRAF V600 (annotated) <BrafV600Annotated>` and :ref:`TP53 Los
 - :ref:`KRAS and NRAS wild type <CompositeEx4>`
 - :ref:`TP53 wild type <CompositeEx5>`
 - :ref:`TP53 wild type and MDM2 amplification <CompositeEx6>`
+
+.. rubric:: Compound Heterozygotes
+
+- :ref:`NM_000094.4(COL7A1):c.[425A>G];[4333G>A] <CompoundHetEx1>`
+- :ref:`NM_003661.3:c.[1024A>G;1152T>G];[1164_1169delTTATAA] <CompoundHetEx2>`

@@ -73,6 +73,24 @@
             }
          ]
       },
+      "phaseRelation": {
+         "type": "string",
+         "description": "The phase relationship asserted to hold among the present elements of this composite. Only meaningful when `operator` is `AND`, since phase describes a relationship among co-occurring (present) elements.",
+         "oneOf": [
+            {
+               "const": "unknown",
+               "description": "Phase among the elements is not asserted."
+            },
+            {
+               "const": "cis",
+               "description": "All elements are asserted to occur on the same molecule. Well-defined for any number of elements."
+            },
+            {
+               "const": "trans",
+               "description": "The elements are asserted to occur on different molecules. Only well-defined for exactly two elements."
+            }
+         ]
+      },
       "mappings": {
          "type": "array",
          "ordered": false,

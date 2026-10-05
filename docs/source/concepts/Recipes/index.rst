@@ -18,6 +18,7 @@ shared with the community on the |catvrs_discussion| board.
 
    CanonicalAllele
    CategoricalCnv
+   CompoundHeterozygote
    FunctionVariant
    GeneFusion
    ProteinSequenceConsequence
@@ -35,6 +36,9 @@ shared with the community on the |catvrs_discussion| board.
    * - :ref:`Categorical CNV <CategoricalCnv>`
      - Copy number variants
      - :ref:`GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 <CategoricalCnvEx1>`
+   * - :ref:`Compound Heterozygote <CompoundHeterozygote>`
+     - Two different variant haplotypes of a gene in trans
+     - :ref:`NM_000094.4(COL7A1):c.[425A>G];[4333G>A] <CompoundHetEx1>`
    * - :ref:`Function Variant <FunctionVariant>`
      - Functional impact categories
      - :ref:`BRCA2 loss of function variants <FunctionVariantEx2>`

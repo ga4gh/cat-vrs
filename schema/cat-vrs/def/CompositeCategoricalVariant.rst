@@ -70,6 +70,11 @@ Some CompositeCategoricalVariant attributes are inherited from :ref:`gks-core:En
       - string
       - 1..1
       - Operator used to join the included elements.
+   *  - phaseRelation
+      -
+      - string
+      - 0..1
+      - The phase relationship asserted to hold among the present elements of this composite. Only meaningful when `operator` is `AND`, since phase describes a relationship among co-occurring (present) elements.
    *  - mappings
       -
                         .. raw:: html

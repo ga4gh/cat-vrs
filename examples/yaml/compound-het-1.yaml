@@ -1,0 +1,112 @@
+id: clinvar:4891237
+type: CompositeCategoricalVariant
+name: NM_000094.4(COL7A1):c.[425A>G];[4333G>A]
+description: >-
+  Compound heterozygous COL7A1 variants, with NM_000094.4(COL7A1):c.425A>G and
+  NM_000094.4(COL7A1):c.4333G>A occurring on different haplotypes (in trans).
+mappings:
+  - coding:
+      system: https://www.ncbi.nlm.nih.gov/clinvar
+      code: '4891237'
+      iris:
+        - https://www.ncbi.nlm.nih.gov/clinvar/variation/4891237
+    relation: exactMatch
+elements:
+  - type: CategoricalVariantCriterion
+    subject:
+      id: clinvar:29636
+      type: CategoricalVariant
+      name: NM_000094.4(COL7A1):c.425A>G (p.Lys142Arg)
+      aliases:
+        - COL7A1 c.425A>G
+        - COL7A1 p.K142R
+      constraints:
+        - type: DefiningAlleleConstraint
+          allele:
+            id: ga4gh:VA.sJZ-pHf37OUg8pYeFp38HYDdFHYCv27K
+            type: Allele
+            name: NM_000094.4:c.425A>G
+            description: VRS variation of NM_000094.4:c.425A>G, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+            digest: sJZ-pHf37OUg8pYeFp38HYDdFHYCv27K
+            expressions:
+              - syntax: hgvs.c
+                value: NM_000094.4:c.425A>G
+            location:
+              id: ga4gh:SL.L07nNNMGdKwfxy7vzvf4T9JMFXTYUJ2l
+              type: SequenceLocation
+              description: Nucleotide position c.425 of the COL7A1 MANE Select coding transcript (NM_000094.4).
+              digest: L07nNNMGdKwfxy7vzvf4T9JMFXTYUJ2l
+              sequenceReference:
+                id: refseq:NM_000094.4
+                type: SequenceReference
+                name: NM_000094.4
+                description: COL7A1 MANE Select transcript.
+                aliases:
+                  - ensembl:ENST00000681320.1
+                  - ga4gh:SQ.aj38auSStCjNG-u2GQi0NJe9j5mgnGtb
+                refgetAccession: SQ.aj38auSStCjNG-u2GQi0NJe9j5mgnGtb
+                residueAlphabet: na
+              start: 487
+              end: 488
+              sequence: A
+            state:
+              type: LiteralSequenceExpression
+              sequence: G
+      mappings:
+        - coding:
+            system: https://www.ncbi.nlm.nih.gov/clinvar
+            code: '29636'
+            iris:
+              - https://www.ncbi.nlm.nih.gov/clinvar/variation/29636
+          relation: exactMatch
+    presence: present
+  - type: CategoricalVariantCriterion
+    subject:
+      id: clinvar:4891236
+      type: CategoricalVariant
+      name: NM_000094.4(COL7A1):c.4333G>A (p.Gly1445Arg)
+      aliases:
+        - COL7A1 c.4333G>A
+        - COL7A1 p.G1445R
+      constraints:
+        - type: DefiningAlleleConstraint
+          allele:
+            id: ga4gh:VA.7f4xecuv79YvZlqntKHbyflYbASw1v7x
+            type: Allele
+            name: NM_000094.4:c.4333G>A
+            description: VRS variation of NM_000094.4:c.4333G>A, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+            digest: 7f4xecuv79YvZlqntKHbyflYbASw1v7x
+            expressions:
+              - syntax: hgvs.c
+                value: NM_000094.4:c.4333G>A
+            location:
+              id: ga4gh:SL.wU8pbOtZCC6ph5kEqYSdK2Y6o8B7J0uP
+              type: SequenceLocation
+              description: Nucleotide position c.4333 of the COL7A1 MANE Select coding transcript (NM_000094.4).
+              digest: wU8pbOtZCC6ph5kEqYSdK2Y6o8B7J0uP
+              sequenceReference:
+                id: refseq:NM_000094.4
+                type: SequenceReference
+                name: NM_000094.4
+                description: COL7A1 MANE Select transcript.
+                aliases:
+                  - ensembl:ENST00000681320.1
+                  - ga4gh:SQ.aj38auSStCjNG-u2GQi0NJe9j5mgnGtb
+                refgetAccession: SQ.aj38auSStCjNG-u2GQi0NJe9j5mgnGtb
+                residueAlphabet: na
+              start: 4395
+              end: 4396
+              sequence: G
+            state:
+              type: LiteralSequenceExpression
+              sequence: A
+      mappings:
+        - coding:
+            system: https://www.ncbi.nlm.nih.gov/clinvar
+            code: '4891236'
+            iris:
+              - https://www.ncbi.nlm.nih.gov/clinvar/variation/4891236
+          relation: exactMatch
+    presence: present
+operator: AND
+phaseRelation: trans

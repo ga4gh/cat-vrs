@@ -1,0 +1,86 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/CompoundHeterozygote",
+   "title": "CompoundHeterozygote",
+   "type": "object",
+   "maturity": "draft",
+   "description": "A Composite Categorical Variant that joins exactly two elements with the AND operator and a trans phase relation, where each element represents one haplotype: either a present Categorical Variant Criterion, or a Composite Categorical Variant that joins two or more present Categorical Variant Criteria with the AND operator and a cis phase relation. The two elements MUST NOT represent the same haplotype.",
+   "allOf": [
+      {
+         "$ref": "/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/CompositeCategoricalVariant"
+      },
+      {
+         "properties": {
+            "operator": {
+               "const": "AND"
+            },
+            "phaseRelation": {
+               "const": "trans"
+            },
+            "elements": {
+               "description": "The elements array must contain exactly two haplotypes, each of which is either a present Categorical Variant Criterion or a Composite Categorical Variant of two or more present Categorical Variant Criteria in cis.",
+               "minItems": 2,
+               "maxItems": 2,
+               "items": {
+                  "oneOf": [
+                     {
+                        "allOf": [
+                           {
+                              "$ref": "/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/CategoricalVariantCriterion"
+                           },
+                           {
+                              "properties": {
+                                 "presence": {
+                                    "const": "present"
+                                 }
+                              }
+                           }
+                        ]
+                     },
+                     {
+                        "allOf": [
+                           {
+                              "$ref": "/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/CompositeCategoricalVariant"
+                           },
+                           {
+                              "properties": {
+                                 "operator": {
+                                    "const": "AND"
+                                 },
+                                 "phaseRelation": {
+                                    "const": "cis"
+                                 },
+                                 "elements": {
+                                    "minItems": 2,
+                                    "items": {
+                                       "allOf": [
+                                          {
+                                             "$ref": "/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/CategoricalVariantCriterion"
+                                          },
+                                          {
+                                             "properties": {
+                                                "presence": {
+                                                   "const": "present"
+                                                }
+                                             }
+                                          }
+                                       ]
+                                    }
+                                 }
+                              },
+                              "required": [
+                                 "phaseRelation"
+                              ]
+                           }
+                        ]
+                     }
+                  ]
+               }
+            }
+         },
+         "required": [
+            "phaseRelation"
+         ]
+      }
+   ]
+}

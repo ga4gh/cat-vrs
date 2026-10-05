@@ -1,0 +1,254 @@
+{
+  "id": "clinvar:1120175",
+  "type": "CompositeCategoricalVariant",
+  "name": "NM_003661.3:c.[1024A>G;1152T>G];[1164_1169delTTATAA]",
+  "description": "Compound heterozygous APOL1 G1/G2 genotype. The G1 haplotype, NM_003661.3(APOL1):c.[1024A>G;1152T>G], occurs in trans with the G2 deletion, NM_003661.3(APOL1):c.1164_1169del.",
+  "aliases": [
+    "APOL1 G1/G2"
+  ],
+  "mappings": [
+    {
+      "coding": {
+        "system": "https://www.ncbi.nlm.nih.gov/clinvar",
+        "code": "1120175",
+        "iris": [
+          "https://www.ncbi.nlm.nih.gov/clinvar/variation/1120175"
+        ]
+      },
+      "relation": "exactMatch"
+    }
+  ],
+  "elements": [
+    {
+      "id": "clinvar:6080",
+      "type": "CompositeCategoricalVariant",
+      "name": "NM_003661.3(APOL1):c.[1024A>G;1152T>G]",
+      "description": "APOL1 G1 haplotype, with NM_003661.3(APOL1):c.1024A>G and NM_003661.3(APOL1):c.1152T>G occurring on the same haplotype (in cis).",
+      "aliases": [
+        "APOL1 G1"
+      ],
+      "mappings": [
+        {
+          "coding": {
+            "system": "https://www.ncbi.nlm.nih.gov/clinvar",
+            "code": "6080",
+            "iris": [
+              "https://www.ncbi.nlm.nih.gov/clinvar/variation/6080"
+            ]
+          },
+          "relation": "exactMatch"
+        }
+      ],
+      "elements": [
+        {
+          "type": "CategoricalVariantCriterion",
+          "subject": {
+            "id": "clinvar:277678",
+            "type": "CategoricalVariant",
+            "name": "NM_003661.4(APOL1):c.1024A>G (p.Ser342Gly)",
+            "aliases": [
+              "APOL1 c.1024A>G",
+              "APOL1 p.S342G"
+            ],
+            "constraints": [
+              {
+                "type": "DefiningAlleleConstraint",
+                "allele": {
+                  "id": "ga4gh:VA._jujps7MGckf1UUNmrkYZHqiaqSqCzfV",
+                  "type": "Allele",
+                  "name": "NM_003661.3:c.1024A>G",
+                  "description": "VRS variation of NM_003661.3:c.1024A>G, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).",
+                  "digest": "_jujps7MGckf1UUNmrkYZHqiaqSqCzfV",
+                  "expressions": [
+                    {
+                      "syntax": "hgvs.c",
+                      "value": "NM_003661.3:c.1024A>G"
+                    }
+                  ],
+                  "location": {
+                    "id": "ga4gh:SL.B3HO_EPiiPxEEd3J32DOALDpBrGGv76q",
+                    "type": "SequenceLocation",
+                    "description": "Nucleotide position c.1024 of the APOL1 coding transcript NM_003661.3.",
+                    "digest": "B3HO_EPiiPxEEd3J32DOALDpBrGGv76q",
+                    "sequenceReference": {
+                      "id": "refseq:NM_003661.3",
+                      "type": "SequenceReference",
+                      "name": "NM_003661.3",
+                      "description": "APOL1 transcript variant 1.",
+                      "aliases": [
+                        "ga4gh:SQ.yttK6Pgo9fq0xeXS-j4ZELeb-q-f1LfM"
+                      ],
+                      "refgetAccession": "SQ.yttK6Pgo9fq0xeXS-j4ZELeb-q-f1LfM",
+                      "residueAlphabet": "na"
+                    },
+                    "start": 1191,
+                    "end": 1192,
+                    "sequence": "A"
+                  },
+                  "state": {
+                    "type": "LiteralSequenceExpression",
+                    "sequence": "G"
+                  }
+                }
+              }
+            ],
+            "mappings": [
+              {
+                "coding": {
+                  "system": "https://www.ncbi.nlm.nih.gov/clinvar",
+                  "code": "277678",
+                  "iris": [
+                    "https://www.ncbi.nlm.nih.gov/clinvar/variation/277678"
+                  ]
+                },
+                "relation": "exactMatch"
+              }
+            ]
+          },
+          "presence": "present"
+        },
+        {
+          "type": "CategoricalVariantCriterion",
+          "subject": {
+            "id": "clinvar:127198",
+            "type": "CategoricalVariant",
+            "name": "NM_003661.4(APOL1):c.1152T>G (p.Ile384Met)",
+            "aliases": [
+              "APOL1 c.1152T>G",
+              "APOL1 p.I384M"
+            ],
+            "constraints": [
+              {
+                "type": "DefiningAlleleConstraint",
+                "allele": {
+                  "id": "ga4gh:VA.gDTrHpLD3XFRg6MhhmjkMIVRuExf8P8j",
+                  "type": "Allele",
+                  "name": "NM_003661.3:c.1152T>G",
+                  "description": "VRS variation of NM_003661.3:c.1152T>G, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).",
+                  "digest": "gDTrHpLD3XFRg6MhhmjkMIVRuExf8P8j",
+                  "expressions": [
+                    {
+                      "syntax": "hgvs.c",
+                      "value": "NM_003661.3:c.1152T>G"
+                    }
+                  ],
+                  "location": {
+                    "id": "ga4gh:SL.WvDUGDx9mcsvMeIS9cm-6ytd6JYq2Duu",
+                    "type": "SequenceLocation",
+                    "description": "Nucleotide position c.1152 of the APOL1 coding transcript NM_003661.3.",
+                    "digest": "WvDUGDx9mcsvMeIS9cm-6ytd6JYq2Duu",
+                    "sequenceReference": {
+                      "id": "refseq:NM_003661.3",
+                      "type": "SequenceReference",
+                      "name": "NM_003661.3",
+                      "description": "APOL1 transcript variant 1.",
+                      "aliases": [
+                        "ga4gh:SQ.yttK6Pgo9fq0xeXS-j4ZELeb-q-f1LfM"
+                      ],
+                      "refgetAccession": "SQ.yttK6Pgo9fq0xeXS-j4ZELeb-q-f1LfM",
+                      "residueAlphabet": "na"
+                    },
+                    "start": 1319,
+                    "end": 1320,
+                    "sequence": "T"
+                  },
+                  "state": {
+                    "type": "LiteralSequenceExpression",
+                    "sequence": "G"
+                  }
+                }
+              }
+            ],
+            "mappings": [
+              {
+                "coding": {
+                  "system": "https://www.ncbi.nlm.nih.gov/clinvar",
+                  "code": "127198",
+                  "iris": [
+                    "https://www.ncbi.nlm.nih.gov/clinvar/variation/127198"
+                  ]
+                },
+                "relation": "exactMatch"
+              }
+            ]
+          },
+          "presence": "present"
+        }
+      ],
+      "operator": "AND",
+      "phaseRelation": "cis"
+    },
+    {
+      "type": "CategoricalVariantCriterion",
+      "subject": {
+        "id": "clinvar:6081",
+        "type": "CategoricalVariant",
+        "name": "NM_003661.4(APOL1):c.1164_1169del (p.Asn388_Tyr389del)",
+        "aliases": [
+          "APOL1 G2",
+          "APOL1 c.1164_1169del",
+          "APOL1 p.N388_Y389del"
+        ],
+        "constraints": [
+          {
+            "type": "DefiningAlleleConstraint",
+            "allele": {
+              "id": "ga4gh:VA.bMMaIdZUCBDGPcmY06RsdZWzFPz-zAO7",
+              "type": "Allele",
+              "name": "NM_003661.3:c.1164_1169del",
+              "description": "VRS variation of NM_003661.3:c.1164_1169del, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).",
+              "digest": "bMMaIdZUCBDGPcmY06RsdZWzFPz-zAO7",
+              "expressions": [
+                {
+                  "syntax": "hgvs.c",
+                  "value": "NM_003661.3:c.1164_1169del"
+                }
+              ],
+              "location": {
+                "id": "ga4gh:SL.JhIQVU6N4GOEr3D5b-88v4sykvoiGvck",
+                "type": "SequenceLocation",
+                "description": "The fully justified repeat region containing c.1164_1169 of the APOL1 coding transcript NM_003661.3.",
+                "digest": "JhIQVU6N4GOEr3D5b-88v4sykvoiGvck",
+                "sequenceReference": {
+                  "id": "refseq:NM_003661.3",
+                  "type": "SequenceReference",
+                  "name": "NM_003661.3",
+                  "description": "APOL1 transcript variant 1.",
+                  "aliases": [
+                    "ga4gh:SQ.yttK6Pgo9fq0xeXS-j4ZELeb-q-f1LfM"
+                  ],
+                  "refgetAccession": "SQ.yttK6Pgo9fq0xeXS-j4ZELeb-q-f1LfM",
+                  "residueAlphabet": "na"
+                },
+                "start": 1327,
+                "end": 1337,
+                "sequence": "ATAATTATAA"
+              },
+              "state": {
+                "type": "ReferenceLengthExpression",
+                "length": 4,
+                "sequence": "ATAA",
+                "repeatSubunitLength": 6
+              }
+            }
+          }
+        ],
+        "mappings": [
+          {
+            "coding": {
+              "system": "https://www.ncbi.nlm.nih.gov/clinvar",
+              "code": "6081",
+              "iris": [
+                "https://www.ncbi.nlm.nih.gov/clinvar/variation/6081"
+              ]
+            },
+            "relation": "exactMatch"
+          }
+        ]
+      },
+      "presence": "present"
+    }
+  ],
+  "operator": "AND",
+  "phaseRelation": "trans"
+}
