@@ -53,6 +53,10 @@ tests:
     definition: CompositeCategoricalVariant
   - test_file: compound-het-2.yaml
     definition: CompositeCategoricalVariant
+  - test_file: star-allele-1.yaml
+    definition: CompositeCategoricalVariant
+  - test_file: diplotype-1.yaml
+    definition: CompositeCategoricalVariant
 
   # test that examples intended to satisfy Recipes validate appropriately
   - test_file: canonicalAllele-ex1.yaml
@@ -87,3 +91,7 @@ tests:
     definition: CompoundHeterozygote
   - test_file: compound-het-2.yaml
     definition: CompoundHeterozygote
+  - test_file: star-allele-1.yaml
+    definition: StarAllele
+  - test_file: diplotype-1.yaml
+    definition: Diplotype

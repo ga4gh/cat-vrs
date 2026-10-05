@@ -62,3 +62,8 @@ In addition, :ref:`BRAF V600 (annotated) <BrafV600Annotated>` and :ref:`TP53 Los
 
 - :ref:`NM_000094.4(COL7A1):c.[425A>G];[4333G>A] <CompoundHetEx1>`
 - :ref:`NM_003661.3:c.[1024A>G;1152T>G];[1164_1169delTTATAA] <CompoundHetEx2>`
+
+.. rubric:: Star Alleles and Diplotypes
+
+- :ref:`CYP2C9*2 <StarAlleleEx1>`
+- :ref:`CYP2C19*1/*17 <DiplotypeEx1>`
