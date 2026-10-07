@@ -17,7 +17,7 @@ CYP2C19\*1/\*17
 
 Each of its two elements satisfies the :ref:`Star Allele <StarAllele>` Recipe.
 
-.. rubric:: :ref:`Constraints`
+.. rubric:: :ref:`Constraints <Constraint>`
 
 This :ref:`CompositeCategoricalVariant` utilizes the following Constraints:
 

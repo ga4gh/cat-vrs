@@ -1,0 +1,50 @@
+.. _imported:
+
+Imported Classes & Data Types
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+The following classes and data types are used by Cat-VRS but maintained by either the `VRS subgroup <https://vrs.ga4gh.org>`_ or across the `GKS Genomic Knowledge Model core data classes <https://github.com/ga4gh/gkm-core>`_.
+
+VRS
+!!!
+
+.. toctree::
+   :titlesonly:
+
+   Adjacency
+   Allele
+   CisPhasedBlock
+   CopyNumberChange
+   CopyNumberCount
+   DerivativeMolecule
+   Expression
+   Ga4ghIdentifiableObject
+   Location
+   MolecularVariation
+   Range
+   RelativeAllele
+   RelativeSequenceLocation
+   residue
+   SequenceExpression
+   SequenceOffsetLocation
+   sequenceString
+   SystemicVariation
+   Terminus
+   TraversalBlock
+   Variation
+
+GKM Core
+!!!!!!!!
+
+.. toctree::
+   :titlesonly:
+
+   Coding
+   ConceptMapping
+   ConceptSet
+   Element
+   Entity
+   Extension
+   MappableConcept
+   code
+   iriReference

@@ -71,7 +71,7 @@ else:
 # -- Schema doc paths --------------------------------------------------------
 
 rst_epilog_fn = os.path.join(os.path.dirname(__file__), "rst_epilog")
-rst_epilog = open(rst_epilog_fn).read().format(release=release)
+rst_epilog = open(rst_epilog_fn).read().format(release=release, github_version=github_version)
 
 # -- General configuration ---------------------------------------------------
 

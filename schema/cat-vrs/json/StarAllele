@@ -1,13 +1,13 @@
 {
    "$schema": "https://json-schema.org/draft/2020-12/schema",
-   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/StarAllele",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/v1/json/StarAllele",
    "title": "StarAllele",
    "type": "object",
    "maturity": "draft",
    "description": "A Composite Categorical Variant that joins one or more present Categorical Variant Criteria with the AND operator and a cis phase relation, representing a haplotype of a single gene defined by those variants.",
    "allOf": [
       {
-         "$ref": "/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/CompositeCategoricalVariant"
+         "$ref": "/ga4gh/schema/cat-vrs/v1/json/CompositeCategoricalVariant"
       },
       {
          "properties": {
@@ -23,7 +23,7 @@
                "items": {
                   "allOf": [
                      {
-                        "$ref": "/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/json/CategoricalVariantCriterion"
+                        "$ref": "/ga4gh/schema/cat-vrs/v1/json/CategoricalVariantCriterion"
                      },
                      {
                         "properties": {
@@ -40,5 +40,6 @@
             "phaseRelation"
          ]
       }
-   ]
+   ],
+   "unevaluatedProperties": false
 }

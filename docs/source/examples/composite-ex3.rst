@@ -11,7 +11,7 @@ KIT p.D816V negative
 
 This example shows a single, negated Categorical Variant. For example, the US FDA has approved the therapy `imatinib <https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/021588s062lbl.pdf>`_ for the "treatment of patients with aggressive systemic mastocytosis without the D816V c-Kit mutation".
 
-.. rubric:: :ref:`Constraints`
+.. rubric:: :ref:`Constraints <Constraint>`
 
 This :ref:`CompositeCategoricalVariant` utilizes the following Constraints:
 

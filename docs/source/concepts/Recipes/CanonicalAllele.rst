@@ -30,7 +30,7 @@ Constraints
 
 Categorical Variants that are intended to represent Canonical Alleles must **only** contain the :ref:`Defining Allele Constraint <DefiningAlleleConstraint>`, with an ``Allele`` on a genomic :ref:`Sequence Reference <SequenceReference>` and the following **required** :ref:`codings <Coding>` specified as *relations*:
 
-.. include:: ../../_includes/_guidance_ga4gh_gks_term_warning.rst
+.. include:: ../../_includes/_guidance_ga4gh_gkm_term_warning.rst
 
 .. list-table::
     :header-rows: 1
@@ -40,7 +40,7 @@ Categorical Variants that are intended to represent Canonical Alleles must **onl
       - System
       - Rationale
     * - liftover_to
-      - ga4gh-gks-term:allele-relation:allele-relation
+      - ga4gh-gkm-term:allele-relation:allele-relation
       - To specify that VRS :ref:`Alleles <Allele>` that are listed as *members* may be a liftover of the Defining ``Allele``.
     * - transcribed_to
       - `http://www.sequenceontology.org <https://www.ebi.ac.uk/ols4/ontologies/so>`_
@@ -71,6 +71,6 @@ When modeling a Canonical Allele, *members* may be populated with VRS ``Allele``
 - An RNA (pre-mRNA) or mRNA ``Allele`` **transcribed from** the Defining Allele
 - A protein ``Allele`` that is a **translation of** the Defining Allele.
 
-As is the case with constructing VRS ``Allele`` objects for the Defining Allele, we recommend the `Variation Normalizer <https://variation-normalizer.readthedocs.io>`_, `vrs-python <https://github.com/ga4gh/vrs-python>`_, and `SeqRepo <https://github.com/biocommons/biocommons.seqrepo>`_ as resources for constructing VRS Allele objects. Likewise, we recommend populating both the *moleculeType* and *residueAlphabet* attributes of the :ref:`Sequence Reference <SequenceReference>` for any ``Allele`` listed as a member.
+As is the case with constructing VRS ``Allele`` objects for the Defining Allele, we recommend the `Variation Normalizer <https://variation-normalizer.readthedocs.io>`__, `vrs-python <https://github.com/ga4gh/vrs-python>`_, and `SeqRepo <https://github.com/biocommons/biocommons.seqrepo>`_ as resources for constructing VRS Allele objects. Likewise, we recommend populating both the *moleculeType* and *residueAlphabet* attributes of the :ref:`Sequence Reference <SequenceReference>` for any ``Allele`` listed as a member.
 
 .. include:: ../../_includes/_guidance_generate_sequence_location_box.rst

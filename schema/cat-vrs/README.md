@@ -24,7 +24,7 @@ We created an `examples-source.yaml` file, headed with the following metadata, a
       cat-vrs: ./cat-vrs-source.yaml
 
     namespaces:
-      gks.core: /ga4gh/schema/gks-core/1.0.0/json/
+      gkm.core: /ga4gh/schema/gkm-core/1.0.0/json/
       vrs: /ga4gh/schema/vrs/2.0.1/json/
 
     $defs:

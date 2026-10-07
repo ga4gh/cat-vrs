@@ -15,7 +15,7 @@ NM_003661.3:c.[1024A>G;1152T>G];[1164_1169delTTATAA]
 
 :ref:`Compound Heterozygote <CompoundHeterozygote>`
 
-.. rubric:: :ref:`Constraints`
+.. rubric:: :ref:`Constraints <Constraint>`
 
 This :ref:`CompositeCategoricalVariant` utilizes the following Constraints:
 

@@ -33,7 +33,7 @@
               "type": "MappableConcept",
               "primaryCoding": {
                 "code": "is_within",
-                "system": "ga4gh-gks-term:location-match"
+                "system": "ga4gh-gkm-term:location-match"
               }
             }
           }
@@ -70,7 +70,7 @@
               "type": "MappableConcept",
               "primaryCoding": {
                 "code": "is_within",
-                "system": "ga4gh-gks-term:location-match"
+                "system": "ga4gh-gkm-term:location-match"
               }
             }
           }
@@ -107,7 +107,7 @@
               "type": "MappableConcept",
               "primaryCoding": {
                 "code": "is_within",
-                "system": "ga4gh-gks-term:location-match"
+                "system": "ga4gh-gkm-term:location-match"
               }
             }
           }
@@ -144,7 +144,7 @@
               "type": "MappableConcept",
               "primaryCoding": {
                 "code": "is_within",
-                "system": "ga4gh-gks-term:location-match"
+                "system": "ga4gh-gkm-term:location-match"
               }
             }
           }
@@ -181,7 +181,7 @@
               "type": "MappableConcept",
               "primaryCoding": {
                 "code": "is_within",
-                "system": "ga4gh-gks-term:location-match"
+                "system": "ga4gh-gkm-term:location-match"
               }
             }
           }
@@ -218,7 +218,7 @@
               "type": "MappableConcept",
               "primaryCoding": {
                 "code": "is_within",
-                "system": "ga4gh-gks-term:location-match"
+                "system": "ga4gh-gkm-term:location-match"
               }
             }
           }
@@ -255,7 +255,7 @@
               "type": "MappableConcept",
               "primaryCoding": {
                 "code": "is_within",
-                "system": "ga4gh-gks-term:location-match"
+                "system": "ga4gh-gkm-term:location-match"
               }
             }
           }
@@ -292,7 +292,7 @@
               "type": "MappableConcept",
               "primaryCoding": {
                 "code": "is_within",
-                "system": "ga4gh-gks-term:location-match"
+                "system": "ga4gh-gkm-term:location-match"
               }
             }
           }
@@ -329,7 +329,7 @@
               "type": "MappableConcept",
               "primaryCoding": {
                 "code": "is_within",
-                "system": "ga4gh-gks-term:location-match"
+                "system": "ga4gh-gkm-term:location-match"
               }
             }
           }
@@ -366,7 +366,7 @@
               "type": "MappableConcept",
               "primaryCoding": {
                 "code": "is_within",
-                "system": "ga4gh-gks-term:location-match"
+                "system": "ga4gh-gkm-term:location-match"
               }
             }
           }
@@ -403,7 +403,7 @@
               "type": "MappableConcept",
               "primaryCoding": {
                 "code": "is_within",
-                "system": "ga4gh-gks-term:location-match"
+                "system": "ga4gh-gkm-term:location-match"
               }
             }
           }
@@ -440,7 +440,7 @@
               "type": "MappableConcept",
               "primaryCoding": {
                 "code": "is_within",
-                "system": "ga4gh-gks-term:location-match"
+                "system": "ga4gh-gkm-term:location-match"
               }
             }
           }

@@ -11,6 +11,6 @@ Cat-VRS development consists of two parts, with two interconnected GitHub repos:
 
 For most new users, the best way to get started with Cat-VRS is to explore the `Cat-VRS Python notebooks <https://github.com/ga4gh/cat-vrs-python/tree/main/notebooks/>`_.
 
-Next, many users may want to start prototyping their own software with some sample data. There are a number of example datasets available in both YAML and JSON in the `Cat-VRS examples <https://github.com/ga4gh/cat-vrs/tree/main/examples>`_.
+Next, many users may want to start prototyping their own software with some sample data. There are a number of example datasets available in both YAML and JSON in the |catvrs_examples|.
 
 Finally, Cat-VRS is an open-source initiative, driven by community involvement, and we welcome participation from individuals at all levels of skill and experience!  To learn about ways to join working group meetings, participate in monthly virtual hackathons, or simply follow the latest news on Cat-VRS, visit :ref:`Getting Involved <getting-involved>` for more details.

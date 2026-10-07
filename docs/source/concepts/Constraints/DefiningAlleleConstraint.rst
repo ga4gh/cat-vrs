@@ -74,7 +74,7 @@ represented using a term from a defined ontology. Relation terms describe how *m
 
 The following relation terms are some to consider using with this Constraint, depending on the ``Allele`` molecule type represented and which :ref:`Recipe(s) <Recipes>` you intend to satisfy:
 
-.. include:: ../../_includes/_guidance_ga4gh_gks_term_warning.rst
+.. include:: ../../_includes/_guidance_ga4gh_gkm_term_warning.rst
 
 genomic
 =======
@@ -87,9 +87,9 @@ If you are modeling a genomic ``Allele``, members may be **the Defining Allele i
 
    * - :ref:`Coding <Coding>`
      - How the ``member`` relates to the Categorical Variant
-   * - ga4gh-gks-term:allele-relation:self
+   * - ga4gh-gkm-term:allele-relation:self
      - Use when the ``member`` is the Defining ``Allele`` itself.
-   * - ga4gh-gks-term:allele-relation:liftover_to
+   * - ga4gh-gkm-term:allele-relation:liftover_to
      - Use when the ``member`` represents the equivalent genomic DNA variant on another reference genome.
    * - `SO:transcribed_from <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523transcribed_from>`_
      - Use when the ``member`` is an RNA (pre-mRNA) or mRNA ``Allele`` that is transcribed from the Defining Allele.
@@ -109,9 +109,9 @@ If you are modeling an RNA (pre-mRNA) ``Allele``, members may be **the Defining 
 
    * - :ref:`Coding <Coding>`
      - How the ``member`` relates to the Categorical Variant
-   * - ga4gh-gks-term:allele-relation:self
+   * - ga4gh-gkm-term:allele-relation:self
      - Use when the ``member`` is the Defining ``Allele`` itself.
-   * - ga4gh-gks-term:allele-relation:projection_of
+   * - ga4gh-gkm-term:allele-relation:projection_of
      - Use when the ``member`` represents the equivalent RNA (pre-mRNA) variant on another RNA (pre-mRNA) transcript.
    * - `SO:transcribed_to <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523transcribed_to>`_
      - Use when the ``member`` is a genomic ``Allele`` that is transcribed to the Defining Allele.
@@ -131,9 +131,9 @@ If you are modeling an mRNA ``Allele``, members may be **the Defining Allele its
 
    * - :ref:`Coding <Coding>`
      - How the ``member`` relates to the Categorical Variant
-   * - ga4gh-gks-term:allele-relation:self
+   * - ga4gh-gkm-term:allele-relation:self
      - Use when the ``member`` is the Defining ``Allele`` itself.
-   * - ga4gh-gks-term:allele-relation:projection_of
+   * - ga4gh-gkm-term:allele-relation:projection_of
      - Use when the ``member`` represents the equivalent mRNA variant on another mRNA transcript.
    * - `SO:transcribed_to <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523transcribed_to>`_
      - Use when the ``member`` is a genomic ``Allele`` that is transcribed to the Defining Allele.
@@ -153,9 +153,9 @@ If you are modeling a protein sequence ``Allele``, members may be **the Defining
 
    * - :ref:`Coding <Coding>`
      - How the ``member`` relates to the Defining Allele
-   * - ga4gh-gks-term:allele-relation:self
+   * - ga4gh-gkm-term:allele-relation:self
      - Use when the ``member`` is the Defining ``Allele`` itself.
-   * - ga4gh-gks-term:allele-relation:projection_of
+   * - ga4gh-gkm-term:allele-relation:projection_of
      - Use when the ``member`` represents the equivalent protein sequence variant on another protein isoform.
    * - `SO:transcribed_to <https://www.ebi.ac.uk/ols4/ontologies/so/properties/http%253A%252F%252Fpurl.obolibrary.org%252Fobo%252Fso%2523transcribed_to>`_
      - Use when the ``member`` is a genomic ``Allele`` that is transcribed to the Defining Allele.

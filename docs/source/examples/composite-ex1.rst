@@ -11,7 +11,7 @@ BCR::ABL1 and ABL1 p.T315I
 
 The European Medicines Agency has approved `ponatinib <https://www.ema.europa.eu/en/medicines/human/EPAR/iclusig>`_ for the treatment of patients with acute lymphoblastic leukaemia with both the *BCR*::*ABL1* fusion and *ABL1* p.T315I.
 
-.. rubric:: :ref:`Constraints`
+.. rubric:: :ref:`Constraints <Constraint>`
 
 This :ref:`CompositeCategoricalVariant` utilizes the following Constraints:
 

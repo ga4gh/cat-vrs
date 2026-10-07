@@ -1,6 +1,7 @@
-.. warning:: This data class is at a **draft** maturity level and may \
-    change significantly in future releases. Maturity \
-    levels are described in the :ref:`maturity-model`.
+.. admonition:: Draft
+    :class: warning
+
+    May change significantly in future releases. See |maturity-model|.
 
 **Computational Definition**
 
@@ -8,7 +9,7 @@ A logical expression that combines one or more Categorical Variant Criteria, or 
 
 **Information Model**
 
-Some CompositeCategoricalVariant attributes are inherited from :ref:`gks-core:Entity`.
+Some CompositeCategoricalVariant attributes are inherited from :ref:`gkm-core:Entity`.
 
 .. list-table::
    :class: clean-wrap
@@ -26,6 +27,11 @@ Some CompositeCategoricalVariant attributes are inherited from :ref:`gks-core:En
       - string
       - 0..1
       - The 'logical' identifier of the Entity in the system of record, e.g. a UUID.  This 'id' is unique within a given system, but may or may not be globally unique outside the system. It is used within a system to reference an object from another.
+   *  - type
+      -
+      - string
+      - 1..1
+      - MUST be "CompositeCategoricalVariant"
    *  - name
       -
       - string
@@ -52,11 +58,6 @@ Some CompositeCategoricalVariant attributes are inherited from :ref:`gks-core:En
       - :ref:`Extension`
       - 0..m
       - A list of extensions to the Entity, that allow for capture of information not directly supported by elements defined in the model.
-   *  - type
-      -
-      - string
-      - 1..1
-      - MUST be "CompositeCategoricalVariant"
    *  - elements
       -
                         .. raw:: html
@@ -83,3 +84,7 @@ Some CompositeCategoricalVariant attributes are inherited from :ref:`gks-core:En
       - :ref:`ConceptMapping`
       - 0..m
       - A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation.
+
+**Inherits:** :ref:`Entity`
+
+**Used in:** :ref:`CompoundHeterozygote`, :ref:`Diplotype`, :ref:`StarAllele`

@@ -11,7 +11,7 @@ TP53 wild type
 
 Illustrating the use of :ref:`Composite Categorical Variants<CompositeCategoricalVariant>` to show a single element wild type relationship was requested at the `2026-07-21 <https://github.com/ga4gh/cat-vrs/discussions/241#discussioncomment-17716783>`_ Cat-VRS community meeting.
 
-.. rubric:: :ref:`Constraints`
+.. rubric:: :ref:`Constraints <Constraint>`
 
 This :ref:`CompositeCategoricalVariant` utilizes the following Constraints:
 

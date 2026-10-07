@@ -15,7 +15,7 @@ CYP2C9*2
 
 :ref:`Star Allele <StarAllele>`
 
-.. rubric:: :ref:`Constraints`
+.. rubric:: :ref:`Constraints <Constraint>`
 
 This :ref:`CompositeCategoricalVariant` utilizes the following Constraints:
 

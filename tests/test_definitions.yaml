@@ -95,3 +95,7 @@ tests:
     definition: StarAllele
   - test_file: diplotype-1.yaml
     definition: Diplotype
+
+  # A Categorical Variant modeled without constraints (see describedVariant-ex1 docs page)
+  - test_file: describedVariant-ex1.yaml
+    definition: CategoricalVariant

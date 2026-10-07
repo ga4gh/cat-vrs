@@ -11,7 +11,7 @@ KRAS and NRAS wild type
 
 The US Food and Drug Administration defines RAS wild type for eligibility criteria of `panitumumab <https://www.accessdata.fda.gov/drugsatfda_docs/label/2021/125147s210lbl.pdf>`_ as "the absence of a RAS mutation in exon 2 (codons 12 and 13), exon 3 (codons 59 and 61), and exon 4 (codons 117 and 146) of both KRAS and NRAS".
 
-.. rubric:: :ref:`Constraints`
+.. rubric:: :ref:`Constraints <Constraint>`
 
 This :ref:`CompositeCategoricalVariant` utilizes the following Constraints:
 

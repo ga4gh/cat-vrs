@@ -1,16 +1,16 @@
 $schema: "https://json-schema.org/draft/2020-12/schema"
-$id: "https://w3id.org/ga4gh/schema/cat-vrs/1.1.0-ballot.2026-07.1/cat-vrs-source.yaml"
+$id: "https://w3id.org/ga4gh/schema/cat-vrs/v1/cat-vrs-source.yaml"
 title: GA4GH-Cat-VRS-Definitions
 type: object
 strict: true
 
 imports:
-  gks-core: ../gks-core/gks-core-source.yaml
+  gkm-core: ../gkm-core/gkm-core-source.yaml
   vrs: ../vrs/vrs-source.yaml
 
 namespaces:
-  gks.core: /ga4gh/schema/gks-core/1.2.0-ballot.2026-07.1/json/
-  vrs: /ga4gh/schema/vrs/2.1.0-ballot.2026-07.1/json/
+  gkm.core: /ga4gh/schema/gkm-core/1.3.0/json/
+  vrs: /ga4gh/schema/vrs/2.1.1/json/
 
 $defs:
 
@@ -19,15 +19,13 @@ $defs:
   # =============================================================================
 
   CategoricalVariant:
-    type: object
-    inherits: gks-core:Entity
+    inherits: gkm-core:Entity
     maturity: trial use
     description: >-
       A representation of a categorically-defined domain for variation, in which individual
       Constraintual variation instances may be members of the domain.
     properties:
       type:
-        extends: type
         const: CategoricalVariant
         default: CategoricalVariant
         description: 'MUST be "CategoricalVariant"'
@@ -40,7 +38,7 @@ $defs:
         items:
           oneOf:
             - $refCurie: vrs:Variation
-            - $refCurie: gks.core:iriReference
+            - $refCurie: gkm.core:iriReference
       constraints:
         type: array
         ordered: false
@@ -50,7 +48,7 @@ $defs:
         type: array
         ordered: false
         items:
-          $refCurie: gks.core:ConceptMapping
+          $refCurie: gkm.core:ConceptMapping
         description: >-
           A list of mappings to concepts in terminologies or code systems. Each mapping should
           include a coding and a relation.
@@ -64,46 +62,40 @@ $defs:
 
   Constraint:
     maturity: trial use
+    abstract: true
+    sealed: true
     description: >-
       Constraints are used to construct an intensional semantics of categorical variant types.
-    oneOf:
-      - $ref: "#/$defs/DefiningAlleleConstraint"
-      - $ref: "#/$defs/DefiningLocationConstraint"
-      - $ref: "#/$defs/AdjacencyConstraint"
-      - $ref: "#/$defs/FeatureContextConstraint"
-      - $ref: "#/$defs/CopyCountConstraint"
-      - $ref: "#/$defs/CopyChangeConstraint"
-      - $ref: "#/$defs/FunctionConstraint"
-    heritableProperties:
+    properties:
       type:
         type: string
         description: >-
           MUST be set to the name of the concrete Constraint subtype.
-    heritableRequired:
+    required:
       - type
+    discriminator:
+      propertyName: type
 
   DefiningAlleleConstraint:
     maturity: trial use
-    type: object
     inherits: Constraint
     description: >-
       The defining allele and its associated relationships that are congruent
       with member variants.
     properties:
       type:
-        extends: type
         const: DefiningAlleleConstraint
         default: DefiningAlleleConstraint
         description: 'MUST be "DefiningAlleleConstraint"'
       allele:
         oneOf:
           - $refCurie: vrs:Allele
-          - $refCurie: gks.core:iriReference
+          - $refCurie: gkm.core:iriReference
       relations:
         type: array
         ordered: false
         items:
-          $refCurie: gks.core:MappableConcept
+          $refCurie: gkm.core:MappableConcept
         description: >-
           Defined relationships from which members relate to the defining allele.
     required:
@@ -111,30 +103,28 @@ $defs:
 
   DefiningLocationConstraint:
     maturity: trial use
-    type: object
     inherits: Constraint
     description: >-
       The defining location and its associated relationships that are congruent
       with member locations.
     properties:
       type:
-        extends: type
         const: DefiningLocationConstraint
         default: DefiningLocationConstraint
         description: 'MUST be "DefiningLocationConstraint"'
       location:
         oneOf:
           - $refCurie: vrs:SequenceLocation
-          - $refCurie: gks.core:iriReference
+          - $refCurie: gkm.core:iriReference
       relations:
         type: array
         ordered: false
         items:
-          $refCurie: gks.core:MappableConcept
+          $refCurie: gkm.core:MappableConcept
         description: >-
           Defined relationships from which members relate to the defining location.
       matchCharacteristic:
-        $refCurie: gks.core:MappableConcept
+        $refCurie: gkm.core:MappableConcept
         description: >-
           A characteristic of the location that is used to match the defining location to member locations.
     required:
@@ -144,13 +134,11 @@ $defs:
   CopyCountConstraint:
     maturity: trial use
     inherits: Constraint
-    type: object
     description:
       The exact or range of copies that members of this categorical
       variant must satisfy.
     properties:
       type:
-        extends: type
         const: CopyCountConstraint
         default: CopyCountConstraint
         description: 'MUST be "CopyCountConstraint"'
@@ -167,13 +155,11 @@ $defs:
   CopyChangeConstraint:
     maturity: draft
     inherits: Constraint
-    type: object
     description: >-
       The relative assessment of the change in copies that members of
       this categorical variant satisfy.
     properties:
       type:
-        extends: type
         const: CopyChangeConstraint
         default: CopyChangeConstraint
         description: 'MUST be "CopyChangeConstraint"'
@@ -196,31 +182,27 @@ $defs:
 
   FeatureContextConstraint:
     maturity: draft
-    type: object
     inherits: Constraint
     description: >-
       The feature that members of this categorical variant are associated with.
     properties:
       type:
-        extends: type
         const: FeatureContextConstraint
         default: FeatureContextConstraint
         description: 'MUST be "FeatureContextConstraint"'
       featureContext:
         description: A feature identifier.
-        $refCurie: gks.core:MappableConcept
+        $refCurie: gkm.core:MappableConcept
     required:
       - featureContext
 
   FunctionConstraint:
     maturity: draft
-    type: object
     inherits: Constraint
     description: >-
       A classification of the protein functional consequence that characterizes members of this categorical variant.
     properties:
       type:
-        extends: type
         const: FunctionConstraint
         default: FunctionConstraint
         description: 'MUST be "FunctionConstraint"'
@@ -228,7 +210,7 @@ $defs:
         description: >
           The functional consequence of members of this categorical variant, as defined by an external ontology. We recommend using one of the defined terms from `The Sequence Ontology
           <http://www.sequenceontology.org>`_. See Implementation Guidance for more details.
-        $refCurie: gks.core:MappableConcept
+        $refCurie: gkm.core:MappableConcept
       description:
         description: >-
           A free-text description of the function change.
@@ -238,13 +220,11 @@ $defs:
 
   AdjacencyConstraint:
     maturity: draft
-    type: object
     inherits: Constraint
     description: >-
       Components that define a molecular adjacency of congruent elements.
     properties:
       type:
-        extends: type
         const: AdjacencyConstraint
         default: AdjacencyConstraint
         description: 'MUST be "AdjacencyConstraint"'
@@ -257,8 +237,8 @@ $defs:
         ordered: true
         items:
           oneOf:
-            - $refCurie: gks.core:iriReference
-            - $refCurie: gks.core:MappableConcept
+            - $refCurie: gkm.core:iriReference
+            - $refCurie: gkm.core:MappableConcept
             - $refCurie: vrs:Location
             - $refCurie: vrs:Terminus
             - $ref: "#/$defs/UnspecifiedElement"
@@ -286,13 +266,11 @@ $defs:
 
   FunctionalDomain:
     maturity: draft
-    inherits: gks-core:Entity
-    type: object
+    inherits: gkm-core:Entity
     # Protected class of: AdjacencyConstraint
     description: A sequence location whose presence or absence is used to define an adjacency.
     properties:
       type:
-        extends: type
         const: FunctionalDomain
         default: FunctionalDomain
         description: Must be "FunctionalDomain"
@@ -312,32 +290,27 @@ $defs:
 
   UnspecifiedElement:
     maturity: draft
-    inherits: gks-core:Entity
-    type: object
+    inherits: gkm-core:Entity
     # Protected class of: AdjacencyConstraint
     description: Represents an unspecified element that satisfies the described adjacency.
     properties:
       type:
-        extends: type
         const: UnspecifiedElement
         default: UnspecifiedElement
         description: Must be "UnspecifiedElement"
-    additionalProperties: false
 
   # =============================================================================
   # Composite Categorical Variants
   # =============================================================================
 
   CompositeCategoricalVariant:
-    type: object
-    inherits: gks-core:Entity
+    inherits: gkm-core:Entity
     maturity: draft
     description: >-
       A logical expression that combines one or more Categorical Variant Criteria, or
       nested Composite Categorical Variants, using a boolean operator.
     properties:
       type:
-        extends: type
         const: CompositeCategoricalVariant
         default: CompositeCategoricalVariant
         description: 'MUST be "CompositeCategoricalVariant"'
@@ -381,7 +354,7 @@ $defs:
         type: array
         ordered: false
         items:
-          $refCurie: gks.core:ConceptMapping
+          $refCurie: gkm.core:ConceptMapping
         description: >-
           A list of mappings to concepts in terminologies or code systems. Each mapping should
           include a coding and a relation.
@@ -390,11 +363,9 @@ $defs:
       - name
       - elements
       - operator
-    additionalProperties: false
 
   CategoricalVariantCriterion:
-    type: object
-    inherits: gks-core:Element
+    inherits: gkm-core:Element
     maturity: draft
     description: An assertion that a Categorical Variant is required to be present or absent.
     properties:
@@ -418,4 +389,3 @@ $defs:
       - type
       - subject
       - presence
-    additionalProperties: false

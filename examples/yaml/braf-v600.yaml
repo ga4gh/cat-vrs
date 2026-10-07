@@ -49,7 +49,7 @@ constraints:
       type: MappableConcept
       primaryCoding:
         code: is_within
-        system: ga4gh-gks-term:location-match
+        system: ga4gh-gkm-term:location-match
 mappings:
   - coding:
       system: https://www.ncbi.nlm.nih.gov/clinvar/variation/

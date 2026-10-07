@@ -11,7 +11,7 @@ Hormone Receptor Positive
 
 Many breast cancers are described as Hormone Receptor Positive, meaning that the tumor cells in a tissue express either the estrogen receptor, progesterone receptor, or both.
 
-.. rubric:: :ref:`Constraints`
+.. rubric:: :ref:`Constraints <Constraint>`
 
 This :ref:`CompositeCategoricalVariant` utilizes the following Constraints:
 

@@ -1,6 +1,7 @@
-.. warning:: This data class is at a **draft** maturity level and may \
-    change significantly in future releases. Maturity \
-    levels are described in the :ref:`maturity-model`.
+.. admonition:: Draft
+    :class: warning
+
+    May change significantly in future releases. See |maturity-model|.
 
 **Computational Definition**
 
@@ -8,7 +9,7 @@ An assertion that a Categorical Variant is required to be present or absent.
 
 **Information Model**
 
-Some CategoricalVariantCriterion attributes are inherited from :ref:`gks-core:Element`.
+Some CategoricalVariantCriterion attributes are inherited from :ref:`gkm-core:Element`.
 
 .. list-table::
    :class: clean-wrap
@@ -49,3 +50,7 @@ Some CategoricalVariantCriterion attributes are inherited from :ref:`gks-core:El
       - string
       - 1..1
       - Whether the subject Categorical Variant is asserted to be present or absent.
+
+**Inherits:** :ref:`Element`
+
+**Used in:** :ref:`CompositeCategoricalVariant`, :ref:`CompoundHeterozygote`, :ref:`Diplotype`, :ref:`StarAllele`
