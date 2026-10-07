@@ -18,9 +18,12 @@ shared with the community on the |catvrs_discussion| board.
 
    CanonicalAllele
    CategoricalCnv
+   CompoundHeterozygote
+   Diplotype
    FunctionVariant
    GeneFusion
    ProteinSequenceConsequence
+   StarAllele
 
 .. list-table::
    :header-rows: 1
@@ -35,6 +38,12 @@ shared with the community on the |catvrs_discussion| board.
    * - :ref:`Categorical CNV <CategoricalCnv>`
      - Copy number variants
      - :ref:`GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 <CategoricalCnvEx1>`
+   * - :ref:`Compound Heterozygote <CompoundHeterozygote>`
+     - Two different variant haplotypes of a gene in trans
+     - :ref:`NM_000094.4(COL7A1):c.[425A>G];[4333G>A] <CompoundHetEx1>`
+   * - :ref:`Diplotype <Diplotype>`
+     - Two star alleles of a gene in trans
+     - :ref:`CYP2C19*1/*17 <DiplotypeEx1>`
    * - :ref:`Function Variant <FunctionVariant>`
      - Functional impact categories
      - :ref:`BRCA2 loss of function variants <FunctionVariantEx2>`
@@ -44,3 +53,6 @@ shared with the community on the |catvrs_discussion| board.
    * - :ref:`Protein Sequence Consequence <ProteinSequenceConsequence>`
      - Amino acid sequence variants
      - :ref:`NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter) <ProteinSequenceConsequenceEx2>`
+   * - :ref:`Star Allele <StarAllele>`
+     - Haplotypes defined by variants in cis
+     - :ref:`CYP2C9*2 <StarAlleleEx1>`

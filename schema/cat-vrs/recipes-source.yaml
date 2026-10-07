@@ -156,3 +156,120 @@ $defs:
                           - $refCurie: cat-vrs:UnspecifiedElement
         required:
           - constraints
+
+  CompoundHeterozygote:
+    maturity: draft
+    description: >-
+      A Composite Categorical Variant that joins exactly two elements with the AND
+      operator and a trans phase relation, where each element represents one haplotype:
+      either a present Categorical Variant Criterion, or a Composite Categorical Variant
+      that joins two or more present Categorical Variant Criteria with the AND operator
+      and a cis phase relation. The two elements MUST NOT represent the same haplotype.
+    allOf:
+      - $refCurie: cat-vrs:CompositeCategoricalVariant
+      - properties:
+          operator:
+            const: AND
+          phaseRelation:
+            const: trans
+          elements:
+            description: >-
+              The elements array must contain exactly two haplotypes, each of which
+              is either a present Categorical Variant Criterion or a Composite
+              Categorical Variant of two or more present Categorical Variant Criteria
+              in cis.
+            minItems: 2
+            maxItems: 2
+            items:
+              oneOf:
+                - allOf:
+                    - $refCurie: cat-vrs:CategoricalVariantCriterion
+                    - properties:
+                        presence:
+                          const: present
+                - allOf:
+                    - $refCurie: cat-vrs:CompositeCategoricalVariant
+                    - properties:
+                        operator:
+                          const: AND
+                        phaseRelation:
+                          const: cis
+                        elements:
+                          minItems: 2
+                          items:
+                            allOf:
+                              - $refCurie: cat-vrs:CategoricalVariantCriterion
+                              - properties:
+                                  presence:
+                                    const: present
+                      required:
+                        - phaseRelation
+        required:
+          - phaseRelation
+
+  StarAllele:
+    maturity: draft
+    description: >-
+      A Composite Categorical Variant that joins one or more present Categorical
+      Variant Criteria with the AND operator and a cis phase relation, representing a
+      haplotype of a single gene defined by those variants.
+    allOf:
+      - $refCurie: cat-vrs:CompositeCategoricalVariant
+      - properties:
+          operator:
+            const: AND
+          phaseRelation:
+            const: cis
+          elements:
+            description: >-
+              The elements array must contain one or more present Categorical Variant
+              Criteria, each defining a variant of the haplotype.
+            minItems: 1
+            items:
+              allOf:
+                - $refCurie: cat-vrs:CategoricalVariantCriterion
+                - properties:
+                    presence:
+                      const: present
+        required:
+          - phaseRelation
+
+  Diplotype:
+    maturity: draft
+    description: >-
+      A Composite Categorical Variant that joins exactly two Star Alleles of the same
+      gene with the AND operator and a trans phase relation.
+    allOf:
+      - $refCurie: cat-vrs:CompositeCategoricalVariant
+      - properties:
+          operator:
+            const: AND
+          phaseRelation:
+            const: trans
+          elements:
+            description: >-
+              The elements array must contain exactly two Star Alleles, each a
+              Composite Categorical Variant of one or more present Categorical
+              Variant Criteria in cis.
+            minItems: 2
+            maxItems: 2
+            items:
+              allOf:
+                - $refCurie: cat-vrs:CompositeCategoricalVariant
+                - properties:
+                    operator:
+                      const: AND
+                    phaseRelation:
+                      const: cis
+                    elements:
+                      minItems: 1
+                      items:
+                        allOf:
+                          - $refCurie: cat-vrs:CategoricalVariantCriterion
+                          - properties:
+                              presence:
+                                const: present
+                  required:
+                    - phaseRelation
+        required:
+          - phaseRelation

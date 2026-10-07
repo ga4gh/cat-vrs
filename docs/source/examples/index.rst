@@ -48,3 +48,22 @@ In addition, :ref:`BRAF V600 (annotated) <BrafV600Annotated>` and :ref:`TP53 Los
        | :ref:`PIK3CA p.R38H <FunctionVariantEx3>`
    * - None
      - :ref:`t(2;15)(q23.1;q25.3) <DescribedVariantEx1>`
+
+.. rubric:: Composite Categorical Variants
+
+- :ref:`BCR::ABL1 and ABL1 p.T315I <CompositeEx1>`
+- :ref:`Hormone Receptor Positive <CompositeEx2>`
+- :ref:`KIT p.D817V negative <CompositeEx3>`
+- :ref:`KRAS and NRAS wild type <CompositeEx4>`
+- :ref:`TP53 wild type <CompositeEx5>`
+- :ref:`TP53 wild type and MDM2 amplification <CompositeEx6>`
+
+.. rubric:: Compound Heterozygotes
+
+- :ref:`NM_000094.4(COL7A1):c.[425A>G];[4333G>A] <CompoundHetEx1>`
+- :ref:`NM_003661.3:c.[1024A>G;1152T>G];[1164_1169delTTATAA] <CompoundHetEx2>`
+
+.. rubric:: Star Alleles and Diplotypes
+
+- :ref:`CYP2C9*2 <StarAlleleEx1>`
+- :ref:`CYP2C19*1/*17 <DiplotypeEx1>`

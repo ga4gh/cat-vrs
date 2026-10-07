@@ -25,6 +25,16 @@ h3 {
     text-decoration: underline;
 }
 
+p.rubric.rubric-h2 {
+    color: #2980B9;
+    border-top: #2980B9 thin solid;
+    border-bottom: #2980B9 thin solid;
+    padding: 0.3em 0;
+    font-size: 140%;
+    font-family: "Roboto Slab", ff-tisa-web-pro, Georgia, Arial, sans-serif;
+    margin-bottom: 24px;
+}
+
 div.figure {
     border: thin solid #6ab0de;
     padding: 2px;

@@ -1,0 +1,69 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/v1/json/Diplotype",
+   "title": "Diplotype",
+   "type": "object",
+   "maturity": "draft",
+   "description": "A Composite Categorical Variant that joins exactly two Star Alleles of the same gene with the AND operator and a trans phase relation.",
+   "allOf": [
+      {
+         "$ref": "/ga4gh/schema/cat-vrs/v1/json/CompositeCategoricalVariant"
+      },
+      {
+         "properties": {
+            "operator": {
+               "const": "AND"
+            },
+            "phaseRelation": {
+               "const": "trans"
+            },
+            "elements": {
+               "description": "The elements array must contain exactly two Star Alleles, each a Composite Categorical Variant of one or more present Categorical Variant Criteria in cis.",
+               "minItems": 2,
+               "maxItems": 2,
+               "items": {
+                  "allOf": [
+                     {
+                        "$ref": "/ga4gh/schema/cat-vrs/v1/json/CompositeCategoricalVariant"
+                     },
+                     {
+                        "properties": {
+                           "operator": {
+                              "const": "AND"
+                           },
+                           "phaseRelation": {
+                              "const": "cis"
+                           },
+                           "elements": {
+                              "minItems": 1,
+                              "items": {
+                                 "allOf": [
+                                    {
+                                       "$ref": "/ga4gh/schema/cat-vrs/v1/json/CategoricalVariantCriterion"
+                                    },
+                                    {
+                                       "properties": {
+                                          "presence": {
+                                             "const": "present"
+                                          }
+                                       }
+                                    }
+                                 ]
+                              }
+                           }
+                        },
+                        "required": [
+                           "phaseRelation"
+                        ]
+                     }
+                  ]
+               }
+            }
+         },
+         "required": [
+            "phaseRelation"
+         ]
+      }
+   ],
+   "unevaluatedProperties": false
+}

@@ -48,4 +48,4 @@ Some ConceptMapping attributes are inherited from :ref:`Element`.
 
 **Inherits:** :ref:`Element`
 
-**Used in:** :ref:`CategoricalVariant`, :ref:`MappableConcept`
+**Used in:** :ref:`CategoricalVariant`, :ref:`CompositeCategoricalVariant`, :ref:`MappableConcept`

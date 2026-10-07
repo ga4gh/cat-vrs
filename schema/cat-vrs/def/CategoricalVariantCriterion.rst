@@ -1,16 +1,15 @@
-.. admonition:: Trial Use
-    :class: note
+.. admonition:: Draft
+    :class: warning
 
-    May change in future releases. See |maturity-model|.
-
-**Abstract Class** — not instantiated directly; concrete subclasses inherit its attributes.
+    May change significantly in future releases. See |maturity-model|.
 
 **Computational Definition**
 
-The base definition for all identifiable data objects.
+An assertion that a Categorical Variant is required to be present or absent.
 
 **Information Model**
 
+Some CategoricalVariantCriterion attributes are inherited from :ref:`gkm-core:Element`.
 
 .. list-table::
    :class: clean-wrap
@@ -36,5 +35,22 @@ The base definition for all identifiable data objects.
       - :ref:`Extension`
       - 0..m
       - A list of extensions to the Entity, that allow for capture of information not directly supported by elements defined in the model.
+   *  - type
+      -
+      - string
+      - 1..1
+      - MUST be "CategoricalVariantCriterion"
+   *  - subject
+      -
+      - :ref:`CategoricalVariant`
+      - 1..1
+      - The subject Categorical Variant of this criterion.
+   *  - presence
+      -
+      - string
+      - 1..1
+      - Whether the subject Categorical Variant is asserted to be present or absent.
 
-**Subclasses:** :ref:`CategoricalVariantCriterion`, :ref:`Coding`, :ref:`ConceptMapping`, :ref:`Expression`, :ref:`Extension`
+**Inherits:** :ref:`Element`
+
+**Used in:** :ref:`CompositeCategoricalVariant`, :ref:`CompoundHeterozygote`, :ref:`Diplotype`, :ref:`StarAllele`

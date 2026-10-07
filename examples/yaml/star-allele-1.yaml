@@ -1,0 +1,65 @@
+id: catvrs.star.example:1
+type: CompositeCategoricalVariant
+name: CYP2C9*2
+description: >-
+  The CYP2C9*2 star allele, a CYP2C9 haplotype defined by its core variant
+  NM_000771.4(CYP2C9):c.430C>T (p.Arg144Cys).
+mappings:
+  - coding:
+      system: https://www.ncbi.nlm.nih.gov/clinvar
+      code: '177709'
+      iris:
+        - https://www.ncbi.nlm.nih.gov/clinvar/variation/177709
+    relation: closeMatch
+elements:
+  - type: CategoricalVariantCriterion
+    subject:
+      id: clinvar:8409
+      type: CategoricalVariant
+      name: NM_000771.4(CYP2C9):c.430C>T (p.Arg144Cys)
+      aliases:
+        - CYP2C9 c.430C>T
+        - CYP2C9 p.R144C
+        - rs1799853
+      constraints:
+        - type: DefiningAlleleConstraint
+          allele:
+            id: ga4gh:VA.AV_NH8ZeYPLiT326fZbQWjx7Aw71HJMN
+            type: Allele
+            name: NM_000771.4:c.430C>T
+            description: VRS variation of NM_000771.4:c.430C>T, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+            digest: AV_NH8ZeYPLiT326fZbQWjx7Aw71HJMN
+            expressions:
+              - syntax: hgvs.c
+                value: NM_000771.4:c.430C>T
+            location:
+              id: ga4gh:SL.P1ETpDKM_anRlztNoGOhEiJBKRzs6tMF
+              type: SequenceLocation
+              description: Nucleotide position c.430 of the CYP2C9 MANE Select coding transcript (NM_000771.4).
+              digest: P1ETpDKM_anRlztNoGOhEiJBKRzs6tMF
+              sequenceReference:
+                id: refseq:NM_000771.4
+                type: SequenceReference
+                name: NM_000771.4
+                description: CYP2C9 MANE Select transcript.
+                aliases:
+                  - ensembl:ENST00000260682.8
+                  - ga4gh:SQ.1qX5fUMr3EHw3nL40T4uya209xYS7wUM
+                refgetAccession: SQ.1qX5fUMr3EHw3nL40T4uya209xYS7wUM
+                residueAlphabet: na
+              start: 454
+              end: 455
+              sequence: C
+            state:
+              type: LiteralSequenceExpression
+              sequence: T
+      mappings:
+        - coding:
+            system: https://www.ncbi.nlm.nih.gov/clinvar
+            code: '8409'
+            iris:
+              - https://www.ncbi.nlm.nih.gov/clinvar/variation/8409
+          relation: exactMatch
+    presence: present
+operator: AND
+phaseRelation: cis

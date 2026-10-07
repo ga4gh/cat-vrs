@@ -60,4 +60,4 @@ Anything that exists, has existed, or will exist.
       - 0..m
       - A list of extensions to the Entity, that allow for capture of information not directly supported by elements defined in the model.
 
-**Subclasses:** :ref:`CategoricalVariant`, :ref:`ConceptSet`, :ref:`FunctionalDomain`, :ref:`Ga4ghIdentifiableObject`, :ref:`MappableConcept`, :ref:`SequenceExpression`, :ref:`SequenceOffsetLocation`, :ref:`SequenceReference`, :ref:`TraversalBlock`, :ref:`UnspecifiedElement`
+**Subclasses:** :ref:`CategoricalVariant`, :ref:`CompositeCategoricalVariant`, :ref:`ConceptSet`, :ref:`FunctionalDomain`, :ref:`Ga4ghIdentifiableObject`, :ref:`MappableConcept`, :ref:`SequenceExpression`, :ref:`SequenceOffsetLocation`, :ref:`SequenceReference`, :ref:`TraversalBlock`, :ref:`UnspecifiedElement`

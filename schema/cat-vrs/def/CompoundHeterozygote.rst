@@ -1,15 +1,14 @@
-.. admonition:: Trial Use
-    :class: note
+.. admonition:: Draft
+    :class: warning
 
-    May change in future releases. See |maturity-model|.
+    May change significantly in future releases. See |maturity-model|.
 
 **Computational Definition**
 
-A representation of a categorically-defined domain for variation, in which individual Constraintual variation instances may be members of the domain.
+A Composite Categorical Variant that joins exactly two elements with the AND operator and a trans phase relation, where each element represents one haplotype: either a present Categorical Variant Criterion, or a Composite Categorical Variant that joins two or more present Categorical Variant Criteria with the AND operator and a cis phase relation. The two elements MUST NOT represent the same haplotype.
 
 **Information Model**
 
-Some CategoricalVariant attributes are inherited from :ref:`gkm-core:Entity`.
 
 .. list-table::
    :class: clean-wrap
@@ -31,7 +30,7 @@ Some CategoricalVariant attributes are inherited from :ref:`gkm-core:Entity`.
       -
       - string
       - 1..1
-      - MUST be "CategoricalVariant"
+      - MUST be "CompositeCategoricalVariant"
    *  - name
       -
       - string
@@ -58,22 +57,24 @@ Some CategoricalVariant attributes are inherited from :ref:`gkm-core:Entity`.
       - :ref:`Extension`
       - 0..m
       - A list of extensions to the Entity, that allow for capture of information not directly supported by elements defined in the model.
-   *  - members
+   *  - elements
       -
                         .. raw:: html
 
                             <span style="background-color: #B2DFEE; color: black; padding: 2px 6px; border: 1px solid black; border-radius: 3px; font-weight: bold; display: inline-block; margin-bottom: 5px;" title="Unordered">&#8942;</span>
-      - :ref:`Variation` | :ref:`iriReference`
-      - 0..m
-      - A non-exhaustive list of VRS Variations that satisfy the constraints of this categorical variant.
-   *  - constraints
+      - :ref:`CategoricalVariantCriterion` | :ref:`CompositeCategoricalVariant`
+      - 2..2
+      - The elements array must contain exactly two haplotypes, each of which is either a present Categorical Variant Criterion or a Composite Categorical Variant of two or more present Categorical Variant Criteria in cis.
+   *  - operator
       -
-                        .. raw:: html
-
-                            <span style="background-color: #B2DFEE; color: black; padding: 2px 6px; border: 1px solid black; border-radius: 3px; font-weight: bold; display: inline-block; margin-bottom: 5px;" title="Unordered">&#8942;</span>
-      - :ref:`Constraint`
-      - 0..m
+      - string
+      - 1..1
+      - Operator used to join the included elements.
+   *  - phaseRelation
       -
+      - string
+      - 1..1
+      - The phase relationship asserted to hold among the present elements of this composite. Only meaningful when `operator` is `AND`, since phase describes a relationship among co-occurring (present) elements.
    *  - mappings
       -
                         .. raw:: html
@@ -83,6 +84,4 @@ Some CategoricalVariant attributes are inherited from :ref:`gkm-core:Entity`.
       - 0..m
       - A list of mappings to concepts in terminologies or code systems. Each mapping should include a coding and a relation.
 
-**Inherits:** :ref:`Entity`
-
-**Used in:** :ref:`CanonicalAllele`, :ref:`CategoricalCnv`, :ref:`CategoricalVariantCriterion`, :ref:`FunctionVariant`, :ref:`GeneFusion`, :ref:`ProteinSequenceConsequence`
+**Composes:** :ref:`CompositeCategoricalVariant`

@@ -1,0 +1,123 @@
+id: clinvar:633878
+type: CompositeCategoricalVariant
+name: CYP2C19*1/*17
+description: >-
+  The CYP2C19*1/*17 diplotype, with the CYP2C19*1 and CYP2C19*17 star alleles
+  occurring on different haplotypes (in trans).
+mappings:
+  - coding:
+      system: https://www.ncbi.nlm.nih.gov/clinvar
+      code: '633878'
+      iris:
+        - https://www.ncbi.nlm.nih.gov/clinvar/variation/633878
+    relation: exactMatch
+elements:
+  - type: CompositeCategoricalVariant
+    name: CYP2C19*1
+    description: >-
+      The CYP2C19*1 reference star allele, represented by the reference base at the
+      CYP2C19*17 defining position, NC_000010.11:g.94761900=.
+    elements:
+      - type: CategoricalVariantCriterion
+        subject:
+          id: catvrs.star.example:cyp2c19-g.94761900=
+          type: CategoricalVariant
+          name: NC_000010.11:g.94761900=
+          description: The reference base at the CYP2C19*17 defining position.
+          constraints:
+            - type: DefiningAlleleConstraint
+              allele:
+                id: ga4gh:VA.8jkue3uCaemjfUh0UsJSPu584LevdPh-
+                type: Allele
+                name: NC_000010.11:g.94761900=
+                description: VRS variation of NC_000010.11:g.94761900=, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+                digest: 8jkue3uCaemjfUh0UsJSPu584LevdPh-
+                expressions:
+                  - syntax: hgvs.g
+                    value: NC_000010.11:g.94761900=
+                location:
+                  id: ga4gh:SL.-7-R4aHmbRlPuMMLLbqbDmb5Cg5BmX6z
+                  type: SequenceLocation
+                  description: Position g.94761900 of GRCh38 chromosome 10, which is c.-806 of the CYP2C19 MANE Select transcript (NM_000769.4).
+                  digest: -7-R4aHmbRlPuMMLLbqbDmb5Cg5BmX6z
+                  sequenceReference:
+                    id: refseq:NC_000010.11
+                    type: SequenceReference
+                    name: NC_000010.11
+                    description: GRCh38 chromosome 10.
+                    aliases:
+                      - GRCh38:chr10
+                      - ga4gh:SQ.ss8r_wB0-b9r44TQTMmVTI92884QvBiB
+                    refgetAccession: SQ.ss8r_wB0-b9r44TQTMmVTI92884QvBiB
+                    residueAlphabet: na
+                  start: 94761899
+                  end: 94761900
+                  sequence: C
+                state:
+                  type: ReferenceLengthExpression
+                  length: 1
+                  sequence: C
+                  repeatSubunitLength: 1
+        presence: present
+    operator: AND
+    phaseRelation: cis
+  - type: CompositeCategoricalVariant
+    name: CYP2C19*17
+    description: >-
+      The CYP2C19*17 star allele, defined by its core variant
+      NC_000010.11:g.94761900C>T (NM_000769.4:c.-806C>T).
+    elements:
+      - type: CategoricalVariantCriterion
+        subject:
+          id: clinvar:39357
+          type: CategoricalVariant
+          name: NM_000769.1(CYP2C19):c.-806C>T
+          aliases:
+            - CYP2C19 c.-806C>T
+            - rs12248560
+          constraints:
+            - type: DefiningAlleleConstraint
+              allele:
+                id: ga4gh:VA.RlXXwE5pVzp55mXIzs88seQ35Hz03Oa3
+                type: Allele
+                name: NC_000010.11:g.94761900C>T
+                description: VRS variation of NC_000010.11:g.94761900C>T, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+                digest: RlXXwE5pVzp55mXIzs88seQ35Hz03Oa3
+                expressions:
+                  - syntax: hgvs.g
+                    value: NC_000010.11:g.94761900C>T
+                  - syntax: hgvs.c
+                    value: NM_000769.4:c.-806C>T
+                location:
+                  id: ga4gh:SL.-7-R4aHmbRlPuMMLLbqbDmb5Cg5BmX6z
+                  type: SequenceLocation
+                  description: Position g.94761900 of GRCh38 chromosome 10, which is c.-806 of the CYP2C19 MANE Select transcript (NM_000769.4).
+                  digest: -7-R4aHmbRlPuMMLLbqbDmb5Cg5BmX6z
+                  sequenceReference:
+                    id: refseq:NC_000010.11
+                    type: SequenceReference
+                    name: NC_000010.11
+                    description: GRCh38 chromosome 10.
+                    aliases:
+                      - GRCh38:chr10
+                      - ga4gh:SQ.ss8r_wB0-b9r44TQTMmVTI92884QvBiB
+                    refgetAccession: SQ.ss8r_wB0-b9r44TQTMmVTI92884QvBiB
+                    residueAlphabet: na
+                  start: 94761899
+                  end: 94761900
+                  sequence: C
+                state:
+                  type: LiteralSequenceExpression
+                  sequence: T
+          mappings:
+            - coding:
+                system: https://www.ncbi.nlm.nih.gov/clinvar
+                code: '39357'
+                iris:
+                  - https://www.ncbi.nlm.nih.gov/clinvar/variation/39357
+              relation: exactMatch
+        presence: present
+    operator: AND
+    phaseRelation: cis
+operator: AND
+phaseRelation: trans
