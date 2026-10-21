@@ -1,0 +1,29 @@
+{
+   "$schema": "https://json-schema.org/draft/2020-12/schema",
+   "$id": "https://w3id.org/ga4gh/schema/cat-vrs/v1/json/OncogenicityConstraint",
+   "title": "OncogenicityConstraint",
+   "type": "object",
+   "maturity": "draft",
+   "description": "A classification of the somatic pathogenicity (\"oncogenicity\") that characterizes members of this Categorical Variant.",
+   "properties": {
+      "type": {
+         "type": "string",
+         "description": "MUST be \"OncogenicityConstraint\"",
+         "const": "OncogenicityConstraint",
+         "default": "OncogenicityConstraint"
+      },
+      "classification": {
+         "description": "The oncogenicity classification of members of this categorical variant, as defined by an external terminology. We recommend using one of the defined terms from the [NCI Thesaurus](https://evsexplore.semantics.cancer.gov/evsexplore/welcome?terminology=ncit). See Implementation Guidance for more details. ",
+         "$ref": "/ga4gh/schema/gkm-core/1.3.0/json/MappableConcept"
+      },
+      "description": {
+         "description": "A free-text description of the oncogenicity classification.",
+         "type": "string"
+      }
+   },
+   "required": [
+      "classification",
+      "type"
+   ],
+   "additionalProperties": false
+}

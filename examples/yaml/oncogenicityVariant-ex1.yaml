@@ -1,0 +1,33 @@
+id: example:kras-oncogenic
+type: CategoricalVariant
+name: KRAS oncogenic variants
+description: An example categorical variant that uses FeatureContextConstraint and OncogenicityConstraint.
+constraints:
+  - type: FeatureContextConstraint
+    featureContext:
+      type: MappableConcept
+      id: hgnc:6407
+      conceptType: Gene
+      name: KRAS
+      primaryCoding:
+        id: hgnc:6407
+        name: KRAS
+        system: https://www.genenames.org
+        code: HGNC:6407
+        iris:
+          - https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:6407
+  - type: OncogenicityConstraint
+    classification:
+      type: MappableConcept
+      id: ncit:C183322
+      conceptType: Oncogenicity Classification
+      name: Oncogenic
+      primaryCoding:
+        id: ncit:C183322
+        name: Oncogenic
+        system: https://evsexplore.semantics.cancer.gov
+        systemVersion: 26.08e
+        code: C183322
+        iris:
+          - https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C183322
+    description: Oncogenicity classification described as oncogenic using the NCI Thesaurus.

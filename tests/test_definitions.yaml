@@ -28,6 +28,14 @@ tests:
     definition: CategoricalVariant
   - test_file: functionVariant-ex3.yaml
     definition: CategoricalVariant
+  - test_file: oncogenicityPathogenicityVariant-ex1.yaml
+    definition: CategoricalVariant
+  - test_file: oncogenicityVariant-ex1.yaml
+    definition: CategoricalVariant
+  - test_file: pathogenicityVariant-ex1.yaml
+    definition: CategoricalVariant
+  - test_file: pathogenicityVariant-ex2.yaml
+    definition: CategoricalVariant
   - test_file: proteinSequenceConsequence-ex1.yaml
     definition: CategoricalVariant
   - test_file: proteinSequenceConsequence-ex2.yaml
