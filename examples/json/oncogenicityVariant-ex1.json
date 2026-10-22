@@ -1,5 +1,5 @@
 {
-  "id": "example:kras-oncogenic",
+  "id": "civic.mpid:332",
   "type": "CategoricalVariant",
   "name": "KRAS oncogenic variants",
   "description": "An example categorical variant that uses FeatureContextConstraint and OncogenicityConstraint.",

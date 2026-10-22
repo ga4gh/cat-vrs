@@ -9,7 +9,7 @@ KRAS oncogenic variants
 
 .. rubric:: Source
 
-This is a constructed example and is not sourced from an external knowledgebase.
+`CIViC molecular profile 332: KRAS Mutation <https://civicdb.org/molecular-profiles/332/summary>`_
 
 .. rubric:: :ref:`Recipes` that this example satisfies
 
@@ -17,7 +17,7 @@ This example does not satisfy any :ref:`Recipes`.
 
 .. rubric:: Properties
 
-``id``: example:kras-oncogenic
+``id``: civic.mpid:332
   A placeholder identifier for this constructed example.
 
 ``type``: CategoricalVariant
