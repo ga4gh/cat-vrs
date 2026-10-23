@@ -28,5 +28,3 @@ The *classification* attribute is required and is a :ref:`MappableConcept`, mean
      - `C168802 <https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168802>`_
      - A genetic variant that is known to not contribute to the development of a disease.
      - Variant Benign
-
-The *name* of the :ref:`MappableConcept` should be set to the recommended name above (e.g., ``Variant of Uncertain Significance``), with the alternative labels included as *aliases*. The *name* of the *primaryCoding* should be set to the NCIt preferred name.
