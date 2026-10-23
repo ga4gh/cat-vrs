@@ -218,6 +218,50 @@ $defs:
     required:
       - functionConsequence
 
+  OncogenicityConstraint:
+    maturity: draft
+    inherits: Constraint
+    description: >-
+      A classification of the somatic pathogenicity ("oncogenicity") that characterizes members of this Categorical Variant.
+    properties:
+      type:
+        const: OncogenicityConstraint
+        default: OncogenicityConstraint
+        description: 'MUST be "OncogenicityConstraint"'
+      classification:
+        description: >
+          The oncogenicity classification of members of this categorical variant, as defined by an external terminology. We recommend using one of the defined terms from the `NCI Thesaurus
+          <https://evsexplore.semantics.cancer.gov/evsexplore/welcome?terminology=ncit>`_. See Implementation Guidance for more details.
+        $refCurie: gkm.core:MappableConcept
+      description:
+        description: >-
+          A free-text description of the oncogenicity classification.
+        type: string
+    required:
+      - classification
+
+  PathogenicityConstraint:
+    maturity: draft
+    inherits: Constraint
+    description: >-
+      A classification of the pathogenicity that characterizes members of this Categorical Variant.
+    properties:
+      type:
+        const: PathogenicityConstraint
+        default: PathogenicityConstraint
+        description: 'MUST be "PathogenicityConstraint"'
+      classification:
+        description: >
+          The pathogenicity classification of members of this categorical variant, as defined by an external terminology. We recommend using one of the defined terms from the `NCI Thesaurus
+          <https://evsexplore.semantics.cancer.gov/evsexplore/welcome?terminology=ncit>`_. See Implementation Guidance for more details.
+        $refCurie: gkm.core:MappableConcept
+      description:
+        description: >-
+          A free-text description of the pathogenicity classification.
+        type: string
+    required:
+      - classification
+
   AdjacencyConstraint:
     maturity: draft
     inherits: Constraint

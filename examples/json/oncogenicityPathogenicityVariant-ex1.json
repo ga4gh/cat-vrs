@@ -1,0 +1,117 @@
+{
+  "id": "clinvar:12578",
+  "type": "CategoricalVariant",
+  "name": "NM_004985.5(KRAS):c.34G>T (p.Gly12Cys)",
+  "description": "An example categorical variant that models NM_004985.5(KRAS):c.34G>T (p.Gly12Cys) from ClinVar, using DefiningAlleleConstraint, PathogenicityConstraint, and OncogenicityConstraint.",
+  "aliases": [
+    "NM_004985.5:c.34G>T",
+    "NP_004976.2:p.Gly12Cys",
+    "NP_004976.2:p.G12C",
+    "KRAS G12C",
+    "NC_000012.12:g.25245351C>A",
+    "NC_000012.11:g.25398285C>A",
+    "NC_000012.12:25245350:C:A"
+  ],
+  "constraints": [
+    {
+      "type": "DefiningAlleleConstraint",
+      "allele": {
+        "id": "ga4gh:VA.CSBq6OFT044WRhnCobIxifFZaw3draAL",
+        "type": "Allele",
+        "name": "NM_004985.5:c.34G>T",
+        "description": "VRS Variation of NM_004985.5:c.34G>T, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).",
+        "digest": "CSBq6OFT044WRhnCobIxifFZaw3draAL",
+        "expressions": [
+          {
+            "syntax": "hgvs.c",
+            "value": "NM_004985.5:c.34G>T"
+          }
+        ],
+        "location": {
+          "id": "ga4gh:SL.mDRRCfPjKpD8T1eS8IKnMDesXbD3KvTv",
+          "description": "Coding DNA (cDNA) position 34 of the KRAS MANE Select coding transcript (refseq:NM_004985.5), corresponding to genomic position 25245351 on chromosome 12 (refseq:NC_000012.12, GRCh38).",
+          "extensions": [
+            {
+              "name": "GRCh38, 1-based, genomic position",
+              "value": "chr12:25245351",
+              "description": "Genomic position 25,245,351 on chromosome 12 (refseq:NC_000012.12, GRCh38)."
+            },
+            {
+              "name": "GRCh38, 1-based, inclusive interval notation",
+              "value": "chr12:25245351-25245351",
+              "description": "Genomic positions 25,245,351 to 25,245,351 on chromosome 12 (refseq:NC_000012.12, GRCh38)."
+            },
+            {
+              "name": "GRCh38, 0-based, half-open interval notation",
+              "value": "chr12:25245350-25245351",
+              "description": "Genomic positions 25,245,350 to 25,245,351 on chromosome 12 (refseq:NC_000012.12, GRCh38)."
+            }
+          ],
+          "type": "SequenceLocation",
+          "digest": "mDRRCfPjKpD8T1eS8IKnMDesXbD3KvTv",
+          "sequenceReference": {
+            "id": "refseq:NM_004985.5",
+            "name": "NM_004985.5",
+            "description": "The MANE Select (GRCh38) coding transcript for KRAS.",
+            "aliases": [
+              "ensembl:ENST00000311936.8",
+              "ga4gh:SQ.mV9x7yUE8hqh6UtCvnz8oC62CdAEpV4T"
+            ],
+            "type": "SequenceReference",
+            "refgetAccession": "SQ.mV9x7yUE8hqh6UtCvnz8oC62CdAEpV4T",
+            "residueAlphabet": "na"
+          },
+          "start": 223,
+          "end": 224,
+          "sequence": "G"
+        },
+        "state": {
+          "type": "LiteralSequenceExpression",
+          "sequence": "T"
+        }
+      }
+    },
+    {
+      "type": "PathogenicityConstraint",
+      "classification": {
+        "type": "MappableConcept",
+        "id": "ncit:C168800",
+        "conceptType": "Pathogenicity Classification",
+        "name": "Likely Pathogenic",
+        "aliases": [
+          "Likely Pathogenic Variant"
+        ],
+        "primaryCoding": {
+          "id": "ncit:C168800",
+          "name": "Likely Pathogenic Variant",
+          "system": "https://evsexplore.semantics.cancer.gov",
+          "systemVersion": "26.08e",
+          "code": "C168800",
+          "iris": [
+            "https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168800"
+          ]
+        }
+      },
+      "description": "Pathogenicity classification described as likely pathogenic using the NCI Thesaurus, per the ClinVar germline classification."
+    },
+    {
+      "type": "OncogenicityConstraint",
+      "classification": {
+        "type": "MappableConcept",
+        "id": "ncit:C229176",
+        "conceptType": "Oncogenicity Classification",
+        "name": "Oncogenic",
+        "primaryCoding": {
+          "id": "ncit:C229176",
+          "name": "Oncogenic Variant",
+          "system": "https://evsexplore.semantics.cancer.gov",
+          "code": "C229176",
+          "iris": [
+            "https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C229176"
+          ]
+        }
+      },
+      "description": "Oncogenicity classification described as oncogenic using the NCI Thesaurus, per the ClinVar somatic oncogenicity classification."
+    }
+  ]
+}

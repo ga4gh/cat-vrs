@@ -84,4 +84,4 @@ This class requires at least one of *name* or *primaryCoding*.
 
 **Inherits:** :ref:`Entity`
 
-**Used in:** :ref:`AdjacencyConstraint`, :ref:`ConceptSet`, :ref:`DefiningAlleleConstraint`, :ref:`DefiningLocationConstraint`, :ref:`FeatureContextConstraint`, :ref:`FunctionConstraint`, :ref:`GeneFusion`
+**Used in:** :ref:`AdjacencyConstraint`, :ref:`ConceptSet`, :ref:`DefiningAlleleConstraint`, :ref:`DefiningLocationConstraint`, :ref:`FeatureContextConstraint`, :ref:`FunctionConstraint`, :ref:`GeneFusion`, :ref:`OncogenicityConstraint`, :ref:`PathogenicityConstraint`
