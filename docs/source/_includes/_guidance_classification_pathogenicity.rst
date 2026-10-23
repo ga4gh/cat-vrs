@@ -2,7 +2,7 @@ The *classification* attribute is required and is a :ref:`MappableConcept`, mean
 
 .. list-table::
    :header-rows: 1
-   :widths: 18 22 12 30 18
+   :widths: 18 14 46 22
 
    * - Name
      - :ref:`Code <Coding>`
