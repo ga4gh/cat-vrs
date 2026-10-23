@@ -47,7 +47,7 @@ This example does not satisfy any :ref:`Recipes`.
   The ``classification`` is a :ref:`Mappable Concept <MappableConcept>` for Likely Pathogenic (ncit:C168800), with a primaryCoding linking to the NCI Thesaurus term Likely Pathogenic Variant. This reflects ClinVar's germline classification of this variant.
 
 :ref:`Oncogenicity Constraint <OncogenicityConstraint>`
-  The ``classification`` is a :ref:`Mappable Concept <MappableConcept>` for Oncogenic (ncit:C183322), with a primaryCoding linking to the NCI Thesaurus term Oncogenic. This reflects ClinVar's somatic oncogenicity classification of this variant.
+  The ``classification`` is a :ref:`Mappable Concept <MappableConcept>` for Oncogenic (ncit:C229176), with a primaryCoding linking to the NCI Thesaurus term Oncogenic Variant. This reflects ClinVar's somatic oncogenicity classification of this variant.
 
 .. rubric:: Members
 

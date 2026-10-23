@@ -19,15 +19,14 @@ constraints:
   - type: OncogenicityConstraint
     classification:
       type: MappableConcept
-      id: ncit:C183322
+      id: ncit:C229176
       conceptType: Oncogenicity Classification
       name: Oncogenic
       primaryCoding:
-        id: ncit:C183322
-        name: Oncogenic
+        id: ncit:C229176
+        name: Oncogenic Variant
         system: https://evsexplore.semantics.cancer.gov
-        systemVersion: 26.08e
-        code: C183322
+        code: C229176
         iris:
-          - https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C183322
+          - https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C229176
     description: Oncogenicity classification described as oncogenic using the NCI Thesaurus.

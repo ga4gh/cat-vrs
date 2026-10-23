@@ -44,7 +44,7 @@ This example does not satisfy any :ref:`Recipes`.
   The ``featureContext`` is a :ref:`Mappable Concept <MappableConcept>` for KRAS (hgnc:6407), with a primaryCoding linking to its HGNC entry.
 
 :ref:`Oncogenicity Constraint <OncogenicityConstraint>`
-  The ``classification`` is a :ref:`Mappable Concept <MappableConcept>` for Oncogenic (ncit:C183322), with a primaryCoding linking to the NCI Thesaurus term Oncogenic.
+  The ``classification`` is a :ref:`Mappable Concept <MappableConcept>` for Oncogenic (ncit:C229176), with a primaryCoding linking to the NCI Thesaurus term Oncogenic Variant.
 
 .. rubric:: Members
 
