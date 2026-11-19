@@ -29,6 +29,8 @@ In addition, :ref:`BRAF V600 (annotated) <BrafV600Annotated>` and :ref:`TP53 Los
      - | :ref:`EGFR L858R <ProteinSequenceConsequenceEx1>`
        | :ref:`NC_000001.11:g.1699974C>G <CanonicalAlleleEx2>`
        | :ref:`NM_004958.4(MTOR):c.5992_5993del (p.Met1998fs) <CanonicalAlleleEx1>`
+       | :ref:`NM_004985.5(KRAS):c.34G>T (p.Gly12Cys) <OncogenicityPathogenicityVariantEx1>`
+       | :ref:`NM_007294.4(BRCA1):c.5503C>T (p.Arg1835Ter) <PathogenicityVariantEx2>`
        | :ref:`NM_007294.4(BRCA1):c.5558dup (p.Tyr1853Ter) <ProteinSequenceConsequenceEx2>`
        | :ref:`PIK3CA p.R38H <FunctionVariantEx3>`
    * - :ref:`Defining Location <DefiningLocationConstraint>`
@@ -38,7 +40,9 @@ In addition, :ref:`BRAF V600 (annotated) <BrafV600Annotated>` and :ref:`TP53 Los
        | :ref:`GRCh38/hg38 7p22.1(chr7:5905831-6014161)x3 (copy change) <CategoricalCnvEx2>`
        | :ref:`TP53 Loss <Tp53CopyLoss>`
    * - :ref:`Feature Context <FeatureContextConstraint>`
-     - | :ref:`BRCA2 loss of function variants <FunctionVariantEx2>`
+     - | :ref:`BRCA1 likely pathogenic variants <PathogenicityVariantEx1>`
+       | :ref:`BRCA2 loss of function variants <FunctionVariantEx2>`
+       | :ref:`KRAS oncogenic variants <OncogenicityVariantEx1>`
        | :ref:`NRAS functionally normal variants <FunctionVariantEx1>`
        | :ref:`PIK3CA p.R38H <FunctionVariantEx3>`
        | :ref:`TP53 Loss <Tp53CopyLoss>`
@@ -46,5 +50,12 @@ In addition, :ref:`BRAF V600 (annotated) <BrafV600Annotated>` and :ref:`TP53 Los
      - | :ref:`BRCA2 loss of function variants <FunctionVariantEx2>`
        | :ref:`NRAS functionally normal variants <FunctionVariantEx1>`
        | :ref:`PIK3CA p.R38H <FunctionVariantEx3>`
+   * - :ref:`Oncogenicity <OncogenicityConstraint>`
+     - | :ref:`KRAS oncogenic variants <OncogenicityVariantEx1>`
+       | :ref:`NM_004985.5(KRAS):c.34G>T (p.Gly12Cys) <OncogenicityPathogenicityVariantEx1>`
+   * - :ref:`Pathogenicity <PathogenicityConstraint>`
+     - | :ref:`BRCA1 likely pathogenic variants <PathogenicityVariantEx1>`
+       | :ref:`NM_004985.5(KRAS):c.34G>T (p.Gly12Cys) <OncogenicityPathogenicityVariantEx1>`
+       | :ref:`NM_007294.4(BRCA1):c.5503C>T (p.Arg1835Ter) <PathogenicityVariantEx2>`
    * - None
      - :ref:`t(2;15)(q23.1;q25.3) <DescribedVariantEx1>`

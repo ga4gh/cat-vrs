@@ -1,0 +1,70 @@
+id: clinvar:55601
+type: CategoricalVariant
+name: NM_007294.4(BRCA1):c.5503C>T (p.Arg1835Ter)
+description: An example categorical variant that models NM_007294.4(BRCA1):c.5503C>T (p.Arg1835Ter) from ClinVar, using DefiningAlleleConstraint and PathogenicityConstraint.
+aliases:
+  - NM_007294.4:c.5503C>T
+  - NP_009225.1:p.Arg1835Ter
+  - NP_009225.1:p.R1835*
+  - NC_000017.11:g.43045767G>A
+  - NC_000017.10:g.41197784G>A
+  - NC_000017.11:43045766:G:A
+constraints:
+  - type: DefiningAlleleConstraint
+    allele:
+      id: ga4gh:VA.g2DYV8-nJu0IA7zsjb-sGsKUa_uxJ9rR
+      type: Allele
+      name: NM_007294.4:c.5503C>T
+      description: VRS Variation of NM_007294.4:c.5503C>T, generated with the VICC Variation Normalizer (https://github.com/cancervariants/variation-normalization).
+      digest: g2DYV8-nJu0IA7zsjb-sGsKUa_uxJ9rR
+      expressions:
+        - syntax: hgvs.c
+          value: NM_007294.4:c.5503C>T
+      location:
+        id: ga4gh:SL.VhnoaMTJUJoaQUH5OTveHZDsUSW4Vp7P
+        description: Coding DNA (cDNA) position 5503 of the BRCA1 MANE Select coding transcript (refseq:NM_007294.4), corresponding to genomic position 43045767 on chromosome 17 (refseq:NC_000017.11, GRCh38).
+        extensions:
+          - name: GRCh38, 1-based, genomic position
+            value: chr17:43045767
+            description: Genomic position 43,045,767 on chromosome 17 (refseq:NC_000017.11, GRCh38).
+          - name: GRCh38, 1-based, inclusive interval notation
+            value: chr17:43045767-43045767
+            description: Genomic positions 43,045,767 to 43,045,767 on chromosome 17 (refseq:NC_000017.11, GRCh38).
+          - name: GRCh38, 0-based, half-open interval notation
+            value: chr17:43045766-43045767
+            description: Genomic positions 43,045,766 to 43,045,767 on chromosome 17 (refseq:NC_000017.11, GRCh38).
+        type: SequenceLocation
+        digest: VhnoaMTJUJoaQUH5OTveHZDsUSW4Vp7P
+        sequenceReference:
+          id: refseq:NM_007294.4
+          name: NM_007294.4
+          description: The MANE Select (GRCh38) coding transcript for BRCA1.
+          aliases:
+            - ensembl:ENST00000357654.9
+            - ga4gh:SQ.oR9jzdHf6J23TozeyuvTXtwlm6PpUHHl
+          type: SequenceReference
+          refgetAccession: SQ.oR9jzdHf6J23TozeyuvTXtwlm6PpUHHl
+          residueAlphabet: na
+        start: 5615
+        end: 5616
+        sequence: "C"
+      state:
+        type: LiteralSequenceExpression
+        sequence: T
+  - type: PathogenicityConstraint
+    classification:
+      type: MappableConcept
+      id: ncit:C168799
+      conceptType: Pathogenicity Classification
+      name: Pathogenic
+      aliases:
+        - Pathogenic Variant
+      primaryCoding:
+        id: ncit:C168799
+        name: Pathogenic Variant
+        system: https://evsexplore.semantics.cancer.gov
+        systemVersion: 26.08e
+        code: C168799
+        iris:
+          - https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168799
+    description: Pathogenicity classification described as pathogenic using the NCI Thesaurus, per the ClinVar germline classification.

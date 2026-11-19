@@ -40,8 +40,10 @@ This class must match **one of** the following:
 * :ref:`DefiningLocationConstraint`
 * :ref:`FeatureContextConstraint`
 * :ref:`FunctionConstraint`
+* :ref:`OncogenicityConstraint`
+* :ref:`PathogenicityConstraint`
 
 
-**Subclasses:** :ref:`AdjacencyConstraint`, :ref:`CopyChangeConstraint`, :ref:`CopyCountConstraint`, :ref:`DefiningAlleleConstraint`, :ref:`DefiningLocationConstraint`, :ref:`FeatureContextConstraint`, :ref:`FunctionConstraint`
+**Subclasses:** :ref:`AdjacencyConstraint`, :ref:`CopyChangeConstraint`, :ref:`CopyCountConstraint`, :ref:`DefiningAlleleConstraint`, :ref:`DefiningLocationConstraint`, :ref:`FeatureContextConstraint`, :ref:`FunctionConstraint`, :ref:`OncogenicityConstraint`, :ref:`PathogenicityConstraint`
 
 **Used in:** :ref:`CategoricalVariant`

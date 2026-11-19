@@ -26,3 +26,5 @@ Please refer to specific Constraint subclasses for implementation guidance.
    DefiningLocationConstraint
    FeatureContextConstraint
    FunctionConstraint
+   OncogenicityConstraint
+   PathogenicityConstraint

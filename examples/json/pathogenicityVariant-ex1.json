@@ -1,0 +1,49 @@
+{
+  "id": "example:brca1-likely-pathogenic",
+  "type": "CategoricalVariant",
+  "name": "BRCA1 likely pathogenic variants",
+  "description": "An example categorical variant that uses FeatureContextConstraint and PathogenicityConstraint.",
+  "constraints": [
+    {
+      "type": "FeatureContextConstraint",
+      "featureContext": {
+        "type": "MappableConcept",
+        "id": "hgnc:1100",
+        "conceptType": "Gene",
+        "name": "BRCA1",
+        "primaryCoding": {
+          "id": "hgnc:1100",
+          "name": "BRCA1",
+          "system": "https://www.genenames.org",
+          "code": "HGNC:1100",
+          "iris": [
+            "https://www.genenames.org/data/gene-symbol-report/#!/hgnc_id/HGNC:1100"
+          ]
+        }
+      }
+    },
+    {
+      "type": "PathogenicityConstraint",
+      "classification": {
+        "type": "MappableConcept",
+        "id": "ncit:C168800",
+        "conceptType": "Pathogenicity Classification",
+        "name": "Likely Pathogenic",
+        "aliases": [
+          "Likely Pathogenic Variant"
+        ],
+        "primaryCoding": {
+          "id": "ncit:C168800",
+          "name": "Likely Pathogenic Variant",
+          "system": "https://evsexplore.semantics.cancer.gov",
+          "systemVersion": "26.08e",
+          "code": "C168800",
+          "iris": [
+            "https://evsexplore.semantics.cancer.gov/evsexplore/concept/ncit/C168800"
+          ]
+        }
+      },
+      "description": "Pathogenicity classification described as likely pathogenic using the NCI Thesaurus."
+    }
+  ]
+}

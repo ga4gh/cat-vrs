@@ -39,6 +39,12 @@
       },
       {
          "$ref": "/ga4gh/schema/cat-vrs/v1/json/FunctionConstraint"
+      },
+      {
+         "$ref": "/ga4gh/schema/cat-vrs/v1/json/OncogenicityConstraint"
+      },
+      {
+         "$ref": "/ga4gh/schema/cat-vrs/v1/json/PathogenicityConstraint"
       }
    ]
 }
